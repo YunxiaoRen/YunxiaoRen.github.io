@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>生信拾光</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2019-08-22T14:52:24.885Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>六六</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2019/08/22/ceshi/"/>
+    <id>http://yoursite.com/2019/08/22/ceshi/</id>
+    <published>2019-08-22T14:52:24.885Z</published>
+    <updated>2019-08-22T14:52:24.885Z</updated>
+    
+    <content type="html"><![CDATA[<hr><p>title: ceshi<br>date: 2019-08-22 22:51:17<br>tags:<br>—i</p><p>ceshi</p><p>shenmshihkeyi</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;hr&gt;
+&lt;p&gt;title: ceshi&lt;br&gt;date: 2019-08-22 22:51:17&lt;br&gt;tags:&lt;br&gt;—i&lt;/p&gt;
+&lt;p&gt;ceshi&lt;/p&gt;
+&lt;p&gt;shenmshihkeyi&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
