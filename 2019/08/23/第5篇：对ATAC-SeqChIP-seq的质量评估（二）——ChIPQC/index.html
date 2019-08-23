@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="ATACseq,ChIPseq,QC,">
 
 
 
@@ -81,12 +81,13 @@
 
 
 
-<meta name="description" content="第5篇：对ATAC-Seq/ChIP-seq的质量评估（二）——ChIPQC1. 学习目标 讨论ChIP-seq数据质量评估的其他方法 用ChIPQC产生质量统计报告 鉴定低质量数据的来源概览图ENCODE评估数据质量采用多种指标，如前面已经讨论过的链相关的指标NSC和RSC。这一节将会讨论评估信号分布的其他指标。 NOTE：这里给出的评估指标只是反映数据质量的好坏，符合阈值的并不意味着实验是成功">
+<meta name="description" content="1. 学习目标 讨论ChIP-seq数据质量评估的其他方法 用ChIPQC产生质量统计报告 鉴定低质量数据的来源">
+<meta name="keywords" content="ATACseq,ChIPseq,QC">
 <meta property="og:type" content="article">
-<meta property="og:title" content="生信拾光">
+<meta property="og:title" content="第5篇：对ATAC-Seq&#x2F;ChIP-seq的质量评估（二）——ChIPQC">
 <meta property="og:url" content="http://yoursite.com/2019/08/23/第5篇：对ATAC-SeqChIP-seq的质量评估（二）——ChIPQC/index.html">
 <meta property="og:site_name" content="生信拾光">
-<meta property="og:description" content="第5篇：对ATAC-Seq/ChIP-seq的质量评估（二）——ChIPQC1. 学习目标 讨论ChIP-seq数据质量评估的其他方法 用ChIPQC产生质量统计报告 鉴定低质量数据的来源概览图ENCODE评估数据质量采用多种指标，如前面已经讨论过的链相关的指标NSC和RSC。这一节将会讨论评估信号分布的其他指标。 NOTE：这里给出的评估指标只是反映数据质量的好坏，符合阈值的并不意味着实验是成功">
+<meta property="og:description" content="1. 学习目标 讨论ChIP-seq数据质量评估的其他方法 用ChIPQC产生质量统计报告 鉴定低质量数据的来源">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-df6c67811efb85eb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-ffa899faf5d8e033.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
@@ -102,10 +103,10 @@
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-c4871f68579ba322.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-ee0ccb984d0ea9dc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-4f61fd17225198b9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2019-08-23T03:11:47.612Z">
+<meta property="og:updated_time" content="2019-08-23T04:58:36.640Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="生信拾光">
-<meta name="twitter:description" content="第5篇：对ATAC-Seq/ChIP-seq的质量评估（二）——ChIPQC1. 学习目标 讨论ChIP-seq数据质量评估的其他方法 用ChIPQC产生质量统计报告 鉴定低质量数据的来源概览图ENCODE评估数据质量采用多种指标，如前面已经讨论过的链相关的指标NSC和RSC。这一节将会讨论评估信号分布的其他指标。 NOTE：这里给出的评估指标只是反映数据质量的好坏，符合阈值的并不意味着实验是成功">
+<meta name="twitter:title" content="第5篇：对ATAC-Seq&#x2F;ChIP-seq的质量评估（二）——ChIPQC">
+<meta name="twitter:description" content="1. 学习目标 讨论ChIP-seq数据质量评估的其他方法 用ChIPQC产生质量统计报告 鉴定低质量数据的来源">
 <meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/8242255-df6c67811efb85eb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
@@ -142,7 +143,7 @@
 
 
 
-  <title> | 生信拾光</title>
+  <title>第5篇：对ATAC-Seq/ChIP-seq的质量评估（二）——ChIPQC | 生信拾光</title>
   
 
 
@@ -318,7 +319,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">第5篇：对ATAC-Seq/ChIP-seq的质量评估（二）——ChIPQC</h1>
         
 
         <div class="post-meta">
@@ -330,7 +331,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-23T11:11:47+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-23T08:36:56+08:00">
                 2019-08-23
               </time>
             
@@ -340,6 +341,39 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/组学/" itemprop="url" rel="index">
+                    <span itemprop="name">组学</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/组学/表观组/" itemprop="url" rel="index">
+                    <span itemprop="name">表观组</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -362,7 +396,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.8k
+                  1.7k
                 </span>
               
 
@@ -378,7 +412,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  7
+                  6
                 </span>
               
             </div>
@@ -399,13 +433,22 @@
       
 
       
-        <h1 id="第5篇：对ATAC-Seq-ChIP-seq的质量评估（二）——ChIPQC"><a href="#第5篇：对ATAC-Seq-ChIP-seq的质量评估（二）——ChIPQC" class="headerlink" title="第5篇：对ATAC-Seq/ChIP-seq的质量评估（二）——ChIPQC"></a>第5篇：对ATAC-Seq/ChIP-seq的质量评估（二）——ChIPQC</h1><h3 id="1-学习目标"><a href="#1-学习目标" class="headerlink" title="1. 学习目标"></a>1. 学习目标</h3><ul>
+        <h3 id="1-学习目标"><a href="#1-学习目标" class="headerlink" title="1. 学习目标"></a>1. 学习目标</h3><ul>
 <li>讨论ChIP-seq数据质量评估的其他方法</li>
 <li>用ChIPQC产生质量统计报告</li>
-<li>鉴定低质量数据的来源<br><strong>概览图</strong><br><img src="https://upload-images.jianshu.io/upload_images/8242255-df6c67811efb85eb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Additional Quality Metrics for ChIP-seq data"><br>ENCODE评估数据质量采用多种指标，如前面已经讨论过的链相关的指标NSC和RSC。这一节将会讨论评估信号分布的其他指标。<blockquote>
+<li>鉴定低质量数据的来源</li>
+</ul>
+<a id="more"></a>
+<ul>
+<li><p><strong>概览图</strong></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/8242255-df6c67811efb85eb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50"></p>
+</li>
+</ul>
+<p>ENCODE评估数据质量采用多种指标，如前面已经讨论过的链相关的指标NSC和RSC。这一节将会讨论评估信号分布的其他指标。</p>
+<blockquote>
 <p><strong>NOTE</strong>：这里给出的评估指标只是反映数据质量的好坏，符合阈值的并不意味着实验是成功的，不符合阈值的也不一定意味着失败。</p>
 </blockquote>
-<h3 id="2-常见质量评估指标的介绍"><a href="#2-常见质量评估指标的介绍" class="headerlink" title="2.常见质量评估指标的介绍"></a>2.常见质量评估指标的介绍</h3></li>
+<h3 id="2-常见质量评估指标的介绍"><a href="#2-常见质量评估指标的介绍" class="headerlink" title="2.常见质量评估指标的介绍"></a>2.常见质量评估指标的介绍</h3><ul>
 <li><h4 id="SSD"><a href="#SSD" class="headerlink" title="SSD"></a>SSD</h4>SSD值是对富集效果的评估。SSD值依赖于全基因组的pile-up信号强度，对真实的ChIP富集和干扰的强信号区域都很敏感。SSD值越大表明富集越好。<blockquote>
 <p>“It provides a measure of pileup across the genome and is computed by looking at the standard deviation of signal pile-up along the genome normalised to the total number of reads. ”</p>
 </blockquote>
@@ -428,19 +471,19 @@
 <li>ControlID : 对照组样本ID</li>
 <li>bamControl :对照组样本的bam文件路径</li>
 <li>Peaks :样本peaks文件的路径</li>
-<li>PeakCaller ：peak类型的字符串，可以是raw,bed,narrow,macs等。<h4 id="下载安装ChIPQC"><a href="#下载安装ChIPQC" class="headerlink" title="下载安装ChIPQC"></a>下载安装ChIPQC</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">source(&quot;http://bioconductor.org/biocLite.R&quot;)</span><br><span class="line">biocLite(&quot;ChIPQC&quot;)</span><br></pre></td></tr></table></figure>
+<li>PeakCaller ：peak类型的字符串，可以是raw,bed,narrow,macs等。<h4 id="下载安装ChIPQC"><a href="#下载安装ChIPQC" class="headerlink" title="下载安装ChIPQC"></a>下载安装ChIPQC</h4><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">source</span>(<span class="string">"http://bioconductor.org/biocLite.R"</span>)</span><br><span class="line">biocLite(<span class="string">"ChIPQC"</span>)</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h4 id="Running-ChIPQC"><a href="#Running-ChIPQC" class="headerlink" title="Running ChIPQC"></a>Running ChIPQC</h4><p>ChIPQC只需要三步就可以完成质量评估和报告生成。</p>
 <ul>
 <li><p><strong>首先载入包和sampleSheet信息</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">## Load libraries</span><br><span class="line">library(ChIPQC)</span><br><span class="line">## Load sample data</span><br><span class="line">samples &lt;- read.csv(&apos;meta/samplesheet_chr12.csv&apos;)</span><br><span class="line">View(samples)</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## Load libraries</span></span><br><span class="line"><span class="keyword">library</span>(ChIPQC)</span><br><span class="line"><span class="comment">## Load sample data</span></span><br><span class="line">samples &lt;- read.csv(<span class="string">'meta/samplesheet_chr12.csv'</span>)</span><br><span class="line">View(samples)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><strong>创建ChIPQC对象</strong><br>利用sampleSheet的信息读取每个样本的bam和narrowpeak文件，并计算质量评估值，结果存在一个对象里。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">## Create ChIPQC object</span><br><span class="line">chipObj &lt;- ChIPQC(samples, annotation=&quot;hg19&quot;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## Create ChIPQC object</span></span><br><span class="line">chipObj &lt;- ChIPQC(samples, annotation=<span class="string">"hg19"</span>)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><strong>生成ChIPQC报告</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">## Create ChIPQC report</span><br><span class="line">ChIPQCreport(chipObj, reportName=&quot;ChIP QC report: Nanog and Pou5f1&quot;, reportFolder=&quot;ChIPQCreport&quot;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## Create ChIPQC report</span></span><br><span class="line">ChIPQCreport(chipObj, reportName=<span class="string">"ChIP QC report: Nanog and Pou5f1"</span>, reportFolder=<span class="string">"ChIPQCreport"</span>)</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h4 id="ChIPQC报告解读"><a href="#ChIPQC报告解读" class="headerlink" title="ChIPQC报告解读"></a>ChIPQC报告解读</h4><p>ChIPQC生成的结果包含一个网页报告和报告中含有的所有图片。<br>网页报告有三部分：<strong>QC Summary ；QC Results；QC files and versions</strong><br><img src="https://upload-images.jianshu.io/upload_images/8242255-a929302bfd47dc9d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
@@ -489,6 +532,16 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/ATACseq/" rel="tag"># ATACseq</a>
+          
+            <a href="/tags/ChIPseq/" rel="tag"># ChIPseq</a>
+          
+            <a href="/tags/QC/" rel="tag"># QC</a>
+          
+        </div>
+      
 
       
       
@@ -498,8 +551,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/23/第4篇：对ATAC-SeqChIP-seq的质量评估（一）——phantompeakqualtools/" rel="next" title>
-                <i class="fa fa-chevron-left"></i> 
+              <a href="/2019/08/23/第1篇：ATAC-seq的背景介绍以及与ChIP-Seq的异同/" rel="next" title="第1篇：ATAC-seq的背景介绍以及与ChIP-Seq的异同">
+                <i class="fa fa-chevron-left"></i> 第1篇：ATAC-seq的背景介绍以及与ChIP-Seq的异同
               </a>
             
           </div>
@@ -508,8 +561,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/08/23/使用BETA整合分析ATAC-seq:ChIP-seq和RNA-seq数据/" rel="prev" title>
-                 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/08/23/第6篇：重复样本的处理——IDR/" rel="prev" title="第6篇：重复样本的处理——IDR">
+                第6篇：重复样本的处理——IDR <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -587,7 +640,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -609,7 +662,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -649,7 +702,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第5篇：对ATAC-Seq-ChIP-seq的质量评估（二）——ChIPQC"><span class="nav-number">1.</span> <span class="nav-text">第5篇：对ATAC-Seq/ChIP-seq的质量评估（二）——ChIPQC</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-学习目标"><span class="nav-number">1.0.1.</span> <span class="nav-text">1. 学习目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-常见质量评估指标的介绍"><span class="nav-number">1.0.2.</span> <span class="nav-text">2.常见质量评估指标的介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#SSD"><span class="nav-number">1.0.2.1.</span> <span class="nav-text">SSD</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#FRiP-Fraction-of-reads-in-peaks"><span class="nav-number">1.0.2.2.</span> <span class="nav-text">FRiP:Fraction of reads in peaks</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Relative-Enrichment-of-Genomic-Intervals-REGI"><span class="nav-number">1.0.2.3.</span> <span class="nav-text">Relative Enrichment of Genomic Intervals (REGI)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#RiBL-Reads-overlapping-in-Blacklisted-Regions"><span class="nav-number">1.0.2.4.</span> <span class="nav-text">RiBL: Reads overlapping in Blacklisted Regions</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-ChIPQC-quality-metrics-report"><span class="nav-number">1.0.3.</span> <span class="nav-text">3. ChIPQC: quality metrics report</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#准备数据"><span class="nav-number">1.0.3.1.</span> <span class="nav-text">准备数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#下载安装ChIPQC"><span class="nav-number">1.0.3.2.</span> <span class="nav-text">下载安装ChIPQC</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Running-ChIPQC"><span class="nav-number">1.0.3.3.</span> <span class="nav-text">Running ChIPQC</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ChIPQC报告解读"><span class="nav-number">1.0.3.4.</span> <span class="nav-text">ChIPQC报告解读</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#（1）QC-Summary-Overview-of-results"><span class="nav-number">1.0.3.4.1.</span> <span class="nav-text">（1）QC Summary - Overview of results</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#（2）QC-Results-Full-QC-results-and-figures"><span class="nav-number">1.0.3.4.2.</span> <span class="nav-text">（2）QC Results - Full QC results and figures</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-实验偏差：ChIP-seq数据质量低的来源"><span class="nav-number">1.0.4.</span> <span class="nav-text">4. 实验偏差：ChIP-seq数据质量低的来源</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#参考资料："><span class="nav-number">1.0.4.1.</span> <span class="nav-text">参考资料：</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-学习目标"><span class="nav-number">1.</span> <span class="nav-text">1. 学习目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-常见质量评估指标的介绍"><span class="nav-number">2.</span> <span class="nav-text">2.常见质量评估指标的介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#SSD"><span class="nav-number">2.1.</span> <span class="nav-text">SSD</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#FRiP-Fraction-of-reads-in-peaks"><span class="nav-number">2.2.</span> <span class="nav-text">FRiP:Fraction of reads in peaks</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Relative-Enrichment-of-Genomic-Intervals-REGI"><span class="nav-number">2.3.</span> <span class="nav-text">Relative Enrichment of Genomic Intervals (REGI)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#RiBL-Reads-overlapping-in-Blacklisted-Regions"><span class="nav-number">2.4.</span> <span class="nav-text">RiBL: Reads overlapping in Blacklisted Regions</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-ChIPQC-quality-metrics-report"><span class="nav-number">3.</span> <span class="nav-text">3. ChIPQC: quality metrics report</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#准备数据"><span class="nav-number">3.1.</span> <span class="nav-text">准备数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#下载安装ChIPQC"><span class="nav-number">3.2.</span> <span class="nav-text">下载安装ChIPQC</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Running-ChIPQC"><span class="nav-number">3.3.</span> <span class="nav-text">Running ChIPQC</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ChIPQC报告解读"><span class="nav-number">3.4.</span> <span class="nav-text">ChIPQC报告解读</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#（1）QC-Summary-Overview-of-results"><span class="nav-number">3.4.1.</span> <span class="nav-text">（1）QC Summary - Overview of results</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#（2）QC-Results-Full-QC-results-and-figures"><span class="nav-number">3.4.2.</span> <span class="nav-text">（2）QC Results - Full QC results and figures</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-实验偏差：ChIP-seq数据质量低的来源"><span class="nav-number">4.</span> <span class="nav-text">4. 实验偏差：ChIP-seq数据质量低的来源</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#参考资料："><span class="nav-number">4.1.</span> <span class="nav-text">参考资料：</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -683,7 +736,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">7.6k</span>
+    <span title="Site words total count">12.6k</span>
   
 </div>
 
@@ -703,7 +756,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共7.6k字</span>
+  <span class="post-count">博客全站共12.6k字</span>
 </div>
 
 
