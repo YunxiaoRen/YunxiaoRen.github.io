@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-23T02:14:01.029Z</updated>
+  <updated>2019-08-23T02:18:05.818Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test</title>
+    <link href="http://yoursite.com/2019/08/23/test/"/>
+    <id>http://yoursite.com/2019/08/23/test/</id>
+    <published>2019-08-23T02:16:38.000Z</published>
+    <updated>2019-08-23T02:18:05.818Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://upload-images.jianshu.io/upload_images/8242255-42c0586d8549bb34.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p><p>插入图片<br><img src="https://upload-images.jianshu.io/upload_images/8242255-3258f63385c35669.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="fig"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;https://upload-images.jianshu.io/upload_images/8242255-42c0586d8549bb34.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot;
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>第1篇：ATAC-seq的背景介绍以及与ChIP-Seq的异同</title>
