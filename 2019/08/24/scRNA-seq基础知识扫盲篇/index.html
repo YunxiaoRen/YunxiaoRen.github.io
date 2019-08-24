@@ -89,18 +89,18 @@
 <meta property="og:site_name" content="生信拾光">
 <meta property="og:description" content="Bulk RNA-seq与scRNA-seq的优势和局限性Bulk RNA-seq 20世纪末即芯片技术后的又一个突破性技术，之后被广泛应用，逐渐替代芯片 评估测量一个大群体内所有细胞的平均表达量水平 适用于比较转录组学，如不同物种相同组织的不同样本间的转录表达差异比较；或者用于评估疾病等表达量特征 不适用于研究系统的异质性，如早期胚胎发育、复杂组织（脑） 不能提供基因表达量的随机特征  scRN">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/.com//renyx/Documents/hexo/source/_posts/scRNA-seq基础知识扫盲篇/fig1-workflow.png">
+<meta property="og:image" content="http://yoursite.com/.com//fig1-workflow.png">
 <meta property="og:image" content="http://yoursite.com/.com//renyx/Documents/hexo/source/_posts/scRNA-seq基础知识扫盲篇/fig2-analysis.png">
 <meta property="og:image" content="http://yoursite.com/.com//renyx/Documents/hexo/source/_posts/scRNA-seq基础知识扫盲篇/fig3-expre-method.png">
 <meta property="og:image" content="http://yoursite.com/.com//renyx/Documents/hexo/source/_posts/scRNA-seq基础知识扫盲篇/fig4-microwell.png">
 <meta property="og:image" content="http://yoursite.com/.com//renyx/Documents/hexo/source/_posts/scRNA-seq基础知识扫盲篇/fig5-fluidigm.png">
 <meta property="og:image" content="http://yoursite.com/.com//renyx/Documents/hexo/source/_posts/scRNA-seq基础知识扫盲篇/fig6-drop-seq.png">
 <meta property="og:image" content="http://yoursite.com/.com//renyx/Documents/hexo/source/_posts/scRNA-seq基础知识扫盲篇/fig7-comparison-methods.png">
-<meta property="og:updated_time" content="2019-08-24T08:56:30.838Z">
+<meta property="og:updated_time" content="2019-08-24T09:24:05.642Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="01-scRNA-seq基础知识扫盲篇">
 <meta name="twitter:description" content="Bulk RNA-seq与scRNA-seq的优势和局限性Bulk RNA-seq 20世纪末即芯片技术后的又一个突破性技术，之后被广泛应用，逐渐替代芯片 评估测量一个大群体内所有细胞的平均表达量水平 适用于比较转录组学，如不同物种相同组织的不同样本间的转录表达差异比较；或者用于评估疾病等表达量特征 不适用于研究系统的异质性，如早期胚胎发育、复杂组织（脑） 不能提供基因表达量的随机特征  scRN">
-<meta name="twitter:image" content="http://yoursite.com/.com//renyx/Documents/hexo/source/_posts/scRNA-seq基础知识扫盲篇/fig1-workflow.png">
+<meta name="twitter:image" content="http://yoursite.com/.com//fig1-workflow.png">
 
 
 
@@ -443,7 +443,7 @@
 <li>Bulk RNA-seq的一些方法也适合于scRNA-seq，大多情况需要新的方法</li>
 </ul>
 <a id="more"></a>
-<h2 id="单细胞RNA测序流程"><a href="#单细胞RNA测序流程" class="headerlink" title="单细胞RNA测序流程"></a>单细胞RNA测序流程</h2><p><img src="/.com//renyx/Documents/hexo/source/_posts/scRNA-seq基础知识扫盲篇/fig1-workflow.png" style="zoom:40"></p>
+<h2 id="单细胞RNA测序流程"><a href="#单细胞RNA测序流程" class="headerlink" title="单细胞RNA测序流程"></a>单细胞RNA测序流程</h2><p><img src="/.com//fig1-workflow.png" style="zoom:40"></p>
 <h2 id="分析方法"><a href="#分析方法" class="headerlink" title="分析方法"></a>分析方法</h2><p>scRNA-seq上游分析方法与bulk 相同，对测序数据进行<strong>质控、比对、比对结果的质控（黄色部分）</strong>，接着是细胞质控、标准化，这一部分与bulk有相同的也有不同的地方，下游分析就是解释实际生物学问题，包括差异分析、聚类、网络分析等，所用的方法一般都是scRNA特有的算法。</p>
 <p><img src="/.com//renyx/Documents/hexo/source/_posts/scRNA-seq基础知识扫盲篇/fig2-analysis.png" style="zoom:60"></p>
 <blockquote>
@@ -505,6 +505,8 @@
 </li>
 </ul>
 </li>
+</ul>
+<ul>
 <li><p><strong>microfluidic-based</strong></p>
 <ul>
 <li><p>如Fluidigm’s C1，提供了一个更为集成的系统，用于捕捉细胞和进行建库准备所需的反应。</p>
