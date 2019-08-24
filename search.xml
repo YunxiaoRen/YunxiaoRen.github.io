@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[test]]></title>
     <url>%2F2019%2F08%2F24%2Ftest%2F</url>
-    <content type="text"><![CDATA[插入本地图片同名文件夹中的图片 1&#123;% asset_img Snipaste_2019-08-24_17-27-54.png This is an image %&#125; markdown格式 markdown png格式呢 全路径 插入简书图片 插入images图片]]></content>
+    <content type="text"><![CDATA[插入本地图片同名文件夹中的图片 1&#123;% asset_img Snipaste_2019-08-24_17-27-54.png This is an image %&#125; markdown格式 markdown png格式呢 html格式 全路径 插入简书图片 插入images图片]]></content>
   </entry>
   <entry>
     <title><![CDATA[01-scRNA-seq基础知识扫盲篇]]></title>
