@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="ATACseq,ChIPseq,差异分析,">
+  <meta name="keywords" content="single cell,scRNA-seq,">
 
 
 
@@ -81,28 +81,26 @@
 
 
 
-<meta name="description" content="学习目标 学习用DiffBind流程评估两个样本间的差异结合区域  用PCA评估样本间的关系  评估不同工具得到的差异peaks的一致性">
-<meta name="keywords" content="ATACseq,ChIPseq,差异分析">
+<meta name="description" content="Bulk RNA-seq与scRNA-seq的优势和局限性Bulk RNA-seq 20世纪末即芯片技术后的又一个突破性技术，之后被广泛应用，逐渐替代芯片 评估测量一个大群体内所有细胞的平均表达量水平 适用于比较转录组学，如不同物种相同组织的不同样本间的转录表达差异比较；或者用于评估疾病等表达量特征 不适用于研究系统的异质性，如早期胚胎发育、复杂组织（脑） 不能提供基因表达量的随机特征  scRN">
+<meta name="keywords" content="single cell,scRNA-seq">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第9篇：差异peaks分析——DiffBind">
-<meta property="og:url" content="http://yoursite.com/2019/08/23/第9篇：差异peaks分析——DiffBind/index.html">
+<meta property="og:title" content="01-scRNA-seq基础知识扫盲篇">
+<meta property="og:url" content="http://yoursite.com/2019/08/24/01-scRNA-seq基础知识扫盲篇/index.html">
 <meta property="og:site_name" content="生信拾光">
-<meta property="og:description" content="学习目标 学习用DiffBind流程评估两个样本间的差异结合区域  用PCA评估样本间的关系  评估不同工具得到的差异peaks的一致性">
+<meta property="og:description" content="Bulk RNA-seq与scRNA-seq的优势和局限性Bulk RNA-seq 20世纪末即芯片技术后的又一个突破性技术，之后被广泛应用，逐渐替代芯片 评估测量一个大群体内所有细胞的平均表达量水平 适用于比较转录组学，如不同物种相同组织的不同样本间的转录表达差异比较；或者用于评估疾病等表达量特征 不适用于研究系统的异质性，如早期胚胎发育、复杂组织（脑） 不能提供基因表达量的随机特征  scRN">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-78b2f423dc7b0fa8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-3f133ad5e0d5b6e2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-e5e43bc02d122cc8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-b45f2ad5b70f46af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-bda08e59563ab91a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-d806500399a287b6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-d68a6b35c676e047.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-22e7d87169ae0a19.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-9cbf839407929d40.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2019-08-24T08:35:44.884Z">
+<meta property="og:image" content="http://yoursite.com/.com//renyx/Documents/hexo/source/_posts/scRNA-seq基础知识扫盲篇/fig1-workflow.png">
+<meta property="og:image" content="http://yoursite.com/.com//renyx/Documents/hexo/source/_posts/scRNA-seq基础知识扫盲篇/fig2-analysis.png">
+<meta property="og:image" content="http://yoursite.com/.com//renyx/Documents/hexo/source/_posts/scRNA-seq基础知识扫盲篇/fig3-expre-method.png">
+<meta property="og:image" content="http://yoursite.com/.com//renyx/Documents/hexo/source/_posts/scRNA-seq基础知识扫盲篇/fig4-microwell.png">
+<meta property="og:image" content="http://yoursite.com/.com//renyx/Documents/hexo/source/_posts/scRNA-seq基础知识扫盲篇/fig5-fluidigm.png">
+<meta property="og:image" content="http://yoursite.com/.com//renyx/Documents/hexo/source/_posts/scRNA-seq基础知识扫盲篇/fig6-drop-seq.png">
+<meta property="og:image" content="http://yoursite.com/.com//renyx/Documents/hexo/source/_posts/scRNA-seq基础知识扫盲篇/fig7-comparison-methods.png">
+<meta property="og:updated_time" content="2019-08-24T08:45:12.246Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第9篇：差异peaks分析——DiffBind">
-<meta name="twitter:description" content="学习目标 学习用DiffBind流程评估两个样本间的差异结合区域  用PCA评估样本间的关系  评估不同工具得到的差异peaks的一致性">
-<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/8242255-78b2f423dc7b0fa8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="01-scRNA-seq基础知识扫盲篇">
+<meta name="twitter:description" content="Bulk RNA-seq与scRNA-seq的优势和局限性Bulk RNA-seq 20世纪末即芯片技术后的又一个突破性技术，之后被广泛应用，逐渐替代芯片 评估测量一个大群体内所有细胞的平均表达量水平 适用于比较转录组学，如不同物种相同组织的不同样本间的转录表达差异比较；或者用于评估疾病等表达量特征 不适用于研究系统的异质性，如早期胚胎发育、复杂组织（脑） 不能提供基因表达量的随机特征  scRN">
+<meta name="twitter:image" content="http://yoursite.com/.com//renyx/Documents/hexo/source/_posts/scRNA-seq基础知识扫盲篇/fig1-workflow.png">
 
 
 
@@ -132,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/08/23/第9篇：差异peaks分析——DiffBind/">
+  <link rel="canonical" href="http://yoursite.com/2019/08/24/01-scRNA-seq基础知识扫盲篇/">
 
 
 
 
 
-  <title>第9篇：差异peaks分析——DiffBind | 生信拾光</title>
+  <title>01-scRNA-seq基础知识扫盲篇 | 生信拾光</title>
   
 
 
@@ -297,7 +295,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/23/第9篇：差异peaks分析——DiffBind/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/24/01-scRNA-seq基础知识扫盲篇/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="六六">
@@ -314,7 +312,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">第9篇：差异peaks分析——DiffBind</h1>
+          <h1 class="post-title" itemprop="name headline">01-scRNA-seq基础知识扫盲篇</h1>
         
 
         <div class="post-meta">
@@ -326,8 +324,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-23T12:50:56+08:00">
-                2019-08-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-24T00:29:27+08:00">
+                2019-08-24
               </time>
             
 
@@ -360,8 +358,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/组学/表观组/" itemprop="url" rel="index">
-                    <span itemprop="name">表观组</span>
+                  <a href="/categories/组学/转录组/" itemprop="url" rel="index">
+                    <span itemprop="name">转录组</span>
                   </a>
                 </span>
 
@@ -391,7 +389,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.1k
+                  1.4k
                 </span>
               
 
@@ -407,7 +405,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  4
+                  5
                 </span>
               
             </div>
@@ -428,41 +426,123 @@
       
 
       
-        <h3 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h3><ul>
-<li><p>学习用DiffBind流程评估两个样本间的差异结合区域</p>
+        <h2 id="Bulk-RNA-seq与scRNA-seq的优势和局限性"><a href="#Bulk-RNA-seq与scRNA-seq的优势和局限性" class="headerlink" title="Bulk RNA-seq与scRNA-seq的优势和局限性"></a>Bulk RNA-seq与scRNA-seq的优势和局限性</h2><h4 id="Bulk-RNA-seq"><a href="#Bulk-RNA-seq" class="headerlink" title="Bulk RNA-seq"></a>Bulk RNA-seq</h4><ul>
+<li>20世纪末即芯片技术后的又一个突破性技术，之后被广泛应用，逐渐替代芯片</li>
+<li>评估测量<strong>一个大群体内所有细胞的平均表达量水平</strong></li>
+<li>适用于比较转录组学，如不同物种相同组织的不同样本间的转录表达差异比较；或者用于评估疾病等表达量特征</li>
+<li>不适用于研究系统的异质性，如早期胚胎发育、复杂组织（脑）</li>
+<li>不能提供基因表达量的随机特征</li>
+</ul>
+<h4 id="scRNA-seq"><a href="#scRNA-seq" class="headerlink" title="scRNA-seq"></a>scRNA-seq</h4><ul>
+<li><p>2009年出现 (Tang et al. <a href="https://scrnaseq-course.cog.sanger.ac.uk/website/introduction-to-single-cell-rna-seq.html#ref-Tang2009-bu" target="_blank" rel="noopener">2009</a>)</p>
 </li>
-<li><p>用PCA评估样本间的关系</p>
+<li><p>伴随着新的protocols和测序成本的降低，2014年左右被广泛推广</p>
 </li>
-<li><p>评估不同工具得到的差异peaks的一致性</p>
+<li><p>适用于检测一群细胞的表达量分布水平；细胞特异性变化等（如鉴定细胞类型、细胞应激的异质性，基因表达的随机性、推测细胞间的基因调控网络</p>
+</li>
+<li><p>数据集从10<em>2～  10 </em>8细胞，且逐年增长</p>
+</li>
+<li><p>目前的使用的protocols：SMART-seq2 (Picelli et al. <a href="https://scrnaseq-course.cog.sanger.ac.uk/website/introduction-to-single-cell-rna-seq.html#ref-Picelli2013-sb" target="_blank" rel="noopener">2013</a>), CELL-seq (Hashimshony et al. <a href="https://scrnaseq-course.cog.sanger.ac.uk/website/introduction-to-single-cell-rna-seq.html#ref-Hashimshony2012-kd" target="_blank" rel="noopener">2012</a>) and Drop-seq (Macosko et al. <a href="https://scrnaseq-course.cog.sanger.ac.uk/website/introduction-to-single-cell-rna-seq.html#ref-Macosko2015-ix" target="_blank" rel="noopener">2015</a>)</p>
+</li>
+<li><p>商业平台：<a href="https://www.fluidigm.com/products/c1-system" target="_blank" rel="noopener">Fluidigm C1</a>, <a href="https://www.wafergen.com/products/icell8-single-cell-system" target="_blank" rel="noopener">Wafergen ICELL8</a> and the <a href="https://www.10xgenomics.com/single-cell/" target="_blank" rel="noopener">10X Genomics Chromium</a></p>
+</li>
+<li><p>Bulk RNA-seq的一些方法也适合于scRNA-seq，大多情况需要新的方法</p>
+</li>
+</ul>
+<h2 id="单细胞RNA测序流程"><a href="#单细胞RNA测序流程" class="headerlink" title="单细胞RNA测序流程"></a>单细胞RNA测序流程</h2><p><img src="/.com//renyx/Documents/hexo/source/_posts/scRNA-seq基础知识扫盲篇/fig1-workflow.png" style="zoom:40"></p>
 <a id="more"></a>
+<h2 id="分析方法"><a href="#分析方法" class="headerlink" title="分析方法"></a>分析方法</h2><p>scRNA-seq上游分析方法与bulk 相同，对测序数据进行<strong>质控、比对、比对结果的质控（黄色部分）</strong>，接着是细胞质控、标准化，这一部分与bulk有相同的也有不同的地方，下游分析就是解释实际生物学问题，包括差异分析、聚类、网络分析等，所用的方法一般都是scRNA特有的算法。</p>
+<p><img src="/.com//renyx/Documents/hexo/source/_posts/scRNA-seq基础知识扫盲篇/fig2-analysis.png" style="zoom:60"></p>
+<blockquote>
+<p>scRNA-seq 分析的综述：(Stegle, Teichmann, and Marioni <a href="https://scrnaseq-course.cog.sanger.ac.uk/website/introduction-to-single-cell-rna-seq.html#ref-Stegle2015-uv" target="_blank" rel="noopener">2015</a>)</p>
+</blockquote>
+<ul>
+<li><a href="https://github.com/VCCRI/Falco/" target="_blank" rel="noopener">Falco</a> ：云端处理scRNA-seq分析.</li>
+<li><a href="https://github.com/YosefLab/scone" target="_blank" rel="noopener">SCONE</a> (Single-Cell Overview of Normalized Expression), scRNA-seq质控和标准化的R包</li>
+<li><a href="http://satijalab.org/seurat/" target="_blank" rel="noopener">Seurat</a> ：scRNA-seq分析的常用的四大R包之一，包括对数据的质控、分析等</li>
+<li><a href="https://asap.epfl.ch/" target="_blank" rel="noopener">ASAP</a> (Automated Single-cell Analysis Pipeline) ：scRNA-seq交互分析的网络平台</li>
+</ul>
+<h2 id="挑战"><a href="#挑战" class="headerlink" title="挑战"></a>挑战</h2><p>bulk RNA-seq与scRNA-seq最主要的不同是scRNA-seq的每个测序文库代表一个细胞而不是一群细胞。文库的不同来源于：</p>
+<ul>
+<li>扩增 (达到1 million倍)</li>
+<li>Gene ‘dropouts’：指一个细胞在一个细胞中是中等表达水平，但是在另一个细胞中没有被检测到</li>
+</ul>
+<p>上面的差异主要来自于RNA的起始量很低，因此提高转录本的捕获率、降低扩增偏差是一个热门的研究方向。</p>
+<h2 id="实验方法"><a href="#实验方法" class="headerlink" title="实验方法"></a>实验方法</h2><p>发展新的scRNA-seq protocol也是一个热门领域，目前已有的方法包括：</p>
+<ul>
+<li>CEL-seq (Hashimshony et al. <a href="https://scrnaseq-course.cog.sanger.ac.uk/website/introduction-to-single-cell-rna-seq.html#ref-Hashimshony2012-kd" target="_blank" rel="noopener">2012</a>)</li>
+<li>CEL-seq2 (Hashimshony et al. <a href="https://scrnaseq-course.cog.sanger.ac.uk/website/introduction-to-single-cell-rna-seq.html#ref-Hashimshony2016-lx" target="_blank" rel="noopener">2016</a>)</li>
+<li>Drop-seq (Macosko et al. <a href="https://scrnaseq-course.cog.sanger.ac.uk/website/introduction-to-single-cell-rna-seq.html#ref-Macosko2015-ix" target="_blank" rel="noopener">2015</a>)</li>
+<li>InDrop-seq (Klein et al. <a href="https://scrnaseq-course.cog.sanger.ac.uk/website/introduction-to-single-cell-rna-seq.html#ref-Klein2015-kz" target="_blank" rel="noopener">2015</a>)</li>
+<li>MARS-seq (Jaitin et al. <a href="https://scrnaseq-course.cog.sanger.ac.uk/website/introduction-to-single-cell-rna-seq.html#ref-Jaitin2014-ko" target="_blank" rel="noopener">2014</a>)</li>
+<li>SCRB-seq (Soumillon et al. <a href="https://scrnaseq-course.cog.sanger.ac.uk/website/introduction-to-single-cell-rna-seq.html#ref-Soumillon2014-eu" target="_blank" rel="noopener">2014</a>)</li>
+<li>Seq-well (Gierahn et al. <a href="https://scrnaseq-course.cog.sanger.ac.uk/website/introduction-to-single-cell-rna-seq.html#ref-Gierahn2017-es" target="_blank" rel="noopener">2017</a>)</li>
+<li>Smart-seq (Picelli et al. <a href="https://scrnaseq-course.cog.sanger.ac.uk/website/introduction-to-single-cell-rna-seq.html#ref-Picelli2014-ic" target="_blank" rel="noopener">2014</a>)</li>
+<li>Smart-seq2 (Picelli et al. <a href="https://scrnaseq-course.cog.sanger.ac.uk/website/introduction-to-single-cell-rna-seq.html#ref-Picelli2014-ic" target="_blank" rel="noopener">2014</a>)</li>
+<li><a href="http://www.clontech.com/US/Products/cDNA_Synthesis_and_Library_Construction/Next_Gen_Sequencing_Kits/Total_RNA-Seq/Universal_RNA_Seq_Random_Primed" target="_blank" rel="noopener">SMARTer</a></li>
+<li>STRT-seq (Islam et al. <a href="https://scrnaseq-course.cog.sanger.ac.uk/website/introduction-to-single-cell-rna-seq.html#ref-Islam2014-cn" target="_blank" rel="noopener">2013</a>)</li>
+</ul>
+<p><img src="/.com//renyx/Documents/hexo/source/_posts/scRNA-seq基础知识扫盲篇/fig3-expre-method.png" style="zoom:10"></p>
+<p>不同的方法实现方式不同，其中<strong>定量</strong>和<strong>捕获</strong>是最重要的两个方面</p>
+<p><strong>定量有两种类型：</strong></p>
+<ul>
+<li>全长（full length): <ul>
+<li>致力于实现每个转录本一致的read coverage</li>
+<li>理论上的一致的coverage很难实现，经常会存在偏差</li>
+</ul>
+</li>
+<li>基于标签(tag-based):<ul>
+<li>只捕获RNA的5‘ 端或3’端，</li>
+<li>可以和UMI(unique molecular identifiers )结合提高定量准确性</li>
+<li>由于只捕获单端RNA可能会降低比对率</li>
+<li>很难鉴定isoforms</li>
+</ul>
 </li>
 </ul>
-<h3 id="评估差异peaks富集的工具"><a href="#评估差异peaks富集的工具" class="headerlink" title="评估差异peaks富集的工具"></a>评估差异peaks富集的工具</h3><p>ATAC-Seq下游分析的另一个重点是差异peaks分析。如分析不同的实验条件、多个时间节点、不同的发育时期等的差异区域。鉴定这些差异peaks区域在生物医学研究中也具有重要意义，目前也有多种相关的工具被开发：<br><img src="https://upload-images.jianshu.io/upload_images/8242255-78b2f423dc7b0fa8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt><br><strong>选择合适的工具需考虑以下几个因素：</strong></p>
+<p><strong>捕获</strong>：</p>
+<p>捕获策略决定了测序通量，以及得到细胞的方式和其他信息。常用的捕获策略有：</p>
 <ul>
-<li>所用的软件不需要大量的代码移植，该工具是否被维护和频繁更新。</li>
-<li>用户需要提供什么样的输入文件，是否与peaks calling所用工具可以衔接。</li>
-<li>信号分布的基础统计模型是什么？是基于泊松分布或更灵活的负二项分布。</li>
-<li>一些工具是专门针对特定的ATAC-seq或ChIP-seq 数据（信号类型）设计的，如组蛋白修饰或转录因子（TF）结合。</li>
+<li><p><strong>microwell-based</strong></p>
+<p>使用吸液管或激光捕获等方法分离细胞，并将其放置在微流体管中。该方法的优缺点是：</p>
+<ul>
+<li><p>优点是：可以与FACS分选结合使用，从而可以根据细胞表面marker筛选感兴趣的特定类型的细胞，同时在分选时可以拍摄细胞。图像可以用于识别受损细胞或dublets。</p>
+</li>
+<li><p>缺点是：通量低、耗时费工</p>
+<p><img src="/.com//renyx/Documents/hexo/source/_posts/scRNA-seq基础知识扫盲篇/fig4-microwell.png" style="zoom:60"></p>
+</li>
 </ul>
-<p>具体选择哪种工具决定于实验设计，下面的决策树可以帮助缩小你的选择范围。</p>
-<h2 id><a href="#" class="headerlink" title></a><img src="https://upload-images.jianshu.io/upload_images/8242255-3f133ad5e0d5b6e2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></h2><h3 id="DiffBind"><a href="#DiffBind" class="headerlink" title="DiffBind"></a>DiffBind</h3><p>DiffBind是鉴定两个样本间差异结合位点的一个R包。主要用于peak数据集，包括对peaks的重叠和合并的处理，计算peaks重复间隔的测序reads数，并基于结合亲和力鉴定具有统计显著性的差异结合位点。适用的统计模型有DESeq、DESeq2、edgeR。详细内容可参考DiffBind的文档：<a href="http://bioconductor.org/packages/release/bioc/vignettes/DiffBind/inst/doc/DiffBind.pdf" target="_blank" rel="noopener">http://bioconductor.org/packages/release/bioc/vignettes/DiffBind/inst/doc/DiffBind.pdf</a></p>
-<h3 id="使用方法："><a href="#使用方法：" class="headerlink" title="使用方法："></a>使用方法：</h3><h4 id="1-下载安装DiffBind"><a href="#1-下载安装DiffBind" class="headerlink" title="1. 下载安装DiffBind"></a>1. 下载安装DiffBind</h4><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">source</span>(<span class="string">"https://bioconductor.org/biocLite.R"</span>)</span><br><span class="line">biocLite(<span class="string">"DiffBind"</span>)</span><br><span class="line"><span class="comment"># view documentation</span></span><br><span class="line">browseVignettes(<span class="string">"DiffBind"</span>)</span><br></pre></td></tr></table></figure>
-<h4 id="2-准备输入文件"><a href="#2-准备输入文件" class="headerlink" title="2. 准备输入文件"></a>2. 准备输入文件</h4><p>需要准备一个SampleSheet文件，与<a href="（https://www.jianshu.com/p/a11147808d14）">ChIPQC</a>的方法一样。SampleSheet文件是根据实验设计和数据存储地址等信息创建的一个csv格式文件，包含的表头信息有<strong>“SampleID”、 “Tissue”、 “Factor”、 “Condition” 、”Treatment”、”Replicate” 、”bamReads” 、”ControlID”、 “bamControl” “Peaks”、 “PeakCaller”</strong>（bam,peak文件分别在比对和call peak的步骤产生）。<br><img src="https://upload-images.jianshu.io/upload_images/8242255-e5e43bc02d122cc8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<h4 id="3-差异peaks分析"><a href="#3-差异peaks分析" class="headerlink" title="3. 差异peaks分析"></a>3. 差异peaks分析</h4><p><strong>读入文件</strong><br>一旦读入了peaksets，合并函数就找到所有重叠的peaks，并导出一致性的peaksets。<br><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(DiffBind)</span><br><span class="line">dbObj &lt;- dba(sampleSheet=<span class="string">"SampleSheet.csv"</span>)</span><br></pre></td></tr></table></figure></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/8242255-b45f2ad5b70f46af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt><br><strong>亲和结合矩阵</strong><br>计算每个peaks/regions的count信息。先对一致性的peaks数据集进行标准化，然后根据他们的峰值（point of greatest read overlap）再次中心化并修剪一些peaks，最终得到更加标准的peak间隔。使用函数dba.count()，参数<code>bUseSummarizeOverlaps</code>可以得到更加标准的计算流程。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dbObj &lt;- dba.count(dbObj, bUseSummarizeOverlaps=TRUE)</span><br><span class="line">dba.plotPCA(dbObj,  attributes=DBA_FACTOR, label=DBA_ID)</span><br><span class="line">plot(dbObj)</span><br></pre></td></tr></table></figure></p>
-<p>结果中同时计算了FRiP (质量评估的一个标准，可以参考<a href="https://www.jianshu.com/p/a11147808d14" target="_blank" rel="noopener">第5篇：对ATAC-Seq/ChIP-seq的质量评估（二）——ChIPQC</a>)。<br><img src="https://upload-images.jianshu.io/upload_images/8242255-bda08e59563ab91a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt><br>样本间的聚类:<br><img src="https://upload-images.jianshu.io/upload_images/8242255-d806500399a287b6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt><br>Venn图展示样本间peaks的重合<br><img src="https://upload-images.jianshu.io/upload_images/8242255-d68a6b35c676e047.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt><br><strong>差异分析</strong><br>差异分析是DiffBind的核心功能，默认情况是基于DEseq2, 可以设置参数<code>method=DBA_EDGER</code>选择edgeR，或者设置<code>method=DBA_ALL_METHODS</code>。每种方法都会评估差异结果的p-vaue和FDR。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># Establishing a contrast </span><br><span class="line">dbObj &lt;- dba.contrast(dbObj, categories=DBA_FACTOR,minMembers = 2)</span><br><span class="line">dbObj &lt;- dba.analyze(dbObj, method=DBA_ALL_METHODS)</span><br><span class="line">#  summary of results</span><br><span class="line">dba.show(dbObj, bContrasts=T)</span><br><span class="line">#  overlapping peaks identified by the two different tools (DESeq2 and edgeR)</span><br><span class="line">dba.plotVenn(dbObj,contrast=1,method=DBA_ALL_METHODS)</span><br></pre></td></tr></table></figure>
-<p><img src="https://upload-images.jianshu.io/upload_images/8242255-22e7d87169ae0a19.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt><br><strong>提取结果</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">comp1.edgeR &lt;- dba.report(dbObj, method=DBA_EDGER, contrast = 1, th=1)</span><br><span class="line">comp1.deseq &lt;- dba.report(dbObj, method=DBA_DESEQ2, contrast = 1, th=1)</span><br></pre></td></tr></table></figure></p>
-<p>结果文件包含所有位点的基因组坐标，以及差异富集的统计数据包括fold change、p值和FDR。<br>其中<code>Conc</code>的表示read的平均浓度，即对peak 的read counts进行log2标准化</p>
+</li>
+<li><p><strong>microfluidic-based</strong></p>
+<ul>
+<li><p>如Fluidigm’s C1，提供了一个更为集成的系统，用于捕捉细胞和进行建库准备所需的反应。</p>
+</li>
+<li><p>优点是：通量比microwell-based 高</p>
+</li>
+<li><p>缺点是：捕获效率低，只有10%的细胞可以被捕获，因此不适用于细胞类型罕见或者输入细胞量少的研究；另外芯片价格相对贵</p>
+<p><img src="/.com//renyx/Documents/hexo/source/_posts/scRNA-seq基础知识扫盲篇/fig5-fluidigm.png" style="zoom:60"></p>
+</li>
+</ul>
+</li>
+<li><p><strong>droplet- based</strong></p>
+<ul>
+<li><p>将每一个细胞封装在一个毫微升的液滴中，并加上一个珠子（bead), bead中含有建库所需的酶和唯一的条形码（barcode)，条形码可以将reads来自于哪个细胞关联。因此，所有的液滴都可以汇集起来，排序在一起，然后根据条形码将reads分配给原始细胞。</p>
+</li>
+<li><p>优点是：通量最高</p>
+</li>
+<li><p>缺点是：测序成本、低覆盖率 (Ziegenhain et al. <a href="https://scrnaseq-course.cog.sanger.ac.uk/website/introduction-to-single-cell-rna-seq.html#ref-Ziegenhain2017-cu" target="_blank" rel="noopener">2017</a>)</p>
+<p><img src="/.com//renyx/Documents/hexo/source/_posts/scRNA-seq基础知识扫盲篇/fig6-drop-seq.png" alt></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="如何选择合适的平台"><a href="#如何选择合适的平台" class="headerlink" title="如何选择合适的平台"></a>如何选择合适的平台</h2><p>如何选择合适的protocols，只有根据研究的生物学问题。如果感兴趣一个组织的组成，那么droplet-based的方法可以得到大量的细胞，或许是最适合的；如果研究的是罕见细胞，并且知道细胞marker,那么结合FACS富集，测少量的细胞也可以实现目的。</p>
+<p>全长转录本适合于对不同亚型感兴趣的研究，tagged的protocols可以和UMI结合，适用于基因水平的定量。</p>
+<p><img src="/.com//renyx/Documents/hexo/source/_posts/scRNA-seq基础知识扫盲篇/fig7-comparison-methods.png" style="zoom:60"></p>
 <blockquote>
-<p>The value columns show the mean read concentration over all the samples (the default calculation uses log2 normalized ChIP read counts with control read counts subtracted) and the mean concentration over the first (Resistant) group and second (Responsive) group.</p>
+<p>内容来自<em>Hemberg</em> lab’s 单细胞课程学习笔记 ： </p>
+<p>Introduction to single-cell RNA-seq：</p>
+<p><a href="https://scrnaseq-course.cog.sanger.ac.uk/website/introduction-to-single-cell-rna-seq.html" target="_blank" rel="noopener">https://scrnaseq-course.cog.sanger.ac.uk/website/introduction-to-single-cell-rna-seq.html</a></p>
 </blockquote>
-<p><img src="https://upload-images.jianshu.io/upload_images/8242255-9cbf839407929d40.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt><br><strong>保存文件</strong><br><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># EdgeR</span></span><br><span class="line">out &lt;- as.data.frame(comp1.edgeR)</span><br><span class="line">write.table(out, file=<span class="string">"results/Nanog_vs_Pou5f1_edgeR.txt"</span>, sep=<span class="string">"\t"</span>, quote=<span class="literal">F</span>, col.names = <span class="literal">NA</span>)</span><br><span class="line"><span class="comment"># DESeq2</span></span><br><span class="line">out &lt;- as.data.frame(comp1.deseq)</span><br><span class="line">write.table(out, file=<span class="string">"results/Nanog_vs_Pou5f1_deseq2.txt"</span>, sep=<span class="string">"\t"</span>, quote=<span class="literal">F</span>, col.names = <span class="literal">NA</span>)</span><br></pre></td></tr></table></figure></p>
-<p><strong>以bed格式保存显著性的差异结果</strong><br><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Create bed files for each keeping only significant peaks (p &lt; 0.05)</span></span><br><span class="line"><span class="comment"># EdgeR</span></span><br><span class="line">out &lt;- as.data.frame(comp1.edgeR)</span><br><span class="line">edge.bed &lt;- out[ which(out$FDR &lt; <span class="number">0.05</span>), </span><br><span class="line">                 c(<span class="string">"seqnames"</span>, <span class="string">"start"</span>, <span class="string">"end"</span>, <span class="string">"strand"</span>, <span class="string">"Fold"</span>)]</span><br><span class="line">write.table(edge.bed, file=<span class="string">"results/Nanog_vs_Pou5f1_edgeR_sig.bed"</span>, sep=<span class="string">"\t"</span>, quote=<span class="literal">F</span>, row.names=<span class="literal">F</span>, col.names=<span class="literal">F</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># DESeq2</span></span><br><span class="line">out &lt;- as.data.frame(comp1.deseq)</span><br><span class="line">deseq.bed &lt;- out[ which(out$FDR &lt; <span class="number">0.05</span>), </span><br><span class="line">                 c(<span class="string">"seqnames"</span>, <span class="string">"start"</span>, <span class="string">"end"</span>, <span class="string">"strand"</span>, <span class="string">"Fold"</span>)]</span><br><span class="line">write.table(deseq.bed, file=<span class="string">"results/Nanog_vs_Pou5f1_deseq2_sig.bed"</span>, sep=<span class="string">"\t"</span>, quote=<span class="literal">F</span>, row.names=<span class="literal">F</span>, col.names=<span class="literal">F</span>)</span><br></pre></td></tr></table></figure></p>
-<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ol>
-<li><a href="http://bioconductor.org/packages/release/bioc/vignettes/DiffBind/inst/doc/DiffBind.pdf" target="_blank" rel="noopener">DiffBind文档</a></li>
-<li><a href="https://github.com/hbctraining/In-depth-NGS-Data-Analysis-Course/blob/master/sessionV/lessons/09_differential_peaks.md" target="_blank" rel="noopener">哈佛深度NGS数据分析课程， 09- Differential Peak calling using DiffBind</a></li>
-</ol>
 
       
     </div>
@@ -480,11 +560,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/ATACseq/" rel="tag"># ATACseq</a>
+            <a href="/tags/single-cell/" rel="tag"># single cell</a>
           
-            <a href="/tags/ChIPseq/" rel="tag"># ChIPseq</a>
-          
-            <a href="/tags/差异分析/" rel="tag"># 差异分析</a>
+            <a href="/tags/scRNA-seq/" rel="tag"># scRNA-seq</a>
           
         </div>
       
@@ -497,8 +575,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/23/第8篇：用网页版工具做功能分析和motif分析/" rel="next" title="第8篇：用网页版工具做功能分析和motif分析">
-                <i class="fa fa-chevron-left"></i> 第8篇：用网页版工具做功能分析和motif分析
+              <a href="/2019/08/23/使用BETA整合分析ATAC-seq:ChIP-seq和RNA-seq数据/" rel="next" title="使用BETA整合分析ATAC-seq/ChIP-seq和RNA-seq数据">
+                <i class="fa fa-chevron-left"></i> 使用BETA整合分析ATAC-seq/ChIP-seq和RNA-seq数据
               </a>
             
           </div>
@@ -506,10 +584,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/23/第10篇：ATAC-Seq、ChIP-Seq、RNA-Seq整合分析/" rel="prev" title="第10篇：ATAC-Seq、ChIP-Seq、RNA-Seq整合分析">
-                第10篇：ATAC-Seq、ChIP-Seq、RNA-Seq整合分析 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -648,7 +722,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#学习目标"><span class="nav-number">1.</span> <span class="nav-text">学习目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#评估差异peaks富集的工具"><span class="nav-number">2.</span> <span class="nav-text">评估差异peaks富集的工具</span></a></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number"></span> <span class="nav-text"></span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DiffBind"><span class="nav-number">1.</span> <span class="nav-text">DiffBind</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用方法："><span class="nav-number">2.</span> <span class="nav-text">使用方法：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-下载安装DiffBind"><span class="nav-number">2.1.</span> <span class="nav-text">1. 下载安装DiffBind</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-准备输入文件"><span class="nav-number">2.2.</span> <span class="nav-text">2. 准备输入文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-差异peaks分析"><span class="nav-number">2.3.</span> <span class="nav-text">3. 差异peaks分析</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考资料"><span class="nav-number">3.</span> <span class="nav-text">参考资料</span></a></li></ol></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Bulk-RNA-seq与scRNA-seq的优势和局限性"><span class="nav-number">1.</span> <span class="nav-text">Bulk RNA-seq与scRNA-seq的优势和局限性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Bulk-RNA-seq"><span class="nav-number">1.0.1.</span> <span class="nav-text">Bulk RNA-seq</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#scRNA-seq"><span class="nav-number">1.0.2.</span> <span class="nav-text">scRNA-seq</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#单细胞RNA测序流程"><span class="nav-number">2.</span> <span class="nav-text">单细胞RNA测序流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分析方法"><span class="nav-number">3.</span> <span class="nav-text">分析方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#挑战"><span class="nav-number">4.</span> <span class="nav-text">挑战</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实验方法"><span class="nav-number">5.</span> <span class="nav-text">实验方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何选择合适的平台"><span class="nav-number">6.</span> <span class="nav-text">如何选择合适的平台</span></a></li></div>
             
 
           </div>

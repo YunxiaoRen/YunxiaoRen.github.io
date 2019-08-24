@@ -286,6 +286,196 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/23/第6篇：重复样本的处理——IDR/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="六六">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="生信拾光">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/23/第6篇：重复样本的处理——IDR/" itemprop="url">第6篇：重复样本的处理——IDR</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-23T12:38:56+08:00">
+                2019-08-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/组学/" itemprop="url" rel="index">
+                    <span itemprop="name">组学</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/组学/表观组/" itemprop="url" rel="index">
+                    <span itemprop="name">表观组</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.2k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  5
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p><strong>ATAC-seq/ChIP-Seq中重复样本的处理</strong></p>
+<p>ATAC-Seq要求必须有2次或更多次生物学重复（十分珍贵或者稀有样本除外，但必须做至少2次技术重复）。理论上重复样本的peaks应该有高度的一致性，实际情况并不完全与预期一致。如何评价重复样本的重复性的好坏？如何得到一致性的peaks?</p>
+<h3 id="这一节将介绍两种方法："><a href="#这一节将介绍两种方法：" class="headerlink" title="这一节将介绍两种方法："></a>这一节将介绍两种方法：</h3><p><strong>1. 用Bedtools进行简单的overlap合并重复样本</strong><br><strong>2. 用IDR（Irreproducibility Discovery Rate）的方法获得高重复性的peaks</strong></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/08/23/第6篇：重复样本的处理——IDR/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/23/第5篇：对ATAC-SeqChIP-seq的质量评估（二）——ChIPQC/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -421,12 +611,11 @@
       
         
           <h3 id="1-学习目标"><a href="#1-学习目标" class="headerlink" title="1. 学习目标"></a>1. 学习目标</h3><ul>
-<li>讨论ChIP-seq数据质量评估的其他方法</li>
-<li>用ChIPQC产生质量统计报告</li>
-<li><p>鉴定低质量数据的来源</p>
+<li><p>讨论ChIP-seq数据质量评估的其他方法</p>
 </li>
-<li><p><strong>概览图</strong></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/8242255-df6c67811efb85eb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50"></p></li></ul>
+<li><p>用ChIPQC产生质量统计报告</p>
+</li>
+<li><p>鉴定低质量数据的来源</p></li></ul>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2019/08/23/第5篇：对ATAC-SeqChIP-seq的质量评估（二）——ChIPQC/#more" rel="contents">
@@ -812,7 +1001,6 @@
 <li>理解MACS2 call peaks的结果</li>
 </ul>
 <h3 id="Peak-Calling"><a href="#Peak-Calling" class="headerlink" title="Peak Calling"></a>Peak Calling</h3><p>Peak calling即利用计算的方法找出ChIP-seq或ATAC-seq中reads富集的基因组区域。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/8242255-1d1cb57462bd1803.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50"></p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2019/08/23/第3篇：用MACS2软件call peaks/#more" rel="contents">
@@ -1006,11 +1194,11 @@
 <li><strong>另外一点需要注意的是课程中给出的是单端比对的示例代码，如果是双端测序做相应更改即可。</strong></li>
 </ul>
 <h3 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h3><ul>
-<li>用FastQC进行质控检测</li>
-<li>用Trimmomatic进行质量过滤</li>
-<li>用Bowtie2比对，并理解相关参数含义<h3 id="测序reads-的质控流程示意图"><a href="#测序reads-的质控流程示意图" class="headerlink" title="测序reads 的质控流程示意图"></a>测序reads 的质控流程示意图</h3></li>
-</ul>
-<p><img src="https://upload-images.jianshu.io/upload_images/8242255-36f81589bdad9c92.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50"></p>
+<li><p>用FastQC进行质控检测</p>
+</li>
+<li><p>用Trimmomatic进行质量过滤</p>
+</li>
+<li><p>用Bowtie2比对，并理解相关参数含义</p></li></ul>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2019/08/23/第2篇：原始数据的质控、比对和过滤/#more" rel="contents">
@@ -1292,7 +1480,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1303,7 +1491,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1314,7 +1502,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1372,7 +1560,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">15.3k</span>
+    <span title="Site words total count">16.7k</span>
   
 </div>
 
@@ -1392,7 +1580,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共15.3k字</span>
+  <span class="post-count">博客全站共16.7k字</span>
 </div>
 
 

@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="ATACseq,ChIPseq,QC,">
+  <meta name="keywords" content="Hexo, NexT">
 
 
 
@@ -81,29 +81,16 @@
 
 
 
-<meta name="description" content="学习目标： 探讨ChIP-seq数据质量低的来源 理解链交叉相关性（ strand cross-correlation） 使用phantompeakqualtools计算交叉相关性和其他相关的质控度量值 评估交叉相关图">
-<meta name="keywords" content="ATACseq,ChIPseq,QC">
-<meta property="og:type" content="article">
-<meta property="og:title" content="第4篇：对ATAC-Seq&#x2F;ChIP-seq的质量评估（一）——phantompeakqualtools">
-<meta property="og:url" content="http://yoursite.com/2019/08/23/第4篇：对ATAC-SeqChIP-seq的质量评估（一）——phantompeakqualtools/index.html">
+<meta name="description" content="Seize the day! Collect the moment! Share the memory!">
+<meta property="og:type" content="website">
+<meta property="og:title" content="生信拾光">
+<meta property="og:url" content="http://yoursite.com/categories/组学/page/2/index.html">
 <meta property="og:site_name" content="生信拾光">
-<meta property="og:description" content="学习目标： 探讨ChIP-seq数据质量低的来源 理解链交叉相关性（ strand cross-correlation） 使用phantompeakqualtools计算交叉相关性和其他相关的质控度量值 评估交叉相关图">
+<meta property="og:description" content="Seize the day! Collect the moment! Share the memory!">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-025dd4ff30ae61b8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-9095a287381f5ec6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-120795238a4bbaba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-d2316a73a5af7331.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-c0b37466457a516e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-e931dc07c84629d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-f291e6c7288d5df6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-2846dc6bb5085bf8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-8781f9f9bd780b15.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-4e872e4a5d5fcdbb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2019-08-24T08:41:14.489Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第4篇：对ATAC-Seq&#x2F;ChIP-seq的质量评估（一）——phantompeakqualtools">
-<meta name="twitter:description" content="学习目标： 探讨ChIP-seq数据质量低的来源 理解链交叉相关性（ strand cross-correlation） 使用phantompeakqualtools计算交叉相关性和其他相关的质控度量值 评估交叉相关图">
-<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/8242255-025dd4ff30ae61b8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="生信拾光">
+<meta name="twitter:description" content="Seize the day! Collect the moment! Share the memory!">
 
 
 
@@ -133,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/08/23/第4篇：对ATAC-SeqChIP-seq的质量评估（一）——phantompeakqualtools/">
+  <link rel="canonical" href="http://yoursite.com/categories/组学/page/2/">
 
 
 
 
 
-  <title>第4篇：对ATAC-Seq/ChIP-seq的质量评估（一）——phantompeakqualtools | 生信拾光</title>
+  <title>分类: 组学 | 生信拾光</title>
   
 
 
@@ -158,7 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -284,288 +271,57 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
+  
+  
+  
+  <div class="post-block category">
 
-  
+    <div id="posts" class="posts-collapse">
+      <div class="collection-title">
+        <h1>组学<small>分类</small>
+        </h1>
+      </div>
 
-  
-  
-  
+      
+        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/23/第4篇：对ATAC-SeqChIP-seq的质量评估（一）——phantompeakqualtools/">
+    <header class="post-header">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="六六">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="生信拾光">
-    </span>
-
-    
-      <header class="post-header">
-
+      <h2 class="post-title">
         
+            <a class="post-title-link" href="/2019/08/23/第1篇：ATAC-seq的背景介绍以及与ChIP-Seq的异同/" itemprop="url">
+              
+                <span itemprop="name">第1篇：ATAC-seq的背景介绍以及与ChIP-Seq的异同</span>
+              
+            </a>
         
-          <h1 class="post-title" itemprop="name headline">第4篇：对ATAC-Seq/ChIP-seq的质量评估（一）——phantompeakqualtools</h1>
-        
+      </h2>
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-23T11:25:08+08:00">
-                2019-08-23
-              </time>
-            
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-08-23T08:26:56+08:00" content="2019-08-23">
+          08-23
+        </time>
+      </div>
 
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/组学/" itemprop="url" rel="index">
-                    <span itemprop="name">组学</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/组学/表观组/" itemprop="url" rel="index">
-                    <span itemprop="name">表观组</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  1.6k
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  6
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <h3 id="学习目标："><a href="#学习目标：" class="headerlink" title="学习目标："></a>学习目标：</h3><ul>
-<li>探讨ChIP-seq数据质量低的来源</li>
-<li>理解链交叉相关性（ strand cross-correlation）</li>
-<li>使用<code>phantompeakqualtools</code>计算交叉相关性和其他相关的质控度量值</li>
-<li>评估交叉相关图</li>
-</ul>
-<a id="more"></a>
-<h3 id="ChIP-Seq质量评估"><a href="#ChIP-Seq质量评估" class="headerlink" title="ChIP-Seq质量评估"></a>ChIP-Seq质量评估</h3><p>在下游分析前，最好是先对peak calling 后的ChIP-Seq数据进行质量评估。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/8242255-025dd4ff30ae61b8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50"></p>
-<h3 id="链交叉相关（Strand-cross-correlation）"><a href="#链交叉相关（Strand-cross-correlation）" class="headerlink" title="链交叉相关（Strand cross-correlation）"></a>链交叉相关（Strand cross-correlation）</h3><p>链交叉相关是一个有效的评估ChIP-Seq质量的方法，它不依赖于peak calling，而是基于ChIP-Seq实验。如果ChIP-Seq实验成功，DNA富集序列标签（蛋白质相互作用的序列）会在reads的双峰富集中产生显著的聚集。<br><strong>产生reads的双峰富集的原因如下：</strong><br>在ChIP-Seq实验中，DNA被片段化，蛋白质结合的片段会被免疫沉淀，所以产生了有蛋白质结合的DNA片段（fragments ）。<br>DNA的正链从5’端开始被测序（如下图红色reads），DNA负链也从5’末端被测序产生如下图所示的蓝色reads。<br><img src="https://upload-images.jianshu.io/upload_images/8242255-9095a287381f5ec6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Nat Biotechnol. 2008 Dec; 26(12): 1351–1359"><br>由于从DNA片段的5′末端测序，使+链reads的富集（下图中的蓝色部分）与负链reads的富集（下图红色部分）有少量的相互抵消区域。我们<strong>需要确定峰位移多少碱基数目可以在两个峰间产生最大的相关性。</strong>我们可以用<strong>交叉相关的度量值（cross-correlation metric）</strong>计算产生最大相关的位移。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/8242255-120795238a4bbaba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50"></p>
-<p><strong>交叉相关性度量值</strong><br>交叉相关度量是在Watson移动k个碱基后，计算Crick链与Watson链之间的Pearson线性相关。如下面的示意图：<br>首先在链位移为0时，两个向量之间的Pearson相关值为0.539。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/8242255-d2316a73a5af7331.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50"><br>在链位移5bp，两个向量之间的Pearson相关值为0.931。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/8242255-c0b37466457a516e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50"></p>
-<p>继续移动这些向量，对于每个链位移计算一个相关值。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/8242255-e931dc07c84629d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50"></p>
-<p>最后，我们将有一个每个碱基对移位与皮尔森相关值的对应表。这是针对每个染色体的每一个峰计算的，然后该值乘以一个缩放因子，再对所有染色体的值相加，就可以绘交叉相关值（y轴）相对于移位值（x轴）生成的交叉相关图。<br><strong>典型的交叉相关图会产生两个峰</strong>：一个富集峰与主要的<strong>片段长度（predominant fragment length）</strong>相关（高相关性），另一个与<strong>read 长度（read length）</strong>相关，这个峰也被称为虚幻峰（“phantom” peak）。</p>
-<ul>
-<li><p>质量好的ChIP-Seq数据集倾向产生一个大的<strong>片段长度峰（fragment-length peak）</strong>，下图展示了一个来自于人细胞CTCF（zinc-finger transcription factor）的强信号。如果有好的抗体，转录因子通常产生45,000~60,000个peaks。下图红色的垂直线表示主峰的真实位移，蓝色的垂直线处有一个小的起伏表示read lenngth。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/8242255-f291e6c7288d5df6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50"></p>
-</li>
-</ul>
-<ul>
-<li><p>下图是<strong>weaker signal</strong>的一个示例。这里<strong>Pol2</strong>的抗体不是很有效，有分散的峰。交叉相关图中有两个峰，一个是真实的峰位移（185-200bp），另外一个在read length。信号弱的数据集中read length的峰会成为主峰。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/8242255-2846dc6bb5085bf8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50"></p>
-</li>
-</ul>
-<ul>
-<li><p>一个失败的实验产生的交叉相关图类似于<strong>input</strong>，在<strong>fragment length</strong>处很少或没有峰，在<strong>read length</strong>处有信号非常强的。这种现象的原因可能是在结合位点附近<strong>fragments</strong>没有显著聚集。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/8242255-8781f9f9bd780b15.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50"></p>
-</li>
-</ul>
-<h3 id="交叉相关性质量评估度量值"><a href="#交叉相关性质量评估度量值" class="headerlink" title="交叉相关性质量评估度量值"></a>交叉相关性质量评估度量值</h3><p>交叉相关谱图可以计算评估ChIP_Seq实验信噪比的度量值，并且实验设计确保<strong>fragment length</strong>准确。低信噪比和不准确的fragment length 表明ChIP-Seq实验可能有问题。<br><strong>Normalized strand cross-correlation coefficent (NSC)：</strong><br>NSC是最大交叉相关值除以背景交叉相关的比率(所有可能的链转移的最小交叉相关值)。<strong>NSC值越大表明富集效果越好，NSC值低于1.1<br>表明较弱的富集，小于1表示无富集。</strong>NSC值稍微低于1.05，有较低的信噪比或很少的峰，这肯能是生物学真实现象，比如有的因子在特定组织类型中只有很少的结合位点；也可能确实是数据质量差。<br><strong>Relative strand cross-correlation coefficient (RSC):</strong><br>RSC是片段长度相关值减去背景相关值除以phantom-peak相关值减去背景相关值。<strong>RSC的最小值可能是0，表示无信号；富集好的实验RSC值大于1；低于1表示质量低。</strong></p>
-<h3 id="phantompeakqualtools"><a href="#phantompeakqualtools" class="headerlink" title="phantompeakqualtools"></a>phantompeakqualtools</h3><p>phantompeakqualtools 是一个用于计算ChIP-Seq数据富集和质量度量值的一个工具包。我们将使用该包来计算基于链交叉相关峰的主要插入大小(fragment length)和基于相对phantom peak的数据质量度量值。<code>phantompeakqualtools</code>是一个R包，依赖<code>samtools</code>。<br><strong>下载<code>phantompeakqualtools</code></strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/phantompeakqualtools/ccQualityControl.v.1.1.tar.gz</span><br><span class="line">tar -xzf ccQualityControl.v.1.1.tar.gz</span><br><span class="line"><span class="built_in">cd</span> phantompeakqualtools</span><br><span class="line"><span class="comment"># 查看README</span></span><br><span class="line">less README.txt</span><br></pre></td></tr></table></figure></p>
-<p><strong>Linux下安装</strong><br><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">R </span><br><span class="line">install.packages(<span class="string">"caTools"</span>, lib=<span class="string">"~/R/library"</span>)</span><br></pre></td></tr></table></figure></p>
-<p><strong>运行phantompeakqualtools</strong></p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p logs qual</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> bam <span class="keyword">in</span> bam_dir/sample1.final.bam bam_dir/sample2.final.bam</span><br><span class="line">do </span><br><span class="line">bam2=`basename $bam .final.bam`</span><br><span class="line">Rscript run_spp_nodups.R -c=$bam -savp -out=qual/$&#123;bam2&#125;.qual &gt; logs/$&#123;bam2&#125;.Rout</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
-<p><strong>参数含义：</strong></p>
-<ul>
-<li><code>-c</code>: 比对过滤后的bam文件的全路径和名字</li>
-<li><code>-savp</code>:保存交叉相关图</li>
-<li><code>-out</code>：会产生数据集重要特征值的输出文件</li>
-</ul>
-<p><strong>输出文件解读</strong><br>输出文件会产生一个tab分割的名为qual的文件,包含的信息如下：</p>
-<ul>
-<li><p>COL1：Filename：比对过滤的bam文件名</p>
-</li>
-<li><p>COL2：numReads ：有效的测序深度</p>
-</li>
-<li><p>COL3：estFragLen：逗号分隔的交叉相关峰以相关性递减顺序排列的值</p>
-</li>
-<li><p>COL4: corr_estFragLen: 逗号分隔的以递减顺序排列交叉相关值</p>
-</li>
-<li><p>COL5: phantomPeak: Read length/phantom peak链位移</p>
-</li>
-<li><p>COL6: corr_phantomPeak: phantom peak相关值</p>
-</li>
-<li><p>COL7: argmin_corr:交叉相关最小的链位移</p>
-</li>
-<li><p>COL8: min_corr:交叉相关最小值</p>
-</li>
-<li><p>COL9: Normalized strand cross-correlation coefficient (NSC) = COL4 / COL8</p>
-</li>
-<li><p>COL10: Relative strand cross-correlation coefficient (RSC) = (COL4 - COL8) / (COL6 - COL8)</p>
-</li>
-<li><p>COL11: QualityTag: Quality tag based on thresholded RSC (codes: -2:veryLow,-1:Low,0:Medium,1:High,2:veryHigh)<br><strong>我们最关注的值是第9列和第11列。</strong><br><strong>Cross-correlation plots</strong><br>课程中的示例数据Nanog_rep1的交叉相关图</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/8242255-4e872e4a5d5fcdbb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50"></p>
-</li>
-</ul>
-<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><p><a href="https://github.com/hbctraining/In-depth-NGS-Data-Analysis-Course/tree/master/sessionV/lessons" target="_blank" rel="noopener">哈佛深度NGS数据分析课程</a><br><a href="https://github.com/hbctraining/In-depth-NGS-Data-Analysis-Course/blob/master/sessionV/lessons/04_QC_cross_correlation.md" target="_blank" rel="noopener">04_ChIP-Seq Quality Assessment: Cross-correlation</a></p>
-
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/ATACseq/" rel="tag"># ATACseq</a>
-          
-            <a href="/tags/ChIPseq/" rel="tag"># ChIPseq</a>
-          
-            <a href="/tags/QC/" rel="tag"># QC</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2019/08/23/第3篇：用MACS2软件call peaks/" rel="next" title="第3篇：用MACS2软件call peaks">
-                <i class="fa fa-chevron-left"></i> 第3篇：用MACS2软件call peaks
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/23/第5篇：对ATAC-SeqChIP-seq的质量评估（二）——ChIPQC/" rel="prev" title="第5篇：对ATAC-Seq/ChIP-seq的质量评估（二）——ChIPQC">
-                第5篇：对ATAC-Seq/ChIP-seq的质量评估（二）——ChIPQC <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
+    </header>
   </article>
 
 
-
-    <div class="post-spread">
       
     </div>
+
   </div>
+  
+  
+  
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/categories/组学/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/categories/组学/">1</a><span class="page-number current">2</span>
+  </nav>
+
+
 
 
           </div>
@@ -573,10 +329,6 @@
 
 
           
-
-  
-
-
 
         </div>
         
@@ -597,17 +349,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -674,22 +417,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#学习目标："><span class="nav-number">1.</span> <span class="nav-text">学习目标：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ChIP-Seq质量评估"><span class="nav-number">2.</span> <span class="nav-text">ChIP-Seq质量评估</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#链交叉相关（Strand-cross-correlation）"><span class="nav-number">3.</span> <span class="nav-text">链交叉相关（Strand cross-correlation）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#交叉相关性质量评估度量值"><span class="nav-number">4.</span> <span class="nav-text">交叉相关性质量评估度量值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#phantompeakqualtools"><span class="nav-number">5.</span> <span class="nav-text">phantompeakqualtools</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考资料"><span class="nav-number">6.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -852,10 +579,6 @@
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
 
   
 
