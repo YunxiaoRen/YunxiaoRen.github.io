@@ -81,13 +81,13 @@
 
 
 
-<meta name="description" content="学习目标 学习用DiffBind流程评估两个样本间的差异结合区域 用PCA评估样本间的关系 评估不同工具得到的差异peaks的一致性">
+<meta name="description" content="学习目标 学习用DiffBind流程评估两个样本间的差异结合区域  用PCA评估样本间的关系  评估不同工具得到的差异peaks的一致性">
 <meta name="keywords" content="ATACseq,ChIPseq,差异分析">
 <meta property="og:type" content="article">
 <meta property="og:title" content="第9篇：差异peaks分析——DiffBind">
 <meta property="og:url" content="http://yoursite.com/2019/08/23/第9篇：差异peaks分析——DiffBind/index.html">
 <meta property="og:site_name" content="生信拾光">
-<meta property="og:description" content="学习目标 学习用DiffBind流程评估两个样本间的差异结合区域 用PCA评估样本间的关系 评估不同工具得到的差异peaks的一致性">
+<meta property="og:description" content="学习目标 学习用DiffBind流程评估两个样本间的差异结合区域  用PCA评估样本间的关系  评估不同工具得到的差异peaks的一致性">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-78b2f423dc7b0fa8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-3f133ad5e0d5b6e2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
@@ -98,10 +98,10 @@
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-d68a6b35c676e047.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-22e7d87169ae0a19.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-9cbf839407929d40.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2019-08-23T05:11:39.652Z">
+<meta property="og:updated_time" content="2019-08-24T08:35:44.884Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第9篇：差异peaks分析——DiffBind">
-<meta name="twitter:description" content="学习目标 学习用DiffBind流程评估两个样本间的差异结合区域 用PCA评估样本间的关系 评估不同工具得到的差异peaks的一致性">
+<meta name="twitter:description" content="学习目标 学习用DiffBind流程评估两个样本间的差异结合区域  用PCA评估样本间的关系  评估不同工具得到的差异peaks的一致性">
 <meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/8242255-78b2f423dc7b0fa8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
@@ -429,11 +429,14 @@
 
       
         <h3 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h3><ul>
-<li>学习用DiffBind流程评估两个样本间的差异结合区域</li>
-<li>用PCA评估样本间的关系</li>
-<li>评估不同工具得到的差异peaks的一致性</li>
-</ul>
+<li><p>学习用DiffBind流程评估两个样本间的差异结合区域</p>
+</li>
+<li><p>用PCA评估样本间的关系</p>
+</li>
+<li><p>评估不同工具得到的差异peaks的一致性</p>
 <a id="more"></a>
+</li>
+</ul>
 <h3 id="评估差异peaks富集的工具"><a href="#评估差异peaks富集的工具" class="headerlink" title="评估差异peaks富集的工具"></a>评估差异peaks富集的工具</h3><p>ATAC-Seq下游分析的另一个重点是差异peaks分析。如分析不同的实验条件、多个时间节点、不同的发育时期等的差异区域。鉴定这些差异peaks区域在生物医学研究中也具有重要意义，目前也有多种相关的工具被开发：<br><img src="https://upload-images.jianshu.io/upload_images/8242255-78b2f423dc7b0fa8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt><br><strong>选择合适的工具需考虑以下几个因素：</strong></p>
 <ul>
 <li>所用的软件不需要大量的代码移植，该工具是否被维护和频繁更新。</li>

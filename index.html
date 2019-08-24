@@ -1581,10 +1581,11 @@
       
         
           <h3 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h3><ul>
-<li>学习用DiffBind流程评估两个样本间的差异结合区域</li>
-<li>用PCA评估样本间的关系</li>
-<li>评估不同工具得到的差异peaks的一致性</li>
-</ul>
+<li><p>学习用DiffBind流程评估两个样本间的差异结合区域</p>
+</li>
+<li><p>用PCA评估样本间的关系</p>
+</li>
+<li><p>评估不同工具得到的差异peaks的一致性</p></li></ul>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2019/08/23/第9篇：差异peaks分析——DiffBind/#more" rel="contents">
@@ -1779,6 +1780,7 @@
 <li><strong>功能富集分析: [GREAT]</strong>(<a href="http://bejerano.stanford.edu/great/public/html/index.php" target="_blank" rel="noopener">http://bejerano.stanford.edu/great/public/html/index.php</a>)</li>
 <li><strong>motif分析:MEME套件，如DREME(<a href="http://meme-suite.org/tools/dreme)" target="_blank" rel="noopener">http://meme-suite.org/tools/dreme)</a>, MEME-ChIP (<a href="http://meme-suite.org/tools/meme-chip" target="_blank" rel="noopener">http://meme-suite.org/tools/meme-chip</a>)</strong> </li>
 </ul>
+<p><img src="https://upload-images.jianshu.io/upload_images/8242255-8e8c5b7121002686.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50"></p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2019/08/23/第8篇：用网页版工具做功能分析和motif分析/#more" rel="contents">
@@ -1969,6 +1971,8 @@
           <blockquote>
 <p>上一步骤（<a href="https://www.jianshu.com/p/d8a7056b4294" target="_blank" rel="noopener">第6篇：重复样本的处理——IDR</a>）用IDR对重复样本peaks的一致性进行了评估，同时得到了merge后的一致性的peaks——<code>sample-idr</code>，接下来就是对peaks的注释。这篇主要介绍用Y叔的R包<strong><a href="http://www.bioconductor.org/packages/release/bioc/vignettes/ChIPseeker/inst/doc/ChIPseeker.html" target="_blank" rel="noopener">ChIPseeker</a>对peaks的位置（如peaks位置落在启动子、UTR、内含子等）以及peaks临近基因的注释</strong>。</p>
 </blockquote>
+<h3 id="ChIPseeker"><a href="#ChIPseeker" class="headerlink" title="ChIPseeker"></a>ChIPseeker</h3><p>ChIPseeker虽然最初是为了ChIP-seq注释而写的一个R包，但它不只局限于ChIP-seq，也可用于ATAC-Seq等其他富集peaks注释，也可用于lincRNA注释、DNA breakpoints的断点位置注释等所有genomic coordination的注释，另外提供了丰富的可视化功能。<br>ChIPseeker的强大功能请参考Y叔的<a href="(https://mp.weixin.qq.com/mp/homepage?__biz=MzI5NjUyNzkxMg==&amp;hid=11&amp;sn=c22229f28bd00c3efd2c89cdadd63315&amp;scene=18&amp;devicetype=android-23&amp;version=26070238&amp;lang=zh_CN&amp;nettype=3gnet&amp;ascene=7&amp;session_us=gh_ba0578f6322d">ChIP-Seq系列文章</a>)，如：<br><a href="https://mp.weixin.qq.com/s/vWTf59KDs1lp_sQXjEhI_g" target="_blank" rel="noopener">CS3: peak注释</a><br><a href="https://mp.weixin.qq.com/s/_OPzvaEAbiMolCA2mqJXLw" target="_blank" rel="noopener">CS4：关于ChIPseq注释的几个问题</a><br><a href="https://mp.weixin.qq.com/s/MqpfgkMJSFj0pYwcEjV9kQ" target="_blank" rel="noopener">CS6: ChIPseeker的可视化方法（中秋节的视觉饕餮）</a></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/8242255-ed9f825cf93a7fa8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50"></p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2019/08/23/第7篇：用Y叔的ChIPseeker对peaks进行注释和可视化/#more" rel="contents">
@@ -2159,6 +2163,8 @@
           <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p><strong>ATAC-seq/ChIP-Seq中重复样本的处理</strong></p>
 <p>ATAC-Seq要求必须有2次或更多次生物学重复（十分珍贵或者稀有样本除外，但必须做至少2次技术重复）。理论上重复样本的peaks应该有高度的一致性，实际情况并不完全与预期一致。如何评价重复样本的重复性的好坏？如何得到一致性的peaks?</p>
 <h3 id="这一节将介绍两种方法："><a href="#这一节将介绍两种方法：" class="headerlink" title="这一节将介绍两种方法："></a>这一节将介绍两种方法：</h3><p><strong>1. 用Bedtools进行简单的overlap合并重复样本</strong><br><strong>2. 用IDR（Irreproducibility Discovery Rate）的方法获得高重复性的peaks</strong></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/8242255-f2cf66adfcbcc2d6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50"></p>
+<hr>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2019/08/23/第6篇：重复样本的处理——IDR/#more" rel="contents">

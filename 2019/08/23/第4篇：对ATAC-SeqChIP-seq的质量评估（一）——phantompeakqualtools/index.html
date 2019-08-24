@@ -99,7 +99,7 @@
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-2846dc6bb5085bf8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-8781f9f9bd780b15.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-4e872e4a5d5fcdbb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2019-08-23T04:56:49.406Z">
+<meta property="og:updated_time" content="2019-08-24T08:33:30.119Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第4篇：对ATAC-Seq&#x2F;ChIP-seq的质量评估（一）——phantompeakqualtools">
 <meta name="twitter:description" content="学习目标： 探讨ChIP-seq数据质量低的来源 理解链交叉相关性（ strand cross-correlation） 使用phantompeakqualtools计算交叉相关性和其他相关的质控度量值 评估交叉相关图">
@@ -438,6 +438,7 @@
 <a id="more"></a>
 <h3 id="ChIP-Seq质量评估"><a href="#ChIP-Seq质量评估" class="headerlink" title="ChIP-Seq质量评估"></a>ChIP-Seq质量评估</h3><p>在下游分析前，最好是先对peak calling 后的ChIP-Seq数据进行质量评估。</p>
 <p><img src="https://upload-images.jianshu.io/upload_images/8242255-025dd4ff30ae61b8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50"></p>
+<!--more-->
 <h3 id="链交叉相关（Strand-cross-correlation）"><a href="#链交叉相关（Strand-cross-correlation）" class="headerlink" title="链交叉相关（Strand cross-correlation）"></a>链交叉相关（Strand cross-correlation）</h3><p>链交叉相关是一个有效的评估ChIP-Seq质量的方法，它不依赖于peak calling，而是基于ChIP-Seq实验。如果ChIP-Seq实验成功，DNA富集序列标签（蛋白质相互作用的序列）会在reads的双峰富集中产生显著的聚集。<br><strong>产生reads的双峰富集的原因如下：</strong><br>在ChIP-Seq实验中，DNA被片段化，蛋白质结合的片段会被免疫沉淀，所以产生了有蛋白质结合的DNA片段（fragments ）。<br>DNA的正链从5’端开始被测序（如下图红色reads），DNA负链也从5’末端被测序产生如下图所示的蓝色reads。<br><img src="https://upload-images.jianshu.io/upload_images/8242255-9095a287381f5ec6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Nat Biotechnol. 2008 Dec; 26(12): 1351–1359"><br>由于从DNA片段的5′末端测序，使+链reads的富集（下图中的蓝色部分）与负链reads的富集（下图红色部分）有少量的相互抵消区域。我们<strong>需要确定峰位移多少碱基数目可以在两个峰间产生最大的相关性。</strong>我们可以用<strong>交叉相关的度量值（cross-correlation metric）</strong>计算产生最大相关的位移。</p>
 <p><img src="https://upload-images.jianshu.io/upload_images/8242255-120795238a4bbaba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50"></p>
 <p><strong>交叉相关性度量值</strong><br>交叉相关度量是在Watson移动k个碱基后，计算Crick链与Watson链之间的Pearson线性相关。如下面的示意图：<br>首先在链位移为0时，两个向量之间的Pearson相关值为0.539。</p>
