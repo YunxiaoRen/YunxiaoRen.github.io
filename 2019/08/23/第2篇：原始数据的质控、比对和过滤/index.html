@@ -81,19 +81,19 @@
 
 
 
-<meta name="description" content="这部分内容包括对原始测序数据质控，然后比对过滤，这是所有NGS数据处理的上游分析。  ATAC-Seq与其他方法不同的一点是需要过滤去除线粒体（如果是植物，还需要过滤叶绿体），因为线粒体DNA是裸露的，也可以被Tn5酶识别切割。 另外一点需要注意的是课程中给出的是单端比对的示例代码，如果是双端测序做相应更改即可。  学习目标 用FastQC进行质控检测  用Trimmomatic进行质量过滤  用">
+<meta name="description" content="这部分内容包括对原始测序数据质控，然后比对过滤，这是所有NGS数据处理的上游分析。  ATAC-Seq与其他方法不同的一点是需要过滤去除线粒体（如果是植物，还需要过滤叶绿体），因为线粒体DNA是裸露的，也可以被Tn5酶识别切割。 另外一点需要注意的是课程中给出的是单端比对的示例代码，如果是双端测序做相应更改即可。  学习目标 用FastQC进行质控检测 用Trimmomatic进行质量过滤 用Bo">
 <meta name="keywords" content="ATACseq,QC">
 <meta property="og:type" content="article">
 <meta property="og:title" content="第2篇：原始数据的质控、比对和过滤">
 <meta property="og:url" content="http://yoursite.com/2019/08/23/第2篇：原始数据的质控、比对和过滤/index.html">
 <meta property="og:site_name" content="生信拾光">
-<meta property="og:description" content="这部分内容包括对原始测序数据质控，然后比对过滤，这是所有NGS数据处理的上游分析。  ATAC-Seq与其他方法不同的一点是需要过滤去除线粒体（如果是植物，还需要过滤叶绿体），因为线粒体DNA是裸露的，也可以被Tn5酶识别切割。 另外一点需要注意的是课程中给出的是单端比对的示例代码，如果是双端测序做相应更改即可。  学习目标 用FastQC进行质控检测  用Trimmomatic进行质量过滤  用">
+<meta property="og:description" content="这部分内容包括对原始测序数据质控，然后比对过滤，这是所有NGS数据处理的上游分析。  ATAC-Seq与其他方法不同的一点是需要过滤去除线粒体（如果是植物，还需要过滤叶绿体），因为线粒体DNA是裸露的，也可以被Tn5酶识别切割。 另外一点需要注意的是课程中给出的是单端比对的示例代码，如果是双端测序做相应更改即可。  学习目标 用FastQC进行质控检测 用Trimmomatic进行质量过滤 用Bo">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-36f81589bdad9c92.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2019-08-24T08:40:26.299Z">
+<meta property="og:updated_time" content="2019-08-24T08:53:32.623Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第2篇：原始数据的质控、比对和过滤">
-<meta name="twitter:description" content="这部分内容包括对原始测序数据质控，然后比对过滤，这是所有NGS数据处理的上游分析。  ATAC-Seq与其他方法不同的一点是需要过滤去除线粒体（如果是植物，还需要过滤叶绿体），因为线粒体DNA是裸露的，也可以被Tn5酶识别切割。 另外一点需要注意的是课程中给出的是单端比对的示例代码，如果是双端测序做相应更改即可。  学习目标 用FastQC进行质控检测  用Trimmomatic进行质量过滤  用">
+<meta name="twitter:description" content="这部分内容包括对原始测序数据质控，然后比对过滤，这是所有NGS数据处理的上游分析。  ATAC-Seq与其他方法不同的一点是需要过滤去除线粒体（如果是植物，还需要过滤叶绿体），因为线粒体DNA是裸露的，也可以被Tn5酶识别切割。 另外一点需要注意的是课程中给出的是单端比对的示例代码，如果是双端测序做相应更改即可。  学习目标 用FastQC进行质控检测 用Trimmomatic进行质量过滤 用Bo">
 <meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/8242255-36f81589bdad9c92.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
@@ -426,15 +426,12 @@
 <li><strong>另外一点需要注意的是课程中给出的是单端比对的示例代码，如果是双端测序做相应更改即可。</strong></li>
 </ul>
 <h3 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h3><ul>
-<li><p>用FastQC进行质控检测</p>
-</li>
-<li><p>用Trimmomatic进行质量过滤</p>
-</li>
-<li><p>用Bowtie2比对，并理解相关参数含义</p>
-<a id="more"></a>
-<h3 id="测序reads-的质控流程示意图"><a href="#测序reads-的质控流程示意图" class="headerlink" title="测序reads 的质控流程示意图"></a>测序reads 的质控流程示意图</h3></li>
+<li>用FastQC进行质控检测</li>
+<li>用Trimmomatic进行质量过滤</li>
+<li>用Bowtie2比对，并理解相关参数含义</li>
 </ul>
-<p><img src="https://upload-images.jianshu.io/upload_images/8242255-36f81589bdad9c92.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50"></p>
+<a id="more"></a>
+<h3 id="测序reads-的质控流程示意图"><a href="#测序reads-的质控流程示意图" class="headerlink" title="测序reads 的质控流程示意图"></a>测序reads 的质控流程示意图</h3><p><img src="https://upload-images.jianshu.io/upload_images/8242255-36f81589bdad9c92.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50"></p>
 <h3 id="FASTQC"><a href="#FASTQC" class="headerlink" title="FASTQC"></a>FASTQC</h3><p>首先对拿到的原始测序数据（fastq或fastq.gz格式）进行质控检测，直接用<code>fastqc</code>软件，再加上<code>multiqc</code>将多个检测结果一起展示。<br>如:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fastqc -o out_dir raw_data/*gz</span><br><span class="line">multiqc *fastqc.zip --ignore *.html</span><br></pre></td></tr></table></figure></p>
 <h3 id="Trimmomatic"><a href="#Trimmomatic" class="headerlink" title="Trimmomatic"></a>Trimmomatic</h3><p>Trimmomatic 可以用于去除接头，过滤低质量数据。相同功能的软件还有很多，如<code>trim_galore</code>、<code>cutadapt</code>等，个人比较喜欢trim_galore可以自动识别接头类型。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 课程中给出的Trimmomatic 的用法（单端测序）</span></span><br><span class="line">$ java -jar /opt/Trimmomatic-0.33/trimmomatic-0.33.jar SE \</span><br><span class="line">-threads 2 \</span><br><span class="line">-phred33 \</span><br><span class="line">H1hesc_Input_Rep1_chr12.fastq \</span><br><span class="line">../results/trimmed/H1hesc_Input_Rep1_chr12.qualtrim20.minlen36.fq \</span><br><span class="line">LEADING:20 \</span><br><span class="line">TRAILING:20 \</span><br><span class="line">MINLEN:36</span><br></pre></td></tr></table></figure></p>
 <p><strong>Trimmomatic参数含义：</strong>可以参考<a href="https://www.jianshu.com/p/a8935adebaae" target="_blank" rel="noopener">NGS 数据过滤之 Trimmomatic 详细说明</a><br><strong>trim_galore使用示例</strong></p>

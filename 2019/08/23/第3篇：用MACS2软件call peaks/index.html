@@ -81,13 +81,13 @@
 
 
 
-<meta name="description" content="学习目标： 学会用MACS2 call peaks 理解MACS2 call peaks的结果  Peak CallingPeak calling即利用计算的方法找出ChIP-seq或ATAC-seq中reads富集的基因组区域。">
+<meta name="description" content="学习目标： 学会用MACS2 call peaks 理解MACS2 call peaks的结果">
 <meta name="keywords" content="ATACseq,ChIPseq">
 <meta property="og:type" content="article">
 <meta property="og:title" content="第3篇：用MACS2软件call peaks">
 <meta property="og:url" content="http://yoursite.com/2019/08/23/第3篇：用MACS2软件call peaks/index.html">
 <meta property="og:site_name" content="生信拾光">
-<meta property="og:description" content="学习目标： 学会用MACS2 call peaks 理解MACS2 call peaks的结果  Peak CallingPeak calling即利用计算的方法找出ChIP-seq或ATAC-seq中reads富集的基因组区域。">
+<meta property="og:description" content="学习目标： 学会用MACS2 call peaks 理解MACS2 call peaks的结果">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-1d1cb57462bd1803.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-72a8be3b74bb6659.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
@@ -95,10 +95,10 @@
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-6f70944596087547.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-836a2990e5c80537.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-539bc6f3090fc55f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2019-08-24T08:40:53.711Z">
+<meta property="og:updated_time" content="2019-08-24T08:54:36.129Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第3篇：用MACS2软件call peaks">
-<meta name="twitter:description" content="学习目标： 学会用MACS2 call peaks 理解MACS2 call peaks的结果  Peak CallingPeak calling即利用计算的方法找出ChIP-seq或ATAC-seq中reads富集的基因组区域。">
+<meta name="twitter:description" content="学习目标： 学会用MACS2 call peaks 理解MACS2 call peaks的结果">
 <meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/8242255-1d1cb57462bd1803.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
@@ -429,8 +429,8 @@
 <li>学会用MACS2 call peaks</li>
 <li>理解MACS2 call peaks的结果</li>
 </ul>
-<h3 id="Peak-Calling"><a href="#Peak-Calling" class="headerlink" title="Peak Calling"></a>Peak Calling</h3><p>Peak calling即利用计算的方法找出ChIP-seq或ATAC-seq中reads富集的基因组区域。</p>
 <a id="more"></a>
+<h3 id="Peak-Calling"><a href="#Peak-Calling" class="headerlink" title="Peak Calling"></a>Peak Calling</h3><p>Peak calling即利用计算的方法找出ChIP-seq或ATAC-seq中reads富集的基因组区域。</p>
 <p><img src="https://upload-images.jianshu.io/upload_images/8242255-1d1cb57462bd1803.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50"></p>
 <p>如下图所示，比对结果的文件中reads在正负链不均匀分布，但在结合位点聚集。正负链5‘末端的reads各形成一组合，通过统计学的方法评估这些组合的分布并和对照组比较，确定这些结合位点是否是显著的。<br><img src="https://upload-images.jianshu.io/upload_images/8242255-72a8be3b74bb6659.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
 <blockquote>
