@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-24T09:38:46.837Z</updated>
+  <updated>2019-08-24T09:42:55.528Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,16 +21,16 @@
     <link href="http://yoursite.com/2019/08/24/test/"/>
     <id>http://yoursite.com/2019/08/24/test/</id>
     <published>2019-08-24T09:26:59.000Z</published>
-    <updated>2019-08-24T09:38:46.837Z</updated>
+    <updated>2019-08-24T09:42:55.528Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="插入本地图片"><a href="#插入本地图片" class="headerlink" title="插入本地图片"></a>插入本地图片</h3><p>同名文件夹中的图片</p><p><img src="/.com//renyx/Documents/hexo/source/_posts/test/Snipaste_2019-08-24_17-27-54.png" alt></p><h2 id="插入简书图片"><a href="#插入简书图片" class="headerlink" title="插入简书图片"></a>插入简书图片</h2><p><img src="https://upload-images.jianshu.io/upload_images/8242255-3e70e72f48d69052.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p><h2 id="插入images图片"><a href="#插入images图片" class="headerlink" title="插入images图片"></a>插入images图片</h2><p><img src="/images/test.png" alt></p>]]></content>
+    <content type="html"><![CDATA[<h3 id="插入本地图片"><a href="#插入本地图片" class="headerlink" title="插入本地图片"></a>插入本地图片</h3><p>同名文件夹中的图片</p><p><img src="/.com//Snipaste_2019-08-24_17-27-54.png" alt></p><h2 id="插入简书图片"><a href="#插入简书图片" class="headerlink" title="插入简书图片"></a>插入简书图片</h2><p><img src="https://upload-images.jianshu.io/upload_images/8242255-3e70e72f48d69052.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p><h2 id="插入images图片"><a href="#插入images图片" class="headerlink" title="插入images图片"></a>插入images图片</h2><p><img src="/images/test.jpg" alt></p>]]></content>
     
     <summary type="html">
     
       
       
         &lt;h3 id=&quot;插入本地图片&quot;&gt;&lt;a href=&quot;#插入本地图片&quot; class=&quot;headerlink&quot; title=&quot;插入本地图片&quot;&gt;&lt;/a&gt;插入本地图片&lt;/h3&gt;&lt;p&gt;同名文件夹中的图片&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/.com//renyx/Documents/hexo
+&lt;p&gt;&lt;img src=&quot;/.com//Snipaste_2019-08-24_
       
     
     </summary>
