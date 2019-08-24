@@ -95,15 +95,10 @@
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-a929302bfd47dc9d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-01749f12cf83c9af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-ae05107ee85bb02a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-c4274afa8e04dd99.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-bf79c7e6edea3523.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-00577ac95d666739.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-d50435914800593a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-fec14f72728ddcd7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-c4871f68579ba322.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-ee0ccb984d0ea9dc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-4f61fd17225198b9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2019-08-24T08:55:16.487Z">
+<meta property="og:updated_time" content="2019-08-24T12:56:28.890Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第5篇：对ATAC-Seq&#x2F;ChIP-seq的质量评估（二）——ChIPQC">
 <meta name="twitter:description" content="1. 学习目标 讨论ChIP-seq数据质量评估的其他方法 用ChIPQC产生质量统计报告 鉴定低质量数据的来源">
@@ -441,7 +436,7 @@
 <a id="more"></a>
 <ul>
 <li><p><strong>概览图</strong></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/8242255-df6c67811efb85eb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/8242255-df6c67811efb85eb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50%"></p>
 </li>
 </ul>
 <p>ENCODE评估数据质量采用多种指标，如前面已经讨论过的链相关的指标NSC和RSC。这一节将会讨论评估信号分布的其他指标。</p>
@@ -508,11 +503,21 @@
 </blockquote>
 </li>
 </ul>
-<p><strong>Figure 1</strong>展现了reads在blacklists中的比例，<br><img src="https://upload-images.jianshu.io/upload_images/8242255-c4274afa8e04dd99.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Figure 1.  Barplot of the percentage of reads in blacklists"></p>
-<p><strong>Figure 2</strong>是用基因组注释呈现了reads在基因组特征位置如启动子的分布。这幅图里显示在启动子区域富集最明显。<br><img src="https://upload-images.jianshu.io/upload_images/8242255-bf79c7e6edea3523.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Figure 2 Heatmap of log2 enrichment of reads in genomic features"></p>
+<p><strong>Figure 1</strong>展现了reads在blacklists中的比例，</p>
+<p><strong>Figure 2</strong>是用基因组注释呈现了reads在基因组特征位置如启动子的分布。这幅图里显示在启动子区域富集最明显。</p>
 <ul>
-<li><strong>ChIP signal Distribution and Structure</strong><br>第二部分是ChIP信号分布和结构组成，包括Figure3和4。<br><strong>Figure 3</strong>是一个coverage plot， x轴代表在某bp位置read pileup的高度，y轴代表有多少位置有相同的pileup 高度(取log)。**有好的富集的ChIP样本会有一个tail，即更多的位置（y值大）有较高的测序深度。在我们的数据集中Nanog样本与Pou5f1 相比有较高的tails,尤其是重复样本2。但是Pou5f1有较高的SSD值。当SSD高但是coverage看起来低时，可能是存在大片段深度高的区域出现在blacklist 基因组区域。<br><img src="https://upload-images.jianshu.io/upload_images/8242255-00577ac95d666739.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Figure 3.  Plot of the log2 base pairs of genome at differing read depths"></li>
-<li><strong>Peak Profile and ChIP Enrichment</strong><br>第3部分是peak的谱图和ChIP的富集，每个peak都集中在summit位置（summit 理解为peak的最高峰值点处）<br><img src="https://upload-images.jianshu.io/upload_images/8242255-d50435914800593a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Figure 5.  Plot of the average signal profile across peaks"><br>peak的性状取决于研究对象的类型，如转录因子、组蛋白标记、或其他DNA结合蛋白如聚合酶等，相同类型的对象通常有独特特征的谱图。<br><strong>Figure6和7</strong>都是对比对到peak中的reads统计。富集效果好的ChIP样本的reads与peaks会有高比例的重合。尽管Nanog有较高的RiP,但是两个重复样本间的差异大于Pou5f1。<br><img src="https://upload-images.jianshu.io/upload_images/8242255-fec14f72728ddcd7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Figure 6.  Barplot of the percentage number of reads in peaks"><br><img src="https://upload-images.jianshu.io/upload_images/8242255-c4871f68579ba322.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Figure 7.  Density plot of the number of reads in peaks"><br><strong>Figure8和9</strong>表示样本的聚类效果，分别是相关性聚类热图和PCA。<br><img src="https://upload-images.jianshu.io/upload_images/8242255-ee0ccb984d0ea9dc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Figure 8.  Plot of correlation between peaksets"><br><img src="https://upload-images.jianshu.io/upload_images/8242255-4f61fd17225198b9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Figure 9.  PCA of peaksets"><h3 id="4-实验偏差：ChIP-seq数据质量低的来源"><a href="#4-实验偏差：ChIP-seq数据质量低的来源" class="headerlink" title="4. 实验偏差：ChIP-seq数据质量低的来源"></a>4. 实验偏差：ChIP-seq数据质量低的来源</h3></li>
+<li><p><strong>ChIP signal Distribution and Structure</strong><br>第二部分是ChIP信号分布和结构组成，包括Figure3和4。<br><strong>Figure 3</strong>是一个coverage plot， x轴代表在某bp位置read pileup的高度，y轴代表有多少位置有相同的pileup 高度(取log)。**有好的富集的ChIP样本会有一个tail，即更多的位置（y值大）有较高的测序深度。在我们的数据集中Nanog样本与Pou5f1 相比有较高的tails,尤其是重复样本2。但是Pou5f1有较高的SSD值。当SSD高但是coverage看起来低时，可能是存在大片段深度高的区域出现在blacklist 基因组区域。</p>
+</li>
+<li><p><strong>Peak Profile and ChIP Enrichment</strong><br>第3部分是peak的谱图和ChIP的富集，每个peak都集中在summit位置（summit 理解为peak的最高峰值点处）<img src="https://upload-images.jianshu.io/upload_images/8242255-d50435914800593a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50%"></p>
+</li>
+<li><p>peak的性状取决于研究对象的类型，如转录因子、组蛋白标记、或其他DNA结合蛋白如聚合酶等，相同类型的对象通常有独特特征的谱图。<br><strong>Figure6和7</strong>都是对比对到peak中的reads统计。富集效果好的ChIP样本的reads与peaks会有高比例的重合。尽管Nanog有较高的RiP,但是两个重复样本间的差异大于Pou5f1。</p>
+</li>
+<li><p>Figure8和9**表示样本的聚类效果，分别是相关性聚类热图和PCA。</p>
+</li>
+</ul>
+<p><img src="https://upload-images.jianshu.io/upload_images/8242255-ee0ccb984d0ea9dc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50%"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/8242255-4f61fd17225198b9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50%"></p>
+<h3 id="4-实验偏差：ChIP-seq数据质量低的来源"><a href="#4-实验偏差：ChIP-seq数据质量低的来源" class="headerlink" title="4. 实验偏差：ChIP-seq数据质量低的来源"></a>4. 实验偏差：ChIP-seq数据质量低的来源</h3><ul>
 <li>免疫沉淀的特异性和有效性<br>影响因素如抗体的特异性，结和沉淀的强度</li>
 <li>片段化<br>超声裂解产生不同大小的片段可能引入偏差</li>
 <li>文库构建时的偏差<br>如PCR扩增<h4 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h4><a href="https://github.com/hbctraining/In-depth-NGS-Data-Analysis-Course/tree/master/sessionV/lessons" target="_blank" rel="noopener">哈佛深度NGS数据分析课程</a><br><a href="https://github.com/hbctraining/In-depth-NGS-Data-Analysis-Course/blob/master/sessionV/lessons/05_QC_quality_metrics.md" target="_blank" rel="noopener">05-ChIP-Seq Quality Assessment</a></li>

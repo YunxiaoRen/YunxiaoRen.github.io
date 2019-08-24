@@ -92,7 +92,7 @@
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-ed9f825cf93a7fa8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-0f981c1bb6b89f8d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-ebcdf242c4bc96f6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2019-08-24T08:42:20.629Z">
+<meta property="og:updated_time" content="2019-08-24T12:47:45.029Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第7篇：用Y叔的ChIPseeker对peaks进行注释和可视化">
 <meta name="twitter:description" content="上一步骤（第6篇：重复样本的处理——IDR）用IDR对重复样本peaks的一致性进行了评估，同时得到了merge后的一致性的peaks——sample-idr，接下来就是对peaks的注释。这篇主要介绍用Y叔的R包ChIPseeker对peaks的位置（如peaks位置落在启动子、UTR、内含子等）以及peaks临近基因的注释。  ChIPseekerChIPseeker虽然最初是为了ChIP-">
@@ -427,7 +427,7 @@
 </blockquote>
 <h3 id="ChIPseeker"><a href="#ChIPseeker" class="headerlink" title="ChIPseeker"></a>ChIPseeker</h3><p>ChIPseeker虽然最初是为了ChIP-seq注释而写的一个R包，但它不只局限于ChIP-seq，也可用于ATAC-Seq等其他富集peaks注释，也可用于lincRNA注释、DNA breakpoints的断点位置注释等所有genomic coordination的注释，另外提供了丰富的可视化功能。<br>ChIPseeker的强大功能请参考Y叔的<a href="(https://mp.weixin.qq.com/mp/homepage?__biz=MzI5NjUyNzkxMg==&amp;hid=11&amp;sn=c22229f28bd00c3efd2c89cdadd63315&amp;scene=18&amp;devicetype=android-23&amp;version=26070238&amp;lang=zh_CN&amp;nettype=3gnet&amp;ascene=7&amp;session_us=gh_ba0578f6322d">ChIP-Seq系列文章</a>)，如：<br><a href="https://mp.weixin.qq.com/s/vWTf59KDs1lp_sQXjEhI_g" target="_blank" rel="noopener">CS3: peak注释</a><br><a href="https://mp.weixin.qq.com/s/_OPzvaEAbiMolCA2mqJXLw" target="_blank" rel="noopener">CS4：关于ChIPseq注释的几个问题</a><br><a href="https://mp.weixin.qq.com/s/MqpfgkMJSFj0pYwcEjV9kQ" target="_blank" rel="noopener">CS6: ChIPseeker的可视化方法（中秋节的视觉饕餮）</a></p>
 <a id="more"></a>
-<p><img src="https://upload-images.jianshu.io/upload_images/8242255-ed9f825cf93a7fa8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/8242255-ed9f825cf93a7fa8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50%"></p>
 <h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><p>使用ChIPseeker需要准备两个文件：一个就是要注释的peaks的文件，需满足BED格式。另一个就是注释参考文件，即需要一个包含注释信息的TxDb对象。Bioconductor提供了30个TxDb包，如果其中有研究的物种就可以直接下载安装此物种的TxDb信息。如果研究的物种没有已知的TxDb，可以使用GenomicFeatures包的函数（makeTxDbFromUCSC，makeTxDbFromBiomart）制作TxDb对象：</p>
 <blockquote>
 <p>makeTxDbFromUCSC： 通过UCSC在线制作TxDb<br>makeTxDbFromBiomart: 通过ensembl在线制作TxDb<br>makeTxDbFromGRanges：通过GRanges对象制作TxDb<br>makeTxDbFromGFF：通过解析GFF文件制作TxDb</p>

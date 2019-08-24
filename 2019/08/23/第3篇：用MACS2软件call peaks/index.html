@@ -95,7 +95,7 @@
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-6f70944596087547.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-836a2990e5c80537.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-539bc6f3090fc55f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2019-08-24T08:54:36.129Z">
+<meta property="og:updated_time" content="2019-08-24T13:00:48.221Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第3篇：用MACS2软件call peaks">
 <meta name="twitter:description" content="学习目标： 学会用MACS2 call peaks 理解MACS2 call peaks的结果">
@@ -431,14 +431,14 @@
 </ul>
 <a id="more"></a>
 <h3 id="Peak-Calling"><a href="#Peak-Calling" class="headerlink" title="Peak Calling"></a>Peak Calling</h3><p>Peak calling即利用计算的方法找出ChIP-seq或ATAC-seq中reads富集的基因组区域。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/8242255-1d1cb57462bd1803.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/8242255-1d1cb57462bd1803.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50%"></p>
 <p>如下图所示，比对结果的文件中reads在正负链不均匀分布，但在结合位点聚集。正负链5‘末端的reads各形成一组合，通过统计学的方法评估这些组合的分布并和对照组比较，确定这些结合位点是否是显著的。<br><img src="https://upload-images.jianshu.io/upload_images/8242255-72a8be3b74bb6659.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
 <blockquote>
 <p><strong>NOTE：</strong>ChIP-seq的分析方法可以鉴定两种类型的富集模式：<strong>broad domains</strong>和<strong>narrow peaks</strong>。broad domains，如组蛋白修饰在整个基因body区域的分布；narrow peak，如转录因子的结合。narrow peak相对于broad 或者分散的marks更易被检测到。也有一些混合的结合图谱，如PolII包括narrow和broad信号。</p>
 </blockquote>
 <hr>
 <h3 id="MACS2"><a href="#MACS2" class="headerlink" title="MACS2"></a>MACS2</h3><p>peaks calling 有不同的方法，MACS2是最常用的call peaks工具。 <a href="https://github.com/taoliu/MACS" target="_blank" rel="noopener">MACS全称Model-based Analysis of ChIP-Seq</a>，最初的设计是用来鉴定转录因子的结合位点，但是它也可以用于其他类型的富集方式测序。<br>MACS通过整合序列标签位置信息和方向信息提高结合位点的空间分辨率。MACS的工作流如下所示：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/8242255-b83dbfa6a5f77413.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/8242255-b83dbfa6a5f77413.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50%"></p>
 <hr>
 <h3 id="MACS2的使用方法"><a href="#MACS2的使用方法" class="headerlink" title="MACS2的使用方法"></a>MACS2的使用方法</h3><p>MACS2的用法，call peaks的参数及输出文件的解读可以参考<a href="https://www.jianshu.com/writer#/notebooks/22796191/notes/31999734/preview" target="_blank" rel="noopener">MACS2文档学习</a>。</p>
 <h4 id="了解相关参数："><a href="#了解相关参数：" class="headerlink" title="了解相关参数："></a>了解相关参数：</h4><p><strong>输入文件参数：</strong></p>

@@ -92,14 +92,11 @@
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-025dd4ff30ae61b8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-9095a287381f5ec6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-120795238a4bbaba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-d2316a73a5af7331.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-c0b37466457a516e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-e931dc07c84629d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-f291e6c7288d5df6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-2846dc6bb5085bf8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-8781f9f9bd780b15.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-4e872e4a5d5fcdbb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2019-08-24T08:54:58.082Z">
+<meta property="og:updated_time" content="2019-08-24T12:59:41.999Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第4篇：对ATAC-Seq&#x2F;ChIP-seq的质量评估（一）——phantompeakqualtools">
 <meta name="twitter:description" content="学习目标： 探讨ChIP-seq数据质量低的来源 理解链交叉相关性（ strand cross-correlation） 使用phantompeakqualtools计算交叉相关性和其他相关的质控度量值 评估交叉相关图">
@@ -437,28 +434,26 @@
 </ul>
 <a id="more"></a>
 <h3 id="ChIP-Seq质量评估"><a href="#ChIP-Seq质量评估" class="headerlink" title="ChIP-Seq质量评估"></a>ChIP-Seq质量评估</h3><p>在下游分析前，最好是先对peak calling 后的ChIP-Seq数据进行质量评估。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/8242255-025dd4ff30ae61b8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/8242255-025dd4ff30ae61b8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50%"></p>
 <h3 id="链交叉相关（Strand-cross-correlation）"><a href="#链交叉相关（Strand-cross-correlation）" class="headerlink" title="链交叉相关（Strand cross-correlation）"></a>链交叉相关（Strand cross-correlation）</h3><p>链交叉相关是一个有效的评估ChIP-Seq质量的方法，它不依赖于peak calling，而是基于ChIP-Seq实验。如果ChIP-Seq实验成功，DNA富集序列标签（蛋白质相互作用的序列）会在reads的双峰富集中产生显著的聚集。<br><strong>产生reads的双峰富集的原因如下：</strong><br>在ChIP-Seq实验中，DNA被片段化，蛋白质结合的片段会被免疫沉淀，所以产生了有蛋白质结合的DNA片段（fragments ）。<br>DNA的正链从5’端开始被测序（如下图红色reads），DNA负链也从5’末端被测序产生如下图所示的蓝色reads。<br><img src="https://upload-images.jianshu.io/upload_images/8242255-9095a287381f5ec6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Nat Biotechnol. 2008 Dec; 26(12): 1351–1359"><br>由于从DNA片段的5′末端测序，使+链reads的富集（下图中的蓝色部分）与负链reads的富集（下图红色部分）有少量的相互抵消区域。我们<strong>需要确定峰位移多少碱基数目可以在两个峰间产生最大的相关性。</strong>我们可以用<strong>交叉相关的度量值（cross-correlation metric）</strong>计算产生最大相关的位移。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/8242255-120795238a4bbaba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/8242255-120795238a4bbaba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50%"></p>
 <p><strong>交叉相关性度量值</strong><br>交叉相关度量是在Watson移动k个碱基后，计算Crick链与Watson链之间的Pearson线性相关。如下面的示意图：<br>首先在链位移为0时，两个向量之间的Pearson相关值为0.539。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/8242255-d2316a73a5af7331.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50"><br>在链位移5bp，两个向量之间的Pearson相关值为0.931。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/8242255-c0b37466457a516e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50"></p>
+<p>在链位移5bp，两个向量之间的Pearson相关值为0.931。</p>
 <p>继续移动这些向量，对于每个链位移计算一个相关值。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/8242255-e931dc07c84629d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50"></p>
 <p>最后，我们将有一个每个碱基对移位与皮尔森相关值的对应表。这是针对每个染色体的每一个峰计算的，然后该值乘以一个缩放因子，再对所有染色体的值相加，就可以绘交叉相关值（y轴）相对于移位值（x轴）生成的交叉相关图。<br><strong>典型的交叉相关图会产生两个峰</strong>：一个富集峰与主要的<strong>片段长度（predominant fragment length）</strong>相关（高相关性），另一个与<strong>read 长度（read length）</strong>相关，这个峰也被称为虚幻峰（“phantom” peak）。</p>
 <ul>
 <li><p>质量好的ChIP-Seq数据集倾向产生一个大的<strong>片段长度峰（fragment-length peak）</strong>，下图展示了一个来自于人细胞CTCF（zinc-finger transcription factor）的强信号。如果有好的抗体，转录因子通常产生45,000~60,000个peaks。下图红色的垂直线表示主峰的真实位移，蓝色的垂直线处有一个小的起伏表示read lenngth。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/8242255-f291e6c7288d5df6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/8242255-f291e6c7288d5df6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50%"></p>
 </li>
 </ul>
 <ul>
 <li><p>下图是<strong>weaker signal</strong>的一个示例。这里<strong>Pol2</strong>的抗体不是很有效，有分散的峰。交叉相关图中有两个峰，一个是真实的峰位移（185-200bp），另外一个在read length。信号弱的数据集中read length的峰会成为主峰。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/8242255-2846dc6bb5085bf8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/8242255-2846dc6bb5085bf8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50%"></p>
 </li>
 </ul>
 <ul>
 <li><p>一个失败的实验产生的交叉相关图类似于<strong>input</strong>，在<strong>fragment length</strong>处很少或没有峰，在<strong>read length</strong>处有信号非常强的。这种现象的原因可能是在结合位点附近<strong>fragments</strong>没有显著聚集。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/8242255-8781f9f9bd780b15.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/8242255-8781f9f9bd780b15.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50%"></p>
 </li>
 </ul>
 <h3 id="交叉相关性质量评估度量值"><a href="#交叉相关性质量评估度量值" class="headerlink" title="交叉相关性质量评估度量值"></a>交叉相关性质量评估度量值</h3><p>交叉相关谱图可以计算评估ChIP_Seq实验信噪比的度量值，并且实验设计确保<strong>fragment length</strong>准确。低信噪比和不准确的fragment length 表明ChIP-Seq实验可能有问题。<br><strong>Normalized strand cross-correlation coefficent (NSC)：</strong><br>NSC是最大交叉相关值除以背景交叉相关的比率(所有可能的链转移的最小交叉相关值)。<strong>NSC值越大表明富集效果越好，NSC值低于1.1<br>表明较弱的富集，小于1表示无富集。</strong>NSC值稍微低于1.05，有较低的信噪比或很少的峰，这肯能是生物学真实现象，比如有的因子在特定组织类型中只有很少的结合位点；也可能确实是数据质量差。<br><strong>Relative strand cross-correlation coefficient (RSC):</strong><br>RSC是片段长度相关值减去背景相关值除以phantom-peak相关值减去背景相关值。<strong>RSC的最小值可能是0，表示无信号；富集好的实验RSC值大于1；低于1表示质量低。</strong></p>
@@ -495,7 +490,7 @@
 <li><p>COL10: Relative strand cross-correlation coefficient (RSC) = (COL4 - COL8) / (COL6 - COL8)</p>
 </li>
 <li><p>COL11: QualityTag: Quality tag based on thresholded RSC (codes: -2:veryLow,-1:Low,0:Medium,1:High,2:veryHigh)<br><strong>我们最关注的值是第9列和第11列。</strong><br><strong>Cross-correlation plots</strong><br>课程中的示例数据Nanog_rep1的交叉相关图</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/8242255-4e872e4a5d5fcdbb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/8242255-4e872e4a5d5fcdbb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50%"></p>
 </li>
 </ul>
 <h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><p><a href="https://github.com/hbctraining/In-depth-NGS-Data-Analysis-Course/tree/master/sessionV/lessons" target="_blank" rel="noopener">哈佛深度NGS数据分析课程</a><br><a href="https://github.com/hbctraining/In-depth-NGS-Data-Analysis-Course/blob/master/sessionV/lessons/04_QC_cross_correlation.md" target="_blank" rel="noopener">04_ChIP-Seq Quality Assessment: Cross-correlation</a></p>
