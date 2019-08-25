@@ -395,7 +395,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  973
+                  975
                 </span>
               
 
@@ -441,8 +441,15 @@
 </ul>
 <a id="more"></a>
 <p><img src="https://upload-images.jianshu.io/upload_images/8242255-8e8c5b7121002686.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50%"></p>
-<h3 id="准备文件"><a href="#准备文件" class="headerlink" title="准备文件"></a>准备文件</h3><p><strong>提取IDR结果文件的前3列</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cut -f 1,2,3 Nanog-idr-merged.bed  &gt; Nanog-idr-merged-great.bed</span><br></pre></td></tr></table></figure></p>
-<p><strong>使用<code>bedtools getfasta</code>提取peaks的序列</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">bedtools getfasta -<span class="keyword">fi</span> \</span><br><span class="line">ref_genome.fa \</span><br><span class="line">-bed Nanog-idr-merged-great.bed \</span><br><span class="line">-fo Nanog-idr-merged-dreme.fasta</span><br></pre></td></tr></table></figure></p>
+<h3 id="准备文件"><a href="#准备文件" class="headerlink" title="准备文件"></a>准备文件</h3><p><strong>提取IDR结果文件的前3列</strong></p>
+<pre><code class="bash">cut -f 1,2,3 Nanog-idr-merged.bed  &gt; Nanog-idr-merged-great.bed
+</code></pre>
+<p><strong>使用<code>bedtools getfasta</code>提取peaks的序列</strong></p>
+<pre><code class="bash">bedtools getfasta -fi \
+ref_genome.fa \
+-bed Nanog-idr-merged-great.bed \
+-fo Nanog-idr-merged-dreme.fasta
+</code></pre>
 <h3 id="富集分析"><a href="#富集分析" class="headerlink" title="富集分析"></a>富集分析</h3><p>GREAT(<a href="http://bejerano.stanford.edu/great/public/html/index.php)对peaks的功能注释是对peaks临近基因的注释。" target="_blank" rel="noopener">http://bejerano.stanford.edu/great/public/html/index.php)对peaks的功能注释是对peaks临近基因的注释。</a><br><strong>方法：</strong></p>
 <ul>
 <li>1.打开GREAT网站：<a href="http://bejerano.stanford.edu/great/public/html/index.php" target="_blank" rel="noopener">http://bejerano.stanford.edu/great/public/html/index.php</a> 。上传<code>Nanog-idr-merged-great.bed</code>文件，选择参考基因组，选择<code>Whole genome</code>作为背景区域，然后点击<code>Submit</code>。<br><img src="https://upload-images.jianshu.io/upload_images/8242255-28d362bcb09d151b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></li>
@@ -703,7 +710,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">17.7k</span>
+    <span title="Site words total count">17.8k</span>
   
 </div>
 
@@ -723,7 +730,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共17.7k字</span>
+  <span class="post-count">博客全站共17.8k字</span>
 </div>
 
 

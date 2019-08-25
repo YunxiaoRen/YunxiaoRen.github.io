@@ -439,10 +439,13 @@
 <ul>
 <li><code>-wo</code>：Write the original A and B entries plus the number of base pairs of overlap between the two features.</li>
 <li><code>-wa</code>：Write the original entry in A for each overlap.</li>
-<li><code>-v</code>：Only report those entries in A that have <em>no overlaps</em> with B<br>如果只有<code>-a</code>和<code>-b</code>参数，返回的是相对于A的overlaps。加上参数<code>-wo</code>返回A和B原始的记录加上overlap的记录。参数<code>-wa</code>返回每个overlap中A的原始记录。<br><img src="https://upload-images.jianshu.io/upload_images/8242255-539217c9b07ba9fa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt><br><strong>使用代码示例：</strong><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">bedtools intersect \</span><br><span class="line">-a macs2/Nanog-rep1_peaks.narrowPeak \</span><br><span class="line">-b macs2/Nanog-rep2_peaks.narrowPeak \</span><br><span class="line">-wo &gt; bedtools/Nanog-overlaps.bed</span><br></pre></td></tr></table></figure>
-</li>
+<li><code>-v</code>：Only report those entries in A that have <em>no overlaps</em> with B<br>如果只有<code>-a</code>和<code>-b</code>参数，返回的是相对于A的overlaps。加上参数<code>-wo</code>返回A和B原始的记录加上overlap的记录。参数<code>-wa</code>返回每个overlap中A的原始记录。<br><img src="https://upload-images.jianshu.io/upload_images/8242255-539217c9b07ba9fa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt><br><strong>使用代码示例：</strong><pre><code class="bash">bedtools intersect \
+-a macs2/Nanog-rep1_peaks.narrowPeak \
+-b macs2/Nanog-rep2_peaks.narrowPeak \
+-wo &gt; bedtools/Nanog-overlaps.bed
+</code></pre>
+<h3 id="2-Irreproducibility-Discovery-Rate-IDR"><a href="#2-Irreproducibility-Discovery-Rate-IDR" class="headerlink" title="2. Irreproducibility Discovery Rate (IDR)"></a>2. Irreproducibility Discovery Rate (IDR)</h3>评估重复样本间peaks一致性的另一种方法是IDR。IDR是通过比较一对经过排序的regions/peaks 的列表，然后计算反映其重复性的值。<br>IDR在<a href="https://www.encodeproject.org/atac-seq/" target="_blank" rel="noopener">ENCODE</a>和modENCODE项目中被广泛使用，也是<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3431496/" target="_blank" rel="noopener">ChIP-seq指南和标准</a>中的一部分。</li>
 </ul>
-<h3 id="2-Irreproducibility-Discovery-Rate-IDR"><a href="#2-Irreproducibility-Discovery-Rate-IDR" class="headerlink" title="2. Irreproducibility Discovery Rate (IDR)"></a>2. Irreproducibility Discovery Rate (IDR)</h3><p>评估重复样本间peaks一致性的另一种方法是IDR。IDR是通过比较一对经过排序的regions/peaks 的列表，然后计算反映其重复性的值。<br>IDR在<a href="https://www.encodeproject.org/atac-seq/" target="_blank" rel="noopener">ENCODE</a>和modENCODE项目中被广泛使用，也是<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3431496/" target="_blank" rel="noopener">ChIP-seq指南和标准</a>中的一部分。</p>
 <p><img src="https://upload-images.jianshu.io/upload_images/8242255-ed3c5559db41126f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="ENCODE_ATAC_pipeline"><br><strong>IDR的 优点：</strong></p>
 <ul>
 <li>避免了初始阈值的选择，解决了不同callers的不可比较性</li>
@@ -454,14 +457,20 @@
 <p><strong>使用IDR的注意事项：</strong></p>
 <ul>
 <li>建议使用IDR时，MACS2 call peaks的步骤参数设置不要过于严格，以便鉴定出更多的peaks。</li>
-<li><p>使用IDR需要先对MACS2的结果文件narrowPeak根据<code>-log10(p-value)</code>进行排序。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Call peaks</span><br><span class="line">macs2 callpeak -t  sample.final.bam -n sample --shift -100 --extsize 200 --nomodel -B --SPMR -g hs --outdir Macs2_out 2&gt; sample.macs2.log</span><br><span class="line">#Sort peak by -log10(p-value)</span><br><span class="line">sort -k8,8nr NAME_OF_INPUT_peaks.narrowPeak &gt; macs/NAME_FOR_OUPUT_peaks.narrowPeak</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>使用IDR示例</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">idr --samples sample_Rep1_sorted_peaks.narrowPeak sample_Rep2_sorted_peaks.narrowPeak \</span><br><span class="line">--input-file-type narrowPeak \</span><br><span class="line">--rank p.value \</span><br><span class="line">--output-file sample-idr \</span><br><span class="line">--plot \</span><br><span class="line">--<span class="built_in">log</span>-output-file sample.idr.log</span><br></pre></td></tr></table></figure>
-</li>
+<li>使用IDR需要先对MACS2的结果文件narrowPeak根据<code>-log10(p-value)</code>进行排序。<pre><code># Call peaks
+macs2 callpeak -t  sample.final.bam -n sample --shift -100 --extsize 200 --nomodel -B --SPMR -g hs --outdir Macs2_out 2&gt; sample.macs2.log
+#Sort peak by -log10(p-value)
+sort -k8,8nr NAME_OF_INPUT_peaks.narrowPeak &gt; macs/NAME_FOR_OUPUT_peaks.narrowPeak
+</code></pre></li>
+<li><strong>使用IDR示例</strong><pre><code class="bash">idr --samples sample_Rep1_sorted_peaks.narrowPeak sample_Rep2_sorted_peaks.narrowPeak \
+--input-file-type narrowPeak \
+--rank p.value \
+--output-file sample-idr \
+--plot \
+--log-output-file sample.idr.log
+</code></pre>
+<code>--samples</code>:narrowPeak的输入文件（重复样本）<br><code>--input-file-type</code>：输入文件格式包括narrowPeak,broadPeak,bed<br><code>--rank p.value</code>：以p-value排序<br><code>--output-file</code>: 输出文件路径<br><code>--plot</code>：输出IDR度量值的结果</li>
 </ul>
-<p><code>--samples</code>:narrowPeak的输入文件（重复样本）<br><code>--input-file-type</code>：输入文件格式包括narrowPeak,broadPeak,bed<br><code>--rank p.value</code>：以p-value排序<br><code>--output-file</code>: 输出文件路径<br><code>--plot</code>：输出IDR度量值的结果</p>
 <p><strong>输出文件解读：</strong><br>详细内容可参考：<a href="https://github.com/nboley/idr#output-file-format" target="_blank" rel="noopener">https://github.com/nboley/idr#output-file-format</a></p>
 <blockquote>
 <p>输出文件包括：</p>
@@ -723,7 +732,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">17.7k</span>
+    <span title="Site words total count">17.8k</span>
   
 </div>
 
@@ -743,7 +752,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共17.7k字</span>
+  <span class="post-count">博客全站共17.8k字</span>
 </div>
 
 

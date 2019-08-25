@@ -457,10 +457,26 @@
 </li>
 </ul>
 <h3 id="交叉相关性质量评估度量值"><a href="#交叉相关性质量评估度量值" class="headerlink" title="交叉相关性质量评估度量值"></a>交叉相关性质量评估度量值</h3><p>交叉相关谱图可以计算评估ChIP_Seq实验信噪比的度量值，并且实验设计确保<strong>fragment length</strong>准确。低信噪比和不准确的fragment length 表明ChIP-Seq实验可能有问题。<br><strong>Normalized strand cross-correlation coefficent (NSC)：</strong><br>NSC是最大交叉相关值除以背景交叉相关的比率(所有可能的链转移的最小交叉相关值)。<strong>NSC值越大表明富集效果越好，NSC值低于1.1<br>表明较弱的富集，小于1表示无富集。</strong>NSC值稍微低于1.05，有较低的信噪比或很少的峰，这肯能是生物学真实现象，比如有的因子在特定组织类型中只有很少的结合位点；也可能确实是数据质量差。<br><strong>Relative strand cross-correlation coefficient (RSC):</strong><br>RSC是片段长度相关值减去背景相关值除以phantom-peak相关值减去背景相关值。<strong>RSC的最小值可能是0，表示无信号；富集好的实验RSC值大于1；低于1表示质量低。</strong></p>
-<h3 id="phantompeakqualtools"><a href="#phantompeakqualtools" class="headerlink" title="phantompeakqualtools"></a>phantompeakqualtools</h3><p>phantompeakqualtools 是一个用于计算ChIP-Seq数据富集和质量度量值的一个工具包。我们将使用该包来计算基于链交叉相关峰的主要插入大小(fragment length)和基于相对phantom peak的数据质量度量值。<code>phantompeakqualtools</code>是一个R包，依赖<code>samtools</code>。<br><strong>下载<code>phantompeakqualtools</code></strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/phantompeakqualtools/ccQualityControl.v.1.1.tar.gz</span><br><span class="line">tar -xzf ccQualityControl.v.1.1.tar.gz</span><br><span class="line"><span class="built_in">cd</span> phantompeakqualtools</span><br><span class="line"><span class="comment"># 查看README</span></span><br><span class="line">less README.txt</span><br></pre></td></tr></table></figure></p>
-<p><strong>Linux下安装</strong><br><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">R </span><br><span class="line">install.packages(<span class="string">"caTools"</span>, lib=<span class="string">"~/R/library"</span>)</span><br></pre></td></tr></table></figure></p>
+<h3 id="phantompeakqualtools"><a href="#phantompeakqualtools" class="headerlink" title="phantompeakqualtools"></a>phantompeakqualtools</h3><p>phantompeakqualtools 是一个用于计算ChIP-Seq数据富集和质量度量值的一个工具包。我们将使用该包来计算基于链交叉相关峰的主要插入大小(fragment length)和基于相对phantom peak的数据质量度量值。<code>phantompeakqualtools</code>是一个R包，依赖<code>samtools</code>。<br><strong>下载<code>phantompeakqualtools</code></strong></p>
+<pre><code class="bash">wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/phantompeakqualtools/ccQualityControl.v.1.1.tar.gz
+tar -xzf ccQualityControl.v.1.1.tar.gz
+cd phantompeakqualtools
+# 查看README
+less README.txt
+</code></pre>
+<p><strong>Linux下安装</strong></p>
+<pre><code class="R">R 
+install.packages(&quot;caTools&quot;, lib=&quot;~/R/library&quot;)
+</code></pre>
 <p><strong>运行phantompeakqualtools</strong></p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p logs qual</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> bam <span class="keyword">in</span> bam_dir/sample1.final.bam bam_dir/sample2.final.bam</span><br><span class="line">do </span><br><span class="line">bam2=`basename $bam .final.bam`</span><br><span class="line">Rscript run_spp_nodups.R -c=$bam -savp -out=qual/$&#123;bam2&#125;.qual &gt; logs/$&#123;bam2&#125;.Rout</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+<pre><code class="R">mkdir -p logs qual
+
+for bam in bam_dir/sample1.final.bam bam_dir/sample2.final.bam
+do 
+bam2=`basename $bam .final.bam`
+Rscript run_spp_nodups.R -c=$bam -savp -out=qual/${bam2}.qual &gt; logs/${bam2}.Rout
+done
+</code></pre>
 <p><strong>参数含义：</strong></p>
 <ul>
 <li><code>-c</code>: 比对过滤后的bam文件的全路径和名字</li>
@@ -713,7 +729,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">17.7k</span>
+    <span title="Site words total count">17.8k</span>
   
 </div>
 
@@ -733,7 +749,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共17.7k字</span>
+  <span class="post-count">博客全站共17.8k字</span>
 </div>
 
 
