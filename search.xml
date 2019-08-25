@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[摘要-scRNA-seq探究人胰腺转录组图谱]]></title>
+    <url>%2F2019%2F08%2F25%2F%E6%91%98%E8%A6%81-scRNA-seq%E6%8E%A2%E7%A9%B6%E4%BA%BA%E8%83%B0%E8%85%BA%E8%BD%AC%E5%BD%95%E7%BB%84%E5%9B%BE%E8%B0%B1%2F</url>
+    <content type="text"><![CDATA[一句话评价 人胰腺单细胞转录组图谱 文章信息 题目：A Single-Cell Transcriptome Atlas of the Human Pancreas 杂志：Cell Systems 时间：October 26, 2016 链接: http://dx.doi.org/10.1016/j.cels.2016.09.002 figure 文章介绍： 利用scRNA-seq对人胰腺的组成进行分群以及鉴定特定细胞群的标记基因。样本来自4个过亡的捐赠者，scRNA-seq采用CEL-Seq2 protocol结合FACS分选和机器学技术。所做的分析包括两个方面，首先利用StemID算法对细胞分群，然后鉴定特定细胞亚群的标记基因和转录因子。主要结果有：鉴定到CD24和TM4SF4可以作为alpha 和beta 细胞的标记基因。 碎碎念 只进行了分群和细胞标记基因的鉴定，所做的分析很少，可以利用该数据进行进一步的挖掘 数据资源：GSE85241提供了表达矩阵 每日文献摘要：第2篇 2019年08月25日 周日]]></content>
+      <categories>
+        <category>文献</category>
+        <category>ideas</category>
+      </categories>
+      <tags>
+        <tag>single cell</tag>
+        <tag>scRNA-seq</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[摘要-scRNA-seq揭示胰腺导管癌的肿瘤内部抑制性和恶性发展过程]]></title>
     <url>%2F2019%2F08%2F24%2F%E6%91%98%E8%A6%81-scRNA-seq%E6%8F%AD%E7%A4%BA%E8%83%B0%E8%85%BA%E5%AF%BC%E7%AE%A1%E7%99%8C%E7%9A%84%E8%82%BF%E7%98%A4%E5%86%85%E9%83%A8%E6%8A%91%E5%88%B6%E6%80%A7%E5%92%8C%E6%81%B6%E6%80%A7%E5%8F%91%E5%B1%95%E8%BF%87%E7%A8%8B%2F</url>
     <content type="text"><![CDATA[一句话评价 胰腺导管癌(PDAC)异质性和恶性发展的单细胞研究 文章信息 题目：Single-cell RNA-seq highlights intra-tumoral heterogeneity and malignant progression in pancreatic ductal adenocarcinoma 杂志：Cell Research 时间：04 July 2019 链接: https://www.nature.com/articles/s41422-019-0195-y figure 文章介绍： 利用单细胞RNA-seq技术对胰腺导管癌的肿瘤内部异质性和恶性发展进行探究。样本量包括24个肿瘤样本和11个对照样本，利用droplet建库的方法，得到57,530个细胞。主要分析包括：首先对细胞进行1）分群，鉴定到10个群，其中有2个导管细胞型群分别具有异常和恶性基因表达特征，然后又对两个导管细胞群进行亚群分析。2）细胞轨迹分析（拟时间分析）揭示了PDAC恶性发展过程中的相关的通路和转录因子。3）免疫浸润分析：结合TCGA胰腺癌相关的公共数据发现了肿瘤浸润T细胞失活状态相关的基因，为肿瘤免疫治疗提供了参考靶点。 碎碎念 细胞分群是单细胞数据分析的常规步骤 拟时间分析这里用于探究肿瘤恶性程度的发展值得借鉴 另外如何从拟时间分析得到了相关的转录因子呢？（细看原文） 最后与肿瘤免疫扯上关系，升华了研究的价值和意义 每日文献摘要：第1篇 2019年08月24日 周六]]></content>
