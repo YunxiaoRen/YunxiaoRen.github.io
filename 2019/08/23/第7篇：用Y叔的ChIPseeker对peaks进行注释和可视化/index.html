@@ -385,7 +385,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.2k
+                  1.1k
                 </span>
               
 
@@ -401,7 +401,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  5
+                  4
                 </span>
               
             </div>
@@ -434,80 +434,24 @@
 </blockquote>
 <p><strong>制作TxDb方法示例（<a href="https://mp.weixin.qq.com/s/_OPzvaEAbiMolCA2mqJXLw" target="_blank" rel="noopener">CS4：关于ChIPseq注释的几个问题</a>）：</strong></p>
 <ul>
-<li>如用人的参考基因信息来做注释，从UCSC生成TxDb:<pre><code class="R">library(GenomicFeatures)
-hg19.refseq.db &lt;- makeTxDbFromUCSC(genome=&quot;hg19&quot;, table=&quot;refGene&quot;)
-</code></pre>
+<li><p>如用人的参考基因信息来做注释，从UCSC生成TxDb:</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(GenomicFeatures)</span><br><span class="line">hg19.refseq.db &lt;- makeTxDbFromUCSC(genome=<span class="string">"hg19"</span>, table=<span class="string">"refGene"</span>)</span><br></pre></td></tr></table></figure>
 </li>
-<li>用GFF文件做裂殖酵母的注释<pre><code class="R">download.file(&quot;ftp://ftp.ebi.ac.uk/pub/databases/pombase/pombe/Chromosome_Dumps/gff3/schizosaccharomyces_pombe.chr.gff3&quot;, &quot;schizosaccharomyces_pombe.chr.gff3&quot;)require(GenomicFeatures)
-spombe &lt;- makeTxDbFromGFF(&quot;schizosaccharomyces_pombe.chr.gff3&quot;)
-</code></pre>
-<strong>具体步骤如下：</strong><h3 id="第1步：下载安装ChIPseeker注释相关的包"><a href="#第1步：下载安装ChIPseeker注释相关的包" class="headerlink" title="第1步：下载安装ChIPseeker注释相关的包"></a>第1步：下载安装ChIPseeker注释相关的包</h3>从Bioconductor直接下载，或从github安装最新版本<pre><code class="R">source (&quot;https://bioconductor.org/biocLite.R&quot;)
-biocLite(&quot;ChIPseeker&quot;)
-# 下载人的基因和lincRNA的TxDb对象
-biocLite(&quot;org.Hs.eg.db&quot;)
-biocLite(&quot;TxDb.Hsapiens.UCSC.hg19.knownGene&quot;)
-biocLite(&quot;TxDb.Hsapiens.UCSC.hg19.lincRNAsTranscripts&quot;)
-biocLite(&quot;clusterProfiler&quot;)
-#载入各种包
-library(&quot;ChIPseeker&quot;)
-library(clusterProfiler)
-library(&quot;org.Hs.eg.db&quot;)
-library(TxDb.Hsapiens.UCSC.hg19.knownGene)
-txdb &lt;- TxDb.Hsapiens.UCSC.hg19.knownGene
-library(&quot;TxDb.Hsapiens.UCSC.hg19.lincRNAsTranscripts&quot;)
-lincRNA_txdb=TxDb.Hsapiens.UCSC.hg19.lincRNAsTranscripts
-</code></pre>
-<h3 id="第2步：读入peaks文件"><a href="#第2步：读入peaks文件" class="headerlink" title="第2步：读入peaks文件"></a>第2步：读入peaks文件</h3>函数<code>readPeakFile</code>读入peaks文件<pre><code class="R">nanog &lt;- readPeakFile(&quot;./idr_out.bed/nanog_idr-bed&quot;)
-pou5f1 &lt;- readPeakFile(&quot;./idr_out.bed/pou5f1_idr-bed&quot;)
-</code></pre>
-<h3 id="第3步：注释peaks"><a href="#第3步：注释peaks" class="headerlink" title="第3步：注释peaks"></a>第3步：注释peaks</h3>peaks的注释是用的<code>annotatePeak</code>函数，可以单独对每个peaks文件进行注释，也可以将多个peaks制作成一个list，进行比较分析和可视化。<pre><code class="R"># 制作多个样本比较的list
-peaks &lt;- list(Nanog=nanog,Pou5f1=pou5f1)
-# promotor区间范围可以自己设定
-promoter &lt;- getPromoters(TxDb=txdb, upstream=3000, downstream=3000)
-tagMatrixList &lt;- lapply(peaks, getTagMatrix, windows=promoter)
-#annotatePeak传入annoDb参数,可进行基因ID转换（Entrez，ENSEMBL，SYMBOL，GENENAME）
-peakAnnoList &lt;- lapply(peaks, annotatePeak, TxDb=txdb,tssRegion=c(-3000, 3000), verbose=FALSE,addFlankGeneInfo=TRUE, flankDistance=5000,annoDb=&quot;org.Hs.eg.db&quot;)
-</code></pre>
-<strong>annotatePeak传入annoDb参数,即可进行基因ID转换，将Entrez ID转化为ENSEMBL，SYMBOL，GENENAME</strong>，peakAnnoList的结果如下：</li>
+<li><p>用GFF文件做裂殖酵母的注释</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">download.file(<span class="string">"ftp://ftp.ebi.ac.uk/pub/databases/pombase/pombe/Chromosome_Dumps/gff3/schizosaccharomyces_pombe.chr.gff3"</span>, <span class="string">"schizosaccharomyces_pombe.chr.gff3"</span>)<span class="keyword">require</span>(GenomicFeatures)</span><br><span class="line">spombe &lt;- makeTxDbFromGFF(<span class="string">"schizosaccharomyces_pombe.chr.gff3"</span>)</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<pre><code class="R">seqnames    start    end    width    strand    annotation    geneChr    geneStart    geneEnd    geneLength    geneStrand    geneId    transcriptId    distanceToTSS    ENSEMBL    SYMBOL    GENENAME    flank_txIds    flank_geneIds    flank_gene_distances
-5    chr3    196625522    196625873    352    *    Intron (uc003fwz.4/205564, intron 2 of 9)    3    196594727    196661584    66858    1    205564    uc011bty.2    30795    ENSG00000119231    SENP5    SUMO specific peptidase 5    uc003fwz.4;uc011bty.2    205564;205564    0;0
-
-</code></pre>
-<h3 id="第4步：可视化"><a href="#第4步：可视化" class="headerlink" title="第4步：可视化"></a>第4步：可视化</h3><p>提供了多种可视化方法，如plotAnnoBar(),vennpie(),plotAnnoPie(),plotDistToTSS()等，下面展示了两个样本在基因组特征区域的分布以及转录因子在TSS区域的结合。</p>
-<pre><code class="R">plotAnnoBar(peakAnnoList)
-plotDistToTSS(peakAnnoList,title=&quot;Distribution of transcription factor-binding loci \n relative to TSS&quot;)
-</code></pre>
+<p><strong>具体步骤如下：</strong></p>
+<h3 id="第1步：下载安装ChIPseeker注释相关的包"><a href="#第1步：下载安装ChIPseeker注释相关的包" class="headerlink" title="第1步：下载安装ChIPseeker注释相关的包"></a>第1步：下载安装ChIPseeker注释相关的包</h3><p>从Bioconductor直接下载，或从github安装最新版本<br><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">source</span> (<span class="string">"https://bioconductor.org/biocLite.R"</span>)</span><br><span class="line">biocLite(<span class="string">"ChIPseeker"</span>)</span><br><span class="line"><span class="comment"># 下载人的基因和lincRNA的TxDb对象</span></span><br><span class="line">biocLite(<span class="string">"org.Hs.eg.db"</span>)</span><br><span class="line">biocLite(<span class="string">"TxDb.Hsapiens.UCSC.hg19.knownGene"</span>)</span><br><span class="line">biocLite(<span class="string">"TxDb.Hsapiens.UCSC.hg19.lincRNAsTranscripts"</span>)</span><br><span class="line">biocLite(<span class="string">"clusterProfiler"</span>)</span><br><span class="line"><span class="comment">#载入各种包</span></span><br><span class="line"><span class="keyword">library</span>(<span class="string">"ChIPseeker"</span>)</span><br><span class="line"><span class="keyword">library</span>(clusterProfiler)</span><br><span class="line"><span class="keyword">library</span>(<span class="string">"org.Hs.eg.db"</span>)</span><br><span class="line"><span class="keyword">library</span>(TxDb.Hsapiens.UCSC.hg19.knownGene)</span><br><span class="line">txdb &lt;- TxDb.Hsapiens.UCSC.hg19.knownGene</span><br><span class="line"><span class="keyword">library</span>(<span class="string">"TxDb.Hsapiens.UCSC.hg19.lincRNAsTranscripts"</span>)</span><br><span class="line">lincRNA_txdb=TxDb.Hsapiens.UCSC.hg19.lincRNAsTranscripts</span><br></pre></td></tr></table></figure></p>
+<h3 id="第2步：读入peaks文件"><a href="#第2步：读入peaks文件" class="headerlink" title="第2步：读入peaks文件"></a>第2步：读入peaks文件</h3><p>函数<code>readPeakFile</code>读入peaks文件<br><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nanog &lt;- readPeakFile(<span class="string">"./idr_out.bed/nanog_idr-bed"</span>)</span><br><span class="line">pou5f1 &lt;- readPeakFile(<span class="string">"./idr_out.bed/pou5f1_idr-bed"</span>)</span><br></pre></td></tr></table></figure></p>
+<h3 id="第3步：注释peaks"><a href="#第3步：注释peaks" class="headerlink" title="第3步：注释peaks"></a>第3步：注释peaks</h3><p>peaks的注释是用的<code>annotatePeak</code>函数，可以单独对每个peaks文件进行注释，也可以将多个peaks制作成一个list，进行比较分析和可视化。<br><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 制作多个样本比较的list</span></span><br><span class="line">peaks &lt;- list(Nanog=nanog,Pou5f1=pou5f1)</span><br><span class="line"><span class="comment"># promotor区间范围可以自己设定</span></span><br><span class="line">promoter &lt;- getPromoters(TxDb=txdb, upstream=<span class="number">3000</span>, downstream=<span class="number">3000</span>)</span><br><span class="line">tagMatrixList &lt;- lapply(peaks, getTagMatrix, windows=promoter)</span><br><span class="line"><span class="comment">#annotatePeak传入annoDb参数,可进行基因ID转换（Entrez，ENSEMBL，SYMBOL，GENENAME）</span></span><br><span class="line">peakAnnoList &lt;- lapply(peaks, annotatePeak, TxDb=txdb,tssRegion=c(-<span class="number">3000</span>, <span class="number">3000</span>), verbose=<span class="literal">FALSE</span>,addFlankGeneInfo=<span class="literal">TRUE</span>, flankDistance=<span class="number">5000</span>,annoDb=<span class="string">"org.Hs.eg.db"</span>)</span><br></pre></td></tr></table></figure></p>
+<p><strong>annotatePeak传入annoDb参数,即可进行基因ID转换，将Entrez ID转化为ENSEMBL，SYMBOL，GENENAME</strong>，peakAnnoList的结果如下：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">seqnames	start	end	width	strand	annotation	geneChr	geneStart	geneEnd	geneLength	geneStrand	geneId	transcriptId	distanceToTSS	ENSEMBL	SYMBOL	GENENAME	flank_txIds	flank_geneIds	flank_gene_distances</span><br><span class="line"><span class="number">5</span>	chr3	<span class="number">196625522</span>	<span class="number">196625873</span>	<span class="number">352</span>	*	Intron (uc003fwz.4/<span class="number">205564</span>, intron <span class="number">2</span> of <span class="number">9</span>)	<span class="number">3</span>	<span class="number">196594727</span>	<span class="number">196661584</span>	<span class="number">66858</span>	<span class="number">1</span>	<span class="number">205564</span>	uc011bty.2	<span class="number">30795</span>	ENSG00000119231	SENP5	SUMO specific peptidase <span class="number">5</span>	uc003fwz.4;uc011bty.2	<span class="number">205564</span>;<span class="number">205564</span>	<span class="number">0</span>;<span class="number">0</span></span><br></pre></td></tr></table></figure>
+<h3 id="第4步：可视化"><a href="#第4步：可视化" class="headerlink" title="第4步：可视化"></a>第4步：可视化</h3><p>提供了多种可视化方法，如plotAnnoBar(),vennpie(),plotAnnoPie(),plotDistToTSS()等，下面展示了两个样本在基因组特征区域的分布以及转录因子在TSS区域的结合。<br><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">plotAnnoBar(peakAnnoList)</span><br><span class="line">plotDistToTSS(peakAnnoList,title=<span class="string">"Distribution of transcription factor-binding loci \n relative to TSS"</span>)</span><br></pre></td></tr></table></figure></p>
 <p><img src="https://upload-images.jianshu.io/upload_images/8242255-0f981c1bb6b89f8d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<h3 id="第5步：功能富集分析"><a href="#第5步：功能富集分析" class="headerlink" title="第5步：功能富集分析"></a>第5步：功能富集分析</h3><p>提取peakAnnolist中的基因，结合clusterProfiler包对peaks内的邻近基因进行富集注释。</p>
-<pre><code class="R"># Create a list with genes from each sample
-gene = lapply(peakAnnoList, function(i) as.data.frame(i)$geneId)
-# Run GO enrichment analysis 
-ego &lt;- enrichGO(gene = entrez, 
-                    keytype = &quot;ENTREZID&quot;, 
-                    OrgDb = org.Hs.eg.db, 
-                    ont = &quot;BP&quot;, 
-                    pAdjustMethod = &quot;BH&quot;, 
-                    qvalueCutoff = 0.05, 
-                    readable = TRUE)
-# Dotplot visualization
-dotplot(ego, showCategory=50)
-# Multiple samples KEGG analysis
-compKEGG &lt;- compareCluster(geneCluster = gene, 
-                         fun = &quot;enrichKEGG&quot;,
-                         organism = &quot;human&quot;,
-                         pvalueCutoff  = 0.05, 
-                         pAdjustMethod = &quot;BH&quot;)
-dotplot(compKEGG, showCategory = 20, title = &quot;KEGG Pathway Enrichment Analysis&quot;)
-</code></pre>
+<h3 id="第5步：功能富集分析"><a href="#第5步：功能富集分析" class="headerlink" title="第5步：功能富集分析"></a>第5步：功能富集分析</h3><p>提取peakAnnolist中的基因，结合clusterProfiler包对peaks内的邻近基因进行富集注释。<br><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Create a list with genes from each sample</span></span><br><span class="line">gene = lapply(peakAnnoList, <span class="keyword">function</span>(i) as.data.frame(i)$geneId)</span><br><span class="line"><span class="comment"># Run GO enrichment analysis </span></span><br><span class="line">ego &lt;- enrichGO(gene = entrez, </span><br><span class="line">                    keytype = <span class="string">"ENTREZID"</span>, </span><br><span class="line">                    OrgDb = org.Hs.eg.db, </span><br><span class="line">                    ont = <span class="string">"BP"</span>, </span><br><span class="line">                    pAdjustMethod = <span class="string">"BH"</span>, </span><br><span class="line">                    qvalueCutoff = <span class="number">0.05</span>, </span><br><span class="line">                    readable = <span class="literal">TRUE</span>)</span><br><span class="line"><span class="comment"># Dotplot visualization</span></span><br><span class="line">dotplot(ego, showCategory=<span class="number">50</span>)</span><br><span class="line"><span class="comment"># Multiple samples KEGG analysis</span></span><br><span class="line">compKEGG &lt;- compareCluster(geneCluster = gene, </span><br><span class="line">                         fun = <span class="string">"enrichKEGG"</span>,</span><br><span class="line">                         organism = <span class="string">"human"</span>,</span><br><span class="line">                         pvalueCutoff  = <span class="number">0.05</span>, </span><br><span class="line">                         pAdjustMethod = <span class="string">"BH"</span>)</span><br><span class="line">dotplot(compKEGG, showCategory = <span class="number">20</span>, title = <span class="string">"KEGG Pathway Enrichment Analysis"</span>)</span><br></pre></td></tr></table></figure></p>
 <p><img src="https://upload-images.jianshu.io/upload_images/8242255-ebcdf242c4bc96f6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<h3 id="第6步：保存文件"><a href="#第6步：保存文件" class="headerlink" title="第6步：保存文件"></a>第6步：保存文件</h3><pre><code class="R"># Output peakAnnolist file
-save(peakAnnoList,file=&quot;peakAnnolist.rda&quot;)
-write.table(as.data.frame(peakAnnoList$Nanog),file=&quot;Nanog.PeakAnno&quot;,sep=&#39;\t&#39;,quote = F)
-# Output results from GO analysis to a table
-cluster_summary &lt;- data.frame(ego)
-write.csv(cluster_summary, &quot;results/clusterProfiler_Nanog.csv&quot;)
-</code></pre>
+<h3 id="第6步：保存文件"><a href="#第6步：保存文件" class="headerlink" title="第6步：保存文件"></a>第6步：保存文件</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Output peakAnnolist file</span></span><br><span class="line">save(peakAnnoList,file=<span class="string">"peakAnnolist.rda"</span>)</span><br><span class="line">write.table(as.data.frame(peakAnnoList$Nanog),file=<span class="string">"Nanog.PeakAnno"</span>,sep=<span class="string">'\t'</span>,quote = <span class="literal">F</span>)</span><br><span class="line"><span class="comment"># Output results from GO analysis to a table</span></span><br><span class="line">cluster_summary &lt;- data.frame(ego)</span><br><span class="line">write.csv(cluster_summary, <span class="string">"results/clusterProfiler_Nanog.csv"</span>)</span><br></pre></td></tr></table></figure>
 <hr>
 <h3 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h3><p>ChIPseeker详细内容请参考:</p>
 <ul>
@@ -733,7 +677,7 @@ write.csv(cluster_summary, &quot;results/clusterProfiler_Nanog.csv&quot;)
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">17.8k</span>
+    <span title="Site words total count">17.7k</span>
   
 </div>
 
@@ -753,7 +697,7 @@ write.csv(cluster_summary, &quot;results/clusterProfiler_Nanog.csv&quot;)
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共17.8k字</span>
+  <span class="post-count">博客全站共17.7k字</span>
 </div>
 
 

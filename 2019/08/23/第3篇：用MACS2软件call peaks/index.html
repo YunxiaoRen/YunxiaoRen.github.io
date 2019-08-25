@@ -484,9 +484,7 @@
 <li><code>--call-summits</code><br>MACS利用此参数重新分析信号谱，解析每个peak中包含的subpeak。对相似的结合图谱，推荐使用此参数，当使用此参数时，输出的subpeak会有相同的peak边界，不同的绩点和peak summit poisitions.</li>
 </ul>
 <hr>
-<h4 id="ATAC-Seq-call-peaks示例"><a href="#ATAC-Seq-call-peaks示例" class="headerlink" title="ATAC-Seq call peaks示例"></a>ATAC-Seq call peaks示例</h4><p><strong>ATAC-seq关心的是在哪切断，断点才是peak的中心，所以使用shift模型，–shift -75或-100</strong><br>对人细胞系ATAC-seq 数据call peak的参数设置如下：</p>
-<pre><code class="bash">macs2 callpeak -t H1hesc.final.bam -n sample --shift -100 --extsize 200 --nomodel -B --SPMR -g hs --outdir Macs2_out 2&gt; sample.macs2.log
-</code></pre>
+<h4 id="ATAC-Seq-call-peaks示例"><a href="#ATAC-Seq-call-peaks示例" class="headerlink" title="ATAC-Seq call peaks示例"></a>ATAC-Seq call peaks示例</h4><p><strong>ATAC-seq关心的是在哪切断，断点才是peak的中心，所以使用shift模型，–shift -75或-100</strong><br>对人细胞系ATAC-seq 数据call peak的参数设置如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">macs2 callpeak -t H1hesc.final.bam -n sample --<span class="built_in">shift</span> -100 --extsize 200 --nomodel -B --SPMR -g hs --outdir Macs2_out 2&gt; sample.macs2.log</span><br></pre></td></tr></table></figure></p>
 <h3 id="MACS2输出文件解读"><a href="#MACS2输出文件解读" class="headerlink" title="MACS2输出文件解读"></a>MACS2输出文件解读</h3><ul>
 <li><strong>NAME_peaks.xls</strong><br>包含peak信息的tab分割的文件，前几行会显示callpeak时的命令。输出信息包含：<ul>
 <li>染色体号</li>
@@ -747,7 +745,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">17.8k</span>
+    <span title="Site words total count">17.7k</span>
   
 </div>
 
@@ -767,7 +765,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共17.8k字</span>
+  <span class="post-count">博客全站共17.7k字</span>
 </div>
 
 

@@ -383,7 +383,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  891
+                  879
                 </span>
               
 
@@ -424,72 +424,28 @@
 <h3 id="功能介绍"><a href="#功能介绍" class="headerlink" title="功能介绍"></a>功能介绍</h3><p><img src="https://upload-images.jianshu.io/upload_images/8242255-df9dfd4f7834cee4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
 <a id="more"></a>
 <h3 id="数据准备："><a href="#数据准备：" class="headerlink" title="数据准备："></a>数据准备：</h3><ul>
-<li>peak bed file<pre><code># chr str end
-$head mep_ebDfpeak_deseq2_sig.bed
-chr8    12050808        12052743
-chr9    66492999        66494729
-chr4    125632449       125634758
-chr4    10182030        10183501
-</code></pre></li>
-<li>df expression file<pre><code># symbol log2FC pvalue
-$head mep_eb_dfexpre
-MELK    6.23721078699297        5.47784458574045e-218
-RAD51AP1        4.17541170218602        2.86774188064759e-217
-HMGN5   5.98876520905166        7.49359285750074e-216
-ZWILCH  3.74468061674801        2.42032701371558e-204
-HNRNPA2B1       2.76252025379004        3.05116228100538e-190
-HLA-DRA -5.19413815362273       2.27680965999626e-188
-</code></pre><h3 id="软件下载安装"><a href="#软件下载安装" class="headerlink" title="软件下载安装"></a>软件下载安装</h3><code>`</code><br>wget <a href="http://cistrome.dfci.harvard.edu/BETA/src/BETA_1.0.7.zip" target="_blank" rel="noopener">http://cistrome.dfci.harvard.edu/BETA/src/BETA_1.0.7.zip</a><br>unzip BETA_1.0.7.zip<br>cd BETA_1.0.7/<br>sudo python setup.py install    </li>
+<li><p>peak bed file</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># chr str end</span><br><span class="line">$head mep_ebDfpeak_deseq2_sig.bed</span><br><span class="line">chr8    12050808        12052743</span><br><span class="line">chr9    66492999        66494729</span><br><span class="line">chr4    125632449       125634758</span><br><span class="line">chr4    10182030        10183501</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>df expression file</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># symbol log2FC pvalue</span><br><span class="line">$head mep_eb_dfexpre</span><br><span class="line">MELK    6.23721078699297        5.47784458574045e-218</span><br><span class="line">RAD51AP1        4.17541170218602        2.86774188064759e-217</span><br><span class="line">HMGN5   5.98876520905166        7.49359285750074e-216</span><br><span class="line">ZWILCH  3.74468061674801        2.42032701371558e-204</span><br><span class="line">HNRNPA2B1       2.76252025379004        3.05116228100538e-190</span><br><span class="line">HLA-DRA -5.19413815362273       2.27680965999626e-188</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<pre><code>
-### 使用
-
-##### BETA Basic
-BETA Basic 预测调控因子的功能（激活或抑制）和靶基因
-</code></pre><p>BETA basic –p 3656_peaks.bed –e AR_expr.xls –k LIM –g hg19 –da500 –n basic</p>
-<pre><code>**参数：**
-`-p` ： peak bed file (必需参数）
-`-e`：df expression file (必需参数）
-`-k`：表达量文件格式是limma的标准格式（根据实际情况修改）
-`-g`：基因组文件，如hg19,hg38,mm10,mm9
-`-n`：输出文件前缀，BETA默认是**NA**
-`-da`：选择显著性变化（上调和下调的）表达数据（根据实际情况修改）
-
-**其他格式(不是limma和cuffdif标准格式）的差异表达文件格式：**
-- 需设置参数`--info`, geneID如果是smbol需要设置`--gname2`
-
-##### BETA Plus
-BETA Plus 预测调控因子的功能（激活或抑制）和靶基因，以及靶向区域的motif分析
-
-</code></pre><p>BETA plus –p 3656_peaks.bed –e AR_expr.xls –k LIM –g hg19 –gs hg19.fa –bl</p>
-<pre><code>**参数：**
-
-`--gs` : motif分析需要的参数, 基因组fasta格式
-`--bl ` :可选参数，当考虑boundary（如CTCF）时需要的参数
-
-#### BETA Minus
-BETA Minus 只根据peak bed数据基于调控潜能值预测靶基因
-</code></pre><p>BETA minus -p 3656_peaks.bed –bl -g hg19</p>
-<pre><code>##### 其他可选参数
-`-n`：结果文件的名字
-`-o`:输出文件路径
-`--gname2`：geneID如果是smbol需要设置`--gname2`
-`--info`：其他格式(不是limma和cuffdif标准格式）的差异表达文件格式：需设置参数`--info`, 
-`--pn `:peak 数目，默认是10，000
-`-d DISTANCE,--distance` 距离TSS的距离. DEFAULT=100000 (100kb)
-`--df DIFF_FDR` : 输入0-1的数值，表示统计的阈值，如FDR等，默认是1.
-`--da DIFF_AMOUNT`; 取显著表达的基因，0-1表示比例，大于1表示个数。如2000，表示去top 2000个上调和下调的差异基因；0.5表示取50%上调和下调的基因，默认是0.5。
-`-c CUTOFF, --cutoff `： 0~1的一个阈值。默认是1e-3。
-`-r REFERENCE, --reference `： 当参考基因组不是hg19,或mm9时使用此参数。
-`--bl BOUNDARY` :LIMIT Boolean Value. Whether or not use CTCF boundary to get a peak’s associated gene, DEFAULT=FALSE
-`-bf BOUNDARYFILE` : Some BED format boundary file, use this only when You set --bl and the genome is neither hg19 nor mm9
-
-### 相关资料
-**文章**Wang, S., Sun, H., Ma, J., Zang, C., Wang, C., Wang, J., ... &amp; Liu, X. S. (2013). Target analysis by integration of transcriptome and ChIP-seq data with BETA. Nature protocols, 8(12), 2502-2515. 
-**PMID:** 24263090
-**网址：** http://cistrome.org/BETA/index.html
-### 使用代码
-</code></pre><p>/software/biosoft/software/python/python2.7/bin/BETA plus -P mep_ebDfpeak_deseq2_sig.bed –info -e mep_eb_dfexpre –gname2 -g hg 19 –gs hg19.fa –bl<br><code>`</code></p>
+<h3 id="软件下载安装"><a href="#软件下载安装" class="headerlink" title="软件下载安装"></a>软件下载安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wget http://cistrome.dfci.harvard.edu/BETA/src/BETA_1.0.7.zip</span><br><span class="line">unzip BETA_1.0.7.zip</span><br><span class="line">cd BETA_1.0.7/</span><br><span class="line">sudo python setup.py install</span><br></pre></td></tr></table></figure>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><h5 id="BETA-Basic"><a href="#BETA-Basic" class="headerlink" title="BETA Basic"></a>BETA Basic</h5><p>BETA Basic 预测调控因子的功能（激活或抑制）和靶基因<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">BETA basic –p 3656_peaks.bed –e AR_expr.xls –k LIM –g hg19 --da500 –n basic</span><br></pre></td></tr></table></figure></p>
+<p><strong>参数：</strong><br><code>-p</code> ： peak bed file (必需参数）<br><code>-e</code>：df expression file (必需参数）<br><code>-k</code>：表达量文件格式是limma的标准格式（根据实际情况修改）<br><code>-g</code>：基因组文件，如hg19,hg38,mm10,mm9<br><code>-n</code>：输出文件前缀，BETA默认是<strong>NA</strong><br><code>-da</code>：选择显著性变化（上调和下调的）表达数据（根据实际情况修改）</p>
+<p><strong>其他格式(不是limma和cuffdif标准格式）的差异表达文件格式：</strong></p>
+<ul>
+<li>需设置参数<code>--info</code>, geneID如果是smbol需要设置<code>--gname2</code></li>
+</ul>
+<h5 id="BETA-Plus"><a href="#BETA-Plus" class="headerlink" title="BETA Plus"></a>BETA Plus</h5><p>BETA Plus 预测调控因子的功能（激活或抑制）和靶基因，以及靶向区域的motif分析</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">BETA plus –p 3656_peaks.bed –e AR_expr.xls –k LIM –g hg19 --gs hg19.fa --bl</span><br></pre></td></tr></table></figure>
+<p><strong>参数：</strong></p>
+<p><code>--gs</code> : motif分析需要的参数, 基因组fasta格式<br><code>--bl</code> :可选参数，当考虑boundary（如CTCF）时需要的参数</p>
+<h4 id="BETA-Minus"><a href="#BETA-Minus" class="headerlink" title="BETA Minus"></a>BETA Minus</h4><p>BETA Minus 只根据peak bed数据基于调控潜能值预测靶基因<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">BETA minus -p 3656_peaks.bed --bl -g hg19</span><br></pre></td></tr></table></figure></p>
+<h5 id="其他可选参数"><a href="#其他可选参数" class="headerlink" title="其他可选参数"></a>其他可选参数</h5><p><code>-n</code>：结果文件的名字<br><code>-o</code>:输出文件路径<br><code>--gname2</code>：geneID如果是smbol需要设置<code>--gname2</code><br><code>--info</code>：其他格式(不是limma和cuffdif标准格式）的差异表达文件格式：需设置参数<code>--info</code>,<br><code>--pn</code>:peak 数目，默认是10，000<br><code>-d DISTANCE,--distance</code> 距离TSS的距离. DEFAULT=100000 (100kb)<br><code>--df DIFF_FDR</code> : 输入0-1的数值，表示统计的阈值，如FDR等，默认是1.<br><code>--da DIFF_AMOUNT</code>; 取显著表达的基因，0-1表示比例，大于1表示个数。如2000，表示去top 2000个上调和下调的差异基因；0.5表示取50%上调和下调的基因，默认是0.5。<br><code>-c CUTOFF, --cutoff</code>： 0~1的一个阈值。默认是1e-3。<br><code>-r REFERENCE, --reference</code>： 当参考基因组不是hg19,或mm9时使用此参数。<br><code>--bl BOUNDARY</code> :LIMIT Boolean Value. Whether or not use CTCF boundary to get a peak’s associated gene, DEFAULT=FALSE<br><code>-bf BOUNDARYFILE</code> : Some BED format boundary file, use this only when You set –bl and the genome is neither hg19 nor mm9</p>
+<h3 id="相关资料"><a href="#相关资料" class="headerlink" title="相关资料"></a>相关资料</h3><p><strong>文章</strong>Wang, S., Sun, H., Ma, J., Zang, C., Wang, C., Wang, J., … &amp; Liu, X. S. (2013). Target analysis by integration of transcriptome and ChIP-seq data with BETA. Nature protocols, 8(12), 2502-2515.<br><strong>PMID:</strong> 24263090<br><strong>网址：</strong> <a href="http://cistrome.org/BETA/index.html" target="_blank" rel="noopener">http://cistrome.org/BETA/index.html</a></p>
+<h3 id="使用代码"><a href="#使用代码" class="headerlink" title="使用代码"></a>使用代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/software/biosoft/software/python/python2.7/bin/BETA plus -P mep_ebDfpeak_deseq2_sig.bed --info -e mep_eb_dfexpre --gname2 -g hg 19 --gs hg19.fa --bl</span><br></pre></td></tr></table></figure>
 <h3 id="几点疑问"><a href="#几点疑问" class="headerlink" title="几点疑问"></a>几点疑问</h3><p>BETA最初的设计主要是用于ChIP-Seq和RNA-seq的整合分析，最终可以预测特定一个转录因子的靶基因，以及这些基因是激活还是抑制的功能。但是对于ATAC-seq，它得到的信号整个基因组范围转录因子的信号，那么与转录组整合分析得到的结果怎么解释？只能知道一些基因的功能是激活的或抑制的，但是并不能知道这些基因是哪些转录因子的靶基因。所以BETA是否适合ATAC-seq和与RNA-seq的整合分析？如果可以，整合分析的结果能得到哪些有价值的信息？</p>
 
       
@@ -672,7 +628,7 @@ BETA Minus 只根据peak bed数据基于调控潜能值预测靶基因
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#功能介绍"><span class="nav-number">1.</span> <span class="nav-text">功能介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据准备："><span class="nav-number">2.</span> <span class="nav-text">数据准备：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#软件下载安装"><span class="nav-number">3.</span> <span class="nav-text">软件下载安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#几点疑问"><span class="nav-number">4.</span> <span class="nav-text">几点疑问</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#功能介绍"><span class="nav-number">1.</span> <span class="nav-text">功能介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据准备："><span class="nav-number">2.</span> <span class="nav-text">数据准备：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#软件下载安装"><span class="nav-number">3.</span> <span class="nav-text">软件下载安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用"><span class="nav-number">4.</span> <span class="nav-text">使用</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#BETA-Basic"><span class="nav-number">4.0.1.</span> <span class="nav-text">BETA Basic</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#BETA-Plus"><span class="nav-number">4.0.2.</span> <span class="nav-text">BETA Plus</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#BETA-Minus"><span class="nav-number">4.1.</span> <span class="nav-text">BETA Minus</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#其他可选参数"><span class="nav-number">4.1.1.</span> <span class="nav-text">其他可选参数</span></a></li></ol></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#相关资料"><span class="nav-number">5.</span> <span class="nav-text">相关资料</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用代码"><span class="nav-number">6.</span> <span class="nav-text">使用代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#几点疑问"><span class="nav-number">7.</span> <span class="nav-text">几点疑问</span></a></li></div>
             
 
           </div>
@@ -706,7 +662,7 @@ BETA Minus 只根据peak bed数据基于调控潜能值预测靶基因
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">17.8k</span>
+    <span title="Site words total count">17.7k</span>
   
 </div>
 
@@ -726,7 +682,7 @@ BETA Minus 只根据peak bed数据基于调控潜能值预测靶基因
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共17.8k字</span>
+  <span class="post-count">博客全站共17.7k字</span>
 </div>
 
 

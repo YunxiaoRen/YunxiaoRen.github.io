@@ -407,7 +407,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  7
+                  6
                 </span>
               
             </div>
@@ -466,28 +466,23 @@
 <li>ControlID : 对照组样本ID</li>
 <li>bamControl :对照组样本的bam文件路径</li>
 <li>Peaks :样本peaks文件的路径</li>
-<li>PeakCaller ：peak类型的字符串，可以是raw,bed,narrow,macs等。<h4 id="下载安装ChIPQC"><a href="#下载安装ChIPQC" class="headerlink" title="下载安装ChIPQC"></a>下载安装ChIPQC</h4><pre><code class="R">source(&quot;http://bioconductor.org/biocLite.R&quot;)
-biocLite(&quot;ChIPQC&quot;)
-</code></pre>
-<h4 id="Running-ChIPQC"><a href="#Running-ChIPQC" class="headerlink" title="Running ChIPQC"></a>Running ChIPQC</h4>ChIPQC只需要三步就可以完成质量评估和报告生成。<ul>
-<li><strong>首先载入包和sampleSheet信息</strong><pre><code class="R">## Load libraries
-library(ChIPQC)
-## Load sample data
-samples &lt;- read.csv(&#39;meta/samplesheet_chr12.csv&#39;)
-View(samples)
-</code></pre>
-</li>
-<li><strong>创建ChIPQC对象</strong><br>利用sampleSheet的信息读取每个样本的bam和narrowpeak文件，并计算质量评估值，结果存在一个对象里。<pre><code class="R">## Create ChIPQC object
-chipObj &lt;- ChIPQC(samples, annotation=&quot;hg19&quot;) 
-</code></pre>
-</li>
-<li><strong>生成ChIPQC报告</strong><pre><code class="R">## Create ChIPQC report
-ChIPQCreport(chipObj, reportName=&quot;ChIP QC report: Nanog and Pou5f1&quot;, reportFolder=&quot;ChIPQCreport&quot;)
-</code></pre>
-<h4 id="ChIPQC报告解读"><a href="#ChIPQC报告解读" class="headerlink" title="ChIPQC报告解读"></a>ChIPQC报告解读</h4>ChIPQC生成的结果包含一个网页报告和报告中含有的所有图片。<br>网页报告有三部分：<strong>QC Summary ；QC Results；QC files and versions</strong><br><img src="https://upload-images.jianshu.io/upload_images/8242255-a929302bfd47dc9d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt><h5 id="（1）QC-Summary-Overview-of-results"><a href="#（1）QC-Summary-Overview-of-results" class="headerlink" title="（1）QC Summary - Overview of results"></a>（1）QC Summary - Overview of results</h5><img src="https://upload-images.jianshu.io/upload_images/8242255-01749f12cf83c9af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Table 1"><br>QC summary包含sampleSheet里填写的样本的基本信息Tissue,Factor,Condition,Replicate。另外还有上面提到的质量评估的常用指标SSD、RiP%和RiBL值。越高的SSD值表明富集效果越好，Pou5f1样本（2.6,3）有较高的SSD值，RiBL值不是很高，FRiP的比例在5%附近或者更高，除了Pou5f1-rep2。</li>
-</ul>
+<li>PeakCaller ：peak类型的字符串，可以是raw,bed,narrow,macs等。<h4 id="下载安装ChIPQC"><a href="#下载安装ChIPQC" class="headerlink" title="下载安装ChIPQC"></a>下载安装ChIPQC</h4><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">source</span>(<span class="string">"http://bioconductor.org/biocLite.R"</span>)</span><br><span class="line">biocLite(<span class="string">"ChIPQC"</span>)</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
+<h4 id="Running-ChIPQC"><a href="#Running-ChIPQC" class="headerlink" title="Running ChIPQC"></a>Running ChIPQC</h4><p>ChIPQC只需要三步就可以完成质量评估和报告生成。</p>
+<ul>
+<li><p><strong>首先载入包和sampleSheet信息</strong></p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## Load libraries</span></span><br><span class="line"><span class="keyword">library</span>(ChIPQC)</span><br><span class="line"><span class="comment">## Load sample data</span></span><br><span class="line">samples &lt;- read.csv(<span class="string">'meta/samplesheet_chr12.csv'</span>)</span><br><span class="line">View(samples)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>创建ChIPQC对象</strong><br>利用sampleSheet的信息读取每个样本的bam和narrowpeak文件，并计算质量评估值，结果存在一个对象里。</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## Create ChIPQC object</span></span><br><span class="line">chipObj &lt;- ChIPQC(samples, annotation=<span class="string">"hg19"</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>生成ChIPQC报告</strong></p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## Create ChIPQC report</span></span><br><span class="line">ChIPQCreport(chipObj, reportName=<span class="string">"ChIP QC report: Nanog and Pou5f1"</span>, reportFolder=<span class="string">"ChIPQCreport"</span>)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="ChIPQC报告解读"><a href="#ChIPQC报告解读" class="headerlink" title="ChIPQC报告解读"></a>ChIPQC报告解读</h4><p>ChIPQC生成的结果包含一个网页报告和报告中含有的所有图片。<br>网页报告有三部分：<strong>QC Summary ；QC Results；QC files and versions</strong><br><img src="https://upload-images.jianshu.io/upload_images/8242255-a929302bfd47dc9d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
+<h5 id="（1）QC-Summary-Overview-of-results"><a href="#（1）QC-Summary-Overview-of-results" class="headerlink" title="（1）QC Summary - Overview of results"></a>（1）QC Summary - Overview of results</h5><p><img src="https://upload-images.jianshu.io/upload_images/8242255-01749f12cf83c9af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Table 1"><br>QC summary包含sampleSheet里填写的样本的基本信息Tissue,Factor,Condition,Replicate。另外还有上面提到的质量评估的常用指标SSD、RiP%和RiBL值。越高的SSD值表明富集效果越好，Pou5f1样本（2.6,3）有较高的SSD值，RiBL值不是很高，FRiP的比例在5%附近或者更高，除了Pou5f1-rep2。</p>
 <ul>
 <li><strong>SSD</strong> - SSD score (htSeqTools)</li>
 <li><strong>RIP%</strong> - Percentage of reads wthin peaks</li>
@@ -746,7 +741,7 @@ ChIPQCreport(chipObj, reportName=&quot;ChIP QC report: Nanog and Pou5f1&quot;, r
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">17.8k</span>
+    <span title="Site words total count">17.7k</span>
   
 </div>
 
@@ -766,7 +761,7 @@ ChIPQCreport(chipObj, reportName=&quot;ChIP QC report: Nanog and Pou5f1&quot;, r
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共17.8k字</span>
+  <span class="post-count">博客全站共17.7k字</span>
 </div>
 
 
