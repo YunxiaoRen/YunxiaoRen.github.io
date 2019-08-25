@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-25T01:56:36.624Z</updated>
+  <updated>2019-08-24T16:46:40.393Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,74 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>摘要-scRNAseq探究健康人胰岛和T2D的转录组图谱</title>
-    <link href="http://yoursite.com/2019/08/25/%E6%91%98%E8%A6%81-scRNAseq%E6%8E%A2%E7%A9%B6%E5%81%A5%E5%BA%B7%E4%BA%BA%E8%83%B0%E5%B2%9B%E5%92%8CT2D%E7%9A%84%E8%BD%AC%E5%BD%95%E7%BB%84%E5%9B%BE%E8%B0%B1/"/>
-    <id>http://yoursite.com/2019/08/25/摘要-scRNAseq探究健康人胰岛和T2D的转录组图谱/</id>
-    <published>2019-08-25T01:15:35.000Z</published>
-    <updated>2019-08-25T01:56:36.624Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>一句话评价</strong></p><p>健康人胰岛和T2D的单细胞转录组图谱</p><p><strong>文章信息</strong></p><p>题目：Single-Cell Transcriptome Profiling of Human Pancreatic Islets in Health and Type 2 Diabetes</p><p>杂志：Cell Metabolism</p><p>时间：October 11, 2016</p><p>链接: <a href="http://dx.doi.org/10.1016/j.cmet.2016.08.020" target="_blank" rel="noopener">http://dx.doi.org/10.1016/j.cmet.2016.08.020</a></p><p><strong>figure</strong></p><p><img src="/2019/08/25/摘要-scRNAseq探究健康人胰岛和T2D的转录组图谱/fig1-abstract.png" style="zoom:50%"></p><a id="more"></a><p><strong>文章介绍：</strong></p><p>利用单细胞RNA技术探究健康人胰岛和T2D的转录组图谱。数据来源于6个健康人和4个T2D病人，利用SMRT2-seq的方法得到2,209个单细胞。主要分析包括对<strong>1）细胞分群</strong>；<strong>2）鉴定alpha 和beta细胞亚群</strong> ；<strong>3）肥胖或T2D相关基因与BMI的关联</strong>；<strong>4）T2D的基因变异</strong></p><p><strong>碎碎念</strong></p><ul><li>与16年发表在Cell systerm上的文章相比，这篇文章的分析相对丰富些，一是数据即包括健康人胰腺又包括糖尿病，二是不仅对细胞进行了分群和标记物的鉴定，还将T2D基因和肥胖基因与BMI关联，以及通过与正常组比较发现了T2D的基因变异。将健康和疾病的对照研究，凸显了鉴定的靶标具有重要的临床意义。</li><li>Rickard Sandberg实验室发表的文章，SMRT-seq2的开发者，分析方法可以学习</li><li>数据资源：<strong>E-MTAB-5061， E-MTAB-5060</strong></li></ul><blockquote><p>每日文献摘要：第<strong>3</strong>篇 2019年08月26日 周一</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;一句话评价&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;健康人胰岛和T2D的单细胞转录组图谱&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;文章信息&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;题目：Single-Cell Transcriptome Profiling of Human Pancreatic Islets in Health and Type 2 Diabetes&lt;/p&gt;
-&lt;p&gt;杂志：Cell Metabolism&lt;/p&gt;
-&lt;p&gt;时间：October 11, 2016&lt;/p&gt;
-&lt;p&gt;链接: &lt;a href=&quot;http://dx.doi.org/10.1016/j.cmet.2016.08.020&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://dx.doi.org/10.1016/j.cmet.2016.08.020&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;figure&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2019/08/25/摘要-scRNAseq探究健康人胰岛和T2D的转录组图谱/fig1-abstract.png&quot; style=&quot;zoom:50%&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="文献" scheme="http://yoursite.com/categories/%E6%96%87%E7%8C%AE/"/>
-    
-      <category term="ideas" scheme="http://yoursite.com/categories/%E6%96%87%E7%8C%AE/ideas/"/>
-    
-    
-      <category term="single cell" scheme="http://yoursite.com/tags/single-cell/"/>
-    
-      <category term="scRNA-seq" scheme="http://yoursite.com/tags/scRNA-seq/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>摘要-scRNA-seq探究人胰腺转录组图谱</title>
-    <link href="http://yoursite.com/2019/08/25/%E6%91%98%E8%A6%81-scRNA-seq%E6%8E%A2%E7%A9%B6%E4%BA%BA%E8%83%B0%E8%85%BA%E8%BD%AC%E5%BD%95%E7%BB%84%E5%9B%BE%E8%B0%B1/"/>
-    <id>http://yoursite.com/2019/08/25/摘要-scRNA-seq探究人胰腺转录组图谱/</id>
-    <published>2019-08-25T00:46:46.000Z</published>
-    <updated>2019-08-25T01:08:51.299Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>一句话评价</strong></p><p>人胰腺单细胞转录组图谱</p><p><strong>文章信息</strong></p><p>题目：A Single-Cell Transcriptome Atlas of the Human Pancreas</p><p>杂志：Cell Systems</p><p>时间：October 26, 2016</p><p>链接: <a href="http://dx.doi.org/10.1016/j.cels.2016.09.002" target="_blank" rel="noopener">http://dx.doi.org/10.1016/j.cels.2016.09.002</a></p><p><strong>figure</strong></p><p><img src="/2019/08/25/摘要-scRNA-seq探究人胰腺转录组图谱/fig1-abstarct.png" style="zoom:50%"></p><a id="more"></a><p><strong>文章介绍：</strong></p><p>利用scRNA-seq对人胰腺的组成进行分群以及鉴定特定细胞群的标记基因。样本来自4个过亡的捐赠者，scRNA-seq采用CEL-Seq2 protocol结合FACS分选和机器学技术。所做的分析包括两个方面，首先利用StemID算法对细胞分群，然后鉴定特定细胞亚群的标记基因和转录因子。主要结果有：鉴定到<strong>CD24</strong>和<strong>TM4SF4</strong>可以作为alpha 和beta 细胞的标记基因。</p><p><strong>碎碎念</strong></p><ul><li>只进行了分群和细胞标记基因的鉴定，所做的分析很少，可以利用该数据进行进一步的挖掘</li><li>数据资源：<strong>GSE85241</strong>提供了表达矩阵</li></ul><blockquote><p>每日文献摘要：第2篇 2019年08月25日 周日</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;一句话评价&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;人胰腺单细胞转录组图谱&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;文章信息&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;题目：A Single-Cell Transcriptome Atlas of the Human Pancreas&lt;/p&gt;
-&lt;p&gt;杂志：Cell Systems&lt;/p&gt;
-&lt;p&gt;时间：October 26, 2016&lt;/p&gt;
-&lt;p&gt;链接: &lt;a href=&quot;http://dx.doi.org/10.1016/j.cels.2016.09.002&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://dx.doi.org/10.1016/j.cels.2016.09.002&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;figure&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2019/08/25/摘要-scRNA-seq探究人胰腺转录组图谱/fig1-abstarct.png&quot; style=&quot;zoom:50%&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="文献" scheme="http://yoursite.com/categories/%E6%96%87%E7%8C%AE/"/>
-    
-      <category term="ideas" scheme="http://yoursite.com/categories/%E6%96%87%E7%8C%AE/ideas/"/>
-    
-    
-      <category term="single cell" scheme="http://yoursite.com/tags/single-cell/"/>
-    
-      <category term="scRNA-seq" scheme="http://yoursite.com/tags/scRNA-seq/"/>
-    
-  </entry>
   
   <entry>
     <title>摘要-scRNA-seq揭示胰腺导管癌的肿瘤内部抑制性和恶性发展过程</title>
