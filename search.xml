@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>scRNA-seq数据预处理</title>
+      <link href="/2019/08/25/scRNA-seq%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86/"/>
+      <url>/2019/08/25/scRNA-seq%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86/</url>
+      
+        <content type="html"><![CDATA[<p>scRNA-seq的上游处理与bulk RNA-seq有相似的地方，也有不同的地方。相似的地方如：对原始数据的质控检测、去除低质量的reads、adpter、比对。不同的地方如scRNA-seq数据有的需要考虑<strong>Demultiplexing</strong>。而且scRNA-seq根据采用的不同的protocols，产生的数据和处理方法也有不同。</p><p>这里提供的练习数据是SMART-seq2建库，SMRT-seq2建库的测序数据上游分析与bulk RNA-seq相似，如这节课内容中的分析方法：</p><ul><li>FastQC 对原始数据进行质控检测</li><li>Trim Galore 质控</li><li>STAR或Kallisto比对</li></ul><a id="more"></a><h3 id="练习数据"><a href="#练习数据" class="headerlink" title="练习数据"></a>练习数据</h3><p>mouse ESC的单细胞数据(Kolodziejczyk et al. <a href="https://scrnaseq-course.cog.sanger.ac.uk/website/processing-raw-scrna-seq-data.html#ref-Kolodziejczyk2015-xy" target="_blank" rel="noopener">2015</a>)，数据下载位置：<a href="https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-2600/samples/" target="_blank" rel="noopener">https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-2600/samples/</a></p><p>直接点击下载按钮即可下载fastq的数据。</p><ul><li>ERR522959_1.fastq</li><li>ERR522959_2.fastq</li></ul><h3 id="质控"><a href="#质控" class="headerlink" title="质控"></a>质控</h3><ul><li>FastQC</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir fastqc_results</span><br><span class="line">fastqc -o fastqc_results Share/ERR522959_1.fastq Share/ERR522959_2.fastq</span><br></pre></td></tr></table></figure><ul><li>Trim galore 是一个自动识别adpter的质控软件</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir fastqc_trimmed_results</span><br><span class="line">trim_galore --nextera -o fastqc_trimmed_results Share/ERR522959_1.fastq Share/ERR522959_2.fastq</span><br></pre></td></tr></table></figure><h3 id="Demultiplexing"><a href="#Demultiplexing" class="headerlink" title="Demultiplexing"></a>Demultiplexing</h3><p>不同的protocol和pipeline决定了demultiplexing的方法也不同，最灵活的方法是<strong>zUMI</strong>,可以用于大多的demultiplexing和基于UMI的protocols。SMARTseq2直接提供的是已经demultiplexing的数据。</p><p><strong>如何理解demultiplexing？</strong></p><p>demultiplexing的过程即识别并移除cell barcode序列。</p><p>scRNA-seq质控中需要考虑的另一个因素是不包含细胞或包含两个细胞的<strong>droplets</strong>。</p><h3 id="STAR比对"><a href="#STAR比对" class="headerlink" title="STAR比对"></a>STAR比对</h3><p>STAR比对的优点有考虑到了剪切体，输出文件内容丰富，（可以进行下游融合基因的分析，bulk seq可以）缺点是耗费计算资源。</p><p>比对的步骤首先需要构建参考基因组或转录组的index文件，由于考虑到练习运行时间，这里提供的代码是比对到参考转录本</p><ul><li>Make index</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir indices</span><br><span class="line">mkdir indices/STAR</span><br><span class="line">STAR --runThreadN 4 --runMode genomeGenerate --genomeDir indices/STAR --genomeFastaFiles Share/2000_reference.transcripts.fa</span><br></pre></td></tr></table></figure><ul><li><p>alingment</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mkdir results</span><br><span class="line">mkdir results/STAR</span><br><span class="line"></span><br><span class="line">STAR --runThreadN 4 --genomeDir indices/STAR --readFilesIn Share/ERR522959_1.fastq Share/ERR522959_2.fastq --outFileNamePrefix results/STAR/</span><br></pre></td></tr></table></figure></li></ul><h3 id="Kallisto-比对（Pseudo-Alignment）"><a href="#Kallisto-比对（Pseudo-Alignment）" class="headerlink" title="Kallisto 比对（Pseudo-Alignment）"></a>Kallisto 比对（Pseudo-Alignment）</h3><p>Kallisto比对也称为pseudo-alignment（假比对）,即它的比对方法和STAR不同，不是将完整reads比对到参考转录本上，而是将<strong>kmer(特定长度的序列)</strong>比对到参考转录本上。</p><p><strong>k-mers和reads相比的特点是</strong>：</p><ul><li>快</li><li>处理测序error的能力强于传统的比对工具</li><li>与STAR不同的另一点Kallisto是比对到转录本的</li></ul><p><strong>Kallisto’s pseudo mode</strong></p><p>专门为scRNA-seq设计的，</p><p><strong>index</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir indices/Kallisto</span><br><span class="line">kallisto index -i indices/Kallisto/transcripts.idx Share/2000_reference.transcripts.fa</span><br></pre></td></tr></table></figure><p><strong>Kallisto Pseudo-Alignment</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir results/Kallisto</span><br><span class="line">kallisto pseudo -i indices/Kallisto/transcripts.idx -o results/Kallisto -b batch.txt</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 组学 </category>
+          
+          <category> 转录组 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> single cell </tag>
+            
+            <tag> scRNA-seq </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>摘要-scRNAseq探究健康人胰岛和T2D的转录组图谱</title>
       <link href="/2019/08/25/%E6%91%98%E8%A6%81-scRNAseq%E6%8E%A2%E7%A9%B6%E5%81%A5%E5%BA%B7%E4%BA%BA%E8%83%B0%E5%B2%9B%E5%92%8CT2D%E7%9A%84%E8%BD%AC%E5%BD%95%E7%BB%84%E5%9B%BE%E8%B0%B1/"/>
       <url>/2019/08/25/%E6%91%98%E8%A6%81-scRNAseq%E6%8E%A2%E7%A9%B6%E5%81%A5%E5%BA%B7%E4%BA%BA%E8%83%B0%E5%B2%9B%E5%92%8CT2D%E7%9A%84%E8%BD%AC%E5%BD%95%E7%BB%84%E5%9B%BE%E8%B0%B1/</url>
@@ -72,11 +101,11 @@
       
         <tags>
             
-            <tag> 文献摘要 </tag>
-            
             <tag> single cell </tag>
             
             <tag> scRNA-seq </tag>
+            
+            <tag> 文献摘要 </tag>
             
         </tags>
       
