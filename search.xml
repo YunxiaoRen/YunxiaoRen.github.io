@@ -31,9 +31,9 @@
     <url>%2F2019%2F08%2F24%2F%E6%91%98%E8%A6%81-scRNA-seq%E6%8F%AD%E7%A4%BA%E8%83%B0%E8%85%BA%E5%AF%BC%E7%AE%A1%E7%99%8C%E7%9A%84%E8%82%BF%E7%98%A4%E5%86%85%E9%83%A8%E6%8A%91%E5%88%B6%E6%80%A7%E5%92%8C%E6%81%B6%E6%80%A7%E5%8F%91%E5%B1%95%E8%BF%87%E7%A8%8B%2F</url>
     <content type="text"><![CDATA[一句话评价 胰腺导管癌(PDAC)异质性和恶性发展的单细胞研究 文章信息 题目：Single-cell RNA-seq highlights intra-tumoral heterogeneity and malignant progression in pancreatic ductal adenocarcinoma 杂志：Cell Research 时间：04 July 2019 链接: https://www.nature.com/articles/s41422-019-0195-y figure 文章介绍： 利用单细胞RNA-seq技术对胰腺导管癌的肿瘤内部异质性和恶性发展进行探究。样本量包括24个肿瘤样本和11个对照样本，利用droplet建库的方法，得到57,530个细胞。主要分析包括：首先对细胞进行1）分群，鉴定到10个群，其中有2个导管细胞型群分别具有异常和恶性基因表达特征，然后又对两个导管细胞群进行亚群分析。2）细胞轨迹分析（拟时间分析）揭示了PDAC恶性发展过程中的相关的通路和转录因子。3）免疫浸润分析：结合TCGA胰腺癌相关的公共数据发现了肿瘤浸润T细胞失活状态相关的基因，为肿瘤免疫治疗提供了参考靶点。 碎碎念 细胞分群是单细胞数据分析的常规步骤 拟时间分析这里用于探究肿瘤恶性程度的发展值得借鉴 另外如何从拟时间分析得到了相关的转录因子呢？（细看原文） 最后与肿瘤免疫扯上关系，升华了研究的价值和意义 每日文献摘要：第1篇 2019年08月24日 周六]]></content>
       <tags>
-        <tag>文献摘要</tag>
         <tag>single cell</tag>
         <tag>scRNA-seq</tag>
+        <tag>文献摘要</tag>
       </tags>
   </entry>
   <entry>
