@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="ATACseq,ChIPseq,motif,">
+  <meta name="keywords" content="single cell,scRNA-seq,">
 
 
 
@@ -81,32 +81,20 @@
 
 
 
-<meta name="description" content="上一篇介绍了使用ChIPseeker对peaks的分布和邻近基因的注释。除此之外，下游分析通常还包括鉴定我们感兴趣的蛋白质结合的motif；鉴定这些结合区域的基因以及这些基因的富集通路或网络。  学习目标 功能富集分析: [GREAT](http://bejerano.stanford.edu/great/public/html/index.php) motif分析:MEME套件，如DREME(">
-<meta name="keywords" content="ATACseq,ChIPseq,motif">
+<meta name="description" content="一句话评价 健康人胰岛和T2D的单细胞转录组图谱 文章信息 题目：Single-Cell Transcriptome Profiling of Human Pancreatic Islets in Health and Type 2 Diabetes 杂志：Cell Metabolism 时间：October 11, 2016 链接: http://dx.doi.org/10.1016/j.cme">
+<meta name="keywords" content="single cell,scRNA-seq">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第8篇：用网页版工具做功能分析和motif分析">
-<meta property="og:url" content="http://yoursite.com/2019/08/23/第8篇：用网页版工具做功能分析和motif分析/index.html">
+<meta property="og:title" content="摘要-scRNAseq探究健康人胰岛和T2D的转录组图谱">
+<meta property="og:url" content="http://yoursite.com/2019/08/25/摘要-scRNAseq探究健康人胰岛和T2D的转录组图谱/index.html">
 <meta property="og:site_name" content="生信拾光">
-<meta property="og:description" content="上一篇介绍了使用ChIPseeker对peaks的分布和邻近基因的注释。除此之外，下游分析通常还包括鉴定我们感兴趣的蛋白质结合的motif；鉴定这些结合区域的基因以及这些基因的富集通路或网络。  学习目标 功能富集分析: [GREAT](http://bejerano.stanford.edu/great/public/html/index.php) motif分析:MEME套件，如DREME(">
+<meta property="og:description" content="一句话评价 健康人胰岛和T2D的单细胞转录组图谱 文章信息 题目：Single-Cell Transcriptome Profiling of Human Pancreatic Islets in Health and Type 2 Diabetes 杂志：Cell Metabolism 时间：October 11, 2016 链接: http://dx.doi.org/10.1016/j.cme">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-8e8c5b7121002686.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-28d362bcb09d151b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-c858a398d92b19a1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-5e49b7856b712239.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-34e46431f660ae7a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-f20dd9477422c904.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-752f9bd3f211869b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-ac6510b361c9db44.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-4e6d85633c68e1d4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-f7d4e747bf2f1644.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-da950ecc30a57391.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-d9aa88cd750c93ec.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8242255-1da222fab1a31f81.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2019-08-24T13:50:03.933Z">
+<meta property="og:image" content="http://yoursite.com/2019/08/25/摘要-scRNAseq探究健康人胰岛和T2D的转录组图谱/fig1-abstract.png">
+<meta property="og:updated_time" content="2019-08-25T01:56:36.624Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第8篇：用网页版工具做功能分析和motif分析">
-<meta name="twitter:description" content="上一篇介绍了使用ChIPseeker对peaks的分布和邻近基因的注释。除此之外，下游分析通常还包括鉴定我们感兴趣的蛋白质结合的motif；鉴定这些结合区域的基因以及这些基因的富集通路或网络。  学习目标 功能富集分析: [GREAT](http://bejerano.stanford.edu/great/public/html/index.php) motif分析:MEME套件，如DREME(">
-<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/8242255-8e8c5b7121002686.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="摘要-scRNAseq探究健康人胰岛和T2D的转录组图谱">
+<meta name="twitter:description" content="一句话评价 健康人胰岛和T2D的单细胞转录组图谱 文章信息 题目：Single-Cell Transcriptome Profiling of Human Pancreatic Islets in Health and Type 2 Diabetes 杂志：Cell Metabolism 时间：October 11, 2016 链接: http://dx.doi.org/10.1016/j.cme">
+<meta name="twitter:image" content="http://yoursite.com/2019/08/25/摘要-scRNAseq探究健康人胰岛和T2D的转录组图谱/fig1-abstract.png">
 
 
 
@@ -136,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/08/23/第8篇：用网页版工具做功能分析和motif分析/">
+  <link rel="canonical" href="http://yoursite.com/2019/08/25/摘要-scRNAseq探究健康人胰岛和T2D的转录组图谱/">
 
 
 
 
 
-  <title>第8篇：用网页版工具做功能分析和motif分析 | 生信拾光</title>
+  <title>摘要-scRNAseq探究健康人胰岛和T2D的转录组图谱 | 生信拾光</title>
   
 
 
@@ -301,7 +289,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/23/第8篇：用网页版工具做功能分析和motif分析/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/25/摘要-scRNAseq探究健康人胰岛和T2D的转录组图谱/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="六六">
@@ -318,7 +306,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">第8篇：用网页版工具做功能分析和motif分析</h1>
+          <h1 class="post-title" itemprop="name headline">摘要-scRNAseq探究健康人胰岛和T2D的转录组图谱</h1>
         
 
         <div class="post-meta">
@@ -330,8 +318,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-23T12:42:56+08:00">
-                2019-08-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-25T09:15:35+08:00">
+                2019-08-25
               </time>
             
 
@@ -353,8 +341,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/组学/" itemprop="url" rel="index">
-                    <span itemprop="name">组学</span>
+                  <a href="/categories/文献/" itemprop="url" rel="index">
+                    <span itemprop="name">文献</span>
                   </a>
                 </span>
 
@@ -364,8 +352,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/组学/表观组/" itemprop="url" rel="index">
-                    <span itemprop="name">表观组</span>
+                  <a href="/categories/文献/ideas/" itemprop="url" rel="index">
+                    <span itemprop="name">ideas</span>
                   </a>
                 </span>
 
@@ -395,7 +383,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  973
+                  334
                 </span>
               
 
@@ -411,7 +399,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3
+                  1
                 </span>
               
             </div>
@@ -432,58 +420,27 @@
       
 
       
-        <blockquote>
-<p>上一篇介绍了使用ChIPseeker对peaks的分布和邻近基因的注释。除此之外，下游分析通常还包括<strong>鉴定我们感兴趣的蛋白质结合的motif；鉴定这些结合区域的基因以及这些基因的富集通路或网络。</strong></p>
-</blockquote>
-<h3 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h3><ul>
-<li><strong>功能富集分析: [GREAT]</strong>(<a href="http://bejerano.stanford.edu/great/public/html/index.php" target="_blank" rel="noopener">http://bejerano.stanford.edu/great/public/html/index.php</a>)</li>
-<li><strong>motif分析:MEME套件，如DREME(<a href="http://meme-suite.org/tools/dreme)" target="_blank" rel="noopener">http://meme-suite.org/tools/dreme)</a>, MEME-ChIP (<a href="http://meme-suite.org/tools/meme-chip" target="_blank" rel="noopener">http://meme-suite.org/tools/meme-chip</a>)</strong> </li>
-</ul>
+        <p><strong>一句话评价</strong></p>
+<p>健康人胰岛和T2D的单细胞转录组图谱</p>
+<p><strong>文章信息</strong></p>
+<p>题目：Single-Cell Transcriptome Profiling of Human Pancreatic Islets in Health and Type 2 Diabetes</p>
+<p>杂志：Cell Metabolism</p>
+<p>时间：October 11, 2016</p>
+<p>链接: <a href="http://dx.doi.org/10.1016/j.cmet.2016.08.020" target="_blank" rel="noopener">http://dx.doi.org/10.1016/j.cmet.2016.08.020</a></p>
+<p><strong>figure</strong></p>
+<p><img src="/2019/08/25/摘要-scRNAseq探究健康人胰岛和T2D的转录组图谱/fig1-abstract.png" style="zoom:50%"></p>
 <a id="more"></a>
-<p><img src="https://upload-images.jianshu.io/upload_images/8242255-8e8c5b7121002686.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="zoom:50%"></p>
-<h3 id="准备文件"><a href="#准备文件" class="headerlink" title="准备文件"></a>准备文件</h3><p><strong>提取IDR结果文件的前3列</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cut -f 1,2,3 Nanog-idr-merged.bed  &gt; Nanog-idr-merged-great.bed</span><br></pre></td></tr></table></figure></p>
-<p><strong>使用<code>bedtools getfasta</code>提取peaks的序列</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">bedtools getfasta -<span class="keyword">fi</span> \</span><br><span class="line">ref_genome.fa \</span><br><span class="line">-bed Nanog-idr-merged-great.bed \</span><br><span class="line">-fo Nanog-idr-merged-dreme.fasta</span><br></pre></td></tr></table></figure></p>
-<h3 id="富集分析"><a href="#富集分析" class="headerlink" title="富集分析"></a>富集分析</h3><p>GREAT(<a href="http://bejerano.stanford.edu/great/public/html/index.php)对peaks的功能注释是对peaks临近基因的注释。" target="_blank" rel="noopener">http://bejerano.stanford.edu/great/public/html/index.php)对peaks的功能注释是对peaks临近基因的注释。</a><br><strong>方法：</strong></p>
+<p><strong>文章介绍：</strong></p>
+<p>利用单细胞RNA技术探究健康人胰岛和T2D的转录组图谱。数据来源于6个健康人和4个T2D病人，利用SMRT2-seq的方法得到2,209个单细胞。主要分析包括对<strong>1）细胞分群</strong>；<strong>2）鉴定alpha 和beta细胞亚群</strong> ；<strong>3）肥胖或T2D相关基因与BMI的关联</strong>；<strong>4）T2D的基因变异</strong></p>
+<p><strong>碎碎念</strong></p>
 <ul>
-<li>1.打开GREAT网站：<a href="http://bejerano.stanford.edu/great/public/html/index.php" target="_blank" rel="noopener">http://bejerano.stanford.edu/great/public/html/index.php</a> 。上传<code>Nanog-idr-merged-great.bed</code>文件，选择参考基因组，选择<code>Whole genome</code>作为背景区域，然后点击<code>Submit</code>。<br><img src="https://upload-images.jianshu.io/upload_images/8242255-28d362bcb09d151b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></li>
-<li><ol start="2">
-<li>点开<code>Job Description</code>,选择<code>View all genomic region-gene associations</code>，结果中的两个表给出peaks注释到的基因，一个是基因组区域和基因关联的表，一个是基因和基因组关联的表：<br><img src="https://upload-images.jianshu.io/upload_images/8242255-c858a398d92b19a1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></li>
-</ol>
-</li>
-<li><ol start="3">
-<li><code>Region-Gene Association Graphs</code><br>这栏内容对结合位点的基因数和转录起始位点相关的基因做了图形展示。<br><img src="https://upload-images.jianshu.io/upload_images/8242255-5e49b7856b712239.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></li>
-</ol>
-</li>
-<li><ol start="4">
-<li><code>Global Controls</code><br>选择想注释的信息，如GO注释<br><img src="https://upload-images.jianshu.io/upload_images/8242255-34e46431f660ae7a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></li>
-</ol>
-</li>
-<li><ol start="5">
-<li>探究Nanog结合位点相关的GO BP term<br><img src="https://upload-images.jianshu.io/upload_images/8242255-f20dd9477422c904.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></li>
-</ol>
-</li>
-<li><ol start="6">
-<li>选择某个term,查看具体信息<br><img src="https://upload-images.jianshu.io/upload_images/8242255-752f9bd3f211869b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></li>
-</ol>
-</li>
-<li><ol start="7">
-<li>打开<code>This term&#39;s genomic region-gene association tables (140 regions, 116 genes)</code>，查看注释到的GO term相关的基因，可以下载表格。<br><img src="https://upload-images.jianshu.io/upload_images/8242255-ac6510b361c9db44.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></li>
-</ol>
-</li>
-<li><ol start="8">
-<li>在<code>This term&#39;s gene -&gt; genomic region association table</code>中点击基因相关的regions，可以在UCSC浏览器上直接查看结合区域。</li>
-</ol>
-</li>
+<li>与16年发表在Cell systerm上的文章相比，这篇文章的分析相对丰富些，一是数据即包括健康人胰腺又包括糖尿病，二是不仅对细胞进行了分群和标记物的鉴定，还将T2D基因和肥胖基因与BMI关联，以及通过与正常组比较发现了T2D的基因变异。将健康和疾病的对照研究，凸显了鉴定的靶标具有重要的临床意义。</li>
+<li>Rickard Sandberg实验室发表的文章，SMRT-seq2的开发者，分析方法可以学习</li>
+<li>数据资源：<strong>E-MTAB-5061， E-MTAB-5060</strong></li>
 </ul>
-<hr>
-<h3 id="找Motif"><a href="#找Motif" class="headerlink" title="找Motif"></a>找Motif</h3><p>motif是比较有特征的短序列，会多次出现的，并被假设拥有生物学功能。而且，经常是一些具有序列特异性的蛋白的结合位点（如转录因子）或者是涉及到重要生物过程的（如，RNA 起始，RNA 终止， RNA 剪切等等）。<br>有很多网页版工具提供了找motif的方法，2014年的一篇综述列出了目前常用的网页工具（<a href="https://doi.org/10.1186/1745-6150-9-4" target="_blank" rel="noopener">https://doi.org/10.1186/1745-6150-9-4</a> ）：<br><img src="https://upload-images.jianshu.io/upload_images/8242255-4e6d85633c68e1d4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt><br>最常用的有MEME工具套件，下面主要介绍DREME。<strong>DREME</strong>适用于大批量的ChIP-Seq数据找真核转录因子短的（4nt或8nt）核心DNA结合基序。</p>
-<h4 id="DREME"><a href="#DREME" class="headerlink" title="DREME"></a>DREME</h4><ul>
-<li>打开DREME网页 <a href="http://meme-suite.org/tools/dreme" target="_blank" rel="noopener">http://meme-suite.org/tools/dreme</a> ，只要输入fasta序列<code>Nanog-idr-merged-dreme.fasta</code>即可，同时可以写上email和每个任务的描述，任务完成时如右图所示，可以打开DREAM_HTML_output查看结果。<br><img src="https://upload-images.jianshu.io/upload_images/8242255-f7d4e747bf2f1644.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt><br>DREME’s HTML展示的结果包括找到的motif的序列logo和表示显著性的E-value。点击<code>More</code>可以查看更多的信息。<br><img src="https://upload-images.jianshu.io/upload_images/8242255-da950ecc30a57391.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt><br><strong>Tomtom</strong><br>为了确定鉴定到的motif与已知转录因子的motif是否相似，可以将找到的motif再提交到<strong>Tomtom</strong>，与已知的转录因子数据库搜索匹配，同时还会给出motif-motif相似性的统计评估。<br>在DREAM’s HTML结果中选择某个预测到的motif，点击<code>Submit / Download</code>,然后选择<code>Tomtom</code>，点击<code>Submit</code>，在新打开的Tomtom界面可以选择转录因子的参考数据库，保持默认参数不变，也可以再添加其他参数，输入邮箱和任务描述就可以开始搜索。<br><img src="https://upload-images.jianshu.io/upload_images/8242255-d9aa88cd750c93ec.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt><h4 id="MEME-ChIP"><a href="#MEME-ChIP" class="headerlink" title="MEME-ChIP"></a>MEME-ChIP</h4>MEME-ChIP是MEME套件中的另一个工具，可以实现DREAM和Tomtom的分析功能，还可以评估motifs的中心富集性并整合相关的motifs合成相似性簇。MEME-ChIP能够鉴定更长的motifs（&lt;30bp）,但是运行时间比较长。<br><img src="https://upload-images.jianshu.io/upload_images/8242255-1da222fab1a31f81.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt><br>另外可以用Homer找motif，详细用法参考<a href="https://vip.biotrainee.com/d/388-motif" target="_blank" rel="noopener">找个motif嘛，简单</a>。<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3></li>
-</ul>
-<ol>
-<li><a href="https://github.com/hbctraining/In-depth-NGS-Data-Analysis-Course/blob/master/sessionV/lessons/08_functional_analysis.md" target="_blank" rel="noopener">哈佛深度NGS数据分析课程, 08-Web-based functional analysis and motif discovery</a></li>
-<li><a href="https://vip.biotrainee.com/d/388-motif" target="_blank" rel="noopener">找个motif嘛，简单</a></li>
-</ol>
+<blockquote>
+<p>每日文献摘要：第<strong>3</strong>篇 2019年08月26日 周一</p>
+</blockquote>
 
       
     </div>
@@ -501,11 +458,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/ATACseq/" rel="tag"># ATACseq</a>
+            <a href="/tags/single-cell/" rel="tag"># single cell</a>
           
-            <a href="/tags/ChIPseq/" rel="tag"># ChIPseq</a>
-          
-            <a href="/tags/motif/" rel="tag"># motif</a>
+            <a href="/tags/scRNA-seq/" rel="tag"># scRNA-seq</a>
           
         </div>
       
@@ -518,8 +473,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/23/第7篇：用Y叔的ChIPseeker对peaks进行注释和可视化/" rel="next" title="第7篇：用Y叔的ChIPseeker对peaks进行注释和可视化">
-                <i class="fa fa-chevron-left"></i> 第7篇：用Y叔的ChIPseeker对peaks进行注释和可视化
+              <a href="/2019/08/25/摘要-scRNA-seq探究人胰腺转录组图谱/" rel="next" title="摘要-scRNA-seq探究人胰腺转录组图谱">
+                <i class="fa fa-chevron-left"></i> 摘要-scRNA-seq探究人胰腺转录组图谱
               </a>
             
           </div>
@@ -527,10 +482,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/23/第9篇：差异peaks分析——DiffBind/" rel="prev" title="第9篇：差异peaks分析——DiffBind">
-                第9篇：差异peaks分析——DiffBind <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -582,17 +533,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -659,22 +601,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#学习目标"><span class="nav-number">1.</span> <span class="nav-text">学习目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#准备文件"><span class="nav-number">2.</span> <span class="nav-text">准备文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#富集分析"><span class="nav-number">3.</span> <span class="nav-text">富集分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#找Motif"><span class="nav-number">4.</span> <span class="nav-text">找Motif</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#DREME"><span class="nav-number">4.1.</span> <span class="nav-text">DREME</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MEME-ChIP"><span class="nav-number">4.2.</span> <span class="nav-text">MEME-ChIP</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考资料"><span class="nav-number">5.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
