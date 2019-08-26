@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[scATAC的一篇经典文献-研究人细胞发育和肿瘤内T细胞耗竭]]></title>
+    <url>%2F2019%2F08%2F26%2FscATAC%E7%9A%84%E4%B8%80%E7%AF%87%E7%BB%8F%E5%85%B8%E6%96%87%E7%8C%AE-%E7%A0%94%E7%A9%B6%E4%BA%BA%E7%BB%86%E8%83%9E%E5%8F%91%E8%82%B2%E5%92%8C%E8%82%BF%E7%98%A4%E5%86%85T%E7%BB%86%E8%83%9E%E8%80%97%E7%AB%AD%2F</url>
+    <content type="text"><![CDATA[一句话评价 学习scATAC-seq的必读文献 文章信息 题目：Massively parallel single-cell chromatin landscapes of human immune cell development and intratumoral T cell exhaustion 杂志：Nature biotechnology 时间：August, 2019 链接: https://www.nature.com/articles/s41587-019-0206-z figure 文章介绍： 利用商业化10X Genomics平台进行scATAC-seq测序，同时研究健康人的血液细胞发育和肿瘤内T细胞的耗竭。共得到200,000个单细胞的染色质可及性图谱。 在血液细胞发育中的应用，得到的结果包括： 鉴定到细胞特异的cis- 和trans调控元件 疾病相关的enhancer活动 细胞分化发育轨迹 在肿瘤基底细胞中的应用，结果包括： 构建了肿瘤微环境中的基底细胞、恶性细胞和免疫细胞的调控网络 发现一些染色质调控因子或许可作为免疫治疗的靶标 碎碎念 William J. Greenleaf 和 Howard Y. Chang合作的又一篇巨作文章，值得细细解读，一是学习scATAC-seq的分析方法，重现文章的部分分析；二是总结文章思路，思考如何利用该数据资源做进一步挖掘，对其他课题的借鉴意义 数据资源：scATAC-seq处理前的数据和处理后的数据都提供在10X平台 https://support.10xgenomics.com/single-cell-atac/datasets. 代码：https://github.com/GreenleafLab/10x-scATAC-2019. 每日文献摘要：第4篇 2019年08月27日 周二]]></content>
+      <tags>
+        <tag>ATACseq</tag>
+        <tag>scATACseq</tag>
+        <tag>single cell</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[awk基本命令使用]]></title>
     <url>%2F2019%2F08%2F25%2Fawk%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4%E4%BD%BF%E7%94%A8%2F</url>
     <content type="text"><![CDATA[awk是一个处理文本文件的程序，也是一门强大的编程语言。awk是把文件逐行的读入，以空格为默认分隔符将每行分割，切开的部分再进行各种分析处理，非常适用于每行格式相同的文本文件。 示例数据： DEseq2得到的差异表达矩阵(dfdata)作为示例数据： 包括9列数据，分别为id, baseMeanA, baseMeanB,baseMean, log2FoldChange,lfcSE,stat,pvalue,padj 基本用法 输出文件内容 1234# 格式$ awk '&#123;动作&#125;' 文件名# 示例$ head dfdata | awk '&#123;print $0&#125;' 将输出差异基因结构的前5行 提取基因ID，log2FoldChange, pvalue三列信息 awk会根据空格和制表符等分隔符，将每一行分成若干字段，依次用$1、$2、$3代表第一个字段、第二个字段、第三个字段等，$1, $2可以理解为被分隔符分割的第一列，第二列 -F ：输入分隔符，这里是\t 12# 将输出差异基因前10行的第1、5和8列，默认是以空格分割，所以输出结果head dfdata | awk -F '\t' '&#123;print $1,$5,$8&#125;' OFS: 输出分隔符 12# 以tab分割输出head dfdata | awk -F '\t' '&#123;print $1,$5,$8&#125;' OFS='\t' 其他变量 FILENAME：当前文件名 FS：字段分隔符，默认是空格和制表符。 RS：行分隔符，用于分割每一行，默认是换行符。 OFS：输出字段的分隔符，用于打印时分隔字段，默认为空格。 ORS：输出记录的分隔符，用于打印时分隔记录，默认为换行符。 OFMT：数字输出的格式，默认为％.6g 条件1awk '条件 &#123;动作&#125;' 文件名 可以结合正则表达式规则使用 输出特定基因ID的行 12awk -F '\t' '/id/ &#123;print $0&#125;' dfdata# id baseMeanA baseMeanB baseMean log2FoldChange lfcSE stat pvalue padj if语句判断语句和执行语句必须用在{}中，且判断语句用()扩起来 1awk '&#123;if () action; else action&#125;' file 输出 |log2FoldChange | &gt; 1且pvalue &lt; 0.05的所有信息 符合|log2FoldChange | &gt; 1且pvalue &lt; 0.05的基因有多少个 1awk '&#123;if ($5&gt;1 || $5 &lt; -1 &amp;&amp; $8&lt;0.05 ) print $0&#125;' dfdata | wc 且同时输出header 12awk '/id/ &#123;print $0&#125;; &#123;if ($5&gt;1 || $5 &lt; -1 &amp;&amp; $8&lt;0.05 ) print $0&#125;' dfdata | less -S# 两个完整语句间用分号分割 函数 tolower()：字符转为小写。 length()：返回字符串长度。 substr()：返回子字符串。 sin()：正弦。 cos()：余弦。 sqrt()：平方根。 rand()：随机数 1234awk '/id/ &#123;print $0&#125; dfdata# id baseMeanA baseMeanB baseMean log2FoldChange lfcSE stat pvalue padjawk '/id/ &#123;print toupper($0)&#125;' rawcount # ID BASEMEANA BASEMEANB BASEMEAN LOG2FOLDCHANGE LFCSE STAT PVALUE PADJ]]></content>
