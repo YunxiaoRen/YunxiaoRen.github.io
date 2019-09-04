@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[肿瘤基质边界的酸性微环境与肿瘤迁徙]]></title>
+    <url>%2F2019%2F08%2F30%2F%E8%82%BF%E7%98%A4%E5%9F%BA%E8%B4%A8%E8%BE%B9%E7%95%8C%E7%9A%84%E9%85%B8%E6%80%A7%E5%BE%AE%E7%8E%AF%E5%A2%83%E4%B8%8E%E8%82%BF%E7%98%A4%E8%BF%81%E5%BE%99%2F</url>
+    <content type="text"><![CDATA[一句话评价 酸性环境改变转录组的变化影响肿瘤的恶性发展 文章信息 题目：Acidification of Tumor at Stromal Boundaries Drives Transcriptome Alterations Associated with Aggressive Phenotypes 杂志：Cancer research 时间：April 15, 2019 链接: DOI: 10.1158/0008-5472.CAN-18-1604 figure 文章介绍： 肿瘤微环境的3大特征： 异质性 缺氧 酸性 异质性我们听到的报道可能很多，肿瘤微环境不是仅仅有肿瘤细胞组成，还包括免疫细胞、基质细胞等各种成分。 缺氧我们可能也不难理解，肿瘤细胞的快速繁殖使肿瘤微环境中的血管化异常以及血液供应的异常，导致缺氧的环境。 酸性环境如果是做肿瘤代谢的肯定不会陌生，因为著名的瓦博格效应，即大家广泛认同的肿瘤酸性环境产生的原因，认为肿瘤在无氧环境中的糖酵解产生大量乳酸，导致了肿瘤的酸性环境。 酸性环境对肿瘤有什么影响？ 常见的研究有：酸性环境影响肿瘤的恶性发展、基因组和表观组的变化、肿瘤的转移、药物的抵抗性等。 这篇文章介绍的是酸性环境影响基因的表达以及可变剪接，进而影响肿瘤的恶性发展。 每日文献摘要：第4篇 2019年08月27日 周二]]></content>
+      <tags>
+        <tag>文献摘要</tag>
+        <tag>acidic TME</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[scATAC的一篇经典文献-研究人细胞发育和肿瘤内T细胞耗竭]]></title>
     <url>%2F2019%2F08%2F26%2FscATAC%E7%9A%84%E4%B8%80%E7%AF%87%E7%BB%8F%E5%85%B8%E6%96%87%E7%8C%AE-%E7%A0%94%E7%A9%B6%E4%BA%BA%E7%BB%86%E8%83%9E%E5%8F%91%E8%82%B2%E5%92%8C%E8%82%BF%E7%98%A4%E5%86%85T%E7%BB%86%E8%83%9E%E8%80%97%E7%AB%AD%2F</url>
     <content type="text"><![CDATA[一句话评价 学习scATAC-seq的必读文献 文章信息 题目：Massively parallel single-cell chromatin landscapes of human immune cell development and intratumoral T cell exhaustion 杂志：Nature biotechnology 时间：August, 2019 链接: https://www.nature.com/articles/s41587-019-0206-z figure 文章介绍： 利用商业化10X Genomics平台进行scATAC-seq测序，同时研究健康人的血液细胞发育和肿瘤内T细胞的耗竭。共得到200,000个单细胞的染色质可及性图谱。 在血液细胞发育中的应用，得到的结果包括： 鉴定到细胞特异的cis- 和trans调控元件 疾病相关的enhancer活动 细胞分化发育轨迹 在肿瘤基底细胞中的应用，结果包括： 构建了肿瘤微环境中的基底细胞、恶性细胞和免疫细胞的调控网络 发现一些染色质调控因子或许可作为免疫治疗的靶标 碎碎念 William J. Greenleaf 和 Howard Y. Chang合作的又一篇巨作文章，值得细细解读，一是学习scATAC-seq的分析方法，重现文章的部分分析；二是总结文章思路，思考如何利用该数据资源做进一步挖掘，对其他课题的借鉴意义 数据资源：scATAC-seq处理前的数据和处理后的数据都提供在10X平台 https://support.10xgenomics.com/single-cell-atac/datasets. 代码：https://github.com/GreenleafLab/10x-scATAC-2019. 每日文献摘要：第4篇 2019年08月27日 周二]]></content>
