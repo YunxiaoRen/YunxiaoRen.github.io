@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[摘要-单细胞空间转录组整合分析和可视化流程_Giotto]]></title>
+    <url>%2F2019%2F09%2F20%2F%E6%91%98%E8%A6%81-%E5%8D%95%E7%BB%86%E8%83%9E%E7%A9%BA%E9%97%B4%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B4%E5%90%88%E5%88%86%E6%9E%90%E5%92%8C%E5%8F%AF%E8%A7%86%E5%8C%96%E6%B5%81%E7%A8%8B-Giotto%2F</url>
+    <content type="text"><![CDATA[一句话评价 单细胞空间转录组分析和可视化流程 文章信息 题目：Giotto, a pipeline for integrative analysis and visualization of single-cell spatial transcriptomic data 杂志：bioRxiv 时间：Jul. 13, 2019 链接: doi: http://dx.doi.org/10.1101/701680 figure 文章介绍： 空间转录组技术有助于研究细胞与其原生的微环境的相互作用，对于理解组织中细胞的身份和功能至关重要。2016年，来自瑞典卡罗琳斯卡研究所和皇家理工学院等机构的研究人员首先开发出空间转录组学（spatial transcriptomics）的高分辨率方法（Visualization and analysis of gene expression in tissue sections by spatial transcriptomics ）。2017年，景乃禾研究员和彭广敦研究员研发的空间转录组学技术——Geo-seq发表在《Nature Protocols》。 Geo-seq技术是通过整合与优化单细胞测序和激光显微切割，构建的一种能够获得少量细胞转录组信息、同时保留细胞原有空间位置信息的测序方法。该技术通过激光显微切割可以直观地在组织上直接捕获细胞，每个获取的样本（此技术可以获取低至5个细胞）都保留了位置信息，然后与单细胞转录组测序技术结合，从而完成了高效率、高分辨率的空间转录组分析。 空间转录组学的技术伴随着单细胞技术不断发展，相关分析工具也被相继开发，这篇文章介绍的是对单细胞空间转录组数据进行整合分析和可视化的流程——Giotto. Giotto包括两个部分，第一部分是分析空间单细胞转录组数据的详细流程，第二部分是空间单细胞转录组数据的可视化浏览。 分析部分需要的输入数据是gene-by-cell count matrix和每个细胞的空间坐标。分析的内容包括单细胞的常规分析，如：数据预处理、特征选择、降维、聚类等。最重要的是整合了基因表达和空间位置信息。 可视化部分提供了交互的工作环境，既可以探索分析结果，也可以可视化其他信息如细胞形态、转录本位置等。 使用教程：http://spatial.rc.fas.harvard.edu/giotto-viewer/tutorial.html 碎碎念 空间转录组结合单细胞技术是一个新的热点研究方向 每日文献摘要：第5篇 2019年08月28日 周三]]></content>
+      <tags>
+        <tag>single cell</tag>
+        <tag>spatial transcriptomics</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[肿瘤基质边界的酸性微环境与肿瘤迁徙]]></title>
     <url>%2F2019%2F08%2F30%2F%E8%82%BF%E7%98%A4%E5%9F%BA%E8%B4%A8%E8%BE%B9%E7%95%8C%E7%9A%84%E9%85%B8%E6%80%A7%E5%BE%AE%E7%8E%AF%E5%A2%83%E4%B8%8E%E8%82%BF%E7%98%A4%E8%BF%81%E5%BE%99%2F</url>
     <content type="text"><![CDATA[一句话评价 酸性环境改变转录组的变化影响肿瘤的恶性发展 文章信息 题目：Acidification of Tumor at Stromal Boundaries Drives Transcriptome Alterations Associated with Aggressive Phenotypes 杂志：Cancer research 时间：April 15, 2019 链接: DOI: 10.1158/0008-5472.CAN-18-1604 figure 文章介绍： 肿瘤微环境的3大特征： 异质性 缺氧 酸性 异质性我们听到的报道可能很多，肿瘤微环境不是仅仅有肿瘤细胞组成，还包括免疫细胞、基质细胞等各种成分。 缺氧我们可能也不难理解，肿瘤细胞的快速繁殖使肿瘤微环境中的血管化异常以及血液供应的异常，导致缺氧的环境。 酸性环境如果是做肿瘤代谢的肯定不会陌生，因为著名的瓦博格效应，即大家广泛认同的肿瘤酸性环境产生的原因，认为肿瘤在无氧环境中的糖酵解产生大量乳酸，导致了肿瘤的酸性环境。 酸性环境对肿瘤有什么影响？ 常见的研究有：酸性环境影响肿瘤的恶性发展、基因组和表观组的变化、肿瘤的转移、药物的抵抗性等。 这篇文章介绍的是酸性环境影响基因的表达以及可变剪接，进而影响肿瘤的恶性发展。 每日文献摘要：第4篇 2019年08月27日 周二]]></content>
       <tags>
         <tag>文献摘要</tag>
-        <tag>acidic TME</tag>
       </tags>
   </entry>
   <entry>
