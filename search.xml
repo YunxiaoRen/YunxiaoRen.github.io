@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[scATAC-seq和深度学习联合揭示2型糖尿病的调控特征]]></title>
+    <url>%2F2019%2F09%2F28%2FscATAC-seq%E5%92%8C%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E8%81%94%E5%90%88%E6%8F%AD%E7%A4%BA2%E5%9E%8B%E7%B3%96%E5%B0%BF%E7%97%85%E7%9A%84%E8%B0%83%E6%8E%A7%E7%89%B9%E5%BE%81%2F</url>
+    <content type="text"><![CDATA[一句话评价 scATAC-seq和深度学习联合揭示2型糖尿病的调控特征 文章信息 题目：Single cell ATAC-seq in human pancreatic islets and deep learning upscaling of rare cells reveals cell-specific type 2 diabetes regulatory signature 杂志：bioRxiv 时间：Sep. 7, 2019 链接: DOI: http://dx.doi.org/10.1101/749283 figure 文章介绍： II型糖尿病(T2D)是一种以胰岛功能障碍、胰岛素抵抗和血糖紊乱为特征的复杂疾病。全基因组关联研究（GWAS）已经鉴定出超过400个编码遗传倾向的独立信号。超过90%相关的单核苷酸多态性（SNP）定位于非编码区，并富集在染色质定义的胰岛增强子元件中。另外胰岛包含不同的细胞类型，每种细胞类型都有可能参与T2D的转录调控，bulk-seq的方法会掩盖了细胞异质性的特点。所以这里文章采取sci-ATAC-seq (single-cell-combinatorial-indexing ATAC-seq) 的方法，观察到α、β和δ细胞群并识别T2D的细胞特异性的调控信号；另外，他们发现T2D GWAS SNPs显著富集在β细胞，和α或δ细胞与其他细胞类型跨细胞型差异的开放染色质。此外，他们基于U-Net架构还开发了一个深度学习模型用于准确地预测在稀有细胞群体中的开放染色质峰值。 深度学习的代码： https://github.com/ParkerLab/PillowNet. 其他代码在：https://github.com/ParkerLab/islet_sci-ATAC-seq_2019 碎碎念 这篇文章结合scATAC-seq和深度学习的方法探究疾病的转录调控特征的思路和以及文章用到的方法值得学习。 每日文献摘要：第10篇 2019年09月28日 周六 持久确实是一件不易的事！]]></content>
+      <tags>
+        <tag>scATACseq</tag>
+        <tag>deep learning</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[scRNA-seq构建表达矩阵]]></title>
     <url>%2F2019%2F09%2F27%2FscRNA-seq%E6%9E%84%E5%BB%BA%E8%A1%A8%E8%BE%BE%E7%9F%A9%E9%98%B5%2F</url>
     <content type="text"></content>

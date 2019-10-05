@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-27T09:20:01.009Z</updated>
+  <updated>2019-10-05T12:11:09.253Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>scATAC-seq和深度学习联合揭示2型糖尿病的调控特征</title>
+    <link href="http://yoursite.com/2019/09/28/scATAC-seq%E5%92%8C%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E8%81%94%E5%90%88%E6%8F%AD%E7%A4%BA2%E5%9E%8B%E7%B3%96%E5%B0%BF%E7%97%85%E7%9A%84%E8%B0%83%E6%8E%A7%E7%89%B9%E5%BE%81/"/>
+    <id>http://yoursite.com/2019/09/28/scATAC-seq和深度学习联合揭示2型糖尿病的调控特征/</id>
+    <published>2019-09-28T14:34:40.000Z</published>
+    <updated>2019-10-05T12:11:09.253Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>一句话评价</strong></p><p>scATAC-seq和深度学习联合揭示2型糖尿病的调控特征</p><p><strong>文章信息</strong></p><p>题目：Single cell ATAC-seq in human pancreatic islets and deep learning upscaling of rare cells reveals cell-specific type 2 diabetes regulatory signature</p><p>杂志：bioRxiv</p><p>时间：Sep. 7, 2019</p><p>链接: DOI: <a href="http://dx.doi.org/10.1101/749283" target="_blank" rel="noopener">http://dx.doi.org/10.1101/749283</a></p><p><strong>figure</strong></p><p><img src="/2019/09/28/scATAC-seq和深度学习联合揭示2型糖尿病的调控特征/abstrat-fig.png" alt="abstrat-fig"></p><a id="more"></a><p><strong>文章介绍：</strong></p><p>II型糖尿病(T2D)是一种以胰岛功能障碍、胰岛素抵抗和血糖紊乱为特征的复杂疾病。全基因组关联研究（GWAS）已经鉴定出超过400个编码遗传倾向的独立信号。超过90%相关的单核苷酸多态性（SNP）定位于非编码区，并富集在染色质定义的胰岛增强子元件中。另外胰岛包含不同的细胞类型，每种细胞类型都有可能参与T2D的转录调控，bulk-seq的方法会掩盖了细胞异质性的特点。所以这里文章采取sci-ATAC-seq (single-cell-combinatorial-indexing ATAC-seq) 的方法，观察到α、β和δ细胞群并识别T2D的细胞特异性的调控信号；另外，他们发现T2D GWAS SNPs显著富集在β细胞，和α或δ细胞与其他细胞类型跨细胞型差异的开放染色质。此外，他们基于U-Net架构还开发了一个深度学习模型用于准确地预测在稀有细胞群体中的开放染色质峰值。</p><p>深度学习的代码： <a href="https://github.com/ParkerLab/PillowNet" target="_blank" rel="noopener">https://github.com/ParkerLab/PillowNet</a>. </p><p>其他代码在：<a href="https://github.com/ParkerLab/islet_sci-ATAC-seq_2019" target="_blank" rel="noopener">https://github.com/ParkerLab/islet_sci-ATAC-seq_2019</a></p><p><strong>碎碎念</strong></p><p>这篇文章结合scATAC-seq和深度学习的方法探究疾病的转录调控特征的思路和以及文章用到的方法值得学习。</p><blockquote><p>每日文献摘要：第10篇 2019年09月28日 周六</p><p>持久确实是一件不易的事！</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;一句话评价&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;scATAC-seq和深度学习联合揭示2型糖尿病的调控特征&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;文章信息&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;题目：Single cell ATAC-seq in human pancreatic islets and deep learning upscaling of rare cells reveals cell-specific type 2 diabetes regulatory signature&lt;/p&gt;
+&lt;p&gt;杂志：bioRxiv&lt;/p&gt;
+&lt;p&gt;时间：Sep. 7, 2019&lt;/p&gt;
+&lt;p&gt;链接: DOI: &lt;a href=&quot;http://dx.doi.org/10.1101/749283&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://dx.doi.org/10.1101/749283&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;figure&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2019/09/28/scATAC-seq和深度学习联合揭示2型糖尿病的调控特征/abstrat-fig.png&quot; alt=&quot;abstrat-fig&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="scATACseq" scheme="http://yoursite.com/tags/scATACseq/"/>
+    
+      <category term="deep learning" scheme="http://yoursite.com/tags/deep-learning/"/>
+    
+  </entry>
   
   <entry>
     <title>scRNA-seq构建表达矩阵</title>
@@ -597,32 +627,6 @@
     
     
       <category term="ATACseq" scheme="http://yoursite.com/tags/ATACseq/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>第10篇：ATAC-Seq、ChIP-Seq、RNA-Seq整合分析</title>
-    <link href="http://yoursite.com/2019/08/23/%E7%AC%AC10%E7%AF%87%EF%BC%9AATAC-Seq%E3%80%81ChIP-Seq%E3%80%81RNA-Seq%E6%95%B4%E5%90%88%E5%88%86%E6%9E%90/"/>
-    <id>http://yoursite.com/2019/08/23/第10篇：ATAC-Seq、ChIP-Seq、RNA-Seq整合分析/</id>
-    <published>2019-08-23T04:57:08.000Z</published>
-    <updated>2019-08-23T05:11:56.849Z</updated>
-    
-    <content type="html"><![CDATA[<p>由于基因表达调控机制的复杂性，多种组学数据的整合分析，从不同的层面探究生物问题越来越重要。从RNA-Seq层面，我们可以探究哪些基因具有显著差异，上调或下调；从ChIP-Seq层面，我们可以研究某个特定转录因子的调控作用；从ATAC-Seq我们可以了解到染色质可及性的动态变化，由于染色质的可及性与调控元件或转录因子的结合密切相关，在转录调控中发挥着重要的作用。因此，整合分析可以进一步探究调控某一生物学过程的关键因子（包括顺式调控元件和转录因子），以及哪个转录因子调控了感兴趣的基因，以及感兴趣的转录因子的靶基因等。<br>目前，好像并没有标准化的方法用来整合比较这三种数据。不过在文献中可以看到有很多相同的或不同的思路和方法做整合分析，大家可以在学习交流群中推荐文献，一起解读学习。</p><a id="more"></a><p>下面的内容主要介绍这一节课程中RNA-Seq和ChIP-Seq的整合分析中提到的两种方法：<br><strong>一是直接比较</strong>，即首先得到差异基因与ChIP-Seq靶基因的overlap，然后选择一些关键基因比较一下谱图。<br><img src="https://upload-images.jianshu.io/upload_images/8242255-3a8682b8a3260f0c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Gao et. al, Nature 2014，doi: 10.1038/nature13921"><br><strong>课程中提到的另一种方法是使用BETA工具：</strong><br><strong>BETA (Binding and Expression Target Analysis)</strong>是 Shirley Liu实验室开发的工具，通过整合转录因子或染色质调控因子的ChIP-Seq与差异基因的表达直接预测靶基因，而且有可能发现增强子区的蛋白质的靶基因。<br>BETA有三个功能：</p><ul><li>预测转录因子的功能是激活还是抑制</li><li>预测转录因子的靶基因</li><li>鉴定转录因子的motif以及调控转录因子激活或抑制的其他因子</li></ul><p>BETA包括三个命令取决于输入数据格式和想要的输出数据（可以参考嘉因的帖子<a href="https://mp.weixin.qq.com/s/Nm47ZMbdlIx-OI5j5wo4nA" target="_blank" rel="noopener">ChIP-seq和RNA-seq整合分析，BETA最擅长 | 自己分析数据的完美解决方案</a>）</p><ul><li>BETA basic: 预测转录因子的功能是激活还是抑制，直接检测靶标</li><li>BETA plus：BETA basic + 靶标区域的motif分析</li><li>BETA minus：只基于结合数据的调控潜能的值预测TF靶基因</li></ul><p><img src="https://upload-images.jianshu.io/upload_images/8242255-126e213bad02247c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Nat Protoc. 2013 Dec; 8(12): 2502–2515."></p><p><strong>工作原理</strong></p><ul><li>每个基因的调控潜能值是通过计算基因TSS的指定范围内的所有结合位点来计算的</li><li>调控潜能是基因受因子调节的可能性，取决于TSS范围的结合位点数以及与结合位点与TSS之间的距离</li><li>BETA minus按照调控潜能值对基因排序来鉴定靶标</li><li>BETA basic需要特定格式的差异分析结果和显著性的结果。它使用CDF来判断上调基因和下调基因是否与NON-DE不同，这是用来识别激活和抑制功能。使用调控潜能和差异统计量计算每一个基因的得分排序，该得分排序可以用于识别靶标。<h3 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h3></li></ul><ol><li><a href="https://github.com/hbctraining/In-depth-NGS-Data-Analysis-Course/blob/master/sessionV/lessons/integrating_rna-seq_and_chip-seq.md" target="_blank" rel="noopener">哈佛深度NGS数据分析课程，10-Integrating RNA-seq and ChIP-seq</a></li><li><a href="https://mp.weixin.qq.com/s/-7Bx29H5nM-LQJiu9hbYjw" target="_blank" rel="noopener">大牛新宠，转录调控研究神器！找关键转录因子、推测转录因子-靶基因关系</a></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;由于基因表达调控机制的复杂性，多种组学数据的整合分析，从不同的层面探究生物问题越来越重要。从RNA-Seq层面，我们可以探究哪些基因具有显著差异，上调或下调；从ChIP-Seq层面，我们可以研究某个特定转录因子的调控作用；从ATAC-Seq我们可以了解到染色质可及性的动态变化，由于染色质的可及性与调控元件或转录因子的结合密切相关，在转录调控中发挥着重要的作用。因此，整合分析可以进一步探究调控某一生物学过程的关键因子（包括顺式调控元件和转录因子），以及哪个转录因子调控了感兴趣的基因，以及感兴趣的转录因子的靶基因等。&lt;br&gt;目前，好像并没有标准化的方法用来整合比较这三种数据。不过在文献中可以看到有很多相同的或不同的思路和方法做整合分析，大家可以在学习交流群中推荐文献，一起解读学习。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="组学" scheme="http://yoursite.com/categories/%E7%BB%84%E5%AD%A6/"/>
-    
-      <category term="表观组" scheme="http://yoursite.com/categories/%E7%BB%84%E5%AD%A6/%E8%A1%A8%E8%A7%82%E7%BB%84/"/>
-    
-    
-      <category term="ATACseq" scheme="http://yoursite.com/tags/ATACseq/"/>
-    
-      <category term="ChIPseq" scheme="http://yoursite.com/tags/ChIPseq/"/>
     
   </entry>
   
