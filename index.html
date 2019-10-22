@@ -286,6 +286,176 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/22/千里之行始于足下-R-Basics/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="六六">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="生信拾光">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/10/22/千里之行始于足下-R-Basics/" itemprop="url">千里之行始于足下_R Basics</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-22T10:44:50+08:00">
+                2019-10-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  421
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>坚持做一件事很难，总会被最初的意外和后来的惰性扰乱而半路放弃。今天看到几句话，感觉说到心窝里了:</p>
+<p><strong>规律地做一些事情，据说可以增加对生活的掌控感，从而缓解焦虑。</strong></p>
+<p><strong>对时间最好的利用，就是做自己想做的事情，并且全身心的享受每一刻。</strong> </p>
+<p>这里就立一个Flag：<strong>每日一图</strong>，每天至少专注的做一件自己喜欢做的想做的事情。</p>
+<p>这里就以<a href="https://mp.weixin.qq.com/s/CX_fwbuyPTelOgaj7852qg" target="_blank" rel="noopener">推荐三本学习R画图的免费好书</a>推荐的第一本书起航吧：<strong>R G raphics Cookbook</strong></p>
+<p>这本书主要基于ggplot2的绘图语法，以及tidyverse的数据清理方法。书中使用的数据和例子整合在<strong>gcookbook</strong></p>
+<h4 id="所以首先安装载入需要的R包"><a href="#所以首先安装载入需要的R包" class="headerlink" title="所以首先安装载入需要的R包"></a>所以首先安装载入需要的R包</h4><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">install.packages(c(<span class="string">"ggplot2"</span>, <span class="string">"gcookbook"</span>, <span class="string">"MASS"</span>, <span class="string">"dplyr"</span>,<span class="string">"tidyverse"</span>))</span><br><span class="line"></span><br><span class="line"><span class="keyword">library</span>(tidyverse)</span><br><span class="line"><span class="keyword">library</span>(gcookbook)</span><br><span class="line"><span class="keyword">library</span>(ggplot2)</span><br><span class="line"><span class="keyword">library</span>(dplyr)</span><br><span class="line"></span><br><span class="line"><span class="comment"># update</span></span><br><span class="line">update.packages()</span><br></pre></td></tr></table></figure>
+<h4 id="base-plot与ggplot2的简单实例对比"><a href="#base-plot与ggplot2的简单实例对比" class="headerlink" title="base plot与ggplot2的简单实例对比"></a>base plot与ggplot2的简单实例对比</h4><p><strong>Scatter plot</strong> </p>
+<p>使用plot函数，仅需传递给plot两个变量：<strong>x, y</strong></p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plot(mtcars$wt, mtcars$mpg)</span><br></pre></td></tr></table></figure>
+<p>使用ggplot2, 首先创建一个plot 对象，然后加一个点的图层。ggplot2通常以数据框为画图对象（<code>mtcars</code>)，然后指明哪列是<code>x</code>, 哪列是<code>y</code>。</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(ggplot2)</span><br><span class="line">ggplot(mtcars, aes(x = wt, y = mpg)) +</span><br><span class="line">  geom_point()</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/10/22/千里之行始于足下-R-Basics/fig1.png" alt></p>
+<p><strong>Line Graph</strong></p>
+<p>Base plot新增line时，第一次以plot函数，第二次lines函数</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 左图</span></span><br><span class="line">plot(pressure$temperature, pressure$pressure, type = <span class="string">"l"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 右图</span></span><br><span class="line">plot(pressure$temperature, pressure$pressure, type = <span class="string">"l"</span>)</span><br><span class="line">points(pressure$temperature, pressure$pressure)</span><br><span class="line"></span><br><span class="line">lines(pressure$temperature, pressure$pressure/<span class="number">2</span>, col = <span class="string">"red"</span>)</span><br><span class="line">points(pressure$temperature, pressure$pressure/<span class="number">2</span>, col = <span class="string">"red"</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/10/22/千里之行始于足下-R-Basics/fig2.png" alt></p>
+<p>ggplot2对图像的图形的选择需加上geom_line()，或者geom_point()</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 左图</span></span><br><span class="line"><span class="keyword">library</span>(ggplot2)</span><br><span class="line">ggplot(pressure, aes(x = temperature, y = pressure)) +</span><br><span class="line">  geom_line()</span><br><span class="line"><span class="comment"># 右图，加points</span></span><br><span class="line">ggplot(pressure, aes(x = temperature, y = pressure)) +</span><br><span class="line">  geom_line() +</span><br><span class="line">  geom_point()</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/10/22/千里之行始于足下-R-Basics/fig3.png" alt></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/28/scATAC-seq和深度学习联合揭示2型糖尿病的调控特征/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -912,174 +1082,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/26/摘要-揭示RNA相关染色质构象的方法——HiChIRP/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="六六">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="生信拾光">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/09/26/摘要-揭示RNA相关染色质构象的方法——HiChIRP/" itemprop="url">摘要-揭示RNA相关染色质构象的方法——HiChIRP</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-26T22:09:30+08:00">
-                2019-09-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  343
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><strong>一句话评价</strong></p>
-<p>研究RNA与染色质构象相互作用的方法</p>
-<p><strong>文章信息</strong></p>
-<p>题目：HiChIRP reveals RNA-associated chromosome conformation</p>
-<p>杂志：Nature Method</p>
-<p>时间：2019 June</p>
-<p>链接: DOI:10.1038/s41592-019-0407-x</p>
-<p><strong>figure</strong></p>
-<p><img src="/2019/09/26/摘要-揭示RNA相关染色质构象的方法——HiChIRP/abstract.png" style="zoom:50%"></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/09/26/摘要-揭示RNA相关染色质构象的方法——HiChIRP/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1125,7 +1132,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">30</span>
+                  <span class="site-state-item-count">31</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1147,7 +1154,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1205,7 +1212,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">22.5k</span>
+    <span title="Site words total count">22.9k</span>
   
 </div>
 
@@ -1225,7 +1232,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共22.5k字</span>
+  <span class="post-count">博客全站共22.9k字</span>
 </div>
 
 

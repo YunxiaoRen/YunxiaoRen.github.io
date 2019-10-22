@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-10-05T12:15:39.113Z</updated>
+  <updated>2019-10-22T03:50:11.634Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>千里之行始于足下_R Basics</title>
+    <link href="http://yoursite.com/2019/10/22/%E5%8D%83%E9%87%8C%E4%B9%8B%E8%A1%8C%E5%A7%8B%E4%BA%8E%E8%B6%B3%E4%B8%8B-R-Basics/"/>
+    <id>http://yoursite.com/2019/10/22/千里之行始于足下-R-Basics/</id>
+    <published>2019-10-22T02:44:50.000Z</published>
+    <updated>2019-10-22T03:50:11.634Z</updated>
+    
+    <content type="html"><![CDATA[<p>坚持做一件事很难，总会被最初的意外和后来的惰性扰乱而半路放弃。今天看到几句话，感觉说到心窝里了:</p><p><strong>规律地做一些事情，据说可以增加对生活的掌控感，从而缓解焦虑。</strong></p><p><strong>对时间最好的利用，就是做自己想做的事情，并且全身心的享受每一刻。</strong> </p><p>这里就立一个Flag：<strong>每日一图</strong>，每天至少专注的做一件自己喜欢做的想做的事情。</p><p>这里就以<a href="https://mp.weixin.qq.com/s/CX_fwbuyPTelOgaj7852qg" target="_blank" rel="noopener">推荐三本学习R画图的免费好书</a>推荐的第一本书起航吧：<strong>R G raphics Cookbook</strong></p><p>这本书主要基于ggplot2的绘图语法，以及tidyverse的数据清理方法。书中使用的数据和例子整合在<strong>gcookbook</strong></p><h4 id="所以首先安装载入需要的R包"><a href="#所以首先安装载入需要的R包" class="headerlink" title="所以首先安装载入需要的R包"></a>所以首先安装载入需要的R包</h4><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">install.packages(c(<span class="string">"ggplot2"</span>, <span class="string">"gcookbook"</span>, <span class="string">"MASS"</span>, <span class="string">"dplyr"</span>,<span class="string">"tidyverse"</span>))</span><br><span class="line"></span><br><span class="line"><span class="keyword">library</span>(tidyverse)</span><br><span class="line"><span class="keyword">library</span>(gcookbook)</span><br><span class="line"><span class="keyword">library</span>(ggplot2)</span><br><span class="line"><span class="keyword">library</span>(dplyr)</span><br><span class="line"></span><br><span class="line"><span class="comment"># update</span></span><br><span class="line">update.packages()</span><br></pre></td></tr></table></figure><h4 id="base-plot与ggplot2的简单实例对比"><a href="#base-plot与ggplot2的简单实例对比" class="headerlink" title="base plot与ggplot2的简单实例对比"></a>base plot与ggplot2的简单实例对比</h4><p><strong>Scatter plot</strong> </p><p>使用plot函数，仅需传递给plot两个变量：<strong>x, y</strong></p><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plot(mtcars$wt, mtcars$mpg)</span><br></pre></td></tr></table></figure><p>使用ggplot2, 首先创建一个plot 对象，然后加一个点的图层。ggplot2通常以数据框为画图对象（<code>mtcars</code>)，然后指明哪列是<code>x</code>, 哪列是<code>y</code>。</p><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(ggplot2)</span><br><span class="line">ggplot(mtcars, aes(x = wt, y = mpg)) +</span><br><span class="line">  geom_point()</span><br></pre></td></tr></table></figure><p><img src="/2019/10/22/千里之行始于足下-R-Basics/fig1.png" alt></p><p><strong>Line Graph</strong></p><p>Base plot新增line时，第一次以plot函数，第二次lines函数</p><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 左图</span></span><br><span class="line">plot(pressure$temperature, pressure$pressure, type = <span class="string">"l"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 右图</span></span><br><span class="line">plot(pressure$temperature, pressure$pressure, type = <span class="string">"l"</span>)</span><br><span class="line">points(pressure$temperature, pressure$pressure)</span><br><span class="line"></span><br><span class="line">lines(pressure$temperature, pressure$pressure/<span class="number">2</span>, col = <span class="string">"red"</span>)</span><br><span class="line">points(pressure$temperature, pressure$pressure/<span class="number">2</span>, col = <span class="string">"red"</span>)</span><br></pre></td></tr></table></figure><p><img src="/2019/10/22/千里之行始于足下-R-Basics/fig2.png" alt></p><p>ggplot2对图像的图形的选择需加上geom_line()，或者geom_point()</p><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 左图</span></span><br><span class="line"><span class="keyword">library</span>(ggplot2)</span><br><span class="line">ggplot(pressure, aes(x = temperature, y = pressure)) +</span><br><span class="line">  geom_line()</span><br><span class="line"><span class="comment"># 右图，加points</span></span><br><span class="line">ggplot(pressure, aes(x = temperature, y = pressure)) +</span><br><span class="line">  geom_line() +</span><br><span class="line">  geom_point()</span><br></pre></td></tr></table></figure><p><img src="/2019/10/22/千里之行始于足下-R-Basics/fig3.png" alt></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;坚持做一件事很难，总会被最初的意外和后来的惰性扰乱而半路放弃。今天看到几句话，感觉说到心窝里了:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;规律地做一些事情，据说可以增加对生活的掌控感，从而缓解焦虑。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;对时间最好的利用，就是做自己想做的事
+      
+    
+    </summary>
+    
+    
+      <category term="R" scheme="http://yoursite.com/tags/R/"/>
+    
+      <category term="每日一图" scheme="http://yoursite.com/tags/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%9B%BE/"/>
+    
+  </entry>
   
   <entry>
     <title>scATAC-seq和深度学习联合揭示2型糖尿病的调控特征</title>
@@ -583,40 +610,6 @@
 &lt;li&gt;peak calling&lt;/li&gt;
 &lt;li&gt;富集分析&lt;/li&gt;
 &lt;li&gt;转录因子足迹分析&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="文献" scheme="http://yoursite.com/categories/%E6%96%87%E7%8C%AE/"/>
-    
-      <category term="methods" scheme="http://yoursite.com/categories/%E6%96%87%E7%8C%AE/methods/"/>
-    
-    
-      <category term="ATACseq" scheme="http://yoursite.com/tags/ATACseq/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ATAC-pipe_ATAC-seq分析的工具包</title>
-    <link href="http://yoursite.com/2019/08/23/ATAC-pipe_ATAC-seq%E5%88%86%E6%9E%90%E7%9A%84%E5%B7%A5%E5%85%B7%E5%8C%85/"/>
-    <id>http://yoursite.com/2019/08/23/ATAC-pipe_ATAC-seq分析的工具包/</id>
-    <published>2019-08-23T05:01:08.000Z</published>
-    <updated>2019-08-24T12:30:01.871Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>日期：2019年1月6日——2019-Week1<br>分类：「工具」<br>题目：ATAC-pipe: general analysis of genome-wide chromatin accessibility<br>DOI: 10.1093/bib/bby056<br>杂志：Briefings in Bioinformatics<br>关键词： ATAC; chromatin accessibility; transcription factor; regulatory network</p></blockquote><h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><p>ATAC-pipe是中科大Kun Qu实验室开发的一个打包软件包，用于分析bulk ATAC-Seq。主要功能包括：</p><ul><li>鉴定显著差异的开放染色质区域</li><li>motif分析及相关的TFs对转录调控的影响</li><li>TF和motif的足迹分析以及核小体占位的可视化</li><li>基于相关性的细胞聚类分析</li><li>构建TF调控网络，评估TFs和基因间的相互作用</li></ul><a id="more"></a><p><strong>详细用法参考：</strong> <a href="https://github.com/QuKunLab/ATAC-pipe" target="_blank" rel="noopener">https://github.com/QuKunLab/ATAC-pipe</a><br>或者 manual for ATAC-pipe:<br><a href="https://github.com/QuKunLab/ATAC-pipe/blob/master/Manual_for_ATAC-pipe.pdf" target="_blank" rel="noopener">https://github.com/QuKunLab/ATAC-pipe/blob/master/Manual_for_ATAC-pipe.pdf</a><br><img src="https://upload-images.jianshu.io/upload_images/8242255-6a010cefce1de392.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p><h3 id="材料和方法"><a href="#材料和方法" class="headerlink" title="材料和方法"></a>材料和方法</h3><h4 id="1-流程和算法"><a href="#1-流程和算法" class="headerlink" title="1. 流程和算法"></a>1. 流程和算法</h4><p>ATAC-pipe是基于其他工具和软件包的，需要在Linux/MAC OS平台安装 requires Bowtie2, Picard, MACS2, HOMER, Python和R的环境，以及相关的参考基因组和DESeq R包。</p><ul><li>比对: Bowtie2</li><li>去重: Picard</li><li>peak calling: MACS2</li><li>count标准化和差异分析：DESeq</li><li>聚类和热图：Cluster 3.0 和 Treeview</li><li>TF motifs分析: Homer and msCentipede</li><li>序列迁移，TSS富集值和分布，V-plot, TF调控网络：他们自己实验室写的代码</li></ul><h4 id="2-与其他工具的比较"><a href="#2-与其他工具的比较" class="headerlink" title="2. 与其他工具的比较"></a>2. 与其他工具的比较</h4><p>他们的介绍是「ATAC-pipe功能多，其他工具可能只是包含QC，比对，peak calling等基本步骤，但是ATAC-pipe还包含样本聚类，motif 搜索，足迹验证、核小体占位分析和TF调控网络分析，而且更重要的是可以鉴定显著差异开放染色质区域和这些区域的TF motif富集, 另外所需时间与其他工具相比较少」。<br>（他们介绍的优点了解下即可，其实很多工具都可以实现相同的功能,其他工具的功能和原理也要了解一下）<br><img src="https://upload-images.jianshu.io/upload_images/8242255-00e3a65dc7a94075.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="ATAC-pipe与其他工具的比较"></p><h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p>看一下这个流程包可以给出哪些结果</p><h4 id="结果1：质控"><a href="#结果1：质控" class="headerlink" title="结果1：质控"></a>结果1：质控</h4><p><img src="https://upload-images.jianshu.io/upload_images/8242255-15f9acb35786f78c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="测序质量QC"><br><img src="https://upload-images.jianshu.io/upload_images/8242255-5a9da9e0aa35587e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="实验QC"></p><h4 id="结果2：相关性和差异peaks分析"><a href="#结果2：相关性和差异peaks分析" class="headerlink" title="结果2：相关性和差异peaks分析"></a>结果2：相关性和差异peaks分析</h4><p><img src="https://upload-images.jianshu.io/upload_images/8242255-3f34efca235a3415.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="相关性和差异peaks分析"></p><h4 id="结果3：TF-富集分析"><a href="#结果3：TF-富集分析" class="headerlink" title="结果3：TF 富集分析"></a>结果3：TF 富集分析</h4><p><img src="https://upload-images.jianshu.io/upload_images/8242255-f4447516f707f93d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="差异开放染色质区域和这些区域的motif富集分析"></p><h4 id="结果4：TF-motif足迹分析和核小体占位分析"><a href="#结果4：TF-motif足迹分析和核小体占位分析" class="headerlink" title="结果4：TF motif足迹分析和核小体占位分析"></a>结果4：TF motif足迹分析和核小体占位分析</h4><p><img src="https://upload-images.jianshu.io/upload_images/8242255-9a61f22dbaed9e14.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="TF motif足迹分析和核小体占位分析"></p><h4 id="结果5：TF驱动调控网络"><a href="#结果5：TF驱动调控网络" class="headerlink" title="结果5：TF驱动调控网络"></a>结果5：TF驱动调控网络</h4><h2 id><a href="#" class="headerlink" title></a><img src="https://upload-images.jianshu.io/upload_images/8242255-eeda0fad3ba7c092.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="TF驱动调控网络"></h2><h3 id="讨论"><a href="#讨论" class="headerlink" title="讨论"></a>讨论</h3><p>使用他人打包的工具包有人可能觉得省时方便，但是会有很多限制，不够灵活。而且他们这个工具包本身需要安装很多工具，最终是包装成python模块，使用时是需要有linux和python基础的。他们的分析结果有很多工具和方法可以实现，对于这篇文章也就是了解下他们进行ATAC-seq分析时使用的方法，同时了解下文章中做比较时提到其他工具。</p><p>如果想实现个性化和弹性化的分析，还是需要自己了解掌握每一步的分析流程，具体方法可以参考之前的帖子:</p><ul><li><a href="https://mp.weixin.qq.com/s/iVMY_0Su278OfWc2r2_brQ" target="_blank" rel="noopener">ATAC-Seq入门加高阶传送门，文末点击可进入交流群</a><br><a href="https://mp.weixin.qq.com/s/iVMY_0Su278OfWc2r2_brQ" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/iVMY_0Su278OfWc2r2_brQ</a></li><li><a href="https://mp.weixin.qq.com/s/7k2GEmPmnkVfmzegpxabQA" target="_blank" rel="noopener">第10篇：ATAC-Seq、ChIP-Seq、RNA-Seq整合分析（内附目录）</a><br><a href="https://mp.weixin.qq.com/s/7k2GEmPmnkVfmzegpxabQA" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/7k2GEmPmnkVfmzegpxabQA</a></li><li><a href="https://mp.weixin.qq.com/s/XQITfdnS6Zn6iTBtuladPw" target="_blank" rel="noopener">给学徒的ATAC-seq数据实战（附上收费视频）</a><br><a href="https://mp.weixin.qq.com/s/XQITfdnS6Zn6iTBtuladPw" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/XQITfdnS6Zn6iTBtuladPw</a></li></ul><hr><p>另外记得在去年苏州单细胞会议的海报展示，Kun Qu老师实验室展示了一个用于sc-ATAC分析的工具包APEC（不知道发表没）。<br><img src="https://upload-images.jianshu.io/upload_images/8242255-a706382e4acfb3e3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt><br>APEC的文章已在预印版上发出：<a href="https://www.biorxiv.org/content/early/2019/05/23/646331.full.pdf" target="_blank" rel="noopener">https://www.biorxiv.org/content/early/2019/05/23/646331.full.pdf</a> </p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;日期：2019年1月6日——2019-Week1&lt;br&gt;分类：「工具」&lt;br&gt;题目：ATAC-pipe: general analysis of genome-wide chromatin accessibility&lt;br&gt;DOI: 10.1093/bib/bby056&lt;br&gt;杂志：Briefings in Bioinformatics&lt;br&gt;关键词： ATAC; chromatin accessibility; transcription factor; regulatory network&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h3&gt;&lt;p&gt;ATAC-pipe是中科大Kun Qu实验室开发的一个打包软件包，用于分析bulk ATAC-Seq。主要功能包括：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;鉴定显著差异的开放染色质区域&lt;/li&gt;
-&lt;li&gt;motif分析及相关的TFs对转录调控的影响&lt;/li&gt;
-&lt;li&gt;TF和motif的足迹分析以及核小体占位的可视化&lt;/li&gt;
-&lt;li&gt;基于相关性的细胞聚类分析&lt;/li&gt;
-&lt;li&gt;构建TF调控网络，评估TFs和基因间的相互作用&lt;/li&gt;
 &lt;/ul&gt;
     
     </summary>

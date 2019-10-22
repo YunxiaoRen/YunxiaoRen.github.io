@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[千里之行始于足下_R Basics]]></title>
+    <url>%2F2019%2F10%2F22%2F%E5%8D%83%E9%87%8C%E4%B9%8B%E8%A1%8C%E5%A7%8B%E4%BA%8E%E8%B6%B3%E4%B8%8B-R-Basics%2F</url>
+    <content type="text"><![CDATA[坚持做一件事很难，总会被最初的意外和后来的惰性扰乱而半路放弃。今天看到几句话，感觉说到心窝里了: 规律地做一些事情，据说可以增加对生活的掌控感，从而缓解焦虑。 对时间最好的利用，就是做自己想做的事情，并且全身心的享受每一刻。 这里就立一个Flag：每日一图，每天至少专注的做一件自己喜欢做的想做的事情。 这里就以推荐三本学习R画图的免费好书推荐的第一本书起航吧：R G raphics Cookbook 这本书主要基于ggplot2的绘图语法，以及tidyverse的数据清理方法。书中使用的数据和例子整合在gcookbook 所以首先安装载入需要的R包123456789install.packages(c("ggplot2", "gcookbook", "MASS", "dplyr","tidyverse"))library(tidyverse)library(gcookbook)library(ggplot2)library(dplyr)# updateupdate.packages() base plot与ggplot2的简单实例对比Scatter plot 使用plot函数，仅需传递给plot两个变量：x, y 1plot(mtcars$wt, mtcars$mpg) 使用ggplot2, 首先创建一个plot 对象，然后加一个点的图层。ggplot2通常以数据框为画图对象（mtcars)，然后指明哪列是x, 哪列是y。 123library(ggplot2)ggplot(mtcars, aes(x = wt, y = mpg)) + geom_point() Line Graph Base plot新增line时，第一次以plot函数，第二次lines函数 123456789# 左图plot(pressure$temperature, pressure$pressure, type = "l")# 右图plot(pressure$temperature, pressure$pressure, type = "l")points(pressure$temperature, pressure$pressure)lines(pressure$temperature, pressure$pressure/2, col = "red")points(pressure$temperature, pressure$pressure/2, col = "red") ggplot2对图像的图形的选择需加上geom_line()，或者geom_point() 12345678# 左图library(ggplot2)ggplot(pressure, aes(x = temperature, y = pressure)) + geom_line()# 右图，加pointsggplot(pressure, aes(x = temperature, y = pressure)) + geom_line() + geom_point()]]></content>
+      <tags>
+        <tag>R</tag>
+        <tag>每日一图</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[scATAC-seq和深度学习联合揭示2型糖尿病的调控特征]]></title>
     <url>%2F2019%2F09%2F28%2FscATAC-seq%E5%92%8C%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E8%81%94%E5%90%88%E6%8F%AD%E7%A4%BA2%E5%9E%8B%E7%B3%96%E5%B0%BF%E7%97%85%E7%9A%84%E8%B0%83%E6%8E%A7%E7%89%B9%E5%BE%81%2F</url>
     <content type="text"><![CDATA[一句话评价 scATAC-seq和深度学习联合揭示2型糖尿病的调控特征 文章信息 题目：Single cell ATAC-seq in human pancreatic islets and deep learning upscaling of rare cells reveals cell-specific type 2 diabetes regulatory signature 杂志：bioRxiv 时间：Sep. 7, 2019 链接: DOI: http://dx.doi.org/10.1101/749283 figure 文章介绍： II型糖尿病(T2D)是一种以胰岛功能障碍、胰岛素抵抗和血糖紊乱为特征的复杂疾病。全基因组关联研究（GWAS）已经鉴定出超过400个编码遗传倾向的独立信号。超过90%相关的单核苷酸多态性（SNP）定位于非编码区，并富集在染色质定义的胰岛增强子元件中。另外胰岛包含不同的细胞类型，每种细胞类型都有可能参与T2D的转录调控，bulk-seq的方法会掩盖了细胞异质性的特点。所以这里文章采取sci-ATAC-seq (single-cell-combinatorial-indexing ATAC-seq) 的方法，观察到α、β和δ细胞群并识别T2D的细胞特异性的调控信号；另外，他们发现T2D GWAS SNPs显著富集在β细胞，和α或δ细胞与其他细胞类型跨细胞型差异的开放染色质。此外，他们基于U-Net架构还开发了一个深度学习模型用于准确地预测在稀有细胞群体中的开放染色质峰值。 深度学习的代码： https://github.com/ParkerLab/PillowNet. 其他代码在：https://github.com/ParkerLab/islet_sci-ATAC-seq_2019 碎碎念 这篇文章结合scATAC-seq和深度学习的方法探究疾病的转录调控特征的思路和以及文章用到的方法值得学习。 每日文献摘要：第10篇 2019年09月28日 周六 持久确实是一件不易的事！]]></content>
