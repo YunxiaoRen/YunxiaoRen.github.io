@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-10-23T12:40:13.095Z</updated>
+  <updated>2019-10-24T12:19:14.442Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>基础常见的条形图</title>
+    <link href="http://yoursite.com/2019/10/24/%E5%9F%BA%E7%A1%80%E5%B8%B8%E8%A7%81%E7%9A%84%E6%9D%A1%E5%BD%A2%E5%9B%BE/"/>
+    <id>http://yoursite.com/2019/10/24/基础常见的条形图/</id>
+    <published>2019-10-24T05:04:36.000Z</published>
+    <updated>2019-10-24T12:19:14.442Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天已进入24节气中的霜降，《二十四节气解》中说：“气肃而霜降，阴始凝也。”可见“霜降”表示天气逐渐变冷，开始降霜。北京的天气也格外应景，从早上就开始淅淅沥沥下雨，呆在屋里，甚至窝在被窝里，都感觉凉凉的。时间过得真快，刚毕业的时候还是三伏天的夏季，转眼又在北京迎来了冬季～</p><p><img src="/2019/10/24/基础常见的条形图/abstract2.jpg" style="zoom:40%"></p><a id="more"></a><p>条形图是常见的一种数据可视化方式，常用于表示类变量（x)对应的数值（y）。这里以ggplot2示例展示如何设置绘制简单的bar plot，如何设置其他图形参数，以及进阶的bar plot示例展示。</p><p><strong>ggplot2中绘制条形图的函数有<code>geom_col()</code>和<code>geom_bar()</code></strong>。</p><h3 id="条形图的填充色，边框色，背景色和背景框线的设置"><a href="#条形图的填充色，边框色，背景色和背景框线的设置" class="headerlink" title="条形图的填充色，边框色，背景色和背景框线的设置"></a>条形图的填充色，边框色，背景色和背景框线的设置</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## 简单的条形图 (左图)</span></span><br><span class="line">ggplot(pg_mean, aes(x = group, y = weight)) +</span><br><span class="line">  geom_col()</span><br><span class="line"></span><br><span class="line"><span class="comment">## 条形的填充色，边框，背景色和框线的设置 （右图）</span></span><br><span class="line">ggplot(pg_mean, aes(x = group, y = weight)) +</span><br><span class="line">  geom_col(fill=<span class="string">"lightblue"</span>, colour = <span class="string">"black"</span>) + <span class="comment">#设置条形的填充颜色fill, 边框颜色colour</span></span><br><span class="line">  theme_bw() +  <span class="comment"># 去掉背景颜色                          </span></span><br><span class="line">  theme( panel.grid.major.x = element_blank(),  <span class="comment"># 去掉背景框线</span></span><br><span class="line">         panel.grid.major.y = element_blank()</span><br><span class="line">         )</span><br></pre></td></tr></table></figure><p><img src="/2019/10/24/基础常见的条形图/fig1.png" alt></p><h3 id="填充色设置和变量排序"><a href="#填充色设置和变量排序" class="headerlink" title="填充色设置和变量排序"></a>填充色设置和变量排序</h3><p>非默认的填充色设置可以借助<code>scale_fill_brewer()</code> 或 <code>scale_fill_manual()</code>， 对变量的排序:<code>reorder()</code>函数，这里是基于<code>Change</code>的变化对<code>Abb</code>排序。</p><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## 输入数据处理</span></span><br><span class="line"><span class="keyword">library</span>(gcookbook) <span class="comment"># Load gcookbook for the uspopchange data set</span></span><br><span class="line"><span class="keyword">library</span>(dplyr)</span><br><span class="line">upc &lt;- uspopchange %&gt;%</span><br><span class="line">  arrange(desc(Change)) %&gt;%</span><br><span class="line">  slice(<span class="number">1</span>:<span class="number">10</span>)</span><br><span class="line"><span class="comment">## fill()函数以Region 因子变量填充bar的颜色</span></span><br><span class="line">ggplot(upc, aes(x = Abb, y = Change, fill = Region)) +</span><br><span class="line">  geom_col()</span><br><span class="line"></span><br><span class="line"><span class="comment">## scale_fill_brewer() or scale_fill_manual()选择其他颜色，reorder对Abb</span></span><br><span class="line">ggplot(upc, aes(x = reorder(Abb, Change), y = Change, fill = Region)) +</span><br><span class="line">  geom_col(colour = <span class="string">"black"</span>) +</span><br><span class="line">  scale_fill_manual(values = c(<span class="string">"#669933"</span>, <span class="string">"#FFCC66"</span>)) +</span><br><span class="line">  xlab(<span class="string">"State"</span>)</span><br></pre></td></tr></table></figure><p><img src="/2019/10/24/基础常见的条形图/fig2.png" alt></p><h3 id="不同颜色表示正负数值的变化"><a href="#不同颜色表示正负数值的变化" class="headerlink" title="不同颜色表示正负数值的变化"></a>不同颜色表示正负数值的变化</h3>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天已进入24节气中的霜降，《二十四节气解》中说：“气肃而霜降，阴始凝也。”可见“霜降”表示天气逐渐变冷，开始降霜。北京的天气也格外应景，从早上就开始淅淅沥沥下雨，呆在屋里，甚至窝在被窝里，都感觉凉凉的。时间过得真快，刚毕业的时候还是三伏天的夏季，转眼又在北京迎来了冬季～&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2019/10/24/基础常见的条形图/abstract2.jpg&quot; style=&quot;zoom:40%&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Data Sciences" scheme="http://yoursite.com/categories/Data-Sciences/"/>
+    
+    
+      <category term="R" scheme="http://yoursite.com/tags/R/"/>
+    
+      <category term="每日一图" scheme="http://yoursite.com/tags/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%9B%BE/"/>
+    
+  </entry>
+  
+  <entry>
     <title>base plot与ggplot2语法比较</title>
     <link href="http://yoursite.com/2019/10/23/base-plot%E4%B8%8Eggplot2%E8%AF%AD%E6%B3%95%E6%AF%94%E8%BE%83/"/>
     <id>http://yoursite.com/2019/10/23/base-plot与ggplot2语法比较/</id>
     <published>2019-10-23T10:50:51.000Z</published>
-    <updated>2019-10-23T12:40:13.095Z</updated>
+    <updated>2019-10-24T12:19:18.202Z</updated>
     
     <content type="html"><![CDATA[<p>通过base plot和ggplot2的简单实例，直接感受下base plot和ggplot2的语法差别。</p><p><img src="/2019/10/23/base-plot与ggplot2语法比较/abstract.png" style="zoom:30%"></p><a id="more"></a><h3 id="条形图"><a href="#条形图" class="headerlink" title="条形图"></a>条形图</h3><ul><li><strong>基本绘图</strong></li></ul><p><strong><code>barplot()</code></strong>是基本绘图中绘制条形图的函数，需要一个向量参数指定bar的高度（必须），每个bar的label是可选参数。</p><p><img src style="zoom:30%"></p><p><img src style="zoom:30%"></p><p><img src="/2019/10/23/base-plot与ggplot2语法比较/fig1.png" style="zoom:50%"></p><ul><li><strong>ggplot2</strong></li></ul><p>ggplot2中绘制bar plot使用<strong><code>geom_col</code>或<code>geom_bar</code></strong>, 注意这里使用factor将x变量转换为离散变量。</p><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(ggplot2)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Bar graph of values. This uses the BOD data frame, with the</span></span><br><span class="line"><span class="comment"># "Time" column for x values and the "demand" column for y values.</span></span><br><span class="line">ggplot(BOD, aes(x = Time, y = demand)) +</span><br><span class="line">  geom_col()</span><br><span class="line"></span><br><span class="line"><span class="comment"># Convert the x variable to a factor, so that it is treated as discrete</span></span><br><span class="line">ggplot(BOD, aes(x = factor(Time), y = demand)) +</span><br><span class="line">  geom_col()</span><br></pre></td></tr></table></figure><p><img src="/2019/10/23/base-plot与ggplot2语法比较/fig2.png" style="zoom:50%"></p><p><img src="/2019/10/23/base-plot与ggplot2语法比较/fig3.png" style="zoom:50%"></p><h3 id="直方图"><a href="#直方图" class="headerlink" title="直方图"></a>直方图</h3><ul><li><strong>基本绘图</strong></li></ul><p><strong><code>hist</code></strong>是基本绘图中直方图的函数。</p><p><img src="/2019/10/23/base-plot与ggplot2语法比较/fig4.png" style="zoom:50%"></p><ul><li><strong>ggplot2</strong></li></ul><p>ggplot2中绘制直方图使用<strong><code>geom_histogram()</code></strong></p><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(ggplot2)</span><br><span class="line">ggplot(mtcars, aes(x = mpg)) +</span><br><span class="line">  geom_histogram()</span><br><span class="line"><span class="comment">#&gt; `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># With wider bins</span></span><br><span class="line">ggplot(mtcars, aes(x = mpg)) +</span><br><span class="line">  geom_histogram(binwidth = <span class="number">4</span>)</span><br></pre></td></tr></table></figure><p><img src="/2019/10/23/base-plot与ggplot2语法比较/fig5.png" style="zoom:50%"></p><h3 id="箱线图"><a href="#箱线图" class="headerlink" title="箱线图"></a>箱线图</h3><ul><li><strong>基本绘图</strong></li></ul><p>箱线图可以直接用<strong><code>plot()</code></strong>函数（如果x变量是factor，会自动产生bo x plot)， 当然也可以用<strong><code>boxplot()</code></strong>函数。如果想在X轴展示两个变量，也是可以的。</p><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">plot(ToothGrowth$supp, ToothGrowth$len)</span><br><span class="line"><span class="comment"># Formula syntax</span></span><br><span class="line">boxplot(len ~ supp, data = ToothGrowth)</span><br></pre></td></tr></table></figure><p><img src="/2019/10/23/base-plot与ggplot2语法比较/fig6.png" style="zoom:30%"></p><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Put interaction of two variables on x-axis</span></span><br><span class="line">boxplot(len ~ supp + dose, data = ToothGrowth)</span><br></pre></td></tr></table></figure><p><img src="/2019/10/23/base-plot与ggplot2语法比较/fig7.png" style="zoom:30%"></p><ul><li><strong>ggplot2</strong></li></ul><p>ggplot2使用<strong><code>geom_boxplot()</code></strong> 函数，x轴展示两个变量时可以用<strong><code>interaction()</code></strong>函数</p><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(ggplot2)</span><br><span class="line">ggplot(ToothGrowth, aes(x = supp, y = len)) +</span><br><span class="line">  geom_boxplot()</span><br></pre></td></tr></table></figure><p><img src="/2019/10/23/base-plot与ggplot2语法比较/fig8.png" style="zoom:50%"></p><p><strong>x轴展示两个变量</strong></p><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ggplot(ToothGrowth, aes(x = interaction(supp, dose), y = len)) +</span><br><span class="line">  geom_boxplot()</span><br></pre></td></tr></table></figure><p><img src="/2019/10/23/base-plot与ggplot2语法比较/fig9.png" style="zoom:50%"></p><h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><ul><li><p><strong>条形图、直方图、箱线图的区别</strong></p><p>条形图x和y变量是一对一的关系，绘图时必须传递y变量。直方图是频率分布图，箱线图x变量对应的y变量有多个值。</p></li><li><p>Base plot和ggpplot2的绘图特征</p><p>Base plot直接指定变量参数即可，ggplot2的语法通常包括3个部分，首先是数据框，然后以aes指定参数变量，再加上图形的类型，如geom_boxplot等</p></li><li><p>箱线图展示一对变量的特征</p></li></ul><p>如果用base plot实现，可以直接在x参数变量后加上另一个参数，如果是ggplot2，借助interaction()将一对变量添加。</p><p>个人感觉这里base plot画的图更简单好看。</p>]]></content>
     
@@ -31,6 +56,8 @@
 &lt;p&gt;&lt;img src=&quot;/2019/10/23/base-plot与ggplot2语法比较/abstract.png&quot; style=&quot;zoom:30%&quot;&gt;&lt;/p&gt;
     
     </summary>
+    
+      <category term="Data Sciences" scheme="http://yoursite.com/categories/Data-Sciences/"/>
     
     
       <category term="R" scheme="http://yoursite.com/tags/R/"/>
@@ -44,7 +71,7 @@
     <link href="http://yoursite.com/2019/10/22/%E5%8D%83%E9%87%8C%E4%B9%8B%E8%A1%8C%E5%A7%8B%E4%BA%8E%E8%B6%B3%E4%B8%8B-R-Basics/"/>
     <id>http://yoursite.com/2019/10/22/千里之行始于足下-R-Basics/</id>
     <published>2019-10-22T02:44:50.000Z</published>
-    <updated>2019-10-23T10:48:12.362Z</updated>
+    <updated>2019-10-24T12:16:05.310Z</updated>
     
     <content type="html"><![CDATA[<p>坚持做一件事很难，总会被最初的意外和后来的惰性扰乱而半路放弃。今天看到几句话，感觉说到心窝里了:</p><p><strong>规律地做一些事情，据说可以增加对生活的掌控感，从而缓解焦虑。</strong></p><p><strong>对时间最好的利用，就是做自己想做的事情，并且全身心的享受每一刻。</strong></p><p><img src="/2019/10/22/千里之行始于足下-R-Basics/abstract.jpg" style="zoom:30%"> </p><a id="more"></a><p>这里就立一个Flag：<strong>每日一图</strong>，每天至少专注的做一件自己喜欢做的想做的事情。</p><p>这里就以<a href="https://mp.weixin.qq.com/s/CX_fwbuyPTelOgaj7852qg" target="_blank" rel="noopener">推荐三本学习R画图的免费好书</a>推荐的第一本书起航吧：<strong>R G raphics Cookbook</strong></p><p>这本书主要基于ggplot2的绘图语法，以及tidyverse的数据清理方法。书中使用的数据和例子整合在<strong>gcookbook</strong></p><h4 id="所以首先安装载入需要的R包"><a href="#所以首先安装载入需要的R包" class="headerlink" title="所以首先安装载入需要的R包"></a>所以首先安装载入需要的R包</h4><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">install.packages(c(<span class="string">"ggplot2"</span>, <span class="string">"gcookbook"</span>, <span class="string">"MASS"</span>, <span class="string">"dplyr"</span>,<span class="string">"tidyverse"</span>))</span><br><span class="line"></span><br><span class="line"><span class="keyword">library</span>(tidyverse)</span><br><span class="line"><span class="keyword">library</span>(gcookbook)</span><br><span class="line"><span class="keyword">library</span>(ggplot2)</span><br><span class="line"><span class="keyword">library</span>(dplyr)</span><br><span class="line"></span><br><span class="line"><span class="comment"># update</span></span><br><span class="line">update.packages()</span><br></pre></td></tr></table></figure><h4 id="base-plot与ggplot2的简单实例对比"><a href="#base-plot与ggplot2的简单实例对比" class="headerlink" title="base plot与ggplot2的简单实例对比"></a>base plot与ggplot2的简单实例对比</h4><p><strong>Scatter plot</strong> </p><p>使用plot函数，仅需传递给plot两个变量：<strong>x, y</strong></p><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plot(mtcars$wt, mtcars$mpg)</span><br></pre></td></tr></table></figure><p>使用ggplot2, 首先创建一个plot 对象，然后加一个点的图层。ggplot2通常以数据框为画图对象（<code>mtcars</code>)，然后指明哪列是<code>x</code>, 哪列是<code>y</code>。</p><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(ggplot2)</span><br><span class="line">ggplot(mtcars, aes(x = wt, y = mpg)) +</span><br><span class="line">  geom_point()</span><br></pre></td></tr></table></figure><p><img src="/2019/10/22/千里之行始于足下-R-Basics/fig1.png" alt></p><p><strong>Line Graph</strong></p><p>Base plot新增line时，第一次以plot函数，第二次lines函数</p><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 左图</span></span><br><span class="line">plot(pressure$temperature, pressure$pressure, type = <span class="string">"l"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 右图</span></span><br><span class="line">plot(pressure$temperature, pressure$pressure, type = <span class="string">"l"</span>)</span><br><span class="line">points(pressure$temperature, pressure$pressure)</span><br><span class="line"></span><br><span class="line">lines(pressure$temperature, pressure$pressure/<span class="number">2</span>, col = <span class="string">"red"</span>)</span><br><span class="line">points(pressure$temperature, pressure$pressure/<span class="number">2</span>, col = <span class="string">"red"</span>)</span><br></pre></td></tr></table></figure><p><img src="/2019/10/22/千里之行始于足下-R-Basics/fig2.png" alt></p><p>ggplot2对图像的图形的选择需加上geom_line()，或者geom_point()</p><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 左图</span></span><br><span class="line"><span class="keyword">library</span>(ggplot2)</span><br><span class="line">ggplot(pressure, aes(x = temperature, y = pressure)) +</span><br><span class="line">  geom_line()</span><br><span class="line"><span class="comment"># 右图，加points</span></span><br><span class="line">ggplot(pressure, aes(x = temperature, y = pressure)) +</span><br><span class="line">  geom_line() +</span><br><span class="line">  geom_point()</span><br></pre></td></tr></table></figure><p><img src="/2019/10/22/千里之行始于足下-R-Basics/fig3.png" alt></p>]]></content>
     
@@ -56,6 +83,8 @@
 &lt;p&gt;&lt;img src=&quot;/2019/10/22/千里之行始于足下-R-Basics/abstract.jpg&quot; style=&quot;zoom:30%&quot;&gt; &lt;/p&gt;
     
     </summary>
+    
+      <category term="Data Sciences" scheme="http://yoursite.com/categories/Data-Sciences/"/>
     
     
       <category term="R" scheme="http://yoursite.com/tags/R/"/>
@@ -570,44 +599,6 @@
     
     
       <category term="ATACseq" scheme="http://yoursite.com/tags/ATACseq/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>scATAC-seq分析工具</title>
-    <link href="http://yoursite.com/2019/08/23/scATAC-seq%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/"/>
-    <id>http://yoursite.com/2019/08/23/scATAC-seq分析工具/</id>
-    <published>2019-08-23T05:07:08.000Z</published>
-    <updated>2019-08-23T05:25:43.934Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="题目：Destin-toolkit-for-single-cell-analysis-of-chromatin-accessibility"><a href="#题目：Destin-toolkit-for-single-cell-analysis-of-chromatin-accessibility" class="headerlink" title="题目：Destin: toolkit for single-cell analysis of chromatin accessibility"></a>题目：Destin: toolkit for single-cell analysis of chromatin accessibility</h3><blockquote><p>DOI: <a href="https://doi.org/10.1093/bioinformatics/btz141" target="_blank" rel="noopener">https://doi.org/10.1093/bioinformatics/btz141</a><br>杂志/日期： Bioinformatics, 01 March 2019<br>关键词：  scATAC-seq，GWAS<br>分类：「工具」<br>日期：2019年2月10日——2019-Week7</p></blockquote><h3 id="主要内容："><a href="#主要内容：" class="headerlink" title="主要内容："></a>主要内容：</h3><p><strong>「Destin」</strong>用于scATAC-seq分析的一个R工具包，其中的一个亮点是分析GWAS结果是否与特定细胞类型集群中染色质可及性的增加有关，这里他们采用的是最初用于scRNA -seq表达的两种方法:ECWE和MAGMA。除此之外还包括：</p><ul><li>从bam文件获取实验信息</li><li>peaks的注释区域</li><li>质控</li><li>确定分群数量</li><li>差异可及性染色质<br>（其中输入文件是peaks，cell的bam文件）</li></ul><a id="more"></a><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>「Destin」用于sc-ATAC分析的一个R工具包，包括分群，与gwas关联，差异peaks分析等。</p><h3 id="相关资料"><a href="#相关资料" class="headerlink" title="相关资料"></a>相关资料</h3><ul><li>github : <a href="https://github.com/urrutiag/destin" target="_blank" rel="noopener">https://github.com/urrutiag/destin</a></li></ul><hr><h3 id="题目：-A-rapid-and-robust-method-for-single-cell-chromatin-accessibility-profiling"><a href="#题目：-A-rapid-and-robust-method-for-single-cell-chromatin-accessibility-profiling" class="headerlink" title="题目： A rapid and robust method for single cell chromatin accessibility profiling"></a>题目： A rapid and robust method for single cell chromatin accessibility profiling</h3><blockquote><p>DOI: <a href="https://www.nature.com/articles/s41467-018-07771-0" target="_blank" rel="noopener">https://www.nature.com/articles/s41467-018-07771-0</a><br>杂志/日期： Nature Communications, 17 December 2018<br>关键词： scATAC-seq，<br>分类：「工具」<br>日期：2019年2月10日——2019-Week7</p></blockquote><h3 id="主要内容：-1"><a href="#主要内容：-1" class="headerlink" title="主要内容："></a>主要内容：</h3><p>plate-based的scATAC-seq方法，结合了前期bulk Tn5单核分选标签。</p><h3 id="相关资料："><a href="#相关资料：" class="headerlink" title="相关资料："></a>相关资料：</h3><p>代码：<a href="https://github.com/dbrg77/plate_scATAC-seq" target="_blank" rel="noopener">https://github.com/dbrg77/plate_scATAC-seq</a>.<br>数据：bulk ATAC 和scATAC-seq :<a href="http://genome-euro.ucsc.edu/cgi-bin/hgTracks?hgS_doOtherUser=submit&amp;hgS_otherUserName=dbrg77&amp;hgS_otherUserSessionName=mSpleen_scATAC_cluster" target="_blank" rel="noopener">http://genome-euro.ucsc.edu/cgi-bin/hgTracks?hgS_doOtherUser=submit&amp;hgS_otherUserName=dbrg77&amp;hgS_otherUserSessionName=mSpleen_scATAC_cluster</a>.</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;题目：Destin-toolkit-for-single-cell-analysis-of-chromatin-accessibility&quot;&gt;&lt;a href=&quot;#题目：Destin-toolkit-for-single-cell-analysis-of-chromatin-accessibility&quot; class=&quot;headerlink&quot; title=&quot;题目：Destin: toolkit for single-cell analysis of chromatin accessibility&quot;&gt;&lt;/a&gt;题目：Destin: toolkit for single-cell analysis of chromatin accessibility&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;DOI: &lt;a href=&quot;https://doi.org/10.1093/bioinformatics/btz141&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://doi.org/10.1093/bioinformatics/btz141&lt;/a&gt;&lt;br&gt;杂志/日期： Bioinformatics, 01 March 2019&lt;br&gt;关键词：  scATAC-seq，GWAS&lt;br&gt;分类：「工具」&lt;br&gt;日期：2019年2月10日——2019-Week7&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;主要内容：&quot;&gt;&lt;a href=&quot;#主要内容：&quot; class=&quot;headerlink&quot; title=&quot;主要内容：&quot;&gt;&lt;/a&gt;主要内容：&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;「Destin」&lt;/strong&gt;用于scATAC-seq分析的一个R工具包，其中的一个亮点是分析GWAS结果是否与特定细胞类型集群中染色质可及性的增加有关，这里他们采用的是最初用于scRNA -seq表达的两种方法:ECWE和MAGMA。除此之外还包括：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;从bam文件获取实验信息&lt;/li&gt;
-&lt;li&gt;peaks的注释区域&lt;/li&gt;
-&lt;li&gt;质控&lt;/li&gt;
-&lt;li&gt;确定分群数量&lt;/li&gt;
-&lt;li&gt;差异可及性染色质&lt;br&gt;（其中输入文件是peaks，cell的bam文件）&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="文献" scheme="http://yoursite.com/categories/%E6%96%87%E7%8C%AE/"/>
-    
-      <category term="methods" scheme="http://yoursite.com/categories/%E6%96%87%E7%8C%AE/methods/"/>
-    
-    
-      <category term="ATACseq" scheme="http://yoursite.com/tags/ATACseq/"/>
-    
-      <category term="scATACseq" scheme="http://yoursite.com/tags/scATACseq/"/>
-    
-      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
     
   </entry>
   
