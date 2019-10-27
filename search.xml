@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Smart-seq3问世]]></title>
+    <url>%2F2019%2F10%2F27%2FSmart-seq3%E9%97%AE%E4%B8%96%2F</url>
+    <content type="text"><![CDATA[单细胞技术发展的如火如荼，实验方法、算法、分析工具不断迭代更新和完善。瑞典Karolinska Institute 的Rickard Sandberg实验室14年发表了Smart-seq和Smart-seq2，是至今较为流行的单细胞实验方法之一，由于其具有全长转录本覆盖度的优点，由此可以用于研究可变剪接、变异、等位基因、转录本亚型等转录后调控。但是由于其通量低，价格较贵，限制了其广泛的推广应用。而10X Genomics的出现，由于通量高，价格低，迅速占领了单细胞技术的大部分市场。 Smart-seq3相比Smart-seq2具有什么改进呢？ 最显著的改进特点就是整合了5‘-UMI定量计数的策略，使通量大幅提高。同时还保留Smart-seq2的优点，就是全长转录本的覆盖度。因此，依然在等位基因和转录本亚型层次上具有巨大的应用。 一句话评价 Smart-seq3——等位基因和亚型分辨率的单细胞RNA 计数 文章信息 题目：Single-cell RNA counting at allele- and isoform-resolution using Smart-seq3 杂志：bioRxiv 时间：Oct. 25, 2019 链接: https://www.biorxiv.org/content/biorxiv/early/2019/10/25/817924.full.pdf figure 文章介绍： 瑞典Karolinska Institute 的Rickard Sandberg实验室于10月25日在bioRxiv上发表了Smart-seq3，在等位基因和转录本亚型的研究中具有独特的优点。为大家熟知的Smart-seq2也是由Rickard实验室开发，具有全长转录本的覆盖度的优点，可以进行等位基因表达谱分析等问题，但是由于通量低，价格昂贵，应用推广也受到一定的限制。Smart-seq3针对Smart-seq2的限制性特点做了改进，依然保留全长转录本覆盖度的优点，同时结合5‘ UMI（unique molecular identifier）的RNA计数策略，与Smart-seq2相比通量显著提高，可以达到每个细胞比Smart-seq2多检测出上千个基因。 另外与全长转录本测序相比，虽然长read测序技术可以直接定量等位基因和亚型的表达水平，但是测序深度阻碍了其大范围应用。而Smart-seq3不仅克服了Smart-seq2的缺点，也克服了长读长测序的缺点，采用灵敏的短读长测序、整合5‘UMI和全长转录本覆盖度的优点，可以在单细胞层面上检测等位基因和亚型的变化，通量显著提高，且价格合理（一个测序细胞文库成本约为0.5-1欧元），可以在普通的分子实验室实现该protocol (dx.doi.org/10.17504/protocols.io.7dnhi5e), 不需要特殊的设备。 期待其他实验室对该方法的尝试和验证，预测该方法在转录后调控研究中将有巨大潜在的应用。 每日文献摘要：第12篇 2019年10月27日 周日 捧一杯咖啡，听着咖啡屋淡淡的音乐，打开电脑，专注工作～时光静好]]></content>
+      <categories>
+        <category>transciptomics</category>
+      </categories>
+      <tags>
+        <tag>single cell</tag>
+        <tag>scRNA-seq</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[基因组结构变异]]></title>
     <url>%2F2019%2F10%2F26%2F%E5%9F%BA%E5%9B%A0%E7%BB%84%E7%BB%93%E6%9E%84%E5%8F%98%E5%BC%82%2F</url>
     <content type="text"><![CDATA[基因组变异这里重温下基因组变异的知识，尤其是结构变异的知识点： 单碱基变异，即单核苷酸多态性(SNP)，最常见也最简单的一种基因组变异形式； 很短的Insertion 和 Deletion，也常被我们合并起来称为Indel。主要指在基因组某个位置上发生较短长度的线性片段插入或者删除的现象。强调线性的原因是，这里的插入和删除是有前后顺序的与下述的结构性变异不同。Indel长度通常在50bp以下，更多时候甚至是不超过10bp，这个长度范围内的序列变化可以通过Smith-Waterman 的局部比对算法来准确获得，并且也能够在目前短读长的测序数据中较好地检测出来 基因组结构性变异**（Structure Variantions，简称SVs），这篇文章的重点，通常就是指基因组上大长度的序列变化和位置关系变化。类型很多，包括长度在50bp以上的长片段序列插入或者删除（Big Indel）、串联重复（Tandem repeate）、染色体倒位（Inversion）、染色体内部或染色体之间的序列易位（Translocation）、拷贝数变异（CNV）以及形式更为复杂的嵌合性变异。]]></content>
@@ -95,8 +107,8 @@
         <category>literature</category>
       </categories>
       <tags>
-        <tag>文献摘要</tag>
         <tag>single cell</tag>
+        <tag>文献摘要</tag>
       </tags>
   </entry>
   <entry>
@@ -153,10 +165,10 @@
         <category>literature</category>
       </categories>
       <tags>
+        <tag>single cell</tag>
         <tag>ATACseq</tag>
         <tag>scATACseq</tag>
         <tag>文献摘要</tag>
-        <tag>single cell</tag>
       </tags>
   </entry>
   <entry>
@@ -191,9 +203,9 @@
         <category>literature</category>
       </categories>
       <tags>
-        <tag>文献摘要</tag>
         <tag>single cell</tag>
         <tag>scRNA-seq</tag>
+        <tag>文献摘要</tag>
       </tags>
   </entry>
   <entry>
@@ -204,9 +216,9 @@
         <category>literature</category>
       </categories>
       <tags>
-        <tag>文献摘要</tag>
         <tag>single cell</tag>
         <tag>scRNA-seq</tag>
+        <tag>文献摘要</tag>
       </tags>
   </entry>
   <entry>
@@ -217,9 +229,9 @@
         <category>literature</category>
       </categories>
       <tags>
-        <tag>文献摘要</tag>
         <tag>single cell</tag>
         <tag>scRNA-seq</tag>
+        <tag>文献摘要</tag>
       </tags>
   </entry>
   <entry>
