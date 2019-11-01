@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[RNA速度-RNA velocity是什么]]></title>
+    <url>%2F2019%2F11%2F01%2FRNA%E9%80%9F%E5%BA%A6-RNA-velocity%E6%98%AF%E4%BB%80%E4%B9%88%2F</url>
+    <content type="text"><![CDATA[一句话评价 通过动态模型产生瞬间细胞状态的RNA速度 文章信息 题目：Generalizing RNA velocity to transient cell states through dynamical modeling 杂志：bioRxiv 时间：Oct. 29,2019 链接: http://dx.doi.org/10.1101/820936. figure 文章介绍： 主要理解RNA velocity的概念 可以应用于哪些方面 每日文献摘要：第14篇 2019年11月01日 周五]]></content>
+      <categories>
+        <category>literature</category>
+      </categories>
+      <tags>
+        <tag>single cell</tag>
+        <tag>文献摘要</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[人类红细胞生成过程中的转录组和表观图谱]]></title>
     <url>%2F2019%2F10%2F28%2F%E4%BA%BA%E7%B1%BB%E7%BA%A2%E7%BB%86%E8%83%9E%E7%94%9F%E6%88%90%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E8%BD%AC%E5%BD%95%E7%BB%84%E5%92%8C%E8%A1%A8%E8%A7%82%E5%9B%BE%E8%B0%B1%2F</url>
     <content type="text"><![CDATA[十月最后的一天，这一年还有两个月就又结束了。 对于小孩来说两三个月可能如两三年一样长，对于长大的人来说两三年就如两三天一样快。 一句话评价 ATAC-seq和RNA-seq联合分析策略 文章信息 题目：Transcriptional States and Chromatin Accessibility Underlying Human Erythropoiesis 杂志：Cell Report 时间：2019 June 11 链接: DOI: 10.1016/j.celrep.2019.05.046 figure 提供一张代表性figure，可以是一整张，也可以是某一部分 文章介绍： 碎碎念 虽然idea相似，但是这篇文章总体的逻辑更强，或者说写作的连贯性更强与自己。还有就是图做的也漂亮。 每日文献摘要：第13篇 2019年10月31日 周四]]></content>
@@ -87,8 +99,8 @@
         <category>literature</category>
       </categories>
       <tags>
-        <tag>scATACseq</tag>
         <tag>文献摘要</tag>
+        <tag>scATACseq</tag>
         <tag>deep learning</tag>
       </tags>
   </entry>
@@ -176,10 +188,10 @@
         <category>literature</category>
       </categories>
       <tags>
-        <tag>ATACseq</tag>
         <tag>single cell</tag>
-        <tag>scATACseq</tag>
         <tag>文献摘要</tag>
+        <tag>ATACseq</tag>
+        <tag>scATACseq</tag>
       </tags>
   </entry>
   <entry>
@@ -215,8 +227,8 @@
       </categories>
       <tags>
         <tag>single cell</tag>
-        <tag>scRNA-seq</tag>
         <tag>文献摘要</tag>
+        <tag>scRNA-seq</tag>
       </tags>
   </entry>
   <entry>
@@ -228,8 +240,8 @@
       </categories>
       <tags>
         <tag>single cell</tag>
-        <tag>scRNA-seq</tag>
         <tag>文献摘要</tag>
+        <tag>scRNA-seq</tag>
       </tags>
   </entry>
   <entry>
@@ -241,8 +253,8 @@
       </categories>
       <tags>
         <tag>single cell</tag>
-        <tag>scRNA-seq</tag>
         <tag>文献摘要</tag>
+        <tag>scRNA-seq</tag>
       </tags>
   </entry>
   <entry>
@@ -287,9 +299,9 @@
         <category>literature</category>
       </categories>
       <tags>
+        <tag>文献摘要</tag>
         <tag>ATACseq</tag>
         <tag>scATACseq</tag>
-        <tag>文献摘要</tag>
       </tags>
   </entry>
   <entry>
