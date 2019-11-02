@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-11-01T15:09:08.176Z</updated>
+  <updated>2019-11-02T04:21:44.129Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,21 +21,22 @@
     <link href="http://yoursite.com/2019/11/01/RNA%E9%80%9F%E5%BA%A6-RNA-velocity%E6%98%AF%E4%BB%80%E4%B9%88/"/>
     <id>http://yoursite.com/2019/11/01/RNA速度-RNA-velocity是什么/</id>
     <published>2019-11-01T14:59:23.000Z</published>
-    <updated>2019-11-01T15:09:08.176Z</updated>
+    <updated>2019-11-02T04:21:44.129Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>一句话评价</strong></p><p>通过动态模型产生瞬间细胞状态的RNA速度</p><p><strong>文章信息</strong></p><p>题目：Generalizing RNA velocity to transient cell states through dynamical modeling</p><p>杂志：bioRxiv</p><p>时间：Oct. 29,2019</p><p>链接: <a href="http://dx.doi.org/10.1101/820936" target="_blank" rel="noopener">http://dx.doi.org/10.1101/820936</a>.</p><p><strong>figure</strong></p><p><img src="/2019/11/01/RNA速度-RNA-velocity是什么/abstract.png" alt></p><a id="more"></a><p><strong>文章介绍：</strong></p><ul><li>主要理解RNA velocity的概念</li><li>可以应用于哪些方面</li></ul><blockquote><p>每日文献摘要：第14篇 2019年11月01日 周五</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<p><strong>一句话评价</strong></p><p>通过动态模型评估细胞瞬间状态的RNA速度</p><p><strong>文章信息</strong></p><p>题目：Generalizing RNA velocity to transient cell states through dynamical modeling</p><p>杂志：bioRxiv</p><p>时间：Oct. 29,2019</p><p>链接: <a href="http://dx.doi.org/10.1101/820936" target="_blank" rel="noopener">http://dx.doi.org/10.1101/820936</a>.</p><p><strong>figure</strong></p><p>下图是作者利用该方法对胰腺内分泌发育构建的动态图谱</p><p><img src="/2019/11/01/RNA速度-RNA-velocity是什么/abstract.png" style="zoom:67%;"></p><a id="more"></a><p><strong>文章介绍：</strong></p><p>这篇文章介绍了利用一个新的模型—<strong>动态模型</strong>对细胞瞬间态的<strong>RNA速度（RNA velocity）</strong>进行评估计算。关键词动态模型和RNA速度，这里对动态模型的算法和实现过程暂不详细解释，主要了解<strong>RNA速度</strong>的概念和应用以及这篇文章中开发的方法的优点。</p><ul><li><strong>RNA velocity的概念</strong></li></ul><p><strong>RNA velocity, 我直译为RNA速度</strong>，这一概念是18年由瑞典卡罗林斯卡医学院的Sten Linnarsson和 Peter V. Kharchenko两个实验室提出的，相关研究成果发表Nature(<em>2018, August, Nature</em>)。RNA丰度是单个细胞状态的一个有力指标。单细胞测序技术可以灵敏、准确地揭示RNA的丰度。然而，这种方法仅能捕获在某个时间点的静态快照，使得分析随着时间动态变化的现象面临挑战（如胚胎发生或组织再生）。这里他们提出的<strong>RNA速度（RNA velocity）—可以理解为通过对unspliced(nascent) 和spliced(mature) mRNA丰度的评估在时间维度上揭示转录本动态变化的一个指标。</strong></p><ul><li><strong>RNA velocity应用</strong></li></ul><p>RNA velocity是一个转录本动态变化的指标，能预测细胞未来的状态变化。可以用于细胞分化、谱系发育、肿瘤微环境中细胞成分的动态变化等研究。张泽民老师实验室刚发表的肝癌免疫图谱的文章中就有通过RNA velocity的分析揭示肿瘤微环境中巨噬细胞的迁移(<em>2019,October,Cell</em>) （张老师实验室用的是Scanpy方法分析的RNA velocity）。</p><ul><li><strong>scVelo</strong>—以动态模型对细胞瞬间态的<strong>RNA velocity</strong>进行评估计算的方法</li></ul><p>回到这篇文章，作者认为现有的计算RNA velocity的模型在一些情况下存在不足，他称这种模型为<strong>稳态模型(steady-state model)</strong>, 这种模型有个两个基本的假设：即（i）在基因水平上，所有具有转录诱导、抑制和稳态mRNA水平的完整剪接动力学被捕捉到；（ii）在细胞水平上，所有基因具有共同的剪接率。但是，当一个种群包含多个具有不同动力学的异质亚种群时，这些假设常常被违背。</p><p>所以，他们开发的seVelo，一个基于<strong>似然的动力学模型(likelihood-based dynamical model)</strong>，它解决了以上提出的全基因转录动力学的问题，从而将RNA速度估计推广到瞬态系统和具有非均匀亚种群动力学的系统。scVelo提供了两种扩展：一种是包含二阶矩的随机模型，另一种是捕获全剪接动力学的动力学模型。与scanpy也兼容。</p><p>网址：scVelo: <a href="https://scvelo.org" target="_blank" rel="noopener">https://scvelo.org</a></p><p><strong>碎碎念</strong></p><p>评估科学研究的重要性通常有3方面：新的概念、新的方法、新的发现。18年Nature的那篇文章是提出了新的概念，这篇文章是开发了新的方法，我们还可以应用新的概念和新的方法，为自己关注的领域带来新的发现。</p><blockquote><p><strong>相关文献：</strong></p><ul><li>2018, August, Nature, RNA velocity of single cells：DOI: 10.1038/s41586-018-0414-6</li><li>2019, October,Cell,Landscape and Dynamics of Single Immune Cells in Hepatocellular Carcinoma. <a href="https://doi.org/10.1016/j.cell.2019.10.003" target="_blank" rel="noopener">https://doi.org/10.1016/j.cell.2019.10.003</a>. </li></ul></blockquote><blockquote><p>每日文献摘要：第14篇 2019年11月01日 周五</p></blockquote>]]></content>
     
     <summary type="html">
     
       &lt;p&gt;&lt;strong&gt;一句话评价&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;通过动态模型产生瞬间细胞状态的RNA速度&lt;/p&gt;
+&lt;p&gt;通过动态模型评估细胞瞬间状态的RNA速度&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;文章信息&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;题目：Generalizing RNA velocity to transient cell states through dynamical modeling&lt;/p&gt;
 &lt;p&gt;杂志：bioRxiv&lt;/p&gt;
 &lt;p&gt;时间：Oct. 29,2019&lt;/p&gt;
 &lt;p&gt;链接: &lt;a href=&quot;http://dx.doi.org/10.1101/820936&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://dx.doi.org/10.1101/820936&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;figure&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2019/11/01/RNA速度-RNA-velocity是什么/abstract.png&quot; alt&gt;&lt;/p&gt;
+&lt;p&gt;下图是作者利用该方法对胰腺内分泌发育构建的动态图谱&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2019/11/01/RNA速度-RNA-velocity是什么/abstract.png&quot; style=&quot;zoom:67%;&quot;&gt;&lt;/p&gt;
     
     </summary>
     
