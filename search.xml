@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[英语学习的网站资源]]></title>
+    <url>%2F2019%2F11%2F02%2F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%9A%84%E7%BD%91%E7%AB%99%E8%B5%84%E6%BA%90%2F</url>
+    <content type="text"><![CDATA[The only safe thing is to take a chance. 唯一稳妥的事是去冒险试一试。 1. TED https://www.ted.com/ 关于不同话题的talks，一方面可以了解相关话题的观点，另一方面锻炼听力，学习其演讲式的表达。 2. 雅思口语预测 慎小嶷口语预测博客：blog.sina.com.cn/ieltsguru 实时更新口语题库，及时了解，可以准备相关的topics 3. 英语线上交流学习网站 http://www.topics-mag.com 4. podcast在google上 搜索 podcast English ,会有有很多的英语听力资源，如https://www.podcastsinenglish.com/ 5. 全面的常考口语话题 idebate.org/debatabase 这是一个相当酷的辩论网站，覆盖了几乎所有的常用口语讨论话题。在页面中选择Education,Culture,Enviroment &amp; Animals,Welfare等主题后，就可以在This house believes that的后面看到各种各样的辩论话题。 6. 练习发音的网站 www.bbc.co.uk/worldservice/learningenglish/grammar/pron www.howjsay.com www.inogolo.com]]></content>
+      <tags>
+        <tag>每日英语</tag>
+        <tag>学习资源</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[RNA速度-RNA velocity是什么]]></title>
     <url>%2F2019%2F11%2F01%2FRNA%E9%80%9F%E5%BA%A6-RNA-velocity%E6%98%AF%E4%BB%80%E4%B9%88%2F</url>
     <content type="text"><![CDATA[一句话评价 通过动态模型评估细胞瞬间状态的RNA速度 文章信息 题目：Generalizing RNA velocity to transient cell states through dynamical modeling 杂志：bioRxiv 时间：Oct. 29,2019 链接: http://dx.doi.org/10.1101/820936. figure 下图是作者利用该方法对胰腺内分泌发育构建的动态图谱 文章介绍： 这篇文章介绍了利用一个新的模型—动态模型对细胞瞬间态的RNA速度（RNA velocity）进行评估计算。关键词动态模型和RNA速度，这里对动态模型的算法和实现过程暂不详细解释，主要了解RNA速度的概念和应用以及这篇文章中开发的方法的优点。 RNA velocity的概念 RNA velocity, 我直译为RNA速度，这一概念是18年由瑞典卡罗林斯卡医学院的Sten Linnarsson和 Peter V. Kharchenko两个实验室提出的，相关研究成果发表Nature(2018, August, Nature)。RNA丰度是单个细胞状态的一个有力指标。单细胞测序技术可以灵敏、准确地揭示RNA的丰度。然而，这种方法仅能捕获在某个时间点的静态快照，使得分析随着时间动态变化的现象面临挑战（如胚胎发生或组织再生）。这里他们提出的RNA速度（RNA velocity）—可以理解为通过对unspliced(nascent) 和spliced(mature) mRNA丰度的评估在时间维度上揭示转录本动态变化的一个指标。 RNA velocity应用 RNA velocity是一个转录本动态变化的指标，能预测细胞未来的状态变化。可以用于细胞分化、谱系发育、肿瘤微环境中细胞成分的动态变化等研究。张泽民老师实验室刚发表的肝癌免疫图谱的文章中就有通过RNA velocity的分析揭示肿瘤微环境中巨噬细胞的迁移(2019,October,Cell) （张老师实验室用的是Scanpy方法分析的RNA velocity）。 scVelo—以动态模型对细胞瞬间态的RNA velocity进行评估计算的方法 回到这篇文章，作者认为现有的计算RNA velocity的模型在一些情况下存在不足，他称这种模型为稳态模型(steady-state model), 这种模型有个两个基本的假设：即（i）在基因水平上，所有具有转录诱导、抑制和稳态mRNA水平的完整剪接动力学被捕捉到；（ii）在细胞水平上，所有基因具有共同的剪接率。但是，当一个种群包含多个具有不同动力学的异质亚种群时，这些假设常常被违背。 所以，他们开发的seVelo，一个基于似然的动力学模型(likelihood-based dynamical model)，它解决了以上提出的全基因转录动力学的问题，从而将RNA速度估计推广到瞬态系统和具有非均匀亚种群动力学的系统。scVelo提供了两种扩展：一种是包含二阶矩的随机模型，另一种是捕获全剪接动力学的动力学模型。与scanpy也兼容。 网址：scVelo: https://scvelo.org 碎碎念 评估科学研究的重要性通常有3方面：新的概念、新的方法、新的发现。18年Nature的那篇文章是提出了新的概念，这篇文章是开发了新的方法，我们还可以应用新的概念和新的方法，为自己关注的领域带来新的发现。 相关文献： 2018, August, Nature, RNA velocity of single cells：DOI: 10.1038/s41586-018-0414-6 2019, October,Cell,Landscape and Dynamics of Single Immune Cells in Hepatocellular Carcinoma. https://doi.org/10.1016/j.cell.2019.10.003. 每日文献摘要：第14篇 2019年11月01日 周五]]></content>
@@ -188,9 +197,9 @@
         <category>literature</category>
       </categories>
       <tags>
+        <tag>ATACseq</tag>
         <tag>single cell</tag>
         <tag>文献摘要</tag>
-        <tag>ATACseq</tag>
         <tag>scATACseq</tag>
       </tags>
   </entry>
@@ -299,8 +308,8 @@
         <category>literature</category>
       </categories>
       <tags>
-        <tag>文献摘要</tag>
         <tag>ATACseq</tag>
+        <tag>文献摘要</tag>
         <tag>scATACseq</tag>
       </tags>
   </entry>
