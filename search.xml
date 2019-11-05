@@ -1,9 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[追踪非小细胞肺癌的进化]]></title>
+    <url>%2F2019%2F11%2F05%2F%E8%BF%BD%E8%B8%AA%E9%9D%9E%E5%B0%8F%E7%BB%86%E8%83%9E%E8%82%BA%E7%99%8C%E7%9A%84%E8%BF%9B%E5%8C%96%2F</url>
+    <content type="text"><![CDATA[小时候觉得癌症这个词离自己很远很远，知道它很可怕，但实际上并不知道它具体是什么，只天真的觉得它永远也不会出现在我的身边。 高三时大奶从被检出肝癌晚期到去世不到两周，她在去世的前两天都不是特别清楚自己的病情，直到去世的前一天病情的加重，她才明白。 从高三到硕士毕业，7年的时间，大姑和婶婶接连也因为癌症去世。而爷爷今天也被检出贲门癌。爷爷是一个闲不住的人，虽然80多岁了，种地比我们家都多，大概是从4月份的时候开始吃东西容易打嗝，以前他每次从地里干完活回家总要吃两个馒头，现在基本吃不了馒头，只能吃些面条和粥。家里人一直劝他去医院检查，他总是不愿意去，最近才被说服去医院检查，却没想道是癌症。 真的很害怕，以前觉得不会出现在身边的癌症，却不断地夺走亲人的生命。我虽然是研究生命科学的，经常关注癌症相关方面的研究，但是我还是不知道为什么现在的癌症越来越多，我经常怀疑我每天的研究有什么意义，在面对真正的癌症时有什么帮助，似乎大多时候我们依然无能为力！ 但是，没有这些基础研究的推动，临床上治疗又怎么能提升？ 一句话评价 用尽量简短的一句话说清文章亮点或者你的推荐理由。越短越好 文章信息 题目：Tracking the Evolution of Non–Small-Cell Lung Cancer 杂志：The new england journal of medicine 时间：June 1, 2017 链接: https://www.nejm.org/doi/full/10.1056/NEJMoa1616288 figure 文章介绍： BACKGROUND Among patients with non–small-cell lung cancer (NSCLC), data on intratumor heterogeneity and cancer genome evolution have been limited to small retrospective cohorts. We wanted to prospectively investigate intratumor heterogeneity in relation to clinical outcome and to determine the clonal nature of driver events and evolutionary processes in early-stage NSCLC. METHODS In this prospective cohort study, we performed multiregion whole-exome sequencing on 100 early-stage NSCLC tumors that had been resected before systemic therapy. We sequenced and analyzed 327 tumor regions to define evolutionary histories, obtain a census of clonal and subclonal events, and assess the relationship between intratumor heterogeneity and recurrence-free survival. RESULTS We observed widespread intratumor heterogeneity for both somatic copy-number altera- tions and mutations. Driver mutations in EGFR, MET, BRAF, and TP53 were almost always clonal. However, heterogeneous driver alterations that occurred later in evolution were found in more than 75% of the tumors and were common in PIK3CA and NF1 and in genes that are involved in chromatin modification and DNA damage response and repair. Genome doubling and ongoing dynamic chromosomal instability were associated with intratumor heterogeneity and resulted in parallel evolution of driver somatic copy-number alterations, including amplifications in CDK4, FOXA1, and BCL11A. Elevated copy-number heterogeneity was associated with an increased risk of recurrence or death (hazard ratio, 4.9; P=4.4×10−4), which remained significant in multivariate analysis. CONCLUSIONS Intratumor heterogeneity mediated through chromosome instability was associated with an increased risk of recurrence or death, a finding that supports the potential value of chromosome instability as a prognostic predictor. (Funded by Cancer Research UK and others; TRACERx ClinicalTrials.gov number, NCT01888601.) 每日文献摘要：第17篇 2019年11月05日 周二 今天没时间看了，改天再仔细看]]></content>
+      <categories>
+        <category>literature</category>
+      </categories>
+      <tags>
+        <tag>文献摘要</tag>
+        <tag>tumor evolution</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[抗微生物耐药性(Anti-microbial Resistance,AMR)]]></title>
     <url>%2F2019%2F11%2F05%2F%E6%8A%97%E5%BE%AE%E7%94%9F%E7%89%A9%E8%80%90%E8%8D%AF%E6%80%A7-Anti-microbial-Resistance-AMR%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[一句话评价 一篇研究抗微生物药物耐药性的测序方法和资源的超全综述 文章信息 题目：Sequencing-based methods and resources to study antimicrobial resistance 杂志：Nature Review Genetics 时间：18 March 2019 链接: https://doi.org/10.1038/s41576-019-0108-4 figure 文章介绍： 抗微生物药物耐药性(antimicrobial resistance)指微生物（如细菌、病毒和某些寄生虫）阻止抗微生物药物（如抗生素、抗病毒药物和抗疟药物）对其产生作用的能力，致使标准治疗方法失去效力，感染持续存在并可能传播给他人。 参考：https://www.who.int/antimicrobial-resistance/zh/ 日常生活中我们可能大多听说过抗生素耐药性，由于抗生素的过度使用或其他原因，导致细菌对用以治疗细菌感染（如尿道感染、肺炎、血流感染）的抗生素发生反应并改变，使治疗失去效果。 抗微生物药物耐药性是一个含义更为广泛的术语，包括对治疗由寄生虫（如疟疾或蠕虫）、病毒（如艾滋病毒）及真菌（如念珠菌）等其它微生物引起的感染的药物耐药。 抗微生物耐药性已经成为影响各个国家生命健康的重要隐患之一。2019年4月29日，联合国、国际机构和有关专家发布了联合行动，防止可能出现的灾难性耐药危机。其中报告中警告说，如果不采取行动，到2050年，耐药性疾病每年可能导致1000万人死亡，对经济造成的灾难性损失将堪比2008-2009年全球金融危机。到2030年，抗微生物药物耐药性问题可能会使多达2400万人陷入极端贫困。 这篇综述发表于2019年3月的Nature Review Genetics，文中对抗微生物耐药性的监测和鉴定方法做了详尽的概括，包括传统的基于培养的易感性监测、基于测序的监测、以及目前具有前景的深度学习的方法。对基于测序的方法还对相关的工具和数据库也做了详尽的总结。最后对每种方法的优缺点做了讨论，并对未来发展方向做了展望。 碎碎念 做相关研究的，这篇综述绝对值得细读！不做相关研究的也可以根据这篇综述简单了解该领域。 每日文献摘要：第16篇 2019年11月04日 周五]]></content>
+      <categories>
+        <category>literature</category>
+      </categories>
+      <tags>
+        <tag>AMR</tag>
+        <tag>每日摘要</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[利用深度学习从宏基因组数据中预测抗生素抗性基因——DeepARG]]></title>
