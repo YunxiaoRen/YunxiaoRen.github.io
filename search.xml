@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[抗微生物耐药性(Anti-microbial Resistance,AMR)]]></title>
+    <url>%2F2019%2F11%2F05%2F%E6%8A%97%E5%BE%AE%E7%94%9F%E7%89%A9%E8%80%90%E8%8D%AF%E6%80%A7-Anti-microbial-Resistance-AMR%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[利用深度学习从宏基因组数据中预测抗生素抗性基因——DeepARG]]></title>
     <url>%2F2019%2F11%2F03%2F%E5%88%A9%E7%94%A8%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%BB%8E%E5%AE%8F%E5%9F%BA%E5%9B%A0%E7%BB%84%E6%95%B0%E6%8D%AE%E4%B8%AD%E9%A2%84%E6%B5%8B%E6%8A%97%E7%94%9F%E7%B4%A0%E6%8A%97%E6%80%A7%E5%9F%BA%E5%9B%A0%E2%80%94%E2%80%94DeepARG%2F</url>
     <content type="text"><![CDATA[一句话评价 利用深度学习从宏基因组数据中预测抗生素抗性基因 文章信息 题目：DeepARG: a deep learning approach for predicting antibiotic resistance genes from metagenomic data 杂志：Microbiome 时间：2018 链接: DOI： 10.1186/s40168-018-0401-z figure 文章介绍： 随着抗生素耐药率的不断上升，人类面临着需要扩大和全面的全球监测，尤其需要的是改进监测环境介质（如废水、农业废弃物、食品和水）的方法，以确定新的抗生素抗性基因（antibiotic resistance genes (ARGs）的潜在来源、基因交换的热点以及ARGs的传播和人类接触的途径。二代测序现在能够直接访问和剖析总宏基因组DNA，其中ARGs通常基于对现有数据库的序列搜索的“best hits”来识别或预测。但是，这种方法产生了很高的假阴性率。为了解决这些限制，作者在这里提出一种深度学习方法，使用所有已知的ARGs类别创建的不同矩阵。分别针对短读长序列和全基因长度序列构建了两种深度学习模型：DeepARG-SS 和DeepARG-LS。 对30个抗生素耐药类别的深度学习模型的评价表明，DeepARG模型可以同时预测高精度的ARGs（&gt;0.97）和召回率（&gt;0.90）。与典型的best hits方法相比，该模型显示出一个优势，产生的假阴性率始终较低，因此整体召回率较高（&gt;0.9）。随着越来越多的数据可用于表示ARGs类别，由于底层神经网络的性质，DeepARG模型的性能有望进一步提高。他们最新开发的ARG数据库DeepARG-DB包含了高度可信的预测的ARGs和广泛的手动检查，极大地扩展了当前的ARG存储库。 DeepARG的模型和数据库网址： http://bench.cs.vt.edu/deeparg. 碎碎念 各个领域都开始探索使用深度学习的方法解决问题了。深度学习、抗生素抗性、宏基因组三个热点方向，但是相关文章好像并不多。 每日文献摘要：第15篇 2019年11月03日 周日]]></content>
@@ -22,9 +27,9 @@
         <category>literature</category>
       </categories>
       <tags>
+        <tag>ATACseq</tag>
         <tag>single cell</tag>
         <tag>文献摘要</tag>
-        <tag>ATACseq</tag>
         <tag>scATACseq</tag>
       </tags>
   </entry>
@@ -228,9 +233,9 @@
         <category>literature</category>
       </categories>
       <tags>
+        <tag>ATACseq</tag>
         <tag>single cell</tag>
         <tag>文献摘要</tag>
-        <tag>ATACseq</tag>
         <tag>scATACseq</tag>
       </tags>
   </entry>
@@ -339,8 +344,8 @@
         <category>literature</category>
       </categories>
       <tags>
-        <tag>文献摘要</tag>
         <tag>ATACseq</tag>
+        <tag>文献摘要</tag>
         <tag>scATACseq</tag>
       </tags>
   </entry>

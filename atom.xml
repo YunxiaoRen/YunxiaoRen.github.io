@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-11-03T10:10:03.903Z</updated>
+  <updated>2019-11-05T04:55:19.196Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>抗微生物耐药性(Anti-microbial Resistance,AMR)</title>
+    <link href="http://yoursite.com/2019/11/05/%E6%8A%97%E5%BE%AE%E7%94%9F%E7%89%A9%E8%80%90%E8%8D%AF%E6%80%A7-Anti-microbial-Resistance-AMR/"/>
+    <id>http://yoursite.com/2019/11/05/抗微生物耐药性-Anti-microbial-Resistance-AMR/</id>
+    <published>2019-11-05T04:55:19.000Z</published>
+    <updated>2019-11-05T04:55:19.196Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>利用深度学习从宏基因组数据中预测抗生素抗性基因——DeepARG</title>
@@ -73,11 +87,11 @@
       <category term="literature" scheme="http://yoursite.com/categories/literature/"/>
     
     
+      <category term="ATACseq" scheme="http://yoursite.com/tags/ATACseq/"/>
+    
       <category term="single cell" scheme="http://yoursite.com/tags/single-cell/"/>
     
       <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
-    
-      <category term="ATACseq" scheme="http://yoursite.com/tags/ATACseq/"/>
     
       <category term="scATACseq" scheme="http://yoursite.com/tags/scATACseq/"/>
     
@@ -567,42 +581,6 @@
     
     
       <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>scATAC的一篇经典文献-研究人细胞发育和肿瘤内T细胞耗竭</title>
-    <link href="http://yoursite.com/2019/08/26/scATAC%E7%9A%84%E4%B8%80%E7%AF%87%E7%BB%8F%E5%85%B8%E6%96%87%E7%8C%AE-%E7%A0%94%E7%A9%B6%E4%BA%BA%E7%BB%86%E8%83%9E%E5%8F%91%E8%82%B2%E5%92%8C%E8%82%BF%E7%98%A4%E5%86%85T%E7%BB%86%E8%83%9E%E8%80%97%E7%AB%AD/"/>
-    <id>http://yoursite.com/2019/08/26/scATAC的一篇经典文献-研究人细胞发育和肿瘤内T细胞耗竭/</id>
-    <published>2019-08-26T03:45:59.000Z</published>
-    <updated>2019-10-24T15:08:40.664Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>一句话评价</strong></p><p>学习scATAC-seq的必读文献</p><p><strong>文章信息</strong></p><p>题目：Massively parallel single-cell chromatin landscapes of human immune cell development and intratumoral T cell exhaustion</p><p>杂志：Nature biotechnology</p><p>时间：August, 2019</p><p>链接: <a href="https://www.nature.com/articles/s41587-019-0206-z" target="_blank" rel="noopener">https://www.nature.com/articles/s41587-019-0206-z</a></p><p><strong>figure</strong></p><p><img src="/2019/08/26/scATAC的一篇经典文献-研究人细胞发育和肿瘤内T细胞耗竭/fig1-method.png" style="zoom:50%"></p><a id="more"></a><p><strong>文章介绍：</strong></p><p>利用商业化10X Genomics平台进行scATAC-seq测序，同时研究健康人的血液细胞发育和肿瘤内T细胞的耗竭。共得到200,000个单细胞的染色质可及性图谱。</p><p>在血液细胞发育中的应用，得到的结果包括：</p><ul><li>鉴定到细胞特异的cis- 和trans调控元件</li><li>疾病相关的enhancer活动</li><li>细胞分化发育轨迹</li></ul><p>在肿瘤基底细胞中的应用，结果包括：</p><ul><li>构建了肿瘤微环境中的基底细胞、恶性细胞和免疫细胞的调控网络</li><li>发现一些染色质调控因子或许可作为免疫治疗的靶标</li></ul><p><img src="/2019/08/26/scATAC的一篇经典文献-研究人细胞发育和肿瘤内T细胞耗竭/fig2-造血谱系发育.png" alt></p><p><strong>碎碎念</strong></p><p>William J. Greenleaf 和 Howard Y. Chang合作的又一篇巨作文章，值得细细解读，一是学习scATAC-seq的分析方法，重现文章的部分分析；二是总结文章思路，思考如何利用该数据资源做进一步挖掘，对其他课题的借鉴意义</p><ul><li><p>数据资源：scATAC-seq处理前的数据和处理后的数据都提供在10X平台</p><p><a href="https://support.10xgenomics.com/single-cell-atac/datasets" target="_blank" rel="noopener">https://support.10xgenomics.com/single-cell-atac/datasets</a>. </p></li><li><p>代码：<a href="https://github.com/GreenleafLab/10x-scATAC-2019" target="_blank" rel="noopener">https://github.com/GreenleafLab/10x-scATAC-2019</a>.</p></li></ul><blockquote><p>每日文献摘要：第<strong>4</strong>篇 2019年08月27日 周二</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;一句话评价&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;学习scATAC-seq的必读文献&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;文章信息&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;题目：Massively parallel single-cell chromatin landscapes of human immune cell development and intratumoral T cell exhaustion&lt;/p&gt;
-&lt;p&gt;杂志：Nature biotechnology&lt;/p&gt;
-&lt;p&gt;时间：August, 2019&lt;/p&gt;
-&lt;p&gt;链接: &lt;a href=&quot;https://www.nature.com/articles/s41587-019-0206-z&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.nature.com/articles/s41587-019-0206-z&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;figure&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2019/08/26/scATAC的一篇经典文献-研究人细胞发育和肿瘤内T细胞耗竭/fig1-method.png&quot; style=&quot;zoom:50%&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="literature" scheme="http://yoursite.com/categories/literature/"/>
-    
-    
-      <category term="single cell" scheme="http://yoursite.com/tags/single-cell/"/>
-    
-      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
-    
-      <category term="ATACseq" scheme="http://yoursite.com/tags/ATACseq/"/>
-    
-      <category term="scATACseq" scheme="http://yoursite.com/tags/scATACseq/"/>
     
   </entry>
   
