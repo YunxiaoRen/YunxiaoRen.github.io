@@ -57,9 +57,9 @@
         <category>literature</category>
       </categories>
       <tags>
-        <tag>ATACseq</tag>
         <tag>single cell</tag>
         <tag>文献摘要</tag>
+        <tag>ATACseq</tag>
         <tag>scATACseq</tag>
       </tags>
   </entry>
@@ -263,9 +263,9 @@
         <category>literature</category>
       </categories>
       <tags>
-        <tag>ATACseq</tag>
         <tag>single cell</tag>
         <tag>文献摘要</tag>
+        <tag>ATACseq</tag>
         <tag>scATACseq</tag>
       </tags>
   </entry>
@@ -374,8 +374,8 @@
         <category>literature</category>
       </categories>
       <tags>
-        <tag>ATACseq</tag>
         <tag>文献摘要</tag>
+        <tag>ATACseq</tag>
         <tag>scATACseq</tag>
       </tags>
   </entry>
