@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-11-05T14:16:13.037Z</updated>
+  <updated>2019-11-06T16:01:29.384Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>三岔路口</title>
+    <link href="http://yoursite.com/2019/11/06/%E4%B8%89%E5%B2%94%E8%B7%AF%E5%8F%A3/"/>
+    <id>http://yoursite.com/2019/11/06/三岔路口/</id>
+    <published>2019-11-06T15:51:17.000Z</published>
+    <updated>2019-11-06T16:01:29.384Z</updated>
+    
+    <content type="html"><![CDATA[<p>求学的路上有几个重要的三叉路口，通常大多人认为第一个重要的是高中毕业后的去向，不同的人走进不同等级的大学甚至有的可能退学；第二个出现在大学毕业后，有一部分人开始工作，有一部分人考研继续求学，有一部分人开始创业；第三个</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;求学的路上有几个重要的三叉路口，通常大多人认为第一个重要的是高中毕业后的去向，不同的人走进不同等级的大学甚至有的可能退学；第二个出现在大学毕业后，有一部分人开始工作，有一部分人考研继续求学，有一部分人开始创业；第三个&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="杂想" scheme="http://yoursite.com/categories/%E6%9D%82%E6%83%B3/"/>
+    
+    
+      <category term="胡思" scheme="http://yoursite.com/tags/%E8%83%A1%E6%80%9D/"/>
+    
+  </entry>
   
   <entry>
     <title>追踪非小细胞肺癌的进化</title>
@@ -566,38 +592,6 @@
       <category term="single cell" scheme="http://yoursite.com/tags/single-cell/"/>
     
       <category term="scRNA-seq" scheme="http://yoursite.com/tags/scRNA-seq/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>摘要-单细胞空间转录组整合分析和可视化流程_Giotto</title>
-    <link href="http://yoursite.com/2019/09/20/%E6%91%98%E8%A6%81-%E5%8D%95%E7%BB%86%E8%83%9E%E7%A9%BA%E9%97%B4%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B4%E5%90%88%E5%88%86%E6%9E%90%E5%92%8C%E5%8F%AF%E8%A7%86%E5%8C%96%E6%B5%81%E7%A8%8B-Giotto/"/>
-    <id>http://yoursite.com/2019/09/20/摘要-单细胞空间转录组整合分析和可视化流程-Giotto/</id>
-    <published>2019-09-20T06:23:51.000Z</published>
-    <updated>2019-10-24T15:06:51.230Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>一句话评价</strong></p><p>单细胞空间转录组分析和可视化流程</p><p><strong>文章信息</strong></p><p>题目：<strong>Giotto, a pipeline for integrative analysis and visualization of single-cell spatial transcriptomic data</strong></p><p>杂志：bioRxiv</p><p>时间：Jul. 13, 2019</p><p>链接: doi: <a href="http://dx.doi.org/10.1101/701680" target="_blank" rel="noopener">http://dx.doi.org/10.1101/701680</a></p><p><strong>figure</strong></p><p><img src="/2019/09/20/摘要-单细胞空间转录组整合分析和可视化流程-Giotto/fig-abstract.png" style="zoom:50%"></p><a id="more"></a><p><strong>文章介绍：</strong></p><p>空间转录组技术有助于研究细胞与其原生的微环境的相互作用，对于理解组织中细胞的身份和功能至关重要。2016年，来自瑞典卡罗琳斯卡研究所和皇家理工学院等机构的研究人员首先开发出空间转录组学（spatial transcriptomics）的高分辨率方法（<a href="https://science.sciencemag.org/content/353/6294/78" target="_blank" rel="noopener">Visualization and analysis of gene expression in tissue sections by spatial transcriptomics</a> ）。2017年，景乃禾研究员和彭广敦研究员研发的空间转录组学技术——Geo-seq发表在《Nature Protocols》。</p><blockquote><p>Geo-seq技术是通过整合与优化单细胞测序和激光显微切割，构建的一种能够获得少量细胞转录组信息、同时保留细胞原有空间位置信息的测序方法。该技术通过激光显微切割可以直观地在组织上直接捕获细胞，每个获取的样本（此技术可以获取低至5个细胞）都保留了位置信息，然后与单细胞转录组测序技术结合，从而完成了高效率、高分辨率的空间转录组分析。</p></blockquote><p>空间转录组学的技术伴随着单细胞技术不断发展，相关分析工具也被相继开发，这篇文章介绍的是对单细胞空间转录组数据进行整合分析和可视化的流程——<strong>Giotto</strong>.</p><p><strong>Giotto</strong>包括两个部分，第一部分是分析空间单细胞转录组数据的详细流程，第二部分是空间单细胞转录组数据的可视化浏览。</p><p>分析部分需要的输入数据是<strong>gene-by-cell count matrix</strong>和每个细胞的空间坐标。分析的内容包括单细胞的常规分析，如：数据预处理、特征选择、降维、聚类等。最重要的是整合了基因表达和空间位置信息。</p><p>可视化部分提供了交互的工作环境，既可以探索分析结果，也可以可视化其他信息如细胞形态、转录本位置等。</p><p><img src="/2019/09/20/摘要-单细胞空间转录组整合分析和可视化流程-Giotto/fig-2.png" alt></p><p>使用教程：<a href="http://spatial.rc.fas.harvard.edu/giotto-viewer/tutorial.html" target="_blank" rel="noopener">http://spatial.rc.fas.harvard.edu/giotto-viewer/tutorial.html</a></p><p><strong>碎碎念</strong></p><p>空间转录组结合单细胞技术是一个新的热点研究方向</p><blockquote><p>每日文献摘要：第5篇 2019年08月28日 周三</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;一句话评价&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;单细胞空间转录组分析和可视化流程&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;文章信息&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;题目：&lt;strong&gt;Giotto, a pipeline for integrative analysis and visualization of single-cell spatial transcriptomic data&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;杂志：bioRxiv&lt;/p&gt;
-&lt;p&gt;时间：Jul. 13, 2019&lt;/p&gt;
-&lt;p&gt;链接: doi: &lt;a href=&quot;http://dx.doi.org/10.1101/701680&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://dx.doi.org/10.1101/701680&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;figure&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2019/09/20/摘要-单细胞空间转录组整合分析和可视化流程-Giotto/fig-abstract.png&quot; style=&quot;zoom:50%&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="literature" scheme="http://yoursite.com/categories/literature/"/>
-    
-    
-      <category term="single cell" scheme="http://yoursite.com/tags/single-cell/"/>
-    
-      <category term="spatial transcriptomics" scheme="http://yoursite.com/tags/spatial-transcriptomics/"/>
     
   </entry>
   
