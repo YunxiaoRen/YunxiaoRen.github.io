@@ -1,6 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[叶酸与高血压、脑卒中精准防治的研究]]></title>
+    <url>%2F2019%2F11%2F22%2F%E5%8F%B6%E9%85%B8%E4%B8%8E%E9%AB%98%E8%A1%80%E5%8E%8B%E3%80%81%E8%84%91%E5%8D%92%E4%B8%AD%E7%B2%BE%E5%87%86%E9%98%B2%E6%B2%BB%E7%9A%84%E7%A0%94%E7%A9%B6%2F</url>
+    <content type="text"><![CDATA[昨天组会，同学分享了北京大学第一人民医院霍勇老师关于脑卒中精准防治的研究。 脑卒中想必大家都不陌生，周围有的时候会听到某人因为脑卒中突然离世。给我的感觉就是发病急，没有特别明显的发病前症状，但是一旦发病了，往往就是不可救治。 有研究也报道脑卒中是中国人的第一位死因，发病率居世界首位。脑卒中的危险因素中高血压、膳食和年龄占权重较大。霍老师的研究发现中国高血压患者75%为H型高血压（即伴有HCY升高的高血压），而低等叶酸摄入显著增加高血压患者脑卒中的风险。进而发现叶酸缺乏与MTHFR C677T位点的多态性有关，MTHFR基因是叶酸代谢中的一个关键酶，C677T位点的多态性存在3种基因型：CC型（野生型）、CT型（杂合突变型）和TT型（纯合突变型）。 叶酸人体是无法自己合成的，主要从食物中获取。叶酸缺乏有两种类型，一种是膳食中摄入量不足，通过补充可以轻易恢复正常水平；另一种是MTHFR基因的突变，导致叶酸利用率低，即使摄入得很多，但是利用的却很少。而叶酸代谢异常既而可引起高同型半胱氨酸血症，血液异常凝固等，从而引起脑卒中、冠心病、血栓。而且易造成新生儿缺陷等疾病。 根据这一发现，他们提出了高血压患者叶酸治疗的研究（CSPPT），对20,702例45-75岁无心脑血管疾病的高血压患者随访4.5年，MTHFR的3种基因型每都类分为两组，分别用依那普利和依那普利叶酸治疗，他们最后的发现是与单纯使用依那普利降压比较，依那普利叶酸片（依叶）显著降低21%脑卒中风险 这个治疗措施在山东荣成地区已经成为转化应用示范基地，据国家卫计委估计如果CSPPT（即高血压患者叶酸治疗的研究）研究成果广泛应用，每年可预防111万（30%）脑卒中发生。 总结一下就是叶酸缺乏可能会引起脑卒中、高血压、新生儿缺陷等风险的增加 听完之后，想起了自己的基因检测报告好像有叶酸营养需求的报告，打开一看 中招了，而且基因型还是AA 看来以后要多补充叶酸了 文献： 2015，JAMA, Efficacy of folic acid therapy in primary prevention of stroke among adults with hypertension in China: the CSPPT randomized clinical trial.]]></content>
+      <tags>
+        <tag>chronic disease</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[宏基因组物种鉴定工具]]></title>
+    <url>%2F2019%2F11%2F22%2F%E5%AE%8F%E5%9F%BA%E5%9B%A0%E7%BB%84%E7%89%A9%E7%A7%8D%E9%89%B4%E5%AE%9A%E5%B7%A5%E5%85%B7%2F</url>
+    <content type="text"><![CDATA[一句话评价 宏基因组物种鉴定工具集锦 文章信息 题目：Benchmarking Metagenomics Tools for Taxonomic Classification 杂志：Cell 时间：August 8,2019 链接: https://doi.org/10.1016/j.cell.2019.07.010 文章介绍： 鉴定物种分类是宏基因组分析的一个必要和基础步骤，目前用于物种分类的计算方法面临着两个挑战： 首先是分析时间的问题。基于短读长的测序技术产生的大量reads如何在合理有效的时间内完成分析；还有目前大部分比对都使用blast，blast在比对效率上较低。 二是微生物基因组测序数据的不断增长给计算带来的挑战。 figure 碎碎念 总结文章，有哪些疑问和后续计划等 > 每日文献摘要：第X篇 201X年XX月XX日 周X]]></content>
+      <tags>
+        <tag>metagenomics</tag>
+        <tag>software</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[染色体外DNA与肿瘤发生]]></title>
+    <url>%2F2019%2F11%2F21%2F%E6%9F%93%E8%89%B2%E4%BD%93%E5%A4%96DNA%E4%B8%8E%E8%82%BF%E7%98%A4%E5%8F%91%E7%94%9F%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[非编码RNA在肿瘤中扮演的角色]]></title>
+    <url>%2F2019%2F11%2F17%2F%E9%9D%9E%E7%BC%96%E7%A0%81RNA%E5%9C%A8%E8%82%BF%E7%98%A4%E4%B8%AD%E6%89%AE%E6%BC%94%E7%9A%84%E8%A7%92%E8%89%B2%2F</url>
+    <content type="text"><![CDATA[一句话评价 关于非编码RNA在肿瘤中作用的综述 文章信息 题目：The Role of Non-coding RNAs in Oncology 杂志：Cell 时间：November 14, 2019 链接: https://doi.org/10.1016/j.cell.2019.10.017 文章介绍： 非编码RNA作为致癌因子或抑癌因子的总结 （且有体内实验验证） 不同类型的致癌ncRNAs和癌症发生的机制 不同类型的抑癌ncRNAs和阻碍癌症发展的通路 非编码RNA作为肿瘤标志物 每日文献摘要：第18篇 2019年11月17日 周日]]></content>
+      <categories>
+        <category>literature</category>
+      </categories>
+      <tags>
+        <tag>文献摘要</tag>
+        <tag>lncRNA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[准确聆听、有效沟通]]></title>
     <url>%2F2019%2F11%2F16%2F%E5%87%86%E7%A1%AE%E8%81%86%E5%90%AC%E3%80%81%E6%9C%89%E6%95%88%E6%B2%9F%E9%80%9A%2F</url>
     <content type="text"><![CDATA[有效沟通始于准确聆听 以前觉得自己还是个好的聆听者，当与别人交流时会很认真的听，然后作出回应，但今天发现我并没有做到一个好的聆听者，也没有达到有效的沟通。往往没有了解清晰的状况、只是为了回应而回应，随便地给出评价或建议；或者无论对方说什么，都会联想到自己，开始说自己的事说个没完，陷入了典型的自传式回应沟通。 A: “我这个周末要加班……” B: “辞了辞了！对自己这么苛刻干嘛？” A: “我妈妈不同意我去其他城市发展…..” B:”我爸妈对我没有要求，无论我做什么都特别支持，而且我爸妈…..(ba la ba la说自己的事情没有完)” 自传式回应常见的现象有这样几种： 价值判断–表示肯定或否定 如，你这样做是不对的哦；你肯定小时候怎么样； 追根究底–依据自己的立场，探究别人的隐私 这个貌似也经常触碰，问的有点多，忽略了别人的隐私 好为人师–以个人生活经验指导他人 经常会和别人说，我曾经怎么怎么的，你应该怎样做等 自以为是–根据自己的行为动机判断别人的 如何做到准确聆听，一种做法是移情式聆听，即代入倾诉者的角色，感同深受地了解对方此番谈话的真正目的，并掌握准确清晰的事实，再通过对对方情感的客观反馈，来实现有效的沟通。 记住，说出对方的感受，而不要判断。 更要切记，让别人说出感受，而不是陷入自传式的回应]]></content>
@@ -15,6 +49,9 @@
     <title><![CDATA[lncRNA-染色质相互作用数据库]]></title>
     <url>%2F2019%2F11%2F16%2FlncRNA-%E6%9F%93%E8%89%B2%E8%B4%A8%E7%9B%B8%E4%BA%92%E4%BD%9C%E7%94%A8%E6%95%B0%E6%8D%AE%E5%BA%93%2F</url>
     <content type="text"><![CDATA[一句话评价 lncRNA和染色质相互作用数据库 文章信息 题目：LnChrom: a resource of experimentally validated lncRNA–chromatin interactions in human and mouse 杂志：Database 时间：23 March 2018 链接: doi: 10.1093/database/bay039 figure 文章介绍： lncRNA作用机制多样，可以与DNA、RNA和蛋白质相互作用，也是参与染色质调控的重要组成部分。许多lncRNA通过招募染色质修饰因子调控染色质状态，进而影响基因表达过程。作者对已经过实验验证的lncRNA-chromatin相互作用的数据资源进行整理，开发了lnChrom数据库。该数据库目前包括人类和鼠共382743个lncRNA-chromatin相互作用对，另外还收集了每个作用对的染色质修饰因子、表观标记特征、靶基因以及与疾病的关联信息。 LnChrom提供了友好的交互界面，可以通过输入lncRNA ID或靶基因快速检索， 也可以通过选择物种、染色质修饰类型、染色质相关因子，以及基因名字进行高级检索 ，同时可以通过输入感兴趣的染色质区域进行region检索。搜索结果以一个概览的表格和相互作用网络图展示。用户点击某一感兴趣的相互作用对，可以了解到更多细节结果，包括详细的注释信息、Genome Browser，TF Co-occupancy和Cancer Exploration。 网站：http://biocc.hrbmu.edu.cn/LnChrom/ 每日文献摘要：第17篇 2019年11月16日 周六]]></content>
+      <categories>
+        <category>literature</category>
+      </categories>
       <tags>
         <tag>文献摘要</tag>
         <tag>lncRNA</tag>
@@ -90,9 +127,9 @@
         <category>literature</category>
       </categories>
       <tags>
-        <tag>ATACseq</tag>
         <tag>single cell</tag>
         <tag>文献摘要</tag>
+        <tag>ATACseq</tag>
         <tag>scATACseq</tag>
       </tags>
   </entry>
@@ -123,7 +160,7 @@
   <entry>
     <title><![CDATA[人类红细胞生成过程中的转录组和表观图谱]]></title>
     <url>%2F2019%2F10%2F28%2F%E4%BA%BA%E7%B1%BB%E7%BA%A2%E7%BB%86%E8%83%9E%E7%94%9F%E6%88%90%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E8%BD%AC%E5%BD%95%E7%BB%84%E5%92%8C%E8%A1%A8%E8%A7%82%E5%9B%BE%E8%B0%B1%2F</url>
-    <content type="text"><![CDATA[十月最后的一天，这一年还有两个月就又结束了。 对于小孩来说两三个月可能如两三年一样长，对于长大的人来说两三年就如两三天一样快。 一句话评价 ATAC-seq和RNA-seq联合分析策略 文章信息 题目：Transcriptional States and Chromatin Accessibility Underlying Human Erythropoiesis 杂志：Cell Report 时间：2019 June 11 链接: DOI: 10.1016/j.celrep.2019.05.046 figure 提供一张代表性figure，可以是一整张，也可以是某一部分 文章介绍： 碎碎念 虽然idea相似，但是这篇文章总体的逻辑更强，或者说写作的连贯性更强与自己。还有就是图做的也漂亮。 每日文献摘要：第13篇 2019年10月31日 周四]]></content>
+    <content type="text"><![CDATA[十月最后的一天，这一年还有两个月就又结束了。 对于小孩来说两三个月可能如两三年一样长，对于长大的人来说两三年就如两三天一样快。 一句话评价 ATAC-seq和RNA-seq联合分析策略 文章信息 题目：Transcriptional States and Chromatin Accessibility Underlying Human Erythropoiesis 杂志：Cell Report 时间：2019 June 11 链接: DOI: 10.1016/j.celrep.2019.05.046 figure 文章介绍： 碎碎念 虽然idea相似，但是这篇文章总体的逻辑更强，或者说写作的连贯性更强与自己。还有就是图做的也漂亮。 每日文献摘要：第13篇 2019年10月31日 周四]]></content>
       <categories>
         <category>literature</category>
       </categories>
@@ -296,9 +333,9 @@
         <category>literature</category>
       </categories>
       <tags>
-        <tag>ATACseq</tag>
         <tag>single cell</tag>
         <tag>文献摘要</tag>
+        <tag>ATACseq</tag>
         <tag>scATACseq</tag>
       </tags>
   </entry>
@@ -407,8 +444,8 @@
         <category>literature</category>
       </categories>
       <tags>
-        <tag>ATACseq</tag>
         <tag>文献摘要</tag>
+        <tag>ATACseq</tag>
         <tag>scATACseq</tag>
       </tags>
   </entry>
