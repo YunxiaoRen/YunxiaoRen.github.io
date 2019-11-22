@@ -90,7 +90,12 @@
 <meta property="og:description" content="一句话评价 宏基因组物种鉴定工具集锦 文章信息 题目：Benchmarking Metagenomics Tools for Taxonomic Classification 杂志：Cell 时间：August 8,2019 链接: https://doi.org/10.1016/j.cell.2019.07.010">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2019/11/22/宏基因组物种鉴定工具/fig1.png">
-<meta property="og:updated_time" content="2019-11-22T02:35:45.781Z">
+<meta property="og:image" content="http://yoursite.com/2019/11/22/宏基因组物种鉴定工具/fig2.png">
+<meta property="og:image" content="http://yoursite.com/2019/11/22/宏基因组物种鉴定工具/fig3.png">
+<meta property="og:image" content="http://yoursite.com/2019/11/22/宏基因组物种鉴定工具/fig4.png">
+<meta property="og:image" content="http://yoursite.com/2019/11/22/宏基因组物种鉴定工具/fig5.png">
+<meta property="og:image" content="http://yoursite.com/2019/11/22/宏基因组物种鉴定工具/fig6.png">
+<meta property="og:updated_time" content="2019-11-22T09:06:33.391Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="宏基因组物种鉴定工具">
 <meta name="twitter:description" content="一句话评价 宏基因组物种鉴定工具集锦 文章信息 题目：Benchmarking Metagenomics Tools for Taxonomic Classification 杂志：Cell 时间：August 8,2019 链接: https://doi.org/10.1016/j.cell.2019.07.010">
@@ -350,7 +355,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  218
+                  732
                 </span>
               
 
@@ -366,7 +371,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  2
                 </span>
               
             </div>
@@ -396,14 +401,38 @@
 <p>链接: <a href="https://doi.org/10.1016/j.cell.2019.07.010" target="_blank" rel="noopener">https://doi.org/10.1016/j.cell.2019.07.010</a></p>
 <a id="more"></a>
 <p><strong>文章介绍：</strong></p>
-<p>鉴定物种分类是宏基因组分析的一个必要和基础步骤，目前用于物种分类的计算方法面临着两个挑战：</p>
-<p>首先是分析时间的问题。基于短读长的测序技术产生的大量reads如何在合理有效的时间内完成分析；还有目前大部分比对都使用blast，blast在比对效率上较低。</p>
-<p>二是微生物基因组测序数据的不断增长给计算带来的挑战。</p>
+<p>鉴定物种分类是宏基因组分析的一个必要和基础步骤，相关工具也是层出不穷，如何评价物种分类工具的性能，主要从鉴定的准确性、速度和所需要的计算资源这几方面考虑。</p>
+<p>这篇文章针对20种常见的物种鉴定工具进行评估，并描述了如何评价工具性能。</p>
+<p>下图展示了宏基因组的复杂的样本到物种鉴定和丰度计算的过程</p>
 <p><strong>figure</strong></p>
 <p><img src="/2019/11/22/宏基因组物种鉴定工具/fig1.png" alt></p>
+<h3 id="参考数据库"><a href="#参考数据库" class="headerlink" title="参考数据库"></a>参考数据库</h3><p>宏基因组的物种鉴定依赖于数据库，常见的数据库有<strong>RefSeq, blast nt和nr，以及16S rRNA特有的数据库SILVA</strong>。</p>
+<h3 id="评价物种分类工具性能的方法"><a href="#评价物种分类工具性能的方法" class="headerlink" title="评价物种分类工具性能的方法"></a>评价物种分类工具性能的方法</h3><p>召回率（Recall）和准精确度（Precision）是宏基因组物种鉴定中重要的两个度量概念，这两个概念也是统计学中经常见到的。</p>
+<blockquote>
+<p>其中精度是检索出相关文档数与检索出的文档总数的比率，衡量的是检索系统的<strong>查准率</strong>；召回率是指检索出的相关文档数和文档库中所有的相关文档数的比率，衡量的是检索系统的<strong>查全率</strong>。</p>
+</blockquote>
+<p>召回率 = 提取出的正确信息条数 /  样本中的信息条数  </p>
+<p>精确度= 提取出的正确信息条数 /  提取出的信息条数 </p>
+<p><strong>两者取值在0和1之间，数值越接近1，查准率或查全率就越高。</strong></p>
+<p>F值  = 正确率 <em> 召回率 </em> 2 / (正确率 + 召回率) （F 值即为正确率和召回率的调和平均值）</p>
+<p><strong>F值是Precision和Recall加权调和平均</strong></p>
+<p><strong>AUPR:</strong>是指precision和recal曲线下面的面积，也是一个综合考虑P-R两者来评估结果准确性的一个度量值。</p>
+<p><strong>L2 distance:</strong>是为了评估丰度准确性的参数值，通过计算在给定的分类水平上，每个已识别分类单元的ground-truth丰度和标准丰度计数之间的成对距离。</p>
+<p><img src="/2019/11/22/宏基因组物种鉴定工具/fig2.png" alt></p>
+<p>###物种分类工具和其性能</p>
+<p>这里他们比较了20种宏基因组物种鉴定工具，利用相同的数据库 分别比较了他们的precision, recall, F1, 速度和其他值。包括DAN-DNA鉴定，DNA-protein鉴定，和基于marker的鉴定方法。</p>
+<p><img src="/2019/11/22/宏基因组物种鉴定工具/fig3.png" alt></p>
+<p><strong>AUPR值如下：</strong>值越接近1越好</p>
+<p><img src="/2019/11/22/宏基因组物种鉴定工具/fig4.png" alt></p>
+<p><strong>L2 distance</strong>: 值越小越好</p>
+<p><img src="/2019/11/22/宏基因组物种鉴定工具/fig5.png" alt></p>
+<p><strong>运行时间</strong></p>
+<p><img src="/2019/11/22/宏基因组物种鉴定工具/fig6.png" alt></p>
 <p><strong>碎碎念</strong></p>
-<p><strong>总结文章，有哪些疑问和后续计划等</strong></p>
-<p>> 每日文献摘要：第X篇  201X年XX月XX日 周X</p>
+<p>没有做过宏基因组分析实际项目，看着这些软件名字完全没有感觉，也记不住，后续研究若用到的话可以参考这里做选择。</p>
+<blockquote>
+<p>每日文献摘要：第19篇  2019年11月22日 周五</p>
+</blockquote>
 
       
     </div>
@@ -500,8 +529,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -569,6 +607,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#参考数据库"><span class="nav-number">1.</span> <span class="nav-text">参考数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#评价物种分类工具性能的方法"><span class="nav-number">2.</span> <span class="nav-text">评价物种分类工具性能的方法</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -596,7 +650,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">41.1k</span>
+    <span title="Site words total count">41.6k</span>
   
 </div>
 
@@ -616,7 +670,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共41.1k字</span>
+  <span class="post-count">博客全站共41.6k字</span>
 </div>
 
 
