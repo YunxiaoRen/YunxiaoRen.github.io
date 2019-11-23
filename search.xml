@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[深度卷积神经网络分析低质量的ATAC-seq数据]]></title>
+    <url>%2F2019%2F11%2F23%2F%E6%B7%B1%E5%BA%A6%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%88%86%E6%9E%90%E4%BD%8E%E8%B4%A8%E9%87%8F%E7%9A%84ATAC-seq%E6%95%B0%E6%8D%AE%2F</url>
+    <content type="text"><![CDATA[一句话评价 一个基于深度卷积神经网络分析低覆盖度和低质量ATAC-seq的工具 文章信息 题目：AtacWorks: A deep convolutional neural network toolkit for epigenomics 杂志：bioRxiv 时间：Nov. 4, 2019 链接: doi: http://dx.doi.org/10.1101/829481. 文章介绍： 这篇文章介绍了一个基于深度卷积神经网络的方法解析低覆盖度或低质量ATAC-seq数据的工具包——AtacWorks 。使用的架构是Resnet (residual neural network) 。训练模型的数据来自4个血细胞类型，之后利用得到的模型分析HSC，鉴定了差异调控元件、转录因子印迹。 工具介绍：https://github.com/clara-genomics/AtacWorks 安装方法： 流程： figure 碎碎念 还看不懂深度学习的算法，一些基本概念都不理解 每日文献摘要：第20篇 2019年11月23日 周六]]></content>
+      <categories>
+        <category>literature</category>
+      </categories>
+      <tags>
+        <tag>ATACseq</tag>
+        <tag>software</tag>
+        <tag>deep learning</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[scATAC-seq与scRNA-seq的整合分析系统——MAESTRO]]></title>
     <url>%2F2019%2F11%2F23%2FscATAC-seq%E4%B8%8EscRNA-seq%E7%9A%84%E6%95%B4%E5%90%88%E5%88%86%E6%9E%90%E7%B3%BB%E7%BB%9F%E2%80%94%E2%80%94MAESTRO%2F</url>
     <content type="text"><![CDATA[单细胞技术是目前比较火热的一个领域，从单细胞转录组、基因组扩展到单细胞表观组，如scATAC-seq, scHiC, scmethylation等，促使着相关的分析工具也不断涌出。单细胞领域相关工具的开发大致有两个方向：一是从本质上如算法、统计学方法入手开发新的分析工具；一种是整合多种基础工具，开发出具有功能全面，易用等特征的工具。 MAESTRO(Model-based AnalysEs of Single-cell Transcriptome and RegulOme)是刘小乐实验室基于snakemake新开发的用于分析scRNA-seq和scATAC-seq的工具。MAESTRO主要是打包了一些工具和软件包，目前可以实现的功能包括：对scRNA-seq和scATAC-seq数据的比对、质量控制、细胞过滤、标准化、非监督聚类、差异分析、peak calling、细胞类型注释和转录调控分析。支持 Smart-seq2, 10x-genomics, Drop-seq, SPLiT-seq for scRNA-seq protocols; microfudics-based, 10x-genomics and sci-ATAC-seq for scATAC-seq protocols. 提供的有docker镜像，安装可以参考软件介绍：https://github.com/liulab-dfci/MAESTRO/ 1234567wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.shbash Miniconda3-latest-Linux-x86_64.shconda config --add channels defaultsconda config --add channels biocondaconda config --add channels conda-forgeconda create -n MAESTRO maestro -c liulab-dfci Installing the MAESTRO R package 123R&gt; library(devtools)&gt; install_github("liulab-dfci/MAESTRO") 另外依赖的cell ranger, RABIT/LISA等软件需要自行单独安装。 每种类型的数据的详细分析教程可以在原工具介绍网页点击下面每幅图查看 PS: 目前还没有看到相关文章发表]]></content>
@@ -29,11 +42,6 @@
         <tag>software</tag>
         <tag>metagenomics</tag>
       </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[染色体外DNA与肿瘤发生]]></title>
-    <url>%2F2019%2F11%2F21%2F%E6%9F%93%E8%89%B2%E4%BD%93%E5%A4%96DNA%E4%B8%8E%E8%82%BF%E7%98%A4%E5%8F%91%E7%94%9F%2F</url>
-    <content type="text"></content>
   </entry>
   <entry>
     <title><![CDATA[非编码RNA在肿瘤中扮演的角色]]></title>

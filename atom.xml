@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-11-23T06:11:01.045Z</updated>
+  <updated>2019-11-23T09:28:47.135Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>深度卷积神经网络分析低质量的ATAC-seq数据</title>
+    <link href="http://yoursite.com/2019/11/23/%E6%B7%B1%E5%BA%A6%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%88%86%E6%9E%90%E4%BD%8E%E8%B4%A8%E9%87%8F%E7%9A%84ATAC-seq%E6%95%B0%E6%8D%AE/"/>
+    <id>http://yoursite.com/2019/11/23/深度卷积神经网络分析低质量的ATAC-seq数据/</id>
+    <published>2019-11-23T08:41:46.000Z</published>
+    <updated>2019-11-23T09:28:47.135Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>一句话评价</strong></p><p>一个基于深度卷积神经网络分析低覆盖度和低质量ATAC-seq的工具</p><p><strong>文章信息</strong></p><p>题目：AtacWorks: A deep convolutional neural network toolkit for epigenomics</p><p>杂志：bioRxiv</p><p>时间：Nov. 4, 2019</p><p>链接: doi: <a href="http://dx.doi.org/10.1101/829481" target="_blank" rel="noopener">http://dx.doi.org/10.1101/829481</a>.</p><a id="more"></a><p><strong>文章介绍：</strong></p><p>这篇文章介绍了一个基于深度卷积神经网络的方法解析低覆盖度或低质量ATAC-seq数据的工具包——<strong>AtacWorks</strong> 。使用的架构是Resnet (residual neural network) 。训练模型的数据来自4个血细胞类型，之后利用得到的模型分析HSC，鉴定了差异调控元件、转录因子印迹。</p><p>工具介绍：<a href="https://github.com/clara-genomics/AtacWorks" target="_blank" rel="noopener">https://github.com/clara-genomics/AtacWorks</a></p><p><strong>安装方法：</strong></p><p><img src="/2019/11/23/深度卷积神经网络分析低质量的ATAC-seq数据/fig3.png" alt></p><p><strong>流程：</strong></p><p><img src="/2019/11/23/深度卷积神经网络分析低质量的ATAC-seq数据/fig2.png" alt></p><p><strong>figure</strong></p><p><img src="/2019/11/23/深度卷积神经网络分析低质量的ATAC-seq数据/fig1.png" alt></p><p><strong>碎碎念</strong></p><p>还看不懂深度学习的算法，一些基本概念都不理解</p><blockquote><p>每日文献摘要：第20篇  2019年11月23日 周六</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;一句话评价&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;一个基于深度卷积神经网络分析低覆盖度和低质量ATAC-seq的工具&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;文章信息&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;题目：AtacWorks: A deep convolutional neural network toolkit for epigenomics&lt;/p&gt;
+&lt;p&gt;杂志：bioRxiv&lt;/p&gt;
+&lt;p&gt;时间：Nov. 4, 2019&lt;/p&gt;
+&lt;p&gt;链接: doi: &lt;a href=&quot;http://dx.doi.org/10.1101/829481&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://dx.doi.org/10.1101/829481&lt;/a&gt;.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="literature" scheme="http://yoursite.com/categories/literature/"/>
+    
+    
+      <category term="ATACseq" scheme="http://yoursite.com/tags/ATACseq/"/>
+    
+      <category term="software" scheme="http://yoursite.com/tags/software/"/>
+    
+      <category term="deep learning" scheme="http://yoursite.com/tags/deep-learning/"/>
+    
+  </entry>
   
   <entry>
     <title>scATAC-seq与scRNA-seq的整合分析系统——MAESTRO</title>
@@ -48,9 +80,9 @@
     <link href="http://yoursite.com/2019/11/22/%E5%8F%B6%E9%85%B8%E4%B8%8E%E9%AB%98%E8%A1%80%E5%8E%8B%E3%80%81%E8%84%91%E5%8D%92%E4%B8%AD%E7%B2%BE%E5%87%86%E9%98%B2%E6%B2%BB%E7%9A%84%E7%A0%94%E7%A9%B6/"/>
     <id>http://yoursite.com/2019/11/22/叶酸与高血压、脑卒中精准防治的研究/</id>
     <published>2019-11-22T04:37:23.000Z</published>
-    <updated>2019-11-22T04:48:48.638Z</updated>
+    <updated>2019-11-23T09:31:23.909Z</updated>
     
-    <content type="html"><![CDATA[<p>昨天组会，同学分享了北京大学第一人民医院霍勇老师关于<strong>脑卒中精准防治的研究</strong>。</p><p><img src="/2019/11/22/叶酸与高血压、脑卒中精准防治的研究/fig2.png" alt></p><a id="more"></a><p>脑卒中想必大家都不陌生，周围有的时候会听到某人因为脑卒中突然离世。给我的感觉就是发病急，没有特别明显的发病前症状，但是一旦发病了，往往就是不可救治。</p><p>有研究也报道脑卒中是中国人的第一位死因，发病率居世界首位。脑卒中的危险因素中高血压、膳食和年龄占权重较大。霍老师的研究发现中国高血压患者75%为H型高血压（即伴有HCY升高的高血压），而低等叶酸摄入显著增加高血压患者脑卒中的风险。进而发现叶酸缺乏与MTHFR C677T位点的多态性有关，MTHFR基因是叶酸代谢中的一个关键酶，C677T位点的多态性存在3种基因型：CC型（野生型）、CT型（杂合突变型）和TT型（纯合突变型）。</p><p>叶酸人体是无法自己合成的，主要从食物中获取。叶酸缺乏有两种类型，一种是膳食中摄入量不足，通过补充可以轻易恢复正常水平；另一种是MTHFR基因的突变，导致叶酸利用率低，即使摄入得很多，但是利用的却很少。而叶酸代谢异常既而可引起高同型半胱氨酸血症，血液异常凝固等，从而引起脑卒中、冠心病、血栓。而且易造成新生儿缺陷等疾病。<br><img src="/2019/11/22/叶酸与高血压、脑卒中精准防治的研究/1240-20191122123751293.png" alt></p><p>根据这一发现，他们提出了高血压患者叶酸治疗的研究（CSPPT），对20,702例45-75岁无心脑血管疾病的高血压患者随访4.5年，MTHFR的3种基因型每都类分为两组，分别用依那普利和依那普利叶酸治疗，他们最后的发现是<strong>与单纯使用依那普利降压比较，依那普利叶酸片（依叶）显著降低21%脑卒中风险</strong></p><p>这个治疗措施在山东荣成地区已经成为转化应用示范基地，据国家卫计委估计如果CSPPT（即高血压患者叶酸治疗的研究）研究成果广泛应用，每年可预防111万（30%）脑卒中发生。</p><blockquote><p>总结一下就是叶酸缺乏可能会引起脑卒中、高血压、新生儿缺陷等风险的增加</p></blockquote><p>听完之后，想起了自己的基因检测报告好像有叶酸营养需求的报告，打开一看</p><p><img src="/2019/11/22/叶酸与高血压、脑卒中精准防治的研究/1240-20191122123752093.png" style="zoom:50%;"></p><p>中招了，而且基因型还是AA<br><img src="/2019/11/22/叶酸与高血压、脑卒中精准防治的研究/1240.png" style="zoom:50%;"></p><p><img src="/2019/11/22/叶酸与高血压、脑卒中精准防治的研究/fig1.png" style="zoom:50%;"></p><p>看来以后要多补充叶酸了</p><hr><blockquote><p><strong>文献：</strong> 2015，JAMA, Efficacy of folic acid therapy in primary prevention of stroke among adults with hypertension in China: the CSPPT randomized clinical trial.</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<p>昨天组会，同学分享了北京大学第一人民医院霍勇老师关于<strong>脑卒中精准防治的研究</strong>。</p><p><img src="/2019/11/22/叶酸与高血压、脑卒中精准防治的研究/fig2.png" alt></p><a id="more"></a><p>脑卒中想必大家都不陌生，周围有的时候会听到某人因为脑卒中突然离世。给我的感觉就是发病急，没有特别明显的发病前症状，但是一旦发病了，往往就是不可救治。</p><p>有研究也报道脑卒中是中国人的第一位死因，发病率居世界首位。脑卒中的危险因素中高血压、膳食和年龄占权重较大。霍老师的研究发现中国高血压患者75%为H型高血压（即伴有HCY升高的高血压），而低等叶酸摄入显著增加高血压患者脑卒中的风险。进而发现叶酸缺乏与MTHFR C677T位点的多态性有关，MTHFR基因是叶酸代谢中的一个关键酶，C677T位点的多态性存在3种基因型：CC型（野生型）、CT型（杂合突变型）和TT型（纯合突变型）。</p><p>叶酸人体是无法自己合成的，主要从食物中获取。叶酸缺乏有两种类型，一种是膳食中摄入量不足，通过补充可以轻易恢复正常水平；另一种是MTHFR基因的突变，导致叶酸利用率低，即使摄入得很多，但是利用的却很少。而叶酸代谢异常既而可引起高同型半胱氨酸血症，血液异常凝固等，从而引起脑卒中、冠心病、血栓。而且易造成新生儿缺陷等疾病。<br><img src="/2019/11/22/叶酸与高血压、脑卒中精准防治的研究/1240-20191122123751293.png" alt></p><p>根据这一发现，他们提出了高血压患者叶酸治疗的研究（CSPPT），对20,702例45-75岁无心脑血管疾病的高血压患者随访4.5年，MTHFR的3种基因型每都类分为两组，分别用依那普利和依那普利叶酸治疗，他们最后的发现是<strong>与单纯使用依那普利降压比较，依那普利叶酸片（依叶）显著降低21%脑卒中风险</strong></p><p>这个治疗措施在山东荣成地区已经成为转化应用示范基地，据国家卫计委估计如果CSPPT（即高血压患者叶酸治疗的研究）研究成果广泛应用，每年可预防111万（30%）脑卒中发生。</p><blockquote><p>总结一下就是叶酸缺乏可能会引起脑卒中、高血压、新生儿缺陷等风险的增加</p></blockquote><p>听完之后，想起了自己的基因检测报告好像有叶酸营养需求的报告，打开一看</p><p><img src="/2019/11/22/叶酸与高血压、脑卒中精准防治的研究/1240-20191122123752093.png" alt></p><p>中招了，而且基因型还是AA<br><img src="/2019/11/22/叶酸与高血压、脑卒中精准防治的研究/1240.png" style="zoom:50%;"></p><p><img src="/2019/11/22/叶酸与高血压、脑卒中精准防治的研究/fig1.png" style="zoom:50%;"></p><p>看来以后要多补充叶酸了</p><hr><blockquote><p><strong>文献：</strong> 2015，JAMA, Efficacy of folic acid therapy in primary prevention of stroke among adults with hypertension in China: the CSPPT randomized clinical trial.</p></blockquote>]]></content>
     
     <summary type="html">
     
@@ -90,20 +122,6 @@
       <category term="software" scheme="http://yoursite.com/tags/software/"/>
     
       <category term="metagenomics" scheme="http://yoursite.com/tags/metagenomics/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>染色体外DNA与肿瘤发生</title>
-    <link href="http://yoursite.com/2019/11/21/%E6%9F%93%E8%89%B2%E4%BD%93%E5%A4%96DNA%E4%B8%8E%E8%82%BF%E7%98%A4%E5%8F%91%E7%94%9F/"/>
-    <id>http://yoursite.com/2019/11/21/染色体外DNA与肿瘤发生/</id>
-    <published>2019-11-21T04:37:10.000Z</published>
-    <updated>2019-11-21T04:37:10.660Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
     
   </entry>
   
