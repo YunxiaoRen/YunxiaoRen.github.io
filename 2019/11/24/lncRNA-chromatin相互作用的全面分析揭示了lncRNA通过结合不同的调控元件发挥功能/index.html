@@ -89,7 +89,9 @@
 <meta property="og:site_name" content="生信拾光">
 <meta property="og:description" content="之前分享过哈尔滨医科大学李霞老师实验室开发的lncRNA-chromatin相互作用数据库——LnChrom (http://biocc.hrbmu.edu.cn/LnChrom/index.jsp) 。这次详细解读数据库背后所做的分析，同时总结文章的思路、结论和成果以及对其他研究的启发。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2019/11/24/lncRNA-chromatin相互作用的全面分析揭示了lncRNA通过结合不同的调控元件发挥功能/abstract.jpg">
 <meta property="og:image" content="http://yoursite.com/2019/11/24/lncRNA-chromatin相互作用的全面分析揭示了lncRNA通过结合不同的调控元件发挥功能/fig1.png">
+<meta property="og:image" content="http://yoursite.com/2019/11/24/lncRNA-chromatin相互作用的全面分析揭示了lncRNA通过结合不同的调控元件发挥功能/fig10.png">
 <meta property="og:image" content="http://yoursite.com/2019/11/24/lncRNA-chromatin相互作用的全面分析揭示了lncRNA通过结合不同的调控元件发挥功能/fig2.png">
 <meta property="og:image" content="http://yoursite.com/2019/11/24/lncRNA-chromatin相互作用的全面分析揭示了lncRNA通过结合不同的调控元件发挥功能/fig3.png">
 <meta property="og:image" content="http://yoursite.com/2019/11/24/lncRNA-chromatin相互作用的全面分析揭示了lncRNA通过结合不同的调控元件发挥功能/fig4.png">
@@ -98,11 +100,11 @@
 <meta property="og:image" content="http://yoursite.com/2019/11/24/lncRNA-chromatin相互作用的全面分析揭示了lncRNA通过结合不同的调控元件发挥功能/fig7.png">
 <meta property="og:image" content="http://yoursite.com/2019/11/24/lncRNA-chromatin相互作用的全面分析揭示了lncRNA通过结合不同的调控元件发挥功能/fig8.png">
 <meta property="og:image" content="http://yoursite.com/2019/11/24/lncRNA-chromatin相互作用的全面分析揭示了lncRNA通过结合不同的调控元件发挥功能/fig9.png">
-<meta property="og:updated_time" content="2019-11-24T12:51:30.567Z">
+<meta property="og:updated_time" content="2019-12-12T12:42:08.873Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="lncRNA-chromatin相互作用的全面分析揭示了lncRNA通过结合不同的调控元件发挥功能">
 <meta name="twitter:description" content="之前分享过哈尔滨医科大学李霞老师实验室开发的lncRNA-chromatin相互作用数据库——LnChrom (http://biocc.hrbmu.edu.cn/LnChrom/index.jsp) 。这次详细解读数据库背后所做的分析，同时总结文章的思路、结论和成果以及对其他研究的启发。">
-<meta name="twitter:image" content="http://yoursite.com/2019/11/24/lncRNA-chromatin相互作用的全面分析揭示了lncRNA通过结合不同的调控元件发挥功能/fig1.png">
+<meta name="twitter:image" content="http://yoursite.com/2019/11/24/lncRNA-chromatin相互作用的全面分析揭示了lncRNA通过结合不同的调控元件发挥功能/abstract.jpg">
 
 
 
@@ -358,7 +360,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.5k
+                  2.4k
                 </span>
               
 
@@ -374,7 +376,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  5
+                  11
                 </span>
               
             </div>
@@ -396,13 +398,13 @@
 
       
         <p>之前分享过哈尔滨医科大学李霞老师实验室开发的lncRNA-chromatin相互作用数据库——<strong>LnChrom</strong> (<a href="http://biocc.hrbmu.edu.cn/LnChrom/index.jsp" target="_blank" rel="noopener">http://biocc.hrbmu.edu.cn/LnChrom/index.jsp</a>) 。这次详细解读数据库背后所做的分析，同时总结文章的思路、结论和成果以及对其他研究的启发。</p>
+<p><img src="/2019/11/24/lncRNA-chromatin相互作用的全面分析揭示了lncRNA通过结合不同的调控元件发挥功能/abstract.jpg" alt></p>
 <a id="more"></a>
 <h3 id="文章信息"><a href="#文章信息" class="headerlink" title="文章信息"></a>文章信息</h3><p>题目：Comprehensive analysis of lncRNA-chromatin interactions reveals lncRNA functions dependent on binding diverse regulatory elements</p>
 <p>杂志：Journal of Biological Chemistry</p>
 <p>时间：Sept.4, 2019</p>
 <p>链接：<a href="http://www.jbc.org/content/294/43/15613" target="_blank" rel="noopener">http://www.jbc.org/content/294/43/15613</a></p>
-<h3 id="主要内容"><a href="#主要内容" class="headerlink" title="主要内容"></a>主要内容</h3><p>数据、思路、方法、结果、结论、意义</p>
-<p>lncRNA在人类正常生命活动和疾病中扮演者重要的角色，其可以与染色质相互作用，然后招募蛋白质复合物改变染色质状态，进而调控基因表达。然而，lncRNA与染色质相互作用是如何影响并调节生物功能还并不清晰。基于此作者从人类和小鼠数据集中收集了<strong>188,647</strong>个lncRNA-chromatin相互作用对。他们的结果发现lncRNA在其结合位点展现了不同的表观修饰方式，尤其是在有增强子活动标记的区域。进而对lncRNA的靶基因的功能分析发现lncRNA即可以通过结合启动子调控元件发挥功能，也可以通过结合增强子发挥功能，尤其是在远端调控区域的调控元件。</p>
+<h3 id="主要内容"><a href="#主要内容" class="headerlink" title="主要内容"></a>主要内容</h3><p>lncRNA在人类正常生命活动和疾病中扮演者重要的角色，其可以与染色质相互作用，然后招募蛋白质复合物改变染色质状态，进而调控基因表达。然而，lncRNA与染色质相互作用是如何影响并调节生物功能还并不清晰。基于此作者从人类和小鼠数据集中收集了<strong>188,647</strong>个lncRNA-chromatin相互作用对。他们的结果发现lncRNA在其结合位点展现了不同的表观修饰方式，尤其是在有增强子活动标记的区域。进而对lncRNA的靶基因的功能分析发现lncRNA即可以通过结合启动子调控元件发挥功能，也可以通过结合增强子发挥功能，尤其是在远端调控区域的调控元件。</p>
 <h3 id="文章思路"><a href="#文章思路" class="headerlink" title="文章思路"></a>文章思路</h3><h3 id="数据资源"><a href="#数据资源" class="headerlink" title="数据资源"></a>数据资源</h3><table>
 <thead>
 <tr>
@@ -453,20 +455,74 @@
 </li>
 </ul>
 <p><img src="/2019/11/24/lncRNA-chromatin相互作用的全面分析揭示了lncRNA通过结合不同的调控元件发挥功能/fig1.png" alt></p>
-<blockquote>
 <p><strong>补充知识</strong></p>
 <ul>
-<li>ChIRP-seq</li>
-<li>CHART-seq</li>
+<li><p>ChIRP-seq</p>
+<p>与CHART-seq技术类似，都是研究nc-RNA结合的基因组位点，以及作用的蛋白质。</p>
+</li>
+</ul>
+<blockquote>
+<p>参考：<a href="https://www.illumina.com/science/sequencing-method-explorer/kits-and-arrays/chirp-seq.html" target="_blank" rel="noopener">https://www.illumina.com/science/sequencing-method-explorer/kits-and-arrays/chirp-seq.html</a></p>
+<p>ChIRP, also commonly referred to as ChIRP-seq, is a protocol to detect the locations on the genome where ncRNAs, such as lncRNAs, and their proteins are bound. In this method, samples are first crosslinked and sonicated. Biotinylated tiling oligos are hybridized to the RNAs of interest, and the complexes are captured with streptavidin magnetic beads. After treatment with RNase H, the DNA is extracted and sequenced. Deep sequencing can determine the lncRNA/protein interaction site at single-base resolution.</p>
+<h6 id="Pros"><a href="#Pros" class="headerlink" title="Pros:"></a>Pros:</h6><ul>
+<li>Identifies binding sites anywhere on the genome</li>
+<li>Enables discovery of new binding sites</li>
+<li>Allows selection of specific RNAs of interest</li>
+</ul>
+<h6 id="Cons"><a href="#Cons" class="headerlink" title="Cons:"></a>Cons:</h6><ul>
+<li>Nonspecific oligonucleotide interactions can lead to misinterpretation of binding sites</li>
+<li>Chromatin can be disrupted during the preparation stage</li>
+<li>The sequence of the RNA of interest must be known</li>
+</ul>
+</blockquote>
+<ul>
+<li><p>CHART-seq</p>
+<p>CHART-seq用于鉴定nc-RNA结合的基因组位点，同时可以鉴定与其作用的蛋白质。</p>
+<p>参考Illumina官网：<a href="https://www.illumina.com/science/sequencing-method-explorer/kits-and-arrays/chart.html" target="_blank" rel="noopener">https://www.illumina.com/science/sequencing-method-explorer/kits-and-arrays/chart.html</a></p>
+<p><img src="/2019/11/24/lncRNA-chromatin相互作用的全面分析揭示了lncRNA通过结合不同的调控元件发挥功能/fig10.png" alt></p>
+</li>
+</ul>
+<blockquote>
+<p>CHART maps genomic binding sites of ncRNAs by isolating and sequencing the DNA regions where the crosslinked RNA-DNA-protein complexes are bound. CHART differs from other crosslinked-complex purification techniques, such as ChIRP, due to the use of biotinylated 24 nt oligonucleotides (C-oligos) that are highly sensitive and unique to the ncRNA of interest.</p>
+<p>An RNase H mapping assay is used to design the 24 nt sequence of the C-oligos. First, nuclei samples are crosslinked and fragmented. Next, C-oligos are hybridized to the complex and bound to streptavidin beads. The mixture is washed and the complex eluted. The DNA is isolated and sequenced, and the proteins involved in the complex are isolated and analyzed by Western blots.</p>
+<h6 id="Pros-1"><a href="#Pros-1" class="headerlink" title="Pros:"></a>Pros:</h6><ul>
+<li>Maps genomic binding sites of lncRNAs</li>
+<li>Simultaneously identify proteins associated with the lncRNA complex</li>
+</ul>
+<h6 id="Cons-1"><a href="#Cons-1" class="headerlink" title="Cons:"></a>Cons:</h6><ul>
+<li>Needs large amount of nuclei (1x109 cells)</li>
+</ul>
+</blockquote>
+<ul>
 <li>RAP-seq</li>
+</ul>
+<blockquote>
+<p>RAP isolates lncRNAs and maps the sequence of their target DNA through a probe-capture mechanism. First, the cells are crosslinked and lysed before DNase I chromatin digestion to 100–300 bp DNA fragments. Biotinylated RNA probes, antisense to the lncRNA, are hybridized and captured with streptavidin. The biotin-RNA probes are 120 nt and are tiled every 15 nt over the span of the lncRNA. The captured complexes are eluted and prepared for sequencing. RNA library preparation is done through RAP-RNA, and DNA library preparation by standard chromatin immuniprecipitation (ChIP).</p>
+<h6 id="Pros-2"><a href="#Pros-2" class="headerlink" title="Pros:"></a>Pros:</h6><ul>
+<li>Genomic mapping of lncRNA targets</li>
+<li>Possible to sequence RNA and DNA from the purification products</li>
+<li>Long RNA probe length provides high binding affinity to the target lncRNA1</li>
+<li>Minimal amplification steps during RNA sequencing after purification of the lncRNA complex</li>
+</ul>
+<h6 id="Cons-2"><a href="#Cons-2" class="headerlink" title="Cons:"></a>Cons:</h6><ul>
+<li>Requires RNA sequence to be known</li>
+</ul>
+</blockquote>
+<ul>
 <li>ChOP-seq</li>
 </ul>
+<blockquote>
+<p>Detection of RNA–DNA binding sites in long noncoding RNAs</p>
+<p><a href="https://doi.org/10.1093/nar/gkz037" target="_blank" rel="noopener">https://doi.org/10.1093/nar/gkz037</a></p>
 </blockquote>
 <hr>
 <p><strong>鉴定lncRNA结合位点</strong></p>
 <ul>
 <li><p><strong>方法</strong></p>
-<p>West et al. [20]</p>
+<blockquote>
+<p>方法参考文献：West, J.A., et al., The long noncoding RNAs NEAT1 and MALAT1 bind active chromatin sites. Mol Cell, 2014. 55(5): p. 791-802.</p>
+</blockquote>
+<p>文章中认为lncRNA的结合位点即lncRNA-chromatin interaction对个数，方法是参考以上文献，该文献利用CHART-seq技术鉴定lncRNA结合位点以及相互作用的蛋白质。</p>
 </li>
 <li><p><strong>结果</strong></p>
 <p>去除掉缺少“even”和“odd”样本的lncRNA、低富集度和在GENCODE v27中缺乏注释的lncRNA，最终在人类和鼠中分别鉴定到77,031和111,616个lncRNA-chromatin interaction（lncRNA-chromatin interaction可以理解为lncRNA结合位点）。</p>
@@ -479,15 +535,20 @@
 <ul>
 <li><strong>方法</strong></li>
 </ul>
+<p>基因组分布特征即在启动子、远端等区域的结合，Homer软件注释可以得到该结果，ChIPseeker也可以做类似的分析。</p>
 <ul>
 <li><strong>结果</strong></li>
 </ul>
-<p>大多lncRNA的结合位点位于其最邻近基因的转录起始位点（TSS）的远端（Distal）区域</p>
+<p>大多lncRNA的结合位点位于其最邻近基因的转录起始位点（TSS）的远端（Distal）区域。该结论在多个研究中都有提及，lncRNA大部分是位于其转录位点的远端区域，与蛋白质相互作用的方式通常是反式作用。</p>
 <p><img src="/2019/11/24/lncRNA-chromatin相互作用的全面分析揭示了lncRNA通过结合不同的调控元件发挥功能/fig3.png" style="zoom:50%;"></p>
 <p><strong>lnCRANs结合位点的保守性</strong></p>
 <ul>
 <li><p><strong>方法</strong></p>
-<p>Phaetons score</p>
+<p>保守性评估采用的是2005年发表的方法——phastCons,这篇文章至今已有3000+的引用，该模型是基于一个二态系统发育隐马尔可夫模型（phylo HMM），phastCons通过最大似然法拟合一个phylo HMM的数值，跨物种校准模型，然后基于该模型预测保守元件</p>
+<blockquote>
+<p>文献：doi: <a href="https://dx.doi.org/10.1101%2Fgr.3715005" target="_blank" rel="noopener">10.1101/gr.3715005</a> ； PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/16024819" target="_blank" rel="noopener">16024819</a></p>
+<p>Evolutionarily conserved elements in vertebrate, insect, worm, and yeast genomes.</p>
+</blockquote>
 </li>
 <li><p><strong>结果</strong></p>
 <p>他们发现人类的lncRNAs结合位点与DHSs（DNase I hypersensitive sites）相比有更高的保守性。</p>
@@ -507,7 +568,12 @@
 <p><strong>lncRNA结合位点与表观修饰的关联</strong></p>
 <ul>
 <li><p><strong>方法</strong></p>
-<p>genome association tool (GAT) [26]</p>
+<p>genome association tool (GAT) : 该方法是评估两个基因组片段的相关性，如ChIP-seq和RNA-seq的重合的区域是否显著相关。</p>
+<blockquote>
+<p><strong>Motivation:</strong> A common question in genomic analysis is whether two sets of genomic intervals overlap significantly. This question arises, for example, when interpreting ChIP-Seq or RNA-Seq data in functional terms. Because genome organization is complex, answering this question is non-trivial.</p>
+<p><strong>Summary:</strong> We present Genomic Association Test (GAT), a tool for estimating the significance of overlap between multiple sets of genomic intervals. GAT implements a null model that the two sets of intervals are placed independently of one another, but allows each set’s density to depend on external variables, for example, isochore structure or chromosome identity. GAT estimates statistical significance based on simulation and controls for multiple tests using the false discovery rate.</p>
+<p><strong>Availability:</strong> GAT’s source code, documentation and tutorials are available at <a href="http://code.google.com/p/genomic-association-tester" target="_blank" rel="noopener">http://code.google.com/p/genomic-association-tester</a>.</p>
+</blockquote>
 </li>
 </ul>
 <p>  选择了5种组蛋白修饰数据类型:H3K4me3, H3K4me1,H3K27me3, H3K36me3, H3K27ac</p>
@@ -551,10 +617,9 @@
 <p><img src="/2019/11/24/lncRNA-chromatin相互作用的全面分析揭示了lncRNA通过结合不同的调控元件发挥功能/fig8.png" style="zoom:50%;"></p>
 <p><strong>lncRNA-target genes在人类肿瘤预后诊断中的应用</strong></p>
 <ul>
-<li><strong>方法</strong></li>
-</ul>
-<p>  生存分析</p>
-<ul>
+<li><p><strong>方法</strong></p>
+<p>生存分析: Kaplan-Meier method</p>
+</li>
 <li><p><strong>结果</strong></p>
 <p><img src="/2019/11/24/lncRNA-chromatin相互作用的全面分析揭示了lncRNA通过结合不同的调控元件发挥功能/fig9.png" style="zoom:50%;"></p>
 </li>
@@ -741,7 +806,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#文章信息"><span class="nav-number">1.</span> <span class="nav-text">文章信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主要内容"><span class="nav-number">2.</span> <span class="nav-text">主要内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文章思路"><span class="nav-number">3.</span> <span class="nav-text">文章思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据资源"><span class="nav-number">4.</span> <span class="nav-text">数据资源</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#文章信息"><span class="nav-number">1.</span> <span class="nav-text">文章信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主要内容"><span class="nav-number">2.</span> <span class="nav-text">主要内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文章思路"><span class="nav-number">3.</span> <span class="nav-text">文章思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据资源"><span class="nav-number">4.</span> <span class="nav-text">数据资源</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Pros"><span class="nav-number">4.0.0.1.</span> <span class="nav-text">Pros:</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Cons"><span class="nav-number">4.0.0.2.</span> <span class="nav-text">Cons:</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Pros-1"><span class="nav-number">4.0.0.3.</span> <span class="nav-text">Pros:</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Cons-1"><span class="nav-number">4.0.0.4.</span> <span class="nav-text">Cons:</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Pros-2"><span class="nav-number">4.0.0.5.</span> <span class="nav-text">Pros:</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Cons-2"><span class="nav-number">4.0.0.6.</span> <span class="nav-text">Cons:</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -775,7 +840,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">44.1k</span>
+    <span title="Site words total count">45.1k</span>
   
 </div>
 
@@ -795,7 +860,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共44.1k字</span>
+  <span class="post-count">博客全站共45.1k字</span>
 </div>
 
 
