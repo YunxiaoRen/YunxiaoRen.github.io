@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://yoursite.com/2019/12/12/%E7%8E%89%E7%B1%B3%E8%B5%A4%E9%9C%89%E7%83%AF%E9%85%AE%E5%AF%B9%E7%8C%AA%E5%B0%8F%E8%82%A0%E4%B8%8A%E7%9A%AE%E7%BB%86%E8%83%9E%E8%BD%AC%E5%BD%95%E7%BB%84%E5%92%8C%E6%9F%93%E8%89%B2%E8%B4%A8%E5%8F%AF%E5%8F%8A%E6%80%A7%E7%9A%84%E5%BD%B1%E5%93%8D/</loc>
+    <lastmod>2019-12-12</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2019/08/25/%E6%91%98%E8%A6%81-scRNAseq%E6%8E%A2%E7%A9%B6%E5%81%A5%E5%BA%B7%E4%BA%BA%E8%83%B0%E5%B2%9B%E5%92%8CT2D%E7%9A%84%E8%BD%AC%E5%BD%95%E7%BB%84%E5%9B%BE%E8%B0%B1/</loc>
+    <lastmod>2019-12-12</lastmod>
+  </url>  <url>
     <loc>http://yoursite.com/2019/11/24/lncRNA-chromatin%E7%9B%B8%E4%BA%92%E4%BD%9C%E7%94%A8%E7%9A%84%E5%85%A8%E9%9D%A2%E5%88%86%E6%9E%90%E6%8F%AD%E7%A4%BA%E4%BA%86lncRNA%E9%80%9A%E8%BF%87%E7%BB%93%E5%90%88%E4%B8%8D%E5%90%8C%E7%9A%84%E8%B0%83%E6%8E%A7%E5%85%83%E4%BB%B6%E5%8F%91%E6%8C%A5%E5%8A%9F%E8%83%BD/</loc>
     <lastmod>2019-12-12</lastmod>
   </url>  <url>
@@ -137,9 +143,6 @@
     <lastmod>2019-10-24</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2019/08/30/%E8%82%BF%E7%98%A4%E5%9F%BA%E8%B4%A8%E8%BE%B9%E7%95%8C%E7%9A%84%E9%85%B8%E6%80%A7%E5%BE%AE%E7%8E%AF%E5%A2%83%E4%B8%8E%E8%82%BF%E7%98%A4%E8%BF%81%E5%BE%99/</loc>
-    <lastmod>2019-10-24</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/2019/08/25/%E6%91%98%E8%A6%81-scRNAseq%E6%8E%A2%E7%A9%B6%E5%81%A5%E5%BA%B7%E4%BA%BA%E8%83%B0%E5%B2%9B%E5%92%8CT2D%E7%9A%84%E8%BD%AC%E5%BD%95%E7%BB%84%E5%9B%BE%E8%B0%B1/</loc>
     <lastmod>2019-10-24</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2019/08/25/%E6%91%98%E8%A6%81-scRNA-seq%E6%8E%A2%E7%A9%B6%E4%BA%BA%E8%83%B0%E8%85%BA%E8%BD%AC%E5%BD%95%E7%BB%84%E5%9B%BE%E8%B0%B1/</loc>

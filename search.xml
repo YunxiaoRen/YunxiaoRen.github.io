@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[玉米赤霉烯酮对猪小肠上皮细胞转录组和染色质可及性的影响]]></title>
+    <url>%2F2019%2F12%2F12%2F%E7%8E%89%E7%B1%B3%E8%B5%A4%E9%9C%89%E7%83%AF%E9%85%AE%E5%AF%B9%E7%8C%AA%E5%B0%8F%E8%82%A0%E4%B8%8A%E7%9A%AE%E7%BB%86%E8%83%9E%E8%BD%AC%E5%BD%95%E7%BB%84%E5%92%8C%E6%9F%93%E8%89%B2%E8%B4%A8%E5%8F%AF%E5%8F%8A%E6%80%A7%E7%9A%84%E5%BD%B1%E5%93%8D%2F</url>
+    <content type="text"><![CDATA[这篇文章主要想研究非编码RNA与染色质可及性对玉米赤霉烯酮对猪小肠上皮细胞的影响，思路较简单，分析也过于简单，文章也没有得到特定的结论。 题目：transcriptome and chromatin accessibility in porcine intestinal epithelial cells upon Zearalenone exposure 杂志：Scientific DATA 时间：Dec 3, 2019 链接: https://doi.org/10.1038/s41597-019-0313-1]]></content>
+      <tags>
+        <tag>ATACseq</tag>
+        <tag>文献摘要</tag>
+        <tag>lncRNA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[利用深度学习进行宏基因组物种分类]]></title>
     <url>%2F2019%2F11%2F25%2F%E5%88%A9%E7%94%A8%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E8%BF%9B%E8%A1%8C%E5%AE%8F%E5%9F%BA%E5%9B%A0%E7%BB%84%E7%89%A9%E7%A7%8D%E5%88%86%E7%B1%BB%2F</url>
     <content type="text"><![CDATA[一句话评价 深度学习在宏基因组分析的物种鉴定中的应用 文章信息 题目：DeepMicrobes: taxonomic classification for metagenomics with deep learning 杂志：BioRxiv 时间：Jul,8, 2019 链接: http://dx.doi.org/10.1101/694851 文章介绍： 物种分类是宏基因组分析中重要的一个环节，虽然有很多相关的工具。但是利用深度学习的框架进行物种鉴定分类的报道还相对较少，作者这里基于recurrent neural network的架构开发了DeepMicrobes用于物种分类研究，与其他工具相比发现DeepMicrobes的假阳性率相对较低。 软件地址：https://github.com/MicrobeLab/DeepMicrobes figure 每日文献摘要：第21篇 2019年11月25日 周一]]></content>
@@ -54,9 +64,9 @@
         <category>Data Sciences</category>
       </categories>
       <tags>
+        <tag>software</tag>
         <tag>single cell</tag>
         <tag>scRNA-seq</tag>
-        <tag>software</tag>
       </tags>
   </entry>
   <entry>
@@ -181,10 +191,10 @@
         <category>literature</category>
       </categories>
       <tags>
-        <tag>single cell</tag>
-        <tag>文献摘要</tag>
         <tag>ATACseq</tag>
         <tag>software</tag>
+        <tag>single cell</tag>
+        <tag>文献摘要</tag>
       </tags>
   </entry>
   <entry>
@@ -389,9 +399,9 @@
         <category>literature</category>
       </categories>
       <tags>
+        <tag>ATACseq</tag>
         <tag>single cell</tag>
         <tag>文献摘要</tag>
-        <tag>ATACseq</tag>
       </tags>
   </entry>
   <entry>
@@ -499,9 +509,9 @@
         <category>literature</category>
       </categories>
       <tags>
+        <tag>ATACseq</tag>
         <tag>single cell</tag>
         <tag>文献摘要</tag>
-        <tag>ATACseq</tag>
       </tags>
   </entry>
   <entry>
