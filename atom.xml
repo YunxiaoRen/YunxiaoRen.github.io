@@ -140,11 +140,11 @@
     </summary>
     
     
+      <category term="ATACseq" scheme="http://yoursite.com/tags/ATACseq/"/>
+    
       <category term="R" scheme="http://yoursite.com/tags/R/"/>
     
       <category term="visualization" scheme="http://yoursite.com/tags/visualization/"/>
-    
-      <category term="ATACseq" scheme="http://yoursite.com/tags/ATACseq/"/>
     
       <category term="ChIPseq" scheme="http://yoursite.com/tags/ChIPseq/"/>
     
@@ -500,9 +500,9 @@
     
       <category term="deep learning" scheme="http://yoursite.com/tags/deep-learning/"/>
     
-      <category term="metagenomics" scheme="http://yoursite.com/tags/metagenomics/"/>
-    
       <category term="AMR" scheme="http://yoursite.com/tags/AMR/"/>
+    
+      <category term="metagenomics" scheme="http://yoursite.com/tags/metagenomics/"/>
     
   </entry>
   
