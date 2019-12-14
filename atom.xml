@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-12-12T13:26:02.065Z</updated>
+  <updated>2019-12-14T10:03:48.421Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>深度学习揭示体内肿瘤的转移和抗体靶向治疗效率</title>
+    <link href="http://yoursite.com/2019/12/14/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%8F%AD%E7%A4%BA%E4%BD%93%E5%86%85%E8%82%BF%E7%98%A4%E7%9A%84%E8%BD%AC%E7%A7%BB%E5%92%8C%E6%8A%97%E4%BD%93%E9%9D%B6%E5%90%91%E6%B2%BB%E7%96%97%E6%95%88%E7%8E%87/"/>
+    <id>http://yoursite.com/2019/12/14/深度学习揭示体内肿瘤的转移和抗体靶向治疗效率/</id>
+    <published>2019-12-14T08:29:29.000Z</published>
+    <updated>2019-12-14T10:03:48.421Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>一句话评价</strong></p><p>基于透明化的成像技术和深度学习算法快速、准确检测微量肿瘤细胞的转移</p><p><strong>文章信息</strong></p><p>题目：Deep Learning Reveals Cancer Metastasis and Therapeutic Antibody Targeting in the Entire Body</p><p>杂志：Cell</p><p>时间：December 12, 2019</p><p>链接: <a href="https://doi.org/10.1016/j.cell.2019.11.013" target="_blank" rel="noopener">https://doi.org/10.1016/j.cell.2019.11.013</a></p><a id="more"></a><p><strong>文章介绍：</strong></p><p>肿瘤转移是癌症病人产生治疗抵抗和死亡率升高的一个原因，高效、准确的检测肿瘤的转移具有重要的意义。但是目前技术上有两方面的限制：一是成像技术，可以在体内准确检测所有肿瘤细胞转移的成像技术，二是缺乏对大规模图像数据进行快速、准确定量的算法。这项研究针对这两个瓶颈问题，开发了解决方案。</p><p>成像的原理主要是基于对荧光蛋白的标记，但是由于鼠体内很多组织有高度的自发荧光会干扰对单个肿瘤细胞或者少量细胞群的荧光信号检测。因此，他们采用使小鼠变得透明的<strong>vDISCO技术</strong>，使肿瘤细胞的荧光信号在透明的组织中增强超过100倍，从而既可以检测大规模的转移，也可以准确检测微量的转移。</p><blockquote><p><strong>vDISCO技术</strong>：一种压力驱动、基于纳米体的全身免疫标记技术，可将荧光蛋白的信号增强两个数量级。</p><p><a href="https://www.nature.com/articles/s41593-018-0301-3" target="_blank" rel="noopener">https://www.nature.com/articles/s41593-018-0301-3</a></p></blockquote><p>针对算法问题，他们基于卷积神经网络开发了<strong>DeepMACT</strong>(deep learning-enabled metastasis analysis in cleared tissue)的算法，可以自动化、快速的注释癌症转移的情况，以及抗体药物靶向的效率。</p><p>想进一步了解这个算法的可参考：<strong>DeepMACT handbook</strong>：<a href="http://discotechnologies.org/DeepMACT/" target="_blank" rel="noopener">http://discotechnologies.org/DeepMACT/</a></p><p><strong>figure</strong></p><p><img src="/2019/12/14/深度学习揭示体内肿瘤的转移和抗体靶向治疗效率/fig1.png" style="zoom:50%;"></p><p><strong>碎碎念</strong></p><p>透明化这种技术可以用于体内追踪药物、细胞转移等轨迹，用途太多了，再加上深度学习算法的加持，这篇文章不愧是cell封面文章。</p><blockquote><p>每日文献摘要：第24篇  2019年12月14日 周六</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;一句话评价&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;基于透明化的成像技术和深度学习算法快速、准确检测微量肿瘤细胞的转移&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;文章信息&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;题目：Deep Learning Reveals Cancer Metastasis and Therapeutic Antibody Targeting in the Entire Body&lt;/p&gt;
+&lt;p&gt;杂志：Cell&lt;/p&gt;
+&lt;p&gt;时间：December 12, 2019&lt;/p&gt;
+&lt;p&gt;链接: &lt;a href=&quot;https://doi.org/10.1016/j.cell.2019.11.013&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://doi.org/10.1016/j.cell.2019.11.013&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="literature" scheme="http://yoursite.com/categories/literature/"/>
+    
+    
+      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
+    
+      <category term="deep learning" scheme="http://yoursite.com/tags/deep-learning/"/>
+    
+  </entry>
   
   <entry>
     <title>单细胞多组学联合分析scRNAseq+scATACseq</title>
@@ -33,11 +63,11 @@
     </summary>
     
     
+      <category term="ATACseq" scheme="http://yoursite.com/tags/ATACseq/"/>
+    
       <category term="single cell" scheme="http://yoursite.com/tags/single-cell/"/>
     
       <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
-    
-      <category term="ATACseq" scheme="http://yoursite.com/tags/ATACseq/"/>
     
   </entry>
   
@@ -58,9 +88,9 @@
     </summary>
     
     
-      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
-    
       <category term="ATACseq" scheme="http://yoursite.com/tags/ATACseq/"/>
+    
+      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
     
       <category term="lncRNA" scheme="http://yoursite.com/tags/lncRNA/"/>
     
@@ -201,11 +231,11 @@
       <category term="Data Sciences" scheme="http://yoursite.com/categories/Data-Sciences/"/>
     
     
+      <category term="software" scheme="http://yoursite.com/tags/software/"/>
+    
       <category term="single cell" scheme="http://yoursite.com/tags/single-cell/"/>
     
       <category term="scRNA-seq" scheme="http://yoursite.com/tags/scRNA-seq/"/>
-    
-      <category term="software" scheme="http://yoursite.com/tags/software/"/>
     
   </entry>
   
@@ -526,13 +556,13 @@
       <category term="literature" scheme="http://yoursite.com/categories/literature/"/>
     
     
-      <category term="single cell" scheme="http://yoursite.com/tags/single-cell/"/>
-    
-      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
-    
       <category term="ATACseq" scheme="http://yoursite.com/tags/ATACseq/"/>
     
       <category term="software" scheme="http://yoursite.com/tags/software/"/>
+    
+      <category term="single cell" scheme="http://yoursite.com/tags/single-cell/"/>
+    
+      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
     
   </entry>
   
@@ -561,39 +591,6 @@
       <category term="每日英语" scheme="http://yoursite.com/tags/%E6%AF%8F%E6%97%A5%E8%8B%B1%E8%AF%AD/"/>
     
       <category term="学习资源" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>RNA速度-RNA velocity是什么</title>
-    <link href="http://yoursite.com/2019/11/01/RNA%E9%80%9F%E5%BA%A6-RNA-velocity%E6%98%AF%E4%BB%80%E4%B9%88/"/>
-    <id>http://yoursite.com/2019/11/01/RNA速度-RNA-velocity是什么/</id>
-    <published>2019-11-01T14:59:23.000Z</published>
-    <updated>2019-11-02T04:21:44.129Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>一句话评价</strong></p><p>通过动态模型评估细胞瞬间状态的RNA速度</p><p><strong>文章信息</strong></p><p>题目：Generalizing RNA velocity to transient cell states through dynamical modeling</p><p>杂志：bioRxiv</p><p>时间：Oct. 29,2019</p><p>链接: <a href="http://dx.doi.org/10.1101/820936" target="_blank" rel="noopener">http://dx.doi.org/10.1101/820936</a>.</p><p><strong>figure</strong></p><p>下图是作者利用该方法对胰腺内分泌发育构建的动态图谱</p><p><img src="/2019/11/01/RNA速度-RNA-velocity是什么/abstract.png" style="zoom:67%;"></p><a id="more"></a><p><strong>文章介绍：</strong></p><p>这篇文章介绍了利用一个新的模型—<strong>动态模型</strong>对细胞瞬间态的<strong>RNA速度（RNA velocity）</strong>进行评估计算。关键词动态模型和RNA速度，这里对动态模型的算法和实现过程暂不详细解释，主要了解<strong>RNA速度</strong>的概念和应用以及这篇文章中开发的方法的优点。</p><ul><li><strong>RNA velocity的概念</strong></li></ul><p><strong>RNA velocity, 我直译为RNA速度</strong>，这一概念是18年由瑞典卡罗林斯卡医学院的Sten Linnarsson和 Peter V. Kharchenko两个实验室提出的，相关研究成果发表Nature(<em>2018, August, Nature</em>)。RNA丰度是单个细胞状态的一个有力指标。单细胞测序技术可以灵敏、准确地揭示RNA的丰度。然而，这种方法仅能捕获在某个时间点的静态快照，使得分析随着时间动态变化的现象面临挑战（如胚胎发生或组织再生）。这里他们提出的<strong>RNA速度（RNA velocity）—可以理解为通过对unspliced(nascent) 和spliced(mature) mRNA丰度的评估在时间维度上揭示转录本动态变化的一个指标。</strong></p><ul><li><strong>RNA velocity应用</strong></li></ul><p>RNA velocity是一个转录本动态变化的指标，能预测细胞未来的状态变化。可以用于细胞分化、谱系发育、肿瘤微环境中细胞成分的动态变化等研究。张泽民老师实验室刚发表的肝癌免疫图谱的文章中就有通过RNA velocity的分析揭示肿瘤微环境中巨噬细胞的迁移(<em>2019,October,Cell</em>) （张老师实验室用的是Scanpy方法分析的RNA velocity）。</p><ul><li><strong>scVelo</strong>—以动态模型对细胞瞬间态的<strong>RNA velocity</strong>进行评估计算的方法</li></ul><p>回到这篇文章，作者认为现有的计算RNA velocity的模型在一些情况下存在不足，他称这种模型为<strong>稳态模型(steady-state model)</strong>, 这种模型有个两个基本的假设：即（i）在基因水平上，所有具有转录诱导、抑制和稳态mRNA水平的完整剪接动力学被捕捉到；（ii）在细胞水平上，所有基因具有共同的剪接率。但是，当一个种群包含多个具有不同动力学的异质亚种群时，这些假设常常被违背。</p><p>所以，他们开发的seVelo，一个基于<strong>似然的动力学模型(likelihood-based dynamical model)</strong>，它解决了以上提出的全基因转录动力学的问题，从而将RNA速度估计推广到瞬态系统和具有非均匀亚种群动力学的系统。scVelo提供了两种扩展：一种是包含二阶矩的随机模型，另一种是捕获全剪接动力学的动力学模型。与scanpy也兼容。</p><p>网址：scVelo: <a href="https://scvelo.org" target="_blank" rel="noopener">https://scvelo.org</a></p><p><strong>碎碎念</strong></p><p>评估科学研究的重要性通常有3方面：新的概念、新的方法、新的发现。18年Nature的那篇文章是提出了新的概念，这篇文章是开发了新的方法，我们还可以应用新的概念和新的方法，为自己关注的领域带来新的发现。</p><blockquote><p><strong>相关文献：</strong></p><ul><li>2018, August, Nature, RNA velocity of single cells：DOI: 10.1038/s41586-018-0414-6</li><li>2019, October,Cell,Landscape and Dynamics of Single Immune Cells in Hepatocellular Carcinoma. <a href="https://doi.org/10.1016/j.cell.2019.10.003" target="_blank" rel="noopener">https://doi.org/10.1016/j.cell.2019.10.003</a>. </li></ul></blockquote><blockquote><p>每日文献摘要：第14篇 2019年11月01日 周五</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;一句话评价&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;通过动态模型评估细胞瞬间状态的RNA速度&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;文章信息&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;题目：Generalizing RNA velocity to transient cell states through dynamical modeling&lt;/p&gt;
-&lt;p&gt;杂志：bioRxiv&lt;/p&gt;
-&lt;p&gt;时间：Oct. 29,2019&lt;/p&gt;
-&lt;p&gt;链接: &lt;a href=&quot;http://dx.doi.org/10.1101/820936&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://dx.doi.org/10.1101/820936&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;figure&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;下图是作者利用该方法对胰腺内分泌发育构建的动态图谱&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2019/11/01/RNA速度-RNA-velocity是什么/abstract.png&quot; style=&quot;zoom:67%;&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="literature" scheme="http://yoursite.com/categories/literature/"/>
-    
-    
-      <category term="single cell" scheme="http://yoursite.com/tags/single-cell/"/>
-    
-      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
     
   </entry>
   
