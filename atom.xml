@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-12-14T10:03:48.421Z</updated>
+  <updated>2019-12-14T10:10:40.676Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://yoursite.com/2019/12/14/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%8F%AD%E7%A4%BA%E4%BD%93%E5%86%85%E8%82%BF%E7%98%A4%E7%9A%84%E8%BD%AC%E7%A7%BB%E5%92%8C%E6%8A%97%E4%BD%93%E9%9D%B6%E5%90%91%E6%B2%BB%E7%96%97%E6%95%88%E7%8E%87/"/>
     <id>http://yoursite.com/2019/12/14/深度学习揭示体内肿瘤的转移和抗体靶向治疗效率/</id>
     <published>2019-12-14T08:29:29.000Z</published>
-    <updated>2019-12-14T10:03:48.421Z</updated>
+    <updated>2019-12-14T10:10:40.676Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>一句话评价</strong></p><p>基于透明化的成像技术和深度学习算法快速、准确检测微量肿瘤细胞的转移</p><p><strong>文章信息</strong></p><p>题目：Deep Learning Reveals Cancer Metastasis and Therapeutic Antibody Targeting in the Entire Body</p><p>杂志：Cell</p><p>时间：December 12, 2019</p><p>链接: <a href="https://doi.org/10.1016/j.cell.2019.11.013" target="_blank" rel="noopener">https://doi.org/10.1016/j.cell.2019.11.013</a></p><a id="more"></a><p><strong>文章介绍：</strong></p><p>肿瘤转移是癌症病人产生治疗抵抗和死亡率升高的一个原因，高效、准确的检测肿瘤的转移具有重要的意义。但是目前技术上有两方面的限制：一是成像技术，可以在体内准确检测所有肿瘤细胞转移的成像技术，二是缺乏对大规模图像数据进行快速、准确定量的算法。这项研究针对这两个瓶颈问题，开发了解决方案。</p><p>成像的原理主要是基于对荧光蛋白的标记，但是由于鼠体内很多组织有高度的自发荧光会干扰对单个肿瘤细胞或者少量细胞群的荧光信号检测。因此，他们采用使小鼠变得透明的<strong>vDISCO技术</strong>，使肿瘤细胞的荧光信号在透明的组织中增强超过100倍，从而既可以检测大规模的转移，也可以准确检测微量的转移。</p><blockquote><p><strong>vDISCO技术</strong>：一种压力驱动、基于纳米体的全身免疫标记技术，可将荧光蛋白的信号增强两个数量级。</p><p><a href="https://www.nature.com/articles/s41593-018-0301-3" target="_blank" rel="noopener">https://www.nature.com/articles/s41593-018-0301-3</a></p></blockquote><p>针对算法问题，他们基于卷积神经网络开发了<strong>DeepMACT</strong>(deep learning-enabled metastasis analysis in cleared tissue)的算法，可以自动化、快速的注释癌症转移的情况，以及抗体药物靶向的效率。</p><p>想进一步了解这个算法的可参考：<strong>DeepMACT handbook</strong>：<a href="http://discotechnologies.org/DeepMACT/" target="_blank" rel="noopener">http://discotechnologies.org/DeepMACT/</a></p><p><strong>figure</strong></p><p><img src="/2019/12/14/深度学习揭示体内肿瘤的转移和抗体靶向治疗效率/fig1.png" style="zoom:50%;"></p><p><strong>碎碎念</strong></p><p>透明化这种技术可以用于体内追踪药物、细胞转移等轨迹，用途太多了，再加上深度学习算法的加持，这篇文章不愧是cell封面文章。</p><blockquote><p>每日文献摘要：第24篇  2019年12月14日 周六</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<p><strong>一句话评价</strong></p><p>基于透明化的成像技术和深度学习算法快速、准确检测微量肿瘤细胞的转移</p><p><strong>文章信息</strong></p><p>题目：Deep Learning Reveals Cancer Metastasis and Therapeutic Antibody Targeting in the Entire Body</p><p>杂志：Cell</p><p>时间：December 12, 2019</p><p>链接: <a href="https://doi.org/10.1016/j.cell.2019.11.013" target="_blank" rel="noopener">https://doi.org/10.1016/j.cell.2019.11.013</a></p><p><img src="/2019/12/14/深度学习揭示体内肿瘤的转移和抗体靶向治疗效率/abstarct.jpg" alt></p><a id="more"></a><p><strong>文章介绍：</strong></p><p>肿瘤转移是癌症病人产生治疗抵抗和死亡率升高的一个原因，高效、准确的检测肿瘤的转移具有重要的意义。但是目前技术上有两方面的限制：一是成像技术，可以在体内准确检测所有肿瘤细胞转移的成像技术，二是缺乏对大规模图像数据进行快速、准确定量的算法。这项研究针对这两个瓶颈问题，开发了解决方案。</p><p>成像的原理主要是基于对荧光蛋白的标记，但是由于鼠体内很多组织有高度的自发荧光会干扰对单个肿瘤细胞或者少量细胞群的荧光信号检测。因此，他们采用使小鼠变得透明的<strong>vDISCO技术</strong>，使肿瘤细胞的荧光信号在透明的组织中增强超过100倍，从而既可以检测大规模的转移，也可以准确检测微量的转移。</p><blockquote><p><strong>vDISCO技术</strong>：一种压力驱动、基于纳米体的全身免疫标记技术，可将荧光蛋白的信号增强两个数量级。</p><p><a href="https://www.nature.com/articles/s41593-018-0301-3" target="_blank" rel="noopener">https://www.nature.com/articles/s41593-018-0301-3</a></p></blockquote><p>针对算法问题，他们基于卷积神经网络开发了<strong>DeepMACT</strong>(deep learning-enabled metastasis analysis in cleared tissue)的算法，可以自动化、快速的注释癌症转移的情况，以及抗体药物靶向的效率。</p><p>想进一步了解这个算法的可参考：<strong>DeepMACT handbook</strong>：<a href="http://discotechnologies.org/DeepMACT/" target="_blank" rel="noopener">http://discotechnologies.org/DeepMACT/</a></p><p><strong>figure</strong></p><p><img src="/2019/12/14/深度学习揭示体内肿瘤的转移和抗体靶向治疗效率/fig1.png" style="zoom:50%;"></p><p><strong>碎碎念</strong></p><p>透明化这种技术可以用于体内追踪药物、细胞转移等轨迹，用途太多了，再加上深度学习算法的加持，这篇文章不愧是cell封面文章。</p><blockquote><p>每日文献摘要：第24篇  2019年12月14日 周六</p></blockquote>]]></content>
     
     <summary type="html">
     
@@ -34,6 +34,7 @@
 &lt;p&gt;杂志：Cell&lt;/p&gt;
 &lt;p&gt;时间：December 12, 2019&lt;/p&gt;
 &lt;p&gt;链接: &lt;a href=&quot;https://doi.org/10.1016/j.cell.2019.11.013&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://doi.org/10.1016/j.cell.2019.11.013&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2019/12/14/深度学习揭示体内肿瘤的转移和抗体靶向治疗效率/abstarct.jpg&quot; alt&gt;&lt;/p&gt;
     
     </summary>
     
