@@ -33,11 +33,11 @@
     </summary>
     
     
-      <category term="ATACseq" scheme="http://yoursite.com/tags/ATACseq/"/>
-    
       <category term="single cell" scheme="http://yoursite.com/tags/single-cell/"/>
     
       <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
+    
+      <category term="ATACseq" scheme="http://yoursite.com/tags/ATACseq/"/>
     
   </entry>
   
@@ -58,9 +58,9 @@
     </summary>
     
     
-      <category term="ATACseq" scheme="http://yoursite.com/tags/ATACseq/"/>
-    
       <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
+    
+      <category term="ATACseq" scheme="http://yoursite.com/tags/ATACseq/"/>
     
       <category term="lncRNA" scheme="http://yoursite.com/tags/lncRNA/"/>
     
@@ -140,11 +140,11 @@
     </summary>
     
     
-      <category term="ATACseq" scheme="http://yoursite.com/tags/ATACseq/"/>
-    
       <category term="R" scheme="http://yoursite.com/tags/R/"/>
     
       <category term="visualization" scheme="http://yoursite.com/tags/visualization/"/>
+    
+      <category term="ATACseq" scheme="http://yoursite.com/tags/ATACseq/"/>
     
       <category term="ChIPseq" scheme="http://yoursite.com/tags/ChIPseq/"/>
     
@@ -201,11 +201,11 @@
       <category term="Data Sciences" scheme="http://yoursite.com/categories/Data-Sciences/"/>
     
     
-      <category term="software" scheme="http://yoursite.com/tags/software/"/>
-    
       <category term="single cell" scheme="http://yoursite.com/tags/single-cell/"/>
     
       <category term="scRNA-seq" scheme="http://yoursite.com/tags/scRNA-seq/"/>
+    
+      <category term="software" scheme="http://yoursite.com/tags/software/"/>
     
   </entry>
   
@@ -500,9 +500,9 @@
     
       <category term="deep learning" scheme="http://yoursite.com/tags/deep-learning/"/>
     
-      <category term="AMR" scheme="http://yoursite.com/tags/AMR/"/>
-    
       <category term="metagenomics" scheme="http://yoursite.com/tags/metagenomics/"/>
+    
+      <category term="AMR" scheme="http://yoursite.com/tags/AMR/"/>
     
   </entry>
   
@@ -526,13 +526,13 @@
       <category term="literature" scheme="http://yoursite.com/categories/literature/"/>
     
     
-      <category term="ATACseq" scheme="http://yoursite.com/tags/ATACseq/"/>
-    
-      <category term="software" scheme="http://yoursite.com/tags/software/"/>
-    
       <category term="single cell" scheme="http://yoursite.com/tags/single-cell/"/>
     
       <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
+    
+      <category term="ATACseq" scheme="http://yoursite.com/tags/ATACseq/"/>
+    
+      <category term="software" scheme="http://yoursite.com/tags/software/"/>
     
   </entry>
   

@@ -5,9 +5,9 @@
     <url>%2F2019%2F12%2F12%2F%E5%8D%95%E7%BB%86%E8%83%9E%E5%A4%9A%E7%BB%84%E5%AD%A6%E8%81%94%E5%90%88%E5%88%86%E6%9E%90scRNAseq-scATACseq%2F</url>
     <content type="text"><![CDATA[单细胞发展至今，多组学整合是其发展的一个方向，关于scRNAseq与scATACseq整合的方法也有很多文章报道，这篇文章是由表观学大牛任兵实验室开发的，主要优点体现在通量上，可用于并行分析数百万个单细胞转录组和可访问染色质。 一句话评价 单细胞ATAC-seq和RNA-seq联合分析方法 文章信息 题目：An ultra high-throughput method for single-cell joint analysis of open chromatin and transcriptome 杂志：NAtuRe StRuCtuRAL &amp; MoLeCuLAR BIoLogY 时间：2019，NOVEMBER 链接: www.nature.com/nsmb]]></content>
       <tags>
-        <tag>ATACseq</tag>
         <tag>single cell</tag>
         <tag>文献摘要</tag>
+        <tag>ATACseq</tag>
       </tags>
   </entry>
   <entry>
@@ -15,8 +15,8 @@
     <url>%2F2019%2F12%2F12%2F%E7%8E%89%E7%B1%B3%E8%B5%A4%E9%9C%89%E7%83%AF%E9%85%AE%E5%AF%B9%E7%8C%AA%E5%B0%8F%E8%82%A0%E4%B8%8A%E7%9A%AE%E7%BB%86%E8%83%9E%E8%BD%AC%E5%BD%95%E7%BB%84%E5%92%8C%E6%9F%93%E8%89%B2%E8%B4%A8%E5%8F%AF%E5%8F%8A%E6%80%A7%E7%9A%84%E5%BD%B1%E5%93%8D%2F</url>
     <content type="text"><![CDATA[这篇文章主要想研究非编码RNA与染色质可及性对玉米赤霉烯酮对猪小肠上皮细胞的影响，思路较简单，分析也过于简单，文章也没有得到特定的结论。思路如下图b所示，分析ATAC-seq得到peaks,然后注释peaks的基因，分析RNA-seq得到miRNA,lncRNA，然后预测这些非编码RNA的靶基因，并将非编码RNA的靶基因与peak注释到的基因整合，进行功能注释。 题目：transcriptome and chromatin accessibility in porcine intestinal epithelial cells upon Zearalenone exposure 杂志：Scientific DATA 时间：Dec 3, 2019 链接: https://doi.org/10.1038/s41597-019-0313-1]]></content>
       <tags>
-        <tag>ATACseq</tag>
         <tag>文献摘要</tag>
+        <tag>ATACseq</tag>
         <tag>lncRNA</tag>
       </tags>
   </entry>
@@ -47,9 +47,9 @@
     <url>%2F2019%2F11%2F23%2F%E5%A4%9A%E7%BB%84%E5%AD%A6%E6%95%B0%E6%8D%AE%E8%81%94%E5%90%88%E5%B1%95%E7%A4%BA%E3%80%81%E4%B8%94%E5%8F%AF%E4%BB%A5%E4%BA%A4%E4%BA%92%E7%9A%84%E5%9F%BA%E5%9B%A0%E7%BB%84%E6%B5%8F%E8%A7%88%E5%99%A8%E2%80%94%E2%80%94trackViewer%2F</url>
     <content type="text"><![CDATA[常见的可视化基因组track的Bioconductor package有rtracklayer 和 Gviz。rtracklayer提供了交互的基因组浏览器和相关tracks的注释；Gviz可以用于tracks覆盖度和注释的可视化。trackViewer是一个更轻量级的工具，且可以产生交互的可视化结果。可用于RNA-seq,ChIP-seq/ATAC-seq,miRNA-seq,DNA-seq,methylation等各种NGS组学数据的覆盖度和注释tracks的可视化展示，而且可以绘制发表级的棒棒糖图和蒲公英图。 先展示下极好看可视化效果 使用方法可以参考文档： 详细文档：http://127.0.0.1:31580/library/trackViewer/doc/trackViewer.html Web app: https://github.com/jianhong/trackViewer.documentation/tree/master/trackViewerShinyApp]]></content>
       <tags>
-        <tag>ATACseq</tag>
         <tag>R</tag>
         <tag>visualization</tag>
+        <tag>ATACseq</tag>
         <tag>ChIPseq</tag>
       </tags>
   </entry>
@@ -74,9 +74,9 @@
         <category>Data Sciences</category>
       </categories>
       <tags>
-        <tag>software</tag>
         <tag>single cell</tag>
         <tag>scRNA-seq</tag>
+        <tag>software</tag>
       </tags>
   </entry>
   <entry>
@@ -189,8 +189,8 @@
       <tags>
         <tag>文献摘要</tag>
         <tag>deep learning</tag>
-        <tag>AMR</tag>
         <tag>metagenomics</tag>
+        <tag>AMR</tag>
       </tags>
   </entry>
   <entry>
@@ -201,10 +201,10 @@
         <category>literature</category>
       </categories>
       <tags>
-        <tag>ATACseq</tag>
-        <tag>software</tag>
         <tag>single cell</tag>
         <tag>文献摘要</tag>
+        <tag>ATACseq</tag>
+        <tag>software</tag>
       </tags>
   </entry>
   <entry>
@@ -409,9 +409,9 @@
         <category>literature</category>
       </categories>
       <tags>
-        <tag>ATACseq</tag>
         <tag>single cell</tag>
         <tag>文献摘要</tag>
+        <tag>ATACseq</tag>
       </tags>
   </entry>
   <entry>
@@ -519,9 +519,9 @@
         <category>literature</category>
       </categories>
       <tags>
-        <tag>ATACseq</tag>
         <tag>single cell</tag>
         <tag>文献摘要</tag>
+        <tag>ATACseq</tag>
       </tags>
   </entry>
   <entry>
