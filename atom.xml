@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-12-29T02:11:40.937Z</updated>
+  <updated>2019-12-29T02:14:52.306Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,26 +21,28 @@
     <link href="http://yoursite.com/2019/12/29/%E6%96%B0%E7%9A%84%E9%99%8D%E7%BB%B4%E5%8F%AF%E8%A7%86%E5%8C%96%E6%96%B9%E6%B3%95/"/>
     <id>http://yoursite.com/2019/12/29/新的降维可视化方法/</id>
     <published>2019-12-29T02:04:27.000Z</published>
-    <updated>2019-12-29T02:11:40.937Z</updated>
+    <updated>2019-12-29T02:14:52.306Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>一句话评价</strong></p><p><strong>新的高维数据结构和模式的可视化方法——PHATE</strong></p><p><strong>文章信息</strong></p><p>题目：Visualizing structure and transitions in high-dimensional biological data</p><p>杂志：Nature biotechnology</p><p>时间：3 December,2019</p><p>链接: <a href="https://www.nature.com/articles/s41587-019-0336-3" target="_blank" rel="noopener">https://www.nature.com/articles/s41587-019-0336-3</a></p><p><strong>figure</strong></p><p><img src="/2019/12/29/新的降维可视化方法/0-20191228212010064.png" style="zoom:50%;"></p><p><strong>文章介绍：</strong></p><p>这篇文章提出常见的降维方法如PCA, t-SNE等方法存在对噪音敏感（PCA, Isomap)、扰乱数据结构(t-SNE)、没有为二维可视化优化（PCA &amp; diffusion maps)，计算资源消耗大、依赖于先验知识等不足，他们提出了一种利用数据点之间的信息几何距离(information-geometric distance)同时捕捉局部和全局的非线性结构的可视化方法——PHATE(potential of heat diffusion for affinity-based transition embedding)。与其他常见的降维方法相比，该方法能够更好的保持数据中的一系列结构模式，包括连续的发展进程、分支结构、簇的结构（clusters）。此外，他们定义了一个叫DEMaP的度量，可以更好的去噪。他们在实际数据中验证了该方法的有效性，并且可用于质谱数据、单细胞数据、Hi-C数据、肠道微生物等多种数据类型。</p><blockquote><p>每日文献摘要：第26篇 2019年12月29日 周日</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<p><strong>一句话评价</strong></p><p><strong>新的高维数据结构和模式的可视化方法——PHATE</strong></p><p><strong>文章信息</strong></p><p>题目：Visualizing structure and transitions in high-dimensional biological data</p><p>杂志：Nature biotechnology</p><p>时间：3 December,2019</p><p>链接: <a href="https://www.nature.com/articles/s41587-019-0336-3" target="_blank" rel="noopener">https://www.nature.com/articles/s41587-019-0336-3</a></p><p><strong>figure</strong></p><p><img src="/2019/12/29/新的降维可视化方法/0-20191228212010064.png" style="zoom: 33%;"></p><a id="more"></a><p><strong>文章介绍：</strong></p><p>这篇文章提出常见的降维方法如PCA, t-SNE等方法存在对噪音敏感（PCA, Isomap)、扰乱数据结构(t-SNE)、没有为二维可视化优化（PCA &amp; diffusion maps)，计算资源消耗大、依赖于先验知识等不足，他们提出了一种利用数据点之间的信息几何距离(information-geometric distance)同时捕捉局部和全局的非线性结构的可视化方法——PHATE(potential of heat diffusion for affinity-based transition embedding)。与其他常见的降维方法相比，该方法能够更好的保持数据中的一系列结构模式，包括连续的发展进程、分支结构、簇的结构（clusters）。此外，他们定义了一个叫DEMaP的度量，可以更好的去噪。他们在实际数据中验证了该方法的有效性，并且可用于质谱数据、单细胞数据、Hi-C数据、肠道微生物等多种数据类型。</p><blockquote><p>每日文献摘要：第26篇 2019年12月29日 周日</p></blockquote>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;&lt;strong&gt;一句话评价&lt;/strong&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;一句话评价&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;新的高维数据结构和模式的可视化方法——PHATE&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;文章信息&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;题目：Visualizing structure and 
-      
+&lt;p&gt;题目：Visualizing structure and transitions in high-dimensional biological data&lt;/p&gt;
+&lt;p&gt;杂志：Nature biotechnology&lt;/p&gt;
+&lt;p&gt;时间：3 December,2019&lt;/p&gt;
+&lt;p&gt;链接: &lt;a href=&quot;https://www.nature.com/articles/s41587-019-0336-3&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.nature.com/articles/s41587-019-0336-3&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;figure&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2019/12/29/新的降维可视化方法/0-20191228212010064.png&quot; style=&quot;zoom: 33%;&quot;&gt;&lt;/p&gt;
     
     </summary>
     
     
-      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
-    
       <category term="software" scheme="http://yoursite.com/tags/software/"/>
+    
+      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
     
       <category term="降维" scheme="http://yoursite.com/tags/%E9%99%8D%E7%BB%B4/"/>
     
@@ -51,19 +53,21 @@
     <link href="http://yoursite.com/2019/12/28/%E5%8D%95%E7%BB%86%E8%83%9ERNA-seq%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B%E7%9A%84%E7%B3%BB%E7%BB%9F%E8%AF%84%E4%BC%B0/"/>
     <id>http://yoursite.com/2019/12/28/单细胞RNA-seq分析流程的系统评估/</id>
     <published>2019-12-28T11:46:35.000Z</published>
-    <updated>2019-12-29T02:11:25.176Z</updated>
+    <updated>2019-12-29T02:14:24.507Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>一句话评价</strong></p><p>scRNA-seq分析流程大比拼</p><p><strong>文章信息</strong></p><p>题目：A systematic evaluation of single cell RNA-seq analysis pipelines</p><p>杂志：Nature Communication</p><p>时间：11, October, 2019</p><p>链接: <a href="https://doi.org/10.1038/s41467-019-12266-7" target="_blank" rel="noopener">https://doi.org/10.1038/s41467-019-12266-7</a></p><p><strong>figure</strong></p><p><img src="/2019/12/28/单细胞RNA-seq分析流程的系统评估/fig1.png" style="zoom:50%;"></p><p><strong>文章介绍：</strong></p><p>单细胞RNA-seq是单细胞领域较为成熟的技术，相关的实验方法和计算方法也不断被开发，面临着越来越多的方法和工具，如何选择合适的最佳流程呢？这篇文章从单细胞建库方法，比对、imputation、标准化和差异方法共评估约3000个组合流程。评价结果可以作为选择最佳分析流程的一个参考，不过所谓的最佳流程并不是以一概全指某个特定流程，而是要根据实际研究目的，选择合适的实验方法和分析方法。</p><p>另外还可以参考前不久发表的单细胞RNA-seq最佳分析流程：Current best practices in single‐cell RNA‐seq analysis: a tutorial (<a href="https://doi.org/10.15252/msb.20188746" target="_blank" rel="noopener">https://doi.org/10.15252/msb.20188746</a>)</p><blockquote><p>每日文献摘要：第25篇 2019年12月29日 周日</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<p><strong>一句话评价</strong></p><p>scRNA-seq分析流程大比拼</p><p><strong>文章信息</strong></p><p>题目：A systematic evaluation of single cell RNA-seq analysis pipelines</p><p>杂志：Nature Communication</p><p>时间：11, October, 2019</p><p>链接: <a href="https://doi.org/10.1038/s41467-019-12266-7" target="_blank" rel="noopener">https://doi.org/10.1038/s41467-019-12266-7</a></p><p><strong>figure</strong></p><p><img src="/2019/12/28/单细胞RNA-seq分析流程的系统评估/fig1.png" style="zoom: 33%;"></p><a id="more"></a><p><strong>文章介绍：</strong></p><p>单细胞RNA-seq是单细胞领域较为成熟的技术，相关的实验方法和计算方法也不断被开发，面临着越来越多的方法和工具，如何选择合适的最佳流程呢？这篇文章从单细胞建库方法，比对、imputation、标准化和差异方法共评估约3000个组合流程。评价结果可以作为选择最佳分析流程的一个参考，不过所谓的最佳流程并不是以一概全指某个特定流程，而是要根据实际研究目的，选择合适的实验方法和分析方法。</p><p>另外还可以参考前不久发表的单细胞RNA-seq最佳分析流程：Current best practices in single‐cell RNA‐seq analysis: a tutorial (<a href="https://doi.org/10.15252/msb.20188746" target="_blank" rel="noopener">https://doi.org/10.15252/msb.20188746</a>)</p><blockquote><p>每日文献摘要：第25篇 2019年12月29日 周日</p></blockquote>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;&lt;strong&gt;一句话评价&lt;/strong&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;一句话评价&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;scRNA-seq分析流程大比拼&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;文章信息&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;题目：A systematic evaluation of single cell RNA-seq anal
-      
+&lt;p&gt;题目：A systematic evaluation of single cell RNA-seq analysis pipelines&lt;/p&gt;
+&lt;p&gt;杂志：Nature Communication&lt;/p&gt;
+&lt;p&gt;时间：11, October, 2019&lt;/p&gt;
+&lt;p&gt;链接: &lt;a href=&quot;https://doi.org/10.1038/s41467-019-12266-7&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://doi.org/10.1038/s41467-019-12266-7&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;figure&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2019/12/28/单细胞RNA-seq分析流程的系统评估/fig1.png&quot; style=&quot;zoom: 33%;&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -153,11 +157,11 @@
     </summary>
     
     
+      <category term="ATACseq" scheme="http://yoursite.com/tags/ATACseq/"/>
+    
       <category term="single cell" scheme="http://yoursite.com/tags/single-cell/"/>
     
       <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
-    
-      <category term="ATACseq" scheme="http://yoursite.com/tags/ATACseq/"/>
     
   </entry>
   
@@ -178,9 +182,9 @@
     </summary>
     
     
-      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
-    
       <category term="ATACseq" scheme="http://yoursite.com/tags/ATACseq/"/>
+    
+      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
     
       <category term="lncRNA" scheme="http://yoursite.com/tags/lncRNA/"/>
     
@@ -321,11 +325,11 @@
       <category term="Data Sciences" scheme="http://yoursite.com/categories/Data-Sciences/"/>
     
     
+      <category term="software" scheme="http://yoursite.com/tags/software/"/>
+    
       <category term="single cell" scheme="http://yoursite.com/tags/single-cell/"/>
     
       <category term="scRNA-seq" scheme="http://yoursite.com/tags/scRNA-seq/"/>
-    
-      <category term="software" scheme="http://yoursite.com/tags/software/"/>
     
   </entry>
   
