@@ -150,12 +150,25 @@
     <link href="http://yoursite.com/2019/12/29/%E5%8D%95%E7%BB%86%E8%83%9E%E5%88%86%E6%9E%90%E7%9B%B8%E5%85%B3R%E5%8C%85%E6%B1%87%E6%80%BB/"/>
     <id>http://yoursite.com/2019/12/29/单细胞分析相关R包汇总/</id>
     <published>2019-12-29T02:31:22.000Z</published>
-    <updated>2019-12-29T02:31:22.271Z</updated>
+    <updated>2019-12-29T05:45:25.379Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>文章介绍：</strong></p><p>Bioconductor是一个针对生物数据分析的以R语言开发的开源软件库，从2001年项目开始至今，提供了很多优秀的分析流程，如bulk-RNA-seq的分析流程，文档非常详细。如今出手整理了单细胞分析的流程，包括软件安装、数据导入、单细胞数据储存、格式转换为下游分析的数据、下游分析、可视化等，非常详细，另外他们提供了<strong>在线book：<a href="https://osca.bioconductor" target="_blank" rel="noopener">https://osca.bioconductor</a> </strong>.，想上手学习单细胞分析的以本书作为一个入门是一个不错的选择。</p><p><strong>figure</strong></p><p><img src="/2019/12/29/单细胞分析相关R包汇总/fig1.png" style="zoom:50%;"></p><a id="more"></a><p><strong>文章信息</strong></p><p>题目：Orchestrating single-cell analysis with Bioconductor</p><p>杂志：Nature Methods</p><p>时间：02, December, 2019</p><p>链接: <a href="https://www.nature.com/articles/s41592-019-0654-x" target="_blank" rel="noopener">https://www.nature.com/articles/s41592-019-0654-x</a></p><p>每日文献摘要：第X篇  2019年12月29日 周日</p>]]></content>
     
     <summary type="html">
     
+      &lt;p&gt;&lt;strong&gt;文章介绍：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Bioconductor是一个针对生物数据分析的以R语言开发的开源软件库，从2001年项目开始至今，提供了很多优秀的分析流程，如bulk-RNA-seq的分析流程，文档非常详细。如今出手整理了单细胞分析的流程，包括软件安装、数据导入、单细胞数据储存、格式转换为下游分析的数据、下游分析、可视化等，非常详细，另外他们提供了&lt;strong&gt;在线book：&lt;a href=&quot;https://osca.bioconductor&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://osca.bioconductor&lt;/a&gt; &lt;/strong&gt;.，想上手学习单细胞分析的以本书作为一个入门是一个不错的选择。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;figure&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2019/12/29/单细胞分析相关R包汇总/fig1.png&quot; style=&quot;zoom:50%;&quot;&gt;&lt;/p&gt;
+    
     </summary>
     
+    
+      <category term="single cell" scheme="http://yoursite.com/tags/single-cell/"/>
+    
+      <category term="R" scheme="http://yoursite.com/tags/R/"/>
+    
+      <category term="softawre" scheme="http://yoursite.com/tags/softawre/"/>
     
   </entry>
   
@@ -273,9 +286,9 @@
     
       <category term="single cell" scheme="http://yoursite.com/tags/single-cell/"/>
     
-      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
-    
       <category term="scRNA-seq" scheme="http://yoursite.com/tags/scRNA-seq/"/>
+    
+      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
     
   </entry>
   
