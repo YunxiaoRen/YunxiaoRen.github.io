@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-12-29T02:14:52.306Z</updated>
+  <updated>2019-12-29T04:35:29.280Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,183 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>利用多组学数据预测药物组合的驱动网络标记物</title>
+    <link href="http://yoursite.com/2019/12/29/%E5%88%A9%E7%94%A8%E5%A4%9A%E7%BB%84%E5%AD%A6%E6%95%B0%E6%8D%AE%E9%A2%84%E6%B5%8B%E8%8D%AF%E7%89%A9%E7%BB%84%E5%90%88%E7%9A%84%E9%A9%B1%E5%8A%A8%E7%BD%91%E7%BB%9C%E6%A0%87%E8%AE%B0%E7%89%A9/"/>
+    <id>http://yoursite.com/2019/12/29/利用多组学数据预测药物组合的驱动网络标记物/</id>
+    <published>2019-12-29T02:47:14.000Z</published>
+    <updated>2019-12-29T04:35:29.280Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>文章介绍：</strong></p><p>药物组合不仅可能同时抑制多种肿瘤的驱动信号通路，而且有可能减少药物抵抗性。这篇文章介绍了一个利用多组学数据开发的工具——<strong>DrugComboExplorer</strong>，鉴定药物组合的驱动信号通路，并预测药物组合的协同作用。</p><p>该工具通过处理来自单个癌症患者的DNA测序、基因拷贝数、DNA甲基化和RNA序列数据，使用整合的算法（包括bootstrap aggregating-based Markov random field，WGCNA,监督调控网络学习）流程产生驱动信号网络。</p><p>DrugComboExplorer is available at <a href="https://github.com/Roosevelt-" target="_blank" rel="noopener">https://github.com/Roosevelt-</a> PKU/drugcombinationprediction.</p><p><strong>figure</strong></p><p><img src="/2019/12/29/利用多组学数据预测药物组合的驱动网络标记物/fig.png" style="zoom:50%;"></p><a id="more"></a><p><strong>文章信息</strong></p><p>题目：Driver network as a biomarker: systematic integration and network modeling of multi-omics data to derive driver signaling pathways for drug combination prediction</p><p>杂志：Bioinformatics,</p><p>时间：15 February 2019</p><p>链接: doi: 10.1093/bioinformatics/btz109</p><blockquote><p>每日文献摘要：第27篇  2019年12月29日 周日</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;文章介绍：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;药物组合不仅可能同时抑制多种肿瘤的驱动信号通路，而且有可能减少药物抵抗性。这篇文章介绍了一个利用多组学数据开发的工具——&lt;strong&gt;DrugComboExplorer&lt;/strong&gt;，鉴定药物组合的驱动信号通路，并预测药物组合的协同作用。&lt;/p&gt;
+&lt;p&gt;该工具通过处理来自单个癌症患者的DNA测序、基因拷贝数、DNA甲基化和RNA序列数据，使用整合的算法（包括bootstrap aggregating-based Markov random field，WGCNA,监督调控网络学习）流程产生驱动信号网络。&lt;/p&gt;
+&lt;p&gt;DrugComboExplorer is available at &lt;a href=&quot;https://github.com/Roosevelt-&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/Roosevelt-&lt;/a&gt; PKU/drugcombinationprediction.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;figure&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2019/12/29/利用多组学数据预测药物组合的驱动网络标记物/fig.png&quot; style=&quot;zoom:50%;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>利用全基因组组织表达谱预测疾病相关lncRNA</title>
+    <link href="http://yoursite.com/2019/12/29/%E5%88%A9%E7%94%A8%E5%85%A8%E5%9F%BA%E5%9B%A0%E7%BB%84%E7%BB%84%E7%BB%87%E8%A1%A8%E8%BE%BE%E8%B0%B1%E9%A2%84%E6%B5%8B%E7%96%BE%E7%97%85%E7%9B%B8%E5%85%B3lncRNA/"/>
+    <id>http://yoursite.com/2019/12/29/利用全基因组组织表达谱预测疾病相关lncRNA/</id>
+    <published>2019-12-29T02:43:16.000Z</published>
+    <updated>2019-12-29T04:36:08.110Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>文章介绍：</strong></p><p>基于机器学习的方法——<strong>DislncRF</strong>，根据组织表达谱从全基因组范围预测疾病相关的lncRNA。<strong>DislncRF</strong>是基于随机森林模型训练已知的与疾病相关的蛋白编码基因（protein-coding genes ，PCGs），从而提取疾病与表达谱的一般模式，然后应用到lncRNA与疾病的关联中，</p><p>代码：<a href="https://github.com/xypan1232/DislncRF" target="_blank" rel="noopener">https://github.com/xypan1232/DislncRF</a></p><p><strong>figure</strong></p><p><img src="/2019/12/29/利用全基因组组织表达谱预测疾病相关lncRNA/fig1.png" style="zoom:50%;"></p><a id="more"></a><p><strong>文章信息</strong></p><p>题目：Inferring disease-associated long non-coding RNAs using genome-wide tissue expression profiles</p><p>杂志：Bioinformatics</p><p>时间：2018</p><p>链接: doi.10.1093/bioinformatics/xxxxxx</p><p><strong>碎碎念</strong></p><p>利用蛋白编码基因与疾病的模式训练模型，然后预测lncRNA与疾病的关联，这样选训练集可靠吗？</p><blockquote><p>每日文献摘要：第28篇  2019年12月29日 周日</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;文章介绍：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;基于机器学习的方法——&lt;strong&gt;DislncRF&lt;/strong&gt;，根据组织表达谱从全基因组范围预测疾病相关的lncRNA。&lt;strong&gt;DislncRF&lt;/strong&gt;是基于随机森林模型训练已知的与疾病相关的蛋白编码基因（protein-coding genes ，PCGs），从而提取疾病与表达谱的一般模式，然后应用到lncRNA与疾病的关联中，&lt;/p&gt;
+&lt;p&gt;代码：&lt;a href=&quot;https://github.com/xypan1232/DislncRF&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/xypan1232/DislncRF&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;figure&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2019/12/29/利用全基因组组织表达谱预测疾病相关lncRNA/fig1.png&quot; style=&quot;zoom:50%;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
+    
+      <category term="lncRNA" scheme="http://yoursite.com/tags/lncRNA/"/>
+    
+      <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>利用多组学数据重构调控网络</title>
+    <link href="http://yoursite.com/2019/12/29/%E5%88%A9%E7%94%A8%E5%A4%9A%E7%BB%84%E5%AD%A6%E6%95%B0%E6%8D%AE%E9%87%8D%E6%9E%84%E8%B0%83%E6%8E%A7%E7%BD%91%E7%BB%9C/"/>
+    <id>http://yoursite.com/2019/12/29/利用多组学数据重构调控网络/</id>
+    <published>2019-12-29T02:36:25.000Z</published>
+    <updated>2019-12-29T04:36:03.911Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>文章介绍：</strong></p><p>随着测序技术的发展，生命组学数据和医学数据爆炸式增长，单一组学指标并不能够充分反映疾病或正常的生命发育机制，结合多组学从不同层面揭示调控机制将有助于我们更精确的认识生命过程和疾病病因。这篇综述使用<strong>state-of-the-art techniques</strong>方法概括了调控网络重构的方法，为挖掘多组学数据（基因组、转录组、蛋白质组等）和其他生物数据背后的意义提供了参考。</p><p><strong>figure</strong></p><p>数据整合策略：</p><p><img src="/2019/12/29/利用多组学数据重构调控网络/fig2.png" style="zoom:50%;"></p><a id="more"></a><p>数据整合方法：</p><p><img src="/2019/12/29/利用多组学数据重构调控网络/fig1.png" style="zoom:50%;"></p><p><strong>文章信息</strong></p><p>题目：Integrative approaches to reconstruct regulatory networks from multi-omics T data: A review of state-of-the-art methods</p><p>杂志：Computational Biology and Chemistry</p><p>时间：August, 2019</p><p>链接: <a href="https://doi.org/10.1016/j.compbiolchem.2019.107120" target="_blank" rel="noopener">https://doi.org/10.1016/j.compbiolchem.2019.107120</a></p><p>每日文献摘要：第29篇  2019年12月29日 周日</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;文章介绍：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;随着测序技术的发展，生命组学数据和医学数据爆炸式增长，单一组学指标并不能够充分反映疾病或正常的生命发育机制，结合多组学从不同层面揭示调控机制将有助于我们更精确的认识生命过程和疾病病因。这篇综述使用&lt;strong&gt;state-of-the-art techniques&lt;/strong&gt;方法概括了调控网络重构的方法，为挖掘多组学数据（基因组、转录组、蛋白质组等）和其他生物数据背后的意义提供了参考。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;figure&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;数据整合策略：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2019/12/29/利用多组学数据重构调控网络/fig2.png&quot; style=&quot;zoom:50%;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="multi-omics" scheme="http://yoursite.com/tags/multi-omics/"/>
+    
+      <category term="regulation network" scheme="http://yoursite.com/tags/regulation-network/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>深度学习在遗传变异和表观调控中的应用</title>
+    <link href="http://yoursite.com/2019/12/29/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9C%A8%E9%81%97%E4%BC%A0%E5%8F%98%E5%BC%82%E5%92%8C%E8%A1%A8%E8%A7%82%E8%B0%83%E6%8E%A7%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/"/>
+    <id>http://yoursite.com/2019/12/29/深度学习在遗传变异和表观调控中的应用/</id>
+    <published>2019-12-29T02:34:47.000Z</published>
+    <updated>2019-12-29T02:34:47.087Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>非编码RNA数据库</title>
+    <link href="http://yoursite.com/2019/12/29/%E9%9D%9E%E7%BC%96%E7%A0%81RNA%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    <id>http://yoursite.com/2019/12/29/非编码RNA数据库/</id>
+    <published>2019-12-29T02:32:10.000Z</published>
+    <updated>2019-12-29T02:32:10.869Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>单细胞分析相关R包汇总</title>
+    <link href="http://yoursite.com/2019/12/29/%E5%8D%95%E7%BB%86%E8%83%9E%E5%88%86%E6%9E%90%E7%9B%B8%E5%85%B3R%E5%8C%85%E6%B1%87%E6%80%BB/"/>
+    <id>http://yoursite.com/2019/12/29/单细胞分析相关R包汇总/</id>
+    <published>2019-12-29T02:31:22.000Z</published>
+    <updated>2019-12-29T02:31:22.271Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>深度学习在药物基因组学中的学习和数据资源</title>
+    <link href="http://yoursite.com/2019/12/29/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9C%A8%E8%8D%AF%E7%89%A9%E5%9F%BA%E5%9B%A0%E7%BB%84%E5%AD%A6%E4%B8%AD%E7%9A%84%E5%AD%A6%E4%B9%A0%E5%92%8C%E6%95%B0%E6%8D%AE%E8%B5%84%E6%BA%90/"/>
+    <id>http://yoursite.com/2019/12/29/深度学习在药物基因组学中的学习和数据资源/</id>
+    <published>2019-12-29T02:28:18.000Z</published>
+    <updated>2019-12-29T02:28:18.064Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>DNA,RNA,组蛋白甲基化在衰老和癌症中的作用</title>
+    <link href="http://yoursite.com/2019/12/29/DNA-RNA-%E7%BB%84%E8%9B%8B%E7%99%BD%E7%94%B2%E5%9F%BA%E5%8C%96%E5%9C%A8%E8%A1%B0%E8%80%81%E5%92%8C%E7%99%8C%E7%97%87%E4%B8%AD%E7%9A%84%E4%BD%9C%E7%94%A8/"/>
+    <id>http://yoursite.com/2019/12/29/DNA-RNA-组蛋白甲基化在衰老和癌症中的作用/</id>
+    <published>2019-12-29T02:26:57.000Z</published>
+    <updated>2019-12-29T02:26:57.574Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>遗传变异_比较基因组学_疾病诊断相关遗传学概念大全</title>
+    <link href="http://yoursite.com/2019/12/29/%E9%81%97%E4%BC%A0%E5%8F%98%E5%BC%82-%E6%AF%94%E8%BE%83%E5%9F%BA%E5%9B%A0%E7%BB%84%E5%AD%A6-%E7%96%BE%E7%97%85%E8%AF%8A%E6%96%AD%E7%9B%B8%E5%85%B3%E9%81%97%E4%BC%A0%E5%AD%A6%E6%A6%82%E5%BF%B5%E5%A4%A7%E5%85%A8/"/>
+    <id>http://yoursite.com/2019/12/29/遗传变异-比较基因组学-疾病诊断相关遗传学概念大全/</id>
+    <published>2019-12-29T02:25:22.000Z</published>
+    <updated>2019-12-29T02:25:22.039Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>肿瘤微环境调控肿瘤发展</title>
+    <link href="http://yoursite.com/2019/12/29/%E8%82%BF%E7%98%A4%E5%BE%AE%E7%8E%AF%E5%A2%83%E8%B0%83%E6%8E%A7%E8%82%BF%E7%98%A4%E5%8F%91%E5%B1%95/"/>
+    <id>http://yoursite.com/2019/12/29/肿瘤微环境调控肿瘤发展/</id>
+    <published>2019-12-29T02:18:56.000Z</published>
+    <updated>2019-12-29T02:18:56.761Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>新的降维可视化方法</title>
@@ -40,9 +217,9 @@
     </summary>
     
     
-      <category term="software" scheme="http://yoursite.com/tags/software/"/>
-    
       <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
+    
+      <category term="software" scheme="http://yoursite.com/tags/software/"/>
     
       <category term="降维" scheme="http://yoursite.com/tags/%E9%99%8D%E7%BB%B4/"/>
     
@@ -157,11 +334,11 @@
     </summary>
     
     
-      <category term="ATACseq" scheme="http://yoursite.com/tags/ATACseq/"/>
-    
       <category term="single cell" scheme="http://yoursite.com/tags/single-cell/"/>
     
       <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
+    
+      <category term="ATACseq" scheme="http://yoursite.com/tags/ATACseq/"/>
     
   </entry>
   
@@ -182,9 +359,9 @@
     </summary>
     
     
-      <category term="ATACseq" scheme="http://yoursite.com/tags/ATACseq/"/>
-    
       <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
+    
+      <category term="ATACseq" scheme="http://yoursite.com/tags/ATACseq/"/>
     
       <category term="lncRNA" scheme="http://yoursite.com/tags/lncRNA/"/>
     
@@ -303,293 +480,6 @@
       <category term="software" scheme="http://yoursite.com/tags/software/"/>
     
       <category term="deep learning" scheme="http://yoursite.com/tags/deep-learning/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>scATAC-seq与scRNA-seq的整合分析系统——MAESTRO</title>
-    <link href="http://yoursite.com/2019/11/23/scATAC-seq%E4%B8%8EscRNA-seq%E7%9A%84%E6%95%B4%E5%90%88%E5%88%86%E6%9E%90%E7%B3%BB%E7%BB%9F%E2%80%94%E2%80%94MAESTRO/"/>
-    <id>http://yoursite.com/2019/11/23/scATAC-seq与scRNA-seq的整合分析系统——MAESTRO/</id>
-    <published>2019-11-23T05:25:44.000Z</published>
-    <updated>2019-11-24T09:00:25.178Z</updated>
-    
-    <content type="html"><![CDATA[<p>单细胞技术是目前比较火热的一个领域，从单细胞转录组、基因组扩展到单细胞表观组，如scATAC-seq, scHiC, scmethylation等，促使着相关的分析工具也不断涌出。单细胞领域相关工具的开发大致有两个方向：一是从本质上如算法、统计学方法入手开发新的分析工具；一种是整合多种基础工具，开发出具有功能全面，易用等特征的工具。</p><p><img src="/2019/11/23/scATAC-seq与scRNA-seq的整合分析系统——MAESTRO/fig2.png" style="zoom: 50%;"></p><a id="more"></a><p><strong>MAESTRO</strong>(Model-based AnalysEs of Single-cell Transcriptome and RegulOme)是刘小乐实验室基于snakemake新开发的用于分析scRNA-seq和scATAC-seq的工具。MAESTRO主要是打包了一些工具和软件包，目前可以实现的功能包括：对scRNA-seq和scATAC-seq数据的比对、质量控制、细胞过滤、标准化、非监督聚类、差异分析、peak calling、细胞类型注释和转录调控分析。支持 Smart-seq2, 10x-genomics, Drop-seq, SPLiT-seq for scRNA-seq protocols; microfudics-based, 10x-genomics and sci-ATAC-seq for scATAC-seq protocols.</p><p>提供的有docker镜像，<strong>安装可以参考软件介绍：<a href="https://github.com/liulab-dfci/MAESTRO/" target="_blank" rel="noopener">https://github.com/liulab-dfci/MAESTRO/</a></strong> </p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh</span><br><span class="line">bash Miniconda3-latest-Linux-x86_64.sh</span><br><span class="line"></span><br><span class="line">conda config --add channels defaults</span><br><span class="line">conda config --add channels bioconda</span><br><span class="line">conda config --add channels conda-forge</span><br><span class="line">conda create -n MAESTRO maestro -c liulab-dfci</span><br></pre></td></tr></table></figure><p><strong>Installing the MAESTRO R package</strong></p><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">R</span><br><span class="line">&gt; <span class="keyword">library</span>(devtools)</span><br><span class="line">&gt; install_github(<span class="string">"liulab-dfci/MAESTRO"</span>)</span><br></pre></td></tr></table></figure><p>另外依赖的cell ranger, RABIT/LISA等软件需要自行单独安装。</p><p>每种类型的数据的详细分析教程可以在原工具介绍网页点击下面每幅图查看</p><p><img src="/2019/11/23/scATAC-seq与scRNA-seq的整合分析系统——MAESTRO/fig1.png" alt></p><blockquote><p>PS: 目前还没有看到相关文章发表</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;单细胞技术是目前比较火热的一个领域，从单细胞转录组、基因组扩展到单细胞表观组，如scATAC-seq, scHiC, scmethylation等，促使着相关的分析工具也不断涌出。单细胞领域相关工具的开发大致有两个方向：一是从本质上如算法、统计学方法入手开发新的分析工具；一种是整合多种基础工具，开发出具有功能全面，易用等特征的工具。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2019/11/23/scATAC-seq与scRNA-seq的整合分析系统——MAESTRO/fig2.png&quot; style=&quot;zoom: 50%;&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Data Sciences" scheme="http://yoursite.com/categories/Data-Sciences/"/>
-    
-    
-      <category term="software" scheme="http://yoursite.com/tags/software/"/>
-    
-      <category term="single cell" scheme="http://yoursite.com/tags/single-cell/"/>
-    
-      <category term="scRNA-seq" scheme="http://yoursite.com/tags/scRNA-seq/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>叶酸与高血压、脑卒中精准防治的研究</title>
-    <link href="http://yoursite.com/2019/11/22/%E5%8F%B6%E9%85%B8%E4%B8%8E%E9%AB%98%E8%A1%80%E5%8E%8B%E3%80%81%E8%84%91%E5%8D%92%E4%B8%AD%E7%B2%BE%E5%87%86%E9%98%B2%E6%B2%BB%E7%9A%84%E7%A0%94%E7%A9%B6/"/>
-    <id>http://yoursite.com/2019/11/22/叶酸与高血压、脑卒中精准防治的研究/</id>
-    <published>2019-11-22T04:37:23.000Z</published>
-    <updated>2019-11-23T09:31:23.909Z</updated>
-    
-    <content type="html"><![CDATA[<p>昨天组会，同学分享了北京大学第一人民医院霍勇老师关于<strong>脑卒中精准防治的研究</strong>。</p><p><img src="/2019/11/22/叶酸与高血压、脑卒中精准防治的研究/fig2.png" alt></p><a id="more"></a><p>脑卒中想必大家都不陌生，周围有的时候会听到某人因为脑卒中突然离世。给我的感觉就是发病急，没有特别明显的发病前症状，但是一旦发病了，往往就是不可救治。</p><p>有研究也报道脑卒中是中国人的第一位死因，发病率居世界首位。脑卒中的危险因素中高血压、膳食和年龄占权重较大。霍老师的研究发现中国高血压患者75%为H型高血压（即伴有HCY升高的高血压），而低等叶酸摄入显著增加高血压患者脑卒中的风险。进而发现叶酸缺乏与MTHFR C677T位点的多态性有关，MTHFR基因是叶酸代谢中的一个关键酶，C677T位点的多态性存在3种基因型：CC型（野生型）、CT型（杂合突变型）和TT型（纯合突变型）。</p><p>叶酸人体是无法自己合成的，主要从食物中获取。叶酸缺乏有两种类型，一种是膳食中摄入量不足，通过补充可以轻易恢复正常水平；另一种是MTHFR基因的突变，导致叶酸利用率低，即使摄入得很多，但是利用的却很少。而叶酸代谢异常既而可引起高同型半胱氨酸血症，血液异常凝固等，从而引起脑卒中、冠心病、血栓。而且易造成新生儿缺陷等疾病。<br><img src="/2019/11/22/叶酸与高血压、脑卒中精准防治的研究/1240-20191122123751293.png" alt></p><p>根据这一发现，他们提出了高血压患者叶酸治疗的研究（CSPPT），对20,702例45-75岁无心脑血管疾病的高血压患者随访4.5年，MTHFR的3种基因型每都类分为两组，分别用依那普利和依那普利叶酸治疗，他们最后的发现是<strong>与单纯使用依那普利降压比较，依那普利叶酸片（依叶）显著降低21%脑卒中风险</strong></p><p>这个治疗措施在山东荣成地区已经成为转化应用示范基地，据国家卫计委估计如果CSPPT（即高血压患者叶酸治疗的研究）研究成果广泛应用，每年可预防111万（30%）脑卒中发生。</p><blockquote><p>总结一下就是叶酸缺乏可能会引起脑卒中、高血压、新生儿缺陷等风险的增加</p></blockquote><p>听完之后，想起了自己的基因检测报告好像有叶酸营养需求的报告，打开一看</p><p><img src="/2019/11/22/叶酸与高血压、脑卒中精准防治的研究/1240-20191122123752093.png" alt></p><p>中招了，而且基因型还是AA<br><img src="/2019/11/22/叶酸与高血压、脑卒中精准防治的研究/1240.png" style="zoom:50%;"></p><p><img src="/2019/11/22/叶酸与高血压、脑卒中精准防治的研究/fig1.png" style="zoom:50%;"></p><p>看来以后要多补充叶酸了</p><hr><blockquote><p><strong>文献：</strong> 2015，JAMA, Efficacy of folic acid therapy in primary prevention of stroke among adults with hypertension in China: the CSPPT randomized clinical trial.</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;昨天组会，同学分享了北京大学第一人民医院霍勇老师关于&lt;strong&gt;脑卒中精准防治的研究&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2019/11/22/叶酸与高血压、脑卒中精准防治的研究/fig2.png&quot; alt&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="chronic disease" scheme="http://yoursite.com/tags/chronic-disease/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>宏基因组物种鉴定工具</title>
-    <link href="http://yoursite.com/2019/11/22/%E5%AE%8F%E5%9F%BA%E5%9B%A0%E7%BB%84%E7%89%A9%E7%A7%8D%E9%89%B4%E5%AE%9A%E5%B7%A5%E5%85%B7/"/>
-    <id>http://yoursite.com/2019/11/22/宏基因组物种鉴定工具/</id>
-    <published>2019-11-22T02:13:43.000Z</published>
-    <updated>2019-11-22T09:12:16.684Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>一句话评价</strong></p><p>宏基因组物种鉴定工具集锦</p><p><strong>文章信息</strong></p><p>题目：Benchmarking Metagenomics Tools for Taxonomic Classification</p><p>杂志：Cell</p><p>时间：August 8,2019</p><p>链接: <a href="https://doi.org/10.1016/j.cell.2019.07.010" target="_blank" rel="noopener">https://doi.org/10.1016/j.cell.2019.07.010</a></p><p><img src="/2019/11/22/宏基因组物种鉴定工具/abstract.png" alt></p><a id="more"></a><p><strong>文章介绍：</strong></p><p>鉴定物种分类是宏基因组分析的一个必要和基础步骤，相关工具也是层出不穷，如何评价物种分类工具的性能，主要从鉴定的准确性、速度和所需要的计算资源这几方面考虑。</p><p>这篇文章针对20种常见的物种鉴定工具进行评估，并描述了如何评价工具性能。</p><p>下图展示了宏基因组的复杂的样本到物种鉴定和丰度计算的过程</p><p><strong>figure</strong></p><p><img src="/2019/11/22/宏基因组物种鉴定工具/fig1.png" alt></p><h3 id="参考数据库"><a href="#参考数据库" class="headerlink" title="参考数据库"></a>参考数据库</h3><p>宏基因组的物种鉴定依赖于数据库，常见的数据库有<strong>RefSeq, blast nt和nr，以及16S rRNA特有的数据库SILVA</strong>。</p><h3 id="评价物种分类工具性能的方法"><a href="#评价物种分类工具性能的方法" class="headerlink" title="评价物种分类工具性能的方法"></a>评价物种分类工具性能的方法</h3><p>召回率（Recall）和准精确度（Precision）是宏基因组物种鉴定中重要的两个度量概念，这两个概念也是统计学中经常见到的。</p><blockquote><p>其中精度是检索出相关文档数与检索出的文档总数的比率，衡量的是检索系统的<strong>查准率</strong>；召回率是指检索出的相关文档数和文档库中所有的相关文档数的比率，衡量的是检索系统的<strong>查全率</strong>。</p></blockquote><p>召回率 = 提取出的正确信息条数 /  样本中的信息条数  </p><p>精确度= 提取出的正确信息条数 /  提取出的信息条数 </p><p><strong>两者取值在0和1之间，数值越接近1，查准率或查全率就越高。</strong></p><p>F值  = 正确率 <em> 召回率 </em> 2 / (正确率 + 召回率) （F 值即为正确率和召回率的调和平均值）</p><p><strong>F值是Precision和Recall加权调和平均</strong></p><p><strong>AUPR:</strong>是指precision和recal曲线下面的面积，也是一个综合考虑P-R两者来评估结果准确性的一个度量值。</p><p><strong>L2 distance:</strong>是为了评估丰度准确性的参数值，通过计算在给定的分类水平上，每个已识别分类单元的ground-truth丰度和标准丰度计数之间的成对距离。</p><p><img src="/2019/11/22/宏基因组物种鉴定工具/fig2.png" alt></p><p>###物种分类工具和其性能</p><p>这里他们比较了20种宏基因组物种鉴定工具，利用相同的数据库 分别比较了他们的precision, recall, F1, 速度和其他值。包括DAN-DNA鉴定，DNA-protein鉴定，和基于marker的鉴定方法。</p><p><img src="/2019/11/22/宏基因组物种鉴定工具/fig3.png" alt></p><p><strong>AUPR值如下：</strong>值越接近1越好</p><p><img src="/2019/11/22/宏基因组物种鉴定工具/fig4.png" alt></p><p><strong>L2 distance</strong>: 值越小越好</p><p><img src="/2019/11/22/宏基因组物种鉴定工具/fig5.png" alt></p><p><strong>运行时间</strong></p><p><img src="/2019/11/22/宏基因组物种鉴定工具/fig6.png" alt></p><p><strong>碎碎念</strong></p><p>没有做过宏基因组分析实际项目，看着这些软件名字完全没有感觉，也记不住，后续研究若用到的话可以参考这里做选择。</p><blockquote><p>每日文献摘要：第19篇  2019年11月22日 周五</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;一句话评价&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;宏基因组物种鉴定工具集锦&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;文章信息&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;题目：Benchmarking Metagenomics Tools for Taxonomic Classification&lt;/p&gt;
-&lt;p&gt;杂志：Cell&lt;/p&gt;
-&lt;p&gt;时间：August 8,2019&lt;/p&gt;
-&lt;p&gt;链接: &lt;a href=&quot;https://doi.org/10.1016/j.cell.2019.07.010&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://doi.org/10.1016/j.cell.2019.07.010&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2019/11/22/宏基因组物种鉴定工具/abstract.png&quot; alt&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="software" scheme="http://yoursite.com/tags/software/"/>
-    
-      <category term="metagenomics" scheme="http://yoursite.com/tags/metagenomics/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>非编码RNA在肿瘤中扮演的角色</title>
-    <link href="http://yoursite.com/2019/11/17/%E9%9D%9E%E7%BC%96%E7%A0%81RNA%E5%9C%A8%E8%82%BF%E7%98%A4%E4%B8%AD%E6%89%AE%E6%BC%94%E7%9A%84%E8%A7%92%E8%89%B2/"/>
-    <id>http://yoursite.com/2019/11/17/非编码RNA在肿瘤中扮演的角色/</id>
-    <published>2019-11-16T17:03:18.000Z</published>
-    <updated>2019-11-23T06:10:39.762Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>一句话评价</strong></p><p>关于非编码RNA在肿瘤中作用的综述</p><p><strong>文章信息</strong></p><p>题目：The Role of Non-coding RNAs in Oncology</p><p>杂志：Cell</p><p>时间：November 14, 2019</p><p>链接: <a href="https://doi.org/10.1016/j.cell.2019.10.017" target="_blank" rel="noopener">https://doi.org/10.1016/j.cell.2019.10.017</a></p><p><img src="/2019/11/17/非编码RNA在肿瘤中扮演的角色/abstract.jpg" style="zoom:50%;"></p><a id="more"></a><p><strong>文章介绍：</strong></p><p><strong>非编码RNA作为致癌因子或抑癌因子的总结</strong></p><p>（且有体内实验验证）</p><p><img src="/2019/11/17/非编码RNA在肿瘤中扮演的角色/fig1.png" alt></p><p><img src="/2019/11/17/非编码RNA在肿瘤中扮演的角色/fig2.png" alt></p><p><img src="/2019/11/17/非编码RNA在肿瘤中扮演的角色/fig3.png" alt></p><p><img src="/2019/11/17/非编码RNA在肿瘤中扮演的角色/fig4.png" alt></p><p><img src="/2019/11/17/非编码RNA在肿瘤中扮演的角色/fig5.png" alt></p><p><strong>不同类型的致癌ncRNAs和癌症发生的机制</strong></p><p><img src="/2019/11/17/非编码RNA在肿瘤中扮演的角色/fig6.png" alt></p><p><strong>不同类型的抑癌ncRNAs和阻碍癌症发展的通路</strong></p><p><img src="/2019/11/17/非编码RNA在肿瘤中扮演的角色/fig7.png" alt></p><p><strong>非编码RNA作为肿瘤标志物</strong></p><p><img src="/2019/11/17/非编码RNA在肿瘤中扮演的角色/fig8.png" alt></p><p><img src="/2019/11/17/非编码RNA在肿瘤中扮演的角色/fig9.png" alt></p><blockquote><p>每日文献摘要：第18篇  2019年11月17日 周日</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;一句话评价&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;关于非编码RNA在肿瘤中作用的综述&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;文章信息&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;题目：The Role of Non-coding RNAs in Oncology&lt;/p&gt;
-&lt;p&gt;杂志：Cell&lt;/p&gt;
-&lt;p&gt;时间：November 14, 2019&lt;/p&gt;
-&lt;p&gt;链接: &lt;a href=&quot;https://doi.org/10.1016/j.cell.2019.10.017&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://doi.org/10.1016/j.cell.2019.10.017&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2019/11/17/非编码RNA在肿瘤中扮演的角色/abstract.jpg&quot; style=&quot;zoom:50%;&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="literature" scheme="http://yoursite.com/categories/literature/"/>
-    
-    
-      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
-    
-      <category term="lncRNA" scheme="http://yoursite.com/tags/lncRNA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>准确聆听、有效沟通</title>
-    <link href="http://yoursite.com/2019/11/16/%E5%87%86%E7%A1%AE%E8%81%86%E5%90%AC%E3%80%81%E6%9C%89%E6%95%88%E6%B2%9F%E9%80%9A/"/>
-    <id>http://yoursite.com/2019/11/16/准确聆听、有效沟通/</id>
-    <published>2019-11-16T15:59:41.000Z</published>
-    <updated>2019-11-16T16:53:28.516Z</updated>
-    
-    <content type="html"><![CDATA[<p>有效沟通始于准确聆听</p><p><img src="/2019/11/16/准确聆听、有效沟通/abstract.png" alt></p><a id="more"></a><p>以前觉得自己还是个好的聆听者，当与别人交流时会很认真的听，然后作出回应，但今天发现我并没有做到一个好的聆听者，也没有达到有效的沟通。往往没有了解清晰的状况、只是为了回应而回应，随便地给出评价或建议；或者无论对方说什么，都会联想到自己，开始说自己的事说个没完，陷入了典型的<strong>自传式回应</strong>沟通。</p><blockquote><p>A: “我这个周末要加班……” </p><p>B: “辞了辞了！对自己这么苛刻干嘛？”</p><p>A: “我妈妈不同意我去其他城市发展…..”</p><p>B:”我爸妈对我没有要求，无论我做什么都特别支持，而且我爸妈…..(ba la ba la说自己的事情没有完)”</p></blockquote><p><strong>自传式回应</strong>常见的现象有这样几种：</p><ul><li><p>价值判断–表示肯定或否定</p><p>如，你这样做是不对的哦；你肯定小时候怎么样；</p></li><li><p>追根究底–依据自己的立场，探究别人的隐私</p><p>这个貌似也经常触碰，问的有点多，忽略了别人的隐私</p></li><li><p>好为人师–以个人生活经验指导他人</p><p>经常会和别人说，我曾经怎么怎么的，你应该怎样做等</p></li><li><p>自以为是–根据自己的行为动机判断别人的</p></li></ul><p>如何做到准确聆听，一种做法是<strong>移情式聆听</strong>，即代入倾诉者的角色，感同深受地了解对方此番谈话的真正目的，并掌握准确清晰的事实，再通过对对方情感的客观反馈，来实现有效的沟通。</p><p><strong>记住，说出对方的感受，而不要判断。</strong></p><p><strong>更要切记，让别人说出感受，而不是陷入自传式的回应</strong></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;有效沟通始于准确聆听&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2019/11/16/准确聆听、有效沟通/abstract.png&quot; alt&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="杂想" scheme="http://yoursite.com/categories/%E6%9D%82%E6%83%B3/"/>
-    
-    
-      <category term="胡思" scheme="http://yoursite.com/tags/%E8%83%A1%E6%80%9D/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>lncRNA-染色质相互作用数据库</title>
-    <link href="http://yoursite.com/2019/11/16/lncRNA-%E6%9F%93%E8%89%B2%E8%B4%A8%E7%9B%B8%E4%BA%92%E4%BD%9C%E7%94%A8%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    <id>http://yoursite.com/2019/11/16/lncRNA-染色质相互作用数据库/</id>
-    <published>2019-11-16T09:07:49.000Z</published>
-    <updated>2019-11-16T17:50:40.557Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>一句话评价</strong></p><p>lncRNA和染色质相互作用数据库</p><p><strong>文章信息</strong></p><p>题目：LnChrom: a resource of experimentally validated lncRNA–chromatin interactions in human and mouse</p><p>杂志：Database</p><p>时间：23 March 2018</p><p>链接: doi: 10.1093/database/bay039</p><p><strong>figure</strong></p><p><img src="/2019/11/16/lncRNA-染色质相互作用数据库/abstract.png" alt></p><a id="more"></a><p><strong>文章介绍：</strong></p><p>lncRNA作用机制多样，可以与DNA、RNA和蛋白质相互作用，也是参与染色质调控的重要组成部分。许多lncRNA通过招募染色质修饰因子调控染色质状态，进而影响基因表达过程。作者对已经过实验验证的lncRNA-chromatin相互作用的数据资源进行整理，开发了lnChrom数据库。该数据库目前包括人类和鼠共382743个lncRNA-chromatin相互作用对，另外还收集了每个作用对的染色质修饰因子、表观标记特征、靶基因以及与疾病的关联信息。</p><p><img src="/2019/11/16/lncRNA-染色质相互作用数据库/fig1.png" alt></p><p>LnChrom提供了友好的交互界面，可以通过输入lncRNA ID或靶基因快速检索， 也可以通过选择物种、染色质修饰类型、染色质相关因子，以及基因名字进行高级检索 ，同时可以通过输入感兴趣的染色质区域进行region检索。搜索结果以一个概览的表格和相互作用网络图展示。用户点击某一感兴趣的相互作用对，可以了解到更多细节结果，包括详细的注释信息、Genome Browser，TF Co-occupancy和Cancer Exploration。</p><p>网站：<a href="http://biocc.hrbmu.edu.cn/LnChrom/" target="_blank" rel="noopener">http://biocc.hrbmu.edu.cn/LnChrom/</a></p><p><img src="/2019/11/16/lncRNA-染色质相互作用数据库/fig2.png" alt></p><blockquote><p>每日文献摘要：第17篇  2019年11月16日 周六</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;一句话评价&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;lncRNA和染色质相互作用数据库&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;文章信息&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;题目：LnChrom: a resource of experimentally validated lncRNA–chromatin interactions in human and mouse&lt;/p&gt;
-&lt;p&gt;杂志：Database&lt;/p&gt;
-&lt;p&gt;时间：23 March 2018&lt;/p&gt;
-&lt;p&gt;链接: doi: 10.1093/database/bay039&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;figure&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2019/11/16/lncRNA-染色质相互作用数据库/abstract.png&quot; alt&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="literature" scheme="http://yoursite.com/categories/literature/"/>
-    
-    
-      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
-    
-      <category term="lncRNA" scheme="http://yoursite.com/tags/lncRNA/"/>
-    
-      <category term="database" scheme="http://yoursite.com/tags/database/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>微生物组学研究的相关概念</title>
-    <link href="http://yoursite.com/2019/11/10/%E5%BE%AE%E7%94%9F%E7%89%A9%E7%BB%84%E5%AD%A6%E7%A0%94%E7%A9%B6%E7%9A%84%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/"/>
-    <id>http://yoursite.com/2019/11/10/微生物组学研究的相关概念/</id>
-    <published>2019-11-10T15:17:58.000Z</published>
-    <updated>2019-11-10T16:13:35.597Z</updated>
-    
-    <content type="html"><![CDATA[<p>这篇文章主要对微生物组学研究中常出现的概念进行整理，</p><p>资料摘抄原文如下：</p><ul><li><a href="https://zhuanlan.zhihu.com/p/72013570" target="_blank" rel="noopener">细菌16s rDNA微生物多样性研究中可变区的选择</a></li><li><a href="https://www.cnblogs.com/leezx/p/7053199.html" target="_blank" rel="noopener">16S 基础知识、分析工具和分析流程详解</a></li><li><a href="http://www.bgitechsolutions.com/sequencing/32" target="_blank" rel="noopener">16S/18S/ITS 扩增子测序</a></li><li><a href="https://www.cnblogs.com/nkwy2012/p/9961611.html" target="_blank" rel="noopener">微生物组学数据分析工具综述 | 16S+宏基因组＋宏病毒组＋宏转录组–转载</a></li></ul><h3 id="微生物组学的常见分类"><a href="#微生物组学的常见分类" class="headerlink" title="微生物组学的常见分类"></a>微生物组学的常见分类</h3><p>建立在高通量测序基础上的微生物群落研究，当前主要有三大类：</p><ul><li><strong>基于16S/18S/ITS等扩增子做物种分类的Metataxanomics、</strong></li><li><strong>鸟枪法打断全基因组DNA序列的Metagenomics</strong></li><li><strong>和基于mRNA信息的宏转录组方法Meta-transcriptomics。</strong></li></ul><p><img src="/2019/11/10/微生物组学研究的相关概念/abstract.png" alt></p><a id="more"></a><p>###16S/18S/ITS扩增子测序</p><p>16S rDNA是细菌分类学研究中最常用的“分子钟”，其序列包含9个可变区（Variable region）和10个保守区（constant region）。可变区因细菌而异，且变异程度与细菌的系统发育密切相关。通过检测16S rDNA的序列变异和丰度，可以了解环境样品中群落多样性信息。基于16S rDNA的分析在微生物分类鉴定、微生态研究等方面起到重要作用。</p><p><strong>16S rDNA结构：</strong>16s rRNA基因的序列（约1500bp）有10个保守区和9个高变区（v1-v9：长度分布范围约30~100bp）之分；保守区为所有细菌共有，细菌间无差别，能反映生物物种的亲缘关系，可变区具有属或种的特异性，序列则随菌间的亲缘关系不同而有一定的差异，所以能揭示生物物种的特征核酸序列，被认为是最适于细菌系统发育和分类鉴定的指标。根据保守区设计引物位点，扩增可变区获得的序列可以用于菌种鉴定。一种快速、廉价的菌种鉴定方法。</p><p><img src="/2019/11/10/微生物组学研究的相关概念/fig1.png" alt></p><p><strong>16s rRNA基因可变区考虑因素：</strong></p><p><img src="/2019/11/10/微生物组学研究的相关概念/fig2.png" alt></p><p><strong>16s rRNA基因数据库</strong></p><p>SILVA; GreenGenes, RDP, EzTaxon-e</p><p><img src="/2019/11/10/微生物组学研究的相关概念/fig3.png" alt></p><blockquote><p><strong>几个概念：</strong></p><p><strong>核糖体</strong>：Ribosome，由 RNA(rRNA）和蛋白质 组成，配合 tRNA 来翻译 mRNA。核糖体按沉降系数来分类，S就是沉降系数，原核70S，真核80S。我们一般研究微生物，70S，由50S和30S两个亚基组成。再细分为 5S、16S、23S，我们的 16S 就是指核糖体的亚基的一个组分，16S rRNA。（记住，这是原核生物核糖体的一个组分）</p><p><strong>16S rRNA</strong>：这并不是我们的研究对象，因为我们测序的不是它，而是它对应在DNA双链上的基因序列，</p></blockquote><blockquote><p><strong>16S rDNA</strong>。可以这样理解，我们所说的16S 就是指 <strong>16S rDNA。</strong></p><p><strong>分子钟</strong>：即氨基酸在单位时间以同样的速度进行置换。16S 的进化具有良好的时钟性质，在结构与功能上具有高度的保守性，在大多数原核生物中rDNA都具有多个拷贝，5S、16S、23S rDNA的拷贝数相同。16S rDNA由于大小适中，约1.5Kb左右，既能体现不同菌属之间的差异，又能利用测序技术较容易地得到其序列，故被细菌学家和分类学家接受。（来源百度）</p></blockquote><blockquote><p><strong>OTU</strong>：即Operational Taxonomic Units的缩写（千万表手滑写成OUT，否则就OUT了），在系统发生学或群体遗传学研究中，为了便于进行分析，人为给某一个分类单元（品系，属，种、分组等）设置的同一标志。理论上一个OTU代表一个微生物物种。</p><p>通过测序获得的大量reads，如何才能转变为我们需要的物种信息呢？首先需要对这些reads进行归类（cluster），通常在97%的相似水平划分为不同的OTU，将OTU代表序列与相应的微生物数据库比对（Silva、RDP、Greengene等），得到每个样本所含的物种信息，进而进行后续生物信息统计分析。</p></blockquote><blockquote><p><strong>Alpha多样性</strong>：用于度量群落生态单样本的物种多样性，是反映丰富度和均匀度的综合指标。</p><p>菌群丰富度（Community richness）指数有：Chao、Ace，Chao或Ace指数越大，说明菌群丰富度越高。  </p><p>菌群多样性（Community diversity）指数有：Shannon、Simpson，Shannon值越大，说明群落多样性越高；Simpson指数值越大，说明菌群多样性越低。</p><p>根据各样本生成的OTU，对样本序列进行随机取样，以取出的序列数及这些序列所能代表的OTU数构建曲线，计算样本的Alpha多样性。</p><p><strong>Beta-diversity：</strong> Beta多样性用于不同生态系统之间多样性的比较，利用各样本序列间的进化关系及丰度信息来计算样本间距离，反映样本（组）间是否具有显著的微生物群落差异。目前应用比较多的是PCA、PCoA、NMDS分析等。由于微生物多样性研究通常会涉及到大样本数量的样本，因此通过Beta-diversity分析可以直观地反映样本组间的差异情况。距离越远，微生物群落差异越大，即相似性越高。</p></blockquote><blockquote><p><strong>LEfSe</strong><br>LEfSe分析即LDA Effect Size分析，多用于多个分组（≧2）之间的比较，或者进行亚组比较分析，进而找到组间在丰度上有显著差异的物种（biomaker）。</p><p>基本过程是首先在多组样本中采用非参数因子Kruskal-Wallis秩和检验检测不同分组间丰度差异显著的物种；然后基于获得的显著差异物种，利用成组的Wilcoxon秩和检验进行组间差异分析；最后采用线性判别分析（LDA）对数据进行降维并评估差异显著的物种的影响力大小（即LDA score）。</p></blockquote><p>18S rDNA或ITS（Internal Transcribed Spacer）被广泛应用在真菌分类鉴定中。18S rDNA在系统发育研究中较适用于种级以上阶元的分类；ITS属于中度保守区域，利用它可研究种及种以下的分类阶元。 </p><p><strong>局限性</strong></p><p>16S虽然是一种相对快速和经济适用的方法，但是PCR导致了偏好的产生，这就降低了注释准确度。此外，由于原核、真核生物的“分类标签”完全不同，即使细菌和古菌的16S也相去甚远，以进化快著称的病毒更难以捕获。</p><p><strong>常规分析流程</strong></p><p>下机数据经过数据过滤，滤除低质量的reads，剩余高质量的Clean data方可用于后期分析；通过reads之间的Overlap关系将reads拼接成Tags；在给定的相似度下将Tags聚成OTU，然后通过OTU与数据库比对，对OTU进行物种注释；基于OTU和物种注释结果进行样品物种复杂度分析以及组间物种差异分析。</p><p><img src="/2019/11/10/微生物组学研究的相关概念/fig4.png" alt></p><hr><h3 id="宏基因组"><a href="#宏基因组" class="headerlink" title="宏基因组"></a>宏基因组</h3><p>宏基因组有效避免了扩增偏差，由于是直接打断，理论上不限制物种（细菌、真菌、古菌、真核生物等，事实上当前宏基因组测序多还是以细菌为主），可能组装获得新基因乃至新物种信息，但根据取样情况可能存在少量或大量的宿主污染，因需组装，数据量要求大，成本贵、周期长。</p><p><strong>宏基因组经典流程：</strong>环境微生物样本–Total DNA提取–文库构建–上机测序（经典短读长: illumina系列；长读长选择: PB, ONT）–数据质控（去除低质量和接头等，去除宿主基因组等干扰信息）–宏基因组组装–Contig Binning–基因组重建–分类注释（可基于reads、contig、bins、还原出来的基因组做物种注释）–其他下游分析。</p><hr><h3 id="宏转录组"><a href="#宏转录组" class="headerlink" title="宏转录组"></a>宏转录组</h3><p>宏转录组的好处是，跳出了DNA层面的束缚，可以获得实时活跃的、真正对群落有贡献的基因和通路，然而mRNA不如DNA稳定,此外多纯化和扩增的步骤也可能引入错误。</p><p>宏转录组也迎来了自己的专属软件–IMSA+A ( <a href="https://github.com/JeremyCoxBMI/IMSA-A" target="_blank" rel="noopener">https://github.com/JeremyCoxBMI/IMSA-A</a> )。IMSA+A在17年1月发表于Microbiome，是一种可应用于任意读长宏转录组学数据、可高效在同一份样品中鉴定出细菌、真菌、病毒的准确的分类分析的方法。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这篇文章主要对微生物组学研究中常出现的概念进行整理，&lt;/p&gt;
-&lt;p&gt;资料摘抄原文如下：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/72013570&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;细菌16s rDNA微生物多样性研究中可变区的选择&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.cnblogs.com/leezx/p/7053199.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;16S 基础知识、分析工具和分析流程详解&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.bgitechsolutions.com/sequencing/32&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;16S/18S/ITS 扩增子测序&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.cnblogs.com/nkwy2012/p/9961611.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;微生物组学数据分析工具综述 | 16S+宏基因组＋宏病毒组＋宏转录组–转载&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;微生物组学的常见分类&quot;&gt;&lt;a href=&quot;#微生物组学的常见分类&quot; class=&quot;headerlink&quot; title=&quot;微生物组学的常见分类&quot;&gt;&lt;/a&gt;微生物组学的常见分类&lt;/h3&gt;&lt;p&gt;建立在高通量测序基础上的微生物群落研究，当前主要有三大类：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;基于16S/18S/ITS等扩增子做物种分类的Metataxanomics、&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;鸟枪法打断全基因组DNA序列的Metagenomics&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;和基于mRNA信息的宏转录组方法Meta-transcriptomics。&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;/2019/11/10/微生物组学研究的相关概念/abstract.png&quot; alt&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Data Sciences" scheme="http://yoursite.com/categories/Data-Sciences/"/>
-    
-    
-      <category term="metagenomics" scheme="http://yoursite.com/tags/metagenomics/"/>
-    
-      <category term="16s rRNA" scheme="http://yoursite.com/tags/16s-rRNA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>三岔路口</title>
-    <link href="http://yoursite.com/2019/11/06/%E4%B8%89%E5%B2%94%E8%B7%AF%E5%8F%A3/"/>
-    <id>http://yoursite.com/2019/11/06/三岔路口/</id>
-    <published>2019-11-06T15:51:17.000Z</published>
-    <updated>2019-11-06T18:06:28.155Z</updated>
-    
-    <content type="html"><![CDATA[<p>7月初毕业，到现在4个月过去了，终于在昨天正式入职，开始进入工作实习期。昨天配置了电脑，今天总管开始分配任务，虽然是新的领域，新的方法，之前了解的并不多，但是很多知识和方法论都是相通的，估计很快就能完全入手。</p><p><img src="/2019/11/06/三岔路口/fig1.png" style="zoom:50%;"></p><a id="more"></a><p>之前在即将毕业的一年时间里我一直在纠结是读博、工作还是创业，纠结的原因很多，最根本的原因是对自己不了解，不知道自己适合什么，也没有特别明确工作倾向，只是希望工作中可以经常接触新的东西，可以不断学习。纠结的再多，不如先去尝试。毕业先去了广州，朋友想让我过去做些创业的东西，结果毕业过去的时候，离项目资金申请剩余的时间很少，由于准备不足，申请直接在第一轮被刷下，项目也因此被搁置。这段其实称不上创业的经历，给我印象比较深的是创业最重要的是<strong>想法和团队</strong>。创业不是一个人的事，一定要有一个敢想敢做的团队。</p><p>目前选择了工作，虽然工作的方向和我最初想的领域不一样（最初想工作的领域是目前比较热的技术领域），但是觉得也挺有意思，是有战略发展潜力的一个方向。</p><p>不论选择哪条路，都认真、负责的对待。路上的风景也是靠自己创造的。</p><hr><p><strong>这里很感谢当初迷茫的时候，师兄师姐给的建议，无论哪条路，选择适合自己的路才是最好的方向。</strong></p><blockquote><p>师姐，你觉得在公司和在科研单位有什么不同吗？读博能学到的东西更多，还是工作呢？我现在很矛盾，不确定自己适合什么方向，你能有空的时候大概说说你的感受吗</p><p><strong>一师姐的回答</strong></p><p>我认为在公司和科研单位有很多不一样的地方。从工作内容上说，在科研单位主要是围绕课题，而且是开放性课题，包括申请课题、做课题、写总结性的报告公文之类的，所有的事情都是由计划的、相对弹性的；在公司，所有的事情要围绕公司的产品，无论是软件还是科研服务，都是以销售为导向的，所以开放性的研究不会有很多，即使是研发部门，也都是以应用为前提，所以基本上在公司，除了主管级以上会涉及到不同程度的前沿调研探索，如果是新入职的，最看重的还是实操技能，能够准确地完成领导布置的任务（生信相关的有软件开发维护，流程搭建等等）才是最重要的，如果做到高级领导，就需要有前瞻性的想法了，引导队伍向那个方向前进。在公司，一开始从基层做起的话，工作是具体的、指令型的，没有弹性，跟着项目走，项目急就必须很快反馈。</p><p>至于你说的哪个能学到更多的东西，我觉得这个没有办法去直接比较。去公司和读博，长远来看，是两条不同的路。如果你准备走科研这条道路，肯定是去读博，之后再出国读博后，是最直接的路径。如果准备进入公司打拼，走生信分析师-生信主管-总监-更高级管理层这条路，从目前的形势看，名校硕士在晋升方面还是没有太大的阻碍的，应该会比较顺利，不会像做科研这条路，硕士有很大的阻碍。读书学到的东西和工作学到的是不一样的，做科研相对单纯些，但是也寂寞些，在公司的话就复杂多了，但是也有更多的发展方向。最终还是看你个人喜欢和选择。至于自己适合哪个方向，你可以问问最了解你的人和自己，通常周围的人会更能看清楚你的能力，自己最清楚自己内心所想。</p></blockquote><blockquote><p><strong>另一师姐的看法：</strong></p><p>我自己接触的也不多，只能说说我目前的比较局限的看法。</p><p>先说方向，如果打算转行，比如去做金融，高中教师，或者房地产等等，硕士毕业去应届去找相应工作就行。</p><p>如果还是做现在的行业，我觉得公司和科研单位最大的不同，大概是公司更计较短期产粗，而做科研，是看长期产出的。科研单位是长时间比较深入的研究一个课题，发paper，遇到好点的老板可能就插科打诨，工作强度稍小，比较适合顾家，而遇到科研氛围比较浓烈的组，也要熬夜加班，拼一拼看能不能拼个职称，做个副研究员，如果选择科研这条路，博士学位非常重要。而公司，短期项目一个接着一个，一般不会给1年时间做一个项目，可能1,2个月就结束了，讲究项目成果，节奏稍微快，除非大公司，要不绝不可能养老的，加班也是常事，但博士学位相对科研来说，用工作经验也可以弥补。</p><p>还有一个比较现实的问题，科研单位的副研老师们，出来应该都比所里挣得多，但研究所里工作和在公司工作，毕竟在其他的待遇上面也有些许差别，类比公务员和公司工作，公积金等等养家糊口的部分也有差别。</p><p>所以还是看看你觉得自己更适合哪个更需要哪个</p></blockquote><blockquote><p><strong>另一师兄的看法</strong></p><p>我：师兄，你还想去国外读博吗</p><p>师兄：准备着吧,读个博士用处还是很大得</p><p>我：为什么呢？是将来想做科研吗？</p><p>师兄：不是, 即使不做科研，这行业对学历也是有要求得, 转行得话就无所谓了</p><p>我：你有想着创业吗</p><p>师兄：创业也想过啊，不过挺难的, 还是需要先积累一下经验</p><p>我：如果有觉得合适的合伙人和团队拉你入伙呢，但是对自己的评价就如你所说，没有一点经验，也不确定自己是否适合，你会考虑吗</p><p>师兄：看团队构成吧,不能都没有经验,如果没有什么顾虑的话，创业也是不错的选择，对自己的磨砺很大,</p><p>我：顾虑倒是没有，一没有钱，投入的可能是精力和时间，我担心的是怕我做不好，还有就是我可能有一个不错读博的机会，我不知道这次放弃了，之后还有没有</p><p>师兄：有读博的机会当然选择读博了,要是感觉科研不是自己喜欢的那就选择创业,还是要看你更想过什么样的生活, 科研算是比较稳定，但就是累</p><p>我：我可能不适合科研，</p><p>师兄：下定决心的话可以去创业,创业团队里不是只需要研发人员, 职位有很多方向, 找一下自己适合做什么</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;7月初毕业，到现在4个月过去了，终于在昨天正式入职，开始进入工作实习期。昨天配置了电脑，今天总管开始分配任务，虽然是新的领域，新的方法，之前了解的并不多，但是很多知识和方法论都是相通的，估计很快就能完全入手。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2019/11/06/三岔路口/fig1.png&quot; style=&quot;zoom:50%;&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="杂想" scheme="http://yoursite.com/categories/%E6%9D%82%E6%83%B3/"/>
-    
-    
-      <category term="胡思" scheme="http://yoursite.com/tags/%E8%83%A1%E6%80%9D/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>追踪非小细胞肺癌的进化</title>
-    <link href="http://yoursite.com/2019/11/05/%E8%BF%BD%E8%B8%AA%E9%9D%9E%E5%B0%8F%E7%BB%86%E8%83%9E%E8%82%BA%E7%99%8C%E7%9A%84%E8%BF%9B%E5%8C%96/"/>
-    <id>http://yoursite.com/2019/11/05/追踪非小细胞肺癌的进化/</id>
-    <published>2019-11-05T12:27:02.000Z</published>
-    <updated>2019-11-05T14:16:13.037Z</updated>
-    
-    <content type="html"><![CDATA[<p>小时候觉得癌症这个词离自己很远很远，知道它很可怕，但实际上并不知道它具体是什么，只天真的觉得它永远也不会出现在我的身边。</p><p>高三时大奶从被检出肝癌晚期到去世不到两周，她在去世的前两天都不是特别清楚自己的病情，直到去世的前一天病情的加重，她才明白。</p><p>从高三到硕士毕业，7年的时间，大姑和婶婶接连也因为癌症去世。而爷爷今天也被检出贲门癌。爷爷是一个闲不住的人，虽然80多岁了，种地比我们家都多，大概是从4月份的时候开始吃东西容易打嗝，以前他每次从地里干完活回家总要吃两个馒头，现在基本吃不了馒头，只能吃些面条和粥。家里人一直劝他去医院检查，他总是不愿意去，最近才被说服去医院检查，却没想道是癌症。</p><p>真的很害怕，以前觉得不会出现在身边的癌症，却不断地夺走亲人的生命。我虽然是研究生命科学的，经常关注癌症相关方面的研究，但是我还是不知道为什么现在的癌症越来越多，我经常怀疑我每天的研究有什么意义，在面对真正的癌症时有什么帮助，似乎大多时候我们依然无能为力！</p><p>但是，没有这些基础研究的推动，临床上治疗又怎么能提升？</p><p><img src="/2019/11/05/追踪非小细胞肺癌的进化/absract.jpg" alt></p><a id="more"></a><p><strong>一句话评价</strong></p><p>用尽量简短的一句话说清文章亮点或者你的推荐理由。越短越好</p><p><strong>文章信息</strong></p><p>题目：Tracking the Evolution of Non–Small-Cell Lung Cancer</p><p>杂志：<em>The</em> new england journal <em>of</em> medicine</p><p>时间：June 1, 2017</p><p>链接: <a href="https://www.nejm.org/doi/full/10.1056/NEJMoa1616288" target="_blank" rel="noopener">https://www.nejm.org/doi/full/10.1056/NEJMoa1616288</a></p><p><strong>figure</strong></p><p><img src="/2019/11/05/追踪非小细胞肺癌的进化/fig1.png" style="zoom:50%;"></p><p><strong>文章介绍：</strong></p><blockquote><p><strong>BACKGROUND</strong></p><p>Among patients with non–small-cell lung cancer (NSCLC), data on intratumor heterogeneity and cancer genome evolution have been limited to small retrospective cohorts. We wanted to prospectively investigate intratumor heterogeneity in relation to clinical outcome and to determine the clonal nature of driver events and evolutionary processes in early-stage NSCLC.</p><p><strong>METHODS</strong></p><p>In this prospective cohort study, we performed multiregion whole-exome sequencing on 100 early-stage NSCLC tumors that had been resected before systemic therapy. We sequenced and analyzed 327 tumor regions to define evolutionary histories, obtain a census of clonal and subclonal events, and assess the relationship between intratumor heterogeneity and recurrence-free survival.</p><p><strong>RESULTS</strong></p><p>We observed widespread intratumor heterogeneity for both somatic copy-number altera- tions and mutations. Driver mutations in <em>EGFR</em>, <em>MET</em>, <em>BRAF</em>, and <em>TP53</em> were almost always clonal. However, heterogeneous driver alterations that occurred later in evolution were found in more than 75% of the tumors and were common in <em>PIK3CA</em> and <em>NF1</em> and in genes that are involved in chromatin modification and DNA damage response and repair. Genome doubling and ongoing dynamic chromosomal instability were associated with intratumor heterogeneity and resulted in parallel evolution of driver somatic copy-number alterations, including amplifications in <em>CDK4</em>, <em>FOXA1</em>, and <em>BCL11A</em>. Elevated copy-number heterogeneity was associated with an increased risk of recurrence or death (hazard ratio, 4.9; P=4.4×10−4), which remained significant in multivariate analysis.</p><p><strong>CONCLUSIONS</strong></p><p>Intratumor heterogeneity mediated through chromosome instability was associated with an increased risk of recurrence or death, a finding that supports the potential value of chromosome instability as a prognostic predictor. (Funded by Cancer Research UK and others; TRACERx ClinicalTrials.gov number, NCT01888601.)</p></blockquote><blockquote><p>每日文献摘要：第17篇 2019年11月05日 周二</p><p>今天没时间看了，改天再仔细看</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;小时候觉得癌症这个词离自己很远很远，知道它很可怕，但实际上并不知道它具体是什么，只天真的觉得它永远也不会出现在我的身边。&lt;/p&gt;
-&lt;p&gt;高三时大奶从被检出肝癌晚期到去世不到两周，她在去世的前两天都不是特别清楚自己的病情，直到去世的前一天病情的加重，她才明白。&lt;/p&gt;
-&lt;p&gt;从高三到硕士毕业，7年的时间，大姑和婶婶接连也因为癌症去世。而爷爷今天也被检出贲门癌。爷爷是一个闲不住的人，虽然80多岁了，种地比我们家都多，大概是从4月份的时候开始吃东西容易打嗝，以前他每次从地里干完活回家总要吃两个馒头，现在基本吃不了馒头，只能吃些面条和粥。家里人一直劝他去医院检查，他总是不愿意去，最近才被说服去医院检查，却没想道是癌症。&lt;/p&gt;
-&lt;p&gt;真的很害怕，以前觉得不会出现在身边的癌症，却不断地夺走亲人的生命。我虽然是研究生命科学的，经常关注癌症相关方面的研究，但是我还是不知道为什么现在的癌症越来越多，我经常怀疑我每天的研究有什么意义，在面对真正的癌症时有什么帮助，似乎大多时候我们依然无能为力！&lt;/p&gt;
-&lt;p&gt;但是，没有这些基础研究的推动，临床上治疗又怎么能提升？&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2019/11/05/追踪非小细胞肺癌的进化/absract.jpg&quot; alt&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="literature" scheme="http://yoursite.com/categories/literature/"/>
-    
-    
-      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
-    
-      <category term="tumor evolution" scheme="http://yoursite.com/tags/tumor-evolution/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>抗微生物耐药性(Anti-microbial Resistance,AMR)</title>
-    <link href="http://yoursite.com/2019/11/05/%E6%8A%97%E5%BE%AE%E7%94%9F%E7%89%A9%E8%80%90%E8%8D%AF%E6%80%A7-Anti-microbial-Resistance-AMR/"/>
-    <id>http://yoursite.com/2019/11/05/抗微生物耐药性-Anti-microbial-Resistance-AMR/</id>
-    <published>2019-11-05T04:55:19.000Z</published>
-    <updated>2019-11-24T09:05:35.867Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>一句话评价</strong></p><p>一篇研究抗微生物药物耐药性的测序方法和资源的超全综述</p><p><strong>文章信息</strong></p><p>题目：Sequencing-based methods and resources to study antimicrobial resistance</p><p>杂志：Nature Review Genetics</p><p>时间：<a href="https://www.nature.com/articles/s41576-019-0108-4#article-info" target="_blank" rel="noopener">18 March 2019</a></p><p>链接: <a href="https://doi.org/10.1038/s41576-019-0108-4" target="_blank" rel="noopener">https://doi.org/10.1038/s41576-019-0108-4</a></p><p><strong>figure</strong></p><p><img src="/2019/11/05/抗微生物耐药性-Anti-microbial-Resistance-AMR/fig2.png" alt></p><a id="more"></a><p><strong>文章介绍：</strong></p><blockquote><p><strong>抗微生物药物耐药性(antimicrobial resistance)指微生物（如细菌、病毒和某些寄生虫）阻止抗微生物药物（如抗生素、抗病毒药物和抗疟药物）对其产生作用的能力，致使标准治疗方法失去效力，感染持续存在并可能传播给他人。</strong></p><p>参考：<a href="https://www.who.int/antimicrobial-resistance/zh/" target="_blank" rel="noopener">https://www.who.int/antimicrobial-resistance/zh/</a></p></blockquote><p>日常生活中我们可能大多听说过抗生素耐药性，由于抗生素的过度使用或其他原因，导致细菌对用以治疗细菌感染（如尿道感染、肺炎、血流感染）的抗生素发生反应并改变，使治疗失去效果。</p><p>抗微生物药物耐药性是一个含义更为广泛的术语，包括对治疗由寄生虫（如疟疾或蠕虫）、病毒（如艾滋病毒）及真菌（如念珠菌）等其它微生物引起的感染的药物耐药。</p><p>抗微生物耐药性已经成为影响各个国家生命健康的重要隐患之一。2019年4月29日，联合国、国际机构和有关专家发布了联合行动，防止可能出现的灾难性耐药危机。其中报告中警告说，如果不采取行动，到2050年，耐药性疾病每年可能导致1000万人死亡，对经济造成的灾难性损失将堪比2008-2009年全球金融危机。到2030年，抗微生物药物耐药性问题可能会使多达2400万人陷入极端贫困。</p><p>这篇综述发表于2019年3月的Nature Review Genetics，文中对抗微生物耐药性的监测和鉴定方法做了详尽的概括，包括传统的基于培养的易感性监测、基于测序的监测、以及目前具有前景的深度学习的方法。对基于测序的方法还对相关的工具和数据库也做了详尽的总结。最后对每种方法的优缺点做了讨论，并对未来发展方向做了展望。</p><p><img src="/2019/11/05/抗微生物耐药性-Anti-microbial-Resistance-AMR/fig1.png" alt></p><p><strong>碎碎念</strong></p><p><strong>做相关研究的，这篇综述绝对值得细读！不做相关研究的也可以根据这篇综述简单了解该领域。</strong></p><blockquote><p>每日文献摘要：第16篇 2019年11月04日 周日</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;一句话评价&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;一篇研究抗微生物药物耐药性的测序方法和资源的超全综述&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;文章信息&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;题目：Sequencing-based methods and resources to study antimicrobial resistance&lt;/p&gt;
-&lt;p&gt;杂志：Nature Review Genetics&lt;/p&gt;
-&lt;p&gt;时间：&lt;a href=&quot;https://www.nature.com/articles/s41576-019-0108-4#article-info&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;18 March 2019&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;链接: &lt;a href=&quot;https://doi.org/10.1038/s41576-019-0108-4&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://doi.org/10.1038/s41576-019-0108-4&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;figure&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2019/11/05/抗微生物耐药性-Anti-microbial-Resistance-AMR/fig2.png&quot; alt&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="literature" scheme="http://yoursite.com/categories/literature/"/>
-    
-    
-      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
-    
-      <category term="AMR" scheme="http://yoursite.com/tags/AMR/"/>
     
   </entry>
   
