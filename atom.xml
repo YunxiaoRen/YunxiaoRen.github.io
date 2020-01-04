@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-12-29T04:35:29.280Z</updated>
+  <updated>2020-01-04T08:34:51.028Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>构建基因调控网络的新算法</title>
+    <link href="http://yoursite.com/2020/01/04/%E6%9E%84%E5%BB%BA%E5%9F%BA%E5%9B%A0%E8%B0%83%E6%8E%A7%E7%BD%91%E7%BB%9C%E7%9A%84%E6%96%B0%E7%AE%97%E6%B3%95/"/>
+    <id>http://yoursite.com/2020/01/04/构建基因调控网络的新算法/</id>
+    <published>2020-01-04T08:25:08.000Z</published>
+    <updated>2020-01-04T08:34:51.028Z</updated>
+    
+    <content type="html"><![CDATA[<p>基因表达数据被广泛用于推测基因调控网络（Gene regulatory networks, GRNs）。单细胞RNAseq数据包含单个细胞的表达信息，非常有利于调控机制的研究。但是，目前从大量的表达数据中明确转录调控机制仍然面临挑战，而且，重构后的调控网络可能无法捕获主要的调控规则。</p><p>这篇文章提出了一个新的方法——TENET：从scRNAseq数据中通过<strong>传递熵（transfer entropy, TE)</strong> 计算基因间的因果关系，从而构建GRNs<strong>。</strong>他们的结果发现已知的靶基因具有显著高的TE值，且TE值越高的基因受各种干扰的影响越大。与其他方法相比，他们的结果表明TENET优于其他GRN预测算法。还有一个重要的性能是该方法可以鉴定关键的调控因子。将TENET应用于胚胎干细胞向神经细胞分化过程中的scRNAseq数据，他们发现Nme2是2i条件下特异性干细胞自我更新的关键因子。</p><p><img src="/2020/01/04/构建基因调控网络的新算法/fig-.png"></p><a id="more"></a><p><strong>一句话评价</strong></p><p>构建基因调控网络的新算法</p><p><strong>文章信息</strong></p><p>题目：Gene network reconstruction using single cell transcriptomic</p><p>data reveals key factors for embryonic stem cell differentiation</p><p>杂志：bioRxiv</p><p>时间：Dec. 21, 2019</p><p>链接: <a href="https://www.biorxiv.org/content/10.1101/2019.12.20.884163v1" target="_blank" rel="noopener">https://www.biorxiv.org/content/10.1101/2019.12.20.884163v1</a></p><blockquote><p>有点遗憾，如果半年前自己上点心的话，可能就能深入这个方向的研究了</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;基因表达数据被广泛用于推测基因调控网络（Gene regulatory networks, GRNs）。单细胞RNAseq数据包含单个细胞的表达信息，非常有利于调控机制的研究。但是，目前从大量的表达数据中明确转录调控机制仍然面临挑战，而且，重构后的调控网络可能无法捕获主要的调控规则。&lt;/p&gt;
+&lt;p&gt;这篇文章提出了一个新的方法——TENET：从scRNAseq数据中通过&lt;strong&gt;传递熵（transfer entropy, TE)&lt;/strong&gt; 计算基因间的因果关系，从而构建GRNs&lt;strong&gt;。&lt;/strong&gt;他们的结果发现已知的靶基因具有显著高的TE值，且TE值越高的基因受各种干扰的影响越大。与其他方法相比，他们的结果表明TENET优于其他GRN预测算法。还有一个重要的性能是该方法可以鉴定关键的调控因子。将TENET应用于胚胎干细胞向神经细胞分化过程中的scRNAseq数据，他们发现Nme2是2i条件下特异性干细胞自我更新的关键因子。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2020/01/04/构建基因调控网络的新算法/fig-.png&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="literature" scheme="http://yoursite.com/categories/literature/"/>
+    
+    
+      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
+    
+      <category term="scRNA-seq" scheme="http://yoursite.com/tags/scRNA-seq/"/>
+    
+      <category term="regulation network" scheme="http://yoursite.com/tags/regulation-network/"/>
+    
+  </entry>
   
   <entry>
     <title>利用多组学数据预测药物组合的驱动网络标记物</title>
@@ -164,9 +192,9 @@
     </summary>
     
     
-      <category term="software" scheme="http://yoursite.com/tags/software/"/>
-    
       <category term="single cell" scheme="http://yoursite.com/tags/single-cell/"/>
+    
+      <category term="software" scheme="http://yoursite.com/tags/software/"/>
     
       <category term="R" scheme="http://yoursite.com/tags/R/"/>
     
@@ -219,9 +247,9 @@
     </summary>
     
     
-      <category term="software" scheme="http://yoursite.com/tags/software/"/>
-    
       <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
+    
+      <category term="software" scheme="http://yoursite.com/tags/software/"/>
     
       <category term="降维" scheme="http://yoursite.com/tags/%E9%99%8D%E7%BB%B4/"/>
     
@@ -336,11 +364,11 @@
     </summary>
     
     
-      <category term="ATACseq" scheme="http://yoursite.com/tags/ATACseq/"/>
-    
       <category term="single cell" scheme="http://yoursite.com/tags/single-cell/"/>
     
       <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
+    
+      <category term="ATACseq" scheme="http://yoursite.com/tags/ATACseq/"/>
     
   </entry>
   
@@ -361,9 +389,9 @@
     </summary>
     
     
-      <category term="ATACseq" scheme="http://yoursite.com/tags/ATACseq/"/>
-    
       <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
+    
+      <category term="ATACseq" scheme="http://yoursite.com/tags/ATACseq/"/>
     
       <category term="lncRNA" scheme="http://yoursite.com/tags/lncRNA/"/>
     
@@ -504,11 +532,11 @@
       <category term="Data Sciences" scheme="http://yoursite.com/categories/Data-Sciences/"/>
     
     
-      <category term="software" scheme="http://yoursite.com/tags/software/"/>
-    
       <category term="single cell" scheme="http://yoursite.com/tags/single-cell/"/>
     
       <category term="scRNA-seq" scheme="http://yoursite.com/tags/scRNA-seq/"/>
+    
+      <category term="software" scheme="http://yoursite.com/tags/software/"/>
     
   </entry>
   
@@ -530,35 +558,6 @@
     
     
       <category term="chronic disease" scheme="http://yoursite.com/tags/chronic-disease/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>宏基因组物种鉴定工具</title>
-    <link href="http://yoursite.com/2019/11/22/%E5%AE%8F%E5%9F%BA%E5%9B%A0%E7%BB%84%E7%89%A9%E7%A7%8D%E9%89%B4%E5%AE%9A%E5%B7%A5%E5%85%B7/"/>
-    <id>http://yoursite.com/2019/11/22/宏基因组物种鉴定工具/</id>
-    <published>2019-11-22T02:13:43.000Z</published>
-    <updated>2019-11-22T09:12:16.684Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>一句话评价</strong></p><p>宏基因组物种鉴定工具集锦</p><p><strong>文章信息</strong></p><p>题目：Benchmarking Metagenomics Tools for Taxonomic Classification</p><p>杂志：Cell</p><p>时间：August 8,2019</p><p>链接: <a href="https://doi.org/10.1016/j.cell.2019.07.010" target="_blank" rel="noopener">https://doi.org/10.1016/j.cell.2019.07.010</a></p><p><img src="/2019/11/22/宏基因组物种鉴定工具/abstract.png" alt></p><a id="more"></a><p><strong>文章介绍：</strong></p><p>鉴定物种分类是宏基因组分析的一个必要和基础步骤，相关工具也是层出不穷，如何评价物种分类工具的性能，主要从鉴定的准确性、速度和所需要的计算资源这几方面考虑。</p><p>这篇文章针对20种常见的物种鉴定工具进行评估，并描述了如何评价工具性能。</p><p>下图展示了宏基因组的复杂的样本到物种鉴定和丰度计算的过程</p><p><strong>figure</strong></p><p><img src="/2019/11/22/宏基因组物种鉴定工具/fig1.png" alt></p><h3 id="参考数据库"><a href="#参考数据库" class="headerlink" title="参考数据库"></a>参考数据库</h3><p>宏基因组的物种鉴定依赖于数据库，常见的数据库有<strong>RefSeq, blast nt和nr，以及16S rRNA特有的数据库SILVA</strong>。</p><h3 id="评价物种分类工具性能的方法"><a href="#评价物种分类工具性能的方法" class="headerlink" title="评价物种分类工具性能的方法"></a>评价物种分类工具性能的方法</h3><p>召回率（Recall）和准精确度（Precision）是宏基因组物种鉴定中重要的两个度量概念，这两个概念也是统计学中经常见到的。</p><blockquote><p>其中精度是检索出相关文档数与检索出的文档总数的比率，衡量的是检索系统的<strong>查准率</strong>；召回率是指检索出的相关文档数和文档库中所有的相关文档数的比率，衡量的是检索系统的<strong>查全率</strong>。</p></blockquote><p>召回率 = 提取出的正确信息条数 /  样本中的信息条数  </p><p>精确度= 提取出的正确信息条数 /  提取出的信息条数 </p><p><strong>两者取值在0和1之间，数值越接近1，查准率或查全率就越高。</strong></p><p>F值  = 正确率 <em> 召回率 </em> 2 / (正确率 + 召回率) （F 值即为正确率和召回率的调和平均值）</p><p><strong>F值是Precision和Recall加权调和平均</strong></p><p><strong>AUPR:</strong>是指precision和recal曲线下面的面积，也是一个综合考虑P-R两者来评估结果准确性的一个度量值。</p><p><strong>L2 distance:</strong>是为了评估丰度准确性的参数值，通过计算在给定的分类水平上，每个已识别分类单元的ground-truth丰度和标准丰度计数之间的成对距离。</p><p><img src="/2019/11/22/宏基因组物种鉴定工具/fig2.png" alt></p><p>###物种分类工具和其性能</p><p>这里他们比较了20种宏基因组物种鉴定工具，利用相同的数据库 分别比较了他们的precision, recall, F1, 速度和其他值。包括DAN-DNA鉴定，DNA-protein鉴定，和基于marker的鉴定方法。</p><p><img src="/2019/11/22/宏基因组物种鉴定工具/fig3.png" alt></p><p><strong>AUPR值如下：</strong>值越接近1越好</p><p><img src="/2019/11/22/宏基因组物种鉴定工具/fig4.png" alt></p><p><strong>L2 distance</strong>: 值越小越好</p><p><img src="/2019/11/22/宏基因组物种鉴定工具/fig5.png" alt></p><p><strong>运行时间</strong></p><p><img src="/2019/11/22/宏基因组物种鉴定工具/fig6.png" alt></p><p><strong>碎碎念</strong></p><p>没有做过宏基因组分析实际项目，看着这些软件名字完全没有感觉，也记不住，后续研究若用到的话可以参考这里做选择。</p><blockquote><p>每日文献摘要：第19篇  2019年11月22日 周五</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;一句话评价&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;宏基因组物种鉴定工具集锦&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;文章信息&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;题目：Benchmarking Metagenomics Tools for Taxonomic Classification&lt;/p&gt;
-&lt;p&gt;杂志：Cell&lt;/p&gt;
-&lt;p&gt;时间：August 8,2019&lt;/p&gt;
-&lt;p&gt;链接: &lt;a href=&quot;https://doi.org/10.1016/j.cell.2019.07.010&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://doi.org/10.1016/j.cell.2019.07.010&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2019/11/22/宏基因组物种鉴定工具/abstract.png&quot; alt&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="software" scheme="http://yoursite.com/tags/software/"/>
-    
-      <category term="metagenomics" scheme="http://yoursite.com/tags/metagenomics/"/>
     
   </entry>
   
