@@ -35,9 +35,9 @@
       
         <tags>
             
-            <tag> 文献摘要 </tag>
-            
             <tag> ATACseq </tag>
+            
+            <tag> 文献摘要 </tag>
             
         </tags>
       
@@ -188,9 +188,9 @@
       
         <tags>
             
-            <tag> single cell </tag>
-            
             <tag> software </tag>
+            
+            <tag> single cell </tag>
             
             <tag> R </tag>
             
@@ -230,9 +230,9 @@
       
         <tags>
             
-            <tag> 文献摘要 </tag>
-            
             <tag> software </tag>
+            
+            <tag> 文献摘要 </tag>
             
             <tag> 降维 </tag>
             
@@ -324,11 +324,11 @@
       
         <tags>
             
+            <tag> ATACseq </tag>
+            
             <tag> single cell </tag>
             
             <tag> 文献摘要 </tag>
-            
-            <tag> ATACseq </tag>
             
         </tags>
       
@@ -347,9 +347,9 @@
       
         <tags>
             
-            <tag> 文献摘要 </tag>
-            
             <tag> ATACseq </tag>
+            
+            <tag> 文献摘要 </tag>
             
             <tag> lncRNA </tag>
             
@@ -480,11 +480,11 @@
       
         <tags>
             
+            <tag> software </tag>
+            
             <tag> single cell </tag>
             
             <tag> scRNA-seq </tag>
-            
-            <tag> software </tag>
             
         </tags>
       
@@ -767,13 +767,13 @@
       
         <tags>
             
-            <tag> single cell </tag>
-            
-            <tag> 文献摘要 </tag>
-            
             <tag> ATACseq </tag>
             
             <tag> software </tag>
+            
+            <tag> single cell </tag>
+            
+            <tag> 文献摘要 </tag>
             
         </tags>
       
@@ -1237,11 +1237,11 @@
       
         <tags>
             
+            <tag> ATACseq </tag>
+            
             <tag> single cell </tag>
             
             <tag> 文献摘要 </tag>
-            
-            <tag> ATACseq </tag>
             
         </tags>
       
@@ -1484,11 +1484,11 @@
       
         <tags>
             
+            <tag> ATACseq </tag>
+            
             <tag> single cell </tag>
             
             <tag> 文献摘要 </tag>
-            
-            <tag> ATACseq </tag>
             
         </tags>
       
