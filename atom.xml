@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-02-08T18:18:31.860Z</updated>
+  <updated>2020-02-08T18:49:11.803Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>细菌生物信息资源数据库——PATRIC</title>
+    <link href="http://yoursite.com/2020/02/08/undefined/"/>
+    <id>http://yoursite.com/2020/02/08/undefined/</id>
+    <published>2020-02-08T18:22:12.000Z</published>
+    <updated>2020-02-08T18:49:11.803Z</updated>
+    
+    <content type="html"><![CDATA[<p>PATRIC（<a href="https://www.patricbrc.org/）：即病理系统资源整合中心，提供了集成的数据资源和分析工具，以支持有关细菌感染性疾病的生物医学研究。" target="_blank" rel="noopener">https://www.patricbrc.org/）：即病理系统资源整合中心，提供了集成的数据资源和分析工具，以支持有关细菌感染性疾病的生物医学研究。</a></p><blockquote><p><strong>PATRIC</strong>, the Pathosystems Resource Integration Center, provides integrated data and analysis tools to support biomedical research on bacterial infectious diseases.</p></blockquote><p>下面是该网站主页，主要包含3个模块：</p><ul><li>第一个是搜索模块，可以对细菌、古细菌、噬菌体以及真核宿主进行搜索，数据包括基因组、基因、转录组实验、分类学等信息；</li><li>第二个是数据分析模块，可以进行基因组组装、注释、RNA-seq、代谢组的分析等</li><li>第三个是多组学数据资源，如AMR数据，基因组数据，蛋白质家族，特殊基因等数据资源</li></ul><p><img src="/2020/02/08/undefined/fig1.png" style="zoom:50%;"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;PATRIC（&lt;a href=&quot;https://www.patricbrc.org/）：即病理系统资源整合中心，提供了集成的数据资源和分析工具，以支持有关细菌感染性疾病的生物医学研究。&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.
+      
+    
+    </summary>
+    
+    
+      <category term="database" scheme="http://yoursite.com/tags/database/"/>
+    
+      <category term="AMR" scheme="http://yoursite.com/tags/AMR/"/>
+    
+  </entry>
   
   <entry>
     <title>类器官和ATAC-seq技术结合研究人前脑发育图谱</title>
@@ -540,33 +565,6 @@
       <category term="software" scheme="http://yoursite.com/tags/software/"/>
     
       <category term="deep learning" scheme="http://yoursite.com/tags/deep-learning/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>scATAC-seq与scRNA-seq的整合分析系统——MAESTRO</title>
-    <link href="http://yoursite.com/2019/11/23/undefined/"/>
-    <id>http://yoursite.com/2019/11/23/undefined/</id>
-    <published>2019-11-23T12:25:44.000Z</published>
-    <updated>2019-11-24T09:00:25.178Z</updated>
-    
-    <content type="html"><![CDATA[<p>单细胞技术是目前比较火热的一个领域，从单细胞转录组、基因组扩展到单细胞表观组，如scATAC-seq, scHiC, scmethylation等，促使着相关的分析工具也不断涌出。单细胞领域相关工具的开发大致有两个方向：一是从本质上如算法、统计学方法入手开发新的分析工具；一种是整合多种基础工具，开发出具有功能全面，易用等特征的工具。</p><p><img src="/2019/11/23/undefined/fig2.png" style="zoom: 50%;"></p><a id="more"></a><p><strong>MAESTRO</strong>(Model-based AnalysEs of Single-cell Transcriptome and RegulOme)是刘小乐实验室基于snakemake新开发的用于分析scRNA-seq和scATAC-seq的工具。MAESTRO主要是打包了一些工具和软件包，目前可以实现的功能包括：对scRNA-seq和scATAC-seq数据的比对、质量控制、细胞过滤、标准化、非监督聚类、差异分析、peak calling、细胞类型注释和转录调控分析。支持 Smart-seq2, 10x-genomics, Drop-seq, SPLiT-seq for scRNA-seq protocols; microfudics-based, 10x-genomics and sci-ATAC-seq for scATAC-seq protocols.</p><p>提供的有docker镜像，<strong>安装可以参考软件介绍：<a href="https://github.com/liulab-dfci/MAESTRO/" target="_blank" rel="noopener">https://github.com/liulab-dfci/MAESTRO/</a></strong> </p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh</span><br><span class="line">bash Miniconda3-latest-Linux-x86_64.sh</span><br><span class="line"></span><br><span class="line">conda config --add channels defaults</span><br><span class="line">conda config --add channels bioconda</span><br><span class="line">conda config --add channels conda-forge</span><br><span class="line">conda create -n MAESTRO maestro -c liulab-dfci</span><br></pre></td></tr></table></figure><p><strong>Installing the MAESTRO R package</strong></p><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">R</span><br><span class="line">&gt; <span class="keyword">library</span>(devtools)</span><br><span class="line">&gt; install_github(<span class="string">"liulab-dfci/MAESTRO"</span>)</span><br></pre></td></tr></table></figure><p>另外依赖的cell ranger, RABIT/LISA等软件需要自行单独安装。</p><p>每种类型的数据的详细分析教程可以在原工具介绍网页点击下面每幅图查看</p><p><img src="/2019/11/23/undefined/fig1.png" alt></p><blockquote><p>PS: 目前还没有看到相关文章发表</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;单细胞技术是目前比较火热的一个领域，从单细胞转录组、基因组扩展到单细胞表观组，如scATAC-seq, scHiC, scmethylation等，促使着相关的分析工具也不断涌出。单细胞领域相关工具的开发大致有两个方向：一是从本质上如算法、统计学方法入手开发新的分析工具；一种是整合多种基础工具，开发出具有功能全面，易用等特征的工具。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2019/11/23/undefined/fig2.png&quot; style=&quot;zoom: 50%;&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Data Sciences" scheme="http://yoursite.com/categories/Data-Sciences/"/>
-    
-    
-      <category term="single cell" scheme="http://yoursite.com/tags/single-cell/"/>
-    
-      <category term="software" scheme="http://yoursite.com/tags/software/"/>
-    
-      <category term="scRNA-seq" scheme="http://yoursite.com/tags/scRNA-seq/"/>
     
   </entry>
   
