@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[类器官和ATAC-seq技术结合研究人前脑发育图谱]]></title>
+    <url>%2F2020%2F02%2F08%2Fundefined%2F</url>
+    <content type="text"><![CDATA[一句话评价 人类前脑发育的染色质可及性动态图谱 文章信息 题目：Chromatin accessibility dynamics in a model of human forebrain development 杂志：Science 时间：24 January 2020 链接: http://dx.doi. org/10.1126/ science.aay1645 figure 文章介绍： 人类前脑发育在很大程度上是细胞水平研究、直接功能研究或操纵所无法达到的。缺乏初级脑组织样本，特别是在后期，以及传统的体外细胞模型的局限性，阻碍了对健康和疾病状态下皮质激素生成的详细机制性理解。而文中利用干细胞3D定向分化技术形成背侧和腹侧的前脑干细胞作为原始研究组织，更加接近体内真实的发育情况，然后利用ATAC-seq和RNA测序技术绘制了体外20多个月的神经元和胶质细胞系的发育图谱。并对增强子和基因的相互作用，以及每个发育时期特异的转录调控因子进行了探究。然后他们利用这个资源绘制了与精神分裂症和自闭症谱系失调相关的基因和遗传变异图，以区分染色质可及性模式，从而揭示细胞类型和易感期。最后，他们鉴定到在皮质神经发生过程中染色质重构的现象，在此期间四分之一的调节区域是活跃的，并推测这些转录因子可能驱动这些发育变化。 关于脑神经发育过程中染色质可及性图谱的文章已有人发表过，这篇文章仍然能发到Science上，借助了一项重要的实验技术——对干细胞进行重编程然后进行3D培养形成人脑的类器官。]]></content>
+      <tags>
+        <tag>文献摘要</tag>
+        <tag>ATACseq</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[构建基因调控网络的新算法]]></title>
     <url>%2F2020%2F01%2F04%2Fundefined%2F</url>
     <content type="text"><![CDATA[基因表达数据被广泛用于推测基因调控网络（Gene regulatory networks, GRNs）。单细胞RNAseq数据包含单个细胞的表达信息，非常有利于调控机制的研究。但是，目前从大量的表达数据中明确转录调控机制仍然面临挑战，而且，重构后的调控网络可能无法捕获主要的调控规则。 这篇文章提出了一个新的方法——TENET：从scRNAseq数据中通过传递熵（transfer entropy, TE) 计算基因间的因果关系，从而构建GRNs。他们的结果发现已知的靶基因具有显著高的TE值，且TE值越高的基因受各种干扰的影响越大。与其他方法相比，他们的结果表明TENET优于其他GRN预测算法。还有一个重要的性能是该方法可以鉴定关键的调控因子。将TENET应用于胚胎干细胞向神经细胞分化过程中的scRNAseq数据，他们发现Nme2是2i条件下特异性干细胞自我更新的关键因子。 一句话评价 构建基因调控网络的新算法 文章信息 题目：Gene network reconstruction using single cell transcriptomic data reveals key factors for embryonic stem cell differentiation 杂志：bioRxiv 时间：Dec. 21, 2019 链接: https://www.biorxiv.org/content/10.1101/2019.12.20.884163v1 有点遗憾，如果半年前自己上点心的话，可能就能深入这个方向的研究了]]></content>
@@ -62,8 +71,8 @@
     <url>%2F2019%2F12%2F29%2Fundefined%2F</url>
     <content type="text"><![CDATA[文章介绍： Bioconductor是一个针对生物数据分析的以R语言开发的开源软件库，从2001年项目开始至今，提供了很多优秀的分析流程，如bulk-RNA-seq的分析流程，文档非常详细。如今出手整理了单细胞分析的流程，包括软件安装、数据导入、单细胞数据储存、格式转换为下游分析的数据、下游分析、可视化等，非常详细，另外他们提供了在线book：https://osca.bioconductor .，想上手学习单细胞分析的以本书作为一个入门是一个不错的选择。 figure 文章信息 题目：Orchestrating single-cell analysis with Bioconductor 杂志：Nature Methods 时间：02, December, 2019 链接: https://www.nature.com/articles/s41592-019-0654-x 每日文献摘要：第32篇 2019年12月29日 周日]]></content>
       <tags>
-        <tag>software</tag>
         <tag>single cell</tag>
+        <tag>software</tag>
         <tag>R</tag>
       </tags>
   </entry>
@@ -80,8 +89,8 @@
     <url>%2F2019%2F12%2F29%2Fundefined%2F</url>
     <content type="text"><![CDATA[一句话评价 新的高维数据结构和模式的可视化方法——PHATE 文章信息 题目：Visualizing structure and transitions in high-dimensional biological data 杂志：Nature biotechnology 时间：3 December,2019 链接: https://www.nature.com/articles/s41587-019-0336-3 figure 文章介绍： 这篇文章提出常见的降维方法如PCA, t-SNE等方法存在对噪音敏感（PCA, Isomap)、扰乱数据结构(t-SNE)、没有为二维可视化优化（PCA &amp; diffusion maps)，计算资源消耗大、依赖于先验知识等不足，他们提出了一种利用数据点之间的信息几何距离(information-geometric distance)同时捕捉局部和全局的非线性结构的可视化方法——PHATE(potential of heat diffusion for affinity-based transition embedding)。与其他常见的降维方法相比，该方法能够更好的保持数据中的一系列结构模式，包括连续的发展进程、分支结构、簇的结构（clusters）。此外，他们定义了一个叫DEMaP的度量，可以更好的去噪。他们在实际数据中验证了该方法的有效性，并且可用于质谱数据、单细胞数据、Hi-C数据、肠道微生物等多种数据类型。 每日文献摘要：第26篇 2019年12月29日 周日]]></content>
       <tags>
-        <tag>software</tag>
         <tag>文献摘要</tag>
+        <tag>software</tag>
         <tag>降维</tag>
       </tags>
   </entry>
@@ -121,9 +130,9 @@
     <url>%2F2019%2F12%2F12%2Fundefined%2F</url>
     <content type="text"><![CDATA[单细胞发展至今，多组学整合是其发展的一个方向，关于scRNAseq与scATACseq整合的方法也有很多文章报道，这篇文章是由表观学大牛任兵实验室开发的，主要优点体现在通量上，可用于并行分析数百万个单细胞转录组和可访问染色质。 一句话评价 单细胞ATAC-seq和RNA-seq联合分析方法 文章信息 题目：An ultra high-throughput method for single-cell joint analysis of open chromatin and transcriptome 杂志：NAtuRe StRuCtuRAL &amp; MoLeCuLAR BIoLogY 时间：2019，NOVEMBER 链接: www.nature.com/nsmb]]></content>
       <tags>
-        <tag>ATACseq</tag>
         <tag>single cell</tag>
         <tag>文献摘要</tag>
+        <tag>ATACseq</tag>
       </tags>
   </entry>
   <entry>
@@ -131,8 +140,8 @@
     <url>%2F2019%2F12%2F12%2Fundefined%2F</url>
     <content type="text"><![CDATA[这篇文章主要想研究非编码RNA与染色质可及性对玉米赤霉烯酮对猪小肠上皮细胞的影响，思路较简单，分析也过于简单，文章也没有得到特定的结论。思路如下图b所示，分析ATAC-seq得到peaks,然后注释peaks的基因，分析RNA-seq得到miRNA,lncRNA，然后预测这些非编码RNA的靶基因，并将非编码RNA的靶基因与peak注释到的基因整合，进行功能注释。 题目：transcriptome and chromatin accessibility in porcine intestinal epithelial cells upon Zearalenone exposure 杂志：Scientific DATA 时间：Dec 3, 2019 链接: https://doi.org/10.1038/s41597-019-0313-1]]></content>
       <tags>
-        <tag>ATACseq</tag>
         <tag>文献摘要</tag>
+        <tag>ATACseq</tag>
         <tag>lncRNA</tag>
       </tags>
   </entry>
@@ -190,8 +199,8 @@
         <category>Data Sciences</category>
       </categories>
       <tags>
-        <tag>software</tag>
         <tag>single cell</tag>
+        <tag>software</tag>
         <tag>scRNA-seq</tag>
       </tags>
   </entry>
@@ -317,10 +326,10 @@
         <category>literature</category>
       </categories>
       <tags>
-        <tag>ATACseq</tag>
-        <tag>software</tag>
         <tag>single cell</tag>
         <tag>文献摘要</tag>
+        <tag>ATACseq</tag>
+        <tag>software</tag>
       </tags>
   </entry>
   <entry>
@@ -525,9 +534,9 @@
         <category>literature</category>
       </categories>
       <tags>
-        <tag>ATACseq</tag>
         <tag>single cell</tag>
         <tag>文献摘要</tag>
+        <tag>ATACseq</tag>
       </tags>
   </entry>
   <entry>
@@ -635,9 +644,9 @@
         <category>literature</category>
       </categories>
       <tags>
-        <tag>ATACseq</tag>
         <tag>single cell</tag>
         <tag>文献摘要</tag>
+        <tag>ATACseq</tag>
       </tags>
   </entry>
   <entry>
