@@ -26,8 +26,8 @@
         <category>literature</category>
       </categories>
       <tags>
-        <tag>scRNA-seq</tag>
         <tag>文献摘要</tag>
+        <tag>scRNA-seq</tag>
         <tag>regulation network</tag>
       </tags>
   </entry>
@@ -109,8 +109,8 @@
     <content type="text"><![CDATA[一句话评价 scRNA-seq分析流程大比拼 文章信息 题目：A systematic evaluation of single cell RNA-seq analysis pipelines 杂志：Nature Communication 时间：11, October, 2019 链接: https://doi.org/10.1038/s41467-019-12266-7 figure 文章介绍： 单细胞RNA-seq是单细胞领域较为成熟的技术，相关的实验方法和计算方法也不断被开发，面临着越来越多的方法和工具，如何选择合适的最佳流程呢？这篇文章从单细胞建库方法，比对、imputation、标准化和差异方法共评估约3000个组合流程。评价结果可以作为选择最佳分析流程的一个参考，不过所谓的最佳流程并不是以一概全指某个特定流程，而是要根据实际研究目的，选择合适的实验方法和分析方法。 另外还可以参考前不久发表的单细胞RNA-seq最佳分析流程：Current best practices in single‐cell RNA‐seq analysis: a tutorial (https://doi.org/10.15252/msb.20188746) 每日文献摘要：第25篇 2019年12月29日 周日]]></content>
       <tags>
         <tag>single cell</tag>
-        <tag>scRNA-seq</tag>
         <tag>文献摘要</tag>
+        <tag>scRNA-seq</tag>
       </tags>
   </entry>
   <entry>
@@ -323,8 +323,8 @@
       <tags>
         <tag>文献摘要</tag>
         <tag>deep learning</tag>
-        <tag>metagenomics</tag>
         <tag>AMR</tag>
+        <tag>metagenomics</tag>
       </tags>
   </entry>
   <entry>
@@ -581,8 +581,8 @@
       </categories>
       <tags>
         <tag>single cell</tag>
-        <tag>scRNA-seq</tag>
         <tag>文献摘要</tag>
+        <tag>scRNA-seq</tag>
       </tags>
   </entry>
   <entry>
@@ -594,8 +594,8 @@
       </categories>
       <tags>
         <tag>single cell</tag>
-        <tag>scRNA-seq</tag>
         <tag>文献摘要</tag>
+        <tag>scRNA-seq</tag>
       </tags>
   </entry>
   <entry>
@@ -607,8 +607,8 @@
       </categories>
       <tags>
         <tag>single cell</tag>
-        <tag>scRNA-seq</tag>
         <tag>文献摘要</tag>
+        <tag>scRNA-seq</tag>
       </tags>
   </entry>
   <entry>
