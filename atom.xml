@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-02-20T08:47:44.597Z</updated>
+  <updated>2020-02-29T21:46:36.840Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>肿瘤免疫治疗研究的平台——TIDE</title>
+    <link href="http://yoursite.com/2020/02/29/Sat%20Feb%2029%202020%2022:44:18%20GMT+0100/"/>
+    <id>http://yoursite.com/2020/02/29/Sat Feb 29 2020 22:44:18 GMT+0100/</id>
+    <published>2020-02-29T21:44:18.000Z</published>
+    <updated>2020-02-29T21:46:36.840Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>一句话评价</strong></p><p>利用公共数据模拟免疫疗法的效应和耐药性</p><p><strong>文章信息</strong></p><p>题目：Large-scale public data reuse to model immunotherapy response and resistance                           </p><p>杂志：Genome Medicine</p><p>时间：26 February,2020</p><p>链接: <a href="https://doi.org/10.1186/s13073-020-0721-z" target="_blank" rel="noopener">https://doi.org/10.1186/s13073-020-0721-z</a>                       </p><p><strong>figure</strong></p><p><img src="/2020/02/29/Sat Feb 29 2020 22:44:18 GMT+0100/resize,w_1500-20200229224559989.png" alt="image.png"></p><a id="more"></a><p><strong>文章介绍：</strong></p><p>这是刘小乐老师实验室开发的一个网络平台——TIDE(<a href="http://tide.dfci.harvard.edu/login/" target="_blank" rel="noopener">http://tide.dfci.harvard.edu/login/</a>) （很好奇为什么命名为TIDE，而且网站图标也是来自<a href="https://mall.jd.com/index-1000001829.html" target="_blank" rel="noopener">汰渍</a>），用于推断调节肿瘤免疫的基因的功能，并评估预测免疫检查点抑制剂(immune checkpoint blockade,ICB)临床反应的标记物。</p><p>他们共处理了12项公开发表的ICB临床研究中的998例肿瘤的组学数据，以及8个已发表的用于鉴定参与调节淋巴细胞介导的肿瘤杀伤和免疫治疗的基因CRISPR筛选研究。其中ICB队列的临床数据共有188个肿瘤队列中的33000个样本，这些样本主要来自TCGA,METABRIC和PRECOG数据库，以及实验室内部数据。该网络平台的功能包括3个交互分析模块：将与肿瘤免疫逃逸相关的标记物进行排序，生成假设；然后通过AUC score 和生存曲线对标记物评估；最后根据标记物对患者分类。</p><p>对肿瘤免疫感兴趣的同学可以仔细研究下文章是如何整合公共数据的，以及利用该平台为课题提供一些新思路。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;一句话评价&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;利用公共数据模拟免疫疗法的效应和耐药性&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;文章信息&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;题目：Large-scale public data reuse to model immunotherapy response and resistance                           &lt;/p&gt;
+&lt;p&gt;杂志：Genome Medicine&lt;/p&gt;
+&lt;p&gt;时间：26 February,2020&lt;/p&gt;
+&lt;p&gt;链接: &lt;a href=&quot;https://doi.org/10.1186/s13073-020-0721-z&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://doi.org/10.1186/s13073-020-0721-z&lt;/a&gt;                       &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;figure&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2020/02/29/Sat Feb 29 2020 22:44:18 GMT+0100/resize,w_1500-20200229224559989.png&quot; alt=&quot;image.png&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>综述|深度学习框架、应用和发展趋向</title>
@@ -536,35 +562,6 @@
     
     
       <category term="lncRNA" scheme="http://yoursite.com/tags/lncRNA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>多组学数据联合展示、且可以交互的基因组浏览器——trackViewer</title>
-    <link href="http://yoursite.com/2019/11/23/Sat%20Nov%2023%202019%2017:53:15%20GMT+0100/"/>
-    <id>http://yoursite.com/2019/11/23/Sat Nov 23 2019 17:53:15 GMT+0100/</id>
-    <published>2019-11-23T16:53:15.000Z</published>
-    <updated>2019-11-23T10:15:03.769Z</updated>
-    
-    <content type="html"><![CDATA[<p>常见的可视化基因组track的Bioconductor package有<strong>rtracklayer</strong> 和 <strong>Gviz</strong>。rtracklayer提供了交互的基因组浏览器和相关tracks的注释；Gviz可以用于tracks覆盖度和注释的可视化。<strong>trackViewer</strong>是一个更轻量级的工具，且可以产生交互的可视化结果。可用于RNA-seq,ChIP-seq/ATAC-seq,miRNA-seq,DNA-seq,methylation等各种NGS组学数据的覆盖度和注释tracks的可视化展示，而且可以绘制发表级的棒棒糖图和蒲公英图。</p><p>先展示下极好看可视化效果</p><p><img src="/2019/11/23/Sat Nov 23 2019 17:53:15 GMT+0100/fig.png" alt></p><p>使用方法可以参考文档：</p><ul><li><p>详细文档：<a href="http://127.0.0.1:31580/library/trackViewer/doc/trackViewer.html" target="_blank" rel="noopener">http://127.0.0.1:31580/library/trackViewer/doc/trackViewer.html</a></p></li><li><p>Web app: <a href="https://github.com/jianhong/trackViewer.documentation/tree/master/trackViewerShinyApp" target="_blank" rel="noopener">https://github.com/jianhong/trackViewer.documentation/tree/master/trackViewerShinyApp</a></p></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;常见的可视化基因组track的Bioconductor package有&lt;strong&gt;rtracklayer&lt;/strong&gt; 和 &lt;strong&gt;Gviz&lt;/strong&gt;。rtracklayer提供了交互的基因组浏览器和相关tracks的注释；Gviz可以用于trac
-      
-    
-    </summary>
-    
-    
-      <category term="ATACseq" scheme="http://yoursite.com/tags/ATACseq/"/>
-    
-      <category term="R" scheme="http://yoursite.com/tags/R/"/>
-    
-      <category term="visualization" scheme="http://yoursite.com/tags/visualization/"/>
-    
-      <category term="ChIPseq" scheme="http://yoursite.com/tags/ChIPseq/"/>
     
   </entry>
   
