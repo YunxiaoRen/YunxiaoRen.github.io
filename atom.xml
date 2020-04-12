@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-03-30T18:51:58.243Z</updated>
+  <updated>2020-04-12T20:02:10.428Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>基于微生物组学数据的深度表征学习预测疾病</title>
+    <link href="http://yoursite.com/2020/04/12/Sun%20Apr%2012%202020%2021:36:46%20GMT+0200/"/>
+    <id>http://yoursite.com/2020/04/12/Sun Apr 12 2020 21:36:46 GMT+0200/</id>
+    <published>2020-04-12T19:36:46.000Z</published>
+    <updated>2020-04-12T20:02:10.428Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>一句话评价</strong></p><p>深度表征学习在疾病预测中的应用</p><p><strong>文章信息</strong></p><p>题目：DeepMicro: deep representation learning for disease prediction based on microbiome data</p><p>杂志：Scientific Reports</p><p>时间：7 April, 2020</p><p>链接: <a href="https://www.nature.com/articles/s41598-020-63159-5" target="_blank" rel="noopener">https://www.nature.com/articles/s41598-020-63159-5</a></p><p><strong>figure</strong></p><p><img src="/2020/04/12/Sun Apr 12 2020 21:36:46 GMT+0200/fig1.png" style="zoom:50%;"></p><a id="more"></a><p><strong>文章介绍：</strong></p><p>微生物组学数据在人类健康和疾病领域中扮演着重要的作用，然而，微生物组学数据的高纬性，以及样本量低等特点使基于机器学习的预测算法面临极大的挑战。这篇文章基于深度表征学习框架，提出了DeepMicro的方法，可使用各种自动编码器成功的将高维数据转换为低维表示，加快了模型训练和超参数优化过程，在基本方法的基础上提高了8-30倍。在5个不同的数据集上的测试显示DeepMicro在疾病预测方面潜在应用。</p><p>DeepMicro的实现环境和使用的工具包有：</p><ul><li>Python 3.5.2</li><li>Numpy 1.16.2, </li><li>Pandas 0.24.2, </li><li>Scipy 1.2.1, </li><li>Scikt-learn 0.20.3, </li><li>Keras 2.2.4</li><li>Tensorflow 1.13.1</li></ul><p>代码：<a href="https://github.com/minoh0201/DeepMicro" target="_blank" rel="noopener">https://github.com/minoh0201/DeepMicro</a></p><blockquote><p><strong>表征学习（representation learning）</strong></p><p>机器学习算法的成功与否不仅仅取决于算法本身，也取决于数据的表示。数据的不同表示可能会导致有效信息的隐藏或是曝露，这也决定了算法是不是能直截了当地解决问题。表征学习的目的是对复杂的原始数据化繁为简，把原始数据的无效信息剔除，把有效信息更有效地进行提炼，形成特征，这也应和了机器学习的一大任务——可解释性。 也正是因为特征的有效提取，使得今后的机器学习任务简单并且精确许多。在我们接触机器学习、深度学习之初，我们就知道有一类任务也是提炼数据的，那就是特征工程。与表征学习不同的是，特征工程是人为地处理数据，也是我们常听的“洗数据”。 而表示学习是借助算法让机器自动地学习有用的数据和其特征。 不过这两个思路都在尝试解决机器学习的一个主要问题——如何更合理高效地将特征表示出来。</p><p>链接：<a href="https://www.zhihu.com/question/37162929" target="_blank" rel="noopener">https://www.zhihu.com/question/37162929</a><br>来源：知乎</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;一句话评价&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;深度表征学习在疾病预测中的应用&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;文章信息&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;题目：DeepMicro: deep representation learning for disease prediction based on microbiome data&lt;/p&gt;
+&lt;p&gt;杂志：Scientific Reports&lt;/p&gt;
+&lt;p&gt;时间：7 April, 2020&lt;/p&gt;
+&lt;p&gt;链接: &lt;a href=&quot;https://www.nature.com/articles/s41598-020-63159-5&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.nature.com/articles/s41598-020-63159-5&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;figure&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2020/04/12/Sun Apr 12 2020 21:36:46 GMT+0200/fig1.png&quot; style=&quot;zoom:50%;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="literature" scheme="http://yoursite.com/categories/literature/"/>
+    
+    
+      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
+    
+      <category term="deep learning" scheme="http://yoursite.com/tags/deep-learning/"/>
+    
+  </entry>
   
   <entry>
     <title>提取fastq文件中的序列信息</title>
@@ -147,9 +179,9 @@
     </summary>
     
     
-      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
-    
       <category term="ATACseq" scheme="http://yoursite.com/tags/ATACseq/"/>
+    
+      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
     
   </entry>
   
@@ -329,9 +361,9 @@
     </summary>
     
     
-      <category term="single cell" scheme="http://yoursite.com/tags/single-cell/"/>
-    
       <category term="software" scheme="http://yoursite.com/tags/software/"/>
+    
+      <category term="single cell" scheme="http://yoursite.com/tags/single-cell/"/>
     
       <category term="R" scheme="http://yoursite.com/tags/R/"/>
     
@@ -384,9 +416,9 @@
     </summary>
     
     
-      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
-    
       <category term="software" scheme="http://yoursite.com/tags/software/"/>
+    
+      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
     
       <category term="降维" scheme="http://yoursite.com/tags/%E9%99%8D%E7%BB%B4/"/>
     
@@ -501,11 +533,11 @@
     </summary>
     
     
+      <category term="ATACseq" scheme="http://yoursite.com/tags/ATACseq/"/>
+    
       <category term="single cell" scheme="http://yoursite.com/tags/single-cell/"/>
     
       <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
-    
-      <category term="ATACseq" scheme="http://yoursite.com/tags/ATACseq/"/>
     
   </entry>
   
@@ -526,45 +558,11 @@
     </summary>
     
     
-      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
-    
       <category term="ATACseq" scheme="http://yoursite.com/tags/ATACseq/"/>
     
-      <category term="lncRNA" scheme="http://yoursite.com/tags/lncRNA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>利用深度学习进行宏基因组物种分类</title>
-    <link href="http://yoursite.com/2019/11/25/Mon%20Nov%2025%202019%2023:53:29%20GMT+0100/"/>
-    <id>http://yoursite.com/2019/11/25/Mon Nov 25 2019 23:53:29 GMT+0100/</id>
-    <published>2019-11-25T22:53:29.000Z</published>
-    <updated>2019-11-25T16:19:01.970Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>一句话评价</strong></p><p>深度学习在宏基因组分析的物种鉴定中的应用</p><p><strong>文章信息</strong></p><p>题目：DeepMicrobes: taxonomic classification for metagenomics with deep learning</p><p>杂志：BioRxiv</p><p>时间：Jul,8, 2019</p><p>链接: <a href="http://dx.doi.org/10.1101/694851" target="_blank" rel="noopener">http://dx.doi.org/10.1101/694851</a></p><a id="more"></a><p><strong>文章介绍：</strong></p><p>物种分类是宏基因组分析中重要的一个环节，虽然有很多相关的工具。但是利用深度学习的框架进行物种鉴定分类的报道还相对较少，作者这里基于recurrent neural network的架构开发了<strong>DeepMicrobes</strong>用于物种分类研究，与其他工具相比发现DeepMicrobes的假阳性率相对较低。</p><p>软件地址：<a href="https://github.com/MicrobeLab/DeepMicrobes" target="_blank" rel="noopener">https://github.com/MicrobeLab/DeepMicrobes</a></p><p><strong>figure</strong></p><p><img src="/2019/11/25/Mon Nov 25 2019 23:53:29 GMT+0100/fig1.png" alt></p><blockquote><p>每日文献摘要：第21篇  2019年11月25日 周一</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;一句话评价&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;深度学习在宏基因组分析的物种鉴定中的应用&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;文章信息&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;题目：DeepMicrobes: taxonomic classification for metagenomics with deep learning&lt;/p&gt;
-&lt;p&gt;杂志：BioRxiv&lt;/p&gt;
-&lt;p&gt;时间：Jul,8, 2019&lt;/p&gt;
-&lt;p&gt;链接: &lt;a href=&quot;http://dx.doi.org/10.1101/694851&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://dx.doi.org/10.1101/694851&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="literature" scheme="http://yoursite.com/categories/literature/"/>
-    
-    
       <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
     
-      <category term="deep learning" scheme="http://yoursite.com/tags/deep-learning/"/>
-    
-      <category term="metagenomics" scheme="http://yoursite.com/tags/metagenomics/"/>
-    
-      <category term="16s rRNA" scheme="http://yoursite.com/tags/16s-rRNA/"/>
+      <category term="lncRNA" scheme="http://yoursite.com/tags/lncRNA/"/>
     
   </entry>
   
