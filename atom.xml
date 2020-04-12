@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-04-12T20:02:10.428Z</updated>
+  <updated>2020-04-12T21:18:51.605Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>接纳自己的不完美</title>
+    <link href="http://yoursite.com/2020/04/12/Sun%20Apr%2012%202020%2023:15:52%20GMT+0200/"/>
+    <id>http://yoursite.com/2020/04/12/Sun Apr 12 2020 23:15:52 GMT+0200/</id>
+    <published>2020-04-12T21:15:52.000Z</published>
+    <updated>2020-04-12T21:18:51.605Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>《心灵捕手 Good Will Hunting 》（1997）</strong></p><p><img src="/2020/04/12/Sun Apr 12 2020 23:15:52 GMT+0200/心灵捕手.png" style="zoom:50%;"></p><p><strong>豆瓣剧情简介</strong></p><blockquote><p>麻省理工学院的数学教授蓝波在席上公布了一道困难的数学题，却被年轻的清洁工威尔（马特·戴蒙 饰）解了出来。可是威尔却是个问题少年，成天和好朋友查克（本·阿弗莱特 饰）等人四处闲逛，打架滋事。当蓝波找到这个天才的时候，他正因为打架袭警被法庭宣判送进看守所。蓝波向法官求情保释，才使他免于牢狱之灾。蓝波为了让威尔找到自己的人生目标，不浪费他的数学天赋，请了很多心理学专家为威尔做辅导，但是威尔十分抗拒，专家们都束手无策。无计可施之下，蓝波求助于他大学的好友，心理学教授尚恩（罗宾·威廉姆斯 饰），希望能够帮助威尔打开心房。经过蓝波和尚恩的不懈努力，威尔渐渐敞开心胸，而好友查克的一席话，更是让他豁然开朗。</p></blockquote><p>这部电影从表面上可以归类为心里咨询与教育的影片，我更喜欢这部电影映射出的人与人之间相处与交流的原则：彼此坦诚，才可以赢得信任，进而走进对方的内心。以及每个人应该学会与内心的自己相处，正面认识自己，接纳自己的不完美。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;《心灵捕手 Good Will Hunting 》（1997）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2020/04/12/Sun Apr 12 2020 23:15:52 GMT+0200/心灵捕手.png&quot; style=&quot;zoom:50%
+      
+    
+    </summary>
+    
+    
+      <category term="影评" scheme="http://yoursite.com/tags/%E5%BD%B1%E8%AF%84/"/>
+    
+  </entry>
   
   <entry>
     <title>基于微生物组学数据的深度表征学习预测疾病</title>
@@ -538,31 +562,6 @@
       <category term="single cell" scheme="http://yoursite.com/tags/single-cell/"/>
     
       <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>玉米赤霉烯酮对猪小肠上皮细胞转录组和染色质可及性的影响</title>
-    <link href="http://yoursite.com/2019/12/12/Thu%20Dec%2012%202019%2020:50:50%20GMT+0100/"/>
-    <id>http://yoursite.com/2019/12/12/Thu Dec 12 2019 20:50:50 GMT+0100/</id>
-    <published>2019-12-12T19:50:50.000Z</published>
-    <updated>2019-12-12T13:02:51.620Z</updated>
-    
-    <content type="html"><![CDATA[<p>这篇文章主要想研究非编码RNA与染色质可及性对玉米赤霉烯酮对猪小肠上皮细胞的影响，思路较简单，分析也过于简单，文章也没有得到特定的结论。思路如下图b所示，分析ATAC-seq得到peaks,然后注释peaks的基因，分析RNA-seq得到miRNA,lncRNA，然后预测这些非编码RNA的靶基因，并将非编码RNA的靶基因与peak注释到的基因整合，进行功能注释。</p><p><img src="/2019/12/12/Thu Dec 12 2019 20:50:50 GMT+0100/fig1.png" alt></p><a id="more"></a><p>题目：transcriptome and chromatin accessibility in porcine intestinal epithelial cells upon Zearalenone exposure</p><p>杂志：Scientific DATA</p><p>时间：Dec 3, 2019</p><p>链接: <a href="https://doi.org/10.1038/s41597-019-0313-1" target="_blank" rel="noopener">https://doi.org/10.1038/s41597-019-0313-1</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这篇文章主要想研究非编码RNA与染色质可及性对玉米赤霉烯酮对猪小肠上皮细胞的影响，思路较简单，分析也过于简单，文章也没有得到特定的结论。思路如下图b所示，分析ATAC-seq得到peaks,然后注释peaks的基因，分析RNA-seq得到miRNA,lncRNA，然后预测这些非编码RNA的靶基因，并将非编码RNA的靶基因与peak注释到的基因整合，进行功能注释。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2019/12/12/Thu Dec 12 2019 20:50:50 GMT+0100/fig1.png&quot; alt&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="ATACseq" scheme="http://yoursite.com/tags/ATACseq/"/>
-    
-      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
-    
-      <category term="lncRNA" scheme="http://yoursite.com/tags/lncRNA/"/>
     
   </entry>
   
