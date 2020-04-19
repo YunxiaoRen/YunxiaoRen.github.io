@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-04-12T21:18:51.605Z</updated>
+  <updated>2020-04-19T20:31:15.378Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>机器学习在生物医学中的应用</title>
+    <link href="http://yoursite.com/2020/04/18/Sat%20Apr%2018%202020%2010:04:07%20GMT+0200/"/>
+    <id>http://yoursite.com/2020/04/18/Sat Apr 18 2020 10:04:07 GMT+0200/</id>
+    <published>2020-04-18T08:04:07.000Z</published>
+    <updated>2020-04-19T20:31:15.378Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>文章信息</strong></p><p>题目：How Machine Learning Will Transform Biomedicine</p><p>杂志：Cell</p><p>时间：April 2,2020</p><p>链接: <a href="https://doi.org/10.1016/j.cell.2020.03.022" target="_blank" rel="noopener">https://doi.org/10.1016/j.cell.2020.03.022</a></p><p><img src="/2020/04/18/Sat Apr 18 2020 10:04:07 GMT+0200/fig1.png" style="zoom:50%;"></p><a id="more"></a><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>机器学习在语音识别，自动化驾驶汽车，生物医学等领域展现了巨大的潜在应用。机器学习将如何影响生物医学？这篇综述从机器学习对临床诊断、精准治疗和健康监管3个方面进行讨论。介绍了机器学习在这3个领域成功应用的例子，以及面临的机遇和挑战。此外也对机器学习的基本概念有简单的概述。</p><p><strong>机器学习中的基本概念</strong></p><ul><li><p><strong>监督学习、非监督学习和半监督学习</strong></p><p>监督学习在预测数据时是基于含有标签的过去数据；非监督学习是对没有标签数据进行分析学习，如聚类等；半监督学习首先执行无监督学习，然后从无监督学习中基于认为标记发现结构</p></li><li><p><strong>分类和回归</strong></p><p>都是监督学习的方法，分类是预测离散的类别，如正常与患病；而回归预测实际值的输出，如对治疗的反应</p></li><li><p><strong>集成学习</strong></p><p>集成方法建立了许多模型，并使用所有模型的平均值生成预测。常见的集成方法包括随机森林、梯度增强和叠加/元集成</p></li><li><p><strong>深度学习</strong></p><p>能够学习复杂非线性函数的多层人工神经网络。对于非结构化数据（如图像、语音或文本）非常有用，但通常不提供驱动函数的数据方面的细节</p></li><li><p><strong>贝叶斯学习</strong></p><p>结合先验知识和数据来执行机器学习的方法</p></li><li><p><strong>降维</strong></p><p>通过选择重要特征或组合特征来捕获数据集中的差异，减少数据集的属性或特征数。通常用于提高机器学习模型的性能和帮助可视化</p></li><li><p><strong>联合学习</strong></p><p>从分布在多个位置且不能组合成单个数据集的数据中增量学习的方法。当数据位于多个临床系统中或从敏感的个人数据中学习时，联合学习非常有用</p></li></ul><p><img src="/2020/04/18/Sat Apr 18 2020 10:04:07 GMT+0200/fig2.png" style="zoom:50%;"></p><p><strong>机器学习在诊断和治疗中应用例子</strong></p><ul><li><p>The genomic and transcriptomic architecture of 2,000 breast tumours reveals novel subgroups</p><blockquote><p><a href="https://www.nature.com/articles/nature10983" target="_blank" rel="noopener">https://www.nature.com/articles/nature10983</a></p></blockquote></li><li><p>DeepCC: a novel deep learning-based framework for cancer molecular subtype classification</p><blockquote><p><a href="https://www.nature.com/articles/s41389-019-0157-8" target="_blank" rel="noopener">https://www.nature.com/articles/s41389-019-0157-8</a> </p></blockquote></li><li><p>Predicting drug response of tumors from integrated genomic profiles by deep neural networks</p><blockquote><p><a href="https://www.ncbi.nlm.nih.gov/pubmed/30704458" target="_blank" rel="noopener">https://www.ncbi.nlm.nih.gov/pubmed/30704458</a></p></blockquote></li><li><p>A community effort to assess and improve drug sensitivity prediction algorithms</p><blockquote><p><a href="https://www.nature.com/articles/nbt.2877" target="_blank" rel="noopener">https://www.nature.com/articles/nbt.2877</a></p></blockquote></li><li><p>A comparison of deep learning performance against health-care professionals in detecting diseases from medical imaging: a systematic review and meta-analysis</p><blockquote><p><a href="https://www.thelancet.com/journals/landig/article/PIIS2589-7500(19)30123-2/fulltext" target="_blank" rel="noopener">https://www.thelancet.com/journals/landig/article/PIIS2589-7500(19)30123-2/fulltext</a></p></blockquote></li><li><p>Prediction of gestational diabetes based on nationwide electronic health records</p><blockquote><p><a href="https://www.ncbi.nlm.nih.gov/pubmed/31932807" target="_blank" rel="noopener">https://www.ncbi.nlm.nih.gov/pubmed/31932807</a></p></blockquote></li><li><p>Privacy-Preserving Patient Similarity Learning in a Federated Environment: Development and Analysis</p><blockquote><p><a href="https://www.ncbi.nlm.nih.gov/pubmed/29653917" target="_blank" rel="noopener">https://www.ncbi.nlm.nih.gov/pubmed/29653917</a></p></blockquote></li><li><p>Smartwatch Algorithm for Automated Detection of Atrial Fibrillation</p><blockquote><p><a href="https://www.sciencedirect.com/science/article/pii/S0735109718334867?via%3Dihub" target="_blank" rel="noopener">https://www.sciencedirect.com/science/article/pii/S0735109718334867?via%3Dihub</a></p></blockquote></li><li><p>Contactless cardiac arrest detection using smart devices</p><blockquote><p><a href="https://www.nature.com/articles/s41746-019-0128-7" target="_blank" rel="noopener">https://www.nature.com/articles/s41746-019-0128-7</a></p></blockquote></li></ul><p><img src="/2020/04/18/Sat Apr 18 2020 10:04:07 GMT+0200/fig3.png" style="zoom:50%;"></p><p>### </p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;文章信息&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;题目：How Machine Learning Will Transform Biomedicine&lt;/p&gt;
+&lt;p&gt;杂志：Cell&lt;/p&gt;
+&lt;p&gt;时间：April 2,2020&lt;/p&gt;
+&lt;p&gt;链接: &lt;a href=&quot;https://doi.org/10.1016/j.cell.2020.03.022&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://doi.org/10.1016/j.cell.2020.03.022&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2020/04/18/Sat Apr 18 2020 10:04:07 GMT+0200/fig1.png&quot; style=&quot;zoom:50%;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
+    
+      <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
+    
+  </entry>
   
   <entry>
     <title>接纳自己的不完美</title>
@@ -203,9 +230,9 @@
     </summary>
     
     
-      <category term="ATACseq" scheme="http://yoursite.com/tags/ATACseq/"/>
-    
       <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
+    
+      <category term="ATACseq" scheme="http://yoursite.com/tags/ATACseq/"/>
     
   </entry>
   
@@ -385,9 +412,9 @@
     </summary>
     
     
-      <category term="software" scheme="http://yoursite.com/tags/software/"/>
-    
       <category term="single cell" scheme="http://yoursite.com/tags/single-cell/"/>
+    
+      <category term="software" scheme="http://yoursite.com/tags/software/"/>
     
       <category term="R" scheme="http://yoursite.com/tags/R/"/>
     
@@ -440,9 +467,9 @@
     </summary>
     
     
-      <category term="software" scheme="http://yoursite.com/tags/software/"/>
-    
       <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
+    
+      <category term="software" scheme="http://yoursite.com/tags/software/"/>
     
       <category term="降维" scheme="http://yoursite.com/tags/%E9%99%8D%E7%BB%B4/"/>
     
@@ -537,31 +564,6 @@
       <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
     
       <category term="deep learning" scheme="http://yoursite.com/tags/deep-learning/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>单细胞多组学联合分析scRNAseq+scATACseq</title>
-    <link href="http://yoursite.com/2019/12/12/Thu%20Dec%2012%202019%2021:14:48%20GMT+0100/"/>
-    <id>http://yoursite.com/2019/12/12/Thu Dec 12 2019 21:14:48 GMT+0100/</id>
-    <published>2019-12-12T20:14:48.000Z</published>
-    <updated>2019-12-12T13:26:02.065Z</updated>
-    
-    <content type="html"><![CDATA[<p>单细胞发展至今，多组学整合是其发展的一个方向，关于scRNAseq与scATACseq整合的方法也有很多文章报道，这篇文章是由表观学大牛任兵实验室开发的，主要优点体现在通量上，可用于并行分析数百万个单细胞转录组和可访问染色质。</p><p><img src="/2019/12/12/Thu Dec 12 2019 21:14:48 GMT+0100/fig1.png" alt></p><a id="more"></a><p><strong>一句话评价</strong></p><p>单细胞ATAC-seq和RNA-seq联合分析方法</p><p><strong>文章信息</strong></p><p>题目：An ultra high-throughput method for single-cell joint analysis of open chromatin and transcriptome</p><p>杂志：NAtuRe StRuCtuRAL &amp; MoLeCuLAR BIoLogY</p><p>时间：2019，NOVEMBER</p><p>链接: <a href="http://www.nature.com/nsmb" target="_blank" rel="noopener">www.nature.com/nsmb</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;单细胞发展至今，多组学整合是其发展的一个方向，关于scRNAseq与scATACseq整合的方法也有很多文章报道，这篇文章是由表观学大牛任兵实验室开发的，主要优点体现在通量上，可用于并行分析数百万个单细胞转录组和可访问染色质。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2019/12/12/Thu Dec 12 2019 21:14:48 GMT+0100/fig1.png&quot; alt&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="ATACseq" scheme="http://yoursite.com/tags/ATACseq/"/>
-    
-      <category term="single cell" scheme="http://yoursite.com/tags/single-cell/"/>
-    
-      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
     
   </entry>
   
