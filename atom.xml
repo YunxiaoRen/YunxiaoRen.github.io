@@ -252,9 +252,9 @@
     </summary>
     
     
-      <category term="ATACseq" scheme="http://yoursite.com/tags/ATACseq/"/>
-    
       <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
+    
+      <category term="ATACseq" scheme="http://yoursite.com/tags/ATACseq/"/>
     
   </entry>
   
@@ -434,9 +434,9 @@
     </summary>
     
     
-      <category term="software" scheme="http://yoursite.com/tags/software/"/>
-    
       <category term="single cell" scheme="http://yoursite.com/tags/single-cell/"/>
+    
+      <category term="software" scheme="http://yoursite.com/tags/software/"/>
     
       <category term="R" scheme="http://yoursite.com/tags/R/"/>
     
@@ -489,9 +489,9 @@
     </summary>
     
     
-      <category term="software" scheme="http://yoursite.com/tags/software/"/>
-    
       <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
+    
+      <category term="software" scheme="http://yoursite.com/tags/software/"/>
     
       <category term="降维" scheme="http://yoursite.com/tags/%E9%99%8D%E7%BB%B4/"/>
     
