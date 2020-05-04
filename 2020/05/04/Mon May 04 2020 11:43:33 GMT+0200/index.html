@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="machine learning,deep learning,CNN,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="生信拾光" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="卷积神经网络(CNN)简介卷积神经网络即Convolutional Neural Networks (CNN or COnvNet) 是一种自动化提取特征的深度学习模型。这是一种深度的前馈人工神经网络（ feed-forward artificial neural network），前馈神经网络也称作多层感知机（multi-layer perceptrons，MLPs）。 CNNs是受生物视觉皮">
+<meta name="keywords" content="machine learning,deep learning,CNN">
+<meta property="og:type" content="article">
+<meta property="og:title" content="卷积神经网络入门">
+<meta property="og:url" content="http://yoursite.com/2020/05/04/Mon May 04 2020 11:43:33 GMT+0200/index.html">
+<meta property="og:site_name" content="生信拾光">
+<meta property="og:description" content="卷积神经网络(CNN)简介卷积神经网络即Convolutional Neural Networks (CNN or COnvNet) 是一种自动化提取特征的深度学习模型。这是一种深度的前馈人工神经网络（ feed-forward artificial neural network），前馈神经网络也称作多层感知机（multi-layer perceptrons，MLPs）。 CNNs是受生物视觉皮">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2020/05/04/Mon%20May%2004%202020%2011:43:33%20GMT+0200/fig1.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/04/Mon%20May%2004%202020%2011:43:33%20GMT+0200/1588619184008-278128ad-0eb0-4470-9a00-e6c030273227.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/04/Mon%20May%2004%202020%2011:43:33%20GMT+0200/fig3.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/04/Mon%20May%2004%202020%2011:43:33%20GMT+0200/fig4.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/04/Mon%20May%2004%202020%2011:43:33%20GMT+0200/fig5.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/04/Mon%20May%2004%202020%2011:43:33%20GMT+0200/fig7.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/04/Mon%20May%2004%202020%2011:43:33%20GMT+0200/fig8.png">
+<meta property="og:updated_time" content="2020-05-04T21:21:58.314Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="卷积神经网络入门">
+<meta name="twitter:description" content="卷积神经网络(CNN)简介卷积神经网络即Convolutional Neural Networks (CNN or COnvNet) 是一种自动化提取特征的深度学习模型。这是一种深度的前馈人工神经网络（ feed-forward artificial neural network），前馈神经网络也称作多层感知机（multi-layer perceptrons，MLPs）。 CNNs是受生物视觉皮">
+<meta name="twitter:image" content="http://yoursite.com/2020/05/04/Mon%20May%2004%202020%2011:43:33%20GMT+0200/fig1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '六六'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/05/04/Mon May 04 2020 11:43:33 GMT+0200/">
+
+
+
+
+
+  <title>卷积神经网络入门 | 生信拾光</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">生信拾光</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/04/Mon May 04 2020 11:43:33 GMT+0200/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="六六">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="生信拾光">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">卷积神经网络入门</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-04T11:43:33+02:00">
+                2020-05-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2.4k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  10
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="/2020/05/04/Mon May 04 2020 11:43:33 GMT+0200/fig1.png" style="zoom:50%;"></p>
+<h3 id="卷积神经网络-CNN-简介"><a href="#卷积神经网络-CNN-简介" class="headerlink" title="卷积神经网络(CNN)简介"></a>卷积神经网络(CNN)简介</h3><p><strong>卷积神经网络即Convolutional Neural Networks (CNN or COnvNet)</strong> 是一种自动化提取特征的深度学习模型。这是一种深度的前馈人工神经网络（ feed-forward artificial neural network），前馈神经网络也称作多层感知机（multi-layer perceptrons，MLPs）。</p>
+<p>CNNs是受生物视觉皮层的启发。视觉皮层有一些小区域的细胞，它们对视野的特定区域很敏感。这个想法是由Hubel和Wiesel在1962年做的一个的实验扩展了这个想法。在这个实验中，研究人员表明，大脑中的一些个别神经元只有在出现垂直或水平边缘等特定方向的边缘时才会激活或发射。但是在2012年，Alex Krizhevsky利用卷积神经网络赢得了当年的ImageNet大赛，将分类误差从26%降到15%，之后CNNs再一次火爆。</p>
+<p>CNNs如今在多个领域都展现出巨大的应用潜能。如：</p>
+<ul>
+<li>图像识别，目标检测，分割，人脸识别</li>
+<li>自动驾驶汽车等</li>
+</ul>
+<a id="more"></a>
+<h3 id="卷积神经网络-CNN-的结构单元"><a href="#卷积神经网络-CNN-的结构单元" class="headerlink" title="卷积神经网络(CNN)的结构单元"></a>卷积神经网络(CNN)的结构单元</h3><p><img src="/2020/05/04/Mon May 04 2020 11:43:33 GMT+0200/1588619184008-278128ad-0eb0-4470-9a00-e6c030273227.png" alt="fig2.png"></p>
+<h4 id="输入层-input-layer"><a href="#输入层-input-layer" class="headerlink" title="输入层(input layer)"></a>输入层(input layer)</h4><h4 id="卷积层（convolution-layer"><a href="#卷积层（convolution-layer" class="headerlink" title="卷积层（convolution layer)"></a>卷积层（convolution layer)</h4><blockquote>
+<p>权值共享。我们通过卷积核与输入进行卷积运算。通过下图可以理解如何进行卷积运算。卷积核从左到右对输入进行扫描，每次滑动1格（步长为1），下图为滑动一次后，卷积核每个元素和输入中绿色框相应位置的元素相乘后累加，得到输出中绿色框中的0。一般会使用多个卷积核对输入数据进行卷积，得到多个特征图</p>
+</blockquote>
+<p><img src="/2020/05/04/Mon May 04 2020 11:43:33 GMT+0200/fig3.png" style="zoom:33%;"></p>
+<h4 id="激活层"><a href="#激活层" class="headerlink" title="激活层"></a>激活层</h4><blockquote>
+<p>对卷积层的输出进行一个非线性映射，因为卷积计算是一种线性计算。常见的激活函数有relu、tanh、sigmoid等，一般使用relu。使用relu的原因是在反向传播计算梯度中，使用relu求导明显会比tanh和sigmoid简单，可以<strong>减少计算量</strong></p>
+</blockquote>
+<h4 id="池化层-subsampling-pooling-layer"><a href="#池化层-subsampling-pooling-layer" class="headerlink" title="池化层(subsampling/pooling layer)"></a>池化层(subsampling/pooling layer)</h4><blockquote>
+<p>池化的目的就是减少特征图的维度，减少数据的运算量。池化层是在卷积层之后，对卷积的输出，进行池化运算。池化运算，一般有两种MaxPooling和MeanPooling。</p>
+</blockquote>
+<p><img src="/2020/05/04/Mon May 04 2020 11:43:33 GMT+0200/fig4.png" style="zoom:33%;"></p>
+<h4 id="全连接层-Fully-connected-layer"><a href="#全连接层-Fully-connected-layer" class="headerlink" title="全连接层(Fully connected layer)"></a>全连接层(Fully connected layer)</h4><blockquote>
+<p>主要是对特征进行重新的拟合，减少特征信息的丢失。通过卷积池化操作后得到的是多个特征矩阵，而全连接层的输入为向量，所以在进行全连接层之前，要将多个特征矩阵“压平”为一个向量。</p>
+</blockquote>
+<h4 id="输出层-output-layer"><a href="#输出层-output-layer" class="headerlink" title="输出层(output layer)"></a>输出层(output layer)</h4><h3 id="卷积神经网络-CNN-代码示例"><a href="#卷积神经网络-CNN-代码示例" class="headerlink" title="卷积神经网络(CNN)代码示例"></a>卷积神经网络(CNN)代码示例</h3><p>这里介绍以Keras实现CNN的代码示例</p>
+<h4 id="数据集介绍"><a href="#数据集介绍" class="headerlink" title="数据集介绍"></a>数据集介绍</h4><p>Fashion-MNIST数据集是Zalando的文章图像数据集，包含来自10个类别的70000个时尚产品的28x28灰度图像，每个类别有7000个图像。训练集有60000张图片，测试集有10000张图片。</p>
+<h4 id="数据载入"><a href="#数据载入" class="headerlink" title="数据载入"></a>数据载入</h4><p>首先载入Keras模块，其是基于tensorflow框架的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># install tensorflow</span><br><span class="line">pip install tensorflow</span><br><span class="line">pip install keras</span><br><span class="line">from keras.datasets import fashion_mnist</span><br><span class="line">(train_X,train_Y), (test_X,test_Y) = fashion_mnist.load_data()</span><br></pre></td></tr></table></figure>
+<p><strong>调整像素和图像大小</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">from keras.utils import to_categorical</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line"></span><br><span class="line">print(&apos;Training data shape : &apos;, train_X.shape, train_Y.shape)</span><br><span class="line"></span><br><span class="line">print(&apos;Testing data shape : &apos;, test_X.shape, test_Y.shape)</span><br><span class="line"></span><br><span class="line"># Find the unique numbers from the train labels</span><br><span class="line">classes = np.unique(train_Y)</span><br><span class="line">nClasses = len(classes)</span><br><span class="line">print(&apos;Total number of outputs : &apos;, nClasses)</span><br><span class="line">print(&apos;Output classes : &apos;, classes)</span><br></pre></td></tr></table></figure>
+<p>可以看出输出的类别共包括10（0-9）类</p>
+<p><strong>查看数据集中图像</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">plt.figure(figsize=[5,5])</span><br><span class="line"></span><br><span class="line"># Display the first image in training data</span><br><span class="line">plt.subplot(121)</span><br><span class="line">plt.imshow(train_X[0,:,:], cmap=&apos;gray&apos;)</span><br><span class="line">plt.title(&quot;Ground Truth : &#123;&#125;&quot;.format(train_Y[0]))</span><br><span class="line"></span><br><span class="line"># Display the first image in testing data</span><br><span class="line">plt.subplot(122)</span><br><span class="line">plt.imshow(test_X[0,:,:], cmap=&apos;gray&apos;)</span><br><span class="line">plt.title(&quot;Ground Truth : &#123;&#125;&quot;.format(test_Y[0]))</span><br></pre></td></tr></table></figure>
+<p><img src="/2020/05/04/Mon May 04 2020 11:43:33 GMT+0200/fig5.png" style="zoom:33%;"></p>
+<p>上面两个图的输出看起来像一个短靴，这个类被分配了一个类标签9。同样的，其他的时尚产品会有不同的标签，但是相似的产品会有相同的标签。这意味着所有7000张短靴图片的类别标签都是9。</p>
+<h4 id="数据前处理"><a href="#数据前处理" class="headerlink" title="数据前处理"></a>数据前处理</h4><p>上面的图像可以看出是灰度图像，像素值的范围再0-255,且图像的维度为28*28. </p>
+<ul>
+<li>Step1: 首先将训练数据和测试数据的28<em>28图像转化为28</em>28*1的矩阵</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">train_X = train_X.reshape(-1, 28,28, 1)</span><br><span class="line">test_X = test_X.reshape(-1, 28,28, 1)</span><br><span class="line">train_X.shape, test_X.shape</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Step2: 现在的数据是int8格式的，因此在将其输入网络之前，需要将其类型转换为float32，还必须重新调整范围为0 - 1(包括1)的像素值。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">train_X = train_X.astype(&apos;float32&apos;)</span><br><span class="line">test_X = test_X.astype(&apos;float32&apos;)</span><br><span class="line">train_X = train_X / 255.</span><br><span class="line">test_X = test_X / 255.</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Step3: 将类标签转换为一个热编码向量</li>
+</ul>
+<p>机器学习算法不能直接处理分类数据, 故需将分类数据转换为数字向量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># Change the labels from categorical to one-hot encoding</span><br><span class="line">train_Y_one_hot = to_categorical(train_Y)</span><br><span class="line">test_Y_one_hot = to_categorical(test_Y)</span><br><span class="line"></span><br><span class="line"># Display the change for category label using one-hot encoding</span><br><span class="line">print(&apos;Original label:&apos;, train_Y[0])</span><br><span class="line">print(&apos;After conversion to one-hot:&apos;, train_Y_one_hot[0])</span><br></pre></td></tr></table></figure>
+<ul>
+<li>拆分训练数据和测试数据集</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">from sklearn.model_selection import train_test_split</span><br><span class="line">train_X,valid_X,train_label,valid_label = train_test_split(train_X, train_Y_one_hot, test_size=0.2, random_state=13)</span><br><span class="line"># check the shape of training and validation set</span><br><span class="line">train_X.shape,valid_X.shape,train_label.shape,valid_label.shape</span><br></pre></td></tr></table></figure>
+<h4 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h4><p>图像的大小是28 x 28。前面将图像矩阵转换为数组，在0和1之间重新调整大小，重塑它的大小为28 x 28 x 28 x 1，然后将其作为网络的输入。</p>
+<p>下面将使用三个卷积层。</p>
+<p>第一层将有32-3×3个滤波器。</p>
+<p>第二层将有64-3×3滤波器和</p>
+<p>第三层将有128-3×3个滤镜。</p>
+<p>此外，还有3个最大pooling层，每个层的大小为2×2。</p>
+<p><img src="/2020/05/04/Mon May 04 2020 11:43:33 GMT+0200/fig7.png" style="zoom:50%;"></p>
+<h4 id="创建模型"><a href="#创建模型" class="headerlink" title="创建模型"></a>创建模型</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import keras</span><br><span class="line">from keras.models import Sequential,Input,Model</span><br><span class="line">from keras.layers import Dense, Dropout, Flatten</span><br><span class="line">from keras.layers import Conv2D, MaxPooling2D</span><br><span class="line">from keras.layers.normalization import BatchNormalization</span><br><span class="line">from keras.layers.advanced_activations import LeakyReLU</span><br></pre></td></tr></table></figure>
+<p>这里使用64的批处理量，也可以使用128或256的批处理量，这一切都取决于内存。它对确定学习参数的贡献很大，并影响到预测的准确性。你将训练网络的20个时程</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">batch_size = 64</span><br><span class="line">epochs = 20</span><br><span class="line">num_classes = 10</span><br></pre></td></tr></table></figure>
+<h4 id="神经网络架构"><a href="#神经网络架构" class="headerlink" title="神经网络架构"></a>神经网络架构</h4><p>在Keras中，可以通过逐一添加所需的图层来堆叠图层。首先用Conv2D()添加第一个卷积层。注意，之所以使用这个函数，是因为在处理图像。 接下来，添加Leaky ReLU激活函数，它可以帮助网络学习非线性决策边界。因为这里的例子有十个不同的类，需要一个非线性决策边界，可以将这十个不能线性分离的类分开。</p>
+<p>更具体地说，添加了Leaky ReLU，因为它们试图修复垂死的整流线性单元（ReLU）问题。ReLU 激活函数在神经网络架构中被大量使用，在卷积网络中，ReLU 激活函数被证明比广泛使用的对数 sigmoid 函数更有效。截止到2017年，这种激活函数是深度神经网络中最流行的一种激活函数。ReLU函数允许将激活函数的阈值设定为零。然而，在训练过程中，ReLU单元可能会 “死亡”。当一个大的梯度流过ReLU神经元时，就会发生这种情况：它可能会导致权重以这样的方式更新，以至于神经元再也不会在任何数据点上激活。如果这种情况发生，那么流经该单元的梯度将永远为零。泄漏的ReLU试图解决这个问题：函数不会为零，而是有一个小的负斜率。</p>
+<p>接下来，用MaxPooling2D()等添加最大池化层。最后一层是Dense层，它有一个软MAX的激活函数，有10个单位，这对于这个多类分类问题是需要的。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">fashion_model = Sequential()</span><br><span class="line">fashion_model.add(Conv2D(32, kernel_size=(3, 3),activation=&apos;linear&apos;,input_shape=(28,28,1),padding=&apos;same&apos;))</span><br><span class="line">fashion_model.add(LeakyReLU(alpha=0.1))</span><br><span class="line">fashion_model.add(MaxPooling2D((2, 2),padding=&apos;same&apos;))</span><br><span class="line">fashion_model.add(Conv2D(64, (3, 3), activation=&apos;linear&apos;,padding=&apos;same&apos;))</span><br><span class="line">fashion_model.add(LeakyReLU(alpha=0.1))</span><br><span class="line">fashion_model.add(MaxPooling2D(pool_size=(2, 2),padding=&apos;same&apos;))</span><br><span class="line">fashion_model.add(Conv2D(128, (3, 3), activation=&apos;linear&apos;,padding=&apos;same&apos;))</span><br><span class="line">fashion_model.add(LeakyReLU(alpha=0.1))                  </span><br><span class="line">fashion_model.add(MaxPooling2D(pool_size=(2, 2),padding=&apos;same&apos;))</span><br><span class="line">fashion_model.add(Flatten())</span><br><span class="line">fashion_model.add(Dense(128, activation=&apos;linear&apos;))</span><br><span class="line">fashion_model.add(LeakyReLU(alpha=0.1))                  </span><br><span class="line">fashion_model.add(Dense(num_classes, activation=&apos;softmax&apos;))</span><br></pre></td></tr></table></figure>
+<h4 id="编译模型"><a href="#编译模型" class="headerlink" title="编译模型"></a>编译模型</h4><p>使用Adam optimizer</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fashion_model.compile(loss=keras.losses.categorical_crossentropy, optimizer=keras.optimizers.Adam(),metrics=[&apos;accuracy&apos;])</span><br></pre></td></tr></table></figure>
+<p>使用summary函数来可视化在上述步骤中创建的层。这将显示每个层中的一些参数(权重和偏差)以及模型中的总参数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fashion_model.summary()</span><br></pre></td></tr></table></figure>
+<h4 id="训练模型"><a href="#训练模型" class="headerlink" title="训练模型"></a>训练模型</h4><p>使用Keras的fit()函数训练模型，该模型训练了20个 epochs。fit()函数将返回一个历史对象；通过在fashion_train中讲述这个函数的结果，你可以在以后用它来绘制训练和验证之间的精度和损失函数图，这将帮助你直观地分析你的模型的性能。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fashion_train = fashion_model.fit(train_X, train_label, batch_size=batch_size,epochs=epochs,verbose=1,validation_data=(valid_X, valid_label))</span><br></pre></td></tr></table></figure>
+<h4 id="模型评估"><a href="#模型评估" class="headerlink" title="模型评估"></a>模型评估</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">test_eval = fashion_model.evaluate(test_X, test_Y_one_hot, verbose=0)</span><br><span class="line">print(&apos;Test loss:&apos;, test_eval[0])</span><br><span class="line">print(&apos;Test accuracy:&apos;, test_eval[1])</span><br></pre></td></tr></table></figure>
+<h4 id="可视化"><a href="#可视化" class="headerlink" title="可视化"></a>可视化</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">accuracy = fashion_train.history[&apos;acc&apos;]</span><br><span class="line">val_accuracy = fashion_train.history[&apos;val_acc&apos;]</span><br><span class="line">loss = fashion_train.history[&apos;loss&apos;]</span><br><span class="line">val_loss = fashion_train.history[&apos;val_loss&apos;]</span><br><span class="line">epochs = range(len(accuracy))</span><br><span class="line">plt.plot(epochs, accuracy, &apos;bo&apos;, label=&apos;Training accuracy&apos;)</span><br><span class="line">plt.plot(epochs, val_accuracy, &apos;b&apos;, label=&apos;Validation accuracy&apos;)</span><br><span class="line">plt.title(&apos;Training and validation accuracy&apos;)</span><br><span class="line">plt.legend()</span><br><span class="line">plt.figure()</span><br><span class="line">plt.plot(epochs, loss, &apos;bo&apos;, label=&apos;Training loss&apos;)</span><br><span class="line">plt.plot(epochs, val_loss, &apos;b&apos;, label=&apos;Validation loss&apos;)</span><br><span class="line">plt.title(&apos;Training and validation loss&apos;)</span><br><span class="line">plt.legend()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p><img src="/2020/05/04/Mon May 04 2020 11:43:33 GMT+0200/fig8.png" style="zoom:50%;"></p>
+<h4 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h4><blockquote>
+<ul>
+<li><a href="http://keraschina.com/keras_cnn/" target="_blank" rel="noopener">CNN讲解及实践</a></li>
+<li><a href="https://www.zhihu.com/question/52668301" target="_blank" rel="noopener">CNN（卷积神经网络）</a></li>
+<li><a href="https://www.datacamp.com/community/tutorials/convolutional-neural-networks-python" target="_blank" rel="noopener">Convolutional Neural Networks in Python with Keras</a></li>
+<li><a href="https://towardsdatascience.com/convolutional-neural-networks-for-beginners-using-keras-and-tensorflow-2-c578f7b3bf25" target="_blank" rel="noopener">Convolutional Neural Networks for Beginners using Keras and TensorFlow</a></li>
+<li><a href="https://geek-docs.com/deep-learning" target="_blank" rel="noopener">深度学习</a></li>
+</ul>
+</blockquote>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/machine-learning/" rel="tag"># machine learning</a>
+          
+            <a href="/tags/deep-learning/" rel="tag"># deep learning</a>
+          
+            <a href="/tags/CNN/" rel="tag"># CNN</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/05/02/Sat May 02 2020 18:44:09 GMT+0200/" rel="next" title="机器学习练习数据">
+                <i class="fa fa-chevron-left"></i> 机器学习练习数据
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">六六</p>
+              <p class="site-description motion-element" itemprop="description">Seize the day! Collect the moment! Share the memory!</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">83</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">38</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#卷积神经网络-CNN-简介"><span class="nav-number">1.</span> <span class="nav-text">卷积神经网络(CNN)简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#卷积神经网络-CNN-的结构单元"><span class="nav-number">2.</span> <span class="nav-text">卷积神经网络(CNN)的结构单元</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#输入层-input-layer"><span class="nav-number">2.1.</span> <span class="nav-text">输入层(input layer)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#卷积层（convolution-layer"><span class="nav-number">2.2.</span> <span class="nav-text">卷积层（convolution layer)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#激活层"><span class="nav-number">2.3.</span> <span class="nav-text">激活层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#池化层-subsampling-pooling-layer"><span class="nav-number">2.4.</span> <span class="nav-text">池化层(subsampling/pooling layer)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#全连接层-Fully-connected-layer"><span class="nav-number">2.5.</span> <span class="nav-text">全连接层(Fully connected layer)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出层-output-layer"><span class="nav-number">2.6.</span> <span class="nav-text">输出层(output layer)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#卷积神经网络-CNN-代码示例"><span class="nav-number">3.</span> <span class="nav-text">卷积神经网络(CNN)代码示例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数据集介绍"><span class="nav-number">3.1.</span> <span class="nav-text">数据集介绍</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据载入"><span class="nav-number">3.2.</span> <span class="nav-text">数据载入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据前处理"><span class="nav-number">3.3.</span> <span class="nav-text">数据前处理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#网络"><span class="nav-number">3.4.</span> <span class="nav-text">网络</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建模型"><span class="nav-number">3.5.</span> <span class="nav-text">创建模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#神经网络架构"><span class="nav-number">3.6.</span> <span class="nav-text">神经网络架构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#编译模型"><span class="nav-number">3.7.</span> <span class="nav-text">编译模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#训练模型"><span class="nav-number">3.8.</span> <span class="nav-text">训练模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模型评估"><span class="nav-number">3.9.</span> <span class="nav-text">模型评估</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#可视化"><span class="nav-number">3.10.</span> <span class="nav-text">可视化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参考资料"><span class="nav-number">3.11.</span> <span class="nav-text">参考资料</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">六六</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">58.8k</span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共58.8k字</span>
+</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
