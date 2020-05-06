@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-05-04T21:21:58.314Z</updated>
+  <updated>2020-05-06T10:49:58.246Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>利用深度学习从宏基因组数据中预测抗生素抗性基因—DeepARG（方法详解）</title>
+    <link href="http://yoursite.com/2020/05/06/Wed%20May%2006%202020%2012:44:55%20GMT+0200/"/>
+    <id>http://yoursite.com/2020/05/06/Wed May 06 2020 12:44:55 GMT+0200/</id>
+    <published>2020-05-06T10:44:55.000Z</published>
+    <updated>2020-05-06T10:49:58.246Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id><a href="#" class="headerlink" title></a><img src="/2020/05/06/Wed May 06 2020 12:44:55 GMT+0200/1588755936726-a2a86d1c-ae3a-40bc-aaa2-974114d7e81f-20200506124808009.png" alt="image.png"></h3><h3 id="方法概述："><a href="#方法概述：" class="headerlink" title="方法概述："></a>方法概述：</h3><p>从CARD,ARDB和UNIPROT 3个数据库分别提取抗性基因（antibiotic resistance genes,ARGs）, 3个数据库分别提取到2161，2290和28108个抗性基因。然后对3个数据库的抗性基因进行注释和分类，CARD和ARDB共鉴定到102个抗生素，包括30个抗生素分类。UNIPROT通过文本挖掘注释，然年再结合CARD和ARDB两个数据库验证。</p><p>得到经过前处理后的数据，利用深度神经网络训练模型，凭借Python中的Theano库的Lasagne模块实现模型训练。分别对短读长序列和长基因序列分开训练，得到deepARG-SS 和 deepARG-LS。</p><p>评估模型通过两个方法：一是UNIPROT的70%数据作为训练数据，30%作为测试验证数据；二是借助MEGARes数据库的数据作为独立的验证数据集，评估模型的表现。</p><h3 id="数据来源："><a href="#数据来源：" class="headerlink" title="数据来源："></a>数据来源：</h3><p>数据来自3个数据库：<strong>CARD,ARDB和UNIPROT</strong></p><h3 id="数据前处理"><a href="#数据前处理" class="headerlink" title="数据前处理"></a>数据前处理</h3><p><img src="/2020/05/06/Wed May 06 2020 12:44:55 GMT+0200/1588754695659-2c3b9a82-cbe0-453a-8663-e0c55346c1f6-20200506124806659.png" alt="image.png"></p><p><img src="/2020/05/06/Wed May 06 2020 12:44:55 GMT+0200/1588754740918-4ee1605e-db2c-4cfd-906d-7dd74b38da83-20200506124807027.png" alt="image.png"></p><h3 id="模型训练"><a href="#模型训练" class="headerlink" title="模型训练"></a>模型训练</h3><p><img src="/2020/05/06/Wed May 06 2020 12:44:55 GMT+0200/1588754750458-42a8a187-40da-4df8-b7bb-6c409d3f6853-20200506124807310.png" alt="image.png"></p><h3 id="模型验证"><a href="#模型验证" class="headerlink" title="模型验证"></a>模型验证</h3><p>从模型验证的结果看，似乎模型的效果太好了，不知道是否有过拟合的现象。</p><p><img src="/2020/05/06/Wed May 06 2020 12:44:55 GMT+0200/1588754581852-30322794-6acc-493f-b457-2985bb53ea91-20200506124807265.png" alt="image.png"></p><h3 id="实现代码"><a href="#实现代码" class="headerlink" title="实现代码"></a>实现代码</h3><p><strong>github代码打不开：</strong></p><p><a href="https://gaarangoa@bitbucket.org/gaarangoa/deeparg-ss.git" target="_blank" rel="noopener">https://gaarangoa@bitbucket.org/gaarangoa/deeparg-ss.git</a></p><p><strong>网站在线分析：</strong></p><p><a href="https://bench.cs.vt.edu/deeparg" target="_blank" rel="noopener">https://bench.cs.vt.edu/deeparg</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title&gt;&lt;/a&gt;&lt;img src=&quot;/2020/05/06/Wed May 06 2020 12:44:55 GMT+0200/1588755936726-a2a86d1c-ae3a-40bc-aaa
+      
+    
+    </summary>
+    
+    
+      <category term="deep learning" scheme="http://yoursite.com/tags/deep-learning/"/>
+    
+      <category term="AMR" scheme="http://yoursite.com/tags/AMR/"/>
+    
+  </entry>
   
   <entry>
     <title>卷积神经网络入门</title>
@@ -196,9 +221,9 @@
     </summary>
     
     
-      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
-    
       <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
+    
+      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
     
   </entry>
   
@@ -468,9 +493,9 @@
     </summary>
     
     
-      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
-    
       <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
+    
+      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
     
       <category term="lncRNA" scheme="http://yoursite.com/tags/lncRNA/"/>
     
@@ -522,33 +547,6 @@
     
     
       <category term="deep learning" scheme="http://yoursite.com/tags/deep-learning/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>非编码RNA数据库</title>
-    <link href="http://yoursite.com/2019/12/29/Sun%20Dec%2029%202019%2010:32:10%20GMT+0100/"/>
-    <id>http://yoursite.com/2019/12/29/Sun Dec 29 2019 10:32:10 GMT+0100/</id>
-    <published>2019-12-29T09:32:10.000Z</published>
-    <updated>2019-12-29T05:11:28.504Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>文章介绍：</strong></p><p><strong>RNAcentral</strong>是一个综合的非编码RNA数据库，包括大量物种所有类型的<strong>非编码RNA序列信息</strong>，同时整合了28个数据库，可以搜索比较不同数据库ncRNA序列信息，也可以与数据库比对检索序列与ncRNA序列的相似性，也可以通过Genome browser可视化ncRNA在基因组区域的注释信息，所有数据可以下载。</p><p>数据库网址：<strong><a href="https://rnacentral.org" target="_blank" rel="noopener">https://rnacentral.org</a></strong></p><p><strong>figure</strong></p><p><img src="/2019/12/29/Sun Dec 29 2019 10:32:10 GMT+0100/fig1.png" style="zoom:50%;"></p><p><img src="/2019/12/29/Sun Dec 29 2019 10:32:10 GMT+0100/fig2.png" style="zoom:50%;"></p><a id="more"></a><p><strong>文章信息</strong></p><p>题目：RNAcentral: a hub of information for non-coding RNA sequences</p><p>杂志：<em>Nucleic Acids Research,</em></p><p>时间：November, 2019</p><p>链接: <em>doi: 10.1093/nar/gky1034</em></p><blockquote><p>每日文献摘要：第31篇  2019年12月29日 周日</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;文章介绍：&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;RNAcentral&lt;/strong&gt;是一个综合的非编码RNA数据库，包括大量物种所有类型的&lt;strong&gt;非编码RNA序列信息&lt;/strong&gt;，同时整合了28个数据库，可以搜索比较不同数据库ncRNA序列信息，也可以与数据库比对检索序列与ncRNA序列的相似性，也可以通过Genome browser可视化ncRNA在基因组区域的注释信息，所有数据可以下载。&lt;/p&gt;
-&lt;p&gt;数据库网址：&lt;strong&gt;&lt;a href=&quot;https://rnacentral.org&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://rnacentral.org&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;figure&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2019/12/29/Sun Dec 29 2019 10:32:10 GMT+0100/fig1.png&quot; style=&quot;zoom:50%;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2019/12/29/Sun Dec 29 2019 10:32:10 GMT+0100/fig2.png&quot; style=&quot;zoom:50%;&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="lncRNA" scheme="http://yoursite.com/tags/lncRNA/"/>
-    
-      <category term="database" scheme="http://yoursite.com/tags/database/"/>
     
   </entry>
   
