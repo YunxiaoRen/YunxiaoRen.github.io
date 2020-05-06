@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[利用深度学习从宏基因组数据中预测抗生素抗性基因—DeepARG（方法详解）]]></title>
     <url>%2F2020%2F05%2F06%2FWed%20May%2006%202020%2012%3A44%3A55%20GMT%2B0200%2F</url>
-    <content type="text"><![CDATA[方法概述：从CARD,ARDB和UNIPROT 3个数据库分别提取抗性基因（antibiotic resistance genes,ARGs）, 3个数据库分别提取到2161，2290和28108个抗性基因。然后对3个数据库的抗性基因进行注释和分类，CARD和ARDB共鉴定到102个抗生素，包括30个抗生素分类。UNIPROT通过文本挖掘注释，然年再结合CARD和ARDB两个数据库验证。 得到经过前处理后的数据，利用深度神经网络训练模型，凭借Python中的Theano库的Lasagne模块实现模型训练。分别对短读长序列和长基因序列分开训练，得到deepARG-SS 和 deepARG-LS。 评估模型通过两个方法：一是UNIPROT的70%数据作为训练数据，30%作为测试验证数据；二是借助MEGARes数据库的数据作为独立的验证数据集，评估模型的表现。 数据来源：数据来自3个数据库：CARD,ARDB和UNIPROT 数据前处理 模型训练 模型验证从模型验证的结果看，似乎模型的效果太好了，不知道是否有过拟合的现象。 实现代码github代码打不开： https://gaarangoa@bitbucket.org/gaarangoa/deeparg-ss.git 网站在线分析： https://bench.cs.vt.edu/deeparg]]></content>
+    <content type="text"><![CDATA[​ 方法概述：从CARD,ARDB和UNIPROT 3个数据库分别提取抗性基因（antibiotic resistance genes,ARGs）, 3个数据库分别提取到2161，2290和28108个抗性基因。然后对3个数据库的抗性基因进行注释和分类，CARD和ARDB共鉴定到102个抗生素，包括30个抗生素分类。UNIPROT通过文本挖掘注释，然年再结合CARD和ARDB两个数据库验证。 得到经过前处理后的数据，利用深度神经网络训练模型，凭借Python中的Theano库的Lasagne模块实现模型训练。分别对短读长序列和长基因序列分开训练，得到deepARG-SS 和 deepARG-LS。 评估模型通过两个方法：一是UNIPROT的70%数据作为训练数据，30%作为测试验证数据；二是借助MEGARes数据库的数据作为独立的验证数据集，评估模型的表现。 数据来源：数据来自3个数据库：CARD,ARDB和UNIPROT 数据前处理 模型训练 模型验证从模型验证的结果看，似乎模型的效果太好了，不知道是否有过拟合的现象。 实现代码github代码打不开： https://gaarangoa@bitbucket.org/gaarangoa/deeparg-ss.git 网站在线分析： https://bench.cs.vt.edu/deeparg]]></content>
       <tags>
         <tag>deep learning</tag>
         <tag>AMR</tag>
@@ -70,8 +70,8 @@
     <url>%2F2020%2F04%2F18%2FSat%20Apr%2018%202020%2010%3A04%3A07%20GMT%2B0200%2F</url>
     <content type="text"><![CDATA[文章信息 题目：How Machine Learning Will Transform Biomedicine 杂志：Cell 时间：April 2,2020 链接: https://doi.org/10.1016/j.cell.2020.03.022 概述机器学习在语音识别，自动化驾驶汽车，生物医学等领域展现了巨大的潜在应用。机器学习将如何影响生物医学？这篇综述从机器学习对临床诊断、精准治疗和健康监管3个方面进行讨论。介绍了机器学习在这3个领域成功应用的例子，以及面临的机遇和挑战。此外也对机器学习的基本概念有简单的概述。 机器学习中的基本概念 监督学习、非监督学习和半监督学习 监督学习在预测数据时是基于含有标签的过去数据；非监督学习是对没有标签数据进行分析学习，如聚类等；半监督学习首先执行无监督学习，然后从无监督学习中基于认为标记发现结构 分类和回归 都是监督学习的方法，分类是预测离散的类别，如正常与患病；而回归预测实际值的输出，如对治疗的反应 集成学习 集成方法建立了许多模型，并使用所有模型的平均值生成预测。常见的集成方法包括随机森林、梯度增强和叠加/元集成 深度学习 能够学习复杂非线性函数的多层人工神经网络。对于非结构化数据（如图像、语音或文本）非常有用，但通常不提供驱动函数的数据方面的细节 贝叶斯学习 结合先验知识和数据来执行机器学习的方法 降维 通过选择重要特征或组合特征来捕获数据集中的差异，减少数据集的属性或特征数。通常用于提高机器学习模型的性能和帮助可视化 联合学习 从分布在多个位置且不能组合成单个数据集的数据中增量学习的方法。当数据位于多个临床系统中或从敏感的个人数据中学习时，联合学习非常有用 机器学习在诊断和治疗中应用例子 The genomic and transcriptomic architecture of 2,000 breast tumours reveals novel subgroups https://www.nature.com/articles/nature10983 DeepCC: a novel deep learning-based framework for cancer molecular subtype classification https://www.nature.com/articles/s41389-019-0157-8 Predicting drug response of tumors from integrated genomic profiles by deep neural networks https://www.ncbi.nlm.nih.gov/pubmed/30704458 A community effort to assess and improve drug sensitivity prediction algorithms https://www.nature.com/articles/nbt.2877 A comparison of deep learning performance against health-care professionals in detecting diseases from medical imaging: a systematic review and meta-analysis https://www.thelancet.com/journals/landig/article/PIIS2589-7500(19)30123-2/fulltext Prediction of gestational diabetes based on nationwide electronic health records https://www.ncbi.nlm.nih.gov/pubmed/31932807 Privacy-Preserving Patient Similarity Learning in a Federated Environment: Development and Analysis https://www.ncbi.nlm.nih.gov/pubmed/29653917 Smartwatch Algorithm for Automated Detection of Atrial Fibrillation https://www.sciencedirect.com/science/article/pii/S0735109718334867?via%3Dihub Contactless cardiac arrest detection using smart devices https://www.nature.com/articles/s41746-019-0128-7 ###]]></content>
       <tags>
-        <tag>machine learning</tag>
         <tag>文献摘要</tag>
+        <tag>machine learning</tag>
       </tags>
   </entry>
   <entry>
@@ -159,8 +159,8 @@
     <url>%2F2019%2F12%2F29%2FSun%20Dec%2029%202019%2010%3A43%3A16%20GMT%2B0100%2F</url>
     <content type="text"><![CDATA[文章介绍： 基于机器学习的方法——DislncRF，根据组织表达谱从全基因组范围预测疾病相关的lncRNA。DislncRF是基于随机森林模型训练已知的与疾病相关的蛋白编码基因（protein-coding genes ，PCGs），从而提取疾病与表达谱的一般模式，然后应用到lncRNA与疾病的关联中， 代码：https://github.com/xypan1232/DislncRF figure 文章信息 题目：Inferring disease-associated long non-coding RNAs using genome-wide tissue expression profiles 杂志：Bioinformatics 时间：2018 链接: doi.10.1093/bioinformatics/xxxxxx 碎碎念 利用蛋白编码基因与疾病的模式训练模型，然后预测lncRNA与疾病的关联，这样选训练集可靠吗？ 每日文献摘要：第28篇 2019年12月29日 周日]]></content>
       <tags>
-        <tag>machine learning</tag>
         <tag>文献摘要</tag>
+        <tag>machine learning</tag>
         <tag>lncRNA</tag>
       </tags>
   </entry>
