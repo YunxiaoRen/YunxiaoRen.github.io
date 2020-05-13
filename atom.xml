@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-05-13T19:41:48.441Z</updated>
+  <updated>2020-05-13T20:03:57.200Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>人肠内分泌细胞的高分辨率mRNA和分泌组图谱</title>
+    <link href="http://yoursite.com/2020/05/13/Wed%20May%2013%202020%2022:01:52%20GMT+0200/"/>
+    <id>http://yoursite.com/2020/05/13/Wed May 13 2020 22:01:52 GMT+0200/</id>
+    <published>2020-05-13T20:01:52.000Z</published>
+    <updated>2020-05-13T20:03:57.200Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>文章信息</strong></p><p>题目：High-Resolution mRNA and Secretome Atlas of Human Enteroendocrine Cells</p><p>杂志：Cell</p><p>时间：May 13, 2020</p><p>链接: <a href="https://doi.org/10.1016/j.cell.2020.04.036" target="_blank" rel="noopener">https://doi.org/10.1016/j.cell.2020.04.036</a></p><p>肠道内分泌细胞（EEC）感知肠道内容物，释放激素，调节胃肠活动、全身代谢和食物摄入量。关于人类肠道内分泌细胞亚型的分子构成和个体激素的分泌调节，目前还不甚了解。在这里，我们描述了一个基于有机体的平台，用于人类EECs的功能研究。EEC的形成是在体外通过NEUROG3的瞬时表达诱导的。设计了一套肠道器质体，其中主要的激素被荧光标记。生成了不同EEC亚型的单细胞mRNA图谱，并通过质谱法记录了其分泌的产物。我们注意到与小鼠EECs的关键差异，包括激素、感觉受体和转录因子。值得注意的是，确定了几种激素类分子。泌素诱导的GLP-1的分泌是EEC间交流的典范。事实上，个别EEC亚型携带着各种EEC激素的受体。本研究为研究人类EEC的发育和功能提供了丰富的资源。</p><p><img src="/2020/05/13/Wed May 13 2020 22:01:52 GMT+0200/1589400011510-19258e40-16de-43b2-9a27-cd1ec0badc25.jpeg" alt="200513-fig-.jpg" style="zoom:50%;"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;文章信息&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;题目：High-Resolution mRNA and Secretome Atlas of Human Enteroendocrine Cells&lt;/p&gt;
+&lt;p&gt;杂志：Cell&lt;/p&gt;
+&lt;p&gt;时间：May 13, 
+      
+    
+    </summary>
+    
+    
+      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
+    
+  </entry>
   
   <entry>
     <title>lncRNA的保守和不保守</title>
@@ -540,31 +566,6 @@
       <category term="scRNA-seq" scheme="http://yoursite.com/tags/scRNA-seq/"/>
     
       <category term="regulation network" scheme="http://yoursite.com/tags/regulation-network/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>利用多组学数据预测药物组合的驱动网络标记物</title>
-    <link href="http://yoursite.com/2019/12/29/Sun%20Dec%2029%202019%2010:47:14%20GMT+0100/"/>
-    <id>http://yoursite.com/2019/12/29/Sun Dec 29 2019 10:47:14 GMT+0100/</id>
-    <published>2019-12-29T09:47:14.000Z</published>
-    <updated>2019-12-29T04:35:29.280Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>文章介绍：</strong></p><p>药物组合不仅可能同时抑制多种肿瘤的驱动信号通路，而且有可能减少药物抵抗性。这篇文章介绍了一个利用多组学数据开发的工具——<strong>DrugComboExplorer</strong>，鉴定药物组合的驱动信号通路，并预测药物组合的协同作用。</p><p>该工具通过处理来自单个癌症患者的DNA测序、基因拷贝数、DNA甲基化和RNA序列数据，使用整合的算法（包括bootstrap aggregating-based Markov random field，WGCNA,监督调控网络学习）流程产生驱动信号网络。</p><p>DrugComboExplorer is available at <a href="https://github.com/Roosevelt-" target="_blank" rel="noopener">https://github.com/Roosevelt-</a> PKU/drugcombinationprediction.</p><p><strong>figure</strong></p><p><img src="/2019/12/29/Sun Dec 29 2019 10:47:14 GMT+0100/fig.png" style="zoom:50%;"></p><a id="more"></a><p><strong>文章信息</strong></p><p>题目：Driver network as a biomarker: systematic integration and network modeling of multi-omics data to derive driver signaling pathways for drug combination prediction</p><p>杂志：Bioinformatics,</p><p>时间：15 February 2019</p><p>链接: doi: 10.1093/bioinformatics/btz109</p><blockquote><p>每日文献摘要：第27篇  2019年12月29日 周日</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;文章介绍：&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;药物组合不仅可能同时抑制多种肿瘤的驱动信号通路，而且有可能减少药物抵抗性。这篇文章介绍了一个利用多组学数据开发的工具——&lt;strong&gt;DrugComboExplorer&lt;/strong&gt;，鉴定药物组合的驱动信号通路，并预测药物组合的协同作用。&lt;/p&gt;
-&lt;p&gt;该工具通过处理来自单个癌症患者的DNA测序、基因拷贝数、DNA甲基化和RNA序列数据，使用整合的算法（包括bootstrap aggregating-based Markov random field，WGCNA,监督调控网络学习）流程产生驱动信号网络。&lt;/p&gt;
-&lt;p&gt;DrugComboExplorer is available at &lt;a href=&quot;https://github.com/Roosevelt-&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/Roosevelt-&lt;/a&gt; PKU/drugcombinationprediction.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;figure&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2019/12/29/Sun Dec 29 2019 10:47:14 GMT+0100/fig.png&quot; style=&quot;zoom:50%;&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
     
   </entry>
   
