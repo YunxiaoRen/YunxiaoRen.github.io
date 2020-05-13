@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-05-06T10:56:31.310Z</updated>
+  <updated>2020-05-13T18:50:13.423Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>利用机器学习模型从全基因组序列中预测胸膜肺炎放线菌抗药性</title>
+    <link href="http://yoursite.com/2020/05/13/Wed%20May%2013%202020%2020:46:43%20GMT+0200/"/>
+    <id>http://yoursite.com/2020/05/13/Wed May 13 2020 20:46:43 GMT+0200/</id>
+    <published>2020-05-13T18:46:43.000Z</published>
+    <updated>2020-05-13T18:50:13.423Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>文章信息</strong></p><p>题目：Evaluation of Machine Learning Models for Predicting Antimicrobial Resistance of Actinobacillus pleuropneumoniae From Whole Genome Sequences</p><p>杂志：Frontiers in Microbiology</p><p>时间：06 February 2020</p><p>链接: <a href="https://doi.org/10.3389/fmicb.2020.00048" target="_blank" rel="noopener">https://doi.org/10.3389/fmicb.2020.00048</a></p><p><img src="/2020/05/13/Wed May 13 2020 20:46:43 GMT+0200/1588845190895-1ed386ed-9893-4e0e-85a7-551c120d3d77-20200513204949002.png" alt="2020-05-07_fig2.png"></p><p><strong>文章概述</strong></p><p>抗生素耐药性(AMR)正在成为世界各国面临的一个巨大公共安全问题，识别对某些抗生素耐药或易感菌株的新方法对于对抗抗生素耐药病原体至关重要。由于基因组数据集和AST表型越来越多，基于基因型的机器学习方法作为一种诊断工具显示出了巨大的希望。</p><p>本文采用<strong>支持向量机（</strong> <strong>Support Vector Machine</strong>，<strong>SVM）和集覆盖机（**</strong>Set Covering Machine<strong>，</strong>SCM）<strong>模型来学习和预测</strong>五种药物（<strong>四环素类、氨苄西林、磺胺恶唑、曲美沙星和恩诺沙星）的耐药性。</strong>SVM模型利用分离菌的基因组与参比基因之间共存的k-mers的数量来学习和预测细菌对特定抗生素的表型<strong>，</strong>而单片机模型则采用贪婪的方法构造布尔函数的联结或解联，找到最简洁的k-mers集，从而准确预测表型。<strong>对SVM和SCM模型的训练集进行</strong>五倍交叉验证<strong>，选择最佳的超参数值，以避免模型过度拟合。结果表明，无论哪种药物的耐药机制是获得性耐药还是染色体点突变，</strong>5种药物的SVM和SCM模型的训练准确率（平均交叉验证得分）和测试准确率均在90%以上。5种药物的表型与模型预测的相关性结果表明，SVM和SCM模型均能显著地将耐药分离菌从敏感分离菌中分离出来（P&lt;0.01），可作为抗生素耐药性监测和兽药临床诊断的潜在工具。</p><a id="more"></a><p><strong>方法详解</strong></p><p><strong>数据来源：</strong></p><ul><li><p>从<strong>Bosse等人(2017)文章</strong>获得<strong>96株</strong>胸膜肺炎分离菌株的<strong>5种</strong>抗菌药物(四环素、氨苄西林、磺胺恶唑、甲氧苄氨嘧啶和恩罗沙星)的<strong>WGS序列和双耐药表型</strong></p></li><li><ul><li>Study: PRJEB2343</li></ul></li></ul><p>Reference: Whole genome sequencing for surveillance of antimicrobial resistance in <em>Actinobacillus pleuropneumoniae</em>. <em>Front. Microbiol.</em> 8:311. doi: 10.3389/fmicb.2017.00311</p><p><strong>分析方法：</strong></p><ul><li>WGS assemle: Velvet 1.2.08</li><li>AMR genes contig: 从ResFinder 数据库</li><li>matrix of the co-occurring k-mers：Ray Surveyor tool</li><li><strong>Reference-Based SVM Model</strong>：radial basis function kernel，Python sklearn 包实现分析</li><li><strong>Reference-Free SCM Model</strong>：implemented by <strong>Kover</strong>, an open-source software implemented in the Python and C programming languages</li><li>Model Selection and Performance Evaluation: five-fold cross-validation, 评价指标：sensitivity, specificity, accuracy, and precision</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;文章信息&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;题目：Evaluation of Machine Learning Models for Predicting Antimicrobial Resistance of Actinobacillus pleuropneumoniae From Whole Genome Sequences&lt;/p&gt;
+&lt;p&gt;杂志：Frontiers in Microbiology&lt;/p&gt;
+&lt;p&gt;时间：06 February 2020&lt;/p&gt;
+&lt;p&gt;链接: &lt;a href=&quot;https://doi.org/10.3389/fmicb.2020.00048&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://doi.org/10.3389/fmicb.2020.00048&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2020/05/13/Wed May 13 2020 20:46:43 GMT+0200/1588845190895-1ed386ed-9893-4e0e-85a7-551c120d3d77-20200513204949002.png&quot; alt=&quot;2020-05-07_fig2.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;文章概述&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;抗生素耐药性(AMR)正在成为世界各国面临的一个巨大公共安全问题，识别对某些抗生素耐药或易感菌株的新方法对于对抗抗生素耐药病原体至关重要。由于基因组数据集和AST表型越来越多，基于基因型的机器学习方法作为一种诊断工具显示出了巨大的希望。&lt;/p&gt;
+&lt;p&gt;本文采用&lt;strong&gt;支持向量机（&lt;/strong&gt; &lt;strong&gt;Support Vector Machine&lt;/strong&gt;，&lt;strong&gt;SVM）和集覆盖机（**&lt;/strong&gt;Set Covering Machine&lt;strong&gt;，&lt;/strong&gt;SCM）&lt;strong&gt;模型来学习和预测&lt;/strong&gt;五种药物（&lt;strong&gt;四环素类、氨苄西林、磺胺恶唑、曲美沙星和恩诺沙星）的耐药性。&lt;/strong&gt;SVM模型利用分离菌的基因组与参比基因之间共存的k-mers的数量来学习和预测细菌对特定抗生素的表型&lt;strong&gt;，&lt;/strong&gt;而单片机模型则采用贪婪的方法构造布尔函数的联结或解联，找到最简洁的k-mers集，从而准确预测表型。&lt;strong&gt;对SVM和SCM模型的训练集进行&lt;/strong&gt;五倍交叉验证&lt;strong&gt;，选择最佳的超参数值，以避免模型过度拟合。结果表明，无论哪种药物的耐药机制是获得性耐药还是染色体点突变，&lt;/strong&gt;5种药物的SVM和SCM模型的训练准确率（平均交叉验证得分）和测试准确率均在90%以上。5种药物的表型与模型预测的相关性结果表明，SVM和SCM模型均能显著地将耐药分离菌从敏感分离菌中分离出来（P&amp;lt;0.01），可作为抗生素耐药性监测和兽药临床诊断的潜在工具。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
+    
+      <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
+    
+      <category term="AMR" scheme="http://yoursite.com/tags/AMR/"/>
+    
+  </entry>
   
   <entry>
     <title>利用深度学习从宏基因组数据中预测抗生素抗性基因—DeepARG（方法详解）</title>
@@ -150,11 +182,11 @@
     </summary>
     
     
-      <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
-    
       <category term="Scikit-Learn" scheme="http://yoursite.com/tags/Scikit-Learn/"/>
     
       <category term="SVM" scheme="http://yoursite.com/tags/SVM/"/>
+    
+      <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
     
   </entry>
   
@@ -524,29 +556,6 @@
       <category term="multi-omics" scheme="http://yoursite.com/tags/multi-omics/"/>
     
       <category term="regulation network" scheme="http://yoursite.com/tags/regulation-network/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>深度学习在遗传变异和表观调控中的应用</title>
-    <link href="http://yoursite.com/2019/12/29/Sun%20Dec%2029%202019%2010:34:47%20GMT+0100/"/>
-    <id>http://yoursite.com/2019/12/29/Sun Dec 29 2019 10:34:47 GMT+0100/</id>
-    <published>2019-12-29T09:34:47.000Z</published>
-    <updated>2019-12-29T04:50:32.539Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>文章介绍：</strong></p><p>利用深度学习卷积神经网络的方法，以表观数据和基因组遗产数据作为参考，训练模型，预测遗传变异的影响。</p><p><strong>figure</strong></p><p><img src="/2019/12/29/Sun Dec 29 2019 10:34:47 GMT+0100/fig1.png" style="zoom:33%;"></p><a id="more"></a><p><strong>文章信息</strong></p><p>题目：Functional interpretation of genetic variants using deep learning predicts impact on chromatin accessibility and histone modification</p><p>杂志：<em>Nucleic Acids Research</em></p><p>时间：2019</p><p>链接: <em>doi: 10.1093/nar/gkz808</em></p><p>每日文献摘要：第30篇  2019年12月30日 周日</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;文章介绍：&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;利用深度学习卷积神经网络的方法，以表观数据和基因组遗产数据作为参考，训练模型，预测遗传变异的影响。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;figure&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2019/12/29/Sun Dec 29 2019 10:34:47 GMT+0100/fig1.png&quot; style=&quot;zoom:33%;&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="deep learning" scheme="http://yoursite.com/tags/deep-learning/"/>
     
   </entry>
   

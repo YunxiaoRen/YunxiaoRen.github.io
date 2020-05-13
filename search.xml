@@ -4,6 +4,29 @@
   
     
     <entry>
+      <title>利用机器学习模型从全基因组序列中预测胸膜肺炎放线菌抗药性</title>
+      <link href="/2020/05/13/Wed%20May%2013%202020%2020:46:43%20GMT+0200/"/>
+      <url>/2020/05/13/Wed%20May%2013%202020%2020:46:43%20GMT+0200/</url>
+      
+        <content type="html"><![CDATA[<p><strong>文章信息</strong></p><p>题目：Evaluation of Machine Learning Models for Predicting Antimicrobial Resistance of Actinobacillus pleuropneumoniae From Whole Genome Sequences</p><p>杂志：Frontiers in Microbiology</p><p>时间：06 February 2020</p><p>链接: <a href="https://doi.org/10.3389/fmicb.2020.00048" target="_blank" rel="noopener">https://doi.org/10.3389/fmicb.2020.00048</a></p><p><img src="/2020/05/13/Wed May 13 2020 20:46:43 GMT+0200/1588845190895-1ed386ed-9893-4e0e-85a7-551c120d3d77-20200513204949002.png" alt="2020-05-07_fig2.png"></p><p><strong>文章概述</strong></p><p>抗生素耐药性(AMR)正在成为世界各国面临的一个巨大公共安全问题，识别对某些抗生素耐药或易感菌株的新方法对于对抗抗生素耐药病原体至关重要。由于基因组数据集和AST表型越来越多，基于基因型的机器学习方法作为一种诊断工具显示出了巨大的希望。</p><p>本文采用<strong>支持向量机（</strong> <strong>Support Vector Machine</strong>，<strong>SVM）和集覆盖机（**</strong>Set Covering Machine<strong>，</strong>SCM）<strong>模型来学习和预测</strong>五种药物（<strong>四环素类、氨苄西林、磺胺恶唑、曲美沙星和恩诺沙星）的耐药性。</strong>SVM模型利用分离菌的基因组与参比基因之间共存的k-mers的数量来学习和预测细菌对特定抗生素的表型<strong>，</strong>而单片机模型则采用贪婪的方法构造布尔函数的联结或解联，找到最简洁的k-mers集，从而准确预测表型。<strong>对SVM和SCM模型的训练集进行</strong>五倍交叉验证<strong>，选择最佳的超参数值，以避免模型过度拟合。结果表明，无论哪种药物的耐药机制是获得性耐药还是染色体点突变，</strong>5种药物的SVM和SCM模型的训练准确率（平均交叉验证得分）和测试准确率均在90%以上。5种药物的表型与模型预测的相关性结果表明，SVM和SCM模型均能显著地将耐药分离菌从敏感分离菌中分离出来（P&lt;0.01），可作为抗生素耐药性监测和兽药临床诊断的潜在工具。</p><a id="more"></a><p><strong>方法详解</strong></p><p><strong>数据来源：</strong></p><ul><li><p>从<strong>Bosse等人(2017)文章</strong>获得<strong>96株</strong>胸膜肺炎分离菌株的<strong>5种</strong>抗菌药物(四环素、氨苄西林、磺胺恶唑、甲氧苄氨嘧啶和恩罗沙星)的<strong>WGS序列和双耐药表型</strong></p></li><li><ul><li>Study: PRJEB2343</li></ul></li></ul><p>Reference: Whole genome sequencing for surveillance of antimicrobial resistance in <em>Actinobacillus pleuropneumoniae</em>. <em>Front. Microbiol.</em> 8:311. doi: 10.3389/fmicb.2017.00311</p><p><strong>分析方法：</strong></p><ul><li>WGS assemle: Velvet 1.2.08</li><li>AMR genes contig: 从ResFinder 数据库</li><li>matrix of the co-occurring k-mers：Ray Surveyor tool</li><li><strong>Reference-Based SVM Model</strong>：radial basis function kernel，Python sklearn 包实现分析</li><li><strong>Reference-Free SCM Model</strong>：implemented by <strong>Kover</strong>, an open-source software implemented in the Python and C programming languages</li><li>Model Selection and Performance Evaluation: five-fold cross-validation, 评价指标：sensitivity, specificity, accuracy, and precision</li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 文献摘要 </tag>
+            
+            <tag> machine learning </tag>
+            
+            <tag> AMR </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>利用深度学习从宏基因组数据中预测抗生素抗性基因—DeepARG（方法详解）</title>
       <link href="/2020/05/06/Wed%20May%2006%202020%2012:44:55%20GMT+0200/"/>
       <url>/2020/05/06/Wed%20May%2006%202020%2012:44:55%20GMT+0200/</url>
@@ -98,11 +121,11 @@
       
         <tags>
             
-            <tag> machine learning </tag>
-            
             <tag> Scikit-Learn </tag>
             
             <tag> SVM </tag>
+            
+            <tag> machine learning </tag>
             
         </tags>
       
