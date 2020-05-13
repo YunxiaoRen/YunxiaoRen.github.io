@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-05-13T18:50:13.423Z</updated>
+  <updated>2020-05-13T19:41:48.441Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>lncRNA的保守和不保守</title>
+    <link href="http://yoursite.com/2020/05/13/Wed%20May%2013%202020%2021:38:56%20GMT+0200/"/>
+    <id>http://yoursite.com/2020/05/13/Wed May 13 2020 21:38:56 GMT+0200/</id>
+    <published>2020-05-13T19:38:56.000Z</published>
+    <updated>2020-05-13T19:41:48.441Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>文章信息</strong></p><p>题目：Distinct Processing of lncRNAs Contributes to Non-conserved Functions in Stem Cells</p><p>杂志：Cell</p><p>时间：6 April 2020</p><p>链接: h<a href="https://doi.org/10.1016/j.cell.2020.03.006" target="_blank" rel="noopener">ttps://doi.org/10.1016/j.cell.2020.03.006</a></p><p><strong>该文章的评论文章：</strong></p><p>题目：The Secret Life of lncRNAs: Conserved, yet Not Conserved</p><p>链接：<a href="https://doi.org/10.1016/j.cell.2020.04.012" target="_blank" rel="noopener">https://doi.org/10.1016/j.cell.2020.04.012</a></p><p><strong>文章介绍</strong></p><p>长非编码RNA（lncRNAs）的进化速度比mRNAs更快。保守的lncRNAs是否经过保守的加工、定位和功能仍未被探索。中科院陈玲玲教授团队报告了人类（h) 和小鼠 (m) 胚胎干细胞（ESCs）中不同的lncRNAs的亚细胞定位。与mESCs相比，在hESCs的细胞质中定位的lncRNAs的比例明显高于mESCs。事实证明，这对hESC的多能性很重要。FAST是一种位置保守的lncRNA，但在加工和定位方面并不保守。在hESCs中，细胞质定位的h FAST与E3泛素连接酶β-TrCP的WD40域结合，并阻止其与磷酸化的β-catenin相互作用，以防止降解，导致激活WNT信号转导，这是多能性所需的。与此相反，m Fast在mESCs中被核保留，其处理被拼接因子PPIE抑制，而PPIE在mESCs中高表达，但在hESCs中没有。这些发现揭示了lncRNA的加工和定位是之前未被重视的作用于快速进化的贡献者。</p><a id="more"></a><p><img src="/2020/05/13/Wed May 13 2020 21:38:56 GMT+0200/1589397881556-d461906a-a11a-423f-9412-b01efafa4b1a.png" alt="image.png" style="zoom: 33%;"></p><p>Harshita Sharma 对这篇文章的评论：Guo及其同事发现了lncRNA演化的新的复杂性，在人类ESCs中，位置保守的lncRNAs被广泛地拼接并输出到细胞质中，而小鼠的lncRNAs主要是未拼接和核保留。不同的处理导致了物种特异性的lncRNA在多能性维持中的功能。</p><p><img src="/2020/05/13/Wed May 13 2020 21:38:56 GMT+0200/1589397879457-7fa9fb7d-706c-425e-a71e-235f7c043761.png" alt="image.png" style="zoom:33%;"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;文章信息&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;题目：Distinct Processing of lncRNAs Contributes to Non-conserved Functions in Stem Cells&lt;/p&gt;
+&lt;p&gt;杂志：Cell&lt;/p&gt;
+&lt;p&gt;时间：6 April 2020&lt;/p&gt;
+&lt;p&gt;链接: h&lt;a href=&quot;https://doi.org/10.1016/j.cell.2020.03.006&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;ttps://doi.org/10.1016/j.cell.2020.03.006&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;该文章的评论文章：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;题目：The Secret Life of lncRNAs: Conserved, yet Not Conserved&lt;/p&gt;
+&lt;p&gt;链接：&lt;a href=&quot;https://doi.org/10.1016/j.cell.2020.04.012&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://doi.org/10.1016/j.cell.2020.04.012&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;文章介绍&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;长非编码RNA（lncRNAs）的进化速度比mRNAs更快。保守的lncRNAs是否经过保守的加工、定位和功能仍未被探索。中科院陈玲玲教授团队报告了人类（h) 和小鼠 (m) 胚胎干细胞（ESCs）中不同的lncRNAs的亚细胞定位。与mESCs相比，在hESCs的细胞质中定位的lncRNAs的比例明显高于mESCs。事实证明，这对hESC的多能性很重要。FAST是一种位置保守的lncRNA，但在加工和定位方面并不保守。在hESCs中，细胞质定位的h FAST与E3泛素连接酶β-TrCP的WD40域结合，并阻止其与磷酸化的β-catenin相互作用，以防止降解，导致激活WNT信号转导，这是多能性所需的。与此相反，m Fast在mESCs中被核保留，其处理被拼接因子PPIE抑制，而PPIE在mESCs中高表达，但在hESCs中没有。这些发现揭示了lncRNA的加工和定位是之前未被重视的作用于快速进化的贡献者。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
+    
+      <category term="lncRNA" scheme="http://yoursite.com/tags/lncRNA/"/>
+    
+  </entry>
   
   <entry>
     <title>利用机器学习模型从全基因组序列中预测胸膜肺炎放线菌抗药性</title>
@@ -534,34 +565,6 @@
     
     
       <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>利用全基因组组织表达谱预测疾病相关lncRNA</title>
-    <link href="http://yoursite.com/2019/12/29/Sun%20Dec%2029%202019%2010:43:16%20GMT+0100/"/>
-    <id>http://yoursite.com/2019/12/29/Sun Dec 29 2019 10:43:16 GMT+0100/</id>
-    <published>2019-12-29T09:43:16.000Z</published>
-    <updated>2019-12-29T04:36:08.110Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>文章介绍：</strong></p><p>基于机器学习的方法——<strong>DislncRF</strong>，根据组织表达谱从全基因组范围预测疾病相关的lncRNA。<strong>DislncRF</strong>是基于随机森林模型训练已知的与疾病相关的蛋白编码基因（protein-coding genes ，PCGs），从而提取疾病与表达谱的一般模式，然后应用到lncRNA与疾病的关联中，</p><p>代码：<a href="https://github.com/xypan1232/DislncRF" target="_blank" rel="noopener">https://github.com/xypan1232/DislncRF</a></p><p><strong>figure</strong></p><p><img src="/2019/12/29/Sun Dec 29 2019 10:43:16 GMT+0100/fig1.png" style="zoom:50%;"></p><a id="more"></a><p><strong>文章信息</strong></p><p>题目：Inferring disease-associated long non-coding RNAs using genome-wide tissue expression profiles</p><p>杂志：Bioinformatics</p><p>时间：2018</p><p>链接: doi.10.1093/bioinformatics/xxxxxx</p><p><strong>碎碎念</strong></p><p>利用蛋白编码基因与疾病的模式训练模型，然后预测lncRNA与疾病的关联，这样选训练集可靠吗？</p><blockquote><p>每日文献摘要：第28篇  2019年12月29日 周日</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;文章介绍：&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;基于机器学习的方法——&lt;strong&gt;DislncRF&lt;/strong&gt;，根据组织表达谱从全基因组范围预测疾病相关的lncRNA。&lt;strong&gt;DislncRF&lt;/strong&gt;是基于随机森林模型训练已知的与疾病相关的蛋白编码基因（protein-coding genes ，PCGs），从而提取疾病与表达谱的一般模式，然后应用到lncRNA与疾病的关联中，&lt;/p&gt;
-&lt;p&gt;代码：&lt;a href=&quot;https://github.com/xypan1232/DislncRF&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/xypan1232/DislncRF&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;figure&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2019/12/29/Sun Dec 29 2019 10:43:16 GMT+0100/fig1.png&quot; style=&quot;zoom:50%;&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
-    
-      <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
-    
-      <category term="lncRNA" scheme="http://yoursite.com/tags/lncRNA/"/>
     
   </entry>
   

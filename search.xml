@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[lncRNA的保守和不保守]]></title>
+    <url>%2F2020%2F05%2F13%2FWed%20May%2013%202020%2021%3A38%3A56%20GMT%2B0200%2F</url>
+    <content type="text"><![CDATA[文章信息 题目：Distinct Processing of lncRNAs Contributes to Non-conserved Functions in Stem Cells 杂志：Cell 时间：6 April 2020 链接: https://doi.org/10.1016/j.cell.2020.03.006 该文章的评论文章： 题目：The Secret Life of lncRNAs: Conserved, yet Not Conserved 链接：https://doi.org/10.1016/j.cell.2020.04.012 文章介绍 长非编码RNA（lncRNAs）的进化速度比mRNAs更快。保守的lncRNAs是否经过保守的加工、定位和功能仍未被探索。中科院陈玲玲教授团队报告了人类（h) 和小鼠 (m) 胚胎干细胞（ESCs）中不同的lncRNAs的亚细胞定位。与mESCs相比，在hESCs的细胞质中定位的lncRNAs的比例明显高于mESCs。事实证明，这对hESC的多能性很重要。FAST是一种位置保守的lncRNA，但在加工和定位方面并不保守。在hESCs中，细胞质定位的h FAST与E3泛素连接酶β-TrCP的WD40域结合，并阻止其与磷酸化的β-catenin相互作用，以防止降解，导致激活WNT信号转导，这是多能性所需的。与此相反，m Fast在mESCs中被核保留，其处理被拼接因子PPIE抑制，而PPIE在mESCs中高表达，但在hESCs中没有。这些发现揭示了lncRNA的加工和定位是之前未被重视的作用于快速进化的贡献者。 Harshita Sharma 对这篇文章的评论：Guo及其同事发现了lncRNA演化的新的复杂性，在人类ESCs中，位置保守的lncRNAs被广泛地拼接并输出到细胞质中，而小鼠的lncRNAs主要是未拼接和核保留。不同的处理导致了物种特异性的lncRNA在多能性维持中的功能。]]></content>
+      <tags>
+        <tag>文献摘要</tag>
+        <tag>lncRNA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[利用机器学习模型从全基因组序列中预测胸膜肺炎放线菌抗药性]]></title>
     <url>%2F2020%2F05%2F13%2FWed%20May%2013%202020%2020%3A46%3A43%20GMT%2B0200%2F</url>
     <content type="text"><![CDATA[文章信息 题目：Evaluation of Machine Learning Models for Predicting Antimicrobial Resistance of Actinobacillus pleuropneumoniae From Whole Genome Sequences 杂志：Frontiers in Microbiology 时间：06 February 2020 链接: https://doi.org/10.3389/fmicb.2020.00048 文章概述 抗生素耐药性(AMR)正在成为世界各国面临的一个巨大公共安全问题，识别对某些抗生素耐药或易感菌株的新方法对于对抗抗生素耐药病原体至关重要。由于基因组数据集和AST表型越来越多，基于基因型的机器学习方法作为一种诊断工具显示出了巨大的希望。 本文采用支持向量机（ Support Vector Machine，SVM）和集覆盖机（**Set Covering Machine，SCM）模型来学习和预测五种药物（四环素类、氨苄西林、磺胺恶唑、曲美沙星和恩诺沙星）的耐药性。SVM模型利用分离菌的基因组与参比基因之间共存的k-mers的数量来学习和预测细菌对特定抗生素的表型，而单片机模型则采用贪婪的方法构造布尔函数的联结或解联，找到最简洁的k-mers集，从而准确预测表型。对SVM和SCM模型的训练集进行五倍交叉验证，选择最佳的超参数值，以避免模型过度拟合。结果表明，无论哪种药物的耐药机制是获得性耐药还是染色体点突变，5种药物的SVM和SCM模型的训练准确率（平均交叉验证得分）和测试准确率均在90%以上。5种药物的表型与模型预测的相关性结果表明，SVM和SCM模型均能显著地将耐药分离菌从敏感分离菌中分离出来（P&lt;0.01），可作为抗生素耐药性监测和兽药临床诊断的潜在工具。 方法详解 数据来源： 从Bosse等人(2017)文章获得96株胸膜肺炎分离菌株的5种抗菌药物(四环素、氨苄西林、磺胺恶唑、甲氧苄氨嘧啶和恩罗沙星)的WGS序列和双耐药表型 Study: PRJEB2343 Reference: Whole genome sequencing for surveillance of antimicrobial resistance in Actinobacillus pleuropneumoniae. Front. Microbiol. 8:311. doi: 10.3389/fmicb.2017.00311 分析方法： WGS assemle: Velvet 1.2.08 AMR genes contig: 从ResFinder 数据库 matrix of the co-occurring k-mers：Ray Surveyor tool Reference-Based SVM Model：radial basis function kernel，Python sklearn 包实现分析 Reference-Free SCM Model：implemented by Kover, an open-source software implemented in the Python and C programming languages Model Selection and Performance Evaluation: five-fold cross-validation, 评价指标：sensitivity, specificity, accuracy, and precision]]></content>
