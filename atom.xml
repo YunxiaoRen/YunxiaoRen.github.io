@@ -214,11 +214,11 @@
     </summary>
     
     
+      <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
+    
       <category term="Scikit-Learn" scheme="http://yoursite.com/tags/Scikit-Learn/"/>
     
       <category term="SVM" scheme="http://yoursite.com/tags/SVM/"/>
-    
-      <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
     
   </entry>
   
