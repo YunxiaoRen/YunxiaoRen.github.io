@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-05-17T08:35:52.044Z</updated>
+  <updated>2020-05-17T08:39:33.620Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,17 +21,14 @@
     <link href="http://yoursite.com/2020/05/17/Sun%20May%2017%202020%2010:22:58%20GMT+0200/"/>
     <id>http://yoursite.com/2020/05/17/Sun May 17 2020 10:22:58 GMT+0200/</id>
     <published>2020-05-17T08:22:58.000Z</published>
-    <updated>2020-05-17T08:35:52.044Z</updated>
+    <updated>2020-05-17T08:39:33.620Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="t-test"><a href="#t-test" class="headerlink" title="t-test"></a>t-test</h3><p><strong>t-test是比较两组变量的平均值是否有显著性差异</strong></p><p><img src="/2020/05/17/Sun May 17 2020 10:22:58 GMT+0200/1589702913894-0ff87132-df98-47cc-aa51-d3d6b4127469-20200517103250465.png" alt="image.png" style="zoom:50%;"></p><p><strong>类比于线性回归计算t-test的R squared</strong></p><ul><li><strong>1）首先忽略x轴，计算总平均值</strong></li></ul><p><img src="/2020/05/17/Sun May 17 2020 10:22:58 GMT+0200/1589703098963-a13f78e7-3120-47b1-9902-02ae10aa989a-20200517103250668.png" alt="image.png" style="zoom:33%;"></p><ul><li>2) 计算相对于平均值的偏差平方和</li></ul><p><img src="/2020/05/17/Sun May 17 2020 10:22:58 GMT+0200/1589703245599-1a324c15-00a1-4696-8837-fb72f47a6262-20200517103250743.png" alt="image.png" style="zoom:33%;"><img src="/2020/05/17/Sun May 17 2020 10:22:58 GMT+0200/1589703466338-96b36840-acd0-497e-8d21-7635be860718-20200517103250065.png" alt="image.png"></p><p><strong>3） 拟合模型</strong></p><p> <img src="/2020/05/17/Sun May 17 2020 10:22:58 GMT+0200/1589703466338-96b36840-acd0-497e-8d21-7635be860718-20200517103250065.png" alt="image.png" style="zoom:33%;"></p><p>4）计算相对于模型line的偏差平方和</p><p><img src="/2020/05/17/Sun May 17 2020 10:22:58 GMT+0200/1589703384412-7c9ecf7e-9081-4b29-b966-1a02eeb0a589-20200517103250886.png" alt="image.png" style="zoom:33%;"><img src="/2020/05/17/Sun May 17 2020 10:22:58 GMT+0200/1589703577012-29901c39-6517-4f8d-a27b-72f39a294726-20200517103250846.png" alt="image.png"></p><p><strong>线性回归和t-test的对比总结：</strong></p><p>   <img src="/2020/05/17/Sun May 17 2020 10:22:58 GMT+0200/1589703577012-29901c39-6517-4f8d-a27b-72f39a294726-20200517103250846.png" alt="image.png" style="zoom:33%;"></p><h3 id="方差分析"><a href="#方差分析" class="headerlink" title="方差分析"></a>方差分析</h3><p>方差分析即Analysis of Variance, 简称ANOVA，是比较多组变量间的平均值是否有显著性差异。是t-test的拓展。</p><p><img src="/2020/05/17/Sun May 17 2020 10:22:58 GMT+0200/1589703782892-4a90d9f5-4bb3-4879-9d51-d059a144891c-20200517103251076.png" alt="image.png" style="zoom:33%;"></p>]]></content>
+    <content type="html"><![CDATA[<h3 id="t-test"><a href="#t-test" class="headerlink" title="t-test"></a>t-test</h3><p><strong>t-test是比较两组变量的平均值是否有显著性差异</strong></p><p><img src="/2020/05/17/Sun May 17 2020 10:22:58 GMT+0200/1589702913894-0ff87132-df98-47cc-aa51-d3d6b4127469-20200517103250465.png" alt="image.png" style="zoom:50%;"></p><a id="more"></a><p><strong>类比于线性回归计算t-test的R squared</strong></p><ul><li><strong>1）首先忽略x轴，计算总平均值</strong></li></ul><p><img src="/2020/05/17/Sun May 17 2020 10:22:58 GMT+0200/1589703098963-a13f78e7-3120-47b1-9902-02ae10aa989a-20200517103250668.png" alt="image.png" style="zoom:33%;"></p><ul><li>2) 计算相对于平均值的偏差平方和</li></ul><p><img src="/2020/05/17/Sun May 17 2020 10:22:58 GMT+0200/1589703245599-1a324c15-00a1-4696-8837-fb72f47a6262-20200517103250743.png" alt="image.png" style="zoom:33%;"><img src="/2020/05/17/Sun May 17 2020 10:22:58 GMT+0200/1589703466338-96b36840-acd0-497e-8d21-7635be860718-20200517103250065.png" alt="image.png"></p><p><strong>3） 拟合模型</strong></p><p> <img src="/2020/05/17/Sun May 17 2020 10:22:58 GMT+0200/1589703466338-96b36840-acd0-497e-8d21-7635be860718-20200517103250065.png" alt="image.png" style="zoom:33%;"></p><p>4）计算相对于模型line的偏差平方和</p><p><img src="/2020/05/17/Sun May 17 2020 10:22:58 GMT+0200/1589703384412-7c9ecf7e-9081-4b29-b966-1a02eeb0a589-20200517103250886.png" alt="image.png" style="zoom:33%;"><img src="/2020/05/17/Sun May 17 2020 10:22:58 GMT+0200/1589703577012-29901c39-6517-4f8d-a27b-72f39a294726-20200517103250846.png" alt="image.png"></p><p><strong>线性回归和t-test的对比总结：</strong></p><p>   <img src="/2020/05/17/Sun May 17 2020 10:22:58 GMT+0200/1589703577012-29901c39-6517-4f8d-a27b-72f39a294726-20200517103250846.png" alt="image.png" style="zoom:33%;"></p><h3 id="方差分析"><a href="#方差分析" class="headerlink" title="方差分析"></a>方差分析</h3><p>方差分析即Analysis of Variance, 简称ANOVA，是比较多组变量间的平均值是否有显著性差异。是t-test的拓展。</p><p><img src="/2020/05/17/Sun May 17 2020 10:22:58 GMT+0200/1589703782892-4a90d9f5-4bb3-4879-9d51-d059a144891c-20200517103251076.png" alt="image.png" style="zoom:33%;"></p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;h3 id=&quot;t-test&quot;&gt;&lt;a href=&quot;#t-test&quot; class=&quot;headerlink&quot; title=&quot;t-test&quot;&gt;&lt;/a&gt;t-test&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;t-test是比较两组变量的平均值是否有显著性差异&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img
-      
+      &lt;h3 id=&quot;t-test&quot;&gt;&lt;a href=&quot;#t-test&quot; class=&quot;headerlink&quot; title=&quot;t-test&quot;&gt;&lt;/a&gt;t-test&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;t-test是比较两组变量的平均值是否有显著性差异&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2020/05/17/Sun May 17 2020 10:22:58 GMT+0200/1589702913894-0ff87132-df98-47cc-aa51-d3d6b4127469-20200517103250465.png&quot; alt=&quot;image.png&quot; style=&quot;zoom:50%;&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -45,12 +42,23 @@
     <link href="http://yoursite.com/2020/05/17/Sun%20May%2017%202020%2009:56:44%20GMT+0200/"/>
     <id>http://yoursite.com/2020/05/17/Sun May 17 2020 09:56:44 GMT+0200/</id>
     <published>2020-05-17T07:56:44.000Z</published>
-    <updated>2020-05-17T07:56:44.311Z</updated>
+    <updated>2020-05-17T08:42:28.247Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>逻辑回归是什么？主要用于解决什么问题？与线性回归有什么关系？如何计算和评估逻辑回归的最佳模型？逻辑回归与概率回归的异同？在R中如何实现？</strong></p><p>首先还是先看wiki对逻辑回归（logisitic regression）的解释</p><blockquote><p>Logistic regression is a statistical model that in its basic form uses a logistic function to model a binary dependent variable。</p></blockquote><p>逻辑回归（logistic/logit regression）主要应用于解决<strong>二分类</strong>问题，和线性回归都属于线性模型，但是逻辑回归是解决分类问题，而线性回归是解决回归问题。逻辑回归通过最大似然法（Maximum likelihood）寻找最佳模型。可以通过summary()函数的输出结果AIC值对比模型的拟合程度，或者通过sensitivity, specifity评估，既可以以ROC和AUC的结果评估。概率回归也用于二分类问题，和逻辑回归类似。不同的是逻辑回归使用累积逻辑函数（cumulative logistic function），概率回归使用正态累积密度函数（normal cumulative density function）。实际应用两个模型时时可根据自己的爱好选择。逻辑回归在R中的实现以 <strong><code>glm()</code></strong> 函数实现，并指定参数 <code>**family = binomial**</code> , 而概率回归以glm()函数，并指定 <strong><code>family =binomial(link=&quot;probit&quot;)</code></strong> 。</p><a id="more"></a><p><img src="/2020/05/17/Sun May 17 2020 09:56:44 GMT+0200/1589442464586-dd9e1642-d738-407f-9656-5ce4e1f54b52.png" alt="image.png" style="zoom:33%;"></p><p><img src="/2020/05/17/Sun May 17 2020 09:56:44 GMT+0200/1589442582323-ba9a09c2-6ab3-4f39-93fd-5bc66333621a.png" alt="image.png" style="zoom:33%;"></p><p><img src="/2020/05/17/Sun May 17 2020 09:56:44 GMT+0200/1589443161905-b5a2b69c-41f4-46e2-aac4-c146bb467f45.png" alt="image.png" style="zoom:33%;"></p><p><img src="/2020/05/17/Sun May 17 2020 09:56:44 GMT+0200/1589701563491-be26730c-2d7b-4668-8035-5ca409555214.png" alt="image.png" style="zoom:33%;"></p><p><img src="/2020/05/17/Sun May 17 2020 09:56:44 GMT+0200/1589701561833-3cec8e36-edf6-4df1-8a80-af7d3fb2230e.png" alt="image.png" style="zoom:33%;"></p><p><img src="/2020/05/17/Sun May 17 2020 09:56:44 GMT+0200/1589702022864-d99f6c13-a484-493f-a313-8c6a9ab70514.png" alt="image.png" style="zoom:33%;"></p><p><strong>参考资料：</strong></p><p>statquest逻辑回归视频：<a href="https://www.youtube.com/playlist?list=PLblh5JKOoLUKxzEP5HA2d-Li7IJkHfXSe" target="_blank" rel="noopener">https://www.youtube.com/playlist?list=PLblh5JKOoLUKxzEP5HA2d-Li7IJkHfXSe</a></p>]]></content>
     
     <summary type="html">
     
+      &lt;p&gt;&lt;strong&gt;逻辑回归是什么？主要用于解决什么问题？与线性回归有什么关系？如何计算和评估逻辑回归的最佳模型？逻辑回归与概率回归的异同？在R中如何实现？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;首先还是先看wiki对逻辑回归（logisitic regression）的解释&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Logistic regression is a statistical model that in its basic form uses a logistic function to model a binary dependent variable。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;逻辑回归（logistic/logit regression）主要应用于解决&lt;strong&gt;二分类&lt;/strong&gt;问题，和线性回归都属于线性模型，但是逻辑回归是解决分类问题，而线性回归是解决回归问题。逻辑回归通过最大似然法（Maximum likelihood）寻找最佳模型。可以通过summary()函数的输出结果AIC值对比模型的拟合程度，或者通过sensitivity, specifity评估，既可以以ROC和AUC的结果评估。概率回归也用于二分类问题，和逻辑回归类似。不同的是逻辑回归使用累积逻辑函数（cumulative logistic function），概率回归使用正态累积密度函数（normal cumulative density function）。实际应用两个模型时时可根据自己的爱好选择。逻辑回归在R中的实现以 &lt;strong&gt;&lt;code&gt;glm()&lt;/code&gt;&lt;/strong&gt; 函数实现，并指定参数 &lt;code&gt;**family = binomial**&lt;/code&gt; , 而概率回归以glm()函数，并指定 &lt;strong&gt;&lt;code&gt;family =binomial(link=&amp;quot;probit&amp;quot;)&lt;/code&gt;&lt;/strong&gt; 。&lt;/p&gt;
+    
     </summary>
     
+    
+      <category term="statistics" scheme="http://yoursite.com/tags/statistics/"/>
     
   </entry>
   
@@ -59,12 +67,24 @@
     <link href="http://yoursite.com/2020/05/17/Sun%20May%2017%202020%2008:40:38%20GMT+0200/"/>
     <id>http://yoursite.com/2020/05/17/Sun May 17 2020 08:40:38 GMT+0200/</id>
     <published>2020-05-17T06:40:38.000Z</published>
-    <updated>2020-05-17T06:40:38.751Z</updated>
+    <updated>2020-05-17T08:39:05.730Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>什么是线性回归和线性模型？他们的关系是什么？如何计算和评估线性回归模型？如何在R中实现？</strong></p><h2 id="线性回归和线性模型"><a href="#线性回归和线性模型" class="headerlink" title="线性回归和线性模型"></a><strong>线性回归和线性模型</strong></h2><p>首先看下wiki给出的解释：</p><blockquote><p>In statistics, linear regression is a linear approach to modeling the relationship between a scalar response (or dependent variable) and one or more explanatory variables (or independent variables). The case of one explanatory variable is called simple linear regression. For more than one explanatory variable, the process is called multiple linear regression</p></blockquote><p>线性回归即用来寻找变量间的线性关系，属于线性模型的一个分支，通常使用最小二乘法（least squared method)寻找</p><p>最佳模型，并用R suqared( R2 ）评估模型的拟合程度，R2越大表示模型拟合效果越好。在R中以lm()函数实现，代码公式为 <code>lm(dependent varaible ~ independent varaibles, data</code> .</p><a id="more"></a><p><img src="/2020/05/17/Sun May 17 2020 08:40:38 GMT+0200/1589697274717-c22e4977-8d06-4552-8dda-1906453aa44a.png" alt="image.png" style="zoom:50%;"></p><p><img src="/2020/05/17/Sun May 17 2020 08:40:38 GMT+0200/1589697479975-0256eaec-3fd1-4829-9bca-4ab84782d79c.png" alt="image.png" style="zoom:50%;"></p><p><strong>p-value矫正：</strong> <strong>Bonferroni Correction和Benjamini and Hochberg method</strong></p><p>Bonferroni Correction是p-value的一个矫正方法，相对严格；FDR是另一种矫正p-value的方法，而Benjamini and Hochberg method（即BH)是FDR的一个计算方法。</p><blockquote><p>We know P-value threshold is set artificially, the samller p-value represents the lower false positive for the result, but not mean it is absolutly true. For example, if the P-value equals 0.05, 10,000 tests are done, the number of false positive results will be 0.05*10,000 = 500. The false positive results will be enlarged with the incresasing the number of tests . Therefor, we need to introduce multiple tests for correction to reduce the number of false positive results. </p><p>There are two main correction methods used:</p><p><strong>1) Bonferroni Correction</strong></p></blockquote><blockquote><p>The Bonferroni method is a simplest and most brutally effective method of correction, which rejects all the possibilities of false pofitive results, and eliminates them by correcting the threshold of the P value. </p></blockquote><blockquote><p>The formula for Bonferroni method is p<em>(1/n), where p is the original P value threshold, and n is the total number of tests. If the original P value is is 0.05, and the number of test is 10,000, then the threshold after Bonferroni correction is equal to 0.05/10,000 = 0.000005, in this case, the number of false positive results in 10,000 test is 10,000 </em> 0.000005 = 0.5, less than 1. </p></blockquote><blockquote><p>But Bonferroni correction is too stringent, it will cause not only false positives are rejected by corrected threshold, but mant positives are also rejected. </p></blockquote><blockquote><p><strong>2) FDR( False Discovery Rate)</strong></p><p>FDR corrects for p-values in a relatively gentle wat compared to Bonferroni. It attempts to get a balance between false positives and false negatives, keeping the false/true positive ratio within a certain range. For example, if we set a threshold of 0.05 for 10,000 tests,the probabilty of false positives remains within 0.05, which is called FDR&lt;0.05.</p></blockquote><blockquote><p>So how to calculate FDR from p value, there are several estimation models. The most used is <strong>Benjamini and Hochberg method,</strong> also known as <strong>BH method</strong>. </p></blockquote><blockquote><p>BH method requires the results of total <strong>m</strong> tests to be ranked in descending order, <strong>k is the rank of p value in one of the results.</strong> </p></blockquote><blockquote><p>find the maximum k value that meets the original threshold α, satisfy P(k) &lt;= α<em>k/m, consider the ranking to be significanand different for all tests from 1 to k, and calculate the corresponding q value as q=p</em>(m/k). </p></blockquote><p><strong>参考资料：</strong></p><p>statquest线性回归视频 : <a href="https://www.youtube.com/playlist?list=PLblh5JKOoLUIzaEkCLIUxQFjPIlapw8nU" target="_blank" rel="noopener">https://www.youtube.com/playlist?list=PLblh5JKOoLUIzaEkCLIUxQFjPIlapw8nU</a></p>]]></content>
     
     <summary type="html">
     
+      &lt;p&gt;&lt;strong&gt;什么是线性回归和线性模型？他们的关系是什么？如何计算和评估线性回归模型？如何在R中实现？&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;线性回归和线性模型&quot;&gt;&lt;a href=&quot;#线性回归和线性模型&quot; class=&quot;headerlink&quot; title=&quot;线性回归和线性模型&quot;&gt;&lt;/a&gt;&lt;strong&gt;线性回归和线性模型&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;首先看下wiki给出的解释：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In statistics, linear regression is a linear approach to modeling the relationship between a scalar response (or dependent variable) and one or more explanatory variables (or independent variables). The case of one explanatory variable is called simple linear regression. For more than one explanatory variable, the process is called multiple linear regression&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;线性回归即用来寻找变量间的线性关系，属于线性模型的一个分支，通常使用最小二乘法（least squared method)寻找&lt;/p&gt;
+&lt;p&gt;最佳模型，并用R suqared( R2 ）评估模型的拟合程度，R2越大表示模型拟合效果越好。在R中以lm()函数实现，代码公式为 &lt;code&gt;lm(dependent varaible ~ independent varaibles, data&lt;/code&gt; .&lt;/p&gt;
+    
     </summary>
     
+    
+      <category term="statistics" scheme="http://yoursite.com/tags/statistics/"/>
     
   </entry>
   
@@ -149,9 +169,9 @@
     </summary>
     
     
-      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
-    
       <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
+    
+      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
     
       <category term="AMR" scheme="http://yoursite.com/tags/AMR/"/>
     
@@ -183,9 +203,9 @@
       <category term="literature" scheme="http://yoursite.com/categories/literature/"/>
     
     
-      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
-    
       <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
+    
+      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
     
   </entry>
   
@@ -394,9 +414,9 @@
     </summary>
     
     
-      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
-    
       <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
+    
+      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
     
   </entry>
   
