@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-05-13T20:03:57.200Z</updated>
+  <updated>2020-05-17T08:35:52.044Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>t-test和方差分析</title>
+    <link href="http://yoursite.com/2020/05/17/Sun%20May%2017%202020%2010:22:58%20GMT+0200/"/>
+    <id>http://yoursite.com/2020/05/17/Sun May 17 2020 10:22:58 GMT+0200/</id>
+    <published>2020-05-17T08:22:58.000Z</published>
+    <updated>2020-05-17T08:35:52.044Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="t-test"><a href="#t-test" class="headerlink" title="t-test"></a>t-test</h3><p><strong>t-test是比较两组变量的平均值是否有显著性差异</strong></p><p><img src="/2020/05/17/Sun May 17 2020 10:22:58 GMT+0200/1589702913894-0ff87132-df98-47cc-aa51-d3d6b4127469-20200517103250465.png" alt="image.png" style="zoom:50%;"></p><p><strong>类比于线性回归计算t-test的R squared</strong></p><ul><li><strong>1）首先忽略x轴，计算总平均值</strong></li></ul><p><img src="/2020/05/17/Sun May 17 2020 10:22:58 GMT+0200/1589703098963-a13f78e7-3120-47b1-9902-02ae10aa989a-20200517103250668.png" alt="image.png" style="zoom:33%;"></p><ul><li>2) 计算相对于平均值的偏差平方和</li></ul><p><img src="/2020/05/17/Sun May 17 2020 10:22:58 GMT+0200/1589703245599-1a324c15-00a1-4696-8837-fb72f47a6262-20200517103250743.png" alt="image.png" style="zoom:33%;"><img src="/2020/05/17/Sun May 17 2020 10:22:58 GMT+0200/1589703466338-96b36840-acd0-497e-8d21-7635be860718-20200517103250065.png" alt="image.png"></p><p><strong>3） 拟合模型</strong></p><p> <img src="/2020/05/17/Sun May 17 2020 10:22:58 GMT+0200/1589703466338-96b36840-acd0-497e-8d21-7635be860718-20200517103250065.png" alt="image.png" style="zoom:33%;"></p><p>4）计算相对于模型line的偏差平方和</p><p><img src="/2020/05/17/Sun May 17 2020 10:22:58 GMT+0200/1589703384412-7c9ecf7e-9081-4b29-b966-1a02eeb0a589-20200517103250886.png" alt="image.png" style="zoom:33%;"><img src="/2020/05/17/Sun May 17 2020 10:22:58 GMT+0200/1589703577012-29901c39-6517-4f8d-a27b-72f39a294726-20200517103250846.png" alt="image.png"></p><p><strong>线性回归和t-test的对比总结：</strong></p><p>   <img src="/2020/05/17/Sun May 17 2020 10:22:58 GMT+0200/1589703577012-29901c39-6517-4f8d-a27b-72f39a294726-20200517103250846.png" alt="image.png" style="zoom:33%;"></p><h3 id="方差分析"><a href="#方差分析" class="headerlink" title="方差分析"></a>方差分析</h3><p>方差分析即Analysis of Variance, 简称ANOVA，是比较多组变量间的平均值是否有显著性差异。是t-test的拓展。</p><p><img src="/2020/05/17/Sun May 17 2020 10:22:58 GMT+0200/1589703782892-4a90d9f5-4bb3-4879-9d51-d059a144891c-20200517103251076.png" alt="image.png" style="zoom:33%;"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;t-test&quot;&gt;&lt;a href=&quot;#t-test&quot; class=&quot;headerlink&quot; title=&quot;t-test&quot;&gt;&lt;/a&gt;t-test&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;t-test是比较两组变量的平均值是否有显著性差异&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img
+      
+    
+    </summary>
+    
+    
+      <category term="statistics" scheme="http://yoursite.com/tags/statistics/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>逻辑回归</title>
+    <link href="http://yoursite.com/2020/05/17/Sun%20May%2017%202020%2009:56:44%20GMT+0200/"/>
+    <id>http://yoursite.com/2020/05/17/Sun May 17 2020 09:56:44 GMT+0200/</id>
+    <published>2020-05-17T07:56:44.000Z</published>
+    <updated>2020-05-17T07:56:44.311Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>线性回归和线性模型</title>
+    <link href="http://yoursite.com/2020/05/17/Sun%20May%2017%202020%2008:40:38%20GMT+0200/"/>
+    <id>http://yoursite.com/2020/05/17/Sun May 17 2020 08:40:38 GMT+0200/</id>
+    <published>2020-05-17T06:40:38.000Z</published>
+    <updated>2020-05-17T06:40:38.751Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>人肠内分泌细胞的高分辨率mRNA和分泌组图谱</title>
@@ -477,95 +529,6 @@
     
     
       <category term="deep learning" scheme="http://yoursite.com/tags/deep-learning/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>细菌生物信息资源数据库——PATRIC</title>
-    <link href="http://yoursite.com/2020/02/08/Sat%20Feb%2008%202020%2019:22:12%20GMT+0100/"/>
-    <id>http://yoursite.com/2020/02/08/Sat Feb 08 2020 19:22:12 GMT+0100/</id>
-    <published>2020-02-08T18:22:12.000Z</published>
-    <updated>2020-02-12T08:48:20.302Z</updated>
-    
-    <content type="html"><![CDATA[<p>PATRIC <a href="https://www.patricbrc.org/" target="_blank" rel="noopener">https://www.patricbrc.org/</a> ：即病理系统资源整合中心，提供了集成的数据资源和分析工具，以支持有关细菌感染性疾病的生物医学研究。</p><blockquote><p><strong>PATRIC</strong>, the Pathosystems Resource Integration Center, provides integrated data and analysis tools to support biomedical research on bacterial infectious diseases.</p></blockquote><p>下面是该网站主页，主要包含3个模块：</p><ul><li>第一个是搜索模块，可以对细菌、古细菌、噬菌体以及真核宿主进行搜索，数据包括基因组、基因、转录组实验、分类学等信息；</li><li>第二个是数据分析模块，可以进行基因组组装、注释、RNA-seq、代谢组的分析等</li><li>第三个是多组学数据资源，如AMR数据，基因组数据，蛋白质家族，特殊基因等数据资源</li></ul><a id="more"></a><p><img src="/2020/02/08/Sat Feb 08 2020 19:22:12 GMT+0100/fig1.png" alt></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;PATRIC &lt;a href=&quot;https://www.patricbrc.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.patricbrc.org/&lt;/a&gt; ：即病理系统资源整合中心，提供了集成的数据资源和分析工具，以支持有关细菌感染性疾病的生物医学研究。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;PATRIC&lt;/strong&gt;, the Pathosystems Resource Integration Center, provides integrated data and analysis tools to support biomedical research on bacterial infectious diseases.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;下面是该网站主页，主要包含3个模块：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;第一个是搜索模块，可以对细菌、古细菌、噬菌体以及真核宿主进行搜索，数据包括基因组、基因、转录组实验、分类学等信息；&lt;/li&gt;
-&lt;li&gt;第二个是数据分析模块，可以进行基因组组装、注释、RNA-seq、代谢组的分析等&lt;/li&gt;
-&lt;li&gt;第三个是多组学数据资源，如AMR数据，基因组数据，蛋白质家族，特殊基因等数据资源&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-      <category term="database" scheme="http://yoursite.com/tags/database/"/>
-    
-      <category term="AMR" scheme="http://yoursite.com/tags/AMR/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>类器官和ATAC-seq技术结合研究人前脑发育图谱</title>
-    <link href="http://yoursite.com/2020/02/08/Sat%20Feb%2008%202020%2019:12:18%20GMT+0100/"/>
-    <id>http://yoursite.com/2020/02/08/Sat Feb 08 2020 19:12:18 GMT+0100/</id>
-    <published>2020-02-08T18:12:18.000Z</published>
-    <updated>2020-02-08T18:18:31.860Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>一句话评价</strong></p><p>人类前脑发育的染色质可及性动态图谱</p><p><strong>文章信息</strong></p><p>题目：Chromatin accessibility dynamics in a model of human forebrain development                                </p><p>杂志：Science</p><p>时间：24 January 2020</p><p>链接: <a href="http://dx.doi" target="_blank" rel="noopener">http://dx.doi</a>. org/10.1126/ science.aay1645</p><p><strong>figure</strong></p><p><img src="/2020/02/08/Sat Feb 08 2020 19:12:18 GMT+0100/fig1.png" style="zoom:50%;"></p><a id="more"></a><p><strong>文章介绍：</strong></p><p>人类前脑发育在很大程度上是细胞水平研究、直接功能研究或操纵所无法达到的。缺乏初级脑组织样本，特别是在后期，以及传统的体外细胞模型的局限性，阻碍了对健康和疾病状态下皮质激素生成的详细机制性理解。而文中利用干细胞3D定向分化技术形成背侧和腹侧的前脑干细胞作为原始研究组织，更加接近体内真实的发育情况，然后利用ATAC-seq和RNA测序技术绘制了体外20多个月的神经元和胶质细胞系的发育图谱。并对增强子和基因的相互作用，以及每个发育时期特异的转录调控因子进行了探究。然后他们利用这个资源绘制了与精神分裂症和自闭症谱系失调相关的基因和遗传变异图，以区分染色质可及性模式，从而揭示细胞类型和易感期。最后，他们鉴定到在皮质神经发生过程中染色质重构的现象，在此期间四分之一的调节区域是活跃的，并推测这些转录因子可能驱动这些发育变化。</p><p><img src="/2020/02/08/Sat Feb 08 2020 19:12:18 GMT+0100/fig2.png" style="zoom:50%;"></p><p>关于脑神经发育过程中染色质可及性图谱的文章已有人发表过，这篇文章仍然能发到Science上，借助了一项重要的实验技术——对干细胞进行重编程然后进行3D培养形成人脑的类器官。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;一句话评价&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;人类前脑发育的染色质可及性动态图谱&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;文章信息&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;题目：Chromatin accessibility dynamics in a model of human forebrain development                                &lt;/p&gt;
-&lt;p&gt;杂志：Science&lt;/p&gt;
-&lt;p&gt;时间：24 January 2020&lt;/p&gt;
-&lt;p&gt;链接: &lt;a href=&quot;http://dx.doi&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://dx.doi&lt;/a&gt;. org/10.1126/ science.aay1645&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;figure&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2020/02/08/Sat Feb 08 2020 19:12:18 GMT+0100/fig1.png&quot; style=&quot;zoom:50%;&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="ATACseq" scheme="http://yoursite.com/tags/ATACseq/"/>
-    
-      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>构建基因调控网络的新算法</title>
-    <link href="http://yoursite.com/2020/01/04/Sat%20Jan%2004%202020%2016:25:08%20GMT+0100/"/>
-    <id>http://yoursite.com/2020/01/04/Sat Jan 04 2020 16:25:08 GMT+0100/</id>
-    <published>2020-01-04T15:25:08.000Z</published>
-    <updated>2020-01-04T08:34:51.028Z</updated>
-    
-    <content type="html"><![CDATA[<p>基因表达数据被广泛用于推测基因调控网络（Gene regulatory networks, GRNs）。单细胞RNAseq数据包含单个细胞的表达信息，非常有利于调控机制的研究。但是，目前从大量的表达数据中明确转录调控机制仍然面临挑战，而且，重构后的调控网络可能无法捕获主要的调控规则。</p><p>这篇文章提出了一个新的方法——TENET：从scRNAseq数据中通过<strong>传递熵（transfer entropy, TE)</strong> 计算基因间的因果关系，从而构建GRNs<strong>。</strong>他们的结果发现已知的靶基因具有显著高的TE值，且TE值越高的基因受各种干扰的影响越大。与其他方法相比，他们的结果表明TENET优于其他GRN预测算法。还有一个重要的性能是该方法可以鉴定关键的调控因子。将TENET应用于胚胎干细胞向神经细胞分化过程中的scRNAseq数据，他们发现Nme2是2i条件下特异性干细胞自我更新的关键因子。</p><p><img src="/2020/01/04/Sat Jan 04 2020 16:25:08 GMT+0100/fig-.png"></p><a id="more"></a><p><strong>一句话评价</strong></p><p>构建基因调控网络的新算法</p><p><strong>文章信息</strong></p><p>题目：Gene network reconstruction using single cell transcriptomic</p><p>data reveals key factors for embryonic stem cell differentiation</p><p>杂志：bioRxiv</p><p>时间：Dec. 21, 2019</p><p>链接: <a href="https://www.biorxiv.org/content/10.1101/2019.12.20.884163v1" target="_blank" rel="noopener">https://www.biorxiv.org/content/10.1101/2019.12.20.884163v1</a></p><blockquote><p>有点遗憾，如果半年前自己上点心的话，可能就能深入这个方向的研究了</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;基因表达数据被广泛用于推测基因调控网络（Gene regulatory networks, GRNs）。单细胞RNAseq数据包含单个细胞的表达信息，非常有利于调控机制的研究。但是，目前从大量的表达数据中明确转录调控机制仍然面临挑战，而且，重构后的调控网络可能无法捕获主要的调控规则。&lt;/p&gt;
-&lt;p&gt;这篇文章提出了一个新的方法——TENET：从scRNAseq数据中通过&lt;strong&gt;传递熵（transfer entropy, TE)&lt;/strong&gt; 计算基因间的因果关系，从而构建GRNs&lt;strong&gt;。&lt;/strong&gt;他们的结果发现已知的靶基因具有显著高的TE值，且TE值越高的基因受各种干扰的影响越大。与其他方法相比，他们的结果表明TENET优于其他GRN预测算法。还有一个重要的性能是该方法可以鉴定关键的调控因子。将TENET应用于胚胎干细胞向神经细胞分化过程中的scRNAseq数据，他们发现Nme2是2i条件下特异性干细胞自我更新的关键因子。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2020/01/04/Sat Jan 04 2020 16:25:08 GMT+0100/fig-.png&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="literature" scheme="http://yoursite.com/categories/literature/"/>
-    
-    
-      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
-    
-      <category term="scRNA-seq" scheme="http://yoursite.com/tags/scRNA-seq/"/>
-    
-      <category term="regulation network" scheme="http://yoursite.com/tags/regulation-network/"/>
     
   </entry>
   
