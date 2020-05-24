@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-05-18T08:48:28.735Z</updated>
+  <updated>2020-05-24T11:07:00.893Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>用于COVID-19研究的计算机策略大集锦</title>
+    <link href="http://yoursite.com/2020/05/24/Sun%20May%2024%202020%2013:01:14%20GMT+0200/"/>
+    <id>http://yoursite.com/2020/05/24/Sun May 24 2020 13:01:14 GMT+0200/</id>
+    <published>2020-05-24T11:01:14.000Z</published>
+    <updated>2020-05-24T11:07:00.893Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>文章信息</strong></p><p>题目：Computational strategies to combat COVID-19: Useful tools to accelerate SARS-CoV-2 and Coronavirus research                           </p><p>杂志：Preprints</p><p>时间：23 May 2020</p><p>链接: <a href="https://www.preprints.org/manuscript/202005.0376/v1" target="_blank" rel="noopener">https://www.preprints.org/manuscript/202005.0376/v1</a></p><p><strong>figure</strong></p><p><img src="/2020/05/24/Sun May 24 2020 13:01:14 GMT+0200/1590306372902-96cb47c3-6aa3-48ed-b191-1ebf93d885ec.png" alt="image.png"></p><p><strong>文章介绍</strong></p><p>这篇综述是由欧洲病毒生物信息中心（EVBC）整理的关于COVID-19研究的分析流程和工具。涉及1）SARS-CoV-2的检测，2）测序数据的分析，3）COVID-19流行病学的追踪，4）病毒的进化，5）潜在药物靶标，治疗策略等方面。</p><p>详细的工具列表链接，可以在EVBC网站查看：<a href="http://evbc.uni-jena.de/tools/coronavirus-tools/" target="_blank" rel="noopener">http://evbc.uni-jena.de/tools/coronavirus-tools/</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;文章信息&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;题目：Computational strategies to combat COVID-19: Useful tools to accelerate SARS-CoV-2 and Coronavirus resear
+      
+    
+    </summary>
+    
+    
+      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
+    
+      <category term="database" scheme="http://yoursite.com/tags/database/"/>
+    
+  </entry>
   
   <entry>
     <title>从EBI批量下载数据</title>
@@ -368,11 +394,11 @@
     </summary>
     
     
+      <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
+    
       <category term="Scikit-Learn" scheme="http://yoursite.com/tags/Scikit-Learn/"/>
     
       <category term="SVM" scheme="http://yoursite.com/tags/SVM/"/>
-    
-      <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
     
   </entry>
   
@@ -522,32 +548,6 @@
     
     
       <category term="shell" scheme="http://yoursite.com/tags/shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>肿瘤免疫治疗研究的平台——TIDE</title>
-    <link href="http://yoursite.com/2020/02/29/Sat%20Feb%2029%202020%2022:44:18%20GMT+0100/"/>
-    <id>http://yoursite.com/2020/02/29/Sat Feb 29 2020 22:44:18 GMT+0100/</id>
-    <published>2020-02-29T21:44:18.000Z</published>
-    <updated>2020-02-29T21:46:36.840Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>一句话评价</strong></p><p>利用公共数据模拟免疫疗法的效应和耐药性</p><p><strong>文章信息</strong></p><p>题目：Large-scale public data reuse to model immunotherapy response and resistance                           </p><p>杂志：Genome Medicine</p><p>时间：26 February,2020</p><p>链接: <a href="https://doi.org/10.1186/s13073-020-0721-z" target="_blank" rel="noopener">https://doi.org/10.1186/s13073-020-0721-z</a>                       </p><p><strong>figure</strong></p><p><img src="/2020/02/29/Sat Feb 29 2020 22:44:18 GMT+0100/resize,w_1500-20200229224559989.png" alt="image.png"></p><a id="more"></a><p><strong>文章介绍：</strong></p><p>这是刘小乐老师实验室开发的一个网络平台——TIDE(<a href="http://tide.dfci.harvard.edu/login/" target="_blank" rel="noopener">http://tide.dfci.harvard.edu/login/</a>) （很好奇为什么命名为TIDE，而且网站图标也是来自<a href="https://mall.jd.com/index-1000001829.html" target="_blank" rel="noopener">汰渍</a>），用于推断调节肿瘤免疫的基因的功能，并评估预测免疫检查点抑制剂(immune checkpoint blockade,ICB)临床反应的标记物。</p><p>他们共处理了12项公开发表的ICB临床研究中的998例肿瘤的组学数据，以及8个已发表的用于鉴定参与调节淋巴细胞介导的肿瘤杀伤和免疫治疗的基因CRISPR筛选研究。其中ICB队列的临床数据共有188个肿瘤队列中的33000个样本，这些样本主要来自TCGA,METABRIC和PRECOG数据库，以及实验室内部数据。该网络平台的功能包括3个交互分析模块：将与肿瘤免疫逃逸相关的标记物进行排序，生成假设；然后通过AUC score 和生存曲线对标记物评估；最后根据标记物对患者分类。</p><p>对肿瘤免疫感兴趣的同学可以仔细研究下文章是如何整合公共数据的，以及利用该平台为课题提供一些新思路。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;一句话评价&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;利用公共数据模拟免疫疗法的效应和耐药性&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;文章信息&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;题目：Large-scale public data reuse to model immunotherapy response and resistance                           &lt;/p&gt;
-&lt;p&gt;杂志：Genome Medicine&lt;/p&gt;
-&lt;p&gt;时间：26 February,2020&lt;/p&gt;
-&lt;p&gt;链接: &lt;a href=&quot;https://doi.org/10.1186/s13073-020-0721-z&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://doi.org/10.1186/s13073-020-0721-z&lt;/a&gt;                       &lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;figure&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2020/02/29/Sat Feb 29 2020 22:44:18 GMT+0100/resize,w_1500-20200229224559989.png&quot; alt=&quot;image.png&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
     
   </entry>
   
