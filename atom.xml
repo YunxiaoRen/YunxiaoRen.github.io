@@ -212,6 +212,31 @@
   </entry>
   
   <entry>
+    <title>正则表达式初体验</title>
+    <link href="http://yoursite.com/2020/06/28/Sun%20Jun%2028%202020%2020:11:52%20GMT+0200/"/>
+    <id>http://yoursite.com/2020/06/28/Sun Jun 28 2020 20:11:52 GMT+0200/</id>
+    <published>2020-06-28T18:11:52.000Z</published>
+    <updated>2020-06-28T18:36:05.165Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>正则表达式(Regular Expression)在字符串模式匹配，在字符串搜索和替换中展现强大的功能。</p><p>常用的正则表达式语法我将其总结为7类：</p><p>先看一个概括的整理</p><p><img src="/2020/06/28/Sun Jun 28 2020 20:11:52 GMT+0200/1590761619931-4e3ce7f4-d158-4883-bb04-ac35bc16f566.png" alt="image.png"></p><a id="more"></a><ul><li><p>字符类**</p></li><li><ul><li><code>\w</code> : 匹配数字和字符</li><li><code>.</code> : 匹配除换行符 \n 之外的任何单字符</li><li><code>[a-z]</code>  和 <code>[A-Z]</code> :匹配从a到z或者A到Z的任意字符</li><li><code>[0-9]</code> : 匹配0到9的任意数字</li></ul></li><li><p><strong>数值类</strong></p></li><li><ul><li><code>\d</code> ：匹配数字</li></ul></li><li><p>分隔符类</p></li><li><ul><li><code>\s</code> : 匹配white space(包括空格、tab等)</li></ul></li><li><p><strong>定位类：在字符类和数值类前面</strong></p></li><li><ul><li><code>^</code> : 字符开头</li><li><code>$</code> ：字符结尾</li><li><code>\b</code> : 单词结界符</li></ul></li><li><p><strong>定量类，包含数值型和特殊符类，放在字符类和数值类后面</strong></p></li><li><ul><li>数值型：{}， 大括号里加数字</li><li><code>*</code> : 0次或多次</li><li><code>+</code> : 1次或多次</li><li><code>?</code> :  0或1次</li></ul></li><li><p><strong>逻辑关系类</strong></p></li><li><ul><li><code>[]</code> ：表示逻辑关系或，比如[abc]表示a或者b或c</li><li><code>(|)</code> :  () 和 | 结合也表示逻辑关系或</li></ul></li><li><p><strong>分组类</strong></p></li><li><ul><li><code>**()**</code> : 用于分组</li></ul></li></ul><h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p>R语言可以结合gsub使用正则匹配语法</p><p>gsub语法： <code>gsub(&quot;old value 或 pattern&quot;,&quot;new value&quot;,data)</code> </p><p><img src="/2020/06/28/Sun Jun 28 2020 20:11:52 GMT+0200/1590763067379-cde65a24-d421-46ef-ab59-c6b5cac4b771.png" alt="image.png"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;正则表达式(Regular Expression)在字符串模式匹配，在字符串搜索和替换中展现强大的功能。&lt;/p&gt;
+&lt;p&gt;常用的正则表达式语法我将其总结为7类：&lt;/p&gt;
+&lt;p&gt;先看一个概括的整理&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2020/06/28/Sun Jun 28 2020 20:11:52 GMT+0200/1590761619931-4e3ce7f4-d158-4883-bb04-ac35bc16f566.png&quot; alt=&quot;image.png&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="shell" scheme="http://yoursite.com/tags/shell/"/>
+    
+      <category term="text processing" scheme="http://yoursite.com/tags/text-processing/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Gradient Boosting</title>
     <link href="http://yoursite.com/2020/06/28/Sun%20Jun%2028%202020%2020:10:46%20GMT+0200/"/>
     <id>http://yoursite.com/2020/06/28/Sun Jun 28 2020 20:10:46 GMT+0200/</id>
@@ -406,32 +431,6 @@
 &lt;p&gt;Logistic regression is a statistical model that in its basic form uses a logistic function to model a binary dependent variable。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;逻辑回归（logistic/logit regression）主要应用于解决&lt;strong&gt;二分类&lt;/strong&gt;问题，和线性回归都属于线性模型，但是逻辑回归是解决分类问题，而线性回归是解决回归问题。逻辑回归通过最大似然法（Maximum likelihood）寻找最佳模型。可以通过summary()函数的输出结果AIC值对比模型的拟合程度，或者通过sensitivity, specifity评估，既可以以ROC和AUC的结果评估。概率回归也用于二分类问题，和逻辑回归类似。不同的是逻辑回归使用累积逻辑函数（cumulative logistic function），概率回归使用正态累积密度函数（normal cumulative density function）。实际应用两个模型时时可根据自己的爱好选择。逻辑回归在R中的实现以 &lt;strong&gt;&lt;code&gt;glm()&lt;/code&gt;&lt;/strong&gt; 函数实现，并指定参数 &lt;code&gt;**family = binomial**&lt;/code&gt; , 而概率回归以glm()函数，并指定 &lt;strong&gt;&lt;code&gt;family =binomial(link=&amp;quot;probit&amp;quot;)&lt;/code&gt;&lt;/strong&gt; 。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="statistics" scheme="http://yoursite.com/tags/statistics/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>线性回归和线性模型</title>
-    <link href="http://yoursite.com/2020/05/17/Sun%20May%2017%202020%2008:40:38%20GMT+0200/"/>
-    <id>http://yoursite.com/2020/05/17/Sun May 17 2020 08:40:38 GMT+0200/</id>
-    <published>2020-05-17T06:40:38.000Z</published>
-    <updated>2020-05-17T08:39:05.730Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>什么是线性回归和线性模型？他们的关系是什么？如何计算和评估线性回归模型？如何在R中实现？</strong></p><h2 id="线性回归和线性模型"><a href="#线性回归和线性模型" class="headerlink" title="线性回归和线性模型"></a><strong>线性回归和线性模型</strong></h2><p>首先看下wiki给出的解释：</p><blockquote><p>In statistics, linear regression is a linear approach to modeling the relationship between a scalar response (or dependent variable) and one or more explanatory variables (or independent variables). The case of one explanatory variable is called simple linear regression. For more than one explanatory variable, the process is called multiple linear regression</p></blockquote><p>线性回归即用来寻找变量间的线性关系，属于线性模型的一个分支，通常使用最小二乘法（least squared method)寻找</p><p>最佳模型，并用R suqared( R2 ）评估模型的拟合程度，R2越大表示模型拟合效果越好。在R中以lm()函数实现，代码公式为 <code>lm(dependent varaible ~ independent varaibles, data</code> .</p><a id="more"></a><p><img src="/2020/05/17/Sun May 17 2020 08:40:38 GMT+0200/1589697274717-c22e4977-8d06-4552-8dda-1906453aa44a.png" alt="image.png" style="zoom:50%;"></p><p><img src="/2020/05/17/Sun May 17 2020 08:40:38 GMT+0200/1589697479975-0256eaec-3fd1-4829-9bca-4ab84782d79c.png" alt="image.png" style="zoom:50%;"></p><p><strong>p-value矫正：</strong> <strong>Bonferroni Correction和Benjamini and Hochberg method</strong></p><p>Bonferroni Correction是p-value的一个矫正方法，相对严格；FDR是另一种矫正p-value的方法，而Benjamini and Hochberg method（即BH)是FDR的一个计算方法。</p><blockquote><p>We know P-value threshold is set artificially, the samller p-value represents the lower false positive for the result, but not mean it is absolutly true. For example, if the P-value equals 0.05, 10,000 tests are done, the number of false positive results will be 0.05*10,000 = 500. The false positive results will be enlarged with the incresasing the number of tests . Therefor, we need to introduce multiple tests for correction to reduce the number of false positive results. </p><p>There are two main correction methods used:</p><p><strong>1) Bonferroni Correction</strong></p></blockquote><blockquote><p>The Bonferroni method is a simplest and most brutally effective method of correction, which rejects all the possibilities of false pofitive results, and eliminates them by correcting the threshold of the P value. </p></blockquote><blockquote><p>The formula for Bonferroni method is p<em>(1/n), where p is the original P value threshold, and n is the total number of tests. If the original P value is is 0.05, and the number of test is 10,000, then the threshold after Bonferroni correction is equal to 0.05/10,000 = 0.000005, in this case, the number of false positive results in 10,000 test is 10,000 </em> 0.000005 = 0.5, less than 1. </p></blockquote><blockquote><p>But Bonferroni correction is too stringent, it will cause not only false positives are rejected by corrected threshold, but mant positives are also rejected. </p></blockquote><blockquote><p><strong>2) FDR( False Discovery Rate)</strong></p><p>FDR corrects for p-values in a relatively gentle wat compared to Bonferroni. It attempts to get a balance between false positives and false negatives, keeping the false/true positive ratio within a certain range. For example, if we set a threshold of 0.05 for 10,000 tests,the probabilty of false positives remains within 0.05, which is called FDR&lt;0.05.</p></blockquote><blockquote><p>So how to calculate FDR from p value, there are several estimation models. The most used is <strong>Benjamini and Hochberg method,</strong> also known as <strong>BH method</strong>. </p></blockquote><blockquote><p>BH method requires the results of total <strong>m</strong> tests to be ranked in descending order, <strong>k is the rank of p value in one of the results.</strong> </p></blockquote><blockquote><p>find the maximum k value that meets the original threshold α, satisfy P(k) &lt;= α<em>k/m, consider the ranking to be significanand different for all tests from 1 to k, and calculate the corresponding q value as q=p</em>(m/k). </p></blockquote><p><strong>参考资料：</strong></p><p>statquest线性回归视频 : <a href="https://www.youtube.com/playlist?list=PLblh5JKOoLUIzaEkCLIUxQFjPIlapw8nU" target="_blank" rel="noopener">https://www.youtube.com/playlist?list=PLblh5JKOoLUIzaEkCLIUxQFjPIlapw8nU</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;什么是线性回归和线性模型？他们的关系是什么？如何计算和评估线性回归模型？如何在R中实现？&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&quot;线性回归和线性模型&quot;&gt;&lt;a href=&quot;#线性回归和线性模型&quot; class=&quot;headerlink&quot; title=&quot;线性回归和线性模型&quot;&gt;&lt;/a&gt;&lt;strong&gt;线性回归和线性模型&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;首先看下wiki给出的解释：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;In statistics, linear regression is a linear approach to modeling the relationship between a scalar response (or dependent variable) and one or more explanatory variables (or independent variables). The case of one explanatory variable is called simple linear regression. For more than one explanatory variable, the process is called multiple linear regression&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;线性回归即用来寻找变量间的线性关系，属于线性模型的一个分支，通常使用最小二乘法（least squared method)寻找&lt;/p&gt;
-&lt;p&gt;最佳模型，并用R suqared( R2 ）评估模型的拟合程度，R2越大表示模型拟合效果越好。在R中以lm()函数实现，代码公式为 &lt;code&gt;lm(dependent varaible ~ independent varaibles, data&lt;/code&gt; .&lt;/p&gt;
     
     </summary>
     
