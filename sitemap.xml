@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2020/06/apply-family-function.html</loc>
+    
+    <lastmod>2020-09-11T17:44:22.437Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/08/ATAC-pipe.html</loc>
+    
+    <lastmod>2020-09-11T17:40:47.855Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2019/11/RNA_velocity.html</loc>
     
     <lastmod>2020-09-11T17:37:44.801Z</lastmod>
@@ -75,13 +89,6 @@
     <loc>http://yoursite.com/2019/08/awk_base.html</loc>
     
     <lastmod>2020-09-11T17:28:37.841Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2020/06/apply-family-function.html</loc>
-    
-    <lastmod>2020-09-11T17:27:44.369Z</lastmod>
     
   </url>
   
