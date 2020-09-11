@@ -31,8 +31,8 @@
     <url>%2F2020%2F06%2F28%2FSun%20Jun%2028%202020%2020%3A14%3A01%20GMT%2B0200%2F</url>
     <content type="text"><![CDATA[Pandas库是基于Numpy库来创建的，Numpy主要用于矩阵操作，而Pandas主要用于数据处理。 Pandas主要有两种重要的数据结构：Series和DataFrame. Series: 类似一个一维数组，一个Series对应DataFrame的一列 DataFrame:类似一个二维数组，一个DataFrame由几个Series列构成。 参考资料 https://zhuanlan.zhihu.com/p/40373125 https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html]]></content>
       <tags>
-        <tag>machine learning</tag>
         <tag>python</tag>
+        <tag>machine learning</tag>
       </tags>
   </entry>
   <entry>
@@ -40,8 +40,8 @@
     <url>%2F2020%2F06%2F28%2FSun%20Jun%2028%202020%2020%3A13%3A50%20GMT%2B0200%2F</url>
     <content type="text"><![CDATA[Pandas库是基于Numpy库来创建的，Numpy主要用于矩阵操作，而Pandas主要用于数据处理。 Pandas主要有两种重要的数据结构：Series和DataFrame. Series: 类似一个一维数组，一个Series对应DataFrame的一列 DataFrame:类似一个二维数组，一个DataFrame由几个Series列构成。 参考资料 https://zhuanlan.zhihu.com/p/40373125 https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html]]></content>
       <tags>
-        <tag>machine learning</tag>
         <tag>python</tag>
+        <tag>machine learning</tag>
       </tags>
   </entry>
   <entry>
