@@ -1829,7 +1829,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #04c1ff;
+  background: #0ffffe;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3134,14 +3134,14 @@ body {
   background-position: 50% 50%;
 }
 .content-wrap {
-  opacity: 0.8;
+  opacity: 0.9;
 }
 .sidebar {
-  opacity: 0.8;
+  opacity: 0.9;
 }
 .header-inner {
   background: rgba(255,255,255,0.8);
 }
 .popup {
-  opacity: 0.8;
+  opacity: 0.9;
 }
