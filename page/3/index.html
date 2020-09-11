@@ -460,166 +460,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/index.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="六六">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="生信拾光">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/06/index.html" itemprop="url">集成学习-Ensemble learning</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-28T20:08:39+02:00">
-                2020-06-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2020/06/index.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/06/index.html" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  0
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/logistic_regression_python.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -786,7 +626,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/index.html">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/Sparse_Matrices_ML.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="六六">
@@ -805,7 +645,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/06/index.html" itemprop="url">稀疏矩阵与机器学习</a></h1>
+                <a class="post-title-link" href="/2020/06/Sparse_Matrices_ML.html" itemprop="url">稀疏矩阵与机器学习</a></h1>
         
 
         <div class="post-meta">
@@ -836,8 +676,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2020/06/index.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/06/index.html" itemprop="commentCount"></span>
+                <a href="/2020/06/Sparse_Matrices_ML.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/06/Sparse_Matrices_ML.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -901,10 +741,10 @@
 <p><strong>Introduction to Sparse Matrices for Machine Learning</strong></p>
 </blockquote>
 <h3 id="什么是稀疏矩阵？"><a href="#什么是稀疏矩阵？" class="headerlink" title="什么是稀疏矩阵？"></a>什么是稀疏矩阵？</h3><p>大部分包含零值的矩阵称为稀疏矩阵(sparse Matrices)，相对应的是大多数值非零的密集矩阵(Dense Matrices)。稀疏矩阵在机器学习领域非常常见，如计数类数据，或者one-hot encoding编码的数据等。数据的稀疏性可以通过零值的比例量化（sparsity = count zero elements / total elements）。稀疏矩阵会产生处理时间和存储空间的问题。而<strong>SciPy</strong>提供了很多高效的方法可以直接用于存储和处理稀疏矩阵。</p>
-<p><img src="/2020/06/index/figure-ab.jpg" alt></p>
+<p><img src="/2020/06/Sparse_Matrices_ML.htm/figure-ab.jpg" alt></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2020/06/index.html#more" rel="contents">
+            <a class="btn" href="/2020/06/Sparse_Matrices_ML.html#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -955,7 +795,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/index.html">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/model_validation_ML.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="六六">
@@ -974,7 +814,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/06/index.html" itemprop="url">机器学习中的模型验证</a></h1>
+                <a class="post-title-link" href="/2020/06/model_validation_ML.html" itemprop="url">机器学习中的模型验证</a></h1>
         
 
         <div class="post-meta">
@@ -1005,8 +845,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2020/06/index.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/06/index.html" itemprop="commentCount"></span>
+                <a href="/2020/06/model_validation_ML.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/06/model_validation_ML.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1068,10 +908,10 @@
         
           <h2 id="model-validation"><a href="#model-validation" class="headerlink" title="model validation"></a>model validation</h2><p>Model validation is important step in machine learning. Cross validation and bootstrapping methods can be used for model validation. Both of them are resampling methods.Cross validation resamples without replacement,bootstrap resamples with replacement.</p>
 <p><strong>reference</strong> - <a href="https://arxiv.org/pdf/1811.12808.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1811.12808.pdf</a></p>
-<p><img src="/2020/06/index/love-699480_640.jpg" alt></p>
+<p><img src="/2020/06/model_validation_ML.htm/love-699480_640.jpg" alt></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2020/06/index.html#more" rel="contents">
+            <a class="btn" href="/2020/06/model_validation_ML.html#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1109,11 +949,181 @@
 
 
     
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/COVID-19_tools.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="六六">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="生信拾光">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/05/COVID-19_tools.html" itemprop="url">用于COVID-19研究的计算机策略大集锦</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-24T13:01:14+02:00">
+                2020-05-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/05/COVID-19_tools.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/05/COVID-19_tools.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  151
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>文章信息</strong></p>
+<p>题目：Computational strategies to combat COVID-19: Useful tools to accelerate SARS-CoV-2 and Coronavirus research                           </p>
+<p>杂志：Preprints</p>
+<p>时间：23 May 2020</p>
+<p>链接: <a href="https://www.preprints.org/manuscript/202005.0376/v1" target="_blank" rel="noopener">https://www.preprints.org/manuscript/202005.0376/v1</a></p>
+<p><strong>figure</strong></p>
+<p><img src="/2020/05/COVID-19_tools.htm/1590306372902-96cb47c3-6aa3-48ed-b191-1ebf93d885ec.png" alt="image.png"></p>
+<p><strong>文章介绍</strong></p>
+<p>这篇综述是由欧洲病毒生物信息中心（EVBC）整理的关于COVID-19研究的分析流程和工具。涉及1）SARS-CoV-2的检测，2）测序数据的分析，3）COVID-19流行病学的追踪，4）病毒的进化，5）潜在药物靶标，治疗策略等方面。</p>
+<p>详细的工具列表链接，可以在EVBC网站查看：<a href="http://evbc.uni-jena.de/tools/coronavirus-tools/" target="_blank" rel="noopener">http://evbc.uni-jena.de/tools/coronavirus-tools/</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/">21</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1159,7 +1169,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">106</span>
+                  <span class="site-state-item-count">105</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1170,7 +1180,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
