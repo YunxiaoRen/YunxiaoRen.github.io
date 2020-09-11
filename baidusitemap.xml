@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://yoursite.com/2020/06/apply-family-function.html</loc>
+    <lastmod>2020-09-11</lastmod>
+  </url>  <url>
     <loc>http://yoursite.com/2020/06/Pandas_libarary.html</loc>
     <lastmod>2020-09-11</lastmod>
   </url>  <url>
@@ -281,9 +284,6 @@
     <lastmod>2020-09-11</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2020/06/R_read_blank_content.html</loc>
-    <lastmod>2020-09-11</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/2020/06/apply-family-function.html</loc>
     <lastmod>2020-09-11</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2019/08/ATAC-pipe.html</loc>
