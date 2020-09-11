@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[test]]></title>
-    <url>%2F2020%2F09%2Ftest.html</url>
-    <content type="text"><![CDATA[test url]]></content>
-      <categories>
-        <category>2</category>
-      </categories>
-      <tags>
-        <tag>1</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[两个文件的异同]]></title>
     <url>%2F2020%2F06%2Findex.html</url>
     <content type="text"><![CDATA[comm, diff 和 grep基于comm, diff和grep的用法总结 123comm A Bdiff A Bgrep -f A B commcomm是对两个已经有序的文件进行比较，可以比较输出：仅在A中出现的、仅在B中出现的、在两个文件中都存在的 123456comm -1 A B 不显示在A文件中独有内容(显示B文件独有内容+两个文件共有)comm -2 A B 不显示在B文件中独有内容comm -3 A B 不显示同时在两个文件中都存在的内容comm -12 A B 显示A与B公共的部分comm -23 A B 显示A独有的comm -13 A B 显示B独有的 diffdiff是比较两个文件之间的不同，给出使两个一致的建议，diff有前后顺序，前面的为旧文件，后面的为新文件 1234567891011diff A B 直接显示两个文件不同，并给出修改一致的建议(主要是对旧文件的建议)diff -c A B 通过显示两个文件上下文，给出两个文件增减或删除信息，同时diff A B3,4c3,6&lt; c&lt; d---&gt; e&gt; f&gt; g&gt; h grep12345678910grep -v -f a b 从b中剔除a中有的,即b中特有的grep -v -f b a 从a中剔除b中有的,即a中特有的grep -v -f A Befghgrep -v -f B Acd 参考资料https://www.jianshu.com/p/5ab86345b6bf https://blog.csdn.net/hit_hlj_sgy/article/details/20625527]]></content>
@@ -22,7 +11,7 @@
   </entry>
   <entry>
     <title><![CDATA[Linux shell 字符穿操作]]></title>
-    <url>%2F2020%2F06%2Findex.html</url>
+    <url>%2F2020%2F06%2Fcharacter_shell.html</url>
     <content type="text"><![CDATA[截取示例1word=abcd-//master-01://httpab 从左向右:截取第一个//后的字符串 12echo $&#123;word#*//&#125;# master-01://httpab 截取最后一个//后的字符串 12echo $&#123;word##*//&#125; httpab 从右向左: %截取第一个//后的字符串 12echo $&#123;word%//*&#125; abcd-//master-01: 截取第二个//后的字符串 12echo $&#123;word%%//*&#125; abcd- 截取特定序列位置的字符前3个字符 1echo $&#123;word:0:3&#125; 第2到5的字符 12echo $&#123;word:1:4&#125;bcd- 从第二个字符到末尾 12echo $&#123;word:1&#125;bcd-//master-01://httpab 替换:/before/after将第一个ab替换为AB123echo $&#123;word/#ab/AB&#125; 或 echo $&#123;word/ab/AB&#125; ABcd-//master-01://httpab 从左到右，匹配第一个，替换//为cd12echo $&#123;word/\/\//cd&#125;abcd-cdmaster-01://httpab 将所有匹配的//替换为cd12echo $&#123;word//\/\//cd&#125;abcd-cdmaster-01:cdhttpab 后缀匹配12345678word=abcd-//master-01://httpabecho $&#123;word/%http*/xy&#125; # 输出:abcd-//master-01://xyecho $&#123;word/%ab/xy&#125;# 输出:abcd-//master-01://httpxyecho $&#123;word/%ab*/xy&#125;# 出现*，会从起始匹配# 输出:xy 删除12345678# 删除前3个字符echo $&#123;word#*$&#123;word:0:3&#125;&#125; # 删除后3个字符echo $&#123;word%*$&#123;word:(-3)&#125;&#125;# 删除第一个abecho $&#123;word/ab/&#125; 删除所有abecho $&#123;word//ab/&#125; 参考资料https://blog.csdn.net/qq_23091073/article/details/83066518]]></content>
       <tags>
         <tag>shell</tag>
@@ -39,7 +28,7 @@
   </entry>
   <entry>
     <title><![CDATA[Pandas库]]></title>
-    <url>%2F2020%2F06%2Findex.html</url>
+    <url>%2F2020%2F06%2FPandas_libarary.html</url>
     <content type="text"><![CDATA[Pandas库是基于Numpy库来创建的，Numpy主要用于矩阵操作，而Pandas主要用于数据处理。 Pandas主要有两种重要的数据结构：Series和DataFrame. Series: 类似一个一维数组，一个Series对应DataFrame的一列 DataFrame:类似一个二维数组，一个DataFrame由几个Series列构成。 参考资料 https://zhuanlan.zhihu.com/p/40373125 https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html]]></content>
       <tags>
         <tag>python</tag>
@@ -48,7 +37,7 @@
   </entry>
   <entry>
     <title><![CDATA[NumPy介绍]]></title>
-    <url>%2F2020%2F06%2Findex.html</url>
+    <url>%2F2020%2F06%2FNumpy_introduction.html</url>
     <content type="text"><![CDATA[Pandas库是基于Numpy库来创建的，Numpy主要用于矩阵操作，而Pandas主要用于数据处理。 Pandas主要有两种重要的数据结构：Series和DataFrame. Series: 类似一个一维数组，一个Series对应DataFrame的一列 DataFrame:类似一个二维数组，一个DataFrame由几个Series列构成。 参考资料 https://zhuanlan.zhihu.com/p/40373125 https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html]]></content>
       <tags>
         <tag>python</tag>
@@ -65,7 +54,7 @@
   </entry>
   <entry>
     <title><![CDATA[apply家族函数的用法]]></title>
-    <url>%2F2020%2F06%2F2020-06-28-apply%20family%20function.html</url>
+    <url>%2F2020%2F06%2Fapply-family-function.html</url>
     <content type="text"><![CDATA[apply家族函数apply函数族是R语言中数据处理的一组核心函数，通过使用apply函数，我们可以实现对数据的循环、分组、过滤、类型控制等操作。 apply 函数的用法常用的apply族函数有apply和sapply。apply函数是最常用的代替for循环的函数。apply函数可以对矩阵、数据框、数组(二维、多维)，按行或列进行循环计算，对子元素进行迭代，并把子元素以参数传递的形式给自定义的FUN函数中，并以返回计算结果。 1apply(X, MARGIN, FUN, ...) 参数列表： X:数组、矩阵、数据框 MARGIN: 按行计算或按按列计算，1表示按行，2表示按列 FUN: 自定义的调用函数 …: 更多参数，可选 如： 123&gt; x&lt;-matrix(1:12,ncol=3)&gt; apply(x,1,sum)[1] 15 18 21 24 lapply 函数的用法lapply函数是一个最基础循环操作函数之一，用来对list、data.frame数据集进行循环，并返回和X长度同样的list结构作为结果集，通过lapply的开头的第一个字母’l’就可以判断返回结果集的类型。 函数定义： 1lapply(X, FUN, ...) 参数列表： X:list、data.frame数据 FUN: 自定义的调用函数 …: 更多参数，可选 sapply函数的用法sapply函数是一个简化版的lapply，sapply增加了2个参数simplify和USE.NAMES，主要就是让输出看起来更友好，返回值为向量，而不是list对象。 函数定义： 1sapply(X, FUN, ..., simplify=TRUE, USE.NAMES = TRUE) 参数列表： X:数组、矩阵、数据框 FUN: 自定义的调用函数 …: 更多参数，可选 simplify: 是否数组化，当值array时，输出结果按数组进行分组 USE.NAMES: 如果X为字符串，TRUE设置字符串为数据名，FALSE不设置 参考资料 掌握R语言中的apply函数族 http://blog.fens.me/r-apply/]]></content>
       <tags>
         <tag>R</tag>
@@ -87,11 +76,6 @@
         <tag>shell</tag>
         <tag>text processing</tag>
       </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Gradient Boosting]]></title>
-    <url>%2F2020%2F06%2Findex.html</url>
-    <content type="text"></content>
   </entry>
   <entry>
     <title><![CDATA[机器学习中如何处理分类变量的不均衡]]></title>
@@ -192,7 +176,7 @@
   </entry>
   <entry>
     <title><![CDATA[lncRNA的保守和不保守]]></title>
-    <url>%2F2020%2F05%2Findex.html</url>
+    <url>%2F2020%2F05%2FlncRNAs_conserved_Functions.html</url>
     <content type="text"><![CDATA[文章信息 题目：Distinct Processing of lncRNAs Contributes to Non-conserved Functions in Stem Cells 杂志：Cell 时间：6 April 2020 链接: https://doi.org/10.1016/j.cell.2020.03.006 该文章的评论文章： 题目：The Secret Life of lncRNAs: Conserved, yet Not Conserved 链接：https://doi.org/10.1016/j.cell.2020.04.012 文章介绍 长非编码RNA（lncRNAs）的进化速度比mRNAs更快。保守的lncRNAs是否经过保守的加工、定位和功能仍未被探索。中科院陈玲玲教授团队报告了人类（h) 和小鼠 (m) 胚胎干细胞（ESCs）中不同的lncRNAs的亚细胞定位。与mESCs相比，在hESCs的细胞质中定位的lncRNAs的比例明显高于mESCs。事实证明，这对hESC的多能性很重要。FAST是一种位置保守的lncRNA，但在加工和定位方面并不保守。在hESCs中，细胞质定位的h FAST与E3泛素连接酶β-TrCP的WD40域结合，并阻止其与磷酸化的β-catenin相互作用，以防止降解，导致激活WNT信号转导，这是多能性所需的。与此相反，m Fast在mESCs中被核保留，其处理被拼接因子PPIE抑制，而PPIE在mESCs中高表达，但在hESCs中没有。这些发现揭示了lncRNA的加工和定位是之前未被重视的作用于快速进化的贡献者。 Harshita Sharma 对这篇文章的评论：Guo及其同事发现了lncRNA演化的新的复杂性，在人类ESCs中，位置保守的lncRNAs被广泛地拼接并输出到细胞质中，而小鼠的lncRNAs主要是未拼接和核保留。不同的处理导致了物种特异性的lncRNA在多能性维持中的功能。]]></content>
       <tags>
         <tag>文献摘要</tag>
@@ -269,7 +253,7 @@
   </entry>
   <entry>
     <title><![CDATA[python基础知识]]></title>
-    <url>%2F2020%2F04%2Findex.html</url>
+    <url>%2F2020%2F04%2Fpython_basic.html</url>
     <content type="text"><![CDATA[Python基础语法 书写规则： #： 表注释；import: 倒入模块；有缩进之分，通常为4字符 基础数据类型： 整数int: 如1, 3, 5 浮点数float: 如 1.2；3.5 字符串（str): “8” “python” 布尔值（bool): True False 检测数据类型：type(),如type(“8”) 是string 转换数据类型：int(); float(); str(); bool() 变量的定义和常用操作： 变量名称通常以字母和下划线开头，中间包括字母、数字和下划线 序列序列的概念 有序的排列；可以通过下标偏移量访问 包括字符串，列表和元组 字符串可以是单引号或双引号；列表是[]创建；元组是() 创建 序列的基本操作 字符串的定义和常用操作 切片操作符[] 成员关系： in ; not in 连接和重复操作 元组的定义和常用操作 包含序列的基本操作 元组内容不可变更 列表的定义和常用操作 包含序列的基本操作 列表内容可变更，可以增加或移除元素 append末尾添加元素；remove移除元素]]></content>
       <tags>
         <tag>python</tag>
@@ -350,8 +334,8 @@
     <url>%2F2020%2F02%2Findex.html</url>
     <content type="text"><![CDATA[一句话评价 人类前脑发育的染色质可及性动态图谱 文章信息 题目：Chromatin accessibility dynamics in a model of human forebrain development 杂志：Science 时间：24 January 2020 链接: http://dx.doi. org/10.1126/ science.aay1645 figure 文章介绍： 人类前脑发育在很大程度上是细胞水平研究、直接功能研究或操纵所无法达到的。缺乏初级脑组织样本，特别是在后期，以及传统的体外细胞模型的局限性，阻碍了对健康和疾病状态下皮质激素生成的详细机制性理解。而文中利用干细胞3D定向分化技术形成背侧和腹侧的前脑干细胞作为原始研究组织，更加接近体内真实的发育情况，然后利用ATAC-seq和RNA测序技术绘制了体外20多个月的神经元和胶质细胞系的发育图谱。并对增强子和基因的相互作用，以及每个发育时期特异的转录调控因子进行了探究。然后他们利用这个资源绘制了与精神分裂症和自闭症谱系失调相关的基因和遗传变异图，以区分染色质可及性模式，从而揭示细胞类型和易感期。最后，他们鉴定到在皮质神经发生过程中染色质重构的现象，在此期间四分之一的调节区域是活跃的，并推测这些转录因子可能驱动这些发育变化。 关于脑神经发育过程中染色质可及性图谱的文章已有人发表过，这篇文章仍然能发到Science上，借助了一项重要的实验技术——对干细胞进行重编程然后进行3D培养形成人脑的类器官。]]></content>
       <tags>
-        <tag>ATACseq</tag>
         <tag>文献摘要</tag>
+        <tag>ATACseq</tag>
       </tags>
   </entry>
   <entry>
@@ -416,9 +400,9 @@
     <url>%2F2019%2F12%2Findex.html</url>
     <content type="text"><![CDATA[文章介绍： Bioconductor是一个针对生物数据分析的以R语言开发的开源软件库，从2001年项目开始至今，提供了很多优秀的分析流程，如bulk-RNA-seq的分析流程，文档非常详细。如今出手整理了单细胞分析的流程，包括软件安装、数据导入、单细胞数据储存、格式转换为下游分析的数据、下游分析、可视化等，非常详细，另外他们提供了在线book：https://osca.bioconductor .，想上手学习单细胞分析的以本书作为一个入门是一个不错的选择。 figure 文章信息 题目：Orchestrating single-cell analysis with Bioconductor 杂志：Nature Methods 时间：02, December, 2019 链接: https://www.nature.com/articles/s41592-019-0654-x 每日文献摘要：第32篇 2019年12月29日 周日]]></content>
       <tags>
-        <tag>software</tag>
         <tag>single cell</tag>
         <tag>R</tag>
+        <tag>software</tag>
       </tags>
   </entry>
   <entry>
@@ -434,8 +418,8 @@
     <url>%2F2019%2F12%2Findex.html</url>
     <content type="text"><![CDATA[一句话评价 新的高维数据结构和模式的可视化方法——PHATE 文章信息 题目：Visualizing structure and transitions in high-dimensional biological data 杂志：Nature biotechnology 时间：3 December,2019 链接: https://www.nature.com/articles/s41587-019-0336-3 figure 文章介绍： 这篇文章提出常见的降维方法如PCA, t-SNE等方法存在对噪音敏感（PCA, Isomap)、扰乱数据结构(t-SNE)、没有为二维可视化优化（PCA &amp; diffusion maps)，计算资源消耗大、依赖于先验知识等不足，他们提出了一种利用数据点之间的信息几何距离(information-geometric distance)同时捕捉局部和全局的非线性结构的可视化方法——PHATE(potential of heat diffusion for affinity-based transition embedding)。与其他常见的降维方法相比，该方法能够更好的保持数据中的一系列结构模式，包括连续的发展进程、分支结构、簇的结构（clusters）。此外，他们定义了一个叫DEMaP的度量，可以更好的去噪。他们在实际数据中验证了该方法的有效性，并且可用于质谱数据、单细胞数据、Hi-C数据、肠道微生物等多种数据类型。 每日文献摘要：第26篇 2019年12月29日 周日]]></content>
       <tags>
-        <tag>software</tag>
         <tag>文献摘要</tag>
+        <tag>software</tag>
         <tag>降维</tag>
       </tags>
   </entry>
@@ -475,9 +459,9 @@
     <url>%2F2019%2F12%2Findex.html</url>
     <content type="text"><![CDATA[单细胞发展至今，多组学整合是其发展的一个方向，关于scRNAseq与scATACseq整合的方法也有很多文章报道，这篇文章是由表观学大牛任兵实验室开发的，主要优点体现在通量上，可用于并行分析数百万个单细胞转录组和可访问染色质。 一句话评价 单细胞ATAC-seq和RNA-seq联合分析方法 文章信息 题目：An ultra high-throughput method for single-cell joint analysis of open chromatin and transcriptome 杂志：NAtuRe StRuCtuRAL &amp; MoLeCuLAR BIoLogY 时间：2019，NOVEMBER 链接: www.nature.com/nsmb]]></content>
       <tags>
-        <tag>ATACseq</tag>
         <tag>single cell</tag>
         <tag>文献摘要</tag>
+        <tag>ATACseq</tag>
       </tags>
   </entry>
   <entry>
@@ -485,8 +469,8 @@
     <url>%2F2019%2F12%2Findex.html</url>
     <content type="text"><![CDATA[这篇文章主要想研究非编码RNA与染色质可及性对玉米赤霉烯酮对猪小肠上皮细胞的影响，思路较简单，分析也过于简单，文章也没有得到特定的结论。思路如下图b所示，分析ATAC-seq得到peaks,然后注释peaks的基因，分析RNA-seq得到miRNA,lncRNA，然后预测这些非编码RNA的靶基因，并将非编码RNA的靶基因与peak注释到的基因整合，进行功能注释。 题目：transcriptome and chromatin accessibility in porcine intestinal epithelial cells upon Zearalenone exposure 杂志：Scientific DATA 时间：Dec 3, 2019 链接: https://doi.org/10.1038/s41597-019-0313-1]]></content>
       <tags>
-        <tag>ATACseq</tag>
         <tag>文献摘要</tag>
+        <tag>ATACseq</tag>
         <tag>lncRNA</tag>
       </tags>
   </entry>
@@ -506,7 +490,7 @@
   </entry>
   <entry>
     <title><![CDATA[lncRNA-chromatin相互作用的全面分析揭示了lncRNA通过结合不同的调控元件发挥功能]]></title>
-    <url>%2F2019%2F11%2Findex.html</url>
+    <url>%2F2019%2F11%2FLnChrom%E2%80%94%E2%80%94lncRNA-chromatin-interaction.html</url>
     <content type="text"><![CDATA[之前分享过哈尔滨医科大学李霞老师实验室开发的lncRNA-chromatin相互作用数据库——LnChrom (http://biocc.hrbmu.edu.cn/LnChrom/index.jsp) 。这次详细解读数据库背后所做的分析，同时总结文章的思路、结论和成果以及对其他研究的启发。 文章信息题目：Comprehensive analysis of lncRNA-chromatin interactions reveals lncRNA functions dependent on binding diverse regulatory elements 杂志：Journal of Biological Chemistry 时间：Sept.4, 2019 链接：http://www.jbc.org/content/294/43/15613 主要内容lncRNA在人类正常生命活动和疾病中扮演者重要的角色，其可以与染色质相互作用，然后招募蛋白质复合物改变染色质状态，进而调控基因表达。然而，lncRNA与染色质相互作用是如何影响并调节生物功能还并不清晰。基于此作者从人类和小鼠数据集中收集了188,647个lncRNA-chromatin相互作用对。他们的结果发现lncRNA在其结合位点展现了不同的表观修饰方式，尤其是在有增强子活动标记的区域。进而对lncRNA的靶基因的功能分析发现lncRNA即可以通过结合启动子调控元件发挥功能，也可以通过结合增强子发挥功能，尤其是在远端调控区域的调控元件。 文章思路数据资源 物种 数据类型 数据量 人 ChIRP-,CHOP-CHART-seq 27 lncRNA-chromatin interaction for 12 lncRNAs ChIP-seq (H3K4me1, H3K4me3, H3K27ac, H3K27me3 and H3K36me3) 52 DNase-Seq 8 鼠 ChIRP-,CHOP-CHART-seq 25 lncRNA-chromatin interaction for 10 lncRNAs ChIP-seq (H3K4me1, H3K4me3, H3K27ac, H3K27me3 and H3K36me3) 42 数据来源： 文献收集（ChIRP-,CHOP-，RAP-, CHART-seq） Chu, C., et al., Genomic maps of long noncoding RNA occupancy reveal principles of RNA-chromatin interactions. Mol Cell, 2011. 44(4): p. 667-78. Simon, M.D., et al., The genomic binding sites of a noncoding RNA. Proc Natl Acad Sci U S A, 2011. 108(51): p. 20497-502. Engreitz, J.M., et al., The Xist lncRNA exploits three-dimensional genome architecture to spread across the X chromosome. Science, 2013.341(6147): p. 1237973. Mondal, T., et al., MEG3 long noncoding RNA regulates the TGF-beta pathway genes through formation of RNA-DNA triplex structures. Nat Commun, 2015. 6: p. 7743. 数据库 补充知识 ChIRP-seq 与CHART-seq技术类似，都是研究nc-RNA结合的基因组位点，以及作用的蛋白质。 参考：https://www.illumina.com/science/sequencing-method-explorer/kits-and-arrays/chirp-seq.html ChIRP, also commonly referred to as ChIRP-seq, is a protocol to detect the locations on the genome where ncRNAs, such as lncRNAs, and their proteins are bound. In this method, samples are first crosslinked and sonicated. Biotinylated tiling oligos are hybridized to the RNAs of interest, and the complexes are captured with streptavidin magnetic beads. After treatment with RNase H, the DNA is extracted and sequenced. Deep sequencing can determine the lncRNA/protein interaction site at single-base resolution. Pros: Identifies binding sites anywhere on the genome Enables discovery of new binding sites Allows selection of specific RNAs of interest Cons: Nonspecific oligonucleotide interactions can lead to misinterpretation of binding sites Chromatin can be disrupted during the preparation stage The sequence of the RNA of interest must be known CHART-seq CHART-seq用于鉴定nc-RNA结合的基因组位点，同时可以鉴定与其作用的蛋白质。 参考Illumina官网：https://www.illumina.com/science/sequencing-method-explorer/kits-and-arrays/chart.html CHART maps genomic binding sites of ncRNAs by isolating and sequencing the DNA regions where the crosslinked RNA-DNA-protein complexes are bound. CHART differs from other crosslinked-complex purification techniques, such as ChIRP, due to the use of biotinylated 24 nt oligonucleotides (C-oligos) that are highly sensitive and unique to the ncRNA of interest. An RNase H mapping assay is used to design the 24 nt sequence of the C-oligos. First, nuclei samples are crosslinked and fragmented. Next, C-oligos are hybridized to the complex and bound to streptavidin beads. The mixture is washed and the complex eluted. The DNA is isolated and sequenced, and the proteins involved in the complex are isolated and analyzed by Western blots. Pros: Maps genomic binding sites of lncRNAs Simultaneously identify proteins associated with the lncRNA complex Cons: Needs large amount of nuclei (1x109 cells) RAP-seq RAP isolates lncRNAs and maps the sequence of their target DNA through a probe-capture mechanism. First, the cells are crosslinked and lysed before DNase I chromatin digestion to 100–300 bp DNA fragments. Biotinylated RNA probes, antisense to the lncRNA, are hybridized and captured with streptavidin. The biotin-RNA probes are 120 nt and are tiled every 15 nt over the span of the lncRNA. The captured complexes are eluted and prepared for sequencing. RNA library preparation is done through RAP-RNA, and DNA library preparation by standard chromatin immuniprecipitation (ChIP). Pros: Genomic mapping of lncRNA targets Possible to sequence RNA and DNA from the purification products Long RNA probe length provides high binding affinity to the target lncRNA1 Minimal amplification steps during RNA sequencing after purification of the lncRNA complex Cons: Requires RNA sequence to be known ChOP-seq Detection of RNA–DNA binding sites in long noncoding RNAs https://doi.org/10.1093/nar/gkz037 鉴定lncRNA结合位点 方法 方法参考文献：West, J.A., et al., The long noncoding RNAs NEAT1 and MALAT1 bind active chromatin sites. Mol Cell, 2014. 55(5): p. 791-802. 文章中认为lncRNA的结合位点即lncRNA-chromatin interaction对个数，方法是参考以上文献，该文献利用CHART-seq技术鉴定lncRNA结合位点以及相互作用的蛋白质。 结果 去除掉缺少“even”和“odd”样本的lncRNA、低富集度和在GENCODE v27中缺乏注释的lncRNA，最终在人类和鼠中分别鉴定到77,031和111,616个lncRNA-chromatin interaction（lncRNA-chromatin interaction可以理解为lncRNA结合位点）。 每个结合位点的大小平均小于1kb,除了SRA (在2kb左右) （图B）。 下图A展示的是人中的lncRNA-chromatin interaction, 横坐标包含l ncRNA和细胞系，图中展示的是11个lncRNA，其中一个lncRNA应该是由于缺少“even”和“odd”样本被过滤了 结合位点的基因组分布特征 方法 基因组分布特征即在启动子、远端等区域的结合，Homer软件注释可以得到该结果，ChIPseeker也可以做类似的分析。 结果 大多lncRNA的结合位点位于其最邻近基因的转录起始位点（TSS）的远端（Distal）区域。该结论在多个研究中都有提及，lncRNA大部分是位于其转录位点的远端区域，与蛋白质相互作用的方式通常是反式作用。 lnCRANs结合位点的保守性 方法 保守性评估采用的是2005年发表的方法——phastCons,这篇文章至今已有3000+的引用，该模型是基于一个二态系统发育隐马尔可夫模型（phylo HMM），phastCons通过最大似然法拟合一个phylo HMM的数值，跨物种校准模型，然后基于该模型预测保守元件 文献：doi: 10.1101/gr.3715005 ； PMID: 16024819 Evolutionarily conserved elements in vertebrate, insect, worm, and yeast genomes. 结果 他们发现人类的lncRNAs结合位点与DHSs（DNase I hypersensitive sites）相比有更高的保守性。 lnCRANs结合位点的motif分析 方法 HOMER 结果 de novo DNA-binding motifs的结果与之前的发现一致，如HOTAIR 和 MEG3结合位点富集在GA嘌呤处。而且发现有些motif可以与lncRNA的序列匹配，表明这些lncRNA可能形成DNA:RNA三螺旋结构。 lncRNA结合位点与表观修饰的关联 方法 genome association tool (GAT) : 该方法是评估两个基因组片段的相关性，如ChIP-seq和RNA-seq的重合的区域是否显著相关。 Motivation: A common question in genomic analysis is whether two sets of genomic intervals overlap significantly. This question arises, for example, when interpreting ChIP-Seq or RNA-Seq data in functional terms. Because genome organization is complex, answering this question is non-trivial. Summary: We present Genomic Association Test (GAT), a tool for estimating the significance of overlap between multiple sets of genomic intervals. GAT implements a null model that the two sets of intervals are placed independently of one another, but allows each set’s density to depend on external variables, for example, isochore structure or chromosome identity. GAT estimates statistical significance based on simulation and controls for multiple tests using the false discovery rate. Availability: GAT’s source code, documentation and tutorials are available at http://code.google.com/p/genomic-association-tester. 选择了5种组蛋白修饰数据类型:H3K4me3, H3K4me1,H3K27me3, H3K36me3, H3K27ac promotor: high H3K4me3 enchancer: high H3K4me1and low H3K4me3 repressed: H3K27me3 transcription elongation : high H3K36me3 quiescent: low H3K36me3 结果 只有lncRNA的数据同时包含相对应的细胞系至少两个表观修饰数据的lncRNA最后被保留用于这部分的分析。人类和鼠分别是9个和8个lncRNA。lncRNA结合位点与染色质修饰的关联多种多样，所有的lncRNA在H3K4me1 和 H3K27ac mark区域显著富集。 为了进一步探究lncRNA结合位点的表观修饰模式，作者观察了lncRNA结合位点2kb以内的染色质可及性。发现lncRNA在其结合位点展现不同的表观修饰模式，如可以结合在启动子、增强子、抑制子等。 lncRNA结合区域与其潜在的靶基因 方法 如果一个基因的TSS上下游1kb与lncRNA结合位点区域重合，就定义为该基因为此lncRNA的promoter 靶基因； 当lncRNA结合位点与远端（distal）调控元件作用（&gt;2kb to nearest TSSs）时，同时结合 来自4D genome database 的long-range 染色质相互作用数据，鉴定到lncRNA的distal 靶基因 结果 不同的lncRNA靶基因数目差异很大，平均每个lncRNA的蛋白编码靶基因为3100个。其中LncRNA 7SK有8051个蛋白编码靶基因（最多）。同时，他们观察到一些lncRNA的promoter和distal 靶基因有显著的重合，表明lncRNA与启动子和远端调控元件结合靶向于相同的基因。 lncRNA结合区域与其潜在的靶基因的功能 方法 对每个lncRNA的靶基因进行GO/KEGG功能注释 clusterProfiler 结果 功能注释结果发现这些lncRNA都能富集到其已知的功能，如cancer-related lncRNA NEAT1 富集到细胞分化、细胞周期和细胞死亡。 为了进一步确定lncRNA是如何参与通路的调控，他们将lncRNA的靶基因与富集通路匹配对应。发现lncRNA既可以结合启动子调控元件发挥功能，也可以结合远端调控元件发挥功能。 lncRNA-target genes在人类肿瘤预后诊断中的应用 方法 生存分析: Kaplan-Meier method 结果 从TCGA中收集了3肿瘤类型1330个癌症病人的基因表达数据（包括蛋白编码和lncRNA)，根据lncRNA表达的中位数，将病人分为high-risk group和low-risk group.]]></content>
       <tags>
         <tag>lncRNA</tag>
@@ -517,9 +501,9 @@
     <url>%2F2019%2F11%2Findex.html</url>
     <content type="text"><![CDATA[常见的可视化基因组track的Bioconductor package有rtracklayer 和 Gviz。rtracklayer提供了交互的基因组浏览器和相关tracks的注释；Gviz可以用于tracks覆盖度和注释的可视化。trackViewer是一个更轻量级的工具，且可以产生交互的可视化结果。可用于RNA-seq,ChIP-seq/ATAC-seq,miRNA-seq,DNA-seq,methylation等各种NGS组学数据的覆盖度和注释tracks的可视化展示，而且可以绘制发表级的棒棒糖图和蒲公英图。 先展示下极好看可视化效果 使用方法可以参考文档： 详细文档：http://127.0.0.1:31580/library/trackViewer/doc/trackViewer.html Web app: https://github.com/jianhong/trackViewer.documentation/tree/master/trackViewerShinyApp]]></content>
       <tags>
-        <tag>ATACseq</tag>
         <tag>R</tag>
         <tag>visualization</tag>
+        <tag>ATACseq</tag>
         <tag>ChIPseq</tag>
       </tags>
   </entry>
@@ -532,8 +516,8 @@
       </categories>
       <tags>
         <tag>ATACseq</tag>
-        <tag>software</tag>
         <tag>deep learning</tag>
+        <tag>software</tag>
       </tags>
   </entry>
   <entry>
@@ -544,9 +528,9 @@
         <category>Data Sciences</category>
       </categories>
       <tags>
-        <tag>software</tag>
         <tag>single cell</tag>
         <tag>scRNA-seq</tag>
+        <tag>software</tag>
       </tags>
   </entry>
   <entry>
@@ -591,7 +575,7 @@
   </entry>
   <entry>
     <title><![CDATA[lncRNA-染色质相互作用数据库]]></title>
-    <url>%2F2019%2F11%2Findex.html</url>
+    <url>%2F2019%2F11%2FLnChrom_database.html</url>
     <content type="text"><![CDATA[一句话评价 lncRNA和染色质相互作用数据库 文章信息 题目：LnChrom: a resource of experimentally validated lncRNA–chromatin interactions in human and mouse 杂志：Database 时间：23 March 2018 链接: doi: 10.1093/database/bay039 figure 文章介绍： lncRNA作用机制多样，可以与DNA、RNA和蛋白质相互作用，也是参与染色质调控的重要组成部分。许多lncRNA通过招募染色质修饰因子调控染色质状态，进而影响基因表达过程。作者对已经过实验验证的lncRNA-chromatin相互作用的数据资源进行整理，开发了lnChrom数据库。该数据库目前包括人类和鼠共382743个lncRNA-chromatin相互作用对，另外还收集了每个作用对的染色质修饰因子、表观标记特征、靶基因以及与疾病的关联信息。 LnChrom提供了友好的交互界面，可以通过输入lncRNA ID或靶基因快速检索， 也可以通过选择物种、染色质修饰类型、染色质相关因子，以及基因名字进行高级检索 ，同时可以通过输入感兴趣的染色质区域进行region检索。搜索结果以一个概览的表格和相互作用网络图展示。用户点击某一感兴趣的相互作用对，可以了解到更多细节结果，包括详细的注释信息、Genome Browser，TF Co-occupancy和Cancer Exploration。 网站：http://biocc.hrbmu.edu.cn/LnChrom/ 每日文献摘要：第17篇 2019年11月16日 周六]]></content>
       <categories>
         <category>literature</category>
@@ -671,10 +655,10 @@
         <category>literature</category>
       </categories>
       <tags>
-        <tag>ATACseq</tag>
-        <tag>software</tag>
         <tag>single cell</tag>
         <tag>文献摘要</tag>
+        <tag>ATACseq</tag>
+        <tag>software</tag>
       </tags>
   </entry>
   <entry>
@@ -691,7 +675,7 @@
   </entry>
   <entry>
     <title><![CDATA[RNA速度-RNA velocity是什么]]></title>
-    <url>%2F2019%2F11%2Findex.html</url>
+    <url>%2F2019%2F11%2FRNA_velocity.html</url>
     <content type="text"><![CDATA[一句话评价 通过动态模型评估细胞瞬间状态的RNA速度 文章信息 题目：Generalizing RNA velocity to transient cell states through dynamical modeling 杂志：bioRxiv 时间：Oct. 29,2019 链接: http://dx.doi.org/10.1101/820936. figure 下图是作者利用该方法对胰腺内分泌发育构建的动态图谱 文章介绍： 这篇文章介绍了利用一个新的模型—动态模型对细胞瞬间态的RNA速度（RNA velocity）进行评估计算。关键词动态模型和RNA速度，这里对动态模型的算法和实现过程暂不详细解释，主要了解RNA速度的概念和应用以及这篇文章中开发的方法的优点。 RNA velocity的概念 RNA velocity, 我直译为RNA速度，这一概念是18年由瑞典卡罗林斯卡医学院的Sten Linnarsson和 Peter V. Kharchenko两个实验室提出的，相关研究成果发表Nature(2018, August, Nature)。RNA丰度是单个细胞状态的一个有力指标。单细胞测序技术可以灵敏、准确地揭示RNA的丰度。然而，这种方法仅能捕获在某个时间点的静态快照，使得分析随着时间动态变化的现象面临挑战（如胚胎发生或组织再生）。这里他们提出的RNA速度（RNA velocity）—可以理解为通过对unspliced(nascent) 和spliced(mature) mRNA丰度的评估在时间维度上揭示转录本动态变化的一个指标。 RNA velocity应用 RNA velocity是一个转录本动态变化的指标，能预测细胞未来的状态变化。可以用于细胞分化、谱系发育、肿瘤微环境中细胞成分的动态变化等研究。张泽民老师实验室刚发表的肝癌免疫图谱的文章中就有通过RNA velocity的分析揭示肿瘤微环境中巨噬细胞的迁移(2019,October,Cell) （张老师实验室用的是Scanpy方法分析的RNA velocity）。 scVelo—以动态模型对细胞瞬间态的RNA velocity进行评估计算的方法 回到这篇文章，作者认为现有的计算RNA velocity的模型在一些情况下存在不足，他称这种模型为稳态模型(steady-state model), 这种模型有个两个基本的假设：即（i）在基因水平上，所有具有转录诱导、抑制和稳态mRNA水平的完整剪接动力学被捕捉到；（ii）在细胞水平上，所有基因具有共同的剪接率。但是，当一个种群包含多个具有不同动力学的异质亚种群时，这些假设常常被违背。 所以，他们开发的seVelo，一个基于似然的动力学模型(likelihood-based dynamical model)，它解决了以上提出的全基因转录动力学的问题，从而将RNA速度估计推广到瞬态系统和具有非均匀亚种群动力学的系统。scVelo提供了两种扩展：一种是包含二阶矩的随机模型，另一种是捕获全剪接动力学的动力学模型。与scanpy也兼容。 网址：scVelo: https://scvelo.org 碎碎念 评估科学研究的重要性通常有3方面：新的概念、新的方法、新的发现。18年Nature的那篇文章是提出了新的概念，这篇文章是开发了新的方法，我们还可以应用新的概念和新的方法，为自己关注的领域带来新的发现。 相关文献： 2018, August, Nature, RNA velocity of single cells：DOI: 10.1038/s41586-018-0414-6 2019, October,Cell,Landscape and Dynamics of Single Immune Cells in Hepatocellular Carcinoma. https://doi.org/10.1016/j.cell.2019.10.003. 每日文献摘要：第14篇 2019年11月01日 周五]]></content>
       <categories>
         <category>literature</category>
@@ -758,7 +742,7 @@
   </entry>
   <entry>
     <title><![CDATA[base plot与ggplot2语法比较]]></title>
-    <url>%2F2019%2F10%2Findex.html</url>
+    <url>%2F2019%2F10%2Fbase_plot_ggplot2.html</url>
     <content type="text"><![CDATA[通过base plot和ggplot2的简单实例，直接感受下base plot和ggplot2的语法差别。 条形图 基本绘图 barplot()是基本绘图中绘制条形图的函数，需要一个向量参数指定bar的高度（必须），每个bar的label是可选参数。 ggplot2 ggplot2中绘制bar plot使用geom_col或geom_bar, 注意这里使用factor将x变量转换为离散变量。 12345678910library(ggplot2)# Bar graph of values. This uses the BOD data frame, with the# "Time" column for x values and the "demand" column for y values.ggplot(BOD, aes(x = Time, y = demand)) + geom_col()# Convert the x variable to a factor, so that it is treated as discreteggplot(BOD, aes(x = factor(Time), y = demand)) + geom_col() 直方图 基本绘图 hist是基本绘图中直方图的函数。 ggplot2 ggplot2中绘制直方图使用geom_histogram() 12345678library(ggplot2)ggplot(mtcars, aes(x = mpg)) + geom_histogram()#&gt; `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.# With wider binsggplot(mtcars, aes(x = mpg)) + geom_histogram(binwidth = 4) 箱线图 基本绘图 箱线图可以直接用plot()函数（如果x变量是factor，会自动产生bo x plot)， 当然也可以用boxplot()函数。如果想在X轴展示两个变量，也是可以的。 123plot(ToothGrowth$supp, ToothGrowth$len)# Formula syntaxboxplot(len ~ supp, data = ToothGrowth) 12# Put interaction of two variables on x-axisboxplot(len ~ supp + dose, data = ToothGrowth) ggplot2 ggplot2使用geom_boxplot() 函数，x轴展示两个变量时可以用interaction()函数 123library(ggplot2)ggplot(ToothGrowth, aes(x = supp, y = len)) + geom_boxplot() x轴展示两个变量 12ggplot(ToothGrowth, aes(x = interaction(supp, dose), y = len)) + geom_boxplot() 小结 条形图、直方图、箱线图的区别 条形图x和y变量是一对一的关系，绘图时必须传递y变量。直方图是频率分布图，箱线图x变量对应的y变量有多个值。 Base plot和ggpplot2的绘图特征 Base plot直接指定变量参数即可，ggplot2的语法通常包括3个部分，首先是数据框，然后以aes指定参数变量，再加上图形的类型，如geom_boxplot等 箱线图展示一对变量的特征 如果用base plot实现，可以直接在x参数变量后加上另一个参数，如果是ggplot2，借助interaction()将一对变量添加。 个人感觉这里base plot画的图更简单好看。]]></content>
       <categories>
         <category>Data Sciences</category>
@@ -879,14 +863,14 @@
         <category>literature</category>
       </categories>
       <tags>
-        <tag>ATACseq</tag>
         <tag>single cell</tag>
         <tag>文献摘要</tag>
+        <tag>ATACseq</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[awk基本命令使用]]></title>
-    <url>%2F2019%2F08%2Findex.html</url>
+    <url>%2F2019%2F08%2Fawk_base.html</url>
     <content type="text"><![CDATA[awk是一个处理文本文件的程序，也是一门强大的编程语言。awk是把文件逐行的读入，以空格为默认分隔符将每行分割，切开的部分再进行各种分析处理，非常适用于每行格式相同的文本文件。 示例数据： DEseq2得到的差异表达矩阵(dfdata)作为示例数据： 包括9列数据，分别为id, baseMeanA, baseMeanB,baseMean, log2FoldChange,lfcSE,stat,pvalue,padj 基本用法 输出文件内容 1234# 格式$ awk '&#123;动作&#125;' 文件名# 示例$ head dfdata | awk '&#123;print $0&#125;' 将输出差异基因结构的前5行 提取基因ID，log2FoldChange, pvalue三列信息 awk会根据空格和制表符等分隔符，将每一行分成若干字段，依次用$1、$2、$3代表第一个字段、第二个字段、第三个字段等，$1, $2可以理解为被分隔符分割的第一列，第二列 -F ：输入分隔符，这里是\t 12# 将输出差异基因前10行的第1、5和8列，默认是以空格分割，所以输出结果head dfdata | awk -F '\t' '&#123;print $1,$5,$8&#125;' OFS: 输出分隔符 12# 以tab分割输出head dfdata | awk -F '\t' '&#123;print $1,$5,$8&#125;' OFS='\t' 其他变量 FILENAME：当前文件名 FS：字段分隔符，默认是空格和制表符。 RS：行分隔符，用于分割每一行，默认是换行符。 OFS：输出字段的分隔符，用于打印时分隔字段，默认为空格。 ORS：输出记录的分隔符，用于打印时分隔记录，默认为换行符。 OFMT：数字输出的格式，默认为％.6g 条件1awk '条件 &#123;动作&#125;' 文件名 可以结合正则表达式规则使用 输出特定基因ID的行 12awk -F '\t' '/id/ &#123;print $0&#125;' dfdata# id baseMeanA baseMeanB baseMean log2FoldChange lfcSE stat pvalue padj if语句判断语句和执行语句必须用在{}中，且判断语句用()扩起来 1awk '&#123;if () action; else action&#125;' file 输出 |log2FoldChange | &gt; 1且pvalue &lt; 0.05的所有信息 符合|log2FoldChange | &gt; 1且pvalue &lt; 0.05的基因有多少个 1awk '&#123;if ($5&gt;1 || $5 &lt; -1 &amp;&amp; $8&lt;0.05 ) print $0&#125;' dfdata | wc 且同时输出header 12awk '/id/ &#123;print $0&#125;; &#123;if ($5&gt;1 || $5 &lt; -1 &amp;&amp; $8&lt;0.05 ) print $0&#125;' dfdata | less -S# 两个完整语句间用分号分割 函数 tolower()：字符转为小写。 length()：返回字符串长度。 substr()：返回子字符串。 sin()：正弦。 cos()：余弦。 sqrt()：平方根。 rand()：随机数 1234awk '/id/ &#123;print $0&#125; dfdata# id baseMeanA baseMeanB baseMean log2FoldChange lfcSE stat pvalue padjawk '/id/ &#123;print toupper($0)&#125;' rawcount # ID BASEMEANA BASEMEANB BASEMEAN LOG2FOLDCHANGE LFCSE STAT PVALUE PADJ]]></content>
       <categories>
         <category>Data Sciences</category>
@@ -989,32 +973,20 @@
         <category>literature</category>
       </categories>
       <tags>
-        <tag>ATACseq</tag>
         <tag>single cell</tag>
         <tag>文献摘要</tag>
+        <tag>ATACseq</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[esATAC_一个ATAC-seq分析的R包]]></title>
-    <url>%2F2019%2F08%2Findex.html</url>
+    <url>%2F2019%2F08%2FesATAC.html</url>
     <content type="text"><![CDATA[日期：2019年1月13日——2019-Week2分类：「工具」题目：esATAC: An Easy-to-use Systematic pipeline for ATAC-seq data analysisDOI: 10.1093/bioinformatics/bty141杂志：Bioinformatics，2018 Aug关键词： ATAC; chromatin accessibility; transcription factor; regulatory network 介绍之前介绍过中科大Kun Qu老师实验室开发的用于bulk ATAC-seq分析的工具包 —— 「ATAC-pipe」，虽然个人并不推荐依赖使用这种打包工具包。但是他们的分析方法和原理还是值得了解和学习的。这里再介绍一个ATAC-seq分析的工具包——esATAC，是由清华大学Xiaowo Wang老师实验室开发的一个R/Bioconductor包，它的功能包括如下几方面： 原始数据的质控和比对 peak calling 富集分析 转录因子足迹分析 具体分析方法参考vignettes:https://www.bioconductor.org/packages/release/bioc/vignettes/esATAC/inst/doc/esATAC-Introduction.html 数据分析流程 初始数据：可以直接处理fastq格式的测序数据 质控：多种质控方法，包括测序质量，read length分布等 去接头：AdapterRemoval 比对：Bowtie2 鉴定开放染色质peak：F-seq？？仔细了解(Boyle, et al., 2008,Koohy, et al., 2014) peak的注释：ChIPseeker包 TF分析：结合JASPAR数据库 适用物种：人和鼠 单细胞RNA-seq、ATAC-seq分析教程、工具大集锦: https://github.com/seandavi/awesome-single-cell]]></content>
       <categories>
         <category>literature</category>
       </categories>
       <tags>
         <tag>ATACseq</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[ATAC-pipe_ATAC-seq分析的工具包]]></title>
-    <url>%2F2019%2F08%2Findex.html</url>
-    <content type="text"><![CDATA[日期：2019年1月6日——2019-Week1分类：「工具」题目：ATAC-pipe: general analysis of genome-wide chromatin accessibilityDOI: 10.1093/bib/bby056杂志：Briefings in Bioinformatics关键词： ATAC; chromatin accessibility; transcription factor; regulatory network 摘要ATAC-pipe是中科大Kun Qu实验室开发的一个打包软件包，用于分析bulk ATAC-Seq。主要功能包括： 鉴定显著差异的开放染色质区域 motif分析及相关的TFs对转录调控的影响 TF和motif的足迹分析以及核小体占位的可视化 基于相关性的细胞聚类分析 构建TF调控网络，评估TFs和基因间的相互作用 详细用法参考： https://github.com/QuKunLab/ATAC-pipe或者 manual for ATAC-pipe:https://github.com/QuKunLab/ATAC-pipe/blob/master/Manual_for_ATAC-pipe.pdf 材料和方法1. 流程和算法ATAC-pipe是基于其他工具和软件包的，需要在Linux/MAC OS平台安装 requires Bowtie2, Picard, MACS2, HOMER, Python和R的环境，以及相关的参考基因组和DESeq R包。 比对: Bowtie2 去重: Picard peak calling: MACS2 count标准化和差异分析：DESeq 聚类和热图：Cluster 3.0 和 Treeview TF motifs分析: Homer and msCentipede 序列迁移，TSS富集值和分布，V-plot, TF调控网络：他们自己实验室写的代码 2. 与其他工具的比较他们的介绍是「ATAC-pipe功能多，其他工具可能只是包含QC，比对，peak calling等基本步骤，但是ATAC-pipe还包含样本聚类，motif 搜索，足迹验证、核小体占位分析和TF调控网络分析，而且更重要的是可以鉴定显著差异开放染色质区域和这些区域的TF motif富集, 另外所需时间与其他工具相比较少」。（他们介绍的优点了解下即可，其实很多工具都可以实现相同的功能,其他工具的功能和原理也要了解一下） 结果看一下这个流程包可以给出哪些结果 结果1：质控 结果2：相关性和差异peaks分析 结果3：TF 富集分析 结果4：TF motif足迹分析和核小体占位分析 结果5：TF驱动调控网络讨论使用他人打包的工具包有人可能觉得省时方便，但是会有很多限制，不够灵活。而且他们这个工具包本身需要安装很多工具，最终是包装成python模块，使用时是需要有linux和python基础的。他们的分析结果有很多工具和方法可以实现，对于这篇文章也就是了解下他们进行ATAC-seq分析时使用的方法，同时了解下文章中做比较时提到其他工具。 如果想实现个性化和弹性化的分析，还是需要自己了解掌握每一步的分析流程，具体方法可以参考之前的帖子: ATAC-Seq入门加高阶传送门，文末点击可进入交流群https://mp.weixin.qq.com/s/iVMY_0Su278OfWc2r2_brQ 第10篇：ATAC-Seq、ChIP-Seq、RNA-Seq整合分析（内附目录）https://mp.weixin.qq.com/s/7k2GEmPmnkVfmzegpxabQA 给学徒的ATAC-seq数据实战（附上收费视频）https://mp.weixin.qq.com/s/XQITfdnS6Zn6iTBtuladPw 另外记得在去年苏州单细胞会议的海报展示，Kun Qu老师实验室展示了一个用于sc-ATAC分析的工具包APEC（不知道发表没）。APEC的文章已在预印版上发出：https://www.biorxiv.org/content/early/2019/05/23/646331.full.pdf]]></content>
-      <categories>
-        <category>literature</category>
-      </categories>
-      <tags>
-        <tag>ATACseq</tag>
-        <tag>software</tag>
       </tags>
   </entry>
   <entry>
