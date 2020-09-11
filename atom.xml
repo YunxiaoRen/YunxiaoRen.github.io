@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-06-28T18:21:56.607Z</updated>
+  <updated>2020-09-11T16:41:16.923Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test</title>
+    <link href="http://yoursite.com/2020/09/test.html"/>
+    <id>http://yoursite.com/2020/09/test.html</id>
+    <published>2020-09-11T16:36:55.000Z</published>
+    <updated>2020-09-11T16:41:16.923Z</updated>
+    
+    <content type="html"><![CDATA[<p>test url</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;test url&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="2" scheme="http://yoursite.com/categories/2/"/>
+    
+    
+      <category term="1" scheme="http://yoursite.com/tags/1/"/>
+    
+  </entry>
   
   <entry>
     <title>两个文件的异同</title>
@@ -480,31 +506,6 @@
     
       &lt;h3 id=&quot;t-test&quot;&gt;&lt;a href=&quot;#t-test&quot; class=&quot;headerlink&quot; title=&quot;t-test&quot;&gt;&lt;/a&gt;t-test&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;t-test是比较两组变量的平均值是否有显著性差异&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/2020/05/index/1589702913894-0ff87132-df98-47cc-aa51-d3d6b4127469-20200517103250465.png&quot; alt=&quot;image.png&quot; style=&quot;zoom:50%;&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="statistics" scheme="http://yoursite.com/tags/statistics/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>逻辑回归</title>
-    <link href="http://yoursite.com/2020/05/index.html"/>
-    <id>http://yoursite.com/2020/05/index.html</id>
-    <published>2020-05-17T07:56:44.000Z</published>
-    <updated>2020-05-17T08:42:28.247Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>逻辑回归是什么？主要用于解决什么问题？与线性回归有什么关系？如何计算和评估逻辑回归的最佳模型？逻辑回归与概率回归的异同？在R中如何实现？</strong></p><p>首先还是先看wiki对逻辑回归（logisitic regression）的解释</p><blockquote><p>Logistic regression is a statistical model that in its basic form uses a logistic function to model a binary dependent variable。</p></blockquote><p>逻辑回归（logistic/logit regression）主要应用于解决<strong>二分类</strong>问题，和线性回归都属于线性模型，但是逻辑回归是解决分类问题，而线性回归是解决回归问题。逻辑回归通过最大似然法（Maximum likelihood）寻找最佳模型。可以通过summary()函数的输出结果AIC值对比模型的拟合程度，或者通过sensitivity, specifity评估，既可以以ROC和AUC的结果评估。概率回归也用于二分类问题，和逻辑回归类似。不同的是逻辑回归使用累积逻辑函数（cumulative logistic function），概率回归使用正态累积密度函数（normal cumulative density function）。实际应用两个模型时时可根据自己的爱好选择。逻辑回归在R中的实现以 <strong><code>glm()</code></strong> 函数实现，并指定参数 <code>**family = binomial**</code> , 而概率回归以glm()函数，并指定 <strong><code>family =binomial(link=&quot;probit&quot;)</code></strong> 。</p><a id="more"></a><p><img src="/2020/05/index/1589442464586-dd9e1642-d738-407f-9656-5ce4e1f54b52.png" alt="image.png" style="zoom:33%;"></p><p><img src="/2020/05/index/1589442582323-ba9a09c2-6ab3-4f39-93fd-5bc66333621a.png" alt="image.png" style="zoom:33%;"></p><p><img src="/2020/05/index/1589443161905-b5a2b69c-41f4-46e2-aac4-c146bb467f45.png" alt="image.png" style="zoom:33%;"></p><p><img src="/2020/05/index/1589701563491-be26730c-2d7b-4668-8035-5ca409555214.png" alt="image.png" style="zoom:33%;"></p><p><img src="/2020/05/index/1589701561833-3cec8e36-edf6-4df1-8a80-af7d3fb2230e.png" alt="image.png" style="zoom:33%;"></p><p><img src="/2020/05/index/1589702022864-d99f6c13-a484-493f-a313-8c6a9ab70514.png" alt="image.png" style="zoom:33%;"></p><p><strong>参考资料：</strong></p><p>statquest逻辑回归视频：<a href="https://www.youtube.com/playlist?list=PLblh5JKOoLUKxzEP5HA2d-Li7IJkHfXSe" target="_blank" rel="noopener">https://www.youtube.com/playlist?list=PLblh5JKOoLUKxzEP5HA2d-Li7IJkHfXSe</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;逻辑回归是什么？主要用于解决什么问题？与线性回归有什么关系？如何计算和评估逻辑回归的最佳模型？逻辑回归与概率回归的异同？在R中如何实现？&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;首先还是先看wiki对逻辑回归（logisitic regression）的解释&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Logistic regression is a statistical model that in its basic form uses a logistic function to model a binary dependent variable。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;逻辑回归（logistic/logit regression）主要应用于解决&lt;strong&gt;二分类&lt;/strong&gt;问题，和线性回归都属于线性模型，但是逻辑回归是解决分类问题，而线性回归是解决回归问题。逻辑回归通过最大似然法（Maximum likelihood）寻找最佳模型。可以通过summary()函数的输出结果AIC值对比模型的拟合程度，或者通过sensitivity, specifity评估，既可以以ROC和AUC的结果评估。概率回归也用于二分类问题，和逻辑回归类似。不同的是逻辑回归使用累积逻辑函数（cumulative logistic function），概率回归使用正态累积密度函数（normal cumulative density function）。实际应用两个模型时时可根据自己的爱好选择。逻辑回归在R中的实现以 &lt;strong&gt;&lt;code&gt;glm()&lt;/code&gt;&lt;/strong&gt; 函数实现，并指定参数 &lt;code&gt;**family = binomial**&lt;/code&gt; , 而概率回归以glm()函数，并指定 &lt;strong&gt;&lt;code&gt;family =binomial(link=&amp;quot;probit&amp;quot;)&lt;/code&gt;&lt;/strong&gt; 。&lt;/p&gt;
     
     </summary>
     

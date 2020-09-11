@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2020/09/test.html</loc>
+    
+    <lastmod>2020-09-11T16:41:16.923Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2020/06/2020-06-28-apply%20family%20function.html</loc>
     
     <lastmod>2020-09-11T16:24:22.719Z</lastmod>
