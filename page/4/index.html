@@ -456,7 +456,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/index.html">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/download_data_from_EBI.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="六六">
@@ -475,7 +475,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/05/index.html" itemprop="url">从EBI批量下载数据</a></h1>
+                <a class="post-title-link" href="/2020/05/download_data_from_EBI.html" itemprop="url">从EBI批量下载数据</a></h1>
         
 
         <div class="post-meta">
@@ -506,8 +506,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2020/05/index.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/05/index.html" itemprop="commentCount"></span>
+                <a href="/2020/05/download_data_from_EBI.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/05/download_data_from_EBI.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -570,7 +570,7 @@
           
             <p>ERR地址的规律：差别在于后三个地址，先是ERR number字符串的前6个字符，然后是ERR完整字符串，最后是ERR字符串加上 <code>_1</code> 或 <code>_2</code></p>
 <p>如：</p>
-<p><img src="/2020/05/index/1589790261584-b3c7220e-2691-4b63-92f9-21acf439465a.png" alt="image.png"></p>
+<p><img src="/2020/05/download_data_from_EBI.htm/1589790261584-b3c7220e-2691-4b63-92f9-21acf439465a.png" alt="image.png"></p>
 <p>根据此规律批量从EBI下载数据：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for i in $(cat ERR_numlist);do wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/$&#123;i:0:6&#125;/$i/$i\_*.fastq.gz; done</span><br></pre></td></tr></table></figure>
 <ul>
@@ -578,7 +578,7 @@
 <li>切记所有从windows上传到服务器的文件最好先进行格式转化，否则由于文件格式，容易报错。 <strong><code>dos2unix ERR_numlist</code></strong> </li>
 <li><code>${i:0:6}</code> ：是指输出字符串i的前6个字符， <code>0</code> :表示从第几位开始， <code>6</code> :表示截取的长度</li>
 </ul>
-<p><img src="/2020/05/index/fig1.png" alt></p>
+<p><img src="/2020/05/download_data_from_EBI.htm/fig1.png" alt></p>
 
           
         
@@ -627,7 +627,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/index.html">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/t-test_annova.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="六六">
@@ -646,7 +646,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/05/index.html" itemprop="url">t-test和方差分析</a></h1>
+                <a class="post-title-link" href="/2020/05/t-test_annova.html" itemprop="url">t-test和方差分析</a></h1>
         
 
         <div class="post-meta">
@@ -677,8 +677,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2020/05/index.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/05/index.html" itemprop="commentCount"></span>
+                <a href="/2020/05/t-test_annova.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/05/t-test_annova.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -739,10 +739,10 @@
       
         
           <h3 id="t-test"><a href="#t-test" class="headerlink" title="t-test"></a>t-test</h3><p><strong>t-test是比较两组变量的平均值是否有显著性差异</strong></p>
-<p><img src="/2020/05/index/1589702913894-0ff87132-df98-47cc-aa51-d3d6b4127469-20200517103250465.png" alt="image.png" style="zoom:50%;"></p>
+<p><img src="/2020/05/t-test_annova.htm/1589702913894-0ff87132-df98-47cc-aa51-d3d6b4127469-20200517103250465.png" alt="image.png" style="zoom:50%;"></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2020/05/index.html#more" rel="contents">
+            <a class="btn" href="/2020/05/t-test_annova.html#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1171,7 +1171,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">108</span>
+                  <span class="site-state-item-count">106</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1252,7 +1252,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">67.4k</span>
+    <span title="Site words total count">65.5k</span>
   
 </div>
 
@@ -1272,7 +1272,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共67.4k字</span>
+  <span class="post-count">博客全站共65.5k字</span>
 </div>
 
 

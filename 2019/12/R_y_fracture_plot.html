@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="R,visualization,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="生信拾光" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="画图时经常遇到不同组的数据大小相差很大，大数据就会掩盖小数据的变化规律，这时候可以对Y轴进行截断，从而可以在不同层面（大数据和小数据层面）全面反映数据变化情况，如下图所示。  搜索截断图绘制的方法，有根据Excel绘制的，但是感觉操作繁琐；这里根据网上资料总结基于R的3种方法：  分割+组合法，如基于ggplot2, 利用coord_cartesian()将整个图形分割成多个图片,再用grid 包">
+<meta name="keywords" content="R,visualization">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于R语言绘制坐标轴截断图">
+<meta property="og:url" content="http://yoursite.com/2019/12/R_y_fracture_plot.html">
+<meta property="og:site_name" content="生信拾光">
+<meta property="og:description" content="画图时经常遇到不同组的数据大小相差很大，大数据就会掩盖小数据的变化规律，这时候可以对Y轴进行截断，从而可以在不同层面（大数据和小数据层面）全面反映数据变化情况，如下图所示。  搜索截断图绘制的方法，有根据Excel绘制的，但是感觉操作繁琐；这里根据网上资料总结基于R的3种方法：  分割+组合法，如基于ggplot2, 利用coord_cartesian()将整个图形分割成多个图片,再用grid 包">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2019/12/R_y_fracture_plot.htm/fig0.png">
+<meta property="og:image" content="http://yoursite.com/2019/12/R_y_fracture_plot.htm/fig1.png">
+<meta property="og:image" content="http://yoursite.com/2019/12/R_y_fracture_plot.htm/fig2.png">
+<meta property="og:image" content="http://yoursite.com/2019/12/R_y_fracture_plot.htm/fig3.png">
+<meta property="og:image" content="http://yoursite.com/2019/12/R_y_fracture_plot.htm/fig4.png">
+<meta property="og:image" content="http://yoursite.com/2019/12/R_y_fracture_plot.htm/fig5.png">
+<meta property="og:image" content="http://yoursite.com/2019/12/R_y_fracture_plot.htm/fig6.png">
+<meta property="og:image" content="http://yoursite.com/2019/12/R_y_fracture_plot.htm/fig7.png">
+<meta property="og:image" content="http://yoursite.com/2019/12/R_y_fracture_plot.htm/fig8.png">
+<meta property="og:updated_time" content="2020-09-11T19:40:43.757Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="基于R语言绘制坐标轴截断图">
+<meta name="twitter:description" content="画图时经常遇到不同组的数据大小相差很大，大数据就会掩盖小数据的变化规律，这时候可以对Y轴进行截断，从而可以在不同层面（大数据和小数据层面）全面反映数据变化情况，如下图所示。  搜索截断图绘制的方法，有根据Excel绘制的，但是感觉操作繁琐；这里根据网上资料总结基于R的3种方法：  分割+组合法，如基于ggplot2, 利用coord_cartesian()将整个图形分割成多个图片,再用grid 包">
+<meta name="twitter:image" content="http://yoursite.com/2019/12/R_y_fracture_plot.htm/fig0.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '六六'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/12/R_y_fracture_plot.html">
+
+
+
+
+
+  <title>基于R语言绘制坐标轴截断图 | 生信拾光</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">生信拾光</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/R_y_fracture_plot.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="六六">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="生信拾光">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">基于R语言绘制坐标轴截断图</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-16T20:18:11+01:00">
+                2019-12-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/12/R_y_fracture_plot.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/12/R_y_fracture_plot.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2.7k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  13
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>画图时经常遇到不同组的数据大小相差很大，大数据就会掩盖小数据的变化规律，这时候可以对Y轴进行截断，从而可以在不同层面（大数据和小数据层面）全面反映数据变化情况，如下图所示。</p>
+<p><img src="/2019/12/R_y_fracture_plot.htm/fig0.png" alt></p>
+<p>搜索截断图绘制的方法，有根据Excel绘制的，但是感觉操作繁琐；这里根据网上资料总结基于R的3种方法：</p>
+<ul>
+<li>分割+组合法，如基于ggplot2, 利用<code>coord_cartesian()</code>将整个图形分割成多个图片,再用grid 包组合分割结果</li>
+<li>plotrix R包</li>
+<li>基本绘图函数+plotrix R包</li>
+</ul>
+<a id="more"></a>
+<h3 id="示例数据"><a href="#示例数据" class="headerlink" title="示例数据"></a>示例数据</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">df &lt;- data.frame(name=c(<span class="string">"AY"</span>,<span class="string">"BY"</span>,<span class="string">"CY"</span>,<span class="string">"DY"</span>,<span class="string">"EY"</span>,<span class="string">"FY"</span>,<span class="string">"GY"</span>),Money=c(<span class="number">1510</span>,<span class="number">1230</span>,<span class="number">995</span>,<span class="number">48</span>,<span class="number">35</span>,<span class="number">28</span>,<span class="number">10</span>))</span><br><span class="line">df</span><br><span class="line"></span><br><span class="line"><span class="comment">#加载 R 包</span></span><br><span class="line"><span class="keyword">library</span>(ggplot2)</span><br><span class="line"><span class="comment"># ggplot画图</span></span><br><span class="line">p0 &lt;- ggplot(df, aes(name,Money,fill = name)) +</span><br><span class="line">  geom_col(position = position_dodge(width = <span class="number">0.8</span>),color=<span class="string">"black"</span>) +</span><br><span class="line">  labs(x = <span class="literal">NULL</span>, y = <span class="literal">NULL</span>) +</span><br><span class="line">  scale_fill_brewer(palette=<span class="string">"Accent"</span>)+</span><br><span class="line">  <span class="comment">#scale_x_discrete(expand = c(0, 0)) +</span></span><br><span class="line">  scale_y_continuous(breaks = seq(<span class="number">0</span>, <span class="number">1600</span>, <span class="number">400</span>), limits = c(<span class="number">0</span>, <span class="number">1600</span>), expand = c(<span class="number">0</span>,<span class="number">0</span>)) +</span><br><span class="line">  theme(axis.text.x = element_text(angle = <span class="number">45</span>, hjust = <span class="number">1</span>), legend.title = element_blank())</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/12/R_y_fracture_plot.htm/fig1.png" alt="fig1" style="zoom:25%;"></p>
+<h3 id="方法一：分割-组合法"><a href="#方法一：分割-组合法" class="headerlink" title="方法一：分割+组合法"></a>方法一：分割+组合法</h3><p>这种方法的思路是分别绘制不同层级大小的图形，然后组合图形。如可一用ggplot2中的<code>coord_cartesian()</code>函数分割，<code>ylim</code>指定y轴的区间范围。</p>
+<blockquote>
+<p>参考：<a href="http://blog.sciencenet.cn/blog-3406804-1156908.html" target="_blank" rel="noopener">http://blog.sciencenet.cn/blog-3406804-1156908.html</a></p>
+</blockquote>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">### 小数据层级</span></span><br><span class="line">p1 &lt;- p0 + coord_cartesian(ylim = c(<span class="number">0</span>, <span class="number">50</span>)) + </span><br><span class="line">  theme_classic()+</span><br><span class="line">  theme(legend.position=<span class="string">"none"</span>)</span><br><span class="line">  </span><br><span class="line"><span class="comment">### 大数据层级</span></span><br><span class="line"><span class="comment"># 不显示X轴坐标和文本标记</span></span><br><span class="line">p2 &lt;-p0 + coord_cartesian(ylim = c(<span class="number">700</span>, <span class="number">1600</span>)) + </span><br><span class="line">  theme_classic() +</span><br><span class="line">  theme(axis.line.x = element_line(colour=<span class="string">"white"</span>),</span><br><span class="line">        axis.text.x = element_blank(), axis.ticks.x = element_blank(), </span><br><span class="line">        legend.position = c(<span class="number">0.85</span>, <span class="number">0.6</span>))</span><br></pre></td></tr></table></figure>
+<p><code>P1</code></p>
+<p><img src="/2019/12/R_y_fracture_plot.htm/fig2.png" style="zoom: 25%;"></p>
+<p><code>p2</code></p>
+<p><img src="/2019/12/R_y_fracture_plot.htm/fig3.png" style="zoom:25%;"></p>
+<p>grid组合图形, <code>grid.newpage()</code>新建画布, <code>viewport()</code>命令将画板分割为不同的区域。</p>
+<blockquote>
+<p>x和y分别用于指定所放置子图在画板中的坐标，坐标取值范围为0~1，并使用just给定坐标起始位置；width和height用于指定所放置子图在画板中的高度和宽度。</p>
+</blockquote>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(grid)</span><br><span class="line"></span><br><span class="line">grid.newpage() <span class="comment">#新建画布</span></span><br><span class="line">plot_site1 &lt;- viewport(x = <span class="number">0.008</span>, y = <span class="number">0</span>, width = <span class="number">0.994</span>, height = <span class="number">0.4</span>, just = c(<span class="string">'left'</span>, <span class="string">'bottom'</span>))</span><br><span class="line">plot_site2 &lt;- viewport(x = <span class="number">0.008</span>, y = <span class="number">0.4</span>, width = <span class="number">1</span>, height = <span class="number">0.5</span>, just = c(<span class="string">'left'</span>, <span class="string">'bottom'</span>))</span><br><span class="line"><span class="comment">#plot_site3 &lt;- viewport(x = 0, y = 0.7, width = 1, height = 0.3, just = c('left', 'bottom'))</span></span><br><span class="line">print(p1, vp = plot_site1)</span><br><span class="line">print(p2, vp = plot_site2)</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/12/R_y_fracture_plot.htm/fig4.png" style="zoom:50%;"></p>
+<p>这种方法可以得到一个草图，图片对齐等细节调节需要多次尝试，或者可以导出在AI中修改。</p>
+<h3 id="方法二：plotrix-R包"><a href="#方法二：plotrix-R包" class="headerlink" title="方法二：plotrix R包"></a>方法二：plotrix R包</h3><p>plotrix R中包含<code>gap.plot()，gap.barplot() 和 gapboxplot()函数</code>, 可以分别画出坐标轴截断的散点图、柱状图和箱线图。主要参数包括<code>y    ：要截断的数值向量; gap：截断的区间</code>.</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">### 用法如下</span></span><br><span class="line"> gap.barplot(y,gap,xaxlab,xtics,yaxlab,ytics,xlim=<span class="literal">NA</span>,ylim=<span class="literal">NA</span>,xlab=<span class="literal">NULL</span>,</span><br><span class="line">  ylab=<span class="literal">NULL</span>,horiz=<span class="literal">FALSE</span>,col,<span class="keyword">...</span>)</span><br><span class="line"><span class="comment">### Arguments</span></span><br><span class="line">y	：要截断的数值向量</span><br><span class="line">gap	：截断的区间</span><br><span class="line"></span><br><span class="line">xaxlab	：labels <span class="keyword">for</span> the x axis ticks</span><br><span class="line">xtics	：position of the x axis ticks</span><br><span class="line">yaxlab	：labels <span class="keyword">for</span> the y axis ticks</span><br><span class="line">ytics	：position of the y axis ticks</span><br><span class="line">xlim	：Optional x limits <span class="keyword">for</span> the plot</span><br><span class="line">ylim	：optional y limits <span class="keyword">for</span> the plot</span><br><span class="line">xlab	：label <span class="keyword">for</span> the x axis</span><br><span class="line">ylab	：label <span class="keyword">for</span> the y axis</span><br><span class="line">horiz	：whether to have vertical or horizontal bars</span><br><span class="line">col	：color(s) <span class="keyword">in</span> which to plot the values</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>参考：<a href="http://www.bioon.com.cn/protocol/showarticle.asp?newsid=66061" target="_blank" rel="noopener">http://www.bioon.com.cn/protocol/showarticle.asp?newsid=66061</a></p>
+</blockquote>
+<p>相同的数据，画图如下</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#install.packages ("plotrix")</span></span><br><span class="line"><span class="keyword">library</span> (plotrix)</span><br><span class="line"></span><br><span class="line">gap.barplot(df$Money,gap=c(<span class="number">50</span>,<span class="number">740</span>),xaxlab=df$name,ytics=c(<span class="number">50</span>,<span class="number">700</span>,<span class="number">800</span>,<span class="number">900</span>,<span class="number">1000</span>,<span class="number">1100</span>,<span class="number">1200</span>,<span class="number">1300</span>,<span class="number">1400</span>,<span class="number">1500</span>,<span class="number">1600</span>),</span><br><span class="line">            col=rainbow(<span class="number">7</span>),xlim = c(<span class="number">0</span>,<span class="number">8</span>),width=<span class="number">0.06</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/12/R_y_fracture_plot.htm/fig5.png" style="zoom:50%;"></p>
+<p>接着使用<code>axis breaks()</code>函数去除中间的两道横线，并添加截断的标记，如<code>//</code>或<code>z</code>。</p>
+<ul>
+<li><code>Axis</code>:1,2,3,4分别代表下、左、上、右方位的坐标轴，即打算截取的坐标轴</li>
+<li><code>breakppos</code>：截断的位置，即截断符号添加的位置</li>
+<li><code>style</code>: gap,slash和z字形</li>
+</ul>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">axis.break(<span class="number">2</span>,<span class="number">50</span>,breakcol=<span class="string">"snow"</span>,style=<span class="string">"gap"</span>) <span class="comment">##去掉中间的那两道横线；</span></span><br><span class="line">axis.break(<span class="number">2</span>,<span class="number">50</span>*(<span class="number">1</span>+<span class="number">0.02</span>),breakcol=<span class="string">"black"</span>,style=<span class="string">"slash"</span>)<span class="comment">##在左侧Y轴把gap位置换成slash；</span></span><br><span class="line"><span class="comment">#axis.break(4,50*(1+0.02),breakcol="black",style="slash")##在右侧Y轴把gap位置换成slash；</span></span><br></pre></td></tr></table></figure>
+<p><img src="/2019/12/R_y_fracture_plot.htm/fig6.png" style="zoom:50%;"></p>
+<p>这种方法是基于base plot绘图的，但是base plot的许多绘图参数与gap.barplot（）并不兼容，如<code>space和width参数</code>设置离坐标轴距离和bar的宽度。</p>
+<h3 id="方法三：基本绘图函数-plotrix-R包"><a href="#方法三：基本绘图函数-plotrix-R包" class="headerlink" title="方法三：基本绘图函数+plotrix R包"></a>方法三：基本绘图函数+plotrix R包</h3><blockquote>
+<p>参考：<a href="https://blog.csdn.net/u014801157/article/details/24372371" target="_blank" rel="noopener">https://blog.csdn.net/u014801157/article/details/24372371</a></p>
+</blockquote>
+<p>作者ZGUANG@LZU自己编写的函数，可以手动设置断点，也可以由函数自动计算。断点位置的符号表示提供了平行线和zigzag两种，并且可设置背景颜色、大小、线型、平行线旋转角度等。</p>
+<h4 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h4><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#' 使用R基本绘图函数绘制y轴不连续的柱形图</span></span><br><span class="line"><span class="comment">#'</span></span><br><span class="line"><span class="comment">#' 绘制y轴不连续的柱形图，具有误差线添加功能。断点位置通过btm和top参数设置，如果不设置，函数可自动计算合适的断点位置。</span></span><br><span class="line"><span class="comment">#' @title gap.barplot function</span></span><br><span class="line"><span class="comment">#' @param df 长格式的data.frame，即数据框中每一列为一组绘图数据。</span></span><br><span class="line"><span class="comment">#' @param y.cols 用做柱形图y值的数据列（序号或名称），一列为一组。</span></span><br><span class="line"><span class="comment">#' @param sd.cols 与y值列顺序对应的误差值的数据列（序号或名称）。</span></span><br><span class="line"><span class="comment">#' @param btm 低位断点。如果btm和top均不设置，程序将自动计算和设置断点位置。</span></span><br><span class="line"><span class="comment">#' @param top 高位断点。</span></span><br><span class="line"><span class="comment">#' @param min.range 自动计算断点的阈值：最大值与最小值的最小比值</span></span><br><span class="line"><span class="comment">#' @param max.fold 自动计算断点时最大值与下方数据最大值的最大倍数比</span></span><br><span class="line"><span class="comment">#' @param ratio 断裂后上部与下部y轴长度的比例。</span></span><br><span class="line"><span class="comment">#' @param gap.width y轴断裂位置的相对物理宽度（非坐标轴实际刻度）</span></span><br><span class="line"><span class="comment">#' @param brk.type 断点类型，可设为normal或zigzag</span></span><br><span class="line"><span class="comment">#' @param brk.bg 断点处的背景颜色</span></span><br><span class="line"><span class="comment">#' @param brk.srt 断点标记线旋转角度</span></span><br><span class="line"><span class="comment">#' @param brk.size 断点标记线的大小（长度）</span></span><br><span class="line"><span class="comment">#' @param brk.col 断点标记线的颜色</span></span><br><span class="line"><span class="comment">#' @param brk.lwd 断点标记线的线宽</span></span><br><span class="line"><span class="comment">#' @param cex.error 误差线相对长度，默认为1</span></span><br><span class="line"><span class="comment">#' @param ... 其他传递给R基本绘图函数barplot的参数</span></span><br><span class="line"><span class="comment">#' @return 返回barplot的原始返回值，即柱形图的x坐标</span></span><br><span class="line"><span class="comment">#' @examples</span></span><br><span class="line"><span class="comment">#' datax &lt;- na.omit(airquality)[,1:4]</span></span><br><span class="line"><span class="comment">#' cols &lt;- cm.colors(ncol(datax))</span></span><br><span class="line"><span class="comment">#' layout(matrix(1:6, ncol=2))</span></span><br><span class="line"><span class="comment">#' set.seed(0)</span></span><br><span class="line"><span class="comment">#' for (ndx in 1:6)&#123;</span></span><br><span class="line"><span class="comment">#'     dt &lt;- datax[sample(rownames(datax), 10), ]</span></span><br><span class="line"><span class="comment">#'     par(mar=c(0.5,2,0.5,0.5))</span></span><br><span class="line"><span class="comment">#'     brkt &lt;- sample(c('normal', 'zigzag'), 1)</span></span><br><span class="line"><span class="comment">#'     gap.barplot(dt, col=cols, brk.type=brkt, max.fold=5, ratio=2)</span></span><br><span class="line"><span class="comment">#' &#125;</span></span><br><span class="line"><span class="comment">#' @author ZG Zhao</span></span><br><span class="line"><span class="comment">#' @export</span></span><br><span class="line">gap.barplot &lt;- <span class="keyword">function</span>(df, y.cols = <span class="number">1</span>:ncol(df), sd.cols = <span class="literal">NULL</span>, btm = <span class="literal">NULL</span>,</span><br><span class="line">                        top = <span class="literal">NULL</span>, min.range = <span class="number">10</span>, max.fold = <span class="number">5</span>, ratio = <span class="number">1</span>, gap.width = <span class="number">1</span>, brk.type = <span class="string">"normal"</span>,</span><br><span class="line">                        brk.bg = <span class="string">"white"</span>, brk.srt = <span class="number">135</span>, brk.size = <span class="number">1</span>, brk.col = <span class="string">"black"</span>, brk.lwd = <span class="number">1</span>,</span><br><span class="line">                        cex.error = <span class="number">1</span>, <span class="keyword">...</span>) &#123;</span><br><span class="line">  <span class="keyword">if</span> (missing(df))</span><br><span class="line">    <span class="keyword">stop</span>(<span class="string">"No data provided."</span>)</span><br><span class="line">  <span class="keyword">if</span> (is.numeric(y.cols))</span><br><span class="line">    ycol &lt;- y.cols <span class="keyword">else</span> ycol &lt;- colnames(df) == y.cols</span><br><span class="line">    <span class="keyword">if</span> (!is.null(sd.cols))</span><br><span class="line">      <span class="keyword">if</span> (is.numeric(sd.cols))</span><br><span class="line">        scol &lt;- sd.cols <span class="keyword">else</span> scol &lt;- colnames(df) == sd.cols</span><br><span class="line">        <span class="comment">## Arrange data</span></span><br><span class="line">        opts &lt;- options()</span><br><span class="line">        options(warn = -<span class="number">1</span>)</span><br><span class="line">        y &lt;- t(df[, ycol])</span><br><span class="line">        colnames(y) &lt;- <span class="literal">NULL</span></span><br><span class="line">        <span class="keyword">if</span> (missing(sd.cols))</span><br><span class="line">          sdx &lt;- <span class="number">0</span> <span class="keyword">else</span> sdx &lt;- t(df[, scol])</span><br><span class="line">        sdu &lt;- y + sdx</span><br><span class="line">        sdd &lt;- y - sdx</span><br><span class="line">        ylim &lt;- c(<span class="number">0</span>, max(sdu) * <span class="number">1.05</span>)</span><br><span class="line">        <span class="comment">## 如果没有设置btm或top，自动计算</span></span><br><span class="line">        <span class="keyword">if</span> (is.null(btm) | is.null(top)) &#123;</span><br><span class="line">          autox &lt;- .auto.breaks(dt = sdu, min.range = min.range, max.fold = max.fold)</span><br><span class="line">          <span class="keyword">if</span> (autox$flag) &#123;</span><br><span class="line">            btm &lt;- autox$btm</span><br><span class="line">            top &lt;- autox$top</span><br><span class="line">          &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            xx &lt;- barplot(y, beside = <span class="literal">TRUE</span>, ylim = ylim, <span class="keyword">...</span>)</span><br><span class="line">            <span class="keyword">if</span> (!missing(sd.cols))</span><br><span class="line">              errorbar(xx, y, sdu - y, horiz = <span class="literal">FALSE</span>, cex = cex.error)</span><br><span class="line">            box()</span><br><span class="line">            <span class="keyword">return</span>(invisible(xx))</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">## Set up virtual y limits</span></span><br><span class="line">        halflen &lt;- btm - ylim[<span class="number">1</span>]</span><br><span class="line">        xlen &lt;- halflen * <span class="number">0.1</span> * gap.width</span><br><span class="line">        v_tps1 &lt;- btm + xlen  <span class="comment"># virtual top positions</span></span><br><span class="line">        v_tps2 &lt;- v_tps1 + halflen * ratio</span><br><span class="line">        v_ylim &lt;- c(ylim[<span class="number">1</span>], v_tps2)</span><br><span class="line">        r_tps1 &lt;- top  <span class="comment"># real top positions</span></span><br><span class="line">        r_tps2 &lt;- ylim[<span class="number">2</span>]</span><br><span class="line">        <span class="comment">## Rescale data</span></span><br><span class="line">        lmx &lt;- summary(lm(c(v_tps1, v_tps2) ~ c(r_tps1, r_tps2)))</span><br><span class="line">        lmx &lt;- lmx$coefficients</span><br><span class="line">        sel1 &lt;- y &gt; top</span><br><span class="line">        sel2 &lt;- y &gt;= btm &amp; y &lt;= top</span><br><span class="line">        y[sel1] &lt;- y[sel1] * lmx[<span class="number">2</span>] + lmx[<span class="number">1</span>]</span><br><span class="line">        y[sel2] &lt;- btm + xlen/<span class="number">2</span></span><br><span class="line">        sel1 &lt;- sdd &gt; top</span><br><span class="line">        sel2 &lt;- sdd &gt;= btm &amp; sdd &lt;= top</span><br><span class="line">        sdd[sel1] &lt;- sdd[sel1] * lmx[<span class="number">2</span>] + lmx[<span class="number">1</span>]</span><br><span class="line">        sdd[sel2] &lt;- btm + xlen/<span class="number">2</span></span><br><span class="line">        sel1 &lt;- sdu &gt; top</span><br><span class="line">        sel2 &lt;- sdu &gt;= btm &amp; sdu &lt;= top</span><br><span class="line">        sdu[sel1] &lt;- sdu[sel1] * lmx[<span class="number">2</span>] + lmx[<span class="number">1</span>]</span><br><span class="line">        sdu[sel2] &lt;- btm + xlen/<span class="number">2</span></span><br><span class="line">        <span class="comment">## bar plot</span></span><br><span class="line">        xx &lt;- barplot(y, beside = <span class="literal">TRUE</span>, ylim = v_ylim, axes = <span class="literal">FALSE</span>, names.arg = <span class="literal">NULL</span>,</span><br><span class="line">                      <span class="keyword">...</span>)</span><br><span class="line">        <span class="comment">## error bars</span></span><br><span class="line">        <span class="keyword">if</span> (!missing(sd.cols))</span><br><span class="line">          errorbar(xx, y, sdu - y, horiz = <span class="literal">FALSE</span>, cex = cex.error)</span><br><span class="line">        <span class="comment">## Real ticks and labels</span></span><br><span class="line">        brks1 &lt;- pretty(seq(<span class="number">0</span>, btm, length = <span class="number">10</span>), n = <span class="number">4</span>)</span><br><span class="line">        brks1 &lt;- brks1[brks1 &gt;= <span class="number">0</span> &amp; brks1 &lt; btm]</span><br><span class="line">        brks2 &lt;- pretty(seq(top, r_tps2, length = <span class="number">10</span>), n = <span class="number">4</span>)</span><br><span class="line">        brks2 &lt;- brks2[brks2 &gt; top &amp; brks2 &lt;= r_tps2]</span><br><span class="line">        labx &lt;- c(brks1, brks2)</span><br><span class="line">        <span class="comment">## Virtual ticks</span></span><br><span class="line">        brks &lt;- c(brks1, brks2 * lmx[<span class="number">2</span>] + lmx[<span class="number">1</span>])</span><br><span class="line">        axis(<span class="number">2</span>, at = brks, labels = labx)</span><br><span class="line">        box()</span><br><span class="line">        <span class="comment">## break marks</span></span><br><span class="line">        pos &lt;- par(<span class="string">"usr"</span>)</span><br><span class="line">        xyratio &lt;- (pos[<span class="number">2</span>] - pos[<span class="number">1</span>])/(pos[<span class="number">4</span>] - pos[<span class="number">3</span>])</span><br><span class="line">        xlen &lt;- (pos[<span class="number">2</span>] - pos[<span class="number">1</span>])/<span class="number">50</span> * brk.size</span><br><span class="line">        px1 &lt;- pos[<span class="number">1</span>] - xlen</span><br><span class="line">        px2 &lt;- pos[<span class="number">1</span>] + xlen</span><br><span class="line">        px3 &lt;- pos[<span class="number">2</span>] - xlen</span><br><span class="line">        px4 &lt;- pos[<span class="number">2</span>] + xlen</span><br><span class="line">        py1 &lt;- btm</span><br><span class="line">        py2 &lt;- v_tps1</span><br><span class="line">        rect(px1, py1, px4, py2, col = brk.bg, xpd = <span class="literal">TRUE</span>, border = brk.bg)</span><br><span class="line">        x1 &lt;- c(px1, px1, px3, px3)</span><br><span class="line">        x2 &lt;- c(px2, px2, px4, px4)</span><br><span class="line">        y1 &lt;- c(py1, py2, py1, py2)</span><br><span class="line">        y2 &lt;- c(py1, py2, py1, py2)</span><br><span class="line">        px &lt;- .xy.adjust(x1, x2, y1, y2, xlen, xyratio, angle = brk.srt * pi/<span class="number">90</span>)</span><br><span class="line">        <span class="keyword">if</span> (brk.type == <span class="string">"zigzag"</span>) &#123;</span><br><span class="line">          x1 &lt;- c(x1, px1, px3)</span><br><span class="line">          x2 &lt;- c(x2, px2, px4)</span><br><span class="line">          <span class="keyword">if</span> (brk.srt &gt; <span class="number">90</span>) &#123;</span><br><span class="line">            y1 &lt;- c(y1, py2, py2)</span><br><span class="line">            y2 &lt;- c(y2, py1, py1)</span><br><span class="line">          &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            y1 &lt;- c(y1, py1, py1)</span><br><span class="line">            y2 &lt;- c(y2, py2, py2)</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (brk.type == <span class="string">"zigzag"</span>) &#123;</span><br><span class="line">          px$x1 &lt;- c(pos[<span class="number">1</span>], px2, px1, pos[<span class="number">2</span>], px4, px3)</span><br><span class="line">          px$x2 &lt;- c(px2, px1, pos[<span class="number">1</span>], px4, px3, pos[<span class="number">2</span>])</span><br><span class="line">          mm &lt;- (v_tps1 - btm)/<span class="number">3</span></span><br><span class="line">          px$y1 &lt;- rep(c(v_tps1, v_tps1 - mm, v_tps1 - <span class="number">2</span> * mm), <span class="number">2</span>)</span><br><span class="line">          px$y2 &lt;- rep(c(v_tps1 - mm, v_tps1 - <span class="number">2</span> * mm, btm), <span class="number">2</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        par(xpd = <span class="literal">TRUE</span>)</span><br><span class="line">        segments(px$x1, px$y1, px$x2, px$y2, lty = <span class="number">1</span>, col = brk.col, lwd = brk.lwd)</span><br><span class="line">        options(opts)</span><br><span class="line">        par(xpd = <span class="literal">FALSE</span>)</span><br><span class="line">        invisible(xx)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">## 绘制误差线的函数</span></span><br><span class="line">errorbar &lt;- <span class="keyword">function</span>(x, y, sd.lwr, sd.upr, horiz = <span class="literal">FALSE</span>, cex = <span class="number">1</span>, <span class="keyword">...</span>) &#123;</span><br><span class="line">  <span class="keyword">if</span> (missing(sd.lwr) &amp; missing(sd.upr))</span><br><span class="line">    <span class="keyword">return</span>(<span class="literal">NULL</span>)</span><br><span class="line">  <span class="keyword">if</span> (missing(sd.upr))</span><br><span class="line">    sd.upr &lt;- sd.lwr</span><br><span class="line">  <span class="keyword">if</span> (missing(sd.lwr))</span><br><span class="line">    sd.lwr &lt;- sd.upr</span><br><span class="line">  <span class="keyword">if</span> (!horiz) &#123;</span><br><span class="line">    arrows(x, y, y1 = y - sd.lwr, length = <span class="number">0.1</span> * cex, angle = <span class="number">90</span>, <span class="keyword">...</span>)</span><br><span class="line">    arrows(x, y, y1 = y + sd.upr, length = <span class="number">0.1</span> * cex, angle = <span class="number">90</span>, <span class="keyword">...</span>)</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    arrows(y, x, x1 = y - sd.lwr, length = <span class="number">0.1</span> * cex, angle = <span class="number">90</span>, <span class="keyword">...</span>)</span><br><span class="line">    arrows(y, x, x1 = y + sd.upr, length = <span class="number">0.1</span> * cex, angle = <span class="number">90</span>, <span class="keyword">...</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">.xy.adjust &lt;- <span class="keyword">function</span>(x1, x2, y1, y2, xlen, xyratio, angle) &#123;</span><br><span class="line">  xx1 &lt;- x1 - xlen * cos(angle)</span><br><span class="line">  yy1 &lt;- y1 + xlen * sin(angle)/xyratio</span><br><span class="line">  xx2 &lt;- x2 + xlen * cos(angle)</span><br><span class="line">  yy2 &lt;- y2 - xlen * sin(angle)/xyratio</span><br><span class="line">  <span class="keyword">return</span>(list(x1 = xx1, x2 = xx2, y1 = yy1, y2 = yy2))</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">## 自动计算断点位置的函数</span></span><br><span class="line">.auto.breaks &lt;- <span class="keyword">function</span>(dt, min.range, max.fold) &#123;</span><br><span class="line">  datax &lt;- sort(as.vector(dt))</span><br><span class="line">  flags &lt;- <span class="literal">FALSE</span></span><br><span class="line">  btm &lt;- top &lt;- <span class="literal">NULL</span></span><br><span class="line">  <span class="keyword">if</span> (max(datax)/min(datax) &lt; min.range)</span><br><span class="line">    <span class="keyword">return</span>(list(flag = flags, btm = btm, top = top))</span><br><span class="line">  m &lt;- max(datax)</span><br><span class="line">  btm &lt;- datax[<span class="number">2</span>]</span><br><span class="line">  i &lt;- <span class="number">3</span></span><br><span class="line">  <span class="keyword">while</span> (m/datax[i] &gt; max.fold) &#123;</span><br><span class="line">    btm &lt;- datax[i]</span><br><span class="line">    flags &lt;- <span class="literal">TRUE</span></span><br><span class="line">    i &lt;- i + <span class="number">1</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (flags) &#123;</span><br><span class="line">    btm &lt;- btm + <span class="number">0.05</span> * btm</span><br><span class="line">    x &lt;- <span class="number">2</span></span><br><span class="line">    top &lt;- datax[i] * (x - <span class="number">1</span>)/x</span><br><span class="line">    <span class="keyword">while</span> (top &lt; btm) &#123;</span><br><span class="line">      x &lt;- x + <span class="number">1</span></span><br><span class="line">      top &lt;- datax[i] * (x - <span class="number">1</span>)/x</span><br><span class="line">      <span class="keyword">if</span> (x &gt; <span class="number">100</span>) &#123;</span><br><span class="line">        flags &lt;- <span class="literal">FALSE</span></span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span>(list(flag = flags, btm = btm, top = top))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="示例数据-1"><a href="#示例数据-1" class="headerlink" title="示例数据"></a>示例数据</h4><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">datax &lt;- na.omit(airquality)[, <span class="number">1</span>:<span class="number">4</span>]</span><br><span class="line">cols &lt;- terrain.colors(ncol(datax) - <span class="number">1</span>)</span><br><span class="line">layout(matrix(<span class="number">1</span>:<span class="number">4</span>, ncol = <span class="number">2</span>))</span><br><span class="line">set.seed(<span class="number">0</span>)</span><br><span class="line"><span class="keyword">for</span> (ndx <span class="keyword">in</span> <span class="number">1</span>:<span class="number">4</span>) &#123;</span><br><span class="line">  dt &lt;- datax[sample(rownames(datax), <span class="number">10</span>), ]</span><br><span class="line">  dt &lt;- cbind(dt, dt[, -<span class="number">1</span>] * <span class="number">0.1</span>)</span><br><span class="line">  par(mar = c(<span class="number">1</span>, <span class="number">3</span>, <span class="number">0.5</span>, <span class="number">0.5</span>))</span><br><span class="line">  brkt &lt;- sample(c(<span class="string">"normal"</span>, <span class="string">"zigzag"</span>), <span class="number">1</span>)</span><br><span class="line">  gap.barplot(dt, y.cols = <span class="number">2</span>:<span class="number">4</span>, sd.cols = <span class="number">5</span>:<span class="number">7</span>, col = cols, brk.type = brkt,</span><br><span class="line">              brk.size = <span class="number">0.6</span>, brk.lwd = <span class="number">2</span>, max.fold = <span class="number">5</span>, ratio = <span class="number">2</span>, cex.error = <span class="number">0.3</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/12/R_y_fracture_plot.htm/fig7.png" style="zoom:50%;"></p>
+<h4 id="实际数据"><a href="#实际数据" class="headerlink" title="实际数据"></a>实际数据</h4><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gap.barplot(df, y.cols = <span class="number">2</span>, brk.type = <span class="string">"normal"</span>,col = rainbow(<span class="number">7</span>),</span><br><span class="line">            brk.size = <span class="number">0.6</span>, brk.lwd = <span class="number">2</span>, max.fold = <span class="number">5</span>, ratio = <span class="number">2</span>, cex.error = <span class="number">0.3</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/12/R_y_fracture_plot.htm/fig8.png" style="zoom:50%;"></p>
+<p>第3种方法可以直接计算截断值，另外可以添加error bar, 可以修改的细节处更多，而且包装成函数，整个分析时间也加快。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/R/" rel="tag"># R</a>
+          
+            <a href="/tags/visualization/" rel="tag"># visualization</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/12/index.html" rel="next" title="深度学习揭示体内肿瘤的转移和抗体靶向治疗效率">
+                <i class="fa fa-chevron-left"></i> 深度学习揭示体内肿瘤的转移和抗体靶向治疗效率
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/12/evaluation_scRNA-seq_analysis_pipelines.html" rel="prev" title="单细胞RNA-seq分析流程的系统评估">
+                单细胞RNA-seq分析流程的系统评估 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">六六</p>
+              <p class="site-description motion-element" itemprop="description">Seize the day! Collect the moment! Share the memory!</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">106</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">39</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#示例数据"><span class="nav-number">1.</span> <span class="nav-text">示例数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法一：分割-组合法"><span class="nav-number">2.</span> <span class="nav-text">方法一：分割+组合法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法二：plotrix-R包"><span class="nav-number">3.</span> <span class="nav-text">方法二：plotrix R包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法三：基本绘图函数-plotrix-R包"><span class="nav-number">4.</span> <span class="nav-text">方法三：基本绘图函数+plotrix R包</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#函数"><span class="nav-number">4.1.</span> <span class="nav-text">函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#示例数据-1"><span class="nav-number">4.2.</span> <span class="nav-text">示例数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实际数据"><span class="nav-number">4.3.</span> <span class="nav-text">实际数据</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">六六</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">65.5k</span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共65.5k字</span>
+</div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'liuliu66',
+        appKey: 'LLryx0379',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
