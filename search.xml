@@ -392,9 +392,9 @@
     <url>%2F2019%2F12%2Fsingle-cell_analysis_with_Bioconductor.html</url>
     <content type="text"><![CDATA[文章介绍： Bioconductor是一个针对生物数据分析的以R语言开发的开源软件库，从2001年项目开始至今，提供了很多优秀的分析流程，如bulk-RNA-seq的分析流程，文档非常详细。如今出手整理了单细胞分析的流程，包括软件安装、数据导入、单细胞数据储存、格式转换为下游分析的数据、下游分析、可视化等，非常详细，另外他们提供了在线book：https://osca.bioconductor .，想上手学习单细胞分析的以本书作为一个入门是一个不错的选择。 figure 文章信息 题目：Orchestrating single-cell analysis with Bioconductor 杂志：Nature Methods 时间：02, December, 2019 链接: https://www.nature.com/articles/s41592-019-0654-x 每日文献摘要：第32篇 2019年12月29日 周日]]></content>
       <tags>
-        <tag>R</tag>
         <tag>software</tag>
         <tag>single cell</tag>
+        <tag>R</tag>
       </tags>
   </entry>
   <entry>
@@ -493,8 +493,8 @@
     <url>%2F2019%2F11%2FtrackViewer_genome_browser.html</url>
     <content type="text"><![CDATA[常见的可视化基因组track的Bioconductor package有rtracklayer 和 Gviz。rtracklayer提供了交互的基因组浏览器和相关tracks的注释；Gviz可以用于tracks覆盖度和注释的可视化。trackViewer是一个更轻量级的工具，且可以产生交互的可视化结果。可用于RNA-seq,ChIP-seq/ATAC-seq,miRNA-seq,DNA-seq,methylation等各种NGS组学数据的覆盖度和注释tracks的可视化展示，而且可以绘制发表级的棒棒糖图和蒲公英图。 先展示下极好看可视化效果 使用方法可以参考文档： 详细文档：http://127.0.0.1:31580/library/trackViewer/doc/trackViewer.html Web app: https://github.com/jianhong/trackViewer.documentation/tree/master/trackViewerShinyApp]]></content>
       <tags>
-        <tag>R</tag>
         <tag>ATACseq</tag>
+        <tag>R</tag>
         <tag>visualization</tag>
         <tag>ChIPseq</tag>
       </tags>
