@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/categories/index.html</loc>
+    
+    <lastmod>2020-09-11T21:17:15.225Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/index.html</loc>
+    
+    <lastmod>2020-09-11T21:16:46.228Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/06/Numpy_introduction.html</loc>
+    
+    <lastmod>2020-09-11T20:59:19.372Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/06/Pandas_libarary.html</loc>
+    
+    <lastmod>2020-09-11T20:58:55.751Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2019/08/ATACseq10.html</loc>
     
     <lastmod>2020-09-11T20:55:52.282Z</lastmod>
@@ -674,20 +702,6 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2020/06/Pandas_libarary.html</loc>
-    
-    <lastmod>2020-09-11T17:36:21.353Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2020/06/Numpy_introduction.html</loc>
-    
-    <lastmod>2020-09-11T17:35:37.838Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2020/05/lncRNAs_conserved_Functions.html</loc>
     
     <lastmod>2020-09-11T17:34:42.577Z</lastmod>
@@ -733,20 +747,6 @@
     <loc>http://yoursite.com/2019/08/awk_base.html</loc>
     
     <lastmod>2020-09-11T17:28:37.841Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/categories/index.html</loc>
-    
-    <lastmod>2019-08-23T01:41:32.483Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/tags/index.html</loc>
-    
-    <lastmod>2019-08-22T16:00:24.597Z</lastmod>
     
   </url>
   

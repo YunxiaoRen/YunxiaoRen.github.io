@@ -69,7 +69,7 @@
       <link href="/2020/06/Pandas_libarary.html"/>
       <url>/2020/06/Pandas_libarary.html</url>
       
-        <content type="html"><![CDATA[<p>Pandas库是基于Numpy库来创建的，Numpy主要用于矩阵操作，而Pandas主要用于数据处理。</p><p>Pandas主要有两种重要的数据结构：Series和DataFrame.</p><ul><li>Series: 类似一个一维数组，一个Series对应DataFrame的一列</li><li>DataFrame:类似一个二维数组，一个DataFrame由几个Series列构成。</li></ul><p><img src="/2020/06/Pandas_libarary.htm/1591819950732-0cf02f6a-c25b-4ca1-8876-17dc2e63dd9e.png" alt="image.png"></p><h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ul><li><a href="https://zhuanlan.zhihu.com/p/40373125" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/40373125</a></li><li><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html" target="_blank" rel="noopener">https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html</a></li></ul>]]></content>
+        <content type="html"><![CDATA[<p>Pandas库是基于Numpy库来创建的，Numpy主要用于矩阵操作，而Pandas主要用于数据处理。</p><p>Pandas主要有两种重要的数据结构：Series和DataFrame.</p><ul><li><p>Series: 类似一个一维数组，一个Series对应DataFrame的一列</p></li><li><p>DataFrame:类似一个二维数组，一个DataFrame由几个Series列构成。</p></li></ul><p><img src="/2020/06/Pandas_libarary.htm/1591819950732-0cf02f6a-c25b-4ca1-8876-17dc2e63dd9e.png" alt="image.png"></p><h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ul><li><a href="https://zhuanlan.zhihu.com/p/40373125" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/40373125</a></li><li><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html" target="_blank" rel="noopener">https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html</a></li></ul>]]></content>
       
       
       
@@ -767,9 +767,9 @@
       
         <tags>
             
-            <tag> 文献摘要 </tag>
-            
             <tag> ATACseq </tag>
+            
+            <tag> 文献摘要 </tag>
             
         </tags>
       
@@ -920,9 +920,9 @@
       
         <tags>
             
-            <tag> single cell </tag>
-            
             <tag> software </tag>
+            
+            <tag> single cell </tag>
             
             <tag> R </tag>
             
@@ -962,9 +962,9 @@
       
         <tags>
             
-            <tag> 文献摘要 </tag>
-            
             <tag> software </tag>
+            
+            <tag> 文献摘要 </tag>
             
             <tag> 降维 </tag>
             
@@ -1056,11 +1056,11 @@
       
         <tags>
             
+            <tag> ATACseq </tag>
+            
             <tag> single cell </tag>
             
             <tag> 文献摘要 </tag>
-            
-            <tag> ATACseq </tag>
             
         </tags>
       
@@ -1079,9 +1079,9 @@
       
         <tags>
             
-            <tag> 文献摘要 </tag>
-            
             <tag> ATACseq </tag>
+            
+            <tag> 文献摘要 </tag>
             
             <tag> lncRNA </tag>
             
@@ -1214,9 +1214,9 @@
       
         <tags>
             
-            <tag> single cell </tag>
-            
             <tag> software </tag>
+            
+            <tag> single cell </tag>
             
             <tag> scRNA-seq </tag>
             
@@ -1476,13 +1476,13 @@
       
         <tags>
             
-            <tag> single cell </tag>
-            
-            <tag> 文献摘要 </tag>
-            
             <tag> ATACseq </tag>
             
             <tag> software </tag>
+            
+            <tag> single cell </tag>
+            
+            <tag> 文献摘要 </tag>
             
         </tags>
       
@@ -1927,11 +1927,11 @@
       
         <tags>
             
+            <tag> ATACseq </tag>
+            
             <tag> single cell </tag>
             
             <tag> 文献摘要 </tag>
-            
-            <tag> ATACseq </tag>
             
         </tags>
       
@@ -2174,11 +2174,11 @@
       
         <tags>
             
+            <tag> ATACseq </tag>
+            
             <tag> single cell </tag>
             
             <tag> 文献摘要 </tag>
-            
-            <tag> ATACseq </tag>
             
         </tags>
       
