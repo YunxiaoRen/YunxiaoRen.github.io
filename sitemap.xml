@@ -2,13 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2020/09/12/400d0b68.html</loc>
-    
-    <lastmod>2020-09-12T12:40:15.246Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2020/06/28/35362.html</loc>
     
     <lastmod>2020-09-12T11:45:42.747Z</lastmod>
@@ -58,14 +51,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2019/08/23/9634.html</loc>
+    <loc>http://yoursite.com/2019/09/26/13822.html</loc>
     
     <lastmod>2020-09-12T09:49:57.699Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2019/09/26/13822.html</loc>
+    <loc>http://yoursite.com/2019/08/23/9634.html</loc>
     
     <lastmod>2020-09-12T09:49:57.699Z</lastmod>
     
@@ -226,14 +219,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2019/12/29/24700.html</loc>
+    <loc>http://yoursite.com/2019/11/23/10406.html</loc>
     
     <lastmod>2020-09-12T09:49:57.685Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2019/11/23/10406.html</loc>
+    <loc>http://yoursite.com/2019/12/29/24700.html</loc>
     
     <lastmod>2020-09-12T09:49:57.685Z</lastmod>
     
@@ -247,14 +240,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2020/01/04/18319.html</loc>
+    <loc>http://yoursite.com/2020/05/02/25394.html</loc>
     
     <lastmod>2020-09-12T09:49:57.683Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2020/05/02/25394.html</loc>
+    <loc>http://yoursite.com/2020/01/04/18319.html</loc>
     
     <lastmod>2020-09-12T09:49:57.683Z</lastmod>
     
@@ -289,14 +282,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2019/09/26/16514.html</loc>
+    <loc>http://yoursite.com/2019/08/25/58382.html</loc>
     
     <lastmod>2020-09-12T09:49:57.677Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2019/08/25/58382.html</loc>
+    <loc>http://yoursite.com/2019/09/26/16514.html</loc>
     
     <lastmod>2020-09-12T09:49:57.677Z</lastmod>
     
@@ -429,14 +422,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2019/12/28/58882.html</loc>
+    <loc>http://yoursite.com/2019/10/22/60156.html</loc>
     
     <lastmod>2020-09-12T09:49:57.661Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2019/10/22/60156.html</loc>
+    <loc>http://yoursite.com/2019/12/28/58882.html</loc>
     
     <lastmod>2020-09-12T09:49:57.661Z</lastmod>
     
@@ -506,14 +499,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2020/05/13/21825.html</loc>
+    <loc>http://yoursite.com/2020/06/28/25483.html</loc>
     
     <lastmod>2020-09-12T09:49:57.652Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2020/06/28/25483.html</loc>
+    <loc>http://yoursite.com/2020/05/13/21825.html</loc>
     
     <lastmod>2020-09-12T09:49:57.652Z</lastmod>
     
@@ -534,14 +527,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2020/05/13/22345.html</loc>
+    <loc>http://yoursite.com/2020/05/18/8492.html</loc>
     
     <lastmod>2020-09-12T09:49:57.649Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2020/05/18/8492.html</loc>
+    <loc>http://yoursite.com/2020/05/13/22345.html</loc>
     
     <lastmod>2020-09-12T09:49:57.649Z</lastmod>
     
@@ -611,13 +604,6 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2019/08/23/59677.html</loc>
-    
-    <lastmod>2020-09-12T09:49:57.638Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2019/11/23/17068.html</loc>
     
     <lastmod>2020-09-12T09:49:57.638Z</lastmod>
@@ -626,6 +612,13 @@
   
   <url>
     <loc>http://yoursite.com/2019/11/02/61363.html</loc>
+    
+    <lastmod>2020-09-12T09:49:57.638Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/08/23/59677.html</loc>
     
     <lastmod>2020-09-12T09:49:57.638Z</lastmod>
     
