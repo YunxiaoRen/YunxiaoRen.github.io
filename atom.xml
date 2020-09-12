@@ -18,8 +18,8 @@
   
   <entry>
     <title>两个文件的异同</title>
-    <link href="http://yoursite.com/2020/06/28/compare_files.html"/>
-    <id>http://yoursite.com/2020/06/28/compare_files.html</id>
+    <link href="http://yoursite.com/2020/06/28/13171.html"/>
+    <id>http://yoursite.com/2020/06/28/13171.html</id>
     <published>2020-06-28T18:15:28.000Z</published>
     <updated>2020-09-12T09:49:57.647Z</updated>
     
@@ -41,8 +41,8 @@
   
   <entry>
     <title>Linux shell 字符穿操作</title>
-    <link href="http://yoursite.com/2020/06/28/character_shell.html"/>
-    <id>http://yoursite.com/2020/06/28/character_shell.html</id>
+    <link href="http://yoursite.com/2020/06/28/17442.html"/>
+    <id>http://yoursite.com/2020/06/28/17442.html</id>
     <published>2020-06-28T18:15:10.000Z</published>
     <updated>2020-09-12T09:49:57.626Z</updated>
     
@@ -67,8 +67,8 @@
   
   <entry>
     <title>不同服务器间以及服务器与本地的文件传输</title>
-    <link href="http://yoursite.com/2020/06/28/file_transmission.html"/>
-    <id>http://yoursite.com/2020/06/28/file_transmission.html</id>
+    <link href="http://yoursite.com/2020/06/28/28636.html"/>
+    <id>http://yoursite.com/2020/06/28/28636.html</id>
     <published>2020-06-28T18:14:51.000Z</published>
     <updated>2020-09-12T09:49:57.647Z</updated>
     
@@ -92,8 +92,8 @@
   
   <entry>
     <title>Pandas库</title>
-    <link href="http://yoursite.com/2020/06/28/Pandas_libarary.html"/>
-    <id>http://yoursite.com/2020/06/28/Pandas_libarary.html</id>
+    <link href="http://yoursite.com/2020/06/28/45881.html"/>
+    <id>http://yoursite.com/2020/06/28/45881.html</id>
     <published>2020-06-28T18:14:01.000Z</published>
     <updated>2020-09-12T09:49:57.627Z</updated>
     
@@ -120,8 +120,8 @@
   
   <entry>
     <title>NumPy介绍</title>
-    <link href="http://yoursite.com/2020/06/28/Numpy_introduction.html"/>
-    <id>http://yoursite.com/2020/06/28/Numpy_introduction.html</id>
+    <link href="http://yoursite.com/2020/06/28/49844.html"/>
+    <id>http://yoursite.com/2020/06/28/49844.html</id>
     <published>2020-06-28T18:13:50.000Z</published>
     <updated>2020-09-12T09:49:57.627Z</updated>
     
@@ -147,8 +147,8 @@
   
   <entry>
     <title>R语言中读取含有空白内容的数据</title>
-    <link href="http://yoursite.com/2020/06/28/R_read_blank_content.html"/>
-    <id>http://yoursite.com/2020/06/28/R_read_blank_content.html</id>
+    <link href="http://yoursite.com/2020/06/28/64095.html"/>
+    <id>http://yoursite.com/2020/06/28/64095.html</id>
     <published>2020-06-28T18:13:22.000Z</published>
     <updated>2020-09-12T09:49:57.629Z</updated>
     
@@ -171,17 +171,17 @@
   
   <entry>
     <title>apply家族函数的用法</title>
-    <link href="http://yoursite.com/2020/06/28/apply%E5%AE%B6%E6%97%8F%E5%87%BD%E6%95%B0%E7%9A%84%E7%94%A8%E6%B3%95.html"/>
-    <id>http://yoursite.com/2020/06/28/apply家族函数的用法.html</id>
+    <link href="http://yoursite.com/2020/06/28/12691.html"/>
+    <id>http://yoursite.com/2020/06/28/12691.html</id>
     <published>2020-06-28T18:12:47.000Z</published>
     <updated>2020-09-12T09:56:04.930Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="apply家族函数"><a href="#apply家族函数" class="headerlink" title="apply家族函数"></a>apply家族函数</h3><p>apply函数族是R语言中数据处理的一组核心函数，通过使用apply函数，我们可以实现对数据的循环、分组、过滤、类型控制等操作。</p><img src="/2020/06/28/apply家族函数的用法/fig1.png" title="This is an test image"><p><img src="//yoursite.com/2020/06/28/fig1.png" style="zoom:50%;"></p><a id="more"></a><h3 id="apply-函数的用法"><a href="#apply-函数的用法" class="headerlink" title="apply 函数的用法"></a>apply 函数的用法</h3><p>常用的apply族函数有apply和sapply。apply函数是最常用的代替for循环的函数。apply函数可以对矩阵、数据框、数组(二维、多维)，按行或列进行循环计算，对子元素进行迭代，并把子元素以参数传递的形式给自定义的FUN函数中，并以返回计算结果。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apply(X, MARGIN, FUN, ...)</span><br></pre></td></tr></table></figure><p>参数列表：</p><ul><li>X:数组、矩阵、数据框</li><li>MARGIN: 按行计算或按按列计算，1表示按行，2表示按列</li><li>FUN: 自定义的调用函数</li><li>…: 更多参数，可选</li></ul><p>如：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; x&lt;-matrix(1:12,ncol=3)</span><br><span class="line">&gt; apply(x,1,sum)</span><br><span class="line">[1] 15 18 21 24</span><br></pre></td></tr></table></figure><h3 id><a href="#" class="headerlink" title=" "></a> </h3><h3 id="lapply-函数的用法"><a href="#lapply-函数的用法" class="headerlink" title="lapply 函数的用法"></a>lapply 函数的用法</h3><p>lapply函数是一个最基础循环操作函数之一，用来对list、data.frame数据集进行循环，并返回和X长度同样的list结构作为结果集，通过lapply的开头的第一个字母’l’就可以判断返回结果集的类型。</p><p>函数定义：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lapply(X, FUN, ...)</span><br></pre></td></tr></table></figure><p>参数列表：</p><ul><li>X:list、data.frame数据</li><li>FUN: 自定义的调用函数</li><li>…: 更多参数，可选</li></ul><h3 id="sapply函数的用法"><a href="#sapply函数的用法" class="headerlink" title="sapply函数的用法"></a>sapply函数的用法</h3><p>sapply函数是一个简化版的lapply，sapply增加了2个参数simplify和USE.NAMES，主要就是让输出看起来更友好，返回值为向量，而不是list对象。</p><p>函数定义：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sapply(X, FUN, ..., simplify=TRUE, USE.NAMES = TRUE)</span><br></pre></td></tr></table></figure><p>参数列表：</p><ul><li>X:数组、矩阵、数据框</li><li>FUN: 自定义的调用函数</li><li>…: 更多参数，可选</li><li>simplify: 是否数组化，当值array时，输出结果按数组进行分组</li><li>USE.NAMES: 如果X为字符串，TRUE设置字符串为数据名，FALSE不设置</li></ul><h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ul><li>掌握R语言中的apply函数族 <a href="http://blog.fens.me/r-apply/" target="_blank" rel="noopener">http://blog.fens.me/r-apply/</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<h3 id="apply家族函数"><a href="#apply家族函数" class="headerlink" title="apply家族函数"></a>apply家族函数</h3><p>apply函数族是R语言中数据处理的一组核心函数，通过使用apply函数，我们可以实现对数据的循环、分组、过滤、类型控制等操作。</p><img src="/2020/06/28/12691/fig1.png" title="This is an test image"><p><img src="//yoursite.com/2020/06/28/fig1.png" style="zoom:50%;"></p><a id="more"></a><h3 id="apply-函数的用法"><a href="#apply-函数的用法" class="headerlink" title="apply 函数的用法"></a>apply 函数的用法</h3><p>常用的apply族函数有apply和sapply。apply函数是最常用的代替for循环的函数。apply函数可以对矩阵、数据框、数组(二维、多维)，按行或列进行循环计算，对子元素进行迭代，并把子元素以参数传递的形式给自定义的FUN函数中，并以返回计算结果。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apply(X, MARGIN, FUN, ...)</span><br></pre></td></tr></table></figure><p>参数列表：</p><ul><li>X:数组、矩阵、数据框</li><li>MARGIN: 按行计算或按按列计算，1表示按行，2表示按列</li><li>FUN: 自定义的调用函数</li><li>…: 更多参数，可选</li></ul><p>如：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; x&lt;-matrix(1:12,ncol=3)</span><br><span class="line">&gt; apply(x,1,sum)</span><br><span class="line">[1] 15 18 21 24</span><br></pre></td></tr></table></figure><h3 id><a href="#" class="headerlink" title=" "></a> </h3><h3 id="lapply-函数的用法"><a href="#lapply-函数的用法" class="headerlink" title="lapply 函数的用法"></a>lapply 函数的用法</h3><p>lapply函数是一个最基础循环操作函数之一，用来对list、data.frame数据集进行循环，并返回和X长度同样的list结构作为结果集，通过lapply的开头的第一个字母’l’就可以判断返回结果集的类型。</p><p>函数定义：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lapply(X, FUN, ...)</span><br></pre></td></tr></table></figure><p>参数列表：</p><ul><li>X:list、data.frame数据</li><li>FUN: 自定义的调用函数</li><li>…: 更多参数，可选</li></ul><h3 id="sapply函数的用法"><a href="#sapply函数的用法" class="headerlink" title="sapply函数的用法"></a>sapply函数的用法</h3><p>sapply函数是一个简化版的lapply，sapply增加了2个参数simplify和USE.NAMES，主要就是让输出看起来更友好，返回值为向量，而不是list对象。</p><p>函数定义：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sapply(X, FUN, ..., simplify=TRUE, USE.NAMES = TRUE)</span><br></pre></td></tr></table></figure><p>参数列表：</p><ul><li>X:数组、矩阵、数据框</li><li>FUN: 自定义的调用函数</li><li>…: 更多参数，可选</li><li>simplify: 是否数组化，当值array时，输出结果按数组进行分组</li><li>USE.NAMES: 如果X为字符串，TRUE设置字符串为数据名，FALSE不设置</li></ul><h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ul><li>掌握R语言中的apply函数族 <a href="http://blog.fens.me/r-apply/" target="_blank" rel="noopener">http://blog.fens.me/r-apply/</a></li></ul>]]></content>
     
     <summary type="html">
     
       &lt;h3 id=&quot;apply家族函数&quot;&gt;&lt;a href=&quot;#apply家族函数&quot; class=&quot;headerlink&quot; title=&quot;apply家族函数&quot;&gt;&lt;/a&gt;apply家族函数&lt;/h3&gt;&lt;p&gt;apply函数族是R语言中数据处理的一组核心函数，通过使用apply函数，我们可以实现对数据的循环、分组、过滤、类型控制等操作。&lt;/p&gt;
-&lt;img src=&quot;/2020/06/28/apply家族函数的用法/fig1.png&quot; title=&quot;This is an test image&quot;&gt;
+&lt;img src=&quot;/2020/06/28/12691/fig1.png&quot; title=&quot;This is an test image&quot;&gt;
 &lt;p&gt;&lt;img src=&quot;//yoursite.com/2020/06/28/fig1.png&quot; style=&quot;zoom:50%;&quot;&gt;&lt;/p&gt;
     
     </summary>
@@ -193,8 +193,8 @@
   
   <entry>
     <title>在R语言中替换空值</title>
-    <link href="http://yoursite.com/2020/06/28/R_NA.html"/>
-    <id>http://yoursite.com/2020/06/28/R_NA.html</id>
+    <link href="http://yoursite.com/2020/06/28/6918.html"/>
+    <id>http://yoursite.com/2020/06/28/6918.html</id>
     <published>2020-06-28T18:12:21.000Z</published>
     <updated>2020-09-12T09:49:57.667Z</updated>
     
@@ -214,8 +214,8 @@
   
   <entry>
     <title>正则表达式初体验</title>
-    <link href="http://yoursite.com/2020/06/28/Regular%20Expression.html"/>
-    <id>http://yoursite.com/2020/06/28/Regular Expression.html</id>
+    <link href="http://yoursite.com/2020/06/28/44637.html"/>
+    <id>http://yoursite.com/2020/06/28/44637.html</id>
     <published>2020-06-28T18:11:52.000Z</published>
     <updated>2020-09-12T09:49:57.684Z</updated>
     
@@ -239,8 +239,8 @@
   
   <entry>
     <title>机器学习中如何处理分类变量的不均衡</title>
-    <link href="http://yoursite.com/2020/06/28/sample_unbalance_ML.html"/>
-    <id>http://yoursite.com/2020/06/28/sample_unbalance_ML.html</id>
+    <link href="http://yoursite.com/2020/06/28/35362.html"/>
+    <id>http://yoursite.com/2020/06/28/35362.html</id>
     <published>2020-06-28T18:09:41.000Z</published>
     <updated>2020-09-12T09:49:57.680Z</updated>
     
@@ -292,8 +292,8 @@
   
   <entry>
     <title>使用Python与Scikit-learn实现随机森林分析</title>
-    <link href="http://yoursite.com/2020/06/28/random_forest_python.html"/>
-    <id>http://yoursite.com/2020/06/28/random_forest_python.html</id>
+    <link href="http://yoursite.com/2020/06/28/25483.html"/>
+    <id>http://yoursite.com/2020/06/28/25483.html</id>
     <published>2020-06-28T18:09:05.000Z</published>
     <updated>2020-09-12T09:49:57.652Z</updated>
     
@@ -321,8 +321,8 @@
   
   <entry>
     <title>使用Python与Scikit-learn实现逻辑回归分析</title>
-    <link href="http://yoursite.com/2020/06/28/logistic_regression_python.html"/>
-    <id>http://yoursite.com/2020/06/28/logistic_regression_python.html</id>
+    <link href="http://yoursite.com/2020/06/28/30893.html"/>
+    <id>http://yoursite.com/2020/06/28/30893.html</id>
     <published>2020-06-28T18:08:24.000Z</published>
     <updated>2020-09-12T09:49:57.651Z</updated>
     
@@ -342,8 +342,8 @@
   
   <entry>
     <title>稀疏矩阵与机器学习</title>
-    <link href="http://yoursite.com/2020/06/28/Sparse_Matrices_ML.html"/>
-    <id>http://yoursite.com/2020/06/28/Sparse_Matrices_ML.html</id>
+    <link href="http://yoursite.com/2020/06/28/46638.html"/>
+    <id>http://yoursite.com/2020/06/28/46638.html</id>
     <published>2020-06-28T18:06:40.000Z</published>
     <updated>2020-09-12T09:49:57.689Z</updated>
     
@@ -366,8 +366,8 @@
   
   <entry>
     <title>机器学习中的模型验证</title>
-    <link href="http://yoursite.com/2020/06/28/model_validation_ML.html"/>
-    <id>http://yoursite.com/2020/06/28/model_validation_ML.html</id>
+    <link href="http://yoursite.com/2020/06/28/5857.html"/>
+    <id>http://yoursite.com/2020/06/28/5857.html</id>
     <published>2020-06-28T17:59:14.000Z</published>
     <updated>2020-09-12T09:49:57.681Z</updated>
     
@@ -388,8 +388,8 @@
   
   <entry>
     <title>用于COVID-19研究的计算机策略大集锦</title>
-    <link href="http://yoursite.com/2020/05/24/COVID-19_tools.html"/>
-    <id>http://yoursite.com/2020/05/24/COVID-19_tools.html</id>
+    <link href="http://yoursite.com/2020/05/24/50931.html"/>
+    <id>http://yoursite.com/2020/05/24/50931.html</id>
     <published>2020-05-24T11:01:14.000Z</published>
     <updated>2020-09-12T09:49:57.688Z</updated>
     
@@ -414,8 +414,8 @@
   
   <entry>
     <title>从EBI批量下载数据</title>
-    <link href="http://yoursite.com/2020/05/18/download_data_from_EBI.html"/>
-    <id>http://yoursite.com/2020/05/18/download_data_from_EBI.html</id>
+    <link href="http://yoursite.com/2020/05/18/8492.html"/>
+    <id>http://yoursite.com/2020/05/18/8492.html</id>
     <published>2020-05-18T08:42:38.000Z</published>
     <updated>2020-09-12T09:49:57.649Z</updated>
     
@@ -439,8 +439,8 @@
   
   <entry>
     <title>t-test和方差分析</title>
-    <link href="http://yoursite.com/2020/05/17/t-test_annova.html"/>
-    <id>http://yoursite.com/2020/05/17/t-test_annova.html</id>
+    <link href="http://yoursite.com/2020/05/17/59776.html"/>
+    <id>http://yoursite.com/2020/05/17/59776.html</id>
     <published>2020-05-17T08:22:58.000Z</published>
     <updated>2020-09-12T09:49:57.646Z</updated>
     
@@ -460,8 +460,8 @@
   
   <entry>
     <title>逻辑回归</title>
-    <link href="http://yoursite.com/2020/05/17/Logistic_regression.html"/>
-    <id>http://yoursite.com/2020/05/17/Logistic_regression.html</id>
+    <link href="http://yoursite.com/2020/05/17/60504.html"/>
+    <id>http://yoursite.com/2020/05/17/60504.html</id>
     <published>2020-05-17T07:56:44.000Z</published>
     <updated>2020-09-12T09:49:57.700Z</updated>
     
@@ -485,8 +485,8 @@
   
   <entry>
     <title>线性回归和线性模型</title>
-    <link href="http://yoursite.com/2020/05/17/linear%20regression_linear_model.html"/>
-    <id>http://yoursite.com/2020/05/17/linear regression_linear_model.html</id>
+    <link href="http://yoursite.com/2020/05/17/31684.html"/>
+    <id>http://yoursite.com/2020/05/17/31684.html</id>
     <published>2020-05-17T06:40:38.000Z</published>
     <updated>2020-09-12T09:49:57.695Z</updated>
     
@@ -511,8 +511,8 @@
   
   <entry>
     <title>人肠内分泌细胞的高分辨率mRNA和分泌组图谱</title>
-    <link href="http://yoursite.com/2020/05/13/High-Resolution_mRNA_and_Secretome_Atlas_of_Human_Enteroendocrine_Cells.html"/>
-    <id>http://yoursite.com/2020/05/13/High-Resolution_mRNA_and_Secretome_Atlas_of_Human_Enteroendocrine_Cells.html</id>
+    <link href="http://yoursite.com/2020/05/13/22345.html"/>
+    <id>http://yoursite.com/2020/05/13/22345.html</id>
     <published>2020-05-13T20:01:52.000Z</published>
     <updated>2020-09-12T09:49:57.649Z</updated>
     
