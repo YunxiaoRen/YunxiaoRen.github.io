@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[200912-test]]></title>
+    <url>%2F2020%2F09%2F12%2F400d0b68.html</url>
+    <content type="text"><![CDATA[输入密码，查看文章 d21c4b4a61e35551e7ade5373c7f14424462db3b74bffe384b0ebdf224f869ef]]></content>
+      <categories>
+        <category>test</category>
+      </categories>
+      <tags>
+        <tag>test</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[两个文件的异同]]></title>
     <url>%2F2020%2F06%2F28%2F13171.html</url>
     <content type="text"><![CDATA[comm, diff 和 grep基于comm, diff和grep的用法总结 123comm A Bdiff A Bgrep -f A B commcomm是对两个已经有序的文件进行比较，可以比较输出：仅在A中出现的、仅在B中出现的、在两个文件中都存在的 123456comm -1 A B 不显示在A文件中独有内容(显示B文件独有内容+两个文件共有)comm -2 A B 不显示在B文件中独有内容comm -3 A B 不显示同时在两个文件中都存在的内容comm -12 A B 显示A与B公共的部分comm -23 A B 显示A独有的comm -13 A B 显示B独有的 diffdiff是比较两个文件之间的不同，给出使两个一致的建议，diff有前后顺序，前面的为旧文件，后面的为新文件 1234567891011diff A B 直接显示两个文件不同，并给出修改一致的建议(主要是对旧文件的建议)diff -c A B 通过显示两个文件上下文，给出两个文件增减或删除信息，同时diff A B3,4c3,6&lt; c&lt; d---&gt; e&gt; f&gt; g&gt; h grep12345678910grep -v -f a b 从b中剔除a中有的,即b中特有的grep -v -f b a 从a中剔除b中有的,即a中特有的grep -v -f A Befghgrep -v -f B Acd 参考资料https://www.jianshu.com/p/5ab86345b6bf https://blog.csdn.net/hit_hlj_sgy/article/details/20625527]]></content>
