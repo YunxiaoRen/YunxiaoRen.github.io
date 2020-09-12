@@ -89,15 +89,15 @@
 <meta property="og:site_name" content="生信拾光">
 <meta property="og:description" content="awk是一个处理文本文件的程序，也是一门强大的编程语言。awk是把文件逐行的读入，以空格为默认分隔符将每行分割，切开的部分再进行各种分析处理，非常适用于每行格式相同的文本文件。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2019/08/25/fig-head.png">
-<meta property="og:image" content="http://yoursite.com/2019/08/25/fig1-rawdata.png">
-<meta property="og:image" content="http://yoursite.com/2019/08/25/fig-eg1.png">
-<meta property="og:image" content="http://yoursite.com/2019/08/25/fig-eg2.png">
+<meta property="og:image" content="http://users/renyx/Documents/hexo/source/_postsfig-head.png">
+<meta property="og:image" content="http://users/renyx/Documents/hexo/source/_postsfig1-rawdata.png">
+<meta property="og:image" content="http://users/renyx/Documents/hexo/source/_postsfig-eg1.png">
+<meta property="og:image" content="http://users/renyx/Documents/hexo/source/_postsfig-eg2.png">
 <meta property="og:updated_time" content="2020-09-12T09:49:57.631Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="awk基本命令使用">
 <meta name="twitter:description" content="awk是一个处理文本文件的程序，也是一门强大的编程语言。awk是把文件逐行的读入，以空格为默认分隔符将每行分割，切开的部分再进行各种分析处理，非常适用于每行格式相同的文本文件。">
-<meta name="twitter:image" content="http://yoursite.com/2019/08/25/fig-head.png">
+<meta name="twitter:image" content="http://users/renyx/Documents/hexo/source/_postsfig-head.png">
 
 
 
@@ -423,12 +423,12 @@
 
       
         <p>awk是一个处理文本文件的程序，也是一门强大的编程语言。awk是把文件逐行的读入，以空格为默认分隔符将每行分割，切开的部分再进行各种分析处理，非常适用于每行格式相同的文本文件。</p>
-<p><img src="//yoursite.com/2019/08/25/fig-head.png" alt></p>
+<p><img src="//Users/renyx/Documents/hexo/source/_postsfig-head.png" alt></p>
 <a id="more"></a>
 <p><strong>示例数据：</strong></p>
 <p>DEseq2得到的差异表达矩阵<strong>(dfdata)</strong>作为示例数据：</p>
 <p>包括9列数据，分别为<code>id</code>, <code>baseMeanA</code>, <code>baseMeanB</code>,<code>baseMean</code>,  <code>log2FoldChange</code>,<code>lfcSE</code>,<code>stat</code>,<code>pvalue</code>,<code>padj</code></p>
-<p><img src="//yoursite.com/2019/08/25/fig1-rawdata.png" alt></p>
+<p><img src="//Users/renyx/Documents/hexo/source/_postsfig1-rawdata.png" alt></p>
 <h3 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h3><ul>
 <li><strong>输出文件内容</strong></li>
 </ul>
@@ -439,10 +439,10 @@
 <p><code>awk</code>会根据空格和制表符等分隔符，将每一行分成若干字段，依次用<code>$1</code>、<code>$2</code>、<code>$3</code>代表第一个字段、第二个字段、第三个字段等，<code>$1, $2</code>可以理解为被分隔符分割的第一列，第二列</p>
 <p><code>-F</code> ：输入分隔符，这里是<code>\t</code></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将输出差异基因前10行的第1、5和8列，默认是以空格分割，所以输出结果</span></span><br><span class="line">head dfdata | awk -F <span class="string">'\t'</span> <span class="string">'&#123;print $1,$5,$8&#125;'</span></span><br></pre></td></tr></table></figure>
-<p><img src="//yoursite.com/2019/08/25/fig-eg1.png" style="zoom:50%"></p>
+<p><img src="//Users/renyx/Documents/hexo/source/_postsfig-eg1.png" style="zoom:50%"></p>
 <p><code>OFS</code>: 输出分隔符</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 以tab分割输出</span></span><br><span class="line">head dfdata | awk -F <span class="string">'\t'</span> <span class="string">'&#123;print $1,$5,$8&#125;'</span> OFS=<span class="string">'\t'</span></span><br></pre></td></tr></table></figure>
-<p><img src="//yoursite.com/2019/08/25/fig-eg2.png" style="zoom:50%"></p>
+<p><img src="//Users/renyx/Documents/hexo/source/_postsfig-eg2.png" style="zoom:50%"></p>
 </li>
 </ul>
 <p><strong>其他变量</strong></p>
