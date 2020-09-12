@@ -89,16 +89,16 @@
 <meta property="og:site_name" content="生信拾光">
 <meta property="og:description" content="​                方法概述：从CARD,ARDB和UNIPROT 3个数据库分别提取抗性基因（antibiotic resistance genes,ARGs）, 3个数据库分别提取到2161，2290和28108个抗性基因。然后对3个数据库的抗性基因进行注释和分类，CARD和ARDB共鉴定到102个抗生素，包括30个抗生素分类。UNIPROT通过文本挖掘注释，然年再结合CARD和">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2020/05/1588755936726-a2a86d1c-ae3a-40bc-aaa2-974114d7e81f-20200506124808009.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/1588754695659-2c3b9a82-cbe0-453a-8663-e0c55346c1f6-20200506124806659.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/1588754740918-4ee1605e-db2c-4cfd-906d-7dd74b38da83-20200506124807027.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/1588754750458-42a8a187-40da-4df8-b7bb-6c409d3f6853-20200506124807310.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/1588754581852-30322794-6acc-493f-b457-2985bb53ea91-20200506124807265.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/DeepARG_methods.htm/1588755936726-a2a86d1c-ae3a-40bc-aaa2-974114d7e81f-20200506124808009.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/DeepARG_methods.htm/1588754695659-2c3b9a82-cbe0-453a-8663-e0c55346c1f6-20200506124806659.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/DeepARG_methods.htm/1588754740918-4ee1605e-db2c-4cfd-906d-7dd74b38da83-20200506124807027.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/DeepARG_methods.htm/1588754750458-42a8a187-40da-4df8-b7bb-6c409d3f6853-20200506124807310.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/DeepARG_methods.htm/1588754581852-30322794-6acc-493f-b457-2985bb53ea91-20200506124807265.png">
 <meta property="og:updated_time" content="2020-09-11T19:29:19.623Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="利用深度学习从宏基因组数据中预测抗生素抗性基因—DeepARG（方法详解）">
 <meta name="twitter:description" content="​                方法概述：从CARD,ARDB和UNIPROT 3个数据库分别提取抗性基因（antibiotic resistance genes,ARGs）, 3个数据库分别提取到2161，2290和28108个抗性基因。然后对3个数据库的抗性基因进行注释和分类，CARD和ARDB共鉴定到102个抗生素，包括30个抗生素分类。UNIPROT通过文本挖掘注释，然年再结合CARD和">
-<meta name="twitter:image" content="http://yoursite.com/2020/05/1588755936726-a2a86d1c-ae3a-40bc-aaa2-974114d7e81f-20200506124808009.png">
+<meta name="twitter:image" content="http://yoursite.com/2020/05/DeepARG_methods.htm/1588755936726-a2a86d1c-ae3a-40bc-aaa2-974114d7e81f-20200506124808009.png">
 
 
 
@@ -401,17 +401,17 @@
       
 
       
-        <p>​               <img src="//yoursite.com/2020/05/1588755936726-a2a86d1c-ae3a-40bc-aaa2-974114d7e81f-20200506124808009.png" alt="image.png" style="zoom:50%;"></p>
+        <p>​               <img src="/2020/05/DeepARG_methods.htm/1588755936726-a2a86d1c-ae3a-40bc-aaa2-974114d7e81f-20200506124808009.png" alt="image.png" style="zoom:50%;"></p>
 <h3 id="方法概述："><a href="#方法概述：" class="headerlink" title="方法概述："></a>方法概述：</h3><p>从CARD,ARDB和UNIPROT 3个数据库分别提取抗性基因（antibiotic resistance genes,ARGs）, 3个数据库分别提取到2161，2290和28108个抗性基因。然后对3个数据库的抗性基因进行注释和分类，CARD和ARDB共鉴定到102个抗生素，包括30个抗生素分类。UNIPROT通过文本挖掘注释，然年再结合CARD和ARDB两个数据库验证。</p>
 <p>得到经过前处理后的数据，利用深度神经网络训练模型，凭借Python中的Theano库的Lasagne模块实现模型训练。分别对短读长序列和长基因序列分开训练，得到deepARG-SS 和 deepARG-LS。</p>
 <p>评估模型通过两个方法：一是UNIPROT的70%数据作为训练数据，30%作为测试验证数据；二是借助MEGARes数据库的数据作为独立的验证数据集，评估模型的表现。</p>
 <a id="more"></a>
 <h3 id="数据来源："><a href="#数据来源：" class="headerlink" title="数据来源："></a>数据来源：</h3><p>数据来自3个数据库：<strong>CARD,ARDB和UNIPROT</strong></p>
-<h3 id="数据前处理"><a href="#数据前处理" class="headerlink" title="数据前处理"></a>数据前处理</h3><p><img src="//yoursite.com/2020/05/1588754695659-2c3b9a82-cbe0-453a-8663-e0c55346c1f6-20200506124806659.png" alt="image.png"></p>
-<p><img src="//yoursite.com/2020/05/1588754740918-4ee1605e-db2c-4cfd-906d-7dd74b38da83-20200506124807027.png" alt="image.png"></p>
-<h3 id="模型训练"><a href="#模型训练" class="headerlink" title="模型训练"></a>模型训练</h3><p><img src="//yoursite.com/2020/05/1588754750458-42a8a187-40da-4df8-b7bb-6c409d3f6853-20200506124807310.png" alt="image.png"></p>
+<h3 id="数据前处理"><a href="#数据前处理" class="headerlink" title="数据前处理"></a>数据前处理</h3><p><img src="/2020/05/DeepARG_methods.htm/1588754695659-2c3b9a82-cbe0-453a-8663-e0c55346c1f6-20200506124806659.png" alt="image.png"></p>
+<p><img src="/2020/05/DeepARG_methods.htm/1588754740918-4ee1605e-db2c-4cfd-906d-7dd74b38da83-20200506124807027.png" alt="image.png"></p>
+<h3 id="模型训练"><a href="#模型训练" class="headerlink" title="模型训练"></a>模型训练</h3><p><img src="/2020/05/DeepARG_methods.htm/1588754750458-42a8a187-40da-4df8-b7bb-6c409d3f6853-20200506124807310.png" alt="image.png"></p>
 <h3 id="模型验证"><a href="#模型验证" class="headerlink" title="模型验证"></a>模型验证</h3><p>从模型验证的结果看，似乎模型的效果太好了，不知道是否有过拟合的现象。</p>
-<p><img src="//yoursite.com/2020/05/1588754581852-30322794-6acc-493f-b457-2985bb53ea91-20200506124807265.png" alt="image.png"></p>
+<p><img src="/2020/05/DeepARG_methods.htm/1588754581852-30322794-6acc-493f-b457-2985bb53ea91-20200506124807265.png" alt="image.png"></p>
 <h3 id="实现代码"><a href="#实现代码" class="headerlink" title="实现代码"></a>实现代码</h3><p><strong>github代码打不开：</strong></p>
 <p><a href="https://gaarangoa@bitbucket.org/gaarangoa/deeparg-ss.git" target="_blank" rel="noopener">https://gaarangoa@bitbucket.org/gaarangoa/deeparg-ss.git</a></p>
 <p><strong>网站在线分析：</strong></p>
