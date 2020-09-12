@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://yoursite.com/2020/06/28/apply%E5%AE%B6%E6%97%8F%E5%87%BD%E6%95%B0%E7%9A%84%E7%94%A8%E6%B3%95.html</loc>
+    <lastmod>2020-09-12</lastmod>
+  </url>  <url>
     <loc>http://yoursite.com/2019/12/29/RNAcentral_ncRNA_database.html</loc>
     <lastmod>2020-09-12</lastmod>
   </url>  <url>
@@ -61,10 +64,10 @@
     <loc>http://yoursite.com/2019/08/23/ATACseq04.html</loc>
     <lastmod>2020-09-12</lastmod>
   </url>  <url>
-    <loc>http://yoursite.com/2019/08/23/ATACseq01.html</loc>
+    <loc>http://yoursite.com/2019/08/23/ATACseq02.html</loc>
     <lastmod>2020-09-12</lastmod>
   </url>  <url>
-    <loc>http://yoursite.com/2019/08/23/ATACseq02.html</loc>
+    <loc>http://yoursite.com/2019/08/23/ATACseq01.html</loc>
     <lastmod>2020-09-12</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2020/06/28/Sparse_Matrices_ML.html</loc>
@@ -94,10 +97,10 @@
     <loc>http://yoursite.com/2020/06/28/Regular%20Expression.html</loc>
     <lastmod>2020-09-12</lastmod>
   </url>  <url>
-    <loc>http://yoursite.com/2020/05/02/ML_data.html</loc>
+    <loc>http://yoursite.com/2020/01/04/Gene_network_reconstruction.html</loc>
     <lastmod>2020-09-12</lastmod>
   </url>  <url>
-    <loc>http://yoursite.com/2020/01/04/Gene_network_reconstruction.html</loc>
+    <loc>http://yoursite.com/2020/05/02/ML_data.html</loc>
     <lastmod>2020-09-12</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2020/06/28/model_validation_ML.html</loc>
@@ -109,10 +112,10 @@
     <loc>http://yoursite.com/2020/06/28/sample_unbalance_ML.html</loc>
     <lastmod>2020-09-12</lastmod>
   </url>  <url>
-    <loc>http://yoursite.com/2019/09/26/HiChIRP_RNA-associated_chromosome_conformation.html</loc>
+    <loc>http://yoursite.com/2019/12/29/PHATE_de_dimensional.html</loc>
     <lastmod>2020-09-12</lastmod>
   </url>  <url>
-    <loc>http://yoursite.com/2019/12/29/PHATE_de_dimensional.html</loc>
+    <loc>http://yoursite.com/2019/09/26/HiChIRP_RNA-associated_chromosome_conformation.html</loc>
     <lastmod>2020-09-12</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2019/09/20/Giotto_pipeline_for_sc_spatial_transcriptomic_data.html</loc>
@@ -178,10 +181,10 @@
     <loc>http://yoursite.com/2019/12/12/scRNAseq+scATACseq.html</loc>
     <lastmod>2020-09-12</lastmod>
   </url>  <url>
-    <loc>http://yoursite.com/2019/10/22/R_basics.html</loc>
+    <loc>http://yoursite.com/2019/12/28/evaluation_scRNA-seq_analysis_pipelines.html</loc>
     <lastmod>2020-09-12</lastmod>
   </url>  <url>
-    <loc>http://yoursite.com/2019/12/28/evaluation_scRNA-seq_analysis_pipelines.html</loc>
+    <loc>http://yoursite.com/2019/10/22/R_basics.html</loc>
     <lastmod>2020-09-12</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2019/11/25/DeepMicrobes_taxonomic_classification_deep_learning.html</loc>
@@ -199,10 +202,10 @@
     <loc>http://yoursite.com/2019/12/29/DrugComboExplorer.html</loc>
     <lastmod>2020-09-12</lastmod>
   </url>  <url>
-    <loc>http://yoursite.com/2019/12/29/regulatory_networks_multi-omics.html</loc>
+    <loc>http://yoursite.com/2019/10/26/Molecular_Evolution_Early-Onset_Prostate_Cancer.html</loc>
     <lastmod>2020-09-12</lastmod>
   </url>  <url>
-    <loc>http://yoursite.com/2019/10/26/Molecular_Evolution_Early-Onset_Prostate_Cancer.html</loc>
+    <loc>http://yoursite.com/2019/12/29/regulatory_networks_multi-omics.html</loc>
     <lastmod>2020-09-12</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2019/12/29/DislncRF_machine_learning.html</loc>
@@ -287,9 +290,6 @@
     <lastmod>2020-09-12</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2019/10/27/Smart-seq3.html</loc>
-    <lastmod>2020-09-12</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/2020/06/28/apply%E5%AE%B6%E6%97%8F%E5%87%BD%E6%95%B0%E7%9A%84%E7%94%A8%E6%B3%95.html</loc>
     <lastmod>2020-09-12</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2020/06/28/R_read_blank_content.html</loc>
