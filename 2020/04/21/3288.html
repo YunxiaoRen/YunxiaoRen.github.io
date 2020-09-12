@@ -89,19 +89,19 @@
 <meta property="og:site_name" content="生信拾光">
 <meta property="og:description" content="SVM 简介SVM(Support Vector Machines)支持向量机是机器学习中的一种分类算法，属于监督式学习，也可以同时用于分类和回归问题。SVM的核心思想是找到最大的边际超平面，以最大程度地将数据集划分为类。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2020/04/21/fig2.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/21/fig3.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/21/fig4.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/21/fig5.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/21/fig6.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/21/fig7.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/21/fig8.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/21/fig9.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/21/3288fig2.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/21/3288fig3.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/21/3288fig4.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/21/3288fig5.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/21/3288fig6.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/21/3288fig7.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/21/3288fig8.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/21/3288fig9.png">
 <meta property="og:updated_time" content="2020-09-12T09:49:57.629Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SVM从原理到实现">
 <meta name="twitter:description" content="SVM 简介SVM(Support Vector Machines)支持向量机是机器学习中的一种分类算法，属于监督式学习，也可以同时用于分类和回归问题。SVM的核心思想是找到最大的边际超平面，以最大程度地将数据集划分为类。">
-<meta name="twitter:image" content="http://yoursite.com/2020/04/21/fig2.png">
+<meta name="twitter:image" content="http://yoursite.com/2020/04/21/3288fig2.png">
 
 
 
@@ -432,29 +432,29 @@
 <ul>
 <li><p><strong>Margin</strong></p>
 <p>边距是最接近的分类点上的两条线之间的间隙。 这是从线到支持向量或最接近点的垂直距离来计算的。 如果两个类之间的边距较大，则认为是良好的边距，较小的边距是较差的边距</p>
-<p><img src="//yoursite.com/2020/04/21/fig2.png" style="zoom:50%;"></p>
+<p><img src="//yoursite.com/2020/04/21/3288fig2.png" style="zoom:50%;"></p>
 </li>
 <li><p><strong>Soft Margin</strong></p>
 <p>允许错误分类，这时观测值和阈值间的距离也称作Soft Margin。使用Cross Validation确定在 Soft Margin错误分类的个数，从而得到最好的分类模型。</p>
-<p><img src="//yoursite.com/2020/04/21/fig3.png" style="zoom:50%;"></p>
+<p><img src="//yoursite.com/2020/04/21/3288fig3.png" style="zoom:50%;"></p>
 </li>
 <li><p><strong>支持向量</strong>（Support Vectors)</p>
 <p>支持向量是最靠近超平面的数据点。 这些点将通过计算边距更好地定义分隔线。 这些点与分类器的构建更相关</p>
-<p><img src="//yoursite.com/2020/04/21/fig4.png" style="zoom:50%;"></p>
+<p><img src="//yoursite.com/2020/04/21/3288fig4.png" style="zoom:50%;"></p>
 <p>当处理的数据是一维时，Support Vector Classifier 是一个单独点；当处理的数据是二维时，Support Vector Classifier是一条线(如下图2-D)；当处理的数据是三维时，<strong>Support Vector Classifier 是一个超平面（hyperplane）</strong>(如下图3-D)</p>
 <p>图2-D：</p>
-<p><img src="//yoursite.com/2020/04/21/fig5.png" style="zoom: 25%;"></p>
+<p><img src="//yoursite.com/2020/04/21/3288fig5.png" style="zoom: 25%;"></p>
 <p>图3-D：</p>
-<p><img src="//yoursite.com/2020/04/21/fig6.png" style="zoom:25%;"></p>
+<p><img src="//yoursite.com/2020/04/21/3288fig6.png" style="zoom:25%;"></p>
 </li>
 </ul>
 <p><strong>SVM 背后的原理</strong></p>
 <p>首先以低维数据开始</p>
-<p><img src="//yoursite.com/2020/04/21/fig7.png" style="zoom:25%;"></p>
+<p><img src="//yoursite.com/2020/04/21/3288fig7.png" style="zoom:25%;"></p>
 <p>然后将数据转为更高的维度</p>
-<p><img src="//yoursite.com/2020/04/21/fig8.png" alt="fig8" style="zoom:25%;"></p>
+<p><img src="//yoursite.com/2020/04/21/3288fig8.png" alt="fig8" style="zoom:25%;"></p>
 <p>找到一个Support Vector Classifier可以将高维数据分为两类</p>
-<p><img src="//yoursite.com/2020/04/21/fig9.png" style="zoom:25%;"></p>
+<p><img src="//yoursite.com/2020/04/21/3288fig9.png" style="zoom:25%;"></p>
 <p><strong>SVM数学原理</strong></p>
 <p>利用<strong>核函数（Kernel Functions)</strong>找到Support Vector Classifier</p>
 <ul>
