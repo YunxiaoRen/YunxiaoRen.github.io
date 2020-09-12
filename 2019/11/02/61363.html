@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="single cell,文献摘要,ATACseq,software,">
+  <meta name="keywords" content="ATACseq,software,single cell,文献摘要,">
 
 
 
@@ -82,22 +82,22 @@
 
 
 <meta name="description" content="一句话评价 scATAC-seq分析方法评估">
-<meta name="keywords" content="single cell,文献摘要,ATACseq,software">
+<meta name="keywords" content="ATACseq,software,single cell,文献摘要">
 <meta property="og:type" content="article">
 <meta property="og:title" content="scATACseq分析方法评估">
 <meta property="og:url" content="http://yoursite.com/2019/11/02/61363.html">
 <meta property="og:site_name" content="生信拾光">
 <meta property="og:description" content="一句话评价 scATAC-seq分析方法评估">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2019/11/02/61363abstract.jpg">
-<meta property="og:image" content="http://yoursite.com/2019/11/02/61363fig2.png">
-<meta property="og:image" content="http://yoursite.com/2019/11/02/61363fig3.png">
-<meta property="og:image" content="http://yoursite.com/2019/11/02/61363fig1.png">
+<meta property="og:image" content="http://yoursite.com/2019/11/02/61363/abstract.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/11/02/61363/fig2.png">
+<meta property="og:image" content="http://yoursite.com/2019/11/02/61363/fig3.png">
+<meta property="og:image" content="http://yoursite.com/2019/11/02/61363/fig1.png">
 <meta property="og:updated_time" content="2020-09-12T09:49:57.638Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="scATACseq分析方法评估">
 <meta name="twitter:description" content="一句话评价 scATAC-seq分析方法评估">
-<meta name="twitter:image" content="http://yoursite.com/2019/11/02/61363abstract.jpg">
+<meta name="twitter:image" content="http://yoursite.com/2019/11/02/61363/abstract.jpg">
 
 
 
@@ -424,7 +424,7 @@
       
         <p><strong>一句话评价</strong></p>
 <p>scATAC-seq分析方法评估</p>
-<p><img src="//yoursite.com/2019/11/02/61363abstract.jpg" style="zoom: 25%;"></p>
+<p><img src="/2019/11/02/61363/abstract.jpg" style="zoom: 25%;"></p>
 <a id="more"></a>
 <p><strong>文章信息</strong></p>
 <p>题目：Assessment of computational methods for the analysis of single-cell ATAC-seq data</p>
@@ -480,15 +480,15 @@
 </ol>
 <p><strong>测评方法：</strong></p>
 <p>利用收集到的3个公共数据集和10个合成模仿的不同覆盖度和噪音水平的数据集，从<code>bam</code>格式的比对文件开始，1）根据10种scATAC-seq工具原文提供的方法构建下游分析所需的特征矩阵；2）然后用3种常见的聚类方法<strong>K-means、Louvain、Hierarchical clustering</strong>和UMAP找出潜在的亚群，并可视化每种方法的细胞间相似性；3）对聚类结果进行评估，有FACS分选标记和有金标准的组织采用ARI(adjusted random)、AMI(adjusted mutual information)和H(homogeneity)的方法评估聚类结果，当只知道已知的marker 基因，采用RAGI (Gini-index-based metric called Residual Average Gini Index)的方法评估。4）最后对基于第3步得到的值，对每种方法的聚类效果进行打分排序。流程如下图所示：</p>
-<p><img src="//yoursite.com/2019/11/02/61363fig2.png" style="zoom:50%;"></p>
+<p><img src="/2019/11/02/61363/fig2.png" style="zoom:50%;"></p>
 <p><strong>测评结果：</strong></p>
 <p>他们的测评结果显示SnapATAC、cisTopic和Cusanovich2018是性能最好的对scATAC-seq数据<strong>聚类分析</strong>方法。另外基于peak-level（cisTopic, Cusanovich2018, Scasat）和bin-level（SnapATAC）保存信息的方法优于motif/k-mer level (chromVAR,BROCKMAN, SCRAT)或gene-body (Cicero, Gene Scoring) 。实现降维步骤的方法（BROCKMAN、cisTopic、Cusanovich2018、Scasat、SnapATAC）通常比没有这个重要步骤的其他方法显示出优势。此外，SnapATAC是最具伸缩性的方法,它是唯一能够处理超过80000个细胞的方法。CusanovicH2018是平衡分析性能和运行时间的最佳方法。下图展示了每种方法的聚类效果评估等级和时间需求。</p>
-<p><img src="//yoursite.com/2019/11/02/61363fig3.png" alt="fig3"></p>
+<p><img src="/2019/11/02/61363/fig3.png" alt="fig3"></p>
 <p><strong>参考价值：</strong></p>
 <ul>
 <li><p><strong>概述了scATAC-seq常见的分析流程</strong></p>
 <p>如，建库方法常用的两种策略：Droplet-based(10X genomics, BioRad), split-pool(sciATA-seq)。<strong>下游常见分析：可视化、聚类、轨迹分析、差异可及性分析、顺式调控网络。</strong></p>
-<p><img src="//yoursite.com/2019/11/02/61363fig1.png" style="zoom: 33%;"></p>
+<p><img src="/2019/11/02/61363/fig1.png" style="zoom: 33%;"></p>
 </li>
 <li><p><strong>比较了10种scATAC-seq分析方法，为选择合适的方法提供了重要的参考依据</strong></p>
 </li>
@@ -521,13 +521,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/single-cell/" rel="tag"># single cell</a>
-          
-            <a href="/tags/文献摘要/" rel="tag"># 文献摘要</a>
-          
             <a href="/tags/ATACseq/" rel="tag"># ATACseq</a>
           
             <a href="/tags/software/" rel="tag"># software</a>
+          
+            <a href="/tags/single-cell/" rel="tag"># single cell</a>
+          
+            <a href="/tags/文献摘要/" rel="tag"># 文献摘要</a>
           
         </div>
       

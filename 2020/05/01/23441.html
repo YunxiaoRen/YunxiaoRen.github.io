@@ -89,14 +89,14 @@
 <meta property="og:site_name" content="生信拾光">
 <meta property="og:description" content="支持向量机SVM（Support Vector Machines)是监督学习中一类算法，可用于分类、回归和异常值检测。 具体原理可参考 SVM从原理到实现)。R和python都有相关包和模块可以实现SVM，这里讨论如何在python中实现SVM。 python中是借助于scikit-learn库实现，scikit-learn是python中基于NumPy, SciPy 和matplotlib的一个">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2020/05/01/23441fig1.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/01/23441fig2.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/01/23441fig3.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/01/23441/fig1.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/01/23441/fig2.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/01/23441/fig3.png">
 <meta property="og:updated_time" content="2020-09-12T09:49:57.629Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Scikit-Learn实现SVM">
 <meta name="twitter:description" content="支持向量机SVM（Support Vector Machines)是监督学习中一类算法，可用于分类、回归和异常值检测。 具体原理可参考 SVM从原理到实现)。R和python都有相关包和模块可以实现SVM，这里讨论如何在python中实现SVM。 python中是借助于scikit-learn库实现，scikit-learn是python中基于NumPy, SciPy 和matplotlib的一个">
-<meta name="twitter:image" content="http://yoursite.com/2020/05/01/23441fig1.png">
+<meta name="twitter:image" content="http://yoursite.com/2020/05/01/23441/fig1.png">
 
 
 
@@ -405,7 +405,7 @@
 <ul>
 <li><a href="https://scikit-learn.org/stable/index.html" target="_blank" rel="noopener">https://scikit-learn.org/stable/index.html</a></li>
 </ul>
-<p><img src="//yoursite.com/2020/05/01/23441fig1.png" style="zoom:50%;"></p>
+<p><img src="/2020/05/01/23441/fig1.png" style="zoom:50%;"></p>
 <a id="more"></a>
 <h4 id="安装scikit-learn"><a href="#安装scikit-learn" class="headerlink" title="安装scikit-learn"></a>安装scikit-learn</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -U scikit-learn</span><br></pre></td></tr></table></figure>
 <p>检验是否安装成功</p>
@@ -413,7 +413,7 @@
 <h4 id="输入数据"><a href="#输入数据" class="headerlink" title="输入数据"></a>输入数据</h4><p>scikit learn的输入数据支持密集型向量（包括numpy.ndarray和numpy.asarray）和疏散型向量（任何scipy.sparse）。然而，要使用支持向量机对稀疏数据进行预测，它必须适合此类数据。要获得最佳性能，请使用C-ordered numpy.ndarray（密集）或scipy.sparse.csr_matrix（稀疏），dtype=float64。</p>
 <p>输入数据需包括两个数组(array)，<strong>数组X [n_samples,n_features], 数组Y[n_samples]</strong>。</p>
 <p>示例数据：bankdata:</p>
-<p><img src="//yoursite.com/2020/05/01/23441fig2.png" alt></p>
+<p><img src="/2020/05/01/23441/fig2.png" alt></p>
 <p>Class为类别，以0，1表示，其他特征值都是数值。</p>
 <p>首先把特征属性和类别标签分开,得到初始数据X和y.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">X = bankdata.drop(<span class="string">'Class'</span>, axis=<span class="number">1</span>) </span><br><span class="line">y = bankdata[<span class="string">'Class'</span>]</span><br></pre></td></tr></table></figure>
@@ -428,7 +428,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">y_pred = svclassifier.predict(X_test)</span><br></pre></td></tr></table></figure>
 <h4 id="算法评价"><a href="#算法评价" class="headerlink" title="算法评价"></a>算法评价</h4><p>精度、召回率和 F1 是分类任务最常用的一些评价指标.Scikit-Learn 的 <code>metrics</code> 模块中提供了 <code>classification_report</code> 和<code>confusion_matrix</code> 等方法，这些方法可以快速的计算这些评价指标.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> classification_report, confusion_matrix</span><br><span class="line">print(confusion_matrix(y_test,y_pred))</span><br><span class="line">print(classification_report(y_test,y_pred))</span><br></pre></td></tr></table></figure>
-<h4 id="评价结果"><a href="#评价结果" class="headerlink" title="评价结果"></a>评价结果</h4><p><img src="//yoursite.com/2020/05/01/23441fig3.png" style="zoom:50%;"></p>
+<h4 id="评价结果"><a href="#评价结果" class="headerlink" title="评价结果"></a>评价结果</h4><p><img src="/2020/05/01/23441/fig3.png" style="zoom:50%;"></p>
 <h4 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h4><ul>
 <li><a href="https://juejin.im/post/5b7fd39af265da43831fa136" target="_blank" rel="noopener">用 Scikit-Learn 实现 SVM 和 Kernel SVM</a></li>
 <li><p><a href="https://scikit-learn.org/stable/modules/svm.html" target="_blank" rel="noopener">Support Vector Machines</a></p>

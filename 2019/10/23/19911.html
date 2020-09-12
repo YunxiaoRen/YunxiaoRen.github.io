@@ -89,21 +89,23 @@
 <meta property="og:site_name" content="生信拾光">
 <meta property="og:description" content="通过base plot和ggplot2的简单实例，直接感受下base plot和ggplot2的语法差别。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2019/10/23/19911abstract.png">
-<meta property="og:image" content="http://yoursite.com/2019/10/23/19911fig1.png">
-<meta property="og:image" content="http://yoursite.com/2019/10/23/19911fig2.png">
-<meta property="og:image" content="http://yoursite.com/2019/10/23/19911fig3.png">
-<meta property="og:image" content="http://yoursite.com/2019/10/23/19911fig4.png">
-<meta property="og:image" content="http://yoursite.com/2019/10/23/19911fig5.png">
-<meta property="og:image" content="http://yoursite.com/2019/10/23/19911fig6.png">
-<meta property="og:image" content="http://yoursite.com/2019/10/23/19911fig7.png">
-<meta property="og:image" content="http://yoursite.com/2019/10/23/19911fig8.png">
-<meta property="og:image" content="http://yoursite.com/2019/10/23/19911fig9.png">
+<meta property="og:image" content="http://yoursite.com/2019/10/23/19911/abstract.png">
+<meta property="og:image" content="http://yoursite.com/2019/10/23/19911/">
+<meta property="og:image" content="http://yoursite.com/2019/10/23/19911/">
+<meta property="og:image" content="http://yoursite.com/2019/10/23/19911/fig1.png">
+<meta property="og:image" content="http://yoursite.com/2019/10/23/19911/fig2.png">
+<meta property="og:image" content="http://yoursite.com/2019/10/23/19911/fig3.png">
+<meta property="og:image" content="http://yoursite.com/2019/10/23/19911/fig4.png">
+<meta property="og:image" content="http://yoursite.com/2019/10/23/19911/fig5.png">
+<meta property="og:image" content="http://yoursite.com/2019/10/23/19911/fig6.png">
+<meta property="og:image" content="http://yoursite.com/2019/10/23/19911/fig7.png">
+<meta property="og:image" content="http://yoursite.com/2019/10/23/19911/fig8.png">
+<meta property="og:image" content="http://yoursite.com/2019/10/23/19911/fig9.png">
 <meta property="og:updated_time" content="2020-09-12T09:49:57.632Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="base plot与ggplot2语法比较">
 <meta name="twitter:description" content="通过base plot和ggplot2的简单实例，直接感受下base plot和ggplot2的语法差别。">
-<meta name="twitter:image" content="http://yoursite.com/2019/10/23/19911abstract.png">
+<meta name="twitter:image" content="http://yoursite.com/2019/10/23/19911/abstract.png">
 
 
 
@@ -429,50 +431,50 @@
 
       
         <p>通过base plot和ggplot2的简单实例，直接感受下base plot和ggplot2的语法差别。</p>
-<p><img src="//yoursite.com/2019/10/23/19911abstract.png" style="zoom: 33%;"></p>
+<p><img src="/2019/10/23/19911/abstract.png" style="zoom: 33%;"></p>
 <a id="more"></a>
 <h3 id="条形图"><a href="#条形图" class="headerlink" title="条形图"></a>条形图</h3><ul>
 <li><strong>基本绘图</strong></li>
 </ul>
 <p><strong><code>barplot()</code></strong>是基本绘图中绘制条形图的函数，需要一个向量参数指定bar的高度（必须），每个bar的label是可选参数。</p>
-<p><img src style="zoom:30%"></p>
-<p><img src style="zoom:30%"></p>
-<p><img src="//yoursite.com/2019/10/23/19911fig1.png" style="zoom:50%"></p>
+<p><img src="/2019/10/23/19911/" style="zoom:30%"></p>
+<p><img src="/2019/10/23/19911/" style="zoom:30%"></p>
+<p><img src="/2019/10/23/19911/fig1.png" style="zoom:50%"></p>
 <ul>
 <li><strong>ggplot2</strong></li>
 </ul>
 <p>ggplot2中绘制bar plot使用<strong><code>geom_col</code>或<code>geom_bar</code></strong>, 注意这里使用factor将x变量转换为离散变量。</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(ggplot2)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Bar graph of values. This uses the BOD data frame, with the</span></span><br><span class="line"><span class="comment"># "Time" column for x values and the "demand" column for y values.</span></span><br><span class="line">ggplot(BOD, aes(x = Time, y = demand)) +</span><br><span class="line">  geom_col()</span><br><span class="line"></span><br><span class="line"><span class="comment"># Convert the x variable to a factor, so that it is treated as discrete</span></span><br><span class="line">ggplot(BOD, aes(x = factor(Time), y = demand)) +</span><br><span class="line">  geom_col()</span><br></pre></td></tr></table></figure>
-<p><img src="//yoursite.com/2019/10/23/19911fig2.png" style="zoom:50%"></p>
-<p><img src="//yoursite.com/2019/10/23/19911fig3.png" style="zoom:50%"></p>
+<p><img src="/2019/10/23/19911/fig2.png" style="zoom:50%"></p>
+<p><img src="/2019/10/23/19911/fig3.png" style="zoom:50%"></p>
 <h3 id="直方图"><a href="#直方图" class="headerlink" title="直方图"></a>直方图</h3><ul>
 <li><strong>基本绘图</strong></li>
 </ul>
 <p><strong><code>hist</code></strong>是基本绘图中直方图的函数。</p>
-<p><img src="//yoursite.com/2019/10/23/19911fig4.png" style="zoom:50%"></p>
+<p><img src="/2019/10/23/19911/fig4.png" style="zoom:50%"></p>
 <ul>
 <li><strong>ggplot2</strong></li>
 </ul>
 <p>ggplot2中绘制直方图使用<strong><code>geom_histogram()</code></strong></p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(ggplot2)</span><br><span class="line">ggplot(mtcars, aes(x = mpg)) +</span><br><span class="line">  geom_histogram()</span><br><span class="line"><span class="comment">#&gt; `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># With wider bins</span></span><br><span class="line">ggplot(mtcars, aes(x = mpg)) +</span><br><span class="line">  geom_histogram(binwidth = <span class="number">4</span>)</span><br></pre></td></tr></table></figure>
-<p><img src="//yoursite.com/2019/10/23/19911fig5.png" style="zoom:50%"></p>
+<p><img src="/2019/10/23/19911/fig5.png" style="zoom:50%"></p>
 <h3 id="箱线图"><a href="#箱线图" class="headerlink" title="箱线图"></a>箱线图</h3><ul>
 <li><strong>基本绘图</strong></li>
 </ul>
 <p>箱线图可以直接用<strong><code>plot()</code></strong>函数（如果x变量是factor，会自动产生bo x plot)， 当然也可以用<strong><code>boxplot()</code></strong>函数。如果想在X轴展示两个变量，也是可以的。</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">plot(ToothGrowth$supp, ToothGrowth$len)</span><br><span class="line"><span class="comment"># Formula syntax</span></span><br><span class="line">boxplot(len ~ supp, data = ToothGrowth)</span><br></pre></td></tr></table></figure>
-<p><img src="//yoursite.com/2019/10/23/19911fig6.png" style="zoom: 33%;"></p>
+<p><img src="/2019/10/23/19911/fig6.png" style="zoom: 33%;"></p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Put interaction of two variables on x-axis</span></span><br><span class="line">boxplot(len ~ supp + dose, data = ToothGrowth)</span><br></pre></td></tr></table></figure>
-<p><img src="//yoursite.com/2019/10/23/19911fig7.png" style="zoom: 33%;"></p>
+<p><img src="/2019/10/23/19911/fig7.png" style="zoom: 33%;"></p>
 <ul>
 <li><strong>ggplot2</strong></li>
 </ul>
 <p>ggplot2使用<strong><code>geom_boxplot()</code></strong> 函数，x轴展示两个变量时可以用<strong><code>interaction()</code></strong>函数</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(ggplot2)</span><br><span class="line">ggplot(ToothGrowth, aes(x = supp, y = len)) +</span><br><span class="line">  geom_boxplot()</span><br></pre></td></tr></table></figure>
-<p><img src="//yoursite.com/2019/10/23/19911fig8.png" style="zoom: 33%;"></p>
+<p><img src="/2019/10/23/19911/fig8.png" style="zoom: 33%;"></p>
 <p><strong>x轴展示两个变量</strong></p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ggplot(ToothGrowth, aes(x = interaction(supp, dose), y = len)) +</span><br><span class="line">  geom_boxplot()</span><br></pre></td></tr></table></figure>
-<p><img src="//yoursite.com/2019/10/23/19911fig9.png" style="zoom: 33%;"></p>
+<p><img src="/2019/10/23/19911/fig9.png" style="zoom: 33%;"></p>
 <h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><ul>
 <li><p><strong>条形图、直方图、箱线图的区别</strong></p>
 <p>条形图x和y变量是一对一的关系，绘图时必须传递y变量。直方图是频率分布图，箱线图x变量对应的y变量有多个值。</p>
