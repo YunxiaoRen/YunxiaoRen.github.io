@@ -89,15 +89,15 @@
 <meta property="og:site_name" content="生信拾光">
 <meta property="og:description" content="坚持做一件事很难，总会被最初的意外和后来的惰性扰乱而半路放弃。今天看到几句话，感觉说到心窝里了: 规律地做一些事情，据说可以增加对生活的掌控感，从而缓解焦虑。 对时间最好的利用，就是做自己想做的事情，并且全身心的享受每一刻。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://users/renyx/Documents/hexo/source/_postsabstract.jpg">
-<meta property="og:image" content="http://users/renyx/Documents/hexo/source/_postsfig1.png">
-<meta property="og:image" content="http://users/renyx/Documents/hexo/source/_postsfig2.png">
-<meta property="og:image" content="http://users/renyx/Documents/hexo/source/_postsfig3.png">
+<meta property="og:image" content="http://yoursite.com/2019/10/22/abstract.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/10/22/fig1.png">
+<meta property="og:image" content="http://yoursite.com/2019/10/22/fig2.png">
+<meta property="og:image" content="http://yoursite.com/2019/10/22/fig3.png">
 <meta property="og:updated_time" content="2020-09-12T09:49:57.661Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="千里之行始于足下_R Basics">
 <meta name="twitter:description" content="坚持做一件事很难，总会被最初的意外和后来的惰性扰乱而半路放弃。今天看到几句话，感觉说到心窝里了: 规律地做一些事情，据说可以增加对生活的掌控感，从而缓解焦虑。 对时间最好的利用，就是做自己想做的事情，并且全身心的享受每一刻。">
-<meta name="twitter:image" content="http://users/renyx/Documents/hexo/source/_postsabstract.jpg">
+<meta name="twitter:image" content="http://yoursite.com/2019/10/22/abstract.jpg">
 
 
 
@@ -425,7 +425,7 @@
         <p>坚持做一件事很难，总会被最初的意外和后来的惰性扰乱而半路放弃。今天看到几句话，感觉说到心窝里了:</p>
 <p><strong>规律地做一些事情，据说可以增加对生活的掌控感，从而缓解焦虑。</strong></p>
 <p><strong>对时间最好的利用，就是做自己想做的事情，并且全身心的享受每一刻。</strong></p>
-<p><img src="//Users/renyx/Documents/hexo/source/_postsabstract.jpg" style="zoom:30%"> </p>
+<p><img src="//yoursite.com/2019/10/22/abstract.jpg" style="zoom:30%"> </p>
 <a id="more"></a>
 <p>这里就立一个Flag：<strong>每日一图</strong>，每天至少专注的做一件自己喜欢做的想做的事情。</p>
 <p>这里就以<a href="https://mp.weixin.qq.com/s/CX_fwbuyPTelOgaj7852qg" target="_blank" rel="noopener">推荐三本学习R画图的免费好书</a>推荐的第一本书起航吧：<strong>R G raphics Cookbook</strong></p>
@@ -436,14 +436,14 @@
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plot(mtcars$wt, mtcars$mpg)</span><br></pre></td></tr></table></figure>
 <p>使用ggplot2, 首先创建一个plot 对象，然后加一个点的图层。ggplot2通常以数据框为画图对象（<code>mtcars</code>)，然后指明哪列是<code>x</code>, 哪列是<code>y</code>。</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(ggplot2)</span><br><span class="line">ggplot(mtcars, aes(x = wt, y = mpg)) +</span><br><span class="line">  geom_point()</span><br></pre></td></tr></table></figure>
-<p><img src="//Users/renyx/Documents/hexo/source/_postsfig1.png" alt></p>
+<p><img src="//yoursite.com/2019/10/22/fig1.png" alt></p>
 <p><strong>Line Graph</strong></p>
 <p>Base plot新增line时，第一次以plot函数，第二次lines函数</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 左图</span></span><br><span class="line">plot(pressure$temperature, pressure$pressure, type = <span class="string">"l"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 右图</span></span><br><span class="line">plot(pressure$temperature, pressure$pressure, type = <span class="string">"l"</span>)</span><br><span class="line">points(pressure$temperature, pressure$pressure)</span><br><span class="line"></span><br><span class="line">lines(pressure$temperature, pressure$pressure/<span class="number">2</span>, col = <span class="string">"red"</span>)</span><br><span class="line">points(pressure$temperature, pressure$pressure/<span class="number">2</span>, col = <span class="string">"red"</span>)</span><br></pre></td></tr></table></figure>
-<p><img src="//Users/renyx/Documents/hexo/source/_postsfig2.png" alt></p>
+<p><img src="//yoursite.com/2019/10/22/fig2.png" alt></p>
 <p>ggplot2对图像的图形的选择需加上geom_line()，或者geom_point()</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 左图</span></span><br><span class="line"><span class="keyword">library</span>(ggplot2)</span><br><span class="line">ggplot(pressure, aes(x = temperature, y = pressure)) +</span><br><span class="line">  geom_line()</span><br><span class="line"><span class="comment"># 右图，加points</span></span><br><span class="line">ggplot(pressure, aes(x = temperature, y = pressure)) +</span><br><span class="line">  geom_line() +</span><br><span class="line">  geom_point()</span><br></pre></td></tr></table></figure>
-<p><img src="//Users/renyx/Documents/hexo/source/_postsfig3.png" alt></p>
+<p><img src="//yoursite.com/2019/10/22/fig3.png" alt></p>
 
       
     </div>

@@ -400,7 +400,7 @@
           
             <p>ERR地址的规律：差别在于后三个地址，先是ERR number字符串的前6个字符，然后是ERR完整字符串，最后是ERR字符串加上 <code>_1</code> 或 <code>_2</code></p>
 <p>如：</p>
-<p><img src="//Users/renyx/Documents/hexo/source/_posts1589790261584-b3c7220e-2691-4b63-92f9-21acf439465a.png" alt="image.png"></p>
+<p><img src="//yoursite.com/2020/05/18/1589790261584-b3c7220e-2691-4b63-92f9-21acf439465a.png" alt="image.png"></p>
 <p>根据此规律批量从EBI下载数据：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for i in $(cat ERR_numlist);do wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/$&#123;i:0:6&#125;/$i/$i\_*.fastq.gz; done</span><br></pre></td></tr></table></figure>
 <ul>
@@ -408,7 +408,7 @@
 <li>切记所有从windows上传到服务器的文件最好先进行格式转化，否则由于文件格式，容易报错。 <strong><code>dos2unix ERR_numlist</code></strong> </li>
 <li><code>${i:0:6}</code> ：是指输出字符串i的前6个字符， <code>0</code> :表示从第几位开始， <code>6</code> :表示截取的长度</li>
 </ul>
-<p><img src="//Users/renyx/Documents/hexo/source/_postsfig1.png" alt></p>
+<p><img src="//yoursite.com/2020/05/18/fig1.png" alt></p>
 
           
         
@@ -569,7 +569,7 @@
       
         
           <h3 id="t-test"><a href="#t-test" class="headerlink" title="t-test"></a>t-test</h3><p><strong>t-test是比较两组变量的平均值是否有显著性差异</strong></p>
-<p><img src="//Users/renyx/Documents/hexo/source/_posts1589702913894-0ff87132-df98-47cc-aa51-d3d6b4127469-20200517103250465.png" alt="image.png" style="zoom:50%;"></p>
+<p><img src="//yoursite.com/2020/05/17/1589702913894-0ff87132-df98-47cc-aa51-d3d6b4127469-20200517103250465.png" alt="image.png" style="zoom:50%;"></p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2020/05/17/59776.html#more" rel="contents">
@@ -1082,7 +1082,7 @@
 <p>时间：May 13, 2020</p>
 <p>链接: <a href="https://doi.org/10.1016/j.cell.2020.04.036" target="_blank" rel="noopener">https://doi.org/10.1016/j.cell.2020.04.036</a></p>
 <p>肠道内分泌细胞（EEC）感知肠道内容物，释放激素，调节胃肠活动、全身代谢和食物摄入量。关于人类肠道内分泌细胞亚型的分子构成和个体激素的分泌调节，目前还不甚了解。在这里，我们描述了一个基于有机体的平台，用于人类EECs的功能研究。EEC的形成是在体外通过NEUROG3的瞬时表达诱导的。设计了一套肠道器质体，其中主要的激素被荧光标记。生成了不同EEC亚型的单细胞mRNA图谱，并通过质谱法记录了其分泌的产物。我们注意到与小鼠EECs的关键差异，包括激素、感觉受体和转录因子。值得注意的是，确定了几种激素类分子。泌素诱导的GLP-1的分泌是EEC间交流的典范。事实上，个别EEC亚型携带着各种EEC激素的受体。本研究为研究人类EEC的发育和功能提供了丰富的资源。</p>
-<p><img src="//Users/renyx/Documents/hexo/source/_posts1589400011510-19258e40-16de-43b2-9a27-cd1ec0badc25.jpeg" alt="200513-fig-.jpg" style="zoom:50%;"></p>
+<p><img src="//yoursite.com/2020/05/13/1589400011510-19258e40-16de-43b2-9a27-cd1ec0badc25.jpeg" alt="200513-fig-.jpg" style="zoom:50%;"></p>
 
           
         

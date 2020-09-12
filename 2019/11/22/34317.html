@@ -89,18 +89,18 @@
 <meta property="og:site_name" content="生信拾光">
 <meta property="og:description" content="一句话评价 宏基因组物种鉴定工具集锦 文章信息 题目：Benchmarking Metagenomics Tools for Taxonomic Classification 杂志：Cell 时间：August 8,2019 链接: https://doi.org/10.1016/j.cell.2019.07.010">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://users/renyx/Documents/hexo/source/_postsabstract.png">
-<meta property="og:image" content="http://users/renyx/Documents/hexo/source/_postsfig1.png">
-<meta property="og:image" content="http://users/renyx/Documents/hexo/source/_postsfig2.png">
-<meta property="og:image" content="http://users/renyx/Documents/hexo/source/_postsfig3.png">
-<meta property="og:image" content="http://users/renyx/Documents/hexo/source/_postsfig4.png">
-<meta property="og:image" content="http://users/renyx/Documents/hexo/source/_postsfig5.png">
-<meta property="og:image" content="http://users/renyx/Documents/hexo/source/_postsfig6.png">
+<meta property="og:image" content="http://yoursite.com/2019/11/22/abstract.png">
+<meta property="og:image" content="http://yoursite.com/2019/11/22/fig1.png">
+<meta property="og:image" content="http://yoursite.com/2019/11/22/fig2.png">
+<meta property="og:image" content="http://yoursite.com/2019/11/22/fig3.png">
+<meta property="og:image" content="http://yoursite.com/2019/11/22/fig4.png">
+<meta property="og:image" content="http://yoursite.com/2019/11/22/fig5.png">
+<meta property="og:image" content="http://yoursite.com/2019/11/22/fig6.png">
 <meta property="og:updated_time" content="2020-09-12T09:49:57.673Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="宏基因组物种鉴定工具">
 <meta name="twitter:description" content="一句话评价 宏基因组物种鉴定工具集锦 文章信息 题目：Benchmarking Metagenomics Tools for Taxonomic Classification 杂志：Cell 时间：August 8,2019 链接: https://doi.org/10.1016/j.cell.2019.07.010">
-<meta name="twitter:image" content="http://users/renyx/Documents/hexo/source/_postsabstract.png">
+<meta name="twitter:image" content="http://yoursite.com/2019/11/22/abstract.png">
 
 
 
@@ -410,14 +410,14 @@
 <p>杂志：Cell</p>
 <p>时间：August 8,2019</p>
 <p>链接: <a href="https://doi.org/10.1016/j.cell.2019.07.010" target="_blank" rel="noopener">https://doi.org/10.1016/j.cell.2019.07.010</a></p>
-<p><img src="//Users/renyx/Documents/hexo/source/_postsabstract.png" alt></p>
+<p><img src="//yoursite.com/2019/11/22/abstract.png" alt></p>
 <a id="more"></a>
 <p><strong>文章介绍：</strong></p>
 <p>鉴定物种分类是宏基因组分析的一个必要和基础步骤，相关工具也是层出不穷，如何评价物种分类工具的性能，主要从鉴定的准确性、速度和所需要的计算资源这几方面考虑。</p>
 <p>这篇文章针对20种常见的物种鉴定工具进行评估，并描述了如何评价工具性能。</p>
 <p>下图展示了宏基因组的复杂的样本到物种鉴定和丰度计算的过程</p>
 <p><strong>figure</strong></p>
-<p><img src="//Users/renyx/Documents/hexo/source/_postsfig1.png" alt></p>
+<p><img src="//yoursite.com/2019/11/22/fig1.png" alt></p>
 <h3 id="参考数据库"><a href="#参考数据库" class="headerlink" title="参考数据库"></a>参考数据库</h3><p>宏基因组的物种鉴定依赖于数据库，常见的数据库有<strong>RefSeq, blast nt和nr，以及16S rRNA特有的数据库SILVA</strong>。</p>
 <h3 id="评价物种分类工具性能的方法"><a href="#评价物种分类工具性能的方法" class="headerlink" title="评价物种分类工具性能的方法"></a>评价物种分类工具性能的方法</h3><p>召回率（Recall）和准精确度（Precision）是宏基因组物种鉴定中重要的两个度量概念，这两个概念也是统计学中经常见到的。</p>
 <blockquote>
@@ -430,16 +430,16 @@
 <p><strong>F值是Precision和Recall加权调和平均</strong></p>
 <p><strong>AUPR:</strong>是指precision和recal曲线下面的面积，也是一个综合考虑P-R两者来评估结果准确性的一个度量值。</p>
 <p><strong>L2 distance:</strong>是为了评估丰度准确性的参数值，通过计算在给定的分类水平上，每个已识别分类单元的ground-truth丰度和标准丰度计数之间的成对距离。</p>
-<p><img src="//Users/renyx/Documents/hexo/source/_postsfig2.png" alt></p>
+<p><img src="//yoursite.com/2019/11/22/fig2.png" alt></p>
 <p>###物种分类工具和其性能</p>
 <p>这里他们比较了20种宏基因组物种鉴定工具，利用相同的数据库 分别比较了他们的precision, recall, F1, 速度和其他值。包括DAN-DNA鉴定，DNA-protein鉴定，和基于marker的鉴定方法。</p>
-<p><img src="//Users/renyx/Documents/hexo/source/_postsfig3.png" alt></p>
+<p><img src="//yoursite.com/2019/11/22/fig3.png" alt></p>
 <p><strong>AUPR值如下：</strong>值越接近1越好</p>
-<p><img src="//Users/renyx/Documents/hexo/source/_postsfig4.png" alt></p>
+<p><img src="//yoursite.com/2019/11/22/fig4.png" alt></p>
 <p><strong>L2 distance</strong>: 值越小越好</p>
-<p><img src="//Users/renyx/Documents/hexo/source/_postsfig5.png" alt></p>
+<p><img src="//yoursite.com/2019/11/22/fig5.png" alt></p>
 <p><strong>运行时间</strong></p>
-<p><img src="//Users/renyx/Documents/hexo/source/_postsfig6.png" alt></p>
+<p><img src="//yoursite.com/2019/11/22/fig6.png" alt></p>
 <p><strong>碎碎念</strong></p>
 <p>没有做过宏基因组分析实际项目，看着这些软件名字完全没有感觉，也记不住，后续研究若用到的话可以参考这里做选择。</p>
 <blockquote>
