@@ -89,13 +89,13 @@
 <meta property="og:site_name" content="生信拾光">
 <meta property="og:description" content="目标提取fastq文件中的序列信息，并输出为一行  方法一：paste + cut实现1head CH2500.fq | paste - - - - | cut -f 2 | paste -d &apos;&apos; -s   paste - - - - 将fastq的每4行转化为列，并以空格分割；cut -f 2提取第二列信息，即之前的第二行信息，序列信息，然后再利用paste ，-d指定分隔符为无，-s` 合并">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2020/03/fastq_fasta.htm/fg1.png">
-<meta property="og:image" content="http://yoursite.com/2020/03/fastq_fasta.htm/fg2.png">
+<meta property="og:image" content="http://yoursite.com/2020/03/fg1.png">
+<meta property="og:image" content="http://yoursite.com/2020/03/fg2.png">
 <meta property="og:updated_time" content="2020-09-11T19:48:26.758Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="提取fastq文件中的序列信息">
 <meta name="twitter:description" content="目标提取fastq文件中的序列信息，并输出为一行  方法一：paste + cut实现1head CH2500.fq | paste - - - - | cut -f 2 | paste -d &apos;&apos; -s   paste - - - - 将fastq的每4行转化为列，并以空格分割；cut -f 2提取第二列信息，即之前的第二行信息，序列信息，然后再利用paste ，-d指定分隔符为无，-s` 合并">
-<meta name="twitter:image" content="http://yoursite.com/2020/03/fastq_fasta.htm/fg1.png">
+<meta name="twitter:image" content="http://yoursite.com/2020/03/fg1.png">
 
 
 
@@ -399,9 +399,9 @@
 
       
         <h3 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h3><p>提取fastq文件中的序列信息，并输出为一行</p>
-<p><img src="/2020/03/fastq_fasta.htm/fg1.png" style="zoom:50%;"></p>
+<p><img src="//yoursite.com/2020/03/fg1.png" style="zoom:50%;"></p>
 <h3 id="方法一：paste-cut实现"><a href="#方法一：paste-cut实现" class="headerlink" title="方法一：paste + cut实现"></a>方法一：paste + cut实现</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">head CH2500.fq | paste - - - - | cut -f 2 | paste -d '' -s</span><br></pre></td></tr></table></figure>
-<p><img src="/2020/03/fastq_fasta.htm/fg2.png" alt></p>
+<p><img src="//yoursite.com/2020/03/fg2.png" alt></p>
 <ul>
 <li><code>paste - - - -</code> 将fastq的每4行转化为列，并以空格分割；<code></code>cut -f 2<code>提取第二列信息，即之前的第二行信息，序列信息，然后再利用paste ，</code>-d<code>指定分隔符为无，</code>-s` 合并为一行信息</li>
 </ul>

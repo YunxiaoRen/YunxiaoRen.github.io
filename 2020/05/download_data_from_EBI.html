@@ -89,13 +89,13 @@
 <meta property="og:site_name" content="生信拾光">
 <meta property="og:description" content="ERR地址的规律：差别在于后三个地址，先是ERR number字符串的前6个字符，然后是ERR完整字符串，最后是ERR字符串加上 _1 或 _2 如：  根据此规律批量从EBI下载数据： 1for i in $(cat ERR_numlist);do wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/$&amp;#123;i:0:6&amp;#125;/$i/$i\_*.fastq.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2020/05/download_data_from_EBI.htm/1589790261584-b3c7220e-2691-4b63-92f9-21acf439465a.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/download_data_from_EBI.htm/fig1.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/1589790261584-b3c7220e-2691-4b63-92f9-21acf439465a.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/fig1.png">
 <meta property="og:updated_time" content="2020-09-11T19:18:51.297Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="从EBI批量下载数据">
 <meta name="twitter:description" content="ERR地址的规律：差别在于后三个地址，先是ERR number字符串的前6个字符，然后是ERR完整字符串，最后是ERR字符串加上 _1 或 _2 如：  根据此规律批量从EBI下载数据： 1for i in $(cat ERR_numlist);do wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/$&amp;#123;i:0:6&amp;#125;/$i/$i\_*.fastq.">
-<meta name="twitter:image" content="http://yoursite.com/2020/05/download_data_from_EBI.htm/1589790261584-b3c7220e-2691-4b63-92f9-21acf439465a.png">
+<meta name="twitter:image" content="http://yoursite.com/2020/05/1589790261584-b3c7220e-2691-4b63-92f9-21acf439465a.png">
 
 
 
@@ -400,7 +400,7 @@
       
         <p>ERR地址的规律：差别在于后三个地址，先是ERR number字符串的前6个字符，然后是ERR完整字符串，最后是ERR字符串加上 <code>_1</code> 或 <code>_2</code></p>
 <p>如：</p>
-<p><img src="/2020/05/download_data_from_EBI.htm/1589790261584-b3c7220e-2691-4b63-92f9-21acf439465a.png" alt="image.png"></p>
+<p><img src="//yoursite.com/2020/05/1589790261584-b3c7220e-2691-4b63-92f9-21acf439465a.png" alt="image.png"></p>
 <p>根据此规律批量从EBI下载数据：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for i in $(cat ERR_numlist);do wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/$&#123;i:0:6&#125;/$i/$i\_*.fastq.gz; done</span><br></pre></td></tr></table></figure>
 <ul>
@@ -408,7 +408,7 @@
 <li>切记所有从windows上传到服务器的文件最好先进行格式转化，否则由于文件格式，容易报错。 <strong><code>dos2unix ERR_numlist</code></strong> </li>
 <li><code>${i:0:6}</code> ：是指输出字符串i的前6个字符， <code>0</code> :表示从第几位开始， <code>6</code> :表示截取的长度</li>
 </ul>
-<p><img src="/2020/05/download_data_from_EBI.htm/fig1.png" alt></p>
+<p><img src="//yoursite.com/2020/05/fig1.png" alt></p>
 
       
     </div>
