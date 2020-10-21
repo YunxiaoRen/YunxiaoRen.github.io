@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-09-12T21:09:41.639Z</updated>
+  <updated>2020-10-21T21:20:34.016Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,42 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>基因组变异的理解和分析</title>
+    <link href="http://yoursite.com/2020/10/21/e3914e23.html"/>
+    <id>http://yoursite.com/2020/10/21/e3914e23.html</id>
+    <published>2020-10-21T19:56:05.000Z</published>
+    <updated>2020-10-21T21:20:34.016Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="什么是遗传变异"><a href="#什么是遗传变异" class="headerlink" title="什么是遗传变异"></a>什么是遗传变异</h3><p>遗传变异（genetic variation）是指一个群体中个体之间DNA序列的差异。变异可发生在生殖细胞（即精子和卵子）中，也发生在体细胞(所有其他)中。只有在生殖细胞中产生的变异才能从一个个体遗传给另一个个体，从而影响种群的动态，并最终影响进化。</p><p><strong>突变（Mutation）和重组（Recombination）</strong>是变异的主要来源。</p><h3 id="遗传变异的类型"><a href="#遗传变异的类型" class="headerlink" title="遗传变异的类型"></a>遗传变异的类型</h3><ul><li><p><strong>点突变Single base-pair mutation</strong></p><p>只有一个碱基发生了替换，具体包括Transition和Transversion。Transition指嘌呤(A/G)之间或嘧啶(T/C)之间的替换。Transversion指嘌呤和嘧啶间的替换。</p></li><li><p><strong>插入/缺失（Indel）</strong></p><p>主要指在基因组某个位置上发生较短长度的<strong>线性片段</strong>插入或者删除的现象。强调<strong>线性</strong>的原因是，这里的插入和删除是<strong>有前后顺序的</strong>与下述的结构性变异不同。Indel长度通常在50bp以下，更多时候甚至是不超过10bp，这个长度范围内的序列变化可以通过Smith-Waterman 的局部比对算法来<strong>准确</strong>获得，并且也能够在目前短读长的测序数据中较好地检测出来。</p></li><li><p><strong>结构变异</strong></p><p>通常就是指基因组上大长度的序列变化和位置关系变化。类型很多，包括长度在50bp以上的长片段序列插入或者删除（Big Indel）、串联重复（Tandem repeate）、染色体倒位（Inversion）、染色体内部或染色体之间的序列易位（Translocation）、拷贝数变异（CNV）以及形式更为复杂的嵌合性变异。1Kb与3Mb之间的序列，包括插入、缺失、拷贝数变异、倒位和易位。</p></li></ul><a id="more"></a><h3 id="变异的鉴定和分析"><a href="#变异的鉴定和分析" class="headerlink" title="变异的鉴定和分析"></a>变异的鉴定和分析</h3><p>变异的鉴定主要分为两个步骤：<strong>比对和variants calling</strong></p><ul><li><p><strong>比对</strong></p><p>​    常用的软件有：BWA，Bowtie2。将质控后的数据(fastq)比对到参考基因组上，得到比对后的reads（bam或CRAM格式）。</p></li><li><p><strong>variants calling</strong></p><p>常用的软件有GATK, bcftools, FreeBays等，这里的variants通常只包含SNPs和Indels，最终得到vcf格式的文件。</p></li></ul><p><img src="/2020/10/21/e3914e23/image-20201021223957905.png" alt="image-20201021223957905"></p><ul><li><p><strong>vcf文件格式介绍</strong></p><p>vcf是<strong>Variant Call Format</strong>的简称，即是变异文件储存的标准格式。下图是E.coli 变异分析的vcf文件示例。</p><ul><li>CHROM： 染色体，由于E.coli是一个环形的基因组，这里没有区分染色体</li><li>POS: 变异位点</li><li>REF: 参考基因组位点的碱基</li><li>ALT：个体变异位点的碱基</li><li>QUAL：质量</li><li>FILTER：如果使用GATK过滤后，会对通过过滤的变异位点有PASS的标签</li><li>INFO: 这一栏包含的信息较多，其中<ul><li>DP：表示覆盖在这个位点的总reads数，也就是这个位点的测序深度</li><li>GT: 表示genotype，通常用”/” or “|”分隔两个数字，“|”phase过也就是杂合的两个等位基因知道哪个等位基因来自哪条染色体；0代表参考基因组的碱基类型；1代表ALT碱基类型的第一个碱基（多个碱基用”,”分隔），2代表ALT第二个碱基，以此类推；比如 REF列为：A， ALT列为G,T；那么0/1基因型为AG 杂合，1/1基因型为GG纯合SNP；1/2代表GT基因型；./.表示缺失。</li></ul></li></ul></li></ul><p><img src="/2020/10/21/e3914e23/image-20201021225018928.png" alt="image-20201021225018928" style="zoom:50%;"></p><h3 id="变异分析常用的工具：bcftools-amp-vcftools"><a href="#变异分析常用的工具：bcftools-amp-vcftools" class="headerlink" title="变异分析常用的工具：bcftools &amp; vcftools"></a>变异分析常用的工具：bcftools &amp; vcftools</h3><h4 id="bcftools的部分功能介绍"><a href="#bcftools的部分功能介绍" class="headerlink" title="bcftools的部分功能介绍"></a>bcftools的部分功能介绍</h4><ul><li><p>Calling Variants</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bcftools mpileup -f REF.fa sample.sorted.bam | bcftools call -vm -Oz &gt; sample.vcf.gz</span><br></pre></td></tr></table></figure></li><li><p>提取等位基因和基因型信息</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bcftools query -f '%CHROM %POS %REF %ALT [%TGT]\n' query.vcf.gz -o query.extract.txt</span><br></pre></td></tr></table></figure></li></ul><ul><li>变异位点的基本统计分析</li></ul><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bcftools stats sample.vcf &gt; sample.vcf.stats</span><br><span class="line">plot-vcfstats sample.vcf.stats -p sample.vcf.stats.plot_output</span><br></pre></td></tr></table></figure><p><img src="/2020/10/21/e3914e23/image-20201021231029324.png" alt="image-20201021231029324" style="zoom:50%;"></p><p><img src="/2020/10/21/e3914e23/image-20201021231018278.png" alt="image-20201021231018278" style="zoom:50%;"></p><h4 id="vcftools的部分功能介绍"><a href="#vcftools的部分功能介绍" class="headerlink" title="vcftools的部分功能介绍"></a>vcftools的部分功能介绍</h4><ul><li><p>vcf文件的过滤</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vcftools --vcf sample.vcf --minDP 4 --max-missing 0.2 --minQ 30 --recode --recode-INFO-all --out filter</span><br></pre></td></tr></table></figure><p><code>max-missing 0.5</code>: 过滤低于50％的基因型</p><p><code>--minDP 4</code>:过滤depth低于4的reads<br><code>--recode</code>: 标志告诉程序使用过滤器写入一个新的vcf文件，<code>--recode-INFO-all</code>保留旧vcf文件中的所有INFO标志。</p><p><code>--out</code> 输出的文件名称的前缀</p></li><li><p>拆分SNPs和Indels</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">## 保留SNPs</span></span></span><br><span class="line">vcftools --vcf filter.recode.vcf --remove-indels --recode --recode-INFO-all --out filter.snps </span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">## 保留Indels</span></span></span><br><span class="line">vcftools --vcf filter.recode.vcf --keep-only-indels --recode --recode-INFO-all --out filter.indels</span><br></pre></td></tr></table></figure></li></ul><p>###参考</p><ul><li><a href="https://www.ebi.ac.uk/training-beta/online/courses/human-genetic-variation-introduction/what-is-genetic-variation/" target="_blank" rel="noopener">Human Genetic Variation</a></li><li><a href="https://www.omicsclass.com/article/6" target="_blank" rel="noopener">看懂变异记录结果文件（VCF）</a></li><li><a href="https://www.jianshu.com/p/957efb50108f" target="_blank" rel="noopener">VCF格式</a></li><li><a href="https://luansheng.netlify.app/2019/08/29/how-to-use-bcftools/" target="_blank" rel="noopener">bcftools使用笔记</a></li><li>vcftools: <a href="http://vcftools.sourceforge.net/man_latest.html" target="_blank" rel="noopener">http://vcftools.sourceforge.net/man_latest.html</a></li><li>bcftools: <a href="http://samtools.github.io/bcftools/bcftools.html" target="_blank" rel="noopener">http://samtools.github.io/bcftools/bcftools.html</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;什么是遗传变异&quot;&gt;&lt;a href=&quot;#什么是遗传变异&quot; class=&quot;headerlink&quot; title=&quot;什么是遗传变异&quot;&gt;&lt;/a&gt;什么是遗传变异&lt;/h3&gt;&lt;p&gt;遗传变异（genetic variation）是指一个群体中个体之间DNA序列的差异。变异可发生在生殖细胞（即精子和卵子）中，也发生在体细胞(所有其他)中。只有在生殖细胞中产生的变异才能从一个个体遗传给另一个个体，从而影响种群的动态，并最终影响进化。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;突变（Mutation）和重组（Recombination）&lt;/strong&gt;是变异的主要来源。&lt;/p&gt;
+&lt;h3 id=&quot;遗传变异的类型&quot;&gt;&lt;a href=&quot;#遗传变异的类型&quot; class=&quot;headerlink&quot; title=&quot;遗传变异的类型&quot;&gt;&lt;/a&gt;遗传变异的类型&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;点突变Single base-pair mutation&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;只有一个碱基发生了替换，具体包括Transition和Transversion。Transition指嘌呤(A/G)之间或嘧啶(T/C)之间的替换。Transversion指嘌呤和嘧啶间的替换。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;插入/缺失（Indel）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;主要指在基因组某个位置上发生较短长度的&lt;strong&gt;线性片段&lt;/strong&gt;插入或者删除的现象。强调&lt;strong&gt;线性&lt;/strong&gt;的原因是，这里的插入和删除是&lt;strong&gt;有前后顺序的&lt;/strong&gt;与下述的结构性变异不同。Indel长度通常在50bp以下，更多时候甚至是不超过10bp，这个长度范围内的序列变化可以通过Smith-Waterman 的局部比对算法来&lt;strong&gt;准确&lt;/strong&gt;获得，并且也能够在目前短读长的测序数据中较好地检测出来。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;结构变异&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;通常就是指基因组上大长度的序列变化和位置关系变化。类型很多，包括长度在50bp以上的长片段序列插入或者删除（Big Indel）、串联重复（Tandem repeate）、染色体倒位（Inversion）、染色体内部或染色体之间的序列易位（Translocation）、拷贝数变异（CNV）以及形式更为复杂的嵌合性变异。1Kb与3Mb之间的序列，包括插入、缺失、拷贝数变异、倒位和易位。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="Data Sciences" scheme="http://yoursite.com/categories/Data-Sciences/"/>
+    
+    
+      <category term="software" scheme="http://yoursite.com/tags/software/"/>
+    
+      <category term="Genome Variants" scheme="http://yoursite.com/tags/Genome-Variants/"/>
+    
+  </entry>
   
   <entry>
     <title>python实现的一些数据预处理</title>
@@ -498,32 +534,6 @@
 &lt;p&gt;Logistic regression is a statistical model that in its basic form uses a logistic function to model a binary dependent variable。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;逻辑回归（logistic/logit regression）主要应用于解决&lt;strong&gt;二分类&lt;/strong&gt;问题，和线性回归都属于线性模型，但是逻辑回归是解决分类问题，而线性回归是解决回归问题。逻辑回归通过最大似然法（Maximum likelihood）寻找最佳模型。可以通过summary()函数的输出结果AIC值对比模型的拟合程度，或者通过sensitivity, specifity评估，既可以以ROC和AUC的结果评估。概率回归也用于二分类问题，和逻辑回归类似。不同的是逻辑回归使用累积逻辑函数（cumulative logistic function），概率回归使用正态累积密度函数（normal cumulative density function）。实际应用两个模型时时可根据自己的爱好选择。逻辑回归在R中的实现以 &lt;strong&gt;&lt;code&gt;glm()&lt;/code&gt;&lt;/strong&gt; 函数实现，并指定参数 &lt;code&gt;**family = binomial**&lt;/code&gt; , 而概率回归以glm()函数，并指定 &lt;strong&gt;&lt;code&gt;family =binomial(link=&amp;quot;probit&amp;quot;)&lt;/code&gt;&lt;/strong&gt; 。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="statistics" scheme="http://yoursite.com/tags/statistics/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>线性回归和线性模型</title>
-    <link href="http://yoursite.com/2020/05/17/31684.html"/>
-    <id>http://yoursite.com/2020/05/17/31684.html</id>
-    <published>2020-05-17T06:40:38.000Z</published>
-    <updated>2020-09-12T09:49:57.695Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>什么是线性回归和线性模型？他们的关系是什么？如何计算和评估线性回归模型？如何在R中实现？</strong></p><h2 id="线性回归和线性模型"><a href="#线性回归和线性模型" class="headerlink" title="线性回归和线性模型"></a><strong>线性回归和线性模型</strong></h2><p>首先看下wiki给出的解释：</p><blockquote><p>In statistics, linear regression is a linear approach to modeling the relationship between a scalar response (or dependent variable) and one or more explanatory variables (or independent variables). The case of one explanatory variable is called simple linear regression. For more than one explanatory variable, the process is called multiple linear regression</p></blockquote><p>线性回归即用来寻找变量间的线性关系，属于线性模型的一个分支，通常使用最小二乘法（least squared method)寻找</p><p>最佳模型，并用R suqared( R2 ）评估模型的拟合程度，R2越大表示模型拟合效果越好。在R中以lm()函数实现，代码公式为 <code>lm(dependent varaible ~ independent varaibles, data</code> .</p><a id="more"></a><p><img src="/2020/05/17/31684/1589697274717-c22e4977-8d06-4552-8dda-1906453aa44a.png" alt="image.png" style="zoom:50%;"></p><p><img src="/2020/05/17/31684/1589697479975-0256eaec-3fd1-4829-9bca-4ab84782d79c.png" alt="image.png" style="zoom:50%;"></p><p><strong>p-value矫正：</strong> <strong>Bonferroni Correction和Benjamini and Hochberg method</strong></p><p>Bonferroni Correction是p-value的一个矫正方法，相对严格；FDR是另一种矫正p-value的方法，而Benjamini and Hochberg method（即BH)是FDR的一个计算方法。</p><blockquote><p>We know P-value threshold is set artificially, the samller p-value represents the lower false positive for the result, but not mean it is absolutly true. For example, if the P-value equals 0.05, 10,000 tests are done, the number of false positive results will be 0.05*10,000 = 500. The false positive results will be enlarged with the incresasing the number of tests . Therefor, we need to introduce multiple tests for correction to reduce the number of false positive results. </p><p>There are two main correction methods used:</p><p><strong>1) Bonferroni Correction</strong></p></blockquote><blockquote><p>The Bonferroni method is a simplest and most brutally effective method of correction, which rejects all the possibilities of false pofitive results, and eliminates them by correcting the threshold of the P value. </p></blockquote><blockquote><p>The formula for Bonferroni method is p<em>(1/n), where p is the original P value threshold, and n is the total number of tests. If the original P value is is 0.05, and the number of test is 10,000, then the threshold after Bonferroni correction is equal to 0.05/10,000 = 0.000005, in this case, the number of false positive results in 10,000 test is 10,000 </em> 0.000005 = 0.5, less than 1. </p></blockquote><blockquote><p>But Bonferroni correction is too stringent, it will cause not only false positives are rejected by corrected threshold, but mant positives are also rejected. </p></blockquote><blockquote><p><strong>2) FDR( False Discovery Rate)</strong></p><p>FDR corrects for p-values in a relatively gentle wat compared to Bonferroni. It attempts to get a balance between false positives and false negatives, keeping the false/true positive ratio within a certain range. For example, if we set a threshold of 0.05 for 10,000 tests,the probabilty of false positives remains within 0.05, which is called FDR&lt;0.05.</p></blockquote><blockquote><p>So how to calculate FDR from p value, there are several estimation models. The most used is <strong>Benjamini and Hochberg method,</strong> also known as <strong>BH method</strong>. </p></blockquote><blockquote><p>BH method requires the results of total <strong>m</strong> tests to be ranked in descending order, <strong>k is the rank of p value in one of the results.</strong> </p></blockquote><blockquote><p>find the maximum k value that meets the original threshold α, satisfy P(k) &lt;= α<em>k/m, consider the ranking to be significanand different for all tests from 1 to k, and calculate the corresponding q value as q=p</em>(m/k). </p></blockquote><p><strong>参考资料：</strong></p><p>statquest线性回归视频 : <a href="https://www.youtube.com/playlist?list=PLblh5JKOoLUIzaEkCLIUxQFjPIlapw8nU" target="_blank" rel="noopener">https://www.youtube.com/playlist?list=PLblh5JKOoLUIzaEkCLIUxQFjPIlapw8nU</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;什么是线性回归和线性模型？他们的关系是什么？如何计算和评估线性回归模型？如何在R中实现？&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&quot;线性回归和线性模型&quot;&gt;&lt;a href=&quot;#线性回归和线性模型&quot; class=&quot;headerlink&quot; title=&quot;线性回归和线性模型&quot;&gt;&lt;/a&gt;&lt;strong&gt;线性回归和线性模型&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;首先看下wiki给出的解释：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;In statistics, linear regression is a linear approach to modeling the relationship between a scalar response (or dependent variable) and one or more explanatory variables (or independent variables). The case of one explanatory variable is called simple linear regression. For more than one explanatory variable, the process is called multiple linear regression&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;线性回归即用来寻找变量间的线性关系，属于线性模型的一个分支，通常使用最小二乘法（least squared method)寻找&lt;/p&gt;
-&lt;p&gt;最佳模型，并用R suqared( R2 ）评估模型的拟合程度，R2越大表示模型拟合效果越好。在R中以lm()函数实现，代码公式为 &lt;code&gt;lm(dependent varaible ~ independent varaibles, data&lt;/code&gt; .&lt;/p&gt;
     
     </summary>
     

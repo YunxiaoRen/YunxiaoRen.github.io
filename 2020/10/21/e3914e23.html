@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="software,Genome Variants,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="生信拾光" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="什么是遗传变异遗传变异（genetic variation）是指一个群体中个体之间DNA序列的差异。变异可发生在生殖细胞（即精子和卵子）中，也发生在体细胞(所有其他)中。只有在生殖细胞中产生的变异才能从一个个体遗传给另一个个体，从而影响种群的动态，并最终影响进化。 突变（Mutation）和重组（Recombination）是变异的主要来源。 遗传变异的类型 点突变Single base-pair">
+<meta name="keywords" content="software,Genome Variants">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基因组变异的理解和分析">
+<meta property="og:url" content="http://yoursite.com/2020/10/21/e3914e23.html">
+<meta property="og:site_name" content="生信拾光">
+<meta property="og:description" content="什么是遗传变异遗传变异（genetic variation）是指一个群体中个体之间DNA序列的差异。变异可发生在生殖细胞（即精子和卵子）中，也发生在体细胞(所有其他)中。只有在生殖细胞中产生的变异才能从一个个体遗传给另一个个体，从而影响种群的动态，并最终影响进化。 突变（Mutation）和重组（Recombination）是变异的主要来源。 遗传变异的类型 点突变Single base-pair">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2020/10/21/e3914e23/image-20201021223957905.png">
+<meta property="og:image" content="http://yoursite.com/2020/10/21/e3914e23/image-20201021225018928.png">
+<meta property="og:image" content="http://yoursite.com/2020/10/21/e3914e23/image-20201021231029324.png">
+<meta property="og:image" content="http://yoursite.com/2020/10/21/e3914e23/image-20201021231018278.png">
+<meta property="og:updated_time" content="2020-10-21T21:20:34.016Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="基因组变异的理解和分析">
+<meta name="twitter:description" content="什么是遗传变异遗传变异（genetic variation）是指一个群体中个体之间DNA序列的差异。变异可发生在生殖细胞（即精子和卵子）中，也发生在体细胞(所有其他)中。只有在生殖细胞中产生的变异才能从一个个体遗传给另一个个体，从而影响种群的动态，并最终影响进化。 突变（Mutation）和重组（Recombination）是变异的主要来源。 遗传变异的类型 点突变Single base-pair">
+<meta name="twitter:image" content="http://yoursite.com/2020/10/21/e3914e23/image-20201021223957905.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '六六'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/10/21/e3914e23.html">
+
+
+
+
+
+  <title>基因组变异的理解和分析 | 生信拾光</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">生信拾光</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/10/21/e3914e23.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="六六">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="生信拾光">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">基因组变异的理解和分析</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-10-21T21:56:05+02:00">
+                2020-10-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Data-Sciences/" itemprop="url" rel="index">
+                    <span itemprop="name">Data Sciences</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/10/21/e3914e23.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/10/21/e3914e23.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.1k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  4
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="什么是遗传变异"><a href="#什么是遗传变异" class="headerlink" title="什么是遗传变异"></a>什么是遗传变异</h3><p>遗传变异（genetic variation）是指一个群体中个体之间DNA序列的差异。变异可发生在生殖细胞（即精子和卵子）中，也发生在体细胞(所有其他)中。只有在生殖细胞中产生的变异才能从一个个体遗传给另一个个体，从而影响种群的动态，并最终影响进化。</p>
+<p><strong>突变（Mutation）和重组（Recombination）</strong>是变异的主要来源。</p>
+<h3 id="遗传变异的类型"><a href="#遗传变异的类型" class="headerlink" title="遗传变异的类型"></a>遗传变异的类型</h3><ul>
+<li><p><strong>点突变Single base-pair mutation</strong></p>
+<p>只有一个碱基发生了替换，具体包括Transition和Transversion。Transition指嘌呤(A/G)之间或嘧啶(T/C)之间的替换。Transversion指嘌呤和嘧啶间的替换。</p>
+</li>
+<li><p><strong>插入/缺失（Indel）</strong></p>
+<p>主要指在基因组某个位置上发生较短长度的<strong>线性片段</strong>插入或者删除的现象。强调<strong>线性</strong>的原因是，这里的插入和删除是<strong>有前后顺序的</strong>与下述的结构性变异不同。Indel长度通常在50bp以下，更多时候甚至是不超过10bp，这个长度范围内的序列变化可以通过Smith-Waterman 的局部比对算法来<strong>准确</strong>获得，并且也能够在目前短读长的测序数据中较好地检测出来。</p>
+</li>
+<li><p><strong>结构变异</strong></p>
+<p>通常就是指基因组上大长度的序列变化和位置关系变化。类型很多，包括长度在50bp以上的长片段序列插入或者删除（Big Indel）、串联重复（Tandem repeate）、染色体倒位（Inversion）、染色体内部或染色体之间的序列易位（Translocation）、拷贝数变异（CNV）以及形式更为复杂的嵌合性变异。1Kb与3Mb之间的序列，包括插入、缺失、拷贝数变异、倒位和易位。</p>
+</li>
+</ul>
+<a id="more"></a>
+<h3 id="变异的鉴定和分析"><a href="#变异的鉴定和分析" class="headerlink" title="变异的鉴定和分析"></a>变异的鉴定和分析</h3><p>变异的鉴定主要分为两个步骤：<strong>比对和variants calling</strong></p>
+<ul>
+<li><p><strong>比对</strong></p>
+<p>​    常用的软件有：BWA，Bowtie2。将质控后的数据(fastq)比对到参考基因组上，得到比对后的reads（bam或CRAM格式）。</p>
+</li>
+<li><p><strong>variants calling</strong></p>
+<p>常用的软件有GATK, bcftools, FreeBays等，这里的variants通常只包含SNPs和Indels，最终得到vcf格式的文件。</p>
+</li>
+</ul>
+<p><img src="/2020/10/21/e3914e23/image-20201021223957905.png" alt="image-20201021223957905"></p>
+<ul>
+<li><p><strong>vcf文件格式介绍</strong></p>
+<p>vcf是<strong>Variant Call Format</strong>的简称，即是变异文件储存的标准格式。下图是E.coli 变异分析的vcf文件示例。</p>
+<ul>
+<li>CHROM： 染色体，由于E.coli是一个环形的基因组，这里没有区分染色体</li>
+<li>POS: 变异位点</li>
+<li>REF: 参考基因组位点的碱基</li>
+<li>ALT：个体变异位点的碱基</li>
+<li>QUAL：质量</li>
+<li>FILTER：如果使用GATK过滤后，会对通过过滤的变异位点有PASS的标签</li>
+<li>INFO: 这一栏包含的信息较多，其中<ul>
+<li>DP：表示覆盖在这个位点的总reads数，也就是这个位点的测序深度</li>
+<li>GT: 表示genotype，通常用”/” or “|”分隔两个数字，“|”phase过也就是杂合的两个等位基因知道哪个等位基因来自哪条染色体；0代表参考基因组的碱基类型；1代表ALT碱基类型的第一个碱基（多个碱基用”,”分隔），2代表ALT第二个碱基，以此类推；比如 REF列为：A， ALT列为G,T；那么0/1基因型为AG 杂合，1/1基因型为GG纯合SNP；1/2代表GT基因型；./.表示缺失。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="/2020/10/21/e3914e23/image-20201021225018928.png" alt="image-20201021225018928" style="zoom:50%;"></p>
+<h3 id="变异分析常用的工具：bcftools-amp-vcftools"><a href="#变异分析常用的工具：bcftools-amp-vcftools" class="headerlink" title="变异分析常用的工具：bcftools &amp; vcftools"></a>变异分析常用的工具：bcftools &amp; vcftools</h3><h4 id="bcftools的部分功能介绍"><a href="#bcftools的部分功能介绍" class="headerlink" title="bcftools的部分功能介绍"></a>bcftools的部分功能介绍</h4><ul>
+<li><p>Calling Variants</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bcftools mpileup -f REF.fa sample.sorted.bam | bcftools call -vm -Oz &gt; sample.vcf.gz</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>提取等位基因和基因型信息</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bcftools query -f '%CHROM %POS %REF %ALT [%TGT]\n' query.vcf.gz -o query.extract.txt</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li>变异位点的基本统计分析</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bcftools stats sample.vcf &gt; sample.vcf.stats</span><br><span class="line">plot-vcfstats sample.vcf.stats -p sample.vcf.stats.plot_output</span><br></pre></td></tr></table></figure>
+<p><img src="/2020/10/21/e3914e23/image-20201021231029324.png" alt="image-20201021231029324" style="zoom:50%;"></p>
+<p><img src="/2020/10/21/e3914e23/image-20201021231018278.png" alt="image-20201021231018278" style="zoom:50%;"></p>
+<h4 id="vcftools的部分功能介绍"><a href="#vcftools的部分功能介绍" class="headerlink" title="vcftools的部分功能介绍"></a>vcftools的部分功能介绍</h4><ul>
+<li><p>vcf文件的过滤</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vcftools --vcf sample.vcf --minDP 4 --max-missing 0.2 --minQ 30 --recode --recode-INFO-all --out filter</span><br></pre></td></tr></table></figure>
+<p><code>max-missing 0.5</code>: 过滤低于50％的基因型</p>
+<p><code>--minDP 4</code>:过滤depth低于4的reads<br><code>--recode</code>: 标志告诉程序使用过滤器写入一个新的vcf文件，<code>--recode-INFO-all</code>保留旧vcf文件中的所有INFO标志。</p>
+<p><code>--out</code> 输出的文件名称的前缀</p>
+</li>
+<li><p>拆分SNPs和Indels</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">## 保留SNPs</span></span></span><br><span class="line">vcftools --vcf filter.recode.vcf --remove-indels --recode --recode-INFO-all --out filter.snps </span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">## 保留Indels</span></span></span><br><span class="line">vcftools --vcf filter.recode.vcf --keep-only-indels --recode --recode-INFO-all --out filter.indels</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>###参考</p>
+<ul>
+<li><a href="https://www.ebi.ac.uk/training-beta/online/courses/human-genetic-variation-introduction/what-is-genetic-variation/" target="_blank" rel="noopener">Human Genetic Variation</a></li>
+<li><a href="https://www.omicsclass.com/article/6" target="_blank" rel="noopener">看懂变异记录结果文件（VCF）</a></li>
+<li><a href="https://www.jianshu.com/p/957efb50108f" target="_blank" rel="noopener">VCF格式</a></li>
+<li><a href="https://luansheng.netlify.app/2019/08/29/how-to-use-bcftools/" target="_blank" rel="noopener">bcftools使用笔记</a></li>
+<li>vcftools: <a href="http://vcftools.sourceforge.net/man_latest.html" target="_blank" rel="noopener">http://vcftools.sourceforge.net/man_latest.html</a></li>
+<li>bcftools: <a href="http://samtools.github.io/bcftools/bcftools.html" target="_blank" rel="noopener">http://samtools.github.io/bcftools/bcftools.html</a></li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/software/" rel="tag"># software</a>
+          
+            <a href="/tags/Genome-Variants/" rel="tag"># Genome Variants</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/09/12/2d57b01f.html" rel="next" title="python实现的一些数据预处理">
+                <i class="fa fa-chevron-left"></i> python实现的一些数据预处理
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">六六</p>
+              <p class="site-description motion-element" itemprop="description">Seize the day! Collect the moment! Share the memory!</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">107</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">41</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是遗传变异"><span class="nav-number">1.</span> <span class="nav-text">什么是遗传变异</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#遗传变异的类型"><span class="nav-number">2.</span> <span class="nav-text">遗传变异的类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变异的鉴定和分析"><span class="nav-number">3.</span> <span class="nav-text">变异的鉴定和分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变异分析常用的工具：bcftools-amp-vcftools"><span class="nav-number">4.</span> <span class="nav-text">变异分析常用的工具：bcftools &amp; vcftools</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#bcftools的部分功能介绍"><span class="nav-number">4.1.</span> <span class="nav-text">bcftools的部分功能介绍</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vcftools的部分功能介绍"><span class="nav-number">4.2.</span> <span class="nav-text">vcftools的部分功能介绍</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">六六</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">67.6k</span>
+  
+</div>
+
+<!--
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+--> 
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共67.6k字</span>
+</div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'liuliu66',
+        appKey: 'LLryx0379',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
