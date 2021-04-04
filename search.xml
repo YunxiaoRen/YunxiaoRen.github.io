@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[机器学习在药物抗性分析中的应用]]></title>
+    <url>%2F2021%2F04%2F04%2F9fe5283f.html</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[深度学习提高抗生肽的识别]]></title>
+    <url>%2F2021%2F04%2F01%2Ffff0078d.html</url>
+    <content type="text"><![CDATA[文章信息题目：Deep learning improves antimicrobial peptide recognition 杂志：Bioinformatics IF: 5.610 (2019) 时间：24 march, 2018 链接：doi: 10.1093/bioinformatics/bty179 一句话评价通过卷积网络层和循环神经网络层组合构建的深度学习模型识别抗生肽。 文章介绍概述 细菌对抗生素药物的抗性越来越引起人们的关注，对经济，生命健康和社会造成重要的挑战。抗生肽（Antimicrobial peptides ，AMPs）是天然免疫的组成部分，也是研发药物广泛使用的靶点。机器学习的方法可以为湿实验的研究者提供一些潜在的研究位点。 这篇文章使用卷积网络层和循环神经网络层组成的神经网络模型识别抗菌活动。最终训练的模型也比一般的方法表现更好。此外，通过潜入权重(Embedding Weights)，他们提出了reduced-alphabet representation的方法，最终实现可以只用9个氨基酸分子准确识别AMP。 最后，他们也提供了模型和数据相关的网站：Antimicrobial Peptide Scanner vr.2 web server， www.ampscanner.com 方法数据 APD vr.3 database： http://aps.unmc.edu/AP， 主要是革兰氏阴性和阳性细菌的AMP 过滤掉长度小于10的氨基酸以及和CD-Hit &gt; 90%的共有的序列，最终使用的AMP有1778个，训练集：712，验证集：354，测试集：712。 人工构建了non-AMP的序列：Torrent et al., 2011; Xiao et al., 2013 Torrent,M. et al. (2011) Connecting peptide physicochemical and antimicro- bial properties by a rational prediction model. PLoS One, 6, e16968. Xiao,X. et al. (2013) iAMP-2L: a two-level multi-label classifier for identifying antimicrobial peptides and their functional types. Anal. Biochem., 436, 168–177. 从UniProt下载了肽段序列，并过滤掉包含抗性的序列 模型 基于Keras框架搭建的模型： 肽段序列被编码为长度为200的序列，20个氨基酸依次编码为1-20，其余以0填充。 embedding_vector_length: 128 卷积层：1D convolution, nb_filter: 64, filter_length: 16, init: normal, strides: 1, border_mode: same, activation: relu 池化层：Maxpooling layer，size=5 LSTM层：100 units, (unroll: True, stateful: False, dropout: 0.1 and rest default settings) Dense 层：激活函数：sigmoid 其他参数：10 epochs， ‘adam’ 优化器， loss: binary_cros- sentropy, metrics: accuracy). 调参： Hyperas wrapper package for Keras：https://github.com/maxpumperla/hyperas 模型评估： 用到评估metrics有： sensitivity (SENS) specificity (SPEC) ACC Matthews Correlation Coefficient (MCC) ROC curve: pROC package in R 结果和结论构建的模型性能： 与其他方法的比较 创新性和意义 基于抗生肽识别抗菌性活动 模型的结构：结合了卷积层和循环神经网络层 输入数据的处理：embeding layer的处理 Reduced alphabet model analysis]]></content>
+      <categories>
+        <category>literature</category>
+      </categories>
+      <tags>
+        <tag>deep learning</tag>
+        <tag>CNN</tag>
+        <tag>AMP</tag>
+        <tag>LSTM</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[基因组变异的理解和分析]]></title>
     <url>%2F2020%2F10%2F21%2Fe3914e23.html</url>
     <content type="text"><![CDATA[什么是遗传变异遗传变异（genetic variation）是指一个群体中个体之间DNA序列的差异。变异可发生在生殖细胞（即精子和卵子）中，也发生在体细胞(所有其他)中。只有在生殖细胞中产生的变异才能从一个个体遗传给另一个个体，从而影响种群的动态，并最终影响进化。 突变（Mutation）和重组（Recombination）是变异的主要来源。 遗传变异的类型 点突变Single base-pair mutation 只有一个碱基发生了替换，具体包括Transition和Transversion。Transition指嘌呤(A/G)之间或嘧啶(T/C)之间的替换。Transversion指嘌呤和嘧啶间的替换。 插入/缺失（Indel） 主要指在基因组某个位置上发生较短长度的线性片段插入或者删除的现象。强调线性的原因是，这里的插入和删除是有前后顺序的与下述的结构性变异不同。Indel长度通常在50bp以下，更多时候甚至是不超过10bp，这个长度范围内的序列变化可以通过Smith-Waterman 的局部比对算法来准确获得，并且也能够在目前短读长的测序数据中较好地检测出来。 结构变异 通常就是指基因组上大长度的序列变化和位置关系变化。类型很多，包括长度在50bp以上的长片段序列插入或者删除（Big Indel）、串联重复（Tandem repeate）、染色体倒位（Inversion）、染色体内部或染色体之间的序列易位（Translocation）、拷贝数变异（CNV）以及形式更为复杂的嵌合性变异。1Kb与3Mb之间的序列，包括插入、缺失、拷贝数变异、倒位和易位。 变异的鉴定和分析变异的鉴定主要分为两个步骤：比对和variants calling 比对 ​ 常用的软件有：BWA，Bowtie2。将质控后的数据(fastq)比对到参考基因组上，得到比对后的reads（bam或CRAM格式）。 variants calling 常用的软件有GATK, bcftools, FreeBays等，这里的variants通常只包含SNPs和Indels，最终得到vcf格式的文件。 vcf文件格式介绍 vcf是Variant Call Format的简称，即是变异文件储存的标准格式。下图是E.coli 变异分析的vcf文件示例。 CHROM： 染色体，由于E.coli是一个环形的基因组，这里没有区分染色体 POS: 变异位点 REF: 参考基因组位点的碱基 ALT：个体变异位点的碱基 QUAL：质量 FILTER：如果使用GATK过滤后，会对通过过滤的变异位点有PASS的标签 INFO: 这一栏包含的信息较多，其中 DP：表示覆盖在这个位点的总reads数，也就是这个位点的测序深度 GT: 表示genotype，通常用”/” or “|”分隔两个数字，“|”phase过也就是杂合的两个等位基因知道哪个等位基因来自哪条染色体；0代表参考基因组的碱基类型；1代表ALT碱基类型的第一个碱基（多个碱基用”,”分隔），2代表ALT第二个碱基，以此类推；比如 REF列为：A， ALT列为G,T；那么0/1基因型为AG 杂合，1/1基因型为GG纯合SNP；1/2代表GT基因型；./.表示缺失。 变异分析常用的工具：bcftools &amp; vcftoolsbcftools的部分功能介绍 Calling Variants 1bcftools mpileup -f REF.fa sample.sorted.bam | bcftools call -vm -Oz &gt; sample.vcf.gz 提取等位基因和基因型信息 1bcftools query -f '%CHROM %POS %REF %ALT [%TGT]\n' query.vcf.gz -o query.extract.txt 变异位点的基本统计分析 12bcftools stats sample.vcf &gt; sample.vcf.statsplot-vcfstats sample.vcf.stats -p sample.vcf.stats.plot_output vcftools的部分功能介绍 vcf文件的过滤 1vcftools --vcf sample.vcf --minDP 4 --max-missing 0.2 --minQ 30 --recode --recode-INFO-all --out filter max-missing 0.5: 过滤低于50％的基因型 --minDP 4:过滤depth低于4的reads--recode: 标志告诉程序使用过滤器写入一个新的vcf文件，--recode-INFO-all保留旧vcf文件中的所有INFO标志。 --out 输出的文件名称的前缀 拆分SNPs和Indels 1234### 保留SNPsvcftools --vcf filter.recode.vcf --remove-indels --recode --recode-INFO-all --out filter.snps ### 保留Indelsvcftools --vcf filter.recode.vcf --keep-only-indels --recode --recode-INFO-all --out filter.indels ###参考 Human Genetic Variation 看懂变异记录结果文件（VCF） VCF格式 bcftools使用笔记 vcftools: http://vcftools.sourceforge.net/man_latest.html bcftools: http://samtools.github.io/bcftools/bcftools.html]]></content>
@@ -417,8 +436,8 @@
     <content type="text"><![CDATA[文章介绍： Bioconductor是一个针对生物数据分析的以R语言开发的开源软件库，从2001年项目开始至今，提供了很多优秀的分析流程，如bulk-RNA-seq的分析流程，文档非常详细。如今出手整理了单细胞分析的流程，包括软件安装、数据导入、单细胞数据储存、格式转换为下游分析的数据、下游分析、可视化等，非常详细，另外他们提供了在线book：https://osca.bioconductor .，想上手学习单细胞分析的以本书作为一个入门是一个不错的选择。 figure 文章信息 题目：Orchestrating single-cell analysis with Bioconductor 杂志：Nature Methods 时间：02, December, 2019 链接: https://www.nature.com/articles/s41592-019-0654-x 每日文献摘要：第32篇 2019年12月29日 周日]]></content>
       <tags>
         <tag>software</tag>
-        <tag>single cell</tag>
         <tag>R</tag>
+        <tag>single cell</tag>
       </tags>
   </entry>
   <entry>
