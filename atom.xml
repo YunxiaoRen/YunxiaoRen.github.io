@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-04-11T22:20:51.937Z</updated>
+  <updated>2021-09-19T20:51:56.223Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>整合多组学数据和图像卷积网络鉴定新的癌症基因和相关的分子机制</title>
+    <link href="http://yoursite.com/2021/09/19/f8c75c1b.html"/>
+    <id>http://yoursite.com/2021/09/19/f8c75c1b.html</id>
+    <published>2021-09-19T20:30:07.000Z</published>
+    <updated>2021-09-19T20:51:56.223Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="文章信息"><a href="#文章信息" class="headerlink" title="文章信息"></a>文章信息</h2><p>题目：Integration of multiomics data with graph convolutional networks to identify new cancer genes and their associated molecular mechanisms</p><p>杂志：Nature Machine Intelligence</p><p>IF:16.65</p><p>时间：12 April 2021</p><p>链接：<a href="https://www.nature.com/articles/s42256-021-00325-y" target="_blank" rel="noopener">https://www.nature.com/articles/s42256-021-00325-y</a></p><h2 id="一句话评价"><a href="#一句话评价" class="headerlink" title="一句话评价"></a>一句话评价</h2><p>使用机器学习方法——图像卷积网络对多组学数据（SNPs, CNV，DAN methylation，protein interaction (PPI) networks）进行挖掘，预测新的癌症基因以及这些基因发挥功能的机制。</p><p><img src="/2021/09/19/f8c75c1b/image-20210919224314468.png" alt="image-20210919224314468" style="zoom:50%;"></p><p><img src="/2021/09/19/f8c75c1b/image-20210919224447370.png" alt="image-20210919224447370"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;文章信息&quot;&gt;&lt;a href=&quot;#文章信息&quot; class=&quot;headerlink&quot; title=&quot;文章信息&quot;&gt;&lt;/a&gt;文章信息&lt;/h2&gt;&lt;p&gt;题目：Integration of multiomics data with graph convolutional net
+      
+    
+    </summary>
+    
+      <category term="literature" scheme="http://yoursite.com/categories/literature/"/>
+    
+    
+      <category term="CNN" scheme="http://yoursite.com/tags/CNN/"/>
+    
+  </entry>
   
   <entry>
     <title>多标签分类提高耐药性预测能力</title>
@@ -536,27 +561,6 @@
 &lt;/blockquote&gt;
 &lt;h3 id=&quot;什么是稀疏矩阵？&quot;&gt;&lt;a href=&quot;#什么是稀疏矩阵？&quot; class=&quot;headerlink&quot; title=&quot;什么是稀疏矩阵？&quot;&gt;&lt;/a&gt;什么是稀疏矩阵？&lt;/h3&gt;&lt;p&gt;大部分包含零值的矩阵称为稀疏矩阵(sparse Matrices)，相对应的是大多数值非零的密集矩阵(Dense Matrices)。稀疏矩阵在机器学习领域非常常见，如计数类数据，或者one-hot encoding编码的数据等。数据的稀疏性可以通过零值的比例量化（sparsity = count zero elements / total elements）。稀疏矩阵会产生处理时间和存储空间的问题。而&lt;strong&gt;SciPy&lt;/strong&gt;提供了很多高效的方法可以直接用于存储和处理稀疏矩阵。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/2020/06/28/46638/figure-ab.jpg&quot; alt&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>机器学习中的模型验证</title>
-    <link href="http://yoursite.com/2020/06/28/5857.html"/>
-    <id>http://yoursite.com/2020/06/28/5857.html</id>
-    <published>2020-06-28T17:59:14.000Z</published>
-    <updated>2020-09-12T11:45:13.315Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="model-validation"><a href="#model-validation" class="headerlink" title="model validation"></a>model validation</h2><p>Model validation is important step in machine learning. Cross validation and bootstrapping methods can be used for model validation. Both of them are resampling methods.Cross validation resamples without replacement,bootstrap resamples with replacement.</p><p><strong>reference</strong> - <a href="https://arxiv.org/pdf/1811.12808.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1811.12808.pdf</a></p><a id="more"></a><h3 id="Cross-validation"><a href="#Cross-validation" class="headerlink" title="Cross validation"></a>Cross validation</h3><p>Cross-validation is a series of methods for estimating the true error of a model to ensure that the model being trained is also valid on real data. The methods include:</p><ul><li>Hold-out cross validation</li><li>k-fold cross validation</li><li>leave-one-out cross validation</li></ul><h4 id="hold-out-validation"><a href="#hold-out-validation" class="headerlink" title="hold-out validation"></a>hold-out validation</h4><p>The raw data set is splited into two parts, one is the training set to fit the model and the other one is the validation set to estimate the model error.</p><p>It Usually takes 20% or 30% as the validation set; The sampling is <strong>randomly stratified</strong> with the target variable Y for reducing the bias between the training/test set and the full set (bias).</p><p><strong>Advantages and disadvantages:</strong></p><ul><li>The method is simple, requiring only random partitioning and low computational complexity.</li><li>The effect on the validation set can fluctuate considerably because each partitioning is different.</li></ul><h4 id="k-fold-cross-validation"><a href="#k-fold-cross-validation" class="headerlink" title="k-fold cross validation"></a>k-fold cross validation</h4><p>In k-fold cross-validation, the raw data is randomly splited into k equal sized subdata set. one of subdata set is retained as the testing data, and the remaining k-1 subdata set are used as training data set. The cross-validation process is then repeated k times.</p><p><img src="/2020/06/28/5857/1593367023322-337a099f-600b-4b59-9467-8b9ef49a4fa7.png" alt="image.png"></p><p><strong>Advantages and disadvantages：</strong></p><ul><li>Ultimately all of data are used for fitting the model.</li><li>The estimate of the test error may be high</li><li>If K is too high (e.g., extreme K=n), the error estimate will have high variance; if K is too low (e.g., 2, 3), high bias will occur, Usually K=5 or K=10.</li></ul><h4 id="leave-one-out-cross-validation"><a href="#leave-one-out-cross-validation" class="headerlink" title="leave-one-out cross validation"></a>leave-one-out cross validation</h4><p>A special case of cross-validation in the case of K=n, take n-1 samples at a time for modeling, 1 sample for evaluation, and repeat for n times.</p><h3 id="bootstrapping"><a href="#bootstrapping" class="headerlink" title="bootstrapping"></a>bootstrapping</h3><p>Bootstrap is a resampling method with replacement, and the idea is also used random forests.</p><ul><li>One sample of the original size is repeated with playback to obtain K samples of the same size.</li><li>Calculate the specified statistics (e.g., mean, standard deviation) for each sample, or fit the model to the parameters to obtain a bootstrap distribution of some statistic/parameter similar to the bootstrap distribution obtained by bootstrap sampling from the total.</li><li>Taking the average of the bootstrap distribution is an estimate of the overall parameter.</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;model-validation&quot;&gt;&lt;a href=&quot;#model-validation&quot; class=&quot;headerlink&quot; title=&quot;model validation&quot;&gt;&lt;/a&gt;model validation&lt;/h2&gt;&lt;p&gt;Model validation is important step in machine learning. Cross validation and bootstrapping methods can be used for model validation. Both of them are resampling methods.Cross validation resamples without replacement,bootstrap resamples with replacement.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;reference&lt;/strong&gt; - &lt;a href=&quot;https://arxiv.org/pdf/1811.12808.pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://arxiv.org/pdf/1811.12808.pdf&lt;/a&gt;&lt;/p&gt;
     
     </summary>
     
