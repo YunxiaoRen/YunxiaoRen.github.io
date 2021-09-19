@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[多标签分类提高耐药性预测能力]]></title>
     <url>%2F2021%2F04%2F04%2Fc387b45f.html</url>
-    <content type="text"><![CDATA[文章信息题目： 杂志： IF: 时间： 链接： 一句话评价 文章介绍### 概述（背景，亮点，方法，结果，意义） 方法（详细解读） 结果和结论（简要，理顺逻辑） 创新性和意义（思路，方法或者数据资源对自己有什么启示）]]></content>
+    <content type="text"><![CDATA[文章信息题目：Exploiting HIV-1 protease and reverse transcriptase cross-resistance information for improved drug resistance prediction by means of multi-label classification 杂志：BioData Mining IF: 2.672 时间：2016 链接：DOI 10.1186/s13040-016-0089-1 一句话评价多标签分类应用 文章介绍概述（背景，亮点，方法，结果，意义） 方法（详细解读） 结果和结论（简要，理顺逻辑） 创新性和意义（思路，方法或者数据资源对自己有什么启示）]]></content>
       <categories>
         <category>literature</category>
       </categories>
@@ -15,7 +15,7 @@
   <entry>
     <title><![CDATA[在HIV-1耐药性预测中利用交叉耐药信息的多标签分类方法]]></title>
     <url>%2F2021%2F04%2F03%2Ff1069cae.html</url>
-    <content type="text"><![CDATA[文章信息题目： 杂志： IF: 时间： 链接： 一句话评价 文章介绍### 概述（背景，亮点，方法，结果，意义） 方法（详细解读） 结果和结论（简要，理顺逻辑） 创新性和意义（思路，方法或者数据资源对自己有什么启示）]]></content>
+    <content type="text"><![CDATA[文章信息题目：Multilabel classification for exploiting cross-resistance information in HIV-1 drug resistance prediction 杂志：Bioinformatics (Sequence Analysis) IF: 5.610 (2019) 时间：June 21, 2013 链接：doi:10.1093/bioinformatics/btt331 一句话评价多标签分类算法 文章介绍概述耐药性是疾病治疗中面临的一个重要难题。很多细菌或病毒还经常出现交叉耐药现象。不仅导致了当前治疗大的某一药物产生耐药性，而且对未使用的药物也产生耐药性。因此，耐药性的自动分类和预测在临床研究上具有重要的意义。而机器学习虽然已广泛用于抗药性研究，但是多重交叉耐药的信息还有待研究。 方法数据 IC50 ratio: 这里与药物的抗性相关，IC50 ratio cutoff是每个药物定义为抗性的临界值。 多标签分类分类器链（Classification Chains, CC）CC的组合结果和结论（简要，理顺逻辑） 创新性和意义（思路，方法或者数据资源对自己有什么启示）]]></content>
       <categories>
         <category>literature</category>
       </categories>
