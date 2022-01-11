@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2022-01-10T23:08:34.313Z</updated>
+  <updated>2022-01-11T20:35:43.413Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>综述｜利用深度学习进行多组学数据整合的路线图</title>
+    <link href="http://yoursite.com/2022/01/11/7b8ddaea.html"/>
+    <id>http://yoursite.com/2022/01/11/7b8ddaea.html</id>
+    <published>2022-01-11T20:15:28.867Z</published>
+    <updated>2022-01-11T20:35:43.413Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="文章信息"><a href="#文章信息" class="headerlink" title="文章信息"></a>文章信息</h2><p>题目：A roadmap for multi-omics data integration using deep learning</p><p>杂志：Briefings in Bioinformatics</p><p>IF: 11.62</p><p>时间：12 November 2021</p><p>链接：<a href="https://doi.org/10.1093/bib/bbab454" target="_blank" rel="noopener">https://doi.org/10.1093/bib/bbab454</a></p><h2 id="一句话评价"><a href="#一句话评价" class="headerlink" title="一句话评价"></a>一句话评价</h2><p>介绍了利用深度学习对多组学数据的整合和应用以及优缺点</p><p><img src="/2022/01/11/7b8ddaea/image-20220111212430506.png" alt="image-20220111212430506" style="zoom:80%;"></p><a id="more"></a><h2 id="文章信息-1"><a href="#文章信息-1" class="headerlink" title="文章信息"></a>文章信息</h2><p>题目：Integrating multi-omics data through deep learning for accurate cancer prognosis prediction</p><p>杂志：Computers in Biology and Medicine</p><p>IF: 4.589</p><p>时间：July 2021</p><p>链接：<a href="https://doi.org/10.1016/j.compbiomed.2021.104481" target="_blank" rel="noopener">https://doi.org/10.1016/j.compbiomed.2021.104481</a></p><p>代码： <a href="https://github.com/Hua0113/DCAP" target="_blank" rel="noopener">https://github.com/Hua0113/DCAP</a></p><h2 id="一句话评价-1"><a href="#一句话评价-1" class="headerlink" title="一句话评价"></a>一句话评价</h2><p>通过深度学习整合多组学数据以进行准确的癌症预后预测</p><p><img src="/2022/01/11/7b8ddaea/image-20220111213116633.png" alt="image-20220111213116633"></p><ul><li><p>开发了一种新的多组学方法，在<strong>去噪自动编码器</strong>的基础上准确预测癌症的预后。</p></li><li><p>一个仅使用mRNA数据的轻量级模型在三个外部GEO数据集上得到了独立验证。</p></li><li><p>一个仅使用mRNA数据的轻量级模型在三个外部GEO数据集上得到了独立验证。</p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;文章信息&quot;&gt;&lt;a href=&quot;#文章信息&quot; class=&quot;headerlink&quot; title=&quot;文章信息&quot;&gt;&lt;/a&gt;文章信息&lt;/h2&gt;&lt;p&gt;题目：A roadmap for multi-omics data integration using deep learning&lt;/p&gt;
+&lt;p&gt;杂志：Briefings in Bioinformatics&lt;/p&gt;
+&lt;p&gt;IF: 11.62&lt;/p&gt;
+&lt;p&gt;时间：12 November 2021&lt;/p&gt;
+&lt;p&gt;链接：&lt;a href=&quot;https://doi.org/10.1093/bib/bbab454&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://doi.org/10.1093/bib/bbab454&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;一句话评价&quot;&gt;&lt;a href=&quot;#一句话评价&quot; class=&quot;headerlink&quot; title=&quot;一句话评价&quot;&gt;&lt;/a&gt;一句话评价&lt;/h2&gt;&lt;p&gt;介绍了利用深度学习对多组学数据的整合和应用以及优缺点&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2022/01/11/7b8ddaea/image-20220111212430506.png&quot; alt=&quot;image-20220111212430506&quot; style=&quot;zoom:80%;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="literature" scheme="http://yoursite.com/categories/literature/"/>
+    
+    
+      <category term="deep learning" scheme="http://yoursite.com/tags/deep-learning/"/>
+    
+  </entry>
+  
+  <entry>
     <title>乳腺癌治疗反应的多组学机器学习预测器</title>
     <link href="http://yoursite.com/2022/01/10/dfeeb526.html"/>
     <id>http://yoursite.com/2022/01/10/dfeeb526.html</id>
     <published>2022-01-10T22:29:43.000Z</published>
-    <updated>2022-01-10T23:08:34.313Z</updated>
+    <updated>2022-01-10T23:08:46.388Z</updated>
     
     <content type="html"><![CDATA[<p>题目：Multi-omic machine learning predictor of breast cancer therapy response</p><p>杂志：Nature</p><p>IF: 49.96</p><p>时间：7 Dec. 2021</p><p>链接：<a href="https://www.nature.com/articles/s41586-021-04278-5" target="_blank" rel="noopener">https://www.nature.com/articles/s41586-021-04278-5</a></p><p>代码：</p><ul><li><a href="https://github.com/micrisor/NAT-ML" target="_blank" rel="noopener">https://github.com/micrisor/NAT-ML</a></li><li><a href="https://github.com/cclab-brca/neoadjuvant-therapy-response-predictor" target="_blank" rel="noopener">https://github.com/cclab-brca/neoadjuvant-therapy-response-predictor</a></li></ul><h3 id="一句话概括"><a href="#一句话概括" class="headerlink" title="一句话概括"></a>一句话概括</h3><p>使用逻辑回归，SVM和随机森林的组合机器学习方法，结合临床数据、数字病理学数据、基因组和转录组学数据，对乳腺癌治疗的反应进行预测</p><p>###摘要</p><p>乳腺癌是由恶性细胞和肿瘤微环境组成的复杂生态系统。这些肿瘤生态系统的组成和其中的相互作用有助于细胞毒性治疗反应。构建细胞毒性治疗反应的预测器还有待研究。这篇文章收集了<strong>168名</strong>患者在手术前接受化疗+/-HER2靶向治疗的乳腺肿瘤治疗前活检的<strong>临床、数字病理学、基因组和转录组资料</strong>。然后将手术时的病理终点（完全反应或残余疾病）与这些诊断性活检的多组学特征相关联。他们发现，对治疗的反应是由预处理的肿瘤生态系统调节的，其多组学景观可以用机器学习整合到预测模型中。治疗后残余疾病的程度与治疗前的特征单调相关，包括<strong>肿瘤突变和拷贝数变异、肿瘤增殖、免疫浸润和T细胞功能紊乱和排斥</strong>。将这些特征结合到一个多组学机器学习模型中，可预测外部验证队列（75名患者）的病理完全反应，AUC为0.87。总之，对治疗的反应是由通过数据整合和机器学习捕获的整个肿瘤生态系统的基线特征决定的。这种方法可用于开发其他癌症的预测器。</p><p><img src="/2022/01/10/dfeeb526/image-20220111000724850.png" alt="image-20220111000724850"></p><p><img src="/2022/01/10/dfeeb526/image-20220111000748893.png" alt="image-20220111000748893"></p>]]></content>
     
@@ -41,9 +69,9 @@
       <category term="literature" scheme="http://yoursite.com/categories/literature/"/>
     
     
-      <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
-    
       <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
+    
+      <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
     
   </entry>
   
@@ -99,9 +127,9 @@
       <category term="literature" scheme="http://yoursite.com/categories/literature/"/>
     
     
-      <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
-    
       <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
+    
+      <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
     
       <category term="CNN" scheme="http://yoursite.com/tags/CNN/"/>
     
@@ -161,11 +189,11 @@
       <category term="literature" scheme="http://yoursite.com/categories/literature/"/>
     
     
+      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
+    
       <category term="AMR" scheme="http://yoursite.com/tags/AMR/"/>
     
       <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
-    
-      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
     
       <category term="药物研发" scheme="http://yoursite.com/tags/%E8%8D%AF%E7%89%A9%E7%A0%94%E5%8F%91/"/>
     
@@ -544,27 +572,6 @@
     
       &lt;h3 id=&quot;apply家族函数&quot;&gt;&lt;a href=&quot;#apply家族函数&quot; class=&quot;headerlink&quot; title=&quot;apply家族函数&quot;&gt;&lt;/a&gt;apply家族函数&lt;/h3&gt;&lt;p&gt;apply函数族是R语言中数据处理的一组核心函数，通过使用apply函数，我们可以实现对数据的循环、分组、过滤、类型控制等操作。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/2020/06/28/12691/fig1.png&quot; style=&quot;zoom:50%;&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="R" scheme="http://yoursite.com/tags/R/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>在R语言中替换空值</title>
-    <link href="http://yoursite.com/2020/06/28/6918.html"/>
-    <id>http://yoursite.com/2020/06/28/6918.html</id>
-    <published>2020-06-28T18:12:21.000Z</published>
-    <updated>2020-09-12T09:49:57.667Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>如下图所示，想替换无任何字符，又不是NA的值，替换为0</p><p><img src="/2020/06/28/6918/1590757573945-fb0f1f16-10ad-4e49-8aee-9449b8f23b80.png" alt="image.png"></p><a id="more"></a><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><ul><li>最初的思路是想匹配两个双引号，但是发现这里的双引号是表示观测值是字符串的数据类型，而不是该字符串本身的字符，尝试了很久也没有匹配成功。</li><li>然后想着将nothing的字符串转为NA，然后将NA转换为0，又因为该数据集是matrix类型，方便整列操作，首先将数据转换为数据框</li></ul><p><img src="/2020/06/28/6918/1590758057421-48ea7d94-d247-4ad0-a826-a26bd633c7f4.png" alt="image.png"></p><p>然后将nothing替换为NA</p><p><img src="/2020/06/28/6918/1590758121879-42bed638-730a-4315-b8cc-a10224feb883.png" alt="image.png"></p><p>最后替换为0，但是发现替换不了，虽然这些值确实是NA</p><p><img src="/2020/06/28/6918/1590760122629-c60cffa8-a98d-4e6d-ad9d-5953ef7265bd.png" alt="image.png"></p><p>检查数据格式，这些<na>是factor，所以这里无法替换</na></p><p><img src="/2020/06/28/6918/1590760226503-08c32bea-6295-4149-bcf1-000d74c2393c.png" alt="image.png"></p><p>最终明白问题出现在将matrix转换为data.frame，应该在此时加上 <code>stringsAsFactors = F</code> 的参数</p><p><img src="/2020/06/28/6918/1590760463196-ca4183f7-b955-4a97-b616-fb9ce2635451.png" alt="image.png"></p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul><li>在读入数据框或者转换为数据框时，记得加上<code>stringsAsFactors = F</code> 的参数</li><li>匹配特定观测值，然后重新赋值，df[df==”value”] &lt;- newvalue</li><li>R处理数据时要注意数据格式</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;目的&quot;&gt;&lt;a href=&quot;#目的&quot; class=&quot;headerlink&quot; title=&quot;目的&quot;&gt;&lt;/a&gt;目的&lt;/h2&gt;&lt;p&gt;如下图所示，想替换无任何字符，又不是NA的值，替换为0&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2020/06/28/6918/1590757573945-fb0f1f16-10ad-4e49-8aee-9449b8f23b80.png&quot; alt=&quot;image.png&quot;&gt;&lt;/p&gt;
     
     </summary>
     
