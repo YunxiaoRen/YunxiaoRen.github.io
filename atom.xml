@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2022-01-11T20:35:43.413Z</updated>
+  <updated>2022-02-02T07:56:31.734Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,42 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>220202 | 文献摘要</title>
+    <link href="http://yoursite.com/2022/02/02/f09c6d87.html"/>
+    <id>http://yoursite.com/2022/02/02/f09c6d87.html</id>
+    <published>2022-02-02T06:37:41.000Z</published>
+    <updated>2022-02-02T07:56:31.734Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Nat-M-L-通过学习随机掩码来解释生物序列的神经网络"><a href="#Nat-M-L-通过学习随机掩码来解释生物序列的神经网络" class="headerlink" title="Nat. M.L. | 通过学习随机掩码来解释生物序列的神经网络"></a>Nat. M.L. | 通过学习随机掩码来解释生物序列的神经网络</h2><p>题目：Interpreting neural networks for biological sequences by learning stochastic masks</p><p>杂志：Nature Machine Intelligence</p><p>IF: 15</p><p>时间：25 January 2022</p><p>链接：<a href="https://www.nature.com/articles/s42256-021-00428-6" target="_blank" rel="noopener">https://www.nature.com/articles/s42256-021-00428-6</a></p><h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><p>基于序列的神经网络可以从大型生物数据集中学习从而做出准确的预测，但模型的解释仍然具有挑战性。许多现有的特征归属方法是针对连续的而不是离散的输入模式而优化的，并孤立地评估单个特征的重要性，使它们不适合解释分子序列中的非线性相互作用。在这里，在计算机视觉和自然语言处理的工作基础上，我们开发了一种基于<strong>深度学习-扰频器网络（Scrambler networks）</strong>的方法，其中最重要的序列位置是通过学习<strong>输入掩码(input masks)</strong>确定的。扰频器学习预测特定位置的评分矩阵，其中不重要的核苷酸或残基通过提高其熵值而被扰乱。我们应用加扰频器来解释遗传变异的影响，发现顺式调控元素之间的非线性相互作用，解释蛋白质-蛋白质相互作用的结合特异性，并确定从头设计的蛋白质的结构决定因素。我们表明，扰频器能够在大型数据集上进行有效的归因，并产生高质量的解释，往往优于最先进的方法。</p><p><img src="/2022/02/02/f09c6d87/image-20220202083212293.png" alt="image-20220202083212293" style="zoom:50%;"></p><p><em><a id="more"></a></em></p><h2 id="Nat-M-L-通过人工智能中的隐私保护协作推进-COVID-19-诊断"><a href="#Nat-M-L-通过人工智能中的隐私保护协作推进-COVID-19-诊断" class="headerlink" title="Nat. M.L. | 通过人工智能中的隐私保护协作推进 COVID-19 诊断"></a>Nat. M.L. | 通过人工智能中的隐私保护协作推进 COVID-19 诊断</h2><p>题目：Advancing COVID-19 diagnosis with privacy-preserving collaboration in artificial intelligence</p><p>杂志：Nature Machine Intelligence</p><p>IF: 15</p><p>时间：15 December 2021</p><p>链接：<a href="https://www.nature.com/articles/s42256-021-00421-z" target="_blank" rel="noopener">https://www.nature.com/articles/s42256-021-00421-z</a></p><h3 id="摘要-1"><a href="#摘要-1" class="headerlink" title="摘要"></a>摘要</h3><p>人工智能为COVID-19的诊断提供了一个有希望的解决方案，然而，围绕安全和可信度的担扰阻碍了大规模代表性医疗数据的收集，为在临床实践中训练一个通用的模型带来了相当大的挑战。为了解决这个问题，我们发起了统一CT-COVID人工智能诊断计划<strong>（Unified CT-COVID AI Diagnostic Initiative，UCADI）</strong>，人工智能模型可以在一个联邦学习框架（<strong>federated learning</strong>）下分布式地训练并在每个主办机构独立执行，而不需要分享数据。这里显示我们的联邦学习框架大大超过了所有的本地模型（在中国的测试灵敏度/特异性为0.973/0.951，在英国为0.730/0.942），达到了与专业放射医师小组相当的性能。我们进一步评估了该模型在保留（从另外两家医院收集的没有联合学习框架的数据）和异质（用造影剂获得）数据上的表现，为模型做出的决定提供了可视化的解释，并分析了模型性能和联邦训练过程中沟通成本之间的权衡。我们的研究是基于从中国和英国的23家医院收集的3336名患者的9573张胸部计算机断层扫描。总的来说，我们的工作推进了利用联合学习在数字健康领域保护隐私的人工智能的前景。</p><p><img src="/2022/02/02/f09c6d87/image-20220202085203685.png" alt="image-20220202085203685" style="zoom:50%;"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Nat-M-L-通过学习随机掩码来解释生物序列的神经网络&quot;&gt;&lt;a href=&quot;#Nat-M-L-通过学习随机掩码来解释生物序列的神经网络&quot; class=&quot;headerlink&quot; title=&quot;Nat. M.L. | 通过学习随机掩码来解释生物序列的神经网络&quot;&gt;&lt;/a&gt;Nat. M.L. | 通过学习随机掩码来解释生物序列的神经网络&lt;/h2&gt;&lt;p&gt;题目：Interpreting neural networks for biological sequences by learning stochastic masks&lt;/p&gt;
+&lt;p&gt;杂志：Nature Machine Intelligence&lt;/p&gt;
+&lt;p&gt;IF: 15&lt;/p&gt;
+&lt;p&gt;时间：25 January 2022&lt;/p&gt;
+&lt;p&gt;链接：&lt;a href=&quot;https://www.nature.com/articles/s42256-021-00428-6&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.nature.com/articles/s42256-021-00428-6&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h3&gt;&lt;p&gt;基于序列的神经网络可以从大型生物数据集中学习从而做出准确的预测，但模型的解释仍然具有挑战性。许多现有的特征归属方法是针对连续的而不是离散的输入模式而优化的，并孤立地评估单个特征的重要性，使它们不适合解释分子序列中的非线性相互作用。在这里，在计算机视觉和自然语言处理的工作基础上，我们开发了一种基于&lt;strong&gt;深度学习-扰频器网络（Scrambler networks）&lt;/strong&gt;的方法，其中最重要的序列位置是通过学习&lt;strong&gt;输入掩码(input masks)&lt;/strong&gt;确定的。扰频器学习预测特定位置的评分矩阵，其中不重要的核苷酸或残基通过提高其熵值而被扰乱。我们应用加扰频器来解释遗传变异的影响，发现顺式调控元素之间的非线性相互作用，解释蛋白质-蛋白质相互作用的结合特异性，并确定从头设计的蛋白质的结构决定因素。我们表明，扰频器能够在大型数据集上进行有效的归因，并产生高质量的解释，往往优于最先进的方法。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2022/02/02/f09c6d87/image-20220202083212293.png&quot; alt=&quot;image-20220202083212293&quot; style=&quot;zoom:50%;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;/em&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="literature" scheme="http://yoursite.com/categories/literature/"/>
+    
+    
+      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
+    
+      <category term="transfer learning" scheme="http://yoursite.com/tags/transfer-learning/"/>
+    
+  </entry>
+  
+  <entry>
     <title>综述｜利用深度学习进行多组学数据整合的路线图</title>
     <link href="http://yoursite.com/2022/01/11/7b8ddaea.html"/>
     <id>http://yoursite.com/2022/01/11/7b8ddaea.html</id>
     <published>2022-01-11T20:15:28.867Z</published>
-    <updated>2022-01-11T20:35:43.413Z</updated>
+    <updated>2022-01-11T20:35:58.184Z</updated>
     
     <content type="html"><![CDATA[<h2 id="文章信息"><a href="#文章信息" class="headerlink" title="文章信息"></a>文章信息</h2><p>题目：A roadmap for multi-omics data integration using deep learning</p><p>杂志：Briefings in Bioinformatics</p><p>IF: 11.62</p><p>时间：12 November 2021</p><p>链接：<a href="https://doi.org/10.1093/bib/bbab454" target="_blank" rel="noopener">https://doi.org/10.1093/bib/bbab454</a></p><h2 id="一句话评价"><a href="#一句话评价" class="headerlink" title="一句话评价"></a>一句话评价</h2><p>介绍了利用深度学习对多组学数据的整合和应用以及优缺点</p><p><img src="/2022/01/11/7b8ddaea/image-20220111212430506.png" alt="image-20220111212430506" style="zoom:80%;"></p><a id="more"></a><h2 id="文章信息-1"><a href="#文章信息-1" class="headerlink" title="文章信息"></a>文章信息</h2><p>题目：Integrating multi-omics data through deep learning for accurate cancer prognosis prediction</p><p>杂志：Computers in Biology and Medicine</p><p>IF: 4.589</p><p>时间：July 2021</p><p>链接：<a href="https://doi.org/10.1016/j.compbiomed.2021.104481" target="_blank" rel="noopener">https://doi.org/10.1016/j.compbiomed.2021.104481</a></p><p>代码： <a href="https://github.com/Hua0113/DCAP" target="_blank" rel="noopener">https://github.com/Hua0113/DCAP</a></p><h2 id="一句话评价-1"><a href="#一句话评价-1" class="headerlink" title="一句话评价"></a>一句话评价</h2><p>通过深度学习整合多组学数据以进行准确的癌症预后预测</p><p><img src="/2022/01/11/7b8ddaea/image-20220111213116633.png" alt="image-20220111213116633"></p><ul><li><p>开发了一种新的多组学方法，在<strong>去噪自动编码器</strong>的基础上准确预测癌症的预后。</p></li><li><p>一个仅使用mRNA数据的轻量级模型在三个外部GEO数据集上得到了独立验证。</p></li><li><p>一个仅使用mRNA数据的轻量级模型在三个外部GEO数据集上得到了独立验证。</p></li></ul>]]></content>
     
@@ -129,9 +160,9 @@
     
       <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
     
-      <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
-    
       <category term="CNN" scheme="http://yoursite.com/tags/CNN/"/>
+    
+      <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
     
   </entry>
   
@@ -191,9 +222,9 @@
     
       <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
     
-      <category term="AMR" scheme="http://yoursite.com/tags/AMR/"/>
-    
       <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
+    
+      <category term="AMR" scheme="http://yoursite.com/tags/AMR/"/>
     
       <category term="药物研发" scheme="http://yoursite.com/tags/%E8%8D%AF%E7%89%A9%E7%A0%94%E5%8F%91/"/>
     
@@ -305,9 +336,9 @@
       <category term="literature" scheme="http://yoursite.com/categories/literature/"/>
     
     
-      <category term="AMR" scheme="http://yoursite.com/tags/AMR/"/>
-    
       <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
+    
+      <category term="AMR" scheme="http://yoursite.com/tags/AMR/"/>
     
   </entry>
   
@@ -551,27 +582,6 @@
 &lt;p&gt;&lt;img src=&quot;/2020/06/28/64095/1592293564053-baa557ba-9fdb-46ea-b659-dd2b941c6a24.png&quot; alt=&quot;image.png&quot;&gt;&lt;/p&gt;
 &lt;p&gt;
       
-    
-    </summary>
-    
-    
-      <category term="R" scheme="http://yoursite.com/tags/R/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>apply家族函数的用法</title>
-    <link href="http://yoursite.com/2020/06/28/12691.html"/>
-    <id>http://yoursite.com/2020/06/28/12691.html</id>
-    <published>2020-06-28T18:12:47.000Z</published>
-    <updated>2020-09-12T11:40:14.676Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="apply家族函数"><a href="#apply家族函数" class="headerlink" title="apply家族函数"></a>apply家族函数</h3><p>apply函数族是R语言中数据处理的一组核心函数，通过使用apply函数，我们可以实现对数据的循环、分组、过滤、类型控制等操作。</p><p><img src="/2020/06/28/12691/fig1.png" style="zoom:50%;"></p><a id="more"></a><h3 id="apply-函数的用法"><a href="#apply-函数的用法" class="headerlink" title="apply 函数的用法"></a>apply 函数的用法</h3><p>常用的apply族函数有apply和sapply。apply函数是最常用的代替for循环的函数。apply函数可以对矩阵、数据框、数组(二维、多维)，按行或列进行循环计算，对子元素进行迭代，并把子元素以参数传递的形式给自定义的FUN函数中，并以返回计算结果。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apply(X, MARGIN, FUN, ...)</span><br></pre></td></tr></table></figure><p>参数列表：</p><ul><li>X:数组、矩阵、数据框</li><li>MARGIN: 按行计算或按按列计算，1表示按行，2表示按列</li><li>FUN: 自定义的调用函数</li><li>…: 更多参数，可选</li></ul><p>如：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; x&lt;-matrix(1:12,ncol=3)</span><br><span class="line">&gt; apply(x,1,sum)</span><br><span class="line">[1] 15 18 21 24</span><br></pre></td></tr></table></figure><h3 id><a href="#" class="headerlink" title=" "></a> </h3><h3 id="lapply-函数的用法"><a href="#lapply-函数的用法" class="headerlink" title="lapply 函数的用法"></a>lapply 函数的用法</h3><p>lapply函数是一个最基础循环操作函数之一，用来对list、data.frame数据集进行循环，并返回和X长度同样的list结构作为结果集，通过lapply的开头的第一个字母’l’就可以判断返回结果集的类型。</p><p>函数定义：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lapply(X, FUN, ...)</span><br></pre></td></tr></table></figure><p>参数列表：</p><ul><li>X:list、data.frame数据</li><li>FUN: 自定义的调用函数</li><li>…: 更多参数，可选</li></ul><h3 id="sapply函数的用法"><a href="#sapply函数的用法" class="headerlink" title="sapply函数的用法"></a>sapply函数的用法</h3><p>sapply函数是一个简化版的lapply，sapply增加了2个参数simplify和USE.NAMES，主要就是让输出看起来更友好，返回值为向量，而不是list对象。</p><p>函数定义：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sapply(X, FUN, ..., simplify=TRUE, USE.NAMES = TRUE)</span><br></pre></td></tr></table></figure><p>参数列表：</p><ul><li>X:数组、矩阵、数据框</li><li>FUN: 自定义的调用函数</li><li>…: 更多参数，可选</li><li>simplify: 是否数组化，当值array时，输出结果按数组进行分组</li><li>USE.NAMES: 如果X为字符串，TRUE设置字符串为数据名，FALSE不设置</li></ul><h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ul><li>掌握R语言中的apply函数族 <a href="http://blog.fens.me/r-apply/" target="_blank" rel="noopener">http://blog.fens.me/r-apply/</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;apply家族函数&quot;&gt;&lt;a href=&quot;#apply家族函数&quot; class=&quot;headerlink&quot; title=&quot;apply家族函数&quot;&gt;&lt;/a&gt;apply家族函数&lt;/h3&gt;&lt;p&gt;apply函数族是R语言中数据处理的一组核心函数，通过使用apply函数，我们可以实现对数据的循环、分组、过滤、类型控制等操作。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2020/06/28/12691/fig1.png&quot; style=&quot;zoom:50%;&quot;&gt;&lt;/p&gt;
     
     </summary>
     

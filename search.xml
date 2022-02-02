@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[220202 | 文献摘要]]></title>
+    <url>%2F2022%2F02%2F02%2Ff09c6d87.html</url>
+    <content type="text"><![CDATA[Nat. M.L. | 通过学习随机掩码来解释生物序列的神经网络题目：Interpreting neural networks for biological sequences by learning stochastic masks 杂志：Nature Machine Intelligence IF: 15 时间：25 January 2022 链接：https://www.nature.com/articles/s42256-021-00428-6 摘要基于序列的神经网络可以从大型生物数据集中学习从而做出准确的预测，但模型的解释仍然具有挑战性。许多现有的特征归属方法是针对连续的而不是离散的输入模式而优化的，并孤立地评估单个特征的重要性，使它们不适合解释分子序列中的非线性相互作用。在这里，在计算机视觉和自然语言处理的工作基础上，我们开发了一种基于深度学习-扰频器网络（Scrambler networks）的方法，其中最重要的序列位置是通过学习输入掩码(input masks)确定的。扰频器学习预测特定位置的评分矩阵，其中不重要的核苷酸或残基通过提高其熵值而被扰乱。我们应用加扰频器来解释遗传变异的影响，发现顺式调控元素之间的非线性相互作用，解释蛋白质-蛋白质相互作用的结合特异性，并确定从头设计的蛋白质的结构决定因素。我们表明，扰频器能够在大型数据集上进行有效的归因，并产生高质量的解释，往往优于最先进的方法。 Nat. M.L. | 通过人工智能中的隐私保护协作推进 COVID-19 诊断题目：Advancing COVID-19 diagnosis with privacy-preserving collaboration in artificial intelligence 杂志：Nature Machine Intelligence IF: 15 时间：15 December 2021 链接：https://www.nature.com/articles/s42256-021-00421-z 摘要人工智能为COVID-19的诊断提供了一个有希望的解决方案，然而，围绕安全和可信度的担扰阻碍了大规模代表性医疗数据的收集，为在临床实践中训练一个通用的模型带来了相当大的挑战。为了解决这个问题，我们发起了统一CT-COVID人工智能诊断计划（Unified CT-COVID AI Diagnostic Initiative，UCADI），人工智能模型可以在一个联邦学习框架（federated learning）下分布式地训练并在每个主办机构独立执行，而不需要分享数据。这里显示我们的联邦学习框架大大超过了所有的本地模型（在中国的测试灵敏度/特异性为0.973/0.951，在英国为0.730/0.942），达到了与专业放射医师小组相当的性能。我们进一步评估了该模型在保留（从另外两家医院收集的没有联合学习框架的数据）和异质（用造影剂获得）数据上的表现，为模型做出的决定提供了可视化的解释，并分析了模型性能和联邦训练过程中沟通成本之间的权衡。我们的研究是基于从中国和英国的23家医院收集的3336名患者的9573张胸部计算机断层扫描。总的来说，我们的工作推进了利用联合学习在数字健康领域保护隐私的人工智能的前景。]]></content>
+      <categories>
+        <category>literature</category>
+      </categories>
+      <tags>
+        <tag>文献摘要</tag>
+        <tag>transfer learning</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[综述｜利用深度学习进行多组学数据整合的路线图]]></title>
     <url>%2F2022%2F01%2F11%2F7b8ddaea.html</url>
     <content type="text"><![CDATA[文章信息题目：A roadmap for multi-omics data integration using deep learning 杂志：Briefings in Bioinformatics IF: 11.62 时间：12 November 2021 链接：https://doi.org/10.1093/bib/bbab454 一句话评价介绍了利用深度学习对多组学数据的整合和应用以及优缺点 文章信息题目：Integrating multi-omics data through deep learning for accurate cancer prognosis prediction 杂志：Computers in Biology and Medicine IF: 4.589 时间：July 2021 链接：https://doi.org/10.1016/j.compbiomed.2021.104481 代码： https://github.com/Hua0113/DCAP 一句话评价通过深度学习整合多组学数据以进行准确的癌症预后预测 开发了一种新的多组学方法，在去噪自动编码器的基础上准确预测癌症的预后。 一个仅使用mRNA数据的轻量级模型在三个外部GEO数据集上得到了独立验证。 一个仅使用mRNA数据的轻量级模型在三个外部GEO数据集上得到了独立验证。]]></content>
@@ -44,8 +56,8 @@
       </categories>
       <tags>
         <tag>文献摘要</tag>
-        <tag>machine learning</tag>
         <tag>CNN</tag>
+        <tag>machine learning</tag>
       </tags>
   </entry>
   <entry>
@@ -68,8 +80,8 @@
       </categories>
       <tags>
         <tag>文献摘要</tag>
-        <tag>AMR</tag>
         <tag>machine learning</tag>
+        <tag>AMR</tag>
         <tag>药物研发</tag>
       </tags>
   </entry>
@@ -116,8 +128,8 @@
         <category>literature</category>
       </categories>
       <tags>
-        <tag>AMR</tag>
         <tag>machine learning</tag>
+        <tag>AMR</tag>
       </tags>
   </entry>
   <entry>
@@ -339,8 +351,8 @@
     <content type="text"><![CDATA[文章信息 题目：Evaluation of Machine Learning Models for Predicting Antimicrobial Resistance of Actinobacillus pleuropneumoniae From Whole Genome Sequences 杂志：Frontiers in Microbiology 时间：06 February 2020 链接: https://doi.org/10.3389/fmicb.2020.00048 文章概述 抗生素耐药性(AMR)正在成为世界各国面临的一个巨大公共安全问题，识别对某些抗生素耐药或易感菌株的新方法对于对抗抗生素耐药病原体至关重要。由于基因组数据集和AST表型越来越多，基于基因型的机器学习方法作为一种诊断工具显示出了巨大的希望。 本文采用支持向量机（ Support Vector Machine，SVM）和集覆盖机（**Set Covering Machine，SCM）模型来学习和预测五种药物（四环素类、氨苄西林、磺胺恶唑、曲美沙星和恩诺沙星）的耐药性。SVM模型利用分离菌的基因组与参比基因之间共存的k-mers的数量来学习和预测细菌对特定抗生素的表型，而单片机模型则采用贪婪的方法构造布尔函数的联结或解联，找到最简洁的k-mers集，从而准确预测表型。对SVM和SCM模型的训练集进行五倍交叉验证，选择最佳的超参数值，以避免模型过度拟合。结果表明，无论哪种药物的耐药机制是获得性耐药还是染色体点突变，5种药物的SVM和SCM模型的训练准确率（平均交叉验证得分）和测试准确率均在90%以上。5种药物的表型与模型预测的相关性结果表明，SVM和SCM模型均能显著地将耐药分离菌从敏感分离菌中分离出来（P&lt;0.01），可作为抗生素耐药性监测和兽药临床诊断的潜在工具。 方法详解 数据来源： 从Bosse等人(2017)文章获得96株胸膜肺炎分离菌株的5种抗菌药物(四环素、氨苄西林、磺胺恶唑、甲氧苄氨嘧啶和恩罗沙星)的WGS序列和双耐药表型 Study: PRJEB2343 Reference: Whole genome sequencing for surveillance of antimicrobial resistance in Actinobacillus pleuropneumoniae. Front. Microbiol. 8:311. doi: 10.3389/fmicb.2017.00311 分析方法： WGS assemle: Velvet 1.2.08 AMR genes contig: 从ResFinder 数据库 matrix of the co-occurring k-mers：Ray Surveyor tool Reference-Based SVM Model：radial basis function kernel，Python sklearn 包实现分析 Reference-Free SCM Model：implemented by Kover, an open-source software implemented in the Python and C programming languages Model Selection and Performance Evaluation: five-fold cross-validation, 评价指标：sensitivity, specificity, accuracy, and precision]]></content>
       <tags>
         <tag>文献摘要</tag>
-        <tag>AMR</tag>
         <tag>machine learning</tag>
+        <tag>AMR</tag>
       </tags>
   </entry>
   <entry>
@@ -369,8 +381,8 @@
     <url>%2F2020%2F05%2F04%2F48327.html</url>
     <content type="text"><![CDATA[卷积神经网络(CNN)简介卷积神经网络即Convolutional Neural Networks (CNN or COnvNet) 是一种自动化提取特征的深度学习模型。这是一种深度的前馈人工神经网络（ feed-forward artificial neural network），前馈神经网络也称作多层感知机（multi-layer perceptrons，MLPs）。 CNNs是受生物视觉皮层的启发。视觉皮层有一些小区域的细胞，它们对视野的特定区域很敏感。这个想法是由Hubel和Wiesel在1962年做的一个的实验扩展了这个想法。在这个实验中，研究人员表明，大脑中的一些个别神经元只有在出现垂直或水平边缘等特定方向的边缘时才会激活或发射。但是在2012年，Alex Krizhevsky利用卷积神经网络赢得了当年的ImageNet大赛，将分类误差从26%降到15%，之后CNNs再一次火爆。 CNNs如今在多个领域都展现出巨大的应用潜能。如： 图像识别，目标检测，分割，人脸识别 自动驾驶汽车等 卷积神经网络(CNN)的结构单元 输入层(input layer)卷积层（convolution layer) 权值共享。我们通过卷积核与输入进行卷积运算。通过下图可以理解如何进行卷积运算。卷积核从左到右对输入进行扫描，每次滑动1格（步长为1），下图为滑动一次后，卷积核每个元素和输入中绿色框相应位置的元素相乘后累加，得到输出中绿色框中的0。一般会使用多个卷积核对输入数据进行卷积，得到多个特征图 激活层 对卷积层的输出进行一个非线性映射，因为卷积计算是一种线性计算。常见的激活函数有relu、tanh、sigmoid等，一般使用relu。使用relu的原因是在反向传播计算梯度中，使用relu求导明显会比tanh和sigmoid简单，可以减少计算量 池化层(subsampling/pooling layer) 池化的目的就是减少特征图的维度，减少数据的运算量。池化层是在卷积层之后，对卷积的输出，进行池化运算。池化运算，一般有两种MaxPooling和MeanPooling。 全连接层(Fully connected layer) 主要是对特征进行重新的拟合，减少特征信息的丢失。通过卷积池化操作后得到的是多个特征矩阵，而全连接层的输入为向量，所以在进行全连接层之前，要将多个特征矩阵“压平”为一个向量。 输出层(output layer)卷积神经网络(CNN)代码示例这里介绍以Keras实现CNN的代码示例 数据集介绍Fashion-MNIST数据集是Zalando的文章图像数据集，包含来自10个类别的70000个时尚产品的28x28灰度图像，每个类别有7000个图像。训练集有60000张图片，测试集有10000张图片。 数据载入首先载入Keras模块，其是基于tensorflow框架的 12345# install tensorflowpip install tensorflowpip install kerasfrom keras.datasets import fashion_mnist(train_X,train_Y), (test_X,test_Y) = fashion_mnist.load_data() 调整像素和图像大小 12345678910111213import numpy as npfrom keras.utils import to_categoricalimport matplotlib.pyplot as pltprint(&apos;Training data shape : &apos;, train_X.shape, train_Y.shape)print(&apos;Testing data shape : &apos;, test_X.shape, test_Y.shape)# Find the unique numbers from the train labelsclasses = np.unique(train_Y)nClasses = len(classes)print(&apos;Total number of outputs : &apos;, nClasses)print(&apos;Output classes : &apos;, classes) 可以看出输出的类别共包括10（0-9）类 查看数据集中图像 1234567891011plt.figure(figsize=[5,5])# Display the first image in training dataplt.subplot(121)plt.imshow(train_X[0,:,:], cmap=&apos;gray&apos;)plt.title(&quot;Ground Truth : &#123;&#125;&quot;.format(train_Y[0]))# Display the first image in testing dataplt.subplot(122)plt.imshow(test_X[0,:,:], cmap=&apos;gray&apos;)plt.title(&quot;Ground Truth : &#123;&#125;&quot;.format(test_Y[0])) 上面两个图的输出看起来像一个短靴，这个类被分配了一个类标签9。同样的，其他的时尚产品会有不同的标签，但是相似的产品会有相同的标签。这意味着所有7000张短靴图片的类别标签都是9。 数据前处理上面的图像可以看出是灰度图像，像素值的范围再0-255,且图像的维度为28*28. Step1: 首先将训练数据和测试数据的2828图像转化为2828*1的矩阵 123train_X = train_X.reshape(-1, 28,28, 1)test_X = test_X.reshape(-1, 28,28, 1)train_X.shape, test_X.shape Step2: 现在的数据是int8格式的，因此在将其输入网络之前，需要将其类型转换为float32，还必须重新调整范围为0 - 1(包括1)的像素值。 1234train_X = train_X.astype(&apos;float32&apos;)test_X = test_X.astype(&apos;float32&apos;)train_X = train_X / 255.test_X = test_X / 255. Step3: 将类标签转换为一个热编码向量 机器学习算法不能直接处理分类数据, 故需将分类数据转换为数字向量 1234567# Change the labels from categorical to one-hot encodingtrain_Y_one_hot = to_categorical(train_Y)test_Y_one_hot = to_categorical(test_Y)# Display the change for category label using one-hot encodingprint(&apos;Original label:&apos;, train_Y[0])print(&apos;After conversion to one-hot:&apos;, train_Y_one_hot[0]) 拆分训练数据和测试数据集 1234from sklearn.model_selection import train_test_splittrain_X,valid_X,train_label,valid_label = train_test_split(train_X, train_Y_one_hot, test_size=0.2, random_state=13)# check the shape of training and validation settrain_X.shape,valid_X.shape,train_label.shape,valid_label.shape 网络图像的大小是28 x 28。前面将图像矩阵转换为数组，在0和1之间重新调整大小，重塑它的大小为28 x 28 x 28 x 1，然后将其作为网络的输入。 下面将使用三个卷积层。 第一层将有32-3×3个滤波器。 第二层将有64-3×3滤波器和 第三层将有128-3×3个滤镜。 此外，还有3个最大pooling层，每个层的大小为2×2。 创建模型123456import kerasfrom keras.models import Sequential,Input,Modelfrom keras.layers import Dense, Dropout, Flattenfrom keras.layers import Conv2D, MaxPooling2Dfrom keras.layers.normalization import BatchNormalizationfrom keras.layers.advanced_activations import LeakyReLU 这里使用64的批处理量，也可以使用128或256的批处理量，这一切都取决于内存。它对确定学习参数的贡献很大，并影响到预测的准确性。你将训练网络的20个时程 123batch_size = 64epochs = 20num_classes = 10 神经网络架构在Keras中，可以通过逐一添加所需的图层来堆叠图层。首先用Conv2D()添加第一个卷积层。注意，之所以使用这个函数，是因为在处理图像。 接下来，添加Leaky ReLU激活函数，它可以帮助网络学习非线性决策边界。因为这里的例子有十个不同的类，需要一个非线性决策边界，可以将这十个不能线性分离的类分开。 更具体地说，添加了Leaky ReLU，因为它们试图修复垂死的整流线性单元（ReLU）问题。ReLU 激活函数在神经网络架构中被大量使用，在卷积网络中，ReLU 激活函数被证明比广泛使用的对数 sigmoid 函数更有效。截止到2017年，这种激活函数是深度神经网络中最流行的一种激活函数。ReLU函数允许将激活函数的阈值设定为零。然而，在训练过程中，ReLU单元可能会 “死亡”。当一个大的梯度流过ReLU神经元时，就会发生这种情况：它可能会导致权重以这样的方式更新，以至于神经元再也不会在任何数据点上激活。如果这种情况发生，那么流经该单元的梯度将永远为零。泄漏的ReLU试图解决这个问题：函数不会为零，而是有一个小的负斜率。 接下来，用MaxPooling2D()等添加最大池化层。最后一层是Dense层，它有一个软MAX的激活函数，有10个单位，这对于这个多类分类问题是需要的。 1234567891011121314fashion_model = Sequential()fashion_model.add(Conv2D(32, kernel_size=(3, 3),activation=&apos;linear&apos;,input_shape=(28,28,1),padding=&apos;same&apos;))fashion_model.add(LeakyReLU(alpha=0.1))fashion_model.add(MaxPooling2D((2, 2),padding=&apos;same&apos;))fashion_model.add(Conv2D(64, (3, 3), activation=&apos;linear&apos;,padding=&apos;same&apos;))fashion_model.add(LeakyReLU(alpha=0.1))fashion_model.add(MaxPooling2D(pool_size=(2, 2),padding=&apos;same&apos;))fashion_model.add(Conv2D(128, (3, 3), activation=&apos;linear&apos;,padding=&apos;same&apos;))fashion_model.add(LeakyReLU(alpha=0.1)) fashion_model.add(MaxPooling2D(pool_size=(2, 2),padding=&apos;same&apos;))fashion_model.add(Flatten())fashion_model.add(Dense(128, activation=&apos;linear&apos;))fashion_model.add(LeakyReLU(alpha=0.1)) fashion_model.add(Dense(num_classes, activation=&apos;softmax&apos;)) 编译模型使用Adam optimizer 1fashion_model.compile(loss=keras.losses.categorical_crossentropy, optimizer=keras.optimizers.Adam(),metrics=[&apos;accuracy&apos;]) 使用summary函数来可视化在上述步骤中创建的层。这将显示每个层中的一些参数(权重和偏差)以及模型中的总参数。 1fashion_model.summary() 训练模型使用Keras的fit()函数训练模型，该模型训练了20个 epochs。fit()函数将返回一个历史对象；通过在fashion_train中讲述这个函数的结果，你可以在以后用它来绘制训练和验证之间的精度和损失函数图，这将帮助你直观地分析你的模型的性能。 1fashion_train = fashion_model.fit(train_X, train_label, batch_size=batch_size,epochs=epochs,verbose=1,validation_data=(valid_X, valid_label)) 模型评估123test_eval = fashion_model.evaluate(test_X, test_Y_one_hot, verbose=0)print(&apos;Test loss:&apos;, test_eval[0])print(&apos;Test accuracy:&apos;, test_eval[1]) 可视化123456789101112131415accuracy = fashion_train.history[&apos;acc&apos;]val_accuracy = fashion_train.history[&apos;val_acc&apos;]loss = fashion_train.history[&apos;loss&apos;]val_loss = fashion_train.history[&apos;val_loss&apos;]epochs = range(len(accuracy))plt.plot(epochs, accuracy, &apos;bo&apos;, label=&apos;Training accuracy&apos;)plt.plot(epochs, val_accuracy, &apos;b&apos;, label=&apos;Validation accuracy&apos;)plt.title(&apos;Training and validation accuracy&apos;)plt.legend()plt.figure()plt.plot(epochs, loss, &apos;bo&apos;, label=&apos;Training loss&apos;)plt.plot(epochs, val_loss, &apos;b&apos;, label=&apos;Validation loss&apos;)plt.title(&apos;Training and validation loss&apos;)plt.legend()plt.show() 参考资料 CNN讲解及实践 CNN（卷积神经网络） Convolutional Neural Networks in Python with Keras Convolutional Neural Networks for Beginners using Keras and TensorFlow 深度学习]]></content>
       <tags>
-        <tag>machine learning</tag>
         <tag>CNN</tag>
+        <tag>machine learning</tag>
         <tag>deep learning</tag>
       </tags>
   </entry>
