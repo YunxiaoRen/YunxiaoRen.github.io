@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2022-02-02T07:57:02.708Z</updated>
+  <updated>2022-02-02T08:01:37.697Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2022/02/02/f09c6d87.html"/>
     <id>http://yoursite.com/2022/02/02/f09c6d87.html</id>
     <published>2022-02-02T06:37:41.000Z</published>
-    <updated>2022-02-02T07:57:02.708Z</updated>
+    <updated>2022-02-02T08:01:37.697Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Nat-M-L-通过学习随机掩码来解释生物序列的神经网络"><a href="#Nat-M-L-通过学习随机掩码来解释生物序列的神经网络" class="headerlink" title="Nat. M.L. | 通过学习随机掩码来解释生物序列的神经网络"></a>Nat. M.L. | 通过学习随机掩码来解释生物序列的神经网络</h2><p>题目：Interpreting neural networks for biological sequences by learning stochastic masks</p><p>杂志：Nature Machine Intelligence</p><p>IF: 15</p><p>时间：25 January 2022</p><p>链接：<a href="https://www.nature.com/articles/s42256-021-00428-6" target="_blank" rel="noopener">https://www.nature.com/articles/s42256-021-00428-6</a></p><h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><p>基于序列的神经网络可以从大型生物数据集中学习从而做出准确的预测，但模型的解释仍然具有挑战性。许多现有的特征归属方法是针对连续的而不是离散的输入模式而优化的，并孤立地评估单个特征的重要性，使它们不适合解释分子序列中的非线性相互作用。在这里，在计算机视觉和自然语言处理的工作基础上，我们开发了一种基于<strong>深度学习-扰频器网络（Scrambler networks）</strong>的方法，其中最重要的序列位置是通过学习<strong>输入掩码(input masks)</strong>确定的。扰频器学习预测特定位置的评分矩阵，其中不重要的核苷酸或残基通过提高其熵值而被扰乱。我们应用加扰频器来解释遗传变异的影响，发现顺式调控元素之间的非线性相互作用，解释蛋白质-蛋白质相互作用的结合特异性，并确定从头设计的蛋白质的结构决定因素。我们表明，扰频器能够在大型数据集上进行有效的归因，并产生高质量的解释，往往优于最先进的方法。</p><p><img src="/2022/02/02/f09c6d87/image-20220202083212293.png" alt="image-20220202083212293" style="zoom:50%;"></p><p><em><a id="more"></a></em></p><h2 id="Nat-M-L-通过人工智能中的隐私保护协作推进-COVID-19-诊断"><a href="#Nat-M-L-通过人工智能中的隐私保护协作推进-COVID-19-诊断" class="headerlink" title="Nat. M.L. | 通过人工智能中的隐私保护协作推进 COVID-19 诊断"></a>Nat. M.L. | 通过人工智能中的隐私保护协作推进 COVID-19 诊断</h2><p>题目：Advancing COVID-19 diagnosis with privacy-preserving collaboration in artificial intelligence</p><p>杂志：Nature Machine Intelligence</p><p>IF: 15</p><p>时间：15 December 2021</p><p>链接：<a href="https://www.nature.com/articles/s42256-021-00421-z" target="_blank" rel="noopener">https://www.nature.com/articles/s42256-021-00421-z</a></p><h3 id="摘要-1"><a href="#摘要-1" class="headerlink" title="摘要"></a>摘要</h3><p>人工智能为COVID-19的诊断提供了一个有希望的解决方案，然而，围绕安全和可信度的担扰阻碍了大规模代表性医疗数据的收集，为在临床实践中训练一个通用的模型带来了相当大的挑战。为了解决这个问题，我们发起了统一CT-COVID人工智能诊断计划<strong>（Unified CT-COVID AI Diagnostic Initiative，UCADI）</strong>，人工智能模型可以在一个联邦学习框架（<strong>federated learning</strong>）下分布式地训练并在每个主办机构独立执行，而不需要分享数据。这里显示我们的联邦学习框架大大超过了所有的本地模型（在中国的测试灵敏度/特异性为0.973/0.951，在英国为0.730/0.942），达到了与专业放射医师小组相当的性能。我们进一步评估了该模型在保留（从另外两家医院收集的没有联合学习框架的数据）和异质（用造影剂获得）数据上的表现，为模型做出的决定提供了可视化的解释，并分析了模型性能和联邦训练过程中沟通成本之间的权衡。我们的研究是基于从中国和英国的23家医院收集的3336名患者的9573张胸部计算机断层扫描。总的来说，我们的工作推进了利用联合学习在数字健康领域保护隐私的人工智能的前景。</p><p><img src="/2022/02/02/f09c6d87/image-20220202085203685.png" alt="image-20220202085203685" style="zoom:50%;"></p>]]></content>
     
@@ -43,7 +43,7 @@
     
       <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
     
-      <category term="transfer learning" scheme="http://yoursite.com/tags/transfer-learning/"/>
+      <category term="federal learning" scheme="http://yoursite.com/tags/federal-learning/"/>
     
   </entry>
   
