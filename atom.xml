@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2022-02-02T08:01:37.697Z</updated>
+  <updated>2022-02-03T08:32:23.841Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,47 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>220203|文献摘要</title>
+    <link href="http://yoursite.com/2022/02/03/d7478ebb.html"/>
+    <id>http://yoursite.com/2022/02/03/d7478ebb.html</id>
+    <published>2022-02-03T07:37:56.243Z</published>
+    <updated>2022-02-03T08:32:23.841Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Nat-M-L-将多组学数据与图卷积网络整合以识别新的癌症基因及其相关的分子机制"><a href="#Nat-M-L-将多组学数据与图卷积网络整合以识别新的癌症基因及其相关的分子机制" class="headerlink" title="Nat. M.L. | 将多组学数据与图卷积网络整合以识别新的癌症基因及其相关的分子机制"></a>Nat. M.L. | 将多组学数据与图卷积网络整合以识别新的癌症基因及其相关的分子机制</h2><p>题目：Integration of multiomics data with graph convolutional networks to identify new cancer genes and their associated molecular mechanisms</p><p>杂志：Nature Machine Intelligence</p><p>IF: 15</p><p>时间：12 April 2021</p><p>链接：<a href="https://www.nature.com/articles/s42256-021-00325-y" target="_blank" rel="noopener">https://www.nature.com/articles/s42256-021-00325-y</a></p><h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><p>随着可用的高通量分子数据的增加，也为识别癌症基因带来了计算上的挑战。遗传和非遗传原因都有可能造成肿瘤的发生，这就需要开发预测模型来有效地整合不同的数据模式，同时具有可解释性。我们介绍了<strong>EMOGI</strong>，这是一种基于图卷积网络的可解释的机器学习方法，其通过结合多组学的泛癌症数据来预测癌症基因，如突变、拷贝数变化、DNA甲基化和基因表达，蛋白质-蛋白质相互作用(PPI) 网络等。在不同的PPI网络和数据集中，EMOGI总体来说比其他方法更准确。我们使用分层相关性传播，根据基因的分类是由相互作用组还是由任何一个全向性水平驱动，对基因进行分层，并确定PPI网络的重要模块。我们提出了165个新的癌症基因，这些基因不一定有反复的改变，但与已知的癌症基因有相互作用。而且我们发现，这些基因与功能缺失筛查中的基本基因相对应。我们相信，我们的方法可以为精准肿瘤学开辟新的途径，并可应用于预测癌症的生物标志物。</p><p><img src="/2022/02/03/d7478ebb/image-20220203092107638.png" alt="image-20220203092107638" style="zoom:50%;"></p><blockquote><p>EMOGI框架的示意图。<strong>a, 数据收集和串联</strong>。计算16个TCGA肿瘤类型的所有基因的平均突变率、CNAs、DNA甲基化和基因表达变化，并在一个早期整合方案中进行连接。然后将得到的特征矩阵与PPI网络和一小部分高置信度的癌症/非癌症基因相结合，形成一个网络，其中节点对应于基因，边对应于它们之间已知的相互作用。每个节点/基因都有一个多维的特征向量（b，输入层）。</p><p><strong>b</strong>，在EMOGI模型训练期间，特征通过连续的图卷积层进行转化（见方法），考虑到越来越大的邻域。输出层根据基因的输出概率将其分类为预测的癌症基因和非癌症基因。</p><p><strong>c</strong>, 使用LRP（见方法）提取每个基因分类的最重要的特征（包括不同癌症类型的全能性水平和相互作用伙伴）。随后根据基因的特征贡献进行聚类，每个基因的相互作用贡献被用来检测癌症中具有重要基因-基因联系的模块。</p></blockquote><p><em><a id="more"></a></em></p><h2 id="Nat-M-L-用于估计抗SARS-CoV-2活动的机器学习平台"><a href="#Nat-M-L-用于估计抗SARS-CoV-2活动的机器学习平台" class="headerlink" title="Nat. M.L. | 用于估计抗SARS-CoV-2活动的机器学习平台"></a>Nat. M.L. | 用于估计抗SARS-CoV-2活动的机器学习平台</h2><p>题目：A machine learning platform to estimate anti-SARS-CoV-2 activities</p><p>杂志：Nature Machine Intelligence</p><p>IF: 15</p><p>时间：13 May 2021</p><p>链接：<a href="https://www.nature.com/articles/s42256-021-00335-w" target="_blank" rel="noopener">https://www.nature.com/articles/s42256-021-00335-w</a></p><h3 id="摘要-1"><a href="#摘要-1" class="headerlink" title="摘要"></a>摘要</h3><p>迫切需要针对COVID-19的药物发现和重新定位的策略。在此，我们提出了REDIAL-2020，一套用于估计小分子在一系列SARS-CoV-2相关检测中的活性的计算模型。模型是利用公开的高通量筛选数据，通过采用不同的描述符类型和各种机器学习策略来训练的。这里我们描述了11个模型的开发和使用，这些模型跨越了病毒进入、病毒复制、活病毒感染性、体外感染性和人类细胞毒性等领域。REDIAL-2020可通过DrugCentral网络门户（<a href="http://drugcentral.org/Redial）作为一个网络应用。该网络应用还提供相似性搜索结果，显示与查询最相似的分子，以及相关的实验数据。REDIAL-2020可以作为一个快速的在线工具，用于识别COVID-19治疗的活性分子。" target="_blank" rel="noopener">http://drugcentral.org/Redial）作为一个网络应用。该网络应用还提供相似性搜索结果，显示与查询最相似的分子，以及相关的实验数据。REDIAL-2020可以作为一个快速的在线工具，用于识别COVID-19治疗的活性分子。</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Nat-M-L-将多组学数据与图卷积网络整合以识别新的癌症基因及其相关的分子机制&quot;&gt;&lt;a href=&quot;#Nat-M-L-将多组学数据与图卷积网络整合以识别新的癌症基因及其相关的分子机制&quot; class=&quot;headerlink&quot; title=&quot;Nat. M.L. | 将多组学数据与图卷积网络整合以识别新的癌症基因及其相关的分子机制&quot;&gt;&lt;/a&gt;Nat. M.L. | 将多组学数据与图卷积网络整合以识别新的癌症基因及其相关的分子机制&lt;/h2&gt;&lt;p&gt;题目：Integration of multiomics data with graph convolutional networks to identify new cancer genes and their associated molecular mechanisms&lt;/p&gt;
+&lt;p&gt;杂志：Nature Machine Intelligence&lt;/p&gt;
+&lt;p&gt;IF: 15&lt;/p&gt;
+&lt;p&gt;时间：12 April 2021&lt;/p&gt;
+&lt;p&gt;链接：&lt;a href=&quot;https://www.nature.com/articles/s42256-021-00325-y&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.nature.com/articles/s42256-021-00325-y&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h3&gt;&lt;p&gt;随着可用的高通量分子数据的增加，也为识别癌症基因带来了计算上的挑战。遗传和非遗传原因都有可能造成肿瘤的发生，这就需要开发预测模型来有效地整合不同的数据模式，同时具有可解释性。我们介绍了&lt;strong&gt;EMOGI&lt;/strong&gt;，这是一种基于图卷积网络的可解释的机器学习方法，其通过结合多组学的泛癌症数据来预测癌症基因，如突变、拷贝数变化、DNA甲基化和基因表达，蛋白质-蛋白质相互作用(PPI) 网络等。在不同的PPI网络和数据集中，EMOGI总体来说比其他方法更准确。我们使用分层相关性传播，根据基因的分类是由相互作用组还是由任何一个全向性水平驱动，对基因进行分层，并确定PPI网络的重要模块。我们提出了165个新的癌症基因，这些基因不一定有反复的改变，但与已知的癌症基因有相互作用。而且我们发现，这些基因与功能缺失筛查中的基本基因相对应。我们相信，我们的方法可以为精准肿瘤学开辟新的途径，并可应用于预测癌症的生物标志物。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2022/02/03/d7478ebb/image-20220203092107638.png&quot; alt=&quot;image-20220203092107638&quot; style=&quot;zoom:50%;&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;EMOGI框架的示意图。&lt;strong&gt;a, 数据收集和串联&lt;/strong&gt;。计算16个TCGA肿瘤类型的所有基因的平均突变率、CNAs、DNA甲基化和基因表达变化，并在一个早期整合方案中进行连接。然后将得到的特征矩阵与PPI网络和一小部分高置信度的癌症/非癌症基因相结合，形成一个网络，其中节点对应于基因，边对应于它们之间已知的相互作用。每个节点/基因都有一个多维的特征向量（b，输入层）。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;b&lt;/strong&gt;，在EMOGI模型训练期间，特征通过连续的图卷积层进行转化（见方法），考虑到越来越大的邻域。输出层根据基因的输出概率将其分类为预测的癌症基因和非癌症基因。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;c&lt;/strong&gt;, 使用LRP（见方法）提取每个基因分类的最重要的特征（包括不同癌症类型的全能性水平和相互作用伙伴）。随后根据基因的特征贡献进行聚类，每个基因的相互作用贡献被用来检测癌症中具有重要基因-基因联系的模块。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;/em&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="literature" scheme="http://yoursite.com/categories/literature/"/>
+    
+    
+      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
+    
+      <category term="federal learning" scheme="http://yoursite.com/tags/federal-learning/"/>
+    
+  </entry>
+  
+  <entry>
     <title>220202 | 文献摘要</title>
     <link href="http://yoursite.com/2022/02/02/f09c6d87.html"/>
     <id>http://yoursite.com/2022/02/02/f09c6d87.html</id>
     <published>2022-02-02T06:37:41.000Z</published>
-    <updated>2022-02-02T08:01:37.697Z</updated>
+    <updated>2022-02-02T08:01:46.050Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Nat-M-L-通过学习随机掩码来解释生物序列的神经网络"><a href="#Nat-M-L-通过学习随机掩码来解释生物序列的神经网络" class="headerlink" title="Nat. M.L. | 通过学习随机掩码来解释生物序列的神经网络"></a>Nat. M.L. | 通过学习随机掩码来解释生物序列的神经网络</h2><p>题目：Interpreting neural networks for biological sequences by learning stochastic masks</p><p>杂志：Nature Machine Intelligence</p><p>IF: 15</p><p>时间：25 January 2022</p><p>链接：<a href="https://www.nature.com/articles/s42256-021-00428-6" target="_blank" rel="noopener">https://www.nature.com/articles/s42256-021-00428-6</a></p><h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><p>基于序列的神经网络可以从大型生物数据集中学习从而做出准确的预测，但模型的解释仍然具有挑战性。许多现有的特征归属方法是针对连续的而不是离散的输入模式而优化的，并孤立地评估单个特征的重要性，使它们不适合解释分子序列中的非线性相互作用。在这里，在计算机视觉和自然语言处理的工作基础上，我们开发了一种基于<strong>深度学习-扰频器网络（Scrambler networks）</strong>的方法，其中最重要的序列位置是通过学习<strong>输入掩码(input masks)</strong>确定的。扰频器学习预测特定位置的评分矩阵，其中不重要的核苷酸或残基通过提高其熵值而被扰乱。我们应用加扰频器来解释遗传变异的影响，发现顺式调控元素之间的非线性相互作用，解释蛋白质-蛋白质相互作用的结合特异性，并确定从头设计的蛋白质的结构决定因素。我们表明，扰频器能够在大型数据集上进行有效的归因，并产生高质量的解释，往往优于最先进的方法。</p><p><img src="/2022/02/02/f09c6d87/image-20220202083212293.png" alt="image-20220202083212293" style="zoom:50%;"></p><p><em><a id="more"></a></em></p><h2 id="Nat-M-L-通过人工智能中的隐私保护协作推进-COVID-19-诊断"><a href="#Nat-M-L-通过人工智能中的隐私保护协作推进-COVID-19-诊断" class="headerlink" title="Nat. M.L. | 通过人工智能中的隐私保护协作推进 COVID-19 诊断"></a>Nat. M.L. | 通过人工智能中的隐私保护协作推进 COVID-19 诊断</h2><p>题目：Advancing COVID-19 diagnosis with privacy-preserving collaboration in artificial intelligence</p><p>杂志：Nature Machine Intelligence</p><p>IF: 15</p><p>时间：15 December 2021</p><p>链接：<a href="https://www.nature.com/articles/s42256-021-00421-z" target="_blank" rel="noopener">https://www.nature.com/articles/s42256-021-00421-z</a></p><h3 id="摘要-1"><a href="#摘要-1" class="headerlink" title="摘要"></a>摘要</h3><p>人工智能为COVID-19的诊断提供了一个有希望的解决方案，然而，围绕安全和可信度的担扰阻碍了大规模代表性医疗数据的收集，为在临床实践中训练一个通用的模型带来了相当大的挑战。为了解决这个问题，我们发起了统一CT-COVID人工智能诊断计划<strong>（Unified CT-COVID AI Diagnostic Initiative，UCADI）</strong>，人工智能模型可以在一个联邦学习框架（<strong>federated learning</strong>）下分布式地训练并在每个主办机构独立执行，而不需要分享数据。这里显示我们的联邦学习框架大大超过了所有的本地模型（在中国的测试灵敏度/特异性为0.973/0.951，在英国为0.730/0.942），达到了与专业放射医师小组相当的性能。我们进一步评估了该模型在保留（从另外两家医院收集的没有联合学习框架的数据）和异质（用造影剂获得）数据上的表现，为模型做出的决定提供了可视化的解释，并分析了模型性能和联邦训练过程中沟通成本之间的权衡。我们的研究是基于从中国和英国的23家医院收集的3336名患者的9573张胸部计算机断层扫描。总的来说，我们的工作推进了利用联合学习在数字健康领域保护隐私的人工智能的前景。</p><p><img src="/2022/02/02/f09c6d87/image-20220202085203685.png" alt="image-20220202085203685" style="zoom:50%;"></p>]]></content>
     
@@ -100,9 +136,9 @@
       <category term="literature" scheme="http://yoursite.com/categories/literature/"/>
     
     
-      <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
-    
       <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
+    
+      <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
     
   </entry>
   
@@ -158,9 +194,9 @@
       <category term="literature" scheme="http://yoursite.com/categories/literature/"/>
     
     
-      <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
-    
       <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
+    
+      <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
     
       <category term="CNN" scheme="http://yoursite.com/tags/CNN/"/>
     
@@ -220,11 +256,11 @@
       <category term="literature" scheme="http://yoursite.com/categories/literature/"/>
     
     
+      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
+    
       <category term="AMR" scheme="http://yoursite.com/tags/AMR/"/>
     
       <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
-    
-      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
     
       <category term="药物研发" scheme="http://yoursite.com/tags/%E8%8D%AF%E7%89%A9%E7%A0%94%E5%8F%91/"/>
     
@@ -562,31 +598,6 @@
       <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
     
       <category term="python" scheme="http://yoursite.com/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>R语言中读取含有空白内容的数据</title>
-    <link href="http://yoursite.com/2020/06/28/64095.html"/>
-    <id>http://yoursite.com/2020/06/28/64095.html</id>
-    <published>2020-06-28T18:13:22.000Z</published>
-    <updated>2020-09-12T09:49:57.629Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>数据内容</strong></p><p><img src="/2020/06/28/64095/1592293564053-baa557ba-9fdb-46ea-b659-dd2b941c6a24.png" alt="image.png"></p><p><strong>导入数据：</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">test &lt;-read.table(&quot;filename.txt&quot;,header=TRUE）</span><br></pre></td></tr></table></figure><p>  会出现错误：Error in scan(file, what, nmax, sep, dec, quote, skip, nlines, na.strings, :3行没有2元素</p><p><strong>修改：</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">test &lt;-read.table(&quot;filename.txt&quot;,header=TRUE,fill=TRUE）</span><br></pre></td></tr></table></figure><p><strong>空值设为NA</strong></p><p><strong><code>na.strings = &quot;&quot;</code></strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">test &lt;-read.table(&quot;filename.txt&quot;,header=TRUE, fill=TRUE, na.strings = &quot;&quot;)</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;strong&gt;数据内容&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2020/06/28/64095/1592293564053-baa557ba-9fdb-46ea-b659-dd2b941c6a24.png&quot; alt=&quot;image.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;
-      
-    
-    </summary>
-    
-    
-      <category term="R" scheme="http://yoursite.com/tags/R/"/>
     
   </entry>
   
