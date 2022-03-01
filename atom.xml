@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2022-02-03T08:32:23.841Z</updated>
+  <updated>2022-02-04T06:49:17.460Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,42 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>220204 | 文献摘要</title>
+    <link href="http://yoursite.com/2022/02/04/a30d0463.html"/>
+    <id>http://yoursite.com/2022/02/04/a30d0463.html</id>
+    <published>2022-02-04T06:39:12.618Z</published>
+    <updated>2022-02-04T06:49:17.460Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Nat-M-L-基于条件变换器、知识提炼和强化学习的多约束分子生成"><a href="#Nat-M-L-基于条件变换器、知识提炼和强化学习的多约束分子生成" class="headerlink" title="Nat. M.L. | 基于条件变换器、知识提炼和强化学习的多约束分子生成"></a>Nat. M.L. | 基于条件变换器、知识提炼和强化学习的多约束分子生成</h2><p>题目：Multi-constraint molecular generation based on conditional transformer, knowledge distillation and reinforcement learning</p><p>杂志：Nature Machine Intelligence</p><p>IF: 15</p><p>时间：18 October 2021</p><p>链接：<a href="https://www.nature.com/articles/s42256-021-00403-1" target="_blank" rel="noopener">https://www.nature.com/articles/s42256-021-00403-1</a></p><h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><p>基于机器学习的生成模型可以从头开始生成具有理想的生理化学和药理学特性的新分子。许多优秀的生成模型已经被提出，但分子生成任务中的多目标优化对于大多数现有的模型来说仍然相当具有挑战性。在此，我们提出了<strong>多约束分子生成（multi-constraint molecular generation, MCMG）方法</strong>，通过知识提炼将条件转化器和强化学习算法结合起来，可以满足多种约束。通过有效地学习并将结构-属性关系纳入一个有偏见的生成过程，条件转化器被用来训练一个分子生成模型。然后采用知识蒸提炼型来降低模型的复杂性，以便通过强化学习有效地进行微调，提高生成分子的结构多样性。正如一组综合基准所证明的那样，MCMG是一种非常有效的方法，可以穿越庞大而复杂的化学空间，寻找满足多种属性约束的新型化合物。</p><a id="more"></a>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Nat-M-L-基于条件变换器、知识提炼和强化学习的多约束分子生成&quot;&gt;&lt;a href=&quot;#Nat-M-L-基于条件变换器、知识提炼和强化学习的多约束分子生成&quot; class=&quot;headerlink&quot; title=&quot;Nat. M.L. | 基于条件变换器、知识提炼和强化学习的多约束分子生成&quot;&gt;&lt;/a&gt;Nat. M.L. | 基于条件变换器、知识提炼和强化学习的多约束分子生成&lt;/h2&gt;&lt;p&gt;题目：Multi-constraint molecular generation based on conditional transformer, knowledge distillation and reinforcement learning&lt;/p&gt;
+&lt;p&gt;杂志：Nature Machine Intelligence&lt;/p&gt;
+&lt;p&gt;IF: 15&lt;/p&gt;
+&lt;p&gt;时间：18 October 2021&lt;/p&gt;
+&lt;p&gt;链接：&lt;a href=&quot;https://www.nature.com/articles/s42256-021-00403-1&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.nature.com/articles/s42256-021-00403-1&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h3&gt;&lt;p&gt;基于机器学习的生成模型可以从头开始生成具有理想的生理化学和药理学特性的新分子。许多优秀的生成模型已经被提出，但分子生成任务中的多目标优化对于大多数现有的模型来说仍然相当具有挑战性。在此，我们提出了&lt;strong&gt;多约束分子生成（multi-constraint molecular generation, MCMG）方法&lt;/strong&gt;，通过知识提炼将条件转化器和强化学习算法结合起来，可以满足多种约束。通过有效地学习并将结构-属性关系纳入一个有偏见的生成过程，条件转化器被用来训练一个分子生成模型。然后采用知识蒸提炼型来降低模型的复杂性，以便通过强化学习有效地进行微调，提高生成分子的结构多样性。正如一组综合基准所证明的那样，MCMG是一种非常有效的方法，可以穿越庞大而复杂的化学空间，寻找满足多种属性约束的新型化合物。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="literature" scheme="http://yoursite.com/categories/literature/"/>
+    
+    
+      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
+    
+      <category term="transformer" scheme="http://yoursite.com/tags/transformer/"/>
+    
+      <category term="reinforcement learning" scheme="http://yoursite.com/tags/reinforcement-learning/"/>
+    
+  </entry>
+  
+  <entry>
     <title>220203|文献摘要</title>
     <link href="http://yoursite.com/2022/02/03/d7478ebb.html"/>
     <id>http://yoursite.com/2022/02/03/d7478ebb.html</id>
     <published>2022-02-03T07:37:56.243Z</published>
-    <updated>2022-02-03T08:32:23.841Z</updated>
+    <updated>2022-02-04T06:41:41.263Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Nat-M-L-将多组学数据与图卷积网络整合以识别新的癌症基因及其相关的分子机制"><a href="#Nat-M-L-将多组学数据与图卷积网络整合以识别新的癌症基因及其相关的分子机制" class="headerlink" title="Nat. M.L. | 将多组学数据与图卷积网络整合以识别新的癌症基因及其相关的分子机制"></a>Nat. M.L. | 将多组学数据与图卷积网络整合以识别新的癌症基因及其相关的分子机制</h2><p>题目：Integration of multiomics data with graph convolutional networks to identify new cancer genes and their associated molecular mechanisms</p><p>杂志：Nature Machine Intelligence</p><p>IF: 15</p><p>时间：12 April 2021</p><p>链接：<a href="https://www.nature.com/articles/s42256-021-00325-y" target="_blank" rel="noopener">https://www.nature.com/articles/s42256-021-00325-y</a></p><h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><p>随着可用的高通量分子数据的增加，也为识别癌症基因带来了计算上的挑战。遗传和非遗传原因都有可能造成肿瘤的发生，这就需要开发预测模型来有效地整合不同的数据模式，同时具有可解释性。我们介绍了<strong>EMOGI</strong>，这是一种基于图卷积网络的可解释的机器学习方法，其通过结合多组学的泛癌症数据来预测癌症基因，如突变、拷贝数变化、DNA甲基化和基因表达，蛋白质-蛋白质相互作用(PPI) 网络等。在不同的PPI网络和数据集中，EMOGI总体来说比其他方法更准确。我们使用分层相关性传播，根据基因的分类是由相互作用组还是由任何一个全向性水平驱动，对基因进行分层，并确定PPI网络的重要模块。我们提出了165个新的癌症基因，这些基因不一定有反复的改变，但与已知的癌症基因有相互作用。而且我们发现，这些基因与功能缺失筛查中的基本基因相对应。我们相信，我们的方法可以为精准肿瘤学开辟新的途径，并可应用于预测癌症的生物标志物。</p><p><img src="/2022/02/03/d7478ebb/image-20220203092107638.png" alt="image-20220203092107638" style="zoom:50%;"></p><blockquote><p>EMOGI框架的示意图。<strong>a, 数据收集和串联</strong>。计算16个TCGA肿瘤类型的所有基因的平均突变率、CNAs、DNA甲基化和基因表达变化，并在一个早期整合方案中进行连接。然后将得到的特征矩阵与PPI网络和一小部分高置信度的癌症/非癌症基因相结合，形成一个网络，其中节点对应于基因，边对应于它们之间已知的相互作用。每个节点/基因都有一个多维的特征向量（b，输入层）。</p><p><strong>b</strong>，在EMOGI模型训练期间，特征通过连续的图卷积层进行转化（见方法），考虑到越来越大的邻域。输出层根据基因的输出概率将其分类为预测的癌症基因和非癌症基因。</p><p><strong>c</strong>, 使用LRP（见方法）提取每个基因分类的最重要的特征（包括不同癌症类型的全能性水平和相互作用伙伴）。随后根据基因的特征贡献进行聚类，每个基因的相互作用贡献被用来检测癌症中具有重要基因-基因联系的模块。</p></blockquote><p><em><a id="more"></a></em></p><h2 id="Nat-M-L-用于估计抗SARS-CoV-2活动的机器学习平台"><a href="#Nat-M-L-用于估计抗SARS-CoV-2活动的机器学习平台" class="headerlink" title="Nat. M.L. | 用于估计抗SARS-CoV-2活动的机器学习平台"></a>Nat. M.L. | 用于估计抗SARS-CoV-2活动的机器学习平台</h2><p>题目：A machine learning platform to estimate anti-SARS-CoV-2 activities</p><p>杂志：Nature Machine Intelligence</p><p>IF: 15</p><p>时间：13 May 2021</p><p>链接：<a href="https://www.nature.com/articles/s42256-021-00335-w" target="_blank" rel="noopener">https://www.nature.com/articles/s42256-021-00335-w</a></p><h3 id="摘要-1"><a href="#摘要-1" class="headerlink" title="摘要"></a>摘要</h3><p>迫切需要针对COVID-19的药物发现和重新定位的策略。在此，我们提出了REDIAL-2020，一套用于估计小分子在一系列SARS-CoV-2相关检测中的活性的计算模型。模型是利用公开的高通量筛选数据，通过采用不同的描述符类型和各种机器学习策略来训练的。这里我们描述了11个模型的开发和使用，这些模型跨越了病毒进入、病毒复制、活病毒感染性、体外感染性和人类细胞毒性等领域。REDIAL-2020可通过DrugCentral网络门户（<a href="http://drugcentral.org/Redial）作为一个网络应用。该网络应用还提供相似性搜索结果，显示与查询最相似的分子，以及相关的实验数据。REDIAL-2020可以作为一个快速的在线工具，用于识别COVID-19治疗的活性分子。" target="_blank" rel="noopener">http://drugcentral.org/Redial）作为一个网络应用。该网络应用还提供相似性搜索结果，显示与查询最相似的分子，以及相关的实验数据。REDIAL-2020可以作为一个快速的在线工具，用于识别COVID-19治疗的活性分子。</a></p>]]></content>
     
@@ -48,7 +79,9 @@
     
       <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
     
-      <category term="federal learning" scheme="http://yoursite.com/tags/federal-learning/"/>
+      <category term="graph convolutional networks" scheme="http://yoursite.com/tags/graph-convolutional-networks/"/>
+    
+      <category term="multiomics" scheme="http://yoursite.com/tags/multiomics/"/>
     
   </entry>
   
@@ -564,33 +597,6 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Series: 类似一个一维数组，一个Series
       
-    
-    </summary>
-    
-    
-      <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
-    
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>NumPy介绍</title>
-    <link href="http://yoursite.com/2020/06/28/49844.html"/>
-    <id>http://yoursite.com/2020/06/28/49844.html</id>
-    <published>2020-06-28T18:13:50.000Z</published>
-    <updated>2020-09-12T09:49:57.627Z</updated>
-    
-    <content type="html"><![CDATA[<p>Pandas库是基于Numpy库来创建的，Numpy主要用于矩阵操作，而Pandas主要用于数据处理。</p><p>Pandas主要有两种重要的数据结构：Series和DataFrame.</p><ul><li>Series: 类似一个一维数组，一个Series对应DataFrame的一列</li><li>DataFrame:类似一个二维数组，一个DataFrame由几个Series列构成。</li></ul><a id="more"></a><p><img src="/2020/06/28/49844/1591819950732-0cf02f6a-c25b-4ca1-8876-17dc2e63dd9e-20200628202724030.png" alt="image.png"></p><h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ul><li><a href="https://zhuanlan.zhihu.com/p/40373125" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/40373125</a></li><li><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html" target="_blank" rel="noopener">https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Pandas库是基于Numpy库来创建的，Numpy主要用于矩阵操作，而Pandas主要用于数据处理。&lt;/p&gt;
-&lt;p&gt;Pandas主要有两种重要的数据结构：Series和DataFrame.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Series: 类似一个一维数组，一个Series对应DataFrame的一列&lt;/li&gt;
-&lt;li&gt;DataFrame:类似一个二维数组，一个DataFrame由几个Series列构成。&lt;/li&gt;
-&lt;/ul&gt;
     
     </summary>
     
