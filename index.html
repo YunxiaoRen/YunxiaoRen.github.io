@@ -295,6 +295,218 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/03/28/4248376.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="六六">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="生信拾光">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/03/28/4248376.html" itemprop="url">MCC | 机器学习中优于F1-score和accuracy的一个性能评价指标</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-03-28T21:33:49+02:00">
+                2022-03-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Data-Sciences/" itemprop="url" rel="index">
+                    <span itemprop="name">Data Sciences</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2022/03/28/4248376.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2022/03/28/4248376.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  955
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>在机器学习中，模型性能的评估是一个关键问题。常见的评价指标有F1-score, Accuracy, Precision, Recall, ROC 和 AUC (对这些评价指标不了解的，可以参考生信菜鸟团之前的一篇文章: <a href="https://mp.weixin.qq.com/s/jQpYuuHJXsFi6Au9DaEklg" target="_blank" rel="noopener">机器学习实战 | 机器学习性能指标</a> )。但是我们对这些统计指标的可靠性要保持谨慎的态度，特别是在不平衡的数据集上。</p>
+<h3 id="F1-score-Accuracy-Precision-Recall"><a href="#F1-score-Accuracy-Precision-Recall" class="headerlink" title="F1-score, Accuracy, Precision, Recall"></a>F1-score, Accuracy, Precision, Recall</h3><p>例如，在一个二元分类模型中，我们的数据是宠物图像，每张图片可以是狗🐶或猫🐱，分类器在每张照片中检测到一只宠物，然后我们测量其性能。假如我们总共有24张图片，然后分类器检测的混淆矩阵如下：</p>
+<p><img src="/2022/03/28/4248376/image-20220401104509019.png" alt="image-20220401104509019"></p>
+<p>我们依次计算下Precision, Recall, F1 score。</p>
+<figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Precision</span> = TP/(TP+FP) = <span class="number">18</span>/(<span class="number">18</span>+<span class="number">3</span>) = <span class="number">0.86</span></span><br><span class="line"></span><br><span class="line">Recall = TP/(TP+FN) = <span class="number">18</span>/(<span class="number">18</span>+<span class="number">2</span>) = <span class="number">0.90</span></span><br><span class="line"></span><br><span class="line">F1 = <span class="number">2</span> * (<span class="keyword">Precision</span>*Recall/<span class="keyword">Precision</span>+Recall) = <span class="number">0.88</span></span><br></pre></td></tr></table></figure>
+<p>从以上这些指标的计算结果来看，我们的模型似乎还不错。但是关于猫 (negative class)的分类，只有1个是正确识别了。那为什么F1-score的值还这么高呢？</p>
+<p>从计算公式中，我们可以看出来，无论是Precision, Recall还是F1 score，他们都只关注了一个类别，即positive class。TN完全没有考虑。</p>
+<p>如果我们设定数据中猫是Positive class，那么我们的混淆矩阵可以转换为：</p>
+<p><img src="/2022/03/28/4248376/image-20220401111415412.png" alt="image-20220401111415412"></p>
+<figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Precision</span> = TP/(TP+FP) = <span class="number">1</span>/(<span class="number">1</span>+<span class="number">2</span>) = <span class="number">0.33</span></span><br><span class="line"></span><br><span class="line">Recall = TP/(TP+FN) = <span class="number">1</span>/(<span class="number">1</span>+<span class="number">3</span>) = <span class="number">0.25</span></span><br><span class="line"></span><br><span class="line">F1 = <span class="number">2</span> * (<span class="keyword">Precision</span>*Recall/<span class="keyword">Precision</span>+Recall) = <span class="number">0.29</span></span><br></pre></td></tr></table></figure>
+<p>从这里的计算结果可以发现，这个分类器对猫的识别很差。</p>
+<p>然后我们再看下Accuracy，</p>
+<figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Accuracy</span> = TP+TN/(TP+TN+FP+FN) = <span class="number">19</span>/<span class="number">24</span>=<span class="number">0.79</span></span><br></pre></td></tr></table></figure>
+<p>这个结果是相当有误导性的，因为虽然 90% (18/20)的狗被准确分类，但猫只有 25% (1/4)。如果取平均值，结果也只有57.5%，也是低于79%的。这里的原因是因为<strong>数据中两个分类的类别是不平衡的</strong>。</p>
+<p><strong>从以上计算中可以知道Accuracy对类别不平衡很敏感；Precision, Recall和 F1 score是不对称的，只关注了一个类别。</strong></p>
+<h3 id="Matthews-correlation-coefficient，MCC"><a href="#Matthews-correlation-coefficient，MCC" class="headerlink" title="Matthews correlation coefficient，MCC"></a>Matthews correlation coefficient，MCC</h3><p>马修斯相关系数 （MCC）是phi系数（φ）的一个特例。即将True Class和Predicted Class视为两个（二进制）变量，并计算它们的相关系数（与计算任何两个变量之间的相关系数类似）。真实值和预测值之间的相关性越高，预测效果越好。只有当预测在所有四个混淆矩阵类别（TP、TN、FN和FP）中都获得了良好的结果时，它才会产生高分。</p>
+<p>计算公式如下：</p>
+<p><img src="/2022/03/28/4248376/image-20220401114108284.png" alt="image-20220401114108284"></p>
+<p>根据计算公式，可知当分类器是完美的（FP = FN = 0），MCC的值是1，表示完全正相关。相反，当分类器总是分类错误时（TP = TN = 0），得到的数值是-1，代表完美的负相关。所以，MCC的值总是在-1和1之间，0意味着分类器不比随机二分类选择好。此外，MCC是完全对称的，所以没有哪个类别比其他类别更重要，如果把正反两个类别换一下，仍然会得到相同的值。</p>
+<p>然后我们再计算一下，上面例举的数据中MCC的值：</p>
+<p><img src="/2022/03/28/4248376/image-20220401115041223.png" alt="image-20220401115041223"></p>
+<p>MCC的值是0.17 ，表明预测类和真实类是弱相关的。从以上的计算和分析，我们知道这种弱相关是因为分类器不擅长对猫进行分类。</p>
+<p>在python中，scikit-learn模块包含MCC计算的函数 </p>
+<p><code>sklearn.metrics.matthews_corrcoef(y_true, y_pred, *, sample_weight=None)</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> matthews_corrcoef</span><br><span class="line">y_true = [+<span class="number">1</span>, +<span class="number">1</span>, +<span class="number">1</span>, <span class="number">-1</span>]</span><br><span class="line">y_pred = [+<span class="number">1</span>, <span class="number">-1</span>, +<span class="number">1</span>, +<span class="number">1</span>]</span><br><span class="line">matthews_corrcoef(y_true, y_pred)</span><br><span class="line"><span class="number">-0.33</span>...</span><br></pre></td></tr></table></figure>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ul>
+<li><a href="https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-019-6413-7" target="_blank" rel="noopener">The advantages of the Matthews correlation coefficient (MCC) over F1 score and accuracy in binary classification evaluation.</a></li>
+<li><a href="https://towardsdatascience.com/the-best-classification-metric-youve-never-heard-of-the-matthews-correlation-coefficient-3bf50a2f3e9a" target="_blank" rel="noopener">Matthews Correlation Coefficient is The Best Classification Metric You’ve Never Heard Of</a>.</li>
+<li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.matthews_corrcoef.html" target="_blank" rel="noopener"><a href="https://scikit-learn.org/stable/modules/classes.html#module-sklearn.metrics" target="_blank" rel="noopener"><code>sklearn.metrics</code></a>.matthews_corrcoef</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/03/01/b21f85bf.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1063,199 +1275,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/11/7b8ddaea.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="六六">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="生信拾光">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/01/11/7b8ddaea.html" itemprop="url">综述｜利用深度学习进行多组学数据整合的路线图</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-01-11T21:15:28+01:00">
-                2022-01-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/literature/" itemprop="url" rel="index">
-                    <span itemprop="name">literature</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2022/01/11/7b8ddaea.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2022/01/11/7b8ddaea.html" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  242
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="文章信息"><a href="#文章信息" class="headerlink" title="文章信息"></a>文章信息</h2><p>题目：A roadmap for multi-omics data integration using deep learning</p>
-<p>杂志：Briefings in Bioinformatics</p>
-<p>IF: 11.62</p>
-<p>时间：12 November 2021</p>
-<p>链接：<a href="https://doi.org/10.1093/bib/bbab454" target="_blank" rel="noopener">https://doi.org/10.1093/bib/bbab454</a></p>
-<h2 id="一句话评价"><a href="#一句话评价" class="headerlink" title="一句话评价"></a>一句话评价</h2><p>介绍了利用深度学习对多组学数据的整合和应用以及优缺点</p>
-<p><img src="/2022/01/11/7b8ddaea/image-20220202090004483.png" alt="image-20220202090004483"></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2022/01/11/7b8ddaea.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1306,7 +1325,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">122</span>
+                  <span class="site-state-item-count">123</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1394,7 +1413,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">77.2k</span>
+    <span title="Site words total count">78.2k</span>
   
 </div>
 
@@ -1416,7 +1435,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共77.2k字</span>
+  <span class="post-count">博客全站共78.2k字</span>
 </div>
 
 
