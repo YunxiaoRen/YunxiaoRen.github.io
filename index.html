@@ -436,7 +436,7 @@
 <p>首先我们构建一个多标签示例数据（Fig. A）, χi ∈ x 是一个训练实例，</p>
 <p><img src="/2022/05/30/5d573439/Snipaste_2022-05-30_22-42-16.png" alt></p>
 <p>这里 <strong><em>L</em></strong> 是一个类标签的有限集，m&gt;1。</p>
-<h3 id="1-Binary-relevance-BR"><a href="#1-Binary-relevance-BR" class="headerlink" title="1. Binary relevance (BR)"></a>1. Binary relevance (BR)</h3><p>第一种方法是Binary relevance (BR) （Fig. B），即将具有 L 个标签的数据集划分为 L 个二元分类问题。然后以二分类的方法处理。但是这种方法的一个不足是，没有考虑到多标签间的相关性。</p>
+<h4 id="1-Binary-relevance-BR"><a href="#1-Binary-relevance-BR" class="headerlink" title="1. Binary relevance (BR)"></a>1. Binary relevance (BR)</h4><p>第一种方法是Binary relevance (BR) （Fig. B），即将具有 L 个标签的数据集划分为 L 个二元分类问题。然后以二分类的方法处理。但是这种方法的一个不足是，没有考虑到多标签间的相关性。</p>
 <h4 id="2-Classifier-Chain-CC"><a href="#2-Classifier-Chain-CC" class="headerlink" title="2. Classifier Chain (CC)"></a>2. Classifier Chain (CC)</h4><p>第二种方法是Classifier Chain (CC) （Fig. C），即将L个二元分类器链接成一个“链”，使得一个分类器的输出预测作为所有后续分类器的附加输入，克服了不考虑标签之间依赖关系的缺点，并捕获了标签之间可能的依赖关系。</p>
 <h4 id="3-Ensemble-Classifier-Chains-ECC"><a href="#3-Ensemble-Classifier-Chains-ECC" class="headerlink" title="3. Ensemble Classifier Chains (ECC)"></a>3. Ensemble Classifier Chains (ECC)</h4><p>第三种方法Ensemble Classifier Chains (ECC)（Fig. D）是在CC基础上提出来的，考虑到了“链”的顺序，通过多数投票聚合了多个具有不同顺序的链，从而可以进一步提升分类器的性能。</p>
 <h4 id="4-Label-Powerset-LP"><a href="#4-Label-Powerset-LP" class="headerlink" title="4. Label Powerset (LP)"></a>4. Label Powerset (LP)</h4><p>第四种方法是Label Powerset (LP)（Fig. E），将多标签问题转换为单标签多类问题，即在训练数据中找到的所有唯一标签组合上进行训练。</p>
