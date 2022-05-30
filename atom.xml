@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2022-05-30T20:38:48.391Z</updated>
+  <updated>2022-05-30T20:43:35.362Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://yoursite.com/2022/05/30/5d573439.html"/>
     <id>http://yoursite.com/2022/05/30/5d573439.html</id>
     <published>2022-05-30T19:19:31.000Z</published>
-    <updated>2022-05-30T20:38:48.391Z</updated>
+    <updated>2022-05-30T20:43:35.362Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="多标签分类-（Multi-label-Classification）"><a href="#多标签分类-（Multi-label-Classification）" class="headerlink" title="多标签分类 （Multi-label Classification）"></a>多标签分类 （Multi-label Classification）</h3><p>二分类问题是机器学习中最常遇到的问题，有时候我们也会遇到<strong>多标签分类（Multi-label Classification）</strong>的处理。首先什么是多标签分类，举个例子，比如一部电影的分类可以同时属于“动作类”，也可以是“喜剧类”，<strong>类别标签不是相互排斥的</strong>。另一种有时会和多标签分类混淆的分类问题——<strong>多类别分类（Multi-class Classification）</strong>，<strong>类别标签是相互排斥的</strong>，如水果的分类，水果的类别有葡萄，苹果,香蕉等，但一种水果不可能即是葡萄又是苹果。</p><h3 id="多标签分类方法"><a href="#多标签分类方法" class="headerlink" title="多标签分类方法"></a>多标签分类方法</h3><p>多标签分类的处理方法常见的有以下几种：</p><p>首先我们构建一个多标签示例数据（Fig. A）, χi ∈ x 是一个训练实例，<br>$$<br>L = (\lambda1,\lambda2,…,\lambda m)<br>$$<br>这里 <strong><em>L</em></strong> 是一个类标签的有限集，m&gt;1。</p><h3 id="1-Binary-relevance-BR"><a href="#1-Binary-relevance-BR" class="headerlink" title="1. Binary relevance (BR)"></a>1. Binary relevance (BR)</h3><p>第一种方法是Binary relevance (BR) （Fig. B），即将具有 L 个标签的数据集划分为 L 个二元分类问题。然后以二分类的方法处理。但是这种方法的一个不足是，没有考虑到多标签间的相关性。</p><h4 id="2-Classifier-Chain-CC"><a href="#2-Classifier-Chain-CC" class="headerlink" title="2. Classifier Chain (CC)"></a>2. Classifier Chain (CC)</h4><p>第二种方法是Classifier Chain (CC) （Fig. C），即将L个二元分类器链接成一个“链”，使得一个分类器的输出预测作为所有后续分类器的附加输入，克服了不考虑标签之间依赖关系的缺点，并捕获了标签之间可能的依赖关系。</p><h4 id="3-Ensemble-Classifier-Chains-ECC"><a href="#3-Ensemble-Classifier-Chains-ECC" class="headerlink" title="3. Ensemble Classifier Chains (ECC)"></a>3. Ensemble Classifier Chains (ECC)</h4><p>第三种方法Ensemble Classifier Chains (ECC)（Fig. D）是在CC基础上提出来的，考虑到了“链”的顺序，通过多数投票聚合了多个具有不同顺序的链，从而可以进一步提升分类器的性能。</p><h4 id="4-Label-Powerset-LP"><a href="#4-Label-Powerset-LP" class="headerlink" title="4. Label Powerset (LP)"></a>4. Label Powerset (LP)</h4><p>第四种方法是Label Powerset (LP)（Fig. E），将多标签问题转换为单标签多类问题，即在训练数据中找到的所有唯一标签组合上进行训练。</p><h4 id="5-Random-Label-Space-Partitioning-with-Label-Powerset（RD）"><a href="#5-Random-Label-Space-Partitioning-with-Label-Powerset（RD）" class="headerlink" title="5. Random Label Space Partitioning with Label Powerset（RD）"></a>5. Random Label Space Partitioning with Label Powerset（RD）</h4><p>第五种方法Random Label Space Partitioning with Label Powerset（RD）（Fig. F）是在LP基础上延伸得到的。其将标签空间划分为大小为 k 的分区，每个分区训练一个 LP 分类器，并通过聚合所有 LP 分类器的结果来预测数据。</p><p><img src="/2022/05/30/5d573439/fig-methods.png" alt></p><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul><li><a href="https://www.sciencedirect.com/science/article/pii/S2001037022000824" target="_blank" rel="noopener">https://www.sciencedirect.com/science/article/pii/S2001037022000824</a></li><li><a href="https://www.jair.org/index.php/jair/article/view/12376" target="_blank" rel="noopener">https://www.jair.org/index.php/jair/article/view/12376</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<h3 id="多标签分类-（Multi-label-Classification）"><a href="#多标签分类-（Multi-label-Classification）" class="headerlink" title="多标签分类 （Multi-label Classification）"></a>多标签分类 （Multi-label Classification）</h3><p>二分类问题是机器学习中最常遇到的问题，有时候我们也会遇到<strong>多标签分类（Multi-label Classification）</strong>的处理。首先什么是多标签分类，举个例子，比如一部电影的分类可以同时属于“动作类”，也可以是“喜剧类”，<strong>类别标签不是相互排斥的</strong>。另一种有时会和多标签分类混淆的分类问题——<strong>多类别分类（Multi-class Classification）</strong>，<strong>类别标签是相互排斥的</strong>，如水果的分类，水果的类别有葡萄，苹果,香蕉等，但一种水果不可能即是葡萄又是苹果。</p><h3 id="多标签分类方法"><a href="#多标签分类方法" class="headerlink" title="多标签分类方法"></a>多标签分类方法</h3><p>多标签分类的处理方法常见的有以下几种：</p><p>首先我们构建一个多标签示例数据（Fig. A）, χi ∈ x 是一个训练实例，<br><img src="/2022/05/30/5d573439/Snipaste_2022-05-30_22-42-16.png" alt></p><p>这里 <strong><em>L</em></strong> 是一个类标签的有限集，m&gt;1。</p><h3 id="1-Binary-relevance-BR"><a href="#1-Binary-relevance-BR" class="headerlink" title="1. Binary relevance (BR)"></a>1. Binary relevance (BR)</h3><p>第一种方法是Binary relevance (BR) （Fig. B），即将具有 L 个标签的数据集划分为 L 个二元分类问题。然后以二分类的方法处理。但是这种方法的一个不足是，没有考虑到多标签间的相关性。</p><h4 id="2-Classifier-Chain-CC"><a href="#2-Classifier-Chain-CC" class="headerlink" title="2. Classifier Chain (CC)"></a>2. Classifier Chain (CC)</h4><p>第二种方法是Classifier Chain (CC) （Fig. C），即将L个二元分类器链接成一个“链”，使得一个分类器的输出预测作为所有后续分类器的附加输入，克服了不考虑标签之间依赖关系的缺点，并捕获了标签之间可能的依赖关系。</p><h4 id="3-Ensemble-Classifier-Chains-ECC"><a href="#3-Ensemble-Classifier-Chains-ECC" class="headerlink" title="3. Ensemble Classifier Chains (ECC)"></a>3. Ensemble Classifier Chains (ECC)</h4><p>第三种方法Ensemble Classifier Chains (ECC)（Fig. D）是在CC基础上提出来的，考虑到了“链”的顺序，通过多数投票聚合了多个具有不同顺序的链，从而可以进一步提升分类器的性能。</p><h4 id="4-Label-Powerset-LP"><a href="#4-Label-Powerset-LP" class="headerlink" title="4. Label Powerset (LP)"></a>4. Label Powerset (LP)</h4><p>第四种方法是Label Powerset (LP)（Fig. E），将多标签问题转换为单标签多类问题，即在训练数据中找到的所有唯一标签组合上进行训练。</p><h4 id="5-Random-Label-Space-Partitioning-with-Label-Powerset（RD）"><a href="#5-Random-Label-Space-Partitioning-with-Label-Powerset（RD）" class="headerlink" title="5. Random Label Space Partitioning with Label Powerset（RD）"></a>5. Random Label Space Partitioning with Label Powerset（RD）</h4><p>第五种方法Random Label Space Partitioning with Label Powerset（RD）（Fig. F）是在LP基础上延伸得到的。其将标签空间划分为大小为 k 的分区，每个分区训练一个 LP 分类器，并通过聚合所有 LP 分类器的结果来预测数据。</p><p><img src="/2022/05/30/5d573439/fig-methods.png" alt></p><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul><li><a href="https://www.sciencedirect.com/science/article/pii/S2001037022000824" target="_blank" rel="noopener">https://www.sciencedirect.com/science/article/pii/S2001037022000824</a></li><li><a href="https://www.jair.org/index.php/jair/article/view/12376" target="_blank" rel="noopener">https://www.jair.org/index.php/jair/article/view/12376</a></li></ul>]]></content>
     
     <summary type="html">
     
@@ -246,9 +246,9 @@
       <category term="literature" scheme="http://yoursite.com/categories/literature/"/>
     
     
-      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
-    
       <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
+    
+      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
     
   </entry>
   
@@ -304,9 +304,9 @@
       <category term="literature" scheme="http://yoursite.com/categories/literature/"/>
     
     
-      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
-    
       <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
+    
+      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
     
       <category term="CNN" scheme="http://yoursite.com/tags/CNN/"/>
     
@@ -366,11 +366,11 @@
       <category term="literature" scheme="http://yoursite.com/categories/literature/"/>
     
     
-      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
-    
       <category term="AMR" scheme="http://yoursite.com/tags/AMR/"/>
     
       <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
+    
+      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
     
       <category term="药物研发" scheme="http://yoursite.com/tags/%E8%8D%AF%E7%89%A9%E7%A0%94%E5%8F%91/"/>
     
