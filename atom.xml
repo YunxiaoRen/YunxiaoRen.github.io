@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2022-05-30T20:48:17.760Z</updated>
+  <updated>2022-07-01T09:55:41.795Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>基于transformer的多任务分子分析 </title>
+    <link href="http://yoursite.com/2022/07/01/e8de369d.html"/>
+    <id>http://yoursite.com/2022/07/01/e8de369d.html</id>
+    <published>2022-07-01T07:40:38.000Z</published>
+    <updated>2022-07-01T09:55:41.795Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天介绍一篇基于transformer架构对小分子进行探究理解和多任务分析的文章。其中多任务分子分析包括分子特性预测，化学反应分析，药物相互作用的预测，分子从头生成和分子优化。</p><p><img src="/2022/07/01/e8de369d/fig1.png" style="zoom:50%;"></p><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p><strong>Transformers</strong></p><p>Transformer 是2017年由googleAI 在“Attention Is All You Need”的文章中提出的一个模型，最初主要用于自然语言处理。该模型是基于注意力机制，完全不需要递归和卷积，与传统的自然语言处理常用的RNN或CNN相比，在性能上更胜一筹，同时具有更高的可并行性，并且需要的训练时间也大大减少。</p><p><strong>BERT (Bidirectional Encoder Representations from Transformers  )</strong></p><p>BERT是基于Transformers的双向编码器特征模型，首先对未标记的文本进行深度双向表征的预训练（Pre-training）,然后只需增加一个输出层就可以对预训练的BERT模型进行微调（Fine-tuning），从而为广泛的任务（如问题回答和语言推理）创建先进高效的模型，而无需对特定任务的架构进行大量的修改。</p><h3 id="课题设计"><a href="#课题设计" class="headerlink" title="课题设计"></a>课题设计</h3><p>作者在本文中提出了一个模型— X-MOL，也是基于大规模的预训练和微调的架构。首先它使用百度的高性能计算资源对11亿个分子上进行预训练，以SMILES（Simplified Molecular Input Line Entry Specification）为基础，进行分子理解和特征表示。然后使用预训练好的模型，进行不同的微调，以适应不同的下游分子分析任务，包括分子特性预测，化学反应分析，药物相互作用的预测，分子从头生成和分子优化。</p><p><img src="/2022/07/01/e8de369d/fig2.png" alt></p><p>具体来说，这里的生成性预训练（generative pre-training）策略是通过一个编码器-解码器架构来实现的。与传统的编码器-解码器架构不同，例如在神经机器翻译中使用的架构，在X-MOL中，编码器和解码器共享多层transformer的参数（图b），迫使编码和解码过程在同一语义空间中进行。在X-MOL中，输入的随机SMILES和输出的随机SMILES被同时送入模型中。同时，输出的随机SMILES被完全掩盖了。此外，只有单向的注意力操作可以在输出的随机SMILES中进行，这意味着输出随机SMILES中的每个字符只能注意自己和先前生成的字符。</p><p><img src="/2022/07/01/e8de369d/fig3.png" alt></p><h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p>在分子特性预测方面（图e），X-MOL在MoleculeNet基准测试中的分类和回归任务优于现有方法，包括各种经典的浅层学习和深度学习模型。</p><p>在化学反应生产率预测方面（图f），X-MOL的RMSE（Root Mean Square Error）也低于基准值。</p><p>在药物-药物相互作用预测方面（图g），从ROC，PR, F1,以及准确性上看，X-MOL优于另外两种方法DeepDDI和CASTER。</p><p>在分子生成任务方面（图h），X-MOL在基于分布学习的生成中，在有效性、独特性和新颖性这三个测量方面超过了现有的基于图形的分子生成方法。特别是，X-MOL在有效性方面大大超过了其他方法。在目标导向的生成中，X-MOL也优于基于图表示的模型。</p><p>在分子优化任务方面（图i），当我们将优化后的分子与原始分子进行比较时，X-MOL和冷启动模型都有助于改善分子优化过程中的目标属性，而且还显示出比VJTNN更好的性能。</p><p><img src="/2022/07/01/e8de369d/fig4.png" alt></p><p>文献链接：<a href="https://www.sciencedirect.com/science/article/pii/S2095927322000445?via%3Dihub" target="_blank" rel="noopener">https://www.sciencedirect.com/science/article/pii/S2095927322000445?via%3Dihub</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;今天介绍一篇基于transformer架构对小分子进行探究理解和多任务分析的文章。其中多任务分子分析包括分子特性预测，化学反应分析，药物相互作用的预测，分子从头生成和分子优化。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2022/07/01/e8de369d/fig1.png&quot; 
+      
+    
+    </summary>
+    
+      <category term="literature" scheme="http://yoursite.com/categories/literature/"/>
+    
+    
+      <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
+    
+      <category term="transformer" scheme="http://yoursite.com/tags/transformer/"/>
+    
+  </entry>
+  
+  <entry>
     <title>多标签分类法</title>
     <link href="http://yoursite.com/2022/05/30/5d573439.html"/>
     <id>http://yoursite.com/2022/05/30/5d573439.html</id>
     <published>2022-05-30T19:19:31.000Z</published>
-    <updated>2022-05-30T20:48:17.760Z</updated>
+    <updated>2022-05-31T07:54:53.952Z</updated>
     
     <content type="html"><![CDATA[<h3 id="多标签分类-（Multi-label-Classification）"><a href="#多标签分类-（Multi-label-Classification）" class="headerlink" title="多标签分类 （Multi-label Classification）"></a>多标签分类 （Multi-label Classification）</h3><p>二分类问题是机器学习中最常遇到的问题，有时候我们也会遇到<strong>多标签分类（Multi-label Classification）</strong>的处理。首先什么是多标签分类，举个例子，比如一部电影的分类可以同时属于“动作类”，也可以是“喜剧类”，<strong>类别标签不是相互排斥的</strong>。另一种有时会和多标签分类混淆的分类问题——<strong>多类别分类（Multi-class Classification）</strong>，<strong>类别标签是相互排斥的</strong>，如水果的分类，水果的类别有葡萄，苹果,香蕉等，但一种水果不可能即是葡萄又是苹果。</p><h3 id="多标签分类方法"><a href="#多标签分类方法" class="headerlink" title="多标签分类方法"></a>多标签分类方法</h3><p>多标签分类的处理方法常见的有以下几种：</p><p><img src="/2022/05/30/5d573439/fig-methods.png" alt></p><p>​                                                                                                                <a href="https://www.sciencedirect.com/science/article/pii/S2001037022000824" target="_blank" rel="noopener">Ref1</a></p><p>首先我们构建一个多标签示例数据（Fig. A）, χi ∈ x 是一个训练实例，</p><p><img src="/2022/05/30/5d573439/Snipaste_2022-05-30_22-42-16.png" alt></p><p>这里 <strong><em>L</em></strong> 是一个类标签的有限集，m&gt;1。</p><h4 id="1-Binary-relevance-BR"><a href="#1-Binary-relevance-BR" class="headerlink" title="1. Binary relevance (BR)"></a>1. Binary relevance (BR)</h4><p>第一种方法是Binary relevance (BR) （Fig. B），即将具有 L 个标签的数据集划分为 L 个二元分类问题。然后以二分类的方法处理。但是这种方法的一个不足是，没有考虑到多标签间的相关性。</p><h4 id="2-Classifier-Chain-CC"><a href="#2-Classifier-Chain-CC" class="headerlink" title="2. Classifier Chain (CC)"></a>2. Classifier Chain (CC)</h4><p>第二种方法是Classifier Chain (CC) （Fig. C），即将L个二元分类器链接成一个“链”，使得一个分类器的输出预测作为所有后续分类器的附加输入，克服了不考虑标签之间依赖关系的缺点，并捕获了标签之间可能的依赖关系。</p><h4 id="3-Ensemble-Classifier-Chains-ECC"><a href="#3-Ensemble-Classifier-Chains-ECC" class="headerlink" title="3. Ensemble Classifier Chains (ECC)"></a>3. Ensemble Classifier Chains (ECC)</h4><p>第三种方法Ensemble Classifier Chains (ECC)（Fig. D）是在CC基础上提出来的，考虑到了“链”的顺序，通过多数投票聚合了多个具有不同顺序的链，从而可以进一步提升分类器的性能。</p><h4 id="4-Label-Powerset-LP"><a href="#4-Label-Powerset-LP" class="headerlink" title="4. Label Powerset (LP)"></a>4. Label Powerset (LP)</h4><p>第四种方法是Label Powerset (LP)（Fig. E），将多标签问题转换为单标签多类问题，即在训练数据中找到的所有唯一标签组合上进行训练。</p><h4 id="5-Random-Label-Space-Partitioning-with-Label-Powerset（RD）"><a href="#5-Random-Label-Space-Partitioning-with-Label-Powerset（RD）" class="headerlink" title="5. Random Label Space Partitioning with Label Powerset（RD）"></a>5. Random Label Space Partitioning with Label Powerset（RD）</h4><p>第五种方法Random Label Space Partitioning with Label Powerset（RD）（Fig. F）是在LP基础上延伸得到的。其将标签空间划分为大小为 k 的分区，每个分区训练一个 LP 分类器，并通过聚合所有 LP 分类器的结果来预测数据。</p><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul><li><a href="https://www.sciencedirect.com/science/article/pii/S2001037022000824" target="_blank" rel="noopener">https://www.sciencedirect.com/science/article/pii/S2001037022000824</a></li><li><a href="https://www.jair.org/index.php/jair/article/view/12376" target="_blank" rel="noopener">https://www.jair.org/index.php/jair/article/view/12376</a></li><li><a href="https://link.springer.com/article/10.1007/s10994-011-5256-5" target="_blank" rel="noopener">https://link.springer.com/article/10.1007/s10994-011-5256-5</a></li></ul>]]></content>
     
@@ -579,29 +607,6 @@
       <category term="python" scheme="http://yoursite.com/tags/python/"/>
     
       <category term="data preprocessing" scheme="http://yoursite.com/tags/data-preprocessing/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>两个文件的异同</title>
-    <link href="http://yoursite.com/2020/06/28/13171.html"/>
-    <id>http://yoursite.com/2020/06/28/13171.html</id>
-    <published>2020-06-28T18:15:28.000Z</published>
-    <updated>2020-09-12T09:49:57.647Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="comm-diff-和-grep"><a href="#comm-diff-和-grep" class="headerlink" title="comm, diff 和 grep"></a>comm, diff 和 grep</h3><p>基于comm, diff和grep的用法总结</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">comm A B</span><br><span class="line">diff A B</span><br><span class="line">grep -f A B</span><br></pre></td></tr></table></figure><a id="more"></a><h3 id="comm"><a href="#comm" class="headerlink" title="comm"></a>comm</h3><p><strong>comm</strong>是对两个已经<strong>有序</strong>的文件进行比较，可以比较输出：仅在A中出现的、仅在B中出现的、在两个文件中都存在的</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">comm -1 A B 不显示在A文件中独有内容(显示B文件独有内容+两个文件共有)</span><br><span class="line">comm -2 A B 不显示在B文件中独有内容</span><br><span class="line">comm -3 A B 不显示同时在两个文件中都存在的内容</span><br><span class="line">comm -12 A B 显示A与B公共的部分</span><br><span class="line">comm -23 A B 显示A独有的</span><br><span class="line">comm -13 A B 显示B独有的</span><br></pre></td></tr></table></figure><p><img src="/2020/06/28/13171/fig1.png" alt="image.png" style="zoom:50%;"></p><h3 id="diff"><a href="#diff" class="headerlink" title="diff"></a><strong>diff</strong></h3><p>diff是比较两个文件之间的不同，给出使两个一致的建议，diff有前后顺序，前面的为旧文件，后面的为新文件</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">diff A B  直接显示两个文件不同，并给出修改一致的建议(主要是对旧文件的建议)</span><br><span class="line">diff -c A B  通过显示两个文件上下文，给出两个文件增减或删除信息，同时</span><br><span class="line">diff A B</span><br><span class="line">3,4c3,6</span><br><span class="line">&lt; c</span><br><span class="line">&lt; d</span><br><span class="line">---</span><br><span class="line">&gt; e</span><br><span class="line">&gt; f</span><br><span class="line">&gt; g</span><br><span class="line">&gt; h</span><br></pre></td></tr></table></figure><h3 id="grep"><a href="#grep" class="headerlink" title="grep"></a>grep</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">grep -v -f a b  从b中剔除a中有的,即b中特有的</span><br><span class="line">grep -v -f b a  从a中剔除b中有的,即a中特有的</span><br><span class="line">grep -v -f A B</span><br><span class="line">e</span><br><span class="line">f</span><br><span class="line">g</span><br><span class="line">h</span><br><span class="line">grep -v -f  B A</span><br><span class="line">c</span><br><span class="line">d</span><br></pre></td></tr></table></figure><h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><p><a href="https://www.jianshu.com/p/5ab86345b6bf" target="_blank" rel="noopener">https://www.jianshu.com/p/5ab86345b6bf</a></p><p><a href="https://blog.csdn.net/hit_hlj_sgy/article/details/20625527" target="_blank" rel="noopener">https://blog.csdn.net/hit_hlj_sgy/article/details/20625527</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;comm-diff-和-grep&quot;&gt;&lt;a href=&quot;#comm-diff-和-grep&quot; class=&quot;headerlink&quot; title=&quot;comm, diff 和 grep&quot;&gt;&lt;/a&gt;comm, diff 和 grep&lt;/h3&gt;&lt;p&gt;基于comm, diff和grep的用法总结&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;comm A B&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;diff A B&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;grep -f A B&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-    
-      <category term="shell" scheme="http://yoursite.com/tags/shell/"/>
-    
-      <category term="text processing" scheme="http://yoursite.com/tags/text-processing/"/>
     
   </entry>
   

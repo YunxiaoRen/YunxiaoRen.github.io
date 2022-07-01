@@ -295,6 +295,205 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/07/01/e8de369d.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="六六">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="生信拾光">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/07/01/e8de369d.html" itemprop="url">基于transformer的多任务分子分析 </a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-07-01T09:40:38+02:00">
+                2022-07-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/literature/" itemprop="url" rel="index">
+                    <span itemprop="name">literature</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2022/07/01/e8de369d.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2022/07/01/e8de369d.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  945
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>今天介绍一篇基于transformer架构对小分子进行探究理解和多任务分析的文章。其中多任务分子分析包括分子特性预测，化学反应分析，药物相互作用的预测，分子从头生成和分子优化。</p>
+<p><img src="/2022/07/01/e8de369d/fig1.png" style="zoom:50%;"></p>
+<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p><strong>Transformers</strong></p>
+<p>Transformer 是2017年由googleAI 在“Attention Is All You Need”的文章中提出的一个模型，最初主要用于自然语言处理。该模型是基于注意力机制，完全不需要递归和卷积，与传统的自然语言处理常用的RNN或CNN相比，在性能上更胜一筹，同时具有更高的可并行性，并且需要的训练时间也大大减少。</p>
+<p><strong>BERT (Bidirectional Encoder Representations from Transformers  )</strong></p>
+<p>BERT是基于Transformers的双向编码器特征模型，首先对未标记的文本进行深度双向表征的预训练（Pre-training）,然后只需增加一个输出层就可以对预训练的BERT模型进行微调（Fine-tuning），从而为广泛的任务（如问题回答和语言推理）创建先进高效的模型，而无需对特定任务的架构进行大量的修改。</p>
+<h3 id="课题设计"><a href="#课题设计" class="headerlink" title="课题设计"></a>课题设计</h3><p>作者在本文中提出了一个模型— X-MOL，也是基于大规模的预训练和微调的架构。首先它使用百度的高性能计算资源对11亿个分子上进行预训练，以SMILES（Simplified Molecular Input Line Entry Specification）为基础，进行分子理解和特征表示。然后使用预训练好的模型，进行不同的微调，以适应不同的下游分子分析任务，包括分子特性预测，化学反应分析，药物相互作用的预测，分子从头生成和分子优化。</p>
+<p><img src="/2022/07/01/e8de369d/fig2.png" alt></p>
+<p>具体来说，这里的生成性预训练（generative pre-training）策略是通过一个编码器-解码器架构来实现的。与传统的编码器-解码器架构不同，例如在神经机器翻译中使用的架构，在X-MOL中，编码器和解码器共享多层transformer的参数（图b），迫使编码和解码过程在同一语义空间中进行。在X-MOL中，输入的随机SMILES和输出的随机SMILES被同时送入模型中。同时，输出的随机SMILES被完全掩盖了。此外，只有单向的注意力操作可以在输出的随机SMILES中进行，这意味着输出随机SMILES中的每个字符只能注意自己和先前生成的字符。</p>
+<p><img src="/2022/07/01/e8de369d/fig3.png" alt></p>
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p>在分子特性预测方面（图e），X-MOL在MoleculeNet基准测试中的分类和回归任务优于现有方法，包括各种经典的浅层学习和深度学习模型。</p>
+<p>在化学反应生产率预测方面（图f），X-MOL的RMSE（Root Mean Square Error）也低于基准值。</p>
+<p>在药物-药物相互作用预测方面（图g），从ROC，PR, F1,以及准确性上看，X-MOL优于另外两种方法DeepDDI和CASTER。</p>
+<p>在分子生成任务方面（图h），X-MOL在基于分布学习的生成中，在有效性、独特性和新颖性这三个测量方面超过了现有的基于图形的分子生成方法。特别是，X-MOL在有效性方面大大超过了其他方法。在目标导向的生成中，X-MOL也优于基于图表示的模型。</p>
+<p>在分子优化任务方面（图i），当我们将优化后的分子与原始分子进行比较时，X-MOL和冷启动模型都有助于改善分子优化过程中的目标属性，而且还显示出比VJTNN更好的性能。</p>
+<p><img src="/2022/07/01/e8de369d/fig4.png" alt></p>
+<p>文献链接：<a href="https://www.sciencedirect.com/science/article/pii/S2095927322000445?via%3Dihub" target="_blank" rel="noopener">https://www.sciencedirect.com/science/article/pii/S2095927322000445?via%3Dihub</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/05/30/5d573439.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1081,205 +1280,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/02/03/d7478ebb.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="六六">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="生信拾光">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/02/03/d7478ebb.html" itemprop="url">220203|文献摘要</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-02-03T08:37:56+01:00">
-                2022-02-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/literature/" itemprop="url" rel="index">
-                    <span itemprop="name">literature</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2022/02/03/d7478ebb.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2022/02/03/d7478ebb.html" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  1k
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  3
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="Nat-M-L-将多组学数据与图卷积网络整合以识别新的癌症基因及其相关的分子机制"><a href="#Nat-M-L-将多组学数据与图卷积网络整合以识别新的癌症基因及其相关的分子机制" class="headerlink" title="Nat. M.L. | 将多组学数据与图卷积网络整合以识别新的癌症基因及其相关的分子机制"></a>Nat. M.L. | 将多组学数据与图卷积网络整合以识别新的癌症基因及其相关的分子机制</h2><p>题目：Integration of multiomics data with graph convolutional networks to identify new cancer genes and their associated molecular mechanisms</p>
-<p>杂志：Nature Machine Intelligence</p>
-<p>IF: 15</p>
-<p>时间：12 April 2021</p>
-<p>链接：<a href="https://www.nature.com/articles/s42256-021-00325-y" target="_blank" rel="noopener">https://www.nature.com/articles/s42256-021-00325-y</a></p>
-<h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><p>随着可用的高通量分子数据的增加，也为识别癌症基因带来了计算上的挑战。遗传和非遗传原因都有可能造成肿瘤的发生，这就需要开发预测模型来有效地整合不同的数据模式，同时具有可解释性。我们介绍了<strong>EMOGI</strong>，这是一种基于图卷积网络的可解释的机器学习方法，其通过结合多组学的泛癌症数据来预测癌症基因，如突变、拷贝数变化、DNA甲基化和基因表达，蛋白质-蛋白质相互作用(PPI) 网络等。在不同的PPI网络和数据集中，EMOGI总体来说比其他方法更准确。我们使用分层相关性传播，根据基因的分类是由相互作用组还是由任何一个全向性水平驱动，对基因进行分层，并确定PPI网络的重要模块。我们提出了165个新的癌症基因，这些基因不一定有反复的改变，但与已知的癌症基因有相互作用。而且我们发现，这些基因与功能缺失筛查中的基本基因相对应。我们相信，我们的方法可以为精准肿瘤学开辟新的途径，并可应用于预测癌症的生物标志物。</p>
-<p><img src="/2022/02/03/d7478ebb/image-20220203092107638.png" alt="image-20220203092107638" style="zoom:50%;"></p>
-<blockquote>
-<p>EMOGI框架的示意图。<strong>a, 数据收集和串联</strong>。计算16个TCGA肿瘤类型的所有基因的平均突变率、CNAs、DNA甲基化和基因表达变化，并在一个早期整合方案中进行连接。然后将得到的特征矩阵与PPI网络和一小部分高置信度的癌症/非癌症基因相结合，形成一个网络，其中节点对应于基因，边对应于它们之间已知的相互作用。每个节点/基因都有一个多维的特征向量（b，输入层）。</p>
-<p><strong>b</strong>，在EMOGI模型训练期间，特征通过连续的图卷积层进行转化（见方法），考虑到越来越大的邻域。输出层根据基因的输出概率将其分类为预测的癌症基因和非癌症基因。</p>
-<p><strong>c</strong>, 使用LRP（见方法）提取每个基因分类的最重要的特征（包括不同癌症类型的全能性水平和相互作用伙伴）。随后根据基因的特征贡献进行聚类，每个基因的相互作用贡献被用来检测癌症中具有重要基因-基因联系的模块。</p>
-</blockquote>
-<p><em></em></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2022/02/03/d7478ebb.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1330,7 +1330,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">124</span>
+                  <span class="site-state-item-count">125</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1418,7 +1418,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">78.8k</span>
+    <span title="Site words total count">79.8k</span>
   
 </div>
 
@@ -1440,7 +1440,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共78.8k字</span>
+  <span class="post-count">博客全站共79.8k字</span>
 </div>
 
 
