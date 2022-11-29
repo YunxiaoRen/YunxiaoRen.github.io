@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="文献摘要,Federated Learning,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="生信拾光" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="1. 基因组学和医学研究中的数据主权题目：Data sovereignty in genomics and medical research 杂志：Nature Machine Intelligence IF: 15 时间：17 November 2022 链接：https://www.nature.com/articles/s42256-022-00578-1 摘要人工智能有望为医疗保健和研究带">
+<meta name="keywords" content="文献摘要,Federated Learning">
+<meta property="og:type" content="article">
+<meta property="og:title" content="221129|NMI|文献摘要">
+<meta property="og:url" content="http://yoursite.com/2022/11/29/cdba8009.html">
+<meta property="og:site_name" content="生信拾光">
+<meta property="og:description" content="1. 基因组学和医学研究中的数据主权题目：Data sovereignty in genomics and medical research 杂志：Nature Machine Intelligence IF: 15 时间：17 November 2022 链接：https://www.nature.com/articles/s42256-022-00578-1 摘要人工智能有望为医疗保健和研究带">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2022/11/29/cdba8009/image-20221129215042532.png">
+<meta property="og:image" content="http://yoursite.com/2022/11/29/cdba8009/fig2.png">
+<meta property="og:image" content="http://yoursite.com/2022/11/29/cdba8009/fig3.png">
+<meta property="og:image" content="http://yoursite.com/2022/11/29/cdba8009/fig4.png">
+<meta property="og:updated_time" content="2022-11-29T21:12:55.458Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="221129|NMI|文献摘要">
+<meta name="twitter:description" content="1. 基因组学和医学研究中的数据主权题目：Data sovereignty in genomics and medical research 杂志：Nature Machine Intelligence IF: 15 时间：17 November 2022 链接：https://www.nature.com/articles/s42256-022-00578-1 摘要人工智能有望为医疗保健和研究带">
+<meta name="twitter:image" content="http://yoursite.com/2022/11/29/cdba8009/image-20221129215042532.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '六六'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2022/11/29/cdba8009.html">
+
+
+
+
+
+  <title>221129|NMI|文献摘要 | 生信拾光</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">生信拾光</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/11/29/cdba8009.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="六六">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="生信拾光">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">221129|NMI|文献摘要</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-11-29T21:19:27+01:00">
+                2022-11-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/literature/" itemprop="url" rel="index">
+                    <span itemprop="name">literature</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2022/11/29/cdba8009.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2022/11/29/cdba8009.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.7k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  6
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="1-基因组学和医学研究中的数据主权"><a href="#1-基因组学和医学研究中的数据主权" class="headerlink" title="1. 基因组学和医学研究中的数据主权"></a>1. 基因组学和医学研究中的数据主权</h2><p>题目：Data sovereignty in genomics and medical research</p>
+<p>杂志：Nature Machine Intelligence</p>
+<p>IF: 15</p>
+<p>时间：17 November 2022</p>
+<p>链接：<a href="https://www.nature.com/articles/s42256-022-00578-1" target="_blank" rel="noopener">https://www.nature.com/articles/s42256-022-00578-1</a></p>
+<h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><p>人工智能有望为医疗保健和研究带来许多好处，但是不同群体，不同国家越来越重视医学数据的隐私性和安全性，数据的共享面临着诸多挑战。为了改变这种情况，需要满足数据提供者能够控制他们自己的数据以及如何分享这些数据。目前的解决的方案有<strong>联邦学习（Federated learning）</strong>，以及2021年新提出的<strong>蜂群学习（swarm learning）</strong>。</p>
+<a id="more"></a>
+<h2 id="2-野外多语言的视觉语音识别"><a href="#2-野外多语言的视觉语音识别" class="headerlink" title="2. 野外多语言的视觉语音识别"></a>2. 野外多语言的视觉语音识别</h2><p>题目：Visual speech recognition for multiple languages in the wild</p>
+<p>杂志：Nature Machine Intelligence</p>
+<p>IF: 15</p>
+<p>时间：24 October 2022</p>
+<p>链接：<a href="https://www.nature.com/articles/s42256-022-00550-z" target="_blank" rel="noopener">https://www.nature.com/articles/s42256-022-00550-z</a></p>
+<h3 id="摘要-1"><a href="#摘要-1" class="headerlink" title="摘要"></a>摘要</h3><p>视觉语音识别（Visual speech recognition, VSR）的目的是根据嘴唇的运动来识别语音的内容，而不依赖音频流。深度学习的进展和大型视听数据集的可用性导致了比以往任何时候都更准确和稳健的VSR模型的发展。然而，这些进步通常是由于更大的训练集，而不是模型设计。在这里，我们证明设计更好的模型与使用更大的训练集同样重要。<strong>我们建议在VSR模型中增加基于预测的辅助任务，并强调超参数优化和适当的数据增强的重要性。</strong>我们表明，这样的模型适用于不同的语言，并在很大程度上超过了以前所有在公开的数据集上训练的方法。它甚至超过了在非公开数据集上训练的模型，这些数据集的数据量最多可以达到21倍。此外，我们还表明，使用额外的训练数据，甚至是其他语言的数据或自动生成的转录，都能带来进一步的改进。</p>
+<h2 id="3-用于CITE-seq和单细胞RNA-seq数据整合与细胞表面蛋白预测和归纳的多用深度学习方法"><a href="#3-用于CITE-seq和单细胞RNA-seq数据整合与细胞表面蛋白预测和归纳的多用深度学习方法" class="headerlink" title="3. 用于CITE-seq和单细胞RNA-seq数据整合与细胞表面蛋白预测和归纳的多用深度学习方法"></a>3. 用于CITE-seq和单细胞RNA-seq数据整合与细胞表面蛋白预测和归纳的多用深度学习方法</h2><p>题目：A multi-use deep learning method for CITE-seq and single-cell RNA-seq data integration with cell surface protein prediction and imputation</p>
+<p>杂志：Nature Machine Intelligence</p>
+<p>IF: 15</p>
+<p>时间：27 October 2022</p>
+<p>链接：<a href="https://www.nature.com/articles/s42256-022-00545-w" target="_blank" rel="noopener">https://www.nature.com/articles/s42256-022-00545-w</a></p>
+<h3 id="摘要-2"><a href="#摘要-2" class="headerlink" title="摘要"></a>摘要</h3><p>CITE-seq是一种单细胞多组学技术，可同时测量单细胞中的RNA和蛋白质表达，已被广泛应用于生物医学研究，特别是免疫相关疾病和其他疾病，如流感和COVID-19。尽管CITE-seq激增，但产生这种数据的成本仍然很高。虽然数据整合可以增加信息含量，但这也带来了计算上的挑战。首先，结合多个数据集容易产生批量效应，需要加以解决。第二，很难结合多个CITE-seq数据集，因为不同数据集的蛋白质面板可能只是部分重叠。整合多个CITE-seq和单细胞RNA测序（scRNA-seq）数据集很重要，因为这样可以利用尽可能多的数据来发现细胞群的异质性。为了克服这些挑战，我们提出了<strong>sciPENN，这是一种多用途的深度学习方法，支持CITE-seq和scRNA-seq数据整合、scRNA-seq的蛋白质表达预测、CITE-seq的蛋白质表达推算、预测和推算的不确定性量化，以及从CITE-seq到scRNA-seq的细胞类型标签转移</strong>。跨越多个数据集的综合评估表明，sciPENN优于目前其他最先进的方法。</p>
+<p><img src="/2022/11/29/cdba8009/image-20221129215042532.png" alt></p>
+<h2 id="4-通过自适应图神经网络预测未见过的抗体的中和能力"><a href="#4-通过自适应图神经网络预测未见过的抗体的中和能力" class="headerlink" title="4. 通过自适应图神经网络预测未见过的抗体的中和能力"></a>4. 通过自适应图神经网络预测未见过的抗体的中和能力</h2><p>题目：Predicting unseen antibodies’ neutralizability via adaptive graph neural networks</p>
+<p>杂志：Nature Machine Intelligence</p>
+<p>IF: 15</p>
+<p>时间：07 November 2022</p>
+<p>链接：<a href="https://www.nature.com/articles/s42256-022-00553-w" target="_blank" rel="noopener">https://www.nature.com/articles/s42256-022-00553-w</a></p>
+<h3 id="摘要-3"><a href="#摘要-3" class="headerlink" title="摘要"></a>摘要</h3><p>大多数天然和合成抗体是 “看不见的”。也就是说，要证明它们与任何抗原的中和作用需要费力和昂贵的湿式实验室实验。现有的从已知的抗体-抗原相互作用中学习抗体表征的方法，由于缺乏相互作用的实例，不适合于未见过的抗体。本文提出的<strong>DeepAAI方法通过构建抗体和抗原之间的两个适应性关系图，并在未见过的和见过的抗体表征之间应用拉普拉斯平滑法来学习未见过的抗体表征。DeepAAI不是使用静态的蛋白质描述符，而是 “动态地 “学习表征和关系图，并针对中和预测和50%抑制浓度估计的下游任务进行优化。</strong>DeepAAI的性能在人类免疫缺陷病毒、严重急性呼吸道综合征冠状病毒2、流感和登革热上得到了证明。此外，关系图具有丰富的可解释性。抗体关系图意味着抗体中和反应的相似性，而抗原关系图表明病毒不同变体之间的关系。因此，我们建议对这些病毒的新变体采用可能的广谱抗体。<img src="/2022/11/29/cdba8009/fig2.png" alt></p>
+<h2 id="5-利用自我监督的图像表示学习框架准确预测分子特性和药物目标"><a href="#5-利用自我监督的图像表示学习框架准确预测分子特性和药物目标" class="headerlink" title="5. 利用自我监督的图像表示学习框架准确预测分子特性和药物目标"></a>5. 利用自我监督的图像表示学习框架准确预测分子特性和药物目标</h2><p>题目：Accurate prediction of molecular properties and drug targets using a self-supervised image representation learning framework</p>
+<p>杂志：Nature Machine Intelligence</p>
+<p>IF: 15</p>
+<p>时间：17 November 2022</p>
+<p>链接：<a href="https://www.nature.com/articles/s42256-022-00557-6" target="_blank" rel="noopener">https://www.nature.com/articles/s42256-022-00557-6</a></p>
+<h3 id="摘要-4"><a href="#摘要-4" class="headerlink" title="摘要"></a>摘要</h3><p>一种药物的临床疗效和安全性是由其在人体中的分子特性和目标决定的。然而，在人类甚至动物模型中对所有化合物进行全蛋白质组评估是具有挑战性的。在这项研究中，我们提出了一个无监督预训练的深度学习框架，名为ImageMol，在1000万个无标签的类药物、生物活性分子上进行预训练，以预测候选化合物的分子目标。ImageMol框架旨在根据像素中分子的局部和整体结构特征，从无标记的分子图像中预训练化学表征。我们证明了ImageMol在评估51个基准数据集的分子特性（即药物的代谢、脑穿透和毒性）和分子靶点概况（即β-分泌酶和激酶）方面的高性能。ImageMol在国家转化科学促进中心的13个高通量实验数据集中显示了识别抗SARS-CoV-2分子的高准确度。通过ImageMol，我们确定了可能用于治疗COVID-19的候选临床3C类蛋白酶抑制剂。</p>
+<p><img src="/2022/11/29/cdba8009/fig3.png" alt></p>
+<p><img src="/2022/11/29/cdba8009/fig4.png" alt></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/文献摘要/" rel="tag"># 文献摘要</a>
+          
+            <a href="/tags/Federated-Learning/" rel="tag"># Federated Learning</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2022/07/01/e8de369d.html" rel="next" title="基于transformer的多任务分子分析 ">
+                <i class="fa fa-chevron-left"></i> 基于transformer的多任务分子分析 
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">六六</p>
+              <p class="site-description motion-element" itemprop="description">Seize the day! Collect the moment! Share the memory!</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">126</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">52</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-基因组学和医学研究中的数据主权"><span class="nav-number">1.</span> <span class="nav-text">1. 基因组学和医学研究中的数据主权</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#摘要"><span class="nav-number">1.1.</span> <span class="nav-text">摘要</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-野外多语言的视觉语音识别"><span class="nav-number">2.</span> <span class="nav-text">2. 野外多语言的视觉语音识别</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#摘要-1"><span class="nav-number">2.1.</span> <span class="nav-text">摘要</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-用于CITE-seq和单细胞RNA-seq数据整合与细胞表面蛋白预测和归纳的多用深度学习方法"><span class="nav-number">3.</span> <span class="nav-text">3. 用于CITE-seq和单细胞RNA-seq数据整合与细胞表面蛋白预测和归纳的多用深度学习方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#摘要-2"><span class="nav-number">3.1.</span> <span class="nav-text">摘要</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-通过自适应图神经网络预测未见过的抗体的中和能力"><span class="nav-number">4.</span> <span class="nav-text">4. 通过自适应图神经网络预测未见过的抗体的中和能力</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#摘要-3"><span class="nav-number">4.1.</span> <span class="nav-text">摘要</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-利用自我监督的图像表示学习框架准确预测分子特性和药物目标"><span class="nav-number">5.</span> <span class="nav-text">5. 利用自我监督的图像表示学习框架准确预测分子特性和药物目标</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#摘要-4"><span class="nav-number">5.1.</span> <span class="nav-text">摘要</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">六六</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">81.4k</span>
+  
+</div>
+
+<!--
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+--> 
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共81.4k字</span>
+</div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'liuliu66',
+        appKey: 'LLryx0379',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
