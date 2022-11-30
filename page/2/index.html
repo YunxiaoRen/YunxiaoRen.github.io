@@ -295,6 +295,202 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/03/01/b21f85bf.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="六六">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="生信拾光">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/03/01/b21f85bf.html" itemprop="url">如何处理机器学习中数据不平衡的分类问题</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-03-01T22:43:26+01:00">
+                2022-03-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Data-Sciences/" itemprop="url" rel="index">
+                    <span itemprop="name">Data Sciences</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2022/03/01/b21f85bf.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2022/03/01/b21f85bf.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.1k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  4
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="数据不平衡的分类问题"><a href="#数据不平衡的分类问题" class="headerlink" title="数据不平衡的分类问题"></a>数据不平衡的分类问题</h2><p>机器学习中数据不平衡的分类问题很常见，如医学中的疾病诊断，患病的数据比例通常小于正常的；还有欺诈识别，垃圾邮件检测，异常值的检测等。而极端的数据不平衡通常会影响模型预测的准确性和泛化性能。</p>
+<p>这里介绍几种处理不平衡数据的计算方法：</p>
+<ul>
+<li>Oversample and downsample</li>
+<li>Generating synthetic data, eg. SMOTE, ADASYN</li>
+<li>GAN</li>
+</ul>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><h3 id="1-oversample-and-downsample"><a href="#1-oversample-and-downsample" class="headerlink" title="1. oversample and downsample"></a>1. oversample and downsample</h3><p>一种简单直接的方法是随机重采样 (randomly resample)，包括oversample和downsample。Oversample 即对少数组别重复取样，downsample 即从多数类中删除示例。但是，同时要注意Oversample可能导致某些模型过度拟合。downsample可能导致丢失对模型非常宝贵的信息。</p>
+<p><img src="/2022/03/01/b21f85bf/image-20220301223756926.png" alt="image-20220301223756926"></p>
+<p>可以利用python中<code>imbalanced-learn package</code>实现，如</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2022/03/01/b21f85bf.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/02/04/a30d0463.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1060,203 +1256,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/10/dfeeb526.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="六六">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="生信拾光">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/01/10/dfeeb526.html" itemprop="url">乳腺癌治疗反应的多组学机器学习预测器</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-01-10T23:29:43+01:00">
-                2022-01-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/literature/" itemprop="url" rel="index">
-                    <span itemprop="name">literature</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2022/01/10/dfeeb526.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2022/01/10/dfeeb526.html" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  474
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>题目：Multi-omic machine learning predictor of breast cancer therapy response</p>
-<p>杂志：Nature</p>
-<p>IF: 49.96</p>
-<p>时间：7 Dec. 2021</p>
-<p>链接：<a href="https://www.nature.com/articles/s41586-021-04278-5" target="_blank" rel="noopener">https://www.nature.com/articles/s41586-021-04278-5</a></p>
-<p>代码：</p>
-<ul>
-<li><a href="https://github.com/micrisor/NAT-ML" target="_blank" rel="noopener">https://github.com/micrisor/NAT-ML</a></li>
-<li><a href="https://github.com/cclab-brca/neoadjuvant-therapy-response-predictor" target="_blank" rel="noopener">https://github.com/cclab-brca/neoadjuvant-therapy-response-predictor</a></li>
-</ul>
-<h3 id="一句话概括"><a href="#一句话概括" class="headerlink" title="一句话概括"></a>一句话概括</h3><p>使用逻辑回归，SVM和随机森林的组合机器学习方法，结合临床数据、数字病理学数据、基因组和转录组学数据，对乳腺癌治疗的反应进行预测</p>
-<p>###摘要</p>
-<p>乳腺癌是由恶性细胞和肿瘤微环境组成的复杂生态系统。这些肿瘤生态系统的组成和其中的相互作用有助于细胞毒性治疗反应。构建细胞毒性治疗反应的预测器还有待研究。这篇文章收集了<strong>168名</strong>患者在手术前接受化疗+/-HER2靶向治疗的乳腺肿瘤治疗前活检的<strong>临床、数字病理学、基因组和转录组资料</strong>。然后将手术时的病理终点（完全反应或残余疾病）与这些诊断性活检的多组学特征相关联。他们发现，对治疗的反应是由预处理的肿瘤生态系统调节的，其多组学景观可以用机器学习整合到预测模型中。治疗后残余疾病的程度与治疗前的特征单调相关，包括<strong>肿瘤突变和拷贝数变异、肿瘤增殖、免疫浸润和T细胞功能紊乱和排斥</strong>。将这些特征结合到一个多组学机器学习模型中，可预测外部验证队列（75名患者）的病理完全反应，AUC为0.87。总之，对治疗的反应是由通过数据整合和机器学习捕获的整个肿瘤生态系统的基线特征决定的。这种方法可用于开发其他癌症的预测器。</p>
-<p><img src="/2022/01/10/dfeeb526/image-20220111000724850.png" alt="image-20220111000724850"></p>
-<p><img src="/2022/01/10/dfeeb526/image-20220111000748893.png" alt="image-20220111000748893"></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1307,7 +1306,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">126</span>
+                  <span class="site-state-item-count">127</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1395,7 +1394,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">81.4k</span>
+    <span title="Site words total count">82.5k</span>
   
 </div>
 
@@ -1417,7 +1416,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共81.4k字</span>
+  <span class="post-count">博客全站共82.5k字</span>
 </div>
 
 

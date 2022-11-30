@@ -295,6 +295,200 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/11/30/4f513be7.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="六六">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="生信拾光">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/11/30/4f513be7.html" itemprop="url">221130 | NCs | 文献摘要</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-11-30T19:11:52+01:00">
+                2022-11-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/literature/" itemprop="url" rel="index">
+                    <span itemprop="name">literature</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2022/11/30/4f513be7.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2022/11/30/4f513be7.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.1k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="1-通过知识提炼实现沟通效率的联邦学习"><a href="#1-通过知识提炼实现沟通效率的联邦学习" class="headerlink" title="1. 通过知识提炼实现沟通效率的联邦学习"></a>1. 通过知识提炼实现沟通效率的联邦学习</h2><p>题目：Communication-efficient federated learning via knowledge distillation</p>
+<p>杂志：Nature Communications</p>
+<p>IF: 14.92</p>
+<p>时间：19 April 2022</p>
+<p>链接：<a href="https://www.nature.com/articles/s41467-022-29763-x" target="_blank" rel="noopener">https://www.nature.com/articles/s41467-022-29763-x</a></p>
+<h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><p>联邦学习（Federated learning）是一种保护隐私的机器学习技术，从分散的数据中训练人工智能模型，它通过在模型学习的每个迭代中交流局部模型更新而不是原始数据，实现对隐私数据的利用。然而，如果模型更新包含众多参数，那么模型更新可能会非常大，而且模型训练需要很多轮通信。联邦学习中巨大的通信成本导致了客户端的沉重开销和高环境负担。在这里，我们提出了一种名为FedKD的联邦学习学习方法，该方法基于<strong>自适应相互知识提炼和动态梯度压缩技术（based on adaptive mutual knowledge distillation and dynamic gradient compression techniques）</strong>，既节省通信又有效。FedKD在三个需要保护隐私的不同场景中得到了验证，表明它可以最大限度地减少94.89%的通信成本，并取得与集中式模型学习相竞争的结果。FedKD为在许多场景中有效地部署保护隐私的智能系统提供了可能性，如智能医疗和个性化。</p>
+<p>该方法主要集中在跨语境的联合学习上，在这种情况下，客户端拥有比个人设备相对更丰富的计算资源和更大的本地数据量。在FedKD中，客户机和服务器之间不直接交流大模型，而是有一个小模型（mentee）和一个大模型（mentor）相互学习和提炼知识，其中只有mentee模型被不同的客户机共享并协同学习，这可以有效降低通信成本。这样一来，不同的客户拥有不同的本地导师模型，可以更好地适应本地数据集的特点，实现个性化的模型学习。受人类学习中的Protégé效应29（”我们一边教，一边学”，Seneca the Younger）的启发，我们提出了一种自适应的相互提炼方法，使本地导师和被导师模型能够相互学习从他们预测的软标签和中间结果中提炼出来的知识，其中提炼强度由他们预测的正确性自适应控制。此外，为了进一步降低交换被指导者模型更新时的通信成本，我们引入了一种基于奇异值分解（SVD）的动态梯度近似方法，以动态精度压缩通信的梯度，这可以在通信成本和模型精度之间实现一个有希望的权衡。</p>
+<p><img src="/2022/11/30/4f513be7/fig1.png" alt></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2022/11/30/4f513be7.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/11/29/cdba8009.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1084,202 +1278,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/03/01/b21f85bf.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="六六">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="生信拾光">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/03/01/b21f85bf.html" itemprop="url">如何处理机器学习中数据不平衡的分类问题</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-03-01T22:43:26+01:00">
-                2022-03-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Data-Sciences/" itemprop="url" rel="index">
-                    <span itemprop="name">Data Sciences</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2022/03/01/b21f85bf.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2022/03/01/b21f85bf.html" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  1.1k
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  4
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="数据不平衡的分类问题"><a href="#数据不平衡的分类问题" class="headerlink" title="数据不平衡的分类问题"></a>数据不平衡的分类问题</h2><p>机器学习中数据不平衡的分类问题很常见，如医学中的疾病诊断，患病的数据比例通常小于正常的；还有欺诈识别，垃圾邮件检测，异常值的检测等。而极端的数据不平衡通常会影响模型预测的准确性和泛化性能。</p>
-<p>这里介绍几种处理不平衡数据的计算方法：</p>
-<ul>
-<li>Oversample and downsample</li>
-<li>Generating synthetic data, eg. SMOTE, ADASYN</li>
-<li>GAN</li>
-</ul>
-<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><h3 id="1-oversample-and-downsample"><a href="#1-oversample-and-downsample" class="headerlink" title="1. oversample and downsample"></a>1. oversample and downsample</h3><p>一种简单直接的方法是随机重采样 (randomly resample)，包括oversample和downsample。Oversample 即对少数组别重复取样，downsample 即从多数类中删除示例。但是，同时要注意Oversample可能导致某些模型过度拟合。downsample可能导致丢失对模型非常宝贵的信息。</p>
-<p><img src="/2022/03/01/b21f85bf/image-20220301223756926.png" alt="image-20220301223756926"></p>
-<p>可以利用python中<code>imbalanced-learn package</code>实现，如</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2022/03/01/b21f85bf.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1330,7 +1328,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">126</span>
+                  <span class="site-state-item-count">127</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1418,7 +1416,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">81.4k</span>
+    <span title="Site words total count">82.5k</span>
   
 </div>
 
@@ -1440,7 +1438,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共81.4k字</span>
+  <span class="post-count">博客全站共82.5k字</span>
 </div>
 
 

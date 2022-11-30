@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2022-11-29T21:12:55.458Z</updated>
+  <updated>2022-11-30T19:04:09.578Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,42 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>221130 | NCs | 文献摘要</title>
+    <link href="http://yoursite.com/2022/11/30/4f513be7.html"/>
+    <id>http://yoursite.com/2022/11/30/4f513be7.html</id>
+    <published>2022-11-30T18:11:52.935Z</published>
+    <updated>2022-11-30T19:04:09.578Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1-通过知识提炼实现沟通效率的联邦学习"><a href="#1-通过知识提炼实现沟通效率的联邦学习" class="headerlink" title="1. 通过知识提炼实现沟通效率的联邦学习"></a>1. 通过知识提炼实现沟通效率的联邦学习</h2><p>题目：Communication-efficient federated learning via knowledge distillation</p><p>杂志：Nature Communications</p><p>IF: 14.92</p><p>时间：19 April 2022</p><p>链接：<a href="https://www.nature.com/articles/s41467-022-29763-x" target="_blank" rel="noopener">https://www.nature.com/articles/s41467-022-29763-x</a></p><h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><p>联邦学习（Federated learning）是一种保护隐私的机器学习技术，从分散的数据中训练人工智能模型，它通过在模型学习的每个迭代中交流局部模型更新而不是原始数据，实现对隐私数据的利用。然而，如果模型更新包含众多参数，那么模型更新可能会非常大，而且模型训练需要很多轮通信。联邦学习中巨大的通信成本导致了客户端的沉重开销和高环境负担。在这里，我们提出了一种名为FedKD的联邦学习学习方法，该方法基于<strong>自适应相互知识提炼和动态梯度压缩技术（based on adaptive mutual knowledge distillation and dynamic gradient compression techniques）</strong>，既节省通信又有效。FedKD在三个需要保护隐私的不同场景中得到了验证，表明它可以最大限度地减少94.89%的通信成本，并取得与集中式模型学习相竞争的结果。FedKD为在许多场景中有效地部署保护隐私的智能系统提供了可能性，如智能医疗和个性化。</p><p>该方法主要集中在跨语境的联合学习上，在这种情况下，客户端拥有比个人设备相对更丰富的计算资源和更大的本地数据量。在FedKD中，客户机和服务器之间不直接交流大模型，而是有一个小模型（mentee）和一个大模型（mentor）相互学习和提炼知识，其中只有mentee模型被不同的客户机共享并协同学习，这可以有效降低通信成本。这样一来，不同的客户拥有不同的本地导师模型，可以更好地适应本地数据集的特点，实现个性化的模型学习。受人类学习中的Protégé效应29（”我们一边教，一边学”，Seneca the Younger）的启发，我们提出了一种自适应的相互提炼方法，使本地导师和被导师模型能够相互学习从他们预测的软标签和中间结果中提炼出来的知识，其中提炼强度由他们预测的正确性自适应控制。此外，为了进一步降低交换被指导者模型更新时的通信成本，我们引入了一种基于奇异值分解（SVD）的动态梯度近似方法，以动态精度压缩通信的梯度，这可以在通信成本和模型精度之间实现一个有希望的权衡。</p><p><img src="/2022/11/30/4f513be7/fig1.png" alt></p><a id="more"></a><h2 id="2-用于保护隐私的个人化的联合图神经网络框架"><a href="#2-用于保护隐私的个人化的联合图神经网络框架" class="headerlink" title="2. 用于保护隐私的个人化的联合图神经网络框架"></a>2. 用于保护隐私的个人化的联合图神经网络框架</h2><p>题目：A federated graph neural network framework for privacy-preserving personalization</p><p>杂志：Nature Communications</p><p>IF: 14.92</p><p>时间：02 June 2022</p><p>链接：<a href="https://www.nature.com/articles/s41467-022-30714-9" target="_blank" rel="noopener">https://www.nature.com/articles/s41467-022-30714-9</a></p><h3 id="摘要-1"><a href="#摘要-1" class="headerlink" title="摘要"></a>摘要</h3><p>图神经网络（Graph neural network, GNN）能有效地模拟高阶互动，并已被广泛用于各种个性化应用，如推荐。然而，主流的个性化方法依赖于全局图上的集中式GNN学习，由于用户数据的隐私敏感性质，这存在相当大的隐私风险。在这里，我们提出了一个名为FedPerGNN的联合GNN框架，用于有效和保护隐私的个性化。通过一个保护隐私的模型更新方法，我们可以根据从本地数据推断出的分散的图来协作训练GNN模型。为了进一步利用本地互动以外的图信息，我们引入了一个保护隐私的图扩展协议，在保护隐私的前提下纳入高阶信息。在不同场景下对六个数据集进行的个性化实验结果表明，在良好的隐私保护下，FedPerGNN比最先进的联合个性化方法的误差低4.0%~9.6%。FedPerGNN为以保护隐私的方式挖掘分散的图数据，实现负责任的智能个性化提供了一个很好的方向。</p><p><img src="/2022/11/30/4f513be7/fig2.png" alt></p><p><img src="/2022/11/30/4f513be7/fig3.png" alt></p><p>这两篇文章来自于同一作者，作者的github链接：<a href="https://github.com/wuch15" target="_blank" rel="noopener">https://github.com/wuch15</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;1-通过知识提炼实现沟通效率的联邦学习&quot;&gt;&lt;a href=&quot;#1-通过知识提炼实现沟通效率的联邦学习&quot; class=&quot;headerlink&quot; title=&quot;1. 通过知识提炼实现沟通效率的联邦学习&quot;&gt;&lt;/a&gt;1. 通过知识提炼实现沟通效率的联邦学习&lt;/h2&gt;&lt;p&gt;题目：Communication-efficient federated learning via knowledge distillation&lt;/p&gt;
+&lt;p&gt;杂志：Nature Communications&lt;/p&gt;
+&lt;p&gt;IF: 14.92&lt;/p&gt;
+&lt;p&gt;时间：19 April 2022&lt;/p&gt;
+&lt;p&gt;链接：&lt;a href=&quot;https://www.nature.com/articles/s41467-022-29763-x&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.nature.com/articles/s41467-022-29763-x&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h3&gt;&lt;p&gt;联邦学习（Federated learning）是一种保护隐私的机器学习技术，从分散的数据中训练人工智能模型，它通过在模型学习的每个迭代中交流局部模型更新而不是原始数据，实现对隐私数据的利用。然而，如果模型更新包含众多参数，那么模型更新可能会非常大，而且模型训练需要很多轮通信。联邦学习中巨大的通信成本导致了客户端的沉重开销和高环境负担。在这里，我们提出了一种名为FedKD的联邦学习学习方法，该方法基于&lt;strong&gt;自适应相互知识提炼和动态梯度压缩技术（based on adaptive mutual knowledge distillation and dynamic gradient compression techniques）&lt;/strong&gt;，既节省通信又有效。FedKD在三个需要保护隐私的不同场景中得到了验证，表明它可以最大限度地减少94.89%的通信成本，并取得与集中式模型学习相竞争的结果。FedKD为在许多场景中有效地部署保护隐私的智能系统提供了可能性，如智能医疗和个性化。&lt;/p&gt;
+&lt;p&gt;该方法主要集中在跨语境的联合学习上，在这种情况下，客户端拥有比个人设备相对更丰富的计算资源和更大的本地数据量。在FedKD中，客户机和服务器之间不直接交流大模型，而是有一个小模型（mentee）和一个大模型（mentor）相互学习和提炼知识，其中只有mentee模型被不同的客户机共享并协同学习，这可以有效降低通信成本。这样一来，不同的客户拥有不同的本地导师模型，可以更好地适应本地数据集的特点，实现个性化的模型学习。受人类学习中的Protégé效应29（”我们一边教，一边学”，Seneca the Younger）的启发，我们提出了一种自适应的相互提炼方法，使本地导师和被导师模型能够相互学习从他们预测的软标签和中间结果中提炼出来的知识，其中提炼强度由他们预测的正确性自适应控制。此外，为了进一步降低交换被指导者模型更新时的通信成本，我们引入了一种基于奇异值分解（SVD）的动态梯度近似方法，以动态精度压缩通信的梯度，这可以在通信成本和模型精度之间实现一个有希望的权衡。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2022/11/30/4f513be7/fig1.png&quot; alt&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="literature" scheme="http://yoursite.com/categories/literature/"/>
+    
+    
+      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
+    
+      <category term="federated learning" scheme="http://yoursite.com/tags/federated-learning/"/>
+    
+  </entry>
+  
+  <entry>
     <title>221129|NMI|文献摘要</title>
     <link href="http://yoursite.com/2022/11/29/cdba8009.html"/>
     <id>http://yoursite.com/2022/11/29/cdba8009.html</id>
     <published>2022-11-29T20:19:27.000Z</published>
-    <updated>2022-11-29T21:12:55.458Z</updated>
+    <updated>2022-11-29T21:13:09.051Z</updated>
     
     <content type="html"><![CDATA[<h2 id="1-基因组学和医学研究中的数据主权"><a href="#1-基因组学和医学研究中的数据主权" class="headerlink" title="1. 基因组学和医学研究中的数据主权"></a>1. 基因组学和医学研究中的数据主权</h2><p>题目：Data sovereignty in genomics and medical research</p><p>杂志：Nature Machine Intelligence</p><p>IF: 15</p><p>时间：17 November 2022</p><p>链接：<a href="https://www.nature.com/articles/s42256-022-00578-1" target="_blank" rel="noopener">https://www.nature.com/articles/s42256-022-00578-1</a></p><h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><p>人工智能有望为医疗保健和研究带来许多好处，但是不同群体，不同国家越来越重视医学数据的隐私性和安全性，数据的共享面临着诸多挑战。为了改变这种情况，需要满足数据提供者能够控制他们自己的数据以及如何分享这些数据。目前的解决的方案有<strong>联邦学习（Federated learning）</strong>，以及2021年新提出的<strong>蜂群学习（swarm learning）</strong>。</p><a id="more"></a><h2 id="2-野外多语言的视觉语音识别"><a href="#2-野外多语言的视觉语音识别" class="headerlink" title="2. 野外多语言的视觉语音识别"></a>2. 野外多语言的视觉语音识别</h2><p>题目：Visual speech recognition for multiple languages in the wild</p><p>杂志：Nature Machine Intelligence</p><p>IF: 15</p><p>时间：24 October 2022</p><p>链接：<a href="https://www.nature.com/articles/s42256-022-00550-z" target="_blank" rel="noopener">https://www.nature.com/articles/s42256-022-00550-z</a></p><h3 id="摘要-1"><a href="#摘要-1" class="headerlink" title="摘要"></a>摘要</h3><p>视觉语音识别（Visual speech recognition, VSR）的目的是根据嘴唇的运动来识别语音的内容，而不依赖音频流。深度学习的进展和大型视听数据集的可用性导致了比以往任何时候都更准确和稳健的VSR模型的发展。然而，这些进步通常是由于更大的训练集，而不是模型设计。在这里，我们证明设计更好的模型与使用更大的训练集同样重要。<strong>我们建议在VSR模型中增加基于预测的辅助任务，并强调超参数优化和适当的数据增强的重要性。</strong>我们表明，这样的模型适用于不同的语言，并在很大程度上超过了以前所有在公开的数据集上训练的方法。它甚至超过了在非公开数据集上训练的模型，这些数据集的数据量最多可以达到21倍。此外，我们还表明，使用额外的训练数据，甚至是其他语言的数据或自动生成的转录，都能带来进一步的改进。</p><h2 id="3-用于CITE-seq和单细胞RNA-seq数据整合与细胞表面蛋白预测和归纳的多用深度学习方法"><a href="#3-用于CITE-seq和单细胞RNA-seq数据整合与细胞表面蛋白预测和归纳的多用深度学习方法" class="headerlink" title="3. 用于CITE-seq和单细胞RNA-seq数据整合与细胞表面蛋白预测和归纳的多用深度学习方法"></a>3. 用于CITE-seq和单细胞RNA-seq数据整合与细胞表面蛋白预测和归纳的多用深度学习方法</h2><p>题目：A multi-use deep learning method for CITE-seq and single-cell RNA-seq data integration with cell surface protein prediction and imputation</p><p>杂志：Nature Machine Intelligence</p><p>IF: 15</p><p>时间：27 October 2022</p><p>链接：<a href="https://www.nature.com/articles/s42256-022-00545-w" target="_blank" rel="noopener">https://www.nature.com/articles/s42256-022-00545-w</a></p><h3 id="摘要-2"><a href="#摘要-2" class="headerlink" title="摘要"></a>摘要</h3><p>CITE-seq是一种单细胞多组学技术，可同时测量单细胞中的RNA和蛋白质表达，已被广泛应用于生物医学研究，特别是免疫相关疾病和其他疾病，如流感和COVID-19。尽管CITE-seq激增，但产生这种数据的成本仍然很高。虽然数据整合可以增加信息含量，但这也带来了计算上的挑战。首先，结合多个数据集容易产生批量效应，需要加以解决。第二，很难结合多个CITE-seq数据集，因为不同数据集的蛋白质面板可能只是部分重叠。整合多个CITE-seq和单细胞RNA测序（scRNA-seq）数据集很重要，因为这样可以利用尽可能多的数据来发现细胞群的异质性。为了克服这些挑战，我们提出了<strong>sciPENN，这是一种多用途的深度学习方法，支持CITE-seq和scRNA-seq数据整合、scRNA-seq的蛋白质表达预测、CITE-seq的蛋白质表达推算、预测和推算的不确定性量化，以及从CITE-seq到scRNA-seq的细胞类型标签转移</strong>。跨越多个数据集的综合评估表明，sciPENN优于目前其他最先进的方法。</p><p><img src="/2022/11/29/cdba8009/image-20221129215042532.png" alt></p><h2 id="4-通过自适应图神经网络预测未见过的抗体的中和能力"><a href="#4-通过自适应图神经网络预测未见过的抗体的中和能力" class="headerlink" title="4. 通过自适应图神经网络预测未见过的抗体的中和能力"></a>4. 通过自适应图神经网络预测未见过的抗体的中和能力</h2><p>题目：Predicting unseen antibodies’ neutralizability via adaptive graph neural networks</p><p>杂志：Nature Machine Intelligence</p><p>IF: 15</p><p>时间：07 November 2022</p><p>链接：<a href="https://www.nature.com/articles/s42256-022-00553-w" target="_blank" rel="noopener">https://www.nature.com/articles/s42256-022-00553-w</a></p><h3 id="摘要-3"><a href="#摘要-3" class="headerlink" title="摘要"></a>摘要</h3><p>大多数天然和合成抗体是 “看不见的”。也就是说，要证明它们与任何抗原的中和作用需要费力和昂贵的湿式实验室实验。现有的从已知的抗体-抗原相互作用中学习抗体表征的方法，由于缺乏相互作用的实例，不适合于未见过的抗体。本文提出的<strong>DeepAAI方法通过构建抗体和抗原之间的两个适应性关系图，并在未见过的和见过的抗体表征之间应用拉普拉斯平滑法来学习未见过的抗体表征。DeepAAI不是使用静态的蛋白质描述符，而是 “动态地 “学习表征和关系图，并针对中和预测和50%抑制浓度估计的下游任务进行优化。</strong>DeepAAI的性能在人类免疫缺陷病毒、严重急性呼吸道综合征冠状病毒2、流感和登革热上得到了证明。此外，关系图具有丰富的可解释性。抗体关系图意味着抗体中和反应的相似性，而抗原关系图表明病毒不同变体之间的关系。因此，我们建议对这些病毒的新变体采用可能的广谱抗体。<img src="/2022/11/29/cdba8009/fig2.png" alt></p><h2 id="5-利用自我监督的图像表示学习框架准确预测分子特性和药物目标"><a href="#5-利用自我监督的图像表示学习框架准确预测分子特性和药物目标" class="headerlink" title="5. 利用自我监督的图像表示学习框架准确预测分子特性和药物目标"></a>5. 利用自我监督的图像表示学习框架准确预测分子特性和药物目标</h2><p>题目：Accurate prediction of molecular properties and drug targets using a self-supervised image representation learning framework</p><p>杂志：Nature Machine Intelligence</p><p>IF: 15</p><p>时间：17 November 2022</p><p>链接：<a href="https://www.nature.com/articles/s42256-022-00557-6" target="_blank" rel="noopener">https://www.nature.com/articles/s42256-022-00557-6</a></p><h3 id="摘要-4"><a href="#摘要-4" class="headerlink" title="摘要"></a>摘要</h3><p>一种药物的临床疗效和安全性是由其在人体中的分子特性和目标决定的。然而，在人类甚至动物模型中对所有化合物进行全蛋白质组评估是具有挑战性的。在这项研究中，我们提出了一个无监督预训练的深度学习框架，名为ImageMol，在1000万个无标签的类药物、生物活性分子上进行预训练，以预测候选化合物的分子目标。ImageMol框架旨在根据像素中分子的局部和整体结构特征，从无标记的分子图像中预训练化学表征。我们证明了ImageMol在评估51个基准数据集的分子特性（即药物的代谢、脑穿透和毒性）和分子靶点概况（即β-分泌酶和激酶）方面的高性能。ImageMol在国家转化科学促进中心的13个高通量实验数据集中显示了识别抗SARS-CoV-2分子的高准确度。通过ImageMol，我们确定了可能用于治疗COVID-19的候选临床3C类蛋白酶抑制剂。</p><p><img src="/2022/11/29/cdba8009/fig3.png" alt></p><p><img src="/2022/11/29/cdba8009/fig4.png" alt></p>]]></content>
     
@@ -224,7 +255,7 @@
     <link href="http://yoursite.com/2022/02/02/f09c6d87.html"/>
     <id>http://yoursite.com/2022/02/02/f09c6d87.html</id>
     <published>2022-02-02T06:37:41.000Z</published>
-    <updated>2022-02-02T08:01:46.050Z</updated>
+    <updated>2022-11-30T18:14:20.474Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Nat-M-L-通过学习随机掩码来解释生物序列的神经网络"><a href="#Nat-M-L-通过学习随机掩码来解释生物序列的神经网络" class="headerlink" title="Nat. M.L. | 通过学习随机掩码来解释生物序列的神经网络"></a>Nat. M.L. | 通过学习随机掩码来解释生物序列的神经网络</h2><p>题目：Interpreting neural networks for biological sequences by learning stochastic masks</p><p>杂志：Nature Machine Intelligence</p><p>IF: 15</p><p>时间：25 January 2022</p><p>链接：<a href="https://www.nature.com/articles/s42256-021-00428-6" target="_blank" rel="noopener">https://www.nature.com/articles/s42256-021-00428-6</a></p><h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><p>基于序列的神经网络可以从大型生物数据集中学习从而做出准确的预测，但模型的解释仍然具有挑战性。许多现有的特征归属方法是针对连续的而不是离散的输入模式而优化的，并孤立地评估单个特征的重要性，使它们不适合解释分子序列中的非线性相互作用。在这里，在计算机视觉和自然语言处理的工作基础上，我们开发了一种基于<strong>深度学习-扰频器网络（Scrambler networks）</strong>的方法，其中最重要的序列位置是通过学习<strong>输入掩码(input masks)</strong>确定的。扰频器学习预测特定位置的评分矩阵，其中不重要的核苷酸或残基通过提高其熵值而被扰乱。我们应用加扰频器来解释遗传变异的影响，发现顺式调控元素之间的非线性相互作用，解释蛋白质-蛋白质相互作用的结合特异性，并确定从头设计的蛋白质的结构决定因素。我们表明，扰频器能够在大型数据集上进行有效的归因，并产生高质量的解释，往往优于最先进的方法。</p><p><img src="/2022/02/02/f09c6d87/image-20220202083212293.png" alt="image-20220202083212293" style="zoom:50%;"></p><p><em><a id="more"></a></em></p><h2 id="Nat-M-L-通过人工智能中的隐私保护协作推进-COVID-19-诊断"><a href="#Nat-M-L-通过人工智能中的隐私保护协作推进-COVID-19-诊断" class="headerlink" title="Nat. M.L. | 通过人工智能中的隐私保护协作推进 COVID-19 诊断"></a>Nat. M.L. | 通过人工智能中的隐私保护协作推进 COVID-19 诊断</h2><p>题目：Advancing COVID-19 diagnosis with privacy-preserving collaboration in artificial intelligence</p><p>杂志：Nature Machine Intelligence</p><p>IF: 15</p><p>时间：15 December 2021</p><p>链接：<a href="https://www.nature.com/articles/s42256-021-00421-z" target="_blank" rel="noopener">https://www.nature.com/articles/s42256-021-00421-z</a></p><h3 id="摘要-1"><a href="#摘要-1" class="headerlink" title="摘要"></a>摘要</h3><p>人工智能为COVID-19的诊断提供了一个有希望的解决方案，然而，围绕安全和可信度的担扰阻碍了大规模代表性医疗数据的收集，为在临床实践中训练一个通用的模型带来了相当大的挑战。为了解决这个问题，我们发起了统一CT-COVID人工智能诊断计划<strong>（Unified CT-COVID AI Diagnostic Initiative，UCADI）</strong>，人工智能模型可以在一个联邦学习框架（<strong>federated learning</strong>）下分布式地训练并在每个主办机构独立执行，而不需要分享数据。这里显示我们的联邦学习框架大大超过了所有的本地模型（在中国的测试灵敏度/特异性为0.973/0.951，在英国为0.730/0.942），达到了与专业放射医师小组相当的性能。我们进一步评估了该模型在保留（从另外两家医院收集的没有联合学习框架的数据）和异质（用造影剂获得）数据上的表现，为模型做出的决定提供了可视化的解释，并分析了模型性能和联邦训练过程中沟通成本之间的权衡。我们的研究是基于从中国和英国的23家医院收集的3336名患者的9573张胸部计算机断层扫描。总的来说，我们的工作推进了利用联合学习在数字健康领域保护隐私的人工智能的前景。</p><p><img src="/2022/02/02/f09c6d87/image-20220202085203685.png" alt="image-20220202085203685" style="zoom:50%;"></p>]]></content>
     
@@ -246,7 +277,7 @@
     
       <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
     
-      <category term="federal learning" scheme="http://yoursite.com/tags/federal-learning/"/>
+      <category term="federated learning" scheme="http://yoursite.com/tags/federated-learning/"/>
     
   </entry>
   
@@ -575,42 +606,6 @@
       <category term="AMP" scheme="http://yoursite.com/tags/AMP/"/>
     
       <category term="LSTM" scheme="http://yoursite.com/tags/LSTM/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>基因组变异的理解和分析</title>
-    <link href="http://yoursite.com/2020/10/21/e3914e23.html"/>
-    <id>http://yoursite.com/2020/10/21/e3914e23.html</id>
-    <published>2020-10-21T19:56:05.000Z</published>
-    <updated>2020-10-21T21:21:10.497Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="什么是遗传变异"><a href="#什么是遗传变异" class="headerlink" title="什么是遗传变异"></a>什么是遗传变异</h3><p>遗传变异（genetic variation）是指一个群体中个体之间DNA序列的差异。变异可发生在生殖细胞（即精子和卵子）中，也发生在体细胞(所有其他)中。只有在生殖细胞中产生的变异才能从一个个体遗传给另一个个体，从而影响种群的动态，并最终影响进化。</p><p><strong>突变（Mutation）和重组（Recombination）</strong>是变异的主要来源。</p><h3 id="遗传变异的类型"><a href="#遗传变异的类型" class="headerlink" title="遗传变异的类型"></a>遗传变异的类型</h3><ul><li><p><strong>点突变Single base-pair mutation</strong></p><p>只有一个碱基发生了替换，具体包括Transition和Transversion。Transition指嘌呤(A/G)之间或嘧啶(T/C)之间的替换。Transversion指嘌呤和嘧啶间的替换。</p></li><li><p><strong>插入/缺失（Indel）</strong></p><p>主要指在基因组某个位置上发生较短长度的<strong>线性片段</strong>插入或者删除的现象。强调<strong>线性</strong>的原因是，这里的插入和删除是<strong>有前后顺序的</strong>与下述的结构性变异不同。Indel长度通常在50bp以下，更多时候甚至是不超过10bp，这个长度范围内的序列变化可以通过Smith-Waterman 的局部比对算法来<strong>准确</strong>获得，并且也能够在目前短读长的测序数据中较好地检测出来。</p></li><li><p><strong>结构变异</strong></p><p>通常就是指基因组上大长度的序列变化和位置关系变化。类型很多，包括长度在50bp以上的长片段序列插入或者删除（Big Indel）、串联重复（Tandem repeate）、染色体倒位（Inversion）、染色体内部或染色体之间的序列易位（Translocation）、拷贝数变异（CNV）以及形式更为复杂的嵌合性变异。1Kb与3Mb之间的序列，包括插入、缺失、拷贝数变异、倒位和易位。</p></li></ul><a id="more"></a><h3 id="变异的鉴定和分析"><a href="#变异的鉴定和分析" class="headerlink" title="变异的鉴定和分析"></a>变异的鉴定和分析</h3><p>变异的鉴定主要分为两个步骤：<strong>比对和variants calling</strong></p><ul><li><p><strong>比对</strong></p><p>​    常用的软件有：BWA，Bowtie2。将质控后的数据(fastq)比对到参考基因组上，得到比对后的reads（bam或CRAM格式）。</p></li><li><p><strong>variants calling</strong></p><p>常用的软件有GATK, bcftools, FreeBays等，这里的variants通常只包含SNPs和Indels，最终得到vcf格式的文件。</p></li></ul><p><img src="/2020/10/21/e3914e23/image-20201021223957905.png" alt="image-20201021223957905"></p><ul><li><p><strong>vcf文件格式介绍</strong></p><p>vcf是<strong>Variant Call Format</strong>的简称，即是变异文件储存的标准格式。下图是E.coli 变异分析的vcf文件示例。</p><ul><li>CHROM： 染色体，由于E.coli是一个环形的基因组，这里没有区分染色体</li><li>POS: 变异位点</li><li>REF: 参考基因组位点的碱基</li><li>ALT：个体变异位点的碱基</li><li>QUAL：质量</li><li>FILTER：如果使用GATK过滤后，会对通过过滤的变异位点有PASS的标签</li><li>INFO: 这一栏包含的信息较多，其中<ul><li>DP：表示覆盖在这个位点的总reads数，也就是这个位点的测序深度</li><li>GT: 表示genotype，通常用”/” or “|”分隔两个数字，“|”phase过也就是杂合的两个等位基因知道哪个等位基因来自哪条染色体；0代表参考基因组的碱基类型；1代表ALT碱基类型的第一个碱基（多个碱基用”,”分隔），2代表ALT第二个碱基，以此类推；比如 REF列为：A， ALT列为G,T；那么0/1基因型为AG 杂合，1/1基因型为GG纯合SNP；1/2代表GT基因型；./.表示缺失。</li></ul></li></ul></li></ul><p><img src="/2020/10/21/e3914e23/image-20201021225018928.png" alt="image-20201021225018928" style="zoom:50%;"></p><h3 id="变异分析常用的工具：bcftools-amp-vcftools"><a href="#变异分析常用的工具：bcftools-amp-vcftools" class="headerlink" title="变异分析常用的工具：bcftools &amp; vcftools"></a>变异分析常用的工具：bcftools &amp; vcftools</h3><h4 id="bcftools的部分功能介绍"><a href="#bcftools的部分功能介绍" class="headerlink" title="bcftools的部分功能介绍"></a>bcftools的部分功能介绍</h4><ul><li><p>Calling Variants</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bcftools mpileup -f REF.fa sample.sorted.bam | bcftools call -vm -Oz &gt; sample.vcf.gz</span><br></pre></td></tr></table></figure></li><li><p>提取等位基因和基因型信息</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bcftools query -f '%CHROM %POS %REF %ALT [%TGT]\n' query.vcf.gz -o query.extract.txt</span><br></pre></td></tr></table></figure></li></ul><ul><li>变异位点的基本统计分析</li></ul><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bcftools stats sample.vcf &gt; sample.vcf.stats</span><br><span class="line">plot-vcfstats sample.vcf.stats -p sample.vcf.stats.plot_output</span><br></pre></td></tr></table></figure><p><img src="/2020/10/21/e3914e23/image-20201021231029324.png" alt="image-20201021231029324" style="zoom:50%;"></p><p><img src="/2020/10/21/e3914e23/image-20201021231018278.png" alt="image-20201021231018278" style="zoom:50%;"></p><h4 id="vcftools的部分功能介绍"><a href="#vcftools的部分功能介绍" class="headerlink" title="vcftools的部分功能介绍"></a>vcftools的部分功能介绍</h4><ul><li><p>vcf文件的过滤</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vcftools --vcf sample.vcf --minDP 4 --max-missing 0.2 --minQ 30 --recode --recode-INFO-all --out filter</span><br></pre></td></tr></table></figure><p><code>max-missing 0.5</code>: 过滤低于50％的基因型</p><p><code>--minDP 4</code>:过滤depth低于4的reads<br><code>--recode</code>: 标志告诉程序使用过滤器写入一个新的vcf文件，<code>--recode-INFO-all</code>保留旧vcf文件中的所有INFO标志。</p><p><code>--out</code> 输出的文件名称的前缀</p></li><li><p>拆分SNPs和Indels</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">## 保留SNPs</span></span></span><br><span class="line">vcftools --vcf filter.recode.vcf --remove-indels --recode --recode-INFO-all --out filter.snps </span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">## 保留Indels</span></span></span><br><span class="line">vcftools --vcf filter.recode.vcf --keep-only-indels --recode --recode-INFO-all --out filter.indels</span><br></pre></td></tr></table></figure></li></ul><p>###参考</p><ul><li><a href="https://www.ebi.ac.uk/training-beta/online/courses/human-genetic-variation-introduction/what-is-genetic-variation/" target="_blank" rel="noopener">Human Genetic Variation</a></li><li><a href="https://www.omicsclass.com/article/6" target="_blank" rel="noopener">看懂变异记录结果文件（VCF）</a></li><li><a href="https://www.jianshu.com/p/957efb50108f" target="_blank" rel="noopener">VCF格式</a></li><li><a href="https://luansheng.netlify.app/2019/08/29/how-to-use-bcftools/" target="_blank" rel="noopener">bcftools使用笔记</a></li><li>vcftools: <a href="http://vcftools.sourceforge.net/man_latest.html" target="_blank" rel="noopener">http://vcftools.sourceforge.net/man_latest.html</a></li><li>bcftools: <a href="http://samtools.github.io/bcftools/bcftools.html" target="_blank" rel="noopener">http://samtools.github.io/bcftools/bcftools.html</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;什么是遗传变异&quot;&gt;&lt;a href=&quot;#什么是遗传变异&quot; class=&quot;headerlink&quot; title=&quot;什么是遗传变异&quot;&gt;&lt;/a&gt;什么是遗传变异&lt;/h3&gt;&lt;p&gt;遗传变异（genetic variation）是指一个群体中个体之间DNA序列的差异。变异可发生在生殖细胞（即精子和卵子）中，也发生在体细胞(所有其他)中。只有在生殖细胞中产生的变异才能从一个个体遗传给另一个个体，从而影响种群的动态，并最终影响进化。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;突变（Mutation）和重组（Recombination）&lt;/strong&gt;是变异的主要来源。&lt;/p&gt;
-&lt;h3 id=&quot;遗传变异的类型&quot;&gt;&lt;a href=&quot;#遗传变异的类型&quot; class=&quot;headerlink&quot; title=&quot;遗传变异的类型&quot;&gt;&lt;/a&gt;遗传变异的类型&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;点突变Single base-pair mutation&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;只有一个碱基发生了替换，具体包括Transition和Transversion。Transition指嘌呤(A/G)之间或嘧啶(T/C)之间的替换。Transversion指嘌呤和嘧啶间的替换。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;插入/缺失（Indel）&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;主要指在基因组某个位置上发生较短长度的&lt;strong&gt;线性片段&lt;/strong&gt;插入或者删除的现象。强调&lt;strong&gt;线性&lt;/strong&gt;的原因是，这里的插入和删除是&lt;strong&gt;有前后顺序的&lt;/strong&gt;与下述的结构性变异不同。Indel长度通常在50bp以下，更多时候甚至是不超过10bp，这个长度范围内的序列变化可以通过Smith-Waterman 的局部比对算法来&lt;strong&gt;准确&lt;/strong&gt;获得，并且也能够在目前短读长的测序数据中较好地检测出来。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;结构变异&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;通常就是指基因组上大长度的序列变化和位置关系变化。类型很多，包括长度在50bp以上的长片段序列插入或者删除（Big Indel）、串联重复（Tandem repeate）、染色体倒位（Inversion）、染色体内部或染色体之间的序列易位（Translocation）、拷贝数变异（CNV）以及形式更为复杂的嵌合性变异。1Kb与3Mb之间的序列，包括插入、缺失、拷贝数变异、倒位和易位。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="Data Sciences" scheme="http://yoursite.com/categories/Data-Sciences/"/>
-    
-    
-      <category term="software" scheme="http://yoursite.com/tags/software/"/>
-    
-      <category term="Genome Variants" scheme="http://yoursite.com/tags/Genome-Variants/"/>
     
   </entry>
   

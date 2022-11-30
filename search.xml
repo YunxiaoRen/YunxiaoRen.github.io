@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[221130 | NCs | 文献摘要]]></title>
+    <url>%2F2022%2F11%2F30%2F4f513be7.html</url>
+    <content type="text"><![CDATA[1. 通过知识提炼实现沟通效率的联邦学习题目：Communication-efficient federated learning via knowledge distillation 杂志：Nature Communications IF: 14.92 时间：19 April 2022 链接：https://www.nature.com/articles/s41467-022-29763-x 摘要联邦学习（Federated learning）是一种保护隐私的机器学习技术，从分散的数据中训练人工智能模型，它通过在模型学习的每个迭代中交流局部模型更新而不是原始数据，实现对隐私数据的利用。然而，如果模型更新包含众多参数，那么模型更新可能会非常大，而且模型训练需要很多轮通信。联邦学习中巨大的通信成本导致了客户端的沉重开销和高环境负担。在这里，我们提出了一种名为FedKD的联邦学习学习方法，该方法基于自适应相互知识提炼和动态梯度压缩技术（based on adaptive mutual knowledge distillation and dynamic gradient compression techniques），既节省通信又有效。FedKD在三个需要保护隐私的不同场景中得到了验证，表明它可以最大限度地减少94.89%的通信成本，并取得与集中式模型学习相竞争的结果。FedKD为在许多场景中有效地部署保护隐私的智能系统提供了可能性，如智能医疗和个性化。 该方法主要集中在跨语境的联合学习上，在这种情况下，客户端拥有比个人设备相对更丰富的计算资源和更大的本地数据量。在FedKD中，客户机和服务器之间不直接交流大模型，而是有一个小模型（mentee）和一个大模型（mentor）相互学习和提炼知识，其中只有mentee模型被不同的客户机共享并协同学习，这可以有效降低通信成本。这样一来，不同的客户拥有不同的本地导师模型，可以更好地适应本地数据集的特点，实现个性化的模型学习。受人类学习中的Protégé效应29（”我们一边教，一边学”，Seneca the Younger）的启发，我们提出了一种自适应的相互提炼方法，使本地导师和被导师模型能够相互学习从他们预测的软标签和中间结果中提炼出来的知识，其中提炼强度由他们预测的正确性自适应控制。此外，为了进一步降低交换被指导者模型更新时的通信成本，我们引入了一种基于奇异值分解（SVD）的动态梯度近似方法，以动态精度压缩通信的梯度，这可以在通信成本和模型精度之间实现一个有希望的权衡。 2. 用于保护隐私的个人化的联合图神经网络框架题目：A federated graph neural network framework for privacy-preserving personalization 杂志：Nature Communications IF: 14.92 时间：02 June 2022 链接：https://www.nature.com/articles/s41467-022-30714-9 摘要图神经网络（Graph neural network, GNN）能有效地模拟高阶互动，并已被广泛用于各种个性化应用，如推荐。然而，主流的个性化方法依赖于全局图上的集中式GNN学习，由于用户数据的隐私敏感性质，这存在相当大的隐私风险。在这里，我们提出了一个名为FedPerGNN的联合GNN框架，用于有效和保护隐私的个性化。通过一个保护隐私的模型更新方法，我们可以根据从本地数据推断出的分散的图来协作训练GNN模型。为了进一步利用本地互动以外的图信息，我们引入了一个保护隐私的图扩展协议，在保护隐私的前提下纳入高阶信息。在不同场景下对六个数据集进行的个性化实验结果表明，在良好的隐私保护下，FedPerGNN比最先进的联合个性化方法的误差低4.0%~9.6%。FedPerGNN为以保护隐私的方式挖掘分散的图数据，实现负责任的智能个性化提供了一个很好的方向。 这两篇文章来自于同一作者，作者的github链接：https://github.com/wuch15]]></content>
+      <categories>
+        <category>literature</category>
+      </categories>
+      <tags>
+        <tag>文献摘要</tag>
+        <tag>federated learning</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[221129|NMI|文献摘要]]></title>
     <url>%2F2022%2F11%2F29%2Fcdba8009.html</url>
     <content type="text"><![CDATA[1. 基因组学和医学研究中的数据主权题目：Data sovereignty in genomics and medical research 杂志：Nature Machine Intelligence IF: 15 时间：17 November 2022 链接：https://www.nature.com/articles/s42256-022-00578-1 摘要人工智能有望为医疗保健和研究带来许多好处，但是不同群体，不同国家越来越重视医学数据的隐私性和安全性，数据的共享面临着诸多挑战。为了改变这种情况，需要满足数据提供者能够控制他们自己的数据以及如何分享这些数据。目前的解决的方案有联邦学习（Federated learning），以及2021年新提出的蜂群学习（swarm learning）。 2. 野外多语言的视觉语音识别题目：Visual speech recognition for multiple languages in the wild 杂志：Nature Machine Intelligence IF: 15 时间：24 October 2022 链接：https://www.nature.com/articles/s42256-022-00550-z 摘要视觉语音识别（Visual speech recognition, VSR）的目的是根据嘴唇的运动来识别语音的内容，而不依赖音频流。深度学习的进展和大型视听数据集的可用性导致了比以往任何时候都更准确和稳健的VSR模型的发展。然而，这些进步通常是由于更大的训练集，而不是模型设计。在这里，我们证明设计更好的模型与使用更大的训练集同样重要。我们建议在VSR模型中增加基于预测的辅助任务，并强调超参数优化和适当的数据增强的重要性。我们表明，这样的模型适用于不同的语言，并在很大程度上超过了以前所有在公开的数据集上训练的方法。它甚至超过了在非公开数据集上训练的模型，这些数据集的数据量最多可以达到21倍。此外，我们还表明，使用额外的训练数据，甚至是其他语言的数据或自动生成的转录，都能带来进一步的改进。 3. 用于CITE-seq和单细胞RNA-seq数据整合与细胞表面蛋白预测和归纳的多用深度学习方法题目：A multi-use deep learning method for CITE-seq and single-cell RNA-seq data integration with cell surface protein prediction and imputation 杂志：Nature Machine Intelligence IF: 15 时间：27 October 2022 链接：https://www.nature.com/articles/s42256-022-00545-w 摘要CITE-seq是一种单细胞多组学技术，可同时测量单细胞中的RNA和蛋白质表达，已被广泛应用于生物医学研究，特别是免疫相关疾病和其他疾病，如流感和COVID-19。尽管CITE-seq激增，但产生这种数据的成本仍然很高。虽然数据整合可以增加信息含量，但这也带来了计算上的挑战。首先，结合多个数据集容易产生批量效应，需要加以解决。第二，很难结合多个CITE-seq数据集，因为不同数据集的蛋白质面板可能只是部分重叠。整合多个CITE-seq和单细胞RNA测序（scRNA-seq）数据集很重要，因为这样可以利用尽可能多的数据来发现细胞群的异质性。为了克服这些挑战，我们提出了sciPENN，这是一种多用途的深度学习方法，支持CITE-seq和scRNA-seq数据整合、scRNA-seq的蛋白质表达预测、CITE-seq的蛋白质表达推算、预测和推算的不确定性量化，以及从CITE-seq到scRNA-seq的细胞类型标签转移。跨越多个数据集的综合评估表明，sciPENN优于目前其他最先进的方法。 4. 通过自适应图神经网络预测未见过的抗体的中和能力题目：Predicting unseen antibodies’ neutralizability via adaptive graph neural networks 杂志：Nature Machine Intelligence IF: 15 时间：07 November 2022 链接：https://www.nature.com/articles/s42256-022-00553-w 摘要大多数天然和合成抗体是 “看不见的”。也就是说，要证明它们与任何抗原的中和作用需要费力和昂贵的湿式实验室实验。现有的从已知的抗体-抗原相互作用中学习抗体表征的方法，由于缺乏相互作用的实例，不适合于未见过的抗体。本文提出的DeepAAI方法通过构建抗体和抗原之间的两个适应性关系图，并在未见过的和见过的抗体表征之间应用拉普拉斯平滑法来学习未见过的抗体表征。DeepAAI不是使用静态的蛋白质描述符，而是 “动态地 “学习表征和关系图，并针对中和预测和50%抑制浓度估计的下游任务进行优化。DeepAAI的性能在人类免疫缺陷病毒、严重急性呼吸道综合征冠状病毒2、流感和登革热上得到了证明。此外，关系图具有丰富的可解释性。抗体关系图意味着抗体中和反应的相似性，而抗原关系图表明病毒不同变体之间的关系。因此，我们建议对这些病毒的新变体采用可能的广谱抗体。 5. 利用自我监督的图像表示学习框架准确预测分子特性和药物目标题目：Accurate prediction of molecular properties and drug targets using a self-supervised image representation learning framework 杂志：Nature Machine Intelligence IF: 15 时间：17 November 2022 链接：https://www.nature.com/articles/s42256-022-00557-6 摘要一种药物的临床疗效和安全性是由其在人体中的分子特性和目标决定的。然而，在人类甚至动物模型中对所有化合物进行全蛋白质组评估是具有挑战性的。在这项研究中，我们提出了一个无监督预训练的深度学习框架，名为ImageMol，在1000万个无标签的类药物、生物活性分子上进行预训练，以预测候选化合物的分子目标。ImageMol框架旨在根据像素中分子的局部和整体结构特征，从无标记的分子图像中预训练化学表征。我们证明了ImageMol在评估51个基准数据集的分子特性（即药物的代谢、脑穿透和毒性）和分子靶点概况（即β-分泌酶和激酶）方面的高性能。ImageMol在国家转化科学促进中心的13个高通量实验数据集中显示了识别抗SARS-CoV-2分子的高准确度。通过ImageMol，我们确定了可能用于治疗COVID-19的候选临床3C类蛋白酶抑制剂。]]></content>
@@ -86,7 +98,7 @@
       </categories>
       <tags>
         <tag>文献摘要</tag>
-        <tag>federal learning</tag>
+        <tag>federated learning</tag>
       </tags>
   </entry>
   <entry>

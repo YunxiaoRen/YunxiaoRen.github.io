@@ -295,6 +295,203 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/10/dfeeb526.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="六六">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="生信拾光">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/01/10/dfeeb526.html" itemprop="url">乳腺癌治疗反应的多组学机器学习预测器</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-01-10T23:29:43+01:00">
+                2022-01-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/literature/" itemprop="url" rel="index">
+                    <span itemprop="name">literature</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2022/01/10/dfeeb526.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2022/01/10/dfeeb526.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  474
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>题目：Multi-omic machine learning predictor of breast cancer therapy response</p>
+<p>杂志：Nature</p>
+<p>IF: 49.96</p>
+<p>时间：7 Dec. 2021</p>
+<p>链接：<a href="https://www.nature.com/articles/s41586-021-04278-5" target="_blank" rel="noopener">https://www.nature.com/articles/s41586-021-04278-5</a></p>
+<p>代码：</p>
+<ul>
+<li><a href="https://github.com/micrisor/NAT-ML" target="_blank" rel="noopener">https://github.com/micrisor/NAT-ML</a></li>
+<li><a href="https://github.com/cclab-brca/neoadjuvant-therapy-response-predictor" target="_blank" rel="noopener">https://github.com/cclab-brca/neoadjuvant-therapy-response-predictor</a></li>
+</ul>
+<h3 id="一句话概括"><a href="#一句话概括" class="headerlink" title="一句话概括"></a>一句话概括</h3><p>使用逻辑回归，SVM和随机森林的组合机器学习方法，结合临床数据、数字病理学数据、基因组和转录组学数据，对乳腺癌治疗的反应进行预测</p>
+<p>###摘要</p>
+<p>乳腺癌是由恶性细胞和肿瘤微环境组成的复杂生态系统。这些肿瘤生态系统的组成和其中的相互作用有助于细胞毒性治疗反应。构建细胞毒性治疗反应的预测器还有待研究。这篇文章收集了<strong>168名</strong>患者在手术前接受化疗+/-HER2靶向治疗的乳腺肿瘤治疗前活检的<strong>临床、数字病理学、基因组和转录组资料</strong>。然后将手术时的病理终点（完全反应或残余疾病）与这些诊断性活检的多组学特征相关联。他们发现，对治疗的反应是由预处理的肿瘤生态系统调节的，其多组学景观可以用机器学习整合到预测模型中。治疗后残余疾病的程度与治疗前的特征单调相关，包括<strong>肿瘤突变和拷贝数变异、肿瘤增殖、免疫浸润和T细胞功能紊乱和排斥</strong>。将这些特征结合到一个多组学机器学习模型中，可预测外部验证队列（75名患者）的病理完全反应，AUC为0.87。总之，对治疗的反应是由通过数据整合和机器学习捕获的整个肿瘤生态系统的基线特征决定的。这种方法可用于开发其他癌症的预测器。</p>
+<p><img src="/2022/01/10/dfeeb526/image-20220111000724850.png" alt="image-20220111000724850"></p>
+<p><img src="/2022/01/10/dfeeb526/image-20220111000748893.png" alt="image-20220111000748893"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/10/12/b83dc028.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1061,196 +1258,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/09/19/f8c75c1b.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="六六">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="生信拾光">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2021/09/19/f8c75c1b.html" itemprop="url">整合多组学数据和图像卷积网络鉴定新的癌症基因和相关的分子机制</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-09-19T22:30:07+02:00">
-                2021-09-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/literature/" itemprop="url" rel="index">
-                    <span itemprop="name">literature</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2021/09/19/f8c75c1b.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2021/09/19/f8c75c1b.html" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  106
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="文章信息"><a href="#文章信息" class="headerlink" title="文章信息"></a>文章信息</h2><p>题目：Integration of multiomics data with graph convolutional networks to identify new cancer genes and their associated molecular mechanisms</p>
-<p>杂志：Nature Machine Intelligence</p>
-<p>IF:16.65</p>
-<p>时间：12 April 2021</p>
-<p>链接：<a href="https://www.nature.com/articles/s42256-021-00325-y" target="_blank" rel="noopener">https://www.nature.com/articles/s42256-021-00325-y</a></p>
-<h2 id="一句话评价"><a href="#一句话评价" class="headerlink" title="一句话评价"></a>一句话评价</h2><p>使用机器学习方法——图像卷积网络对多组学数据（SNPs, CNV，DAN methylation，protein interaction (PPI) networks）进行挖掘，预测新的癌症基因以及这些基因发挥功能的机制。</p>
-<p><img src="/2021/09/19/f8c75c1b/image-20210919224314468.png" alt="image-20210919224314468" style="zoom:50%;"></p>
-<p><img src="/2021/09/19/f8c75c1b/image-20210919224447370.png" alt="image-20210919224447370"></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1301,7 +1308,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">126</span>
+                  <span class="site-state-item-count">127</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1389,7 +1396,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">81.4k</span>
+    <span title="Site words total count">82.5k</span>
   
 </div>
 
@@ -1411,7 +1418,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共81.4k字</span>
+  <span class="post-count">博客全站共82.5k字</span>
 </div>
 
 
