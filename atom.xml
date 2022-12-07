@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2022-11-30T19:04:09.578Z</updated>
+  <updated>2022-12-07T22:12:00.033Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,50 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>221207 | BIB | 文献摘要</title>
+    <link href="http://yoursite.com/2022/12/07/75d6e793.html"/>
+    <id>http://yoursite.com/2022/12/07/75d6e793.html</id>
+    <published>2022-12-07T19:45:44.000Z</published>
+    <updated>2022-12-07T22:12:00.033Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1-基于BERT和二维卷积神经网络的transformer架构从序列信息中识别DNA-enhancers"><a href="#1-基于BERT和二维卷积神经网络的transformer架构从序列信息中识别DNA-enhancers" class="headerlink" title="1. 基于BERT和二维卷积神经网络的transformer架构从序列信息中识别DNA enhancers"></a>1. 基于BERT和二维卷积神经网络的transformer架构从序列信息中识别DNA enhancers</h2><p>题目：A transformer architecture based on BERT and 2D convolutional neural network to identify DNA enhancers from sequence information</p><p>杂志：<em>Briefings in Bioinformatics</em></p><p>IF: 13.944</p><p>时间：05 February 2021</p><p>链接：<a href="https://doi.org/10.1093/bib/bbab005" target="_blank" rel="noopener">https://doi.org/10.1093/bib/bbab005</a></p><h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><p>最近，语言表征模型因其显著的成果而在自然语言处理领域引起了广泛的关注。其中，bidirectional encoder representations from transformers（BERT）已被证明是一种简单而强大的语言模型，取得了新颖的最先进的性能。BERT采用了语境化词语嵌入的概念来捕捉词语的语义和出现的语境。在这项研究中，我们提出了一种新的技术，<strong>将基于BERT的多语言模型纳入生物信息学中，以表示DNA序列的信息。我们将DNA序列视为自然句子，然后使用BERT模型将其转化为固定长度的数字矩阵。作为一个案例研究，我们将我们的方法应用于DNA增强子的预测</strong>，这是该领域中一个著名的和具有挑战性的问题。然后我们观察到，与目前生物信息学中最先进的特征相比，我们基于BERT的特征在敏感性、特异性、准确性和马修斯相关系数方面提高了5-10%以上。此外，高级实验表明，深度学习（以二维卷积神经网络为代表；CNN）在学习BERT特征方面拥有比其他传统机器学习技术更好的潜力。总之，我们认为BERT和二维CNN可以在利用序列信息进行生物建模方面开辟一条新的途径。</p><h3 id="DNA数据预处理"><a href="#DNA数据预处理" class="headerlink" title="DNA数据预处理"></a>DNA数据预处理</h3><ul><li><p>首先，标准FASTA格式的正常DNA序列被分割成等长的DNA片段，并选取滑动窗口的值。在我们的语言模型中，我们需要通过使用不同的n-gram级别将这些片段视为 “DNA句子”。</p></li><li><p>在这项研究中，我们通过将一个核苷酸视为自然语言中的一个词（unigram）来建立NLP模型。因此，在第二步中，每个DNA片段在碱基之间插入空格，形成一系列的核苷酸，每个核苷酸都被假装成人类语言中的一个词。</p></li><li><p>一般来说，在训练BERT模型时，研究人员经常添加特殊的标记，如CLS标记和SEP标记作为句子的开始和结束。我们假设这些标记不传达生物学意义，因此不遵循这一惯例。</p><p><img src="/2022/12/07/75d6e793/fig1-0448246.png" alt></p></li></ul><p><em><a id="more"></a></em></p><h2 id="2-DTSyn：一个基于双transformer的神经网络来预测协同的药物组合"><a href="#2-DTSyn：一个基于双transformer的神经网络来预测协同的药物组合" class="headerlink" title="2. DTSyn：一个基于双transformer的神经网络来预测协同的药物组合"></a>2. DTSyn：一个基于双transformer的神经网络来预测协同的药物组合</h2><p>题目：DTSyn: a dual-transformer-based neural network to predict synergistic drug combinations</p><p>杂志：<em>Briefings in Bioinformatics</em></p><p>IF: 13.944</p><p>时间：01 August 2022</p><p>链接：<a href="https://doi.org/10.1093/bib/bbac302" target="_blank" rel="noopener">https://doi.org/10.1093/bib/bbac302</a></p><h3 id="摘要-1"><a href="#摘要-1" class="headerlink" title="摘要"></a>摘要</h3><p>药物组合疗法在许多方面都优于癌症治疗的单一疗法。由于可能的药物对的巨大搜索空间的耗时过程，通过筛选来确定新的药物组合对湿实验室来说是具有挑战性的。因此，人们开发了计算方法来预测具有潜在协同功能的药物对。尽管目前的模型很成功，<strong>但从化学-基因-组织相互作用的角度理解药物协同作用的机制缺乏研究，阻碍了目前的算法从药物机制研究。</strong>在此，我们提出了一个基于<strong>多头关注机制 (multi-head attention)</strong> 的深度神经网络模型，称为DTSyn（用于药物对协同作用预测的双transformer编码器模型），以识别新型药物组合。我们设计了一个细粒度的transformer编码器来捕捉化学亚结构-基因和基因-基因的关联，以及一个粗粒度的transformer编码器来提取化学-化学和化学-细胞系的相互作用。DTSyn达到了最高的接收操作特征曲线下面积0.73，0.78。0.82和0.81，超过了所有竞争方法。此外，DTSyn在五个独立的数据集中取得了最佳的真阳性率（TPR）。研究表明，两个transformer编码器块都对DTSyn的性能做出了贡献。此外，DTSyn可以提取化学品和细胞系之间的相互作用，代表药物作用的潜在机制。通过利用注意力机制和预训练的基因嵌入，DTSyn显示出更好的可解释性能力。因此，我们设想我们的模型是一个有价值的工具，可以通过化学品和细胞系的基因表达谱来优先考虑协同作用的药物对。</p><h2 id="3-ViBE：利用元基因组测序数据识别真核生物病毒的层次化BERT模型"><a href="#3-ViBE：利用元基因组测序数据识别真核生物病毒的层次化BERT模型" class="headerlink" title="3.ViBE：利用元基因组测序数据识别真核生物病毒的层次化BERT模型"></a>3.ViBE：利用元基因组测序数据识别真核生物病毒的层次化BERT模型</h2><p>题目：ViBE: a hierarchical BERT model to identify eukaryotic viruses using metagenome sequencing data</p><p>杂志：<em>Briefings in Bioinformatics</em></p><p>IF: 13.944</p><p>时间：04 June 2022</p><p>链接：<a href="https://doi.org/10.1093/bib/bbac204" target="_blank" rel="noopener">https://doi.org/10.1093/bib/bbac204</a></p><h3 id="摘要-2"><a href="#摘要-2" class="headerlink" title="摘要"></a>摘要</h3><p>病毒在人类和各种环境中无处不在，并不断地自我变异。在没有培养的环境中识别病毒是具有挑战性的；然而，促进对新型病毒的筛选和扩大对病毒空间的认识是至关重要的。基于同源性的方法，利用已知的病毒基因组识别病毒依赖于序列比对，因此很难捕捉到已知病毒的远程同源物。<strong>为了从元基因组样本中准确捕捉病毒信号，需要建立模型来理解病毒基因组的编码模式。</strong>在这项研究中，<strong>我们开发了一个层次化的BERT模型，名为ViBE，用于从元基因组测序数据中检测真核生物病毒，并对它们进行阶级分类。我们使用从病毒参考基因组产生的类读序列对ViBE进行了预训练，并得出了三个微调模型，对真核脱氧核糖核酸病毒和真核核糖核酸病毒的成对读数进行分类</strong>。ViBE取得了比最先进的基于对齐的方法更高的召回率，同时保持了相当的精度。在所有测试案例中，ViBE的表现都优于最先进的无对齐方法。ViBE的性能也用真实的测序数据集进行了验证，包括阴道病毒组。</p><p><img src="/2022/12/07/75d6e793/image-20221207225513185.png" alt="image-20221207225513185"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;1-基于BERT和二维卷积神经网络的transformer架构从序列信息中识别DNA-enhancers&quot;&gt;&lt;a href=&quot;#1-基于BERT和二维卷积神经网络的transformer架构从序列信息中识别DNA-enhancers&quot; class=&quot;headerlink&quot; title=&quot;1. 基于BERT和二维卷积神经网络的transformer架构从序列信息中识别DNA enhancers&quot;&gt;&lt;/a&gt;1. 基于BERT和二维卷积神经网络的transformer架构从序列信息中识别DNA enhancers&lt;/h2&gt;&lt;p&gt;题目：A transformer architecture based on BERT and 2D convolutional neural network to identify DNA enhancers from sequence information&lt;/p&gt;
+&lt;p&gt;杂志：&lt;em&gt;Briefings in Bioinformatics&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;IF: 13.944&lt;/p&gt;
+&lt;p&gt;时间：05 February 2021&lt;/p&gt;
+&lt;p&gt;链接：&lt;a href=&quot;https://doi.org/10.1093/bib/bbab005&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://doi.org/10.1093/bib/bbab005&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h3&gt;&lt;p&gt;最近，语言表征模型因其显著的成果而在自然语言处理领域引起了广泛的关注。其中，bidirectional encoder representations from transformers（BERT）已被证明是一种简单而强大的语言模型，取得了新颖的最先进的性能。BERT采用了语境化词语嵌入的概念来捕捉词语的语义和出现的语境。在这项研究中，我们提出了一种新的技术，&lt;strong&gt;将基于BERT的多语言模型纳入生物信息学中，以表示DNA序列的信息。我们将DNA序列视为自然句子，然后使用BERT模型将其转化为固定长度的数字矩阵。作为一个案例研究，我们将我们的方法应用于DNA增强子的预测&lt;/strong&gt;，这是该领域中一个著名的和具有挑战性的问题。然后我们观察到，与目前生物信息学中最先进的特征相比，我们基于BERT的特征在敏感性、特异性、准确性和马修斯相关系数方面提高了5-10%以上。此外，高级实验表明，深度学习（以二维卷积神经网络为代表；CNN）在学习BERT特征方面拥有比其他传统机器学习技术更好的潜力。总之，我们认为BERT和二维CNN可以在利用序列信息进行生物建模方面开辟一条新的途径。&lt;/p&gt;
+&lt;h3 id=&quot;DNA数据预处理&quot;&gt;&lt;a href=&quot;#DNA数据预处理&quot; class=&quot;headerlink&quot; title=&quot;DNA数据预处理&quot;&gt;&lt;/a&gt;DNA数据预处理&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;首先，标准FASTA格式的正常DNA序列被分割成等长的DNA片段，并选取滑动窗口的值。在我们的语言模型中，我们需要通过使用不同的n-gram级别将这些片段视为 “DNA句子”。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;在这项研究中，我们通过将一个核苷酸视为自然语言中的一个词（unigram）来建立NLP模型。因此，在第二步中，每个DNA片段在碱基之间插入空格，形成一系列的核苷酸，每个核苷酸都被假装成人类语言中的一个词。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;一般来说，在训练BERT模型时，研究人员经常添加特殊的标记，如CLS标记和SEP标记作为句子的开始和结束。我们假设这些标记不传达生物学意义，因此不遵循这一惯例。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2022/12/07/75d6e793/fig1-0448246.png&quot; alt&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;&lt;/em&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="literature" scheme="http://yoursite.com/categories/literature/"/>
+    
+    
+      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
+    
+      <category term="transformer" scheme="http://yoursite.com/tags/transformer/"/>
+    
+  </entry>
+  
+  <entry>
     <title>221130 | NCs | 文献摘要</title>
     <link href="http://yoursite.com/2022/11/30/4f513be7.html"/>
     <id>http://yoursite.com/2022/11/30/4f513be7.html</id>
     <published>2022-11-30T18:11:52.935Z</published>
-    <updated>2022-11-30T19:04:09.578Z</updated>
+    <updated>2022-11-30T19:06:39.184Z</updated>
     
     <content type="html"><![CDATA[<h2 id="1-通过知识提炼实现沟通效率的联邦学习"><a href="#1-通过知识提炼实现沟通效率的联邦学习" class="headerlink" title="1. 通过知识提炼实现沟通效率的联邦学习"></a>1. 通过知识提炼实现沟通效率的联邦学习</h2><p>题目：Communication-efficient federated learning via knowledge distillation</p><p>杂志：Nature Communications</p><p>IF: 14.92</p><p>时间：19 April 2022</p><p>链接：<a href="https://www.nature.com/articles/s41467-022-29763-x" target="_blank" rel="noopener">https://www.nature.com/articles/s41467-022-29763-x</a></p><h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><p>联邦学习（Federated learning）是一种保护隐私的机器学习技术，从分散的数据中训练人工智能模型，它通过在模型学习的每个迭代中交流局部模型更新而不是原始数据，实现对隐私数据的利用。然而，如果模型更新包含众多参数，那么模型更新可能会非常大，而且模型训练需要很多轮通信。联邦学习中巨大的通信成本导致了客户端的沉重开销和高环境负担。在这里，我们提出了一种名为FedKD的联邦学习学习方法，该方法基于<strong>自适应相互知识提炼和动态梯度压缩技术（based on adaptive mutual knowledge distillation and dynamic gradient compression techniques）</strong>，既节省通信又有效。FedKD在三个需要保护隐私的不同场景中得到了验证，表明它可以最大限度地减少94.89%的通信成本，并取得与集中式模型学习相竞争的结果。FedKD为在许多场景中有效地部署保护隐私的智能系统提供了可能性，如智能医疗和个性化。</p><p>该方法主要集中在跨语境的联合学习上，在这种情况下，客户端拥有比个人设备相对更丰富的计算资源和更大的本地数据量。在FedKD中，客户机和服务器之间不直接交流大模型，而是有一个小模型（mentee）和一个大模型（mentor）相互学习和提炼知识，其中只有mentee模型被不同的客户机共享并协同学习，这可以有效降低通信成本。这样一来，不同的客户拥有不同的本地导师模型，可以更好地适应本地数据集的特点，实现个性化的模型学习。受人类学习中的Protégé效应29（”我们一边教，一边学”，Seneca the Younger）的启发，我们提出了一种自适应的相互提炼方法，使本地导师和被导师模型能够相互学习从他们预测的软标签和中间结果中提炼出来的知识，其中提炼强度由他们预测的正确性自适应控制。此外，为了进一步降低交换被指导者模型更新时的通信成本，我们引入了一种基于奇异值分解（SVD）的动态梯度近似方法，以动态精度压缩通信的梯度，这可以在通信成本和模型精度之间实现一个有希望的权衡。</p><p><img src="/2022/11/30/4f513be7/fig1.png" alt></p><a id="more"></a><h2 id="2-用于保护隐私的个人化的联合图神经网络框架"><a href="#2-用于保护隐私的个人化的联合图神经网络框架" class="headerlink" title="2. 用于保护隐私的个人化的联合图神经网络框架"></a>2. 用于保护隐私的个人化的联合图神经网络框架</h2><p>题目：A federated graph neural network framework for privacy-preserving personalization</p><p>杂志：Nature Communications</p><p>IF: 14.92</p><p>时间：02 June 2022</p><p>链接：<a href="https://www.nature.com/articles/s41467-022-30714-9" target="_blank" rel="noopener">https://www.nature.com/articles/s41467-022-30714-9</a></p><h3 id="摘要-1"><a href="#摘要-1" class="headerlink" title="摘要"></a>摘要</h3><p>图神经网络（Graph neural network, GNN）能有效地模拟高阶互动，并已被广泛用于各种个性化应用，如推荐。然而，主流的个性化方法依赖于全局图上的集中式GNN学习，由于用户数据的隐私敏感性质，这存在相当大的隐私风险。在这里，我们提出了一个名为FedPerGNN的联合GNN框架，用于有效和保护隐私的个性化。通过一个保护隐私的模型更新方法，我们可以根据从本地数据推断出的分散的图来协作训练GNN模型。为了进一步利用本地互动以外的图信息，我们引入了一个保护隐私的图扩展协议，在保护隐私的前提下纳入高阶信息。在不同场景下对六个数据集进行的个性化实验结果表明，在良好的隐私保护下，FedPerGNN比最先进的联合个性化方法的误差低4.0%~9.6%。FedPerGNN为以保护隐私的方式挖掘分散的图数据，实现负责任的智能个性化提供了一个很好的方向。</p><p><img src="/2022/11/30/4f513be7/fig2.png" alt></p><p><img src="/2022/11/30/4f513be7/fig3.png" alt></p><p>这两篇文章来自于同一作者，作者的github链接：<a href="https://github.com/wuch15" target="_blank" rel="noopener">https://github.com/wuch15</a></p>]]></content>
     
@@ -334,9 +373,9 @@
       <category term="literature" scheme="http://yoursite.com/categories/literature/"/>
     
     
-      <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
-    
       <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
+    
+      <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
     
   </entry>
   
@@ -392,11 +431,11 @@
       <category term="literature" scheme="http://yoursite.com/categories/literature/"/>
     
     
-      <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
-    
       <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
     
       <category term="CNN" scheme="http://yoursite.com/tags/CNN/"/>
+    
+      <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
     
   </entry>
   
@@ -454,11 +493,11 @@
       <category term="literature" scheme="http://yoursite.com/categories/literature/"/>
     
     
-      <category term="AMR" scheme="http://yoursite.com/tags/AMR/"/>
+      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
     
       <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
     
-      <category term="文献摘要" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%91%98%E8%A6%81/"/>
+      <category term="AMR" scheme="http://yoursite.com/tags/AMR/"/>
     
       <category term="药物研发" scheme="http://yoursite.com/tags/%E8%8D%AF%E7%89%A9%E7%A0%94%E5%8F%91/"/>
     
@@ -570,42 +609,9 @@
       <category term="literature" scheme="http://yoursite.com/categories/literature/"/>
     
     
-      <category term="AMR" scheme="http://yoursite.com/tags/AMR/"/>
-    
       <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
     
-  </entry>
-  
-  <entry>
-    <title>深度学习提高抗生肽的识别</title>
-    <link href="http://yoursite.com/2021/04/01/fff0078d.html"/>
-    <id>http://yoursite.com/2021/04/01/fff0078d.html</id>
-    <published>2021-04-01T15:25:04.000Z</published>
-    <updated>2021-04-04T21:53:39.286Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="文章信息"><a href="#文章信息" class="headerlink" title="文章信息"></a>文章信息</h2><p>题目：Deep learning improves antimicrobial peptide recognition</p><p>杂志：Bioinformatics</p><p>IF: 5.610 (2019)</p><p>时间：24 march, 2018</p><p>链接：doi: 10.1093/bioinformatics/bty179</p><h2 id="一句话评价"><a href="#一句话评价" class="headerlink" title="一句话评价"></a>一句话评价</h2><p>通过卷积网络层和循环神经网络层组合构建的深度学习模型识别抗生肽。</p><a id="more"></a><h2 id="文章介绍"><a href="#文章介绍" class="headerlink" title="文章介绍"></a>文章介绍</h2><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><ul><li>细菌对抗生素药物的抗性越来越引起人们的关注，对经济，生命健康和社会造成重要的挑战。抗生肽（Antimicrobial peptides ，AMPs）是天然免疫的组成部分，也是研发药物广泛使用的靶点。机器学习的方法可以为湿实验的研究者提供一些潜在的研究位点。</li><li>这篇文章使用卷积网络层和循环神经网络层组成的神经网络模型识别抗菌活动。最终训练的模型也比一般的方法表现更好。此外，通过潜入权重(Embedding Weights)，他们提出了reduced-alphabet representation的方法，最终实现可以只用9个氨基酸分子准确识别AMP。</li><li>最后，他们也提供了模型和数据相关的网站：Antimicrobial Peptide Scanner vr.2 web server， <a href="http://www.ampscanner.com" target="_blank" rel="noopener">www.ampscanner.com</a></li></ul><h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><h4 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h4><ul><li>APD vr.3 database： <a href="http://aps.unmc.edu/AP，" target="_blank" rel="noopener">http://aps.unmc.edu/AP，</a> 主要是革兰氏阴性和阳性细菌的AMP</li><li>过滤掉长度小于10的氨基酸以及和CD-Hit &gt; 90%的共有的序列，最终使用的AMP有1778个，训练集：712，验证集：354，测试集：712。</li><li>人工构建了non-AMP的序列：Torrent et al., 2011; Xiao et al., 2013<ul><li>Torrent,M. et al. (2011) Connecting peptide physicochemical and antimicro- bial properties by a rational prediction model. PLoS One, 6, e16968.</li><li>Xiao,X. et al. (2013) iAMP-2L: a two-level <strong>multi-label classifier</strong> for identifying antimicrobial peptides and their functional types. Anal. Biochem., 436, 168–177.</li><li>从UniProt下载了肽段序列，并过滤掉包含抗性的序列</li></ul></li></ul><h4 id="模型"><a href="#模型" class="headerlink" title="模型"></a>模型</h4><p><img src="/2021/04/01/fff0078d/fig1.png" style="zoom:50%;"></p><p><strong>基于Keras框架搭建的模型</strong>：</p><ul><li>肽段序列被编码为长度为200的序列，20个氨基酸依次编码为1-20，其余以0填充。</li><li>embedding_vector_length: 128</li><li>卷积层：1D convolution, <code>nb_filter: 64, filter_length: 16, init: normal, strides: 1, border_mode: same, activation: relu</code></li><li>池化层：Maxpooling layer，size=5</li><li>LSTM层：100 units, <code>(unroll: True, stateful: False, dropout: 0.1 and rest default settings)</code></li><li>Dense 层：激活函数：sigmoid</li><li>其他参数：10 epochs， ‘adam’ 优化器， loss: binary_cros- sentropy, metrics: accuracy).</li></ul><p><strong>调参：</strong></p><p>Hyperas wrapper package for Keras：<a href="https://github.com/maxpumperla/hyperas" target="_blank" rel="noopener">https://github.com/maxpumperla/hyperas</a> </p><p><strong>模型评估：</strong></p><p>用到评估metrics有：</p><ul><li><p>sensitivity (SENS)</p></li><li><p>specificity (SPEC)</p></li><li><p>ACC </p></li><li><p>Matthews Correlation Coefficient (MCC)</p></li><li><p>ROC curve: pROC package in R</p></li></ul><h3 id="结果和结论"><a href="#结果和结论" class="headerlink" title="结果和结论"></a>结果和结论</h3><p><strong>构建的模型性能：</strong></p><p><img src="/2021/04/01/fff0078d/image-20210404222508046.png" alt="image-20210404222508046" style="zoom:50%;"></p><p><strong>与其他方法的比较</strong></p><p><img src="/2021/04/01/fff0078d/image-20210404222646572.png" alt="image-20210404222646572" style="zoom:50%;"></p><h3 id="创新性和意义"><a href="#创新性和意义" class="headerlink" title="创新性和意义"></a>创新性和意义</h3><ul><li>基于抗生肽识别抗菌性活动</li><li>模型的结构：结合了卷积层和循环神经网络层</li><li>输入数据的处理：embeding layer的处理</li><li>Reduced alphabet model analysis</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;文章信息&quot;&gt;&lt;a href=&quot;#文章信息&quot; class=&quot;headerlink&quot; title=&quot;文章信息&quot;&gt;&lt;/a&gt;文章信息&lt;/h2&gt;&lt;p&gt;题目：Deep learning improves antimicrobial peptide recognition&lt;/p&gt;
-&lt;p&gt;杂志：Bioinformatics&lt;/p&gt;
-&lt;p&gt;IF: 5.610 (2019)&lt;/p&gt;
-&lt;p&gt;时间：24 march, 2018&lt;/p&gt;
-&lt;p&gt;链接：doi: 10.1093/bioinformatics/bty179&lt;/p&gt;
-&lt;h2 id=&quot;一句话评价&quot;&gt;&lt;a href=&quot;#一句话评价&quot; class=&quot;headerlink&quot; title=&quot;一句话评价&quot;&gt;&lt;/a&gt;一句话评价&lt;/h2&gt;&lt;p&gt;通过卷积网络层和循环神经网络层组合构建的深度学习模型识别抗生肽。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="literature" scheme="http://yoursite.com/categories/literature/"/>
-    
-    
-      <category term="CNN" scheme="http://yoursite.com/tags/CNN/"/>
-    
-      <category term="deep learning" scheme="http://yoursite.com/tags/deep-learning/"/>
-    
-      <category term="AMP" scheme="http://yoursite.com/tags/AMP/"/>
-    
-      <category term="LSTM" scheme="http://yoursite.com/tags/LSTM/"/>
+      <category term="AMR" scheme="http://yoursite.com/tags/AMR/"/>
     
   </entry>
   

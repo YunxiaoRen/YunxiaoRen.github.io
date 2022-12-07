@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[221207 | BIB | 文献摘要]]></title>
+    <url>%2F2022%2F12%2F07%2F75d6e793.html</url>
+    <content type="text"><![CDATA[1. 基于BERT和二维卷积神经网络的transformer架构从序列信息中识别DNA enhancers题目：A transformer architecture based on BERT and 2D convolutional neural network to identify DNA enhancers from sequence information 杂志：Briefings in Bioinformatics IF: 13.944 时间：05 February 2021 链接：https://doi.org/10.1093/bib/bbab005 摘要最近，语言表征模型因其显著的成果而在自然语言处理领域引起了广泛的关注。其中，bidirectional encoder representations from transformers（BERT）已被证明是一种简单而强大的语言模型，取得了新颖的最先进的性能。BERT采用了语境化词语嵌入的概念来捕捉词语的语义和出现的语境。在这项研究中，我们提出了一种新的技术，将基于BERT的多语言模型纳入生物信息学中，以表示DNA序列的信息。我们将DNA序列视为自然句子，然后使用BERT模型将其转化为固定长度的数字矩阵。作为一个案例研究，我们将我们的方法应用于DNA增强子的预测，这是该领域中一个著名的和具有挑战性的问题。然后我们观察到，与目前生物信息学中最先进的特征相比，我们基于BERT的特征在敏感性、特异性、准确性和马修斯相关系数方面提高了5-10%以上。此外，高级实验表明，深度学习（以二维卷积神经网络为代表；CNN）在学习BERT特征方面拥有比其他传统机器学习技术更好的潜力。总之，我们认为BERT和二维CNN可以在利用序列信息进行生物建模方面开辟一条新的途径。 DNA数据预处理 首先，标准FASTA格式的正常DNA序列被分割成等长的DNA片段，并选取滑动窗口的值。在我们的语言模型中，我们需要通过使用不同的n-gram级别将这些片段视为 “DNA句子”。 在这项研究中，我们通过将一个核苷酸视为自然语言中的一个词（unigram）来建立NLP模型。因此，在第二步中，每个DNA片段在碱基之间插入空格，形成一系列的核苷酸，每个核苷酸都被假装成人类语言中的一个词。 一般来说，在训练BERT模型时，研究人员经常添加特殊的标记，如CLS标记和SEP标记作为句子的开始和结束。我们假设这些标记不传达生物学意义，因此不遵循这一惯例。 2. DTSyn：一个基于双transformer的神经网络来预测协同的药物组合题目：DTSyn: a dual-transformer-based neural network to predict synergistic drug combinations 杂志：Briefings in Bioinformatics IF: 13.944 时间：01 August 2022 链接：https://doi.org/10.1093/bib/bbac302 摘要药物组合疗法在许多方面都优于癌症治疗的单一疗法。由于可能的药物对的巨大搜索空间的耗时过程，通过筛选来确定新的药物组合对湿实验室来说是具有挑战性的。因此，人们开发了计算方法来预测具有潜在协同功能的药物对。尽管目前的模型很成功，但从化学-基因-组织相互作用的角度理解药物协同作用的机制缺乏研究，阻碍了目前的算法从药物机制研究。在此，我们提出了一个基于多头关注机制 (multi-head attention) 的深度神经网络模型，称为DTSyn（用于药物对协同作用预测的双transformer编码器模型），以识别新型药物组合。我们设计了一个细粒度的transformer编码器来捕捉化学亚结构-基因和基因-基因的关联，以及一个粗粒度的transformer编码器来提取化学-化学和化学-细胞系的相互作用。DTSyn达到了最高的接收操作特征曲线下面积0.73，0.78。0.82和0.81，超过了所有竞争方法。此外，DTSyn在五个独立的数据集中取得了最佳的真阳性率（TPR）。研究表明，两个transformer编码器块都对DTSyn的性能做出了贡献。此外，DTSyn可以提取化学品和细胞系之间的相互作用，代表药物作用的潜在机制。通过利用注意力机制和预训练的基因嵌入，DTSyn显示出更好的可解释性能力。因此，我们设想我们的模型是一个有价值的工具，可以通过化学品和细胞系的基因表达谱来优先考虑协同作用的药物对。 3.ViBE：利用元基因组测序数据识别真核生物病毒的层次化BERT模型题目：ViBE: a hierarchical BERT model to identify eukaryotic viruses using metagenome sequencing data 杂志：Briefings in Bioinformatics IF: 13.944 时间：04 June 2022 链接：https://doi.org/10.1093/bib/bbac204 摘要病毒在人类和各种环境中无处不在，并不断地自我变异。在没有培养的环境中识别病毒是具有挑战性的；然而，促进对新型病毒的筛选和扩大对病毒空间的认识是至关重要的。基于同源性的方法，利用已知的病毒基因组识别病毒依赖于序列比对，因此很难捕捉到已知病毒的远程同源物。为了从元基因组样本中准确捕捉病毒信号，需要建立模型来理解病毒基因组的编码模式。在这项研究中，我们开发了一个层次化的BERT模型，名为ViBE，用于从元基因组测序数据中检测真核生物病毒，并对它们进行阶级分类。我们使用从病毒参考基因组产生的类读序列对ViBE进行了预训练，并得出了三个微调模型，对真核脱氧核糖核酸病毒和真核核糖核酸病毒的成对读数进行分类。ViBE取得了比最先进的基于对齐的方法更高的召回率，同时保持了相当的精度。在所有测试案例中，ViBE的表现都优于最先进的无对齐方法。ViBE的性能也用真实的测序数据集进行了验证，包括阴道病毒组。]]></content>
+      <categories>
+        <category>literature</category>
+      </categories>
+      <tags>
+        <tag>文献摘要</tag>
+        <tag>transformer</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[221130 | NCs | 文献摘要]]></title>
     <url>%2F2022%2F11%2F30%2F4f513be7.html</url>
     <content type="text"><![CDATA[1. 通过知识提炼实现沟通效率的联邦学习题目：Communication-efficient federated learning via knowledge distillation 杂志：Nature Communications IF: 14.92 时间：19 April 2022 链接：https://www.nature.com/articles/s41467-022-29763-x 摘要联邦学习（Federated learning）是一种保护隐私的机器学习技术，从分散的数据中训练人工智能模型，它通过在模型学习的每个迭代中交流局部模型更新而不是原始数据，实现对隐私数据的利用。然而，如果模型更新包含众多参数，那么模型更新可能会非常大，而且模型训练需要很多轮通信。联邦学习中巨大的通信成本导致了客户端的沉重开销和高环境负担。在这里，我们提出了一种名为FedKD的联邦学习学习方法，该方法基于自适应相互知识提炼和动态梯度压缩技术（based on adaptive mutual knowledge distillation and dynamic gradient compression techniques），既节省通信又有效。FedKD在三个需要保护隐私的不同场景中得到了验证，表明它可以最大限度地减少94.89%的通信成本，并取得与集中式模型学习相竞争的结果。FedKD为在许多场景中有效地部署保护隐私的智能系统提供了可能性，如智能医疗和个性化。 该方法主要集中在跨语境的联合学习上，在这种情况下，客户端拥有比个人设备相对更丰富的计算资源和更大的本地数据量。在FedKD中，客户机和服务器之间不直接交流大模型，而是有一个小模型（mentee）和一个大模型（mentor）相互学习和提炼知识，其中只有mentee模型被不同的客户机共享并协同学习，这可以有效降低通信成本。这样一来，不同的客户拥有不同的本地导师模型，可以更好地适应本地数据集的特点，实现个性化的模型学习。受人类学习中的Protégé效应29（”我们一边教，一边学”，Seneca the Younger）的启发，我们提出了一种自适应的相互提炼方法，使本地导师和被导师模型能够相互学习从他们预测的软标签和中间结果中提炼出来的知识，其中提炼强度由他们预测的正确性自适应控制。此外，为了进一步降低交换被指导者模型更新时的通信成本，我们引入了一种基于奇异值分解（SVD）的动态梯度近似方法，以动态精度压缩通信的梯度，这可以在通信成本和模型精度之间实现一个有希望的权衡。 2. 用于保护隐私的个人化的联合图神经网络框架题目：A federated graph neural network framework for privacy-preserving personalization 杂志：Nature Communications IF: 14.92 时间：02 June 2022 链接：https://www.nature.com/articles/s41467-022-30714-9 摘要图神经网络（Graph neural network, GNN）能有效地模拟高阶互动，并已被广泛用于各种个性化应用，如推荐。然而，主流的个性化方法依赖于全局图上的集中式GNN学习，由于用户数据的隐私敏感性质，这存在相当大的隐私风险。在这里，我们提出了一个名为FedPerGNN的联合GNN框架，用于有效和保护隐私的个性化。通过一个保护隐私的模型更新方法，我们可以根据从本地数据推断出的分散的图来协作训练GNN模型。为了进一步利用本地互动以外的图信息，我们引入了一个保护隐私的图扩展协议，在保护隐私的前提下纳入高阶信息。在不同场景下对六个数据集进行的个性化实验结果表明，在良好的隐私保护下，FedPerGNN比最先进的联合个性化方法的误差低4.0%~9.6%。FedPerGNN为以保护隐私的方式挖掘分散的图数据，实现负责任的智能个性化提供了一个很好的方向。 这两篇文章来自于同一作者，作者的github链接：https://github.com/wuch15]]></content>
@@ -120,8 +132,8 @@
         <category>literature</category>
       </categories>
       <tags>
-        <tag>machine learning</tag>
         <tag>文献摘要</tag>
+        <tag>machine learning</tag>
       </tags>
   </entry>
   <entry>
@@ -144,9 +156,9 @@
         <category>literature</category>
       </categories>
       <tags>
-        <tag>machine learning</tag>
         <tag>文献摘要</tag>
         <tag>CNN</tag>
+        <tag>machine learning</tag>
       </tags>
   </entry>
   <entry>
@@ -168,9 +180,9 @@
         <category>literature</category>
       </categories>
       <tags>
-        <tag>AMR</tag>
-        <tag>machine learning</tag>
         <tag>文献摘要</tag>
+        <tag>machine learning</tag>
+        <tag>AMR</tag>
         <tag>药物研发</tag>
       </tags>
   </entry>
@@ -217,8 +229,8 @@
         <category>literature</category>
       </categories>
       <tags>
-        <tag>AMR</tag>
         <tag>machine learning</tag>
+        <tag>AMR</tag>
       </tags>
   </entry>
   <entry>
@@ -439,9 +451,9 @@
     <url>%2F2020%2F05%2F13%2F47788.html</url>
     <content type="text"><![CDATA[文章信息 题目：Evaluation of Machine Learning Models for Predicting Antimicrobial Resistance of Actinobacillus pleuropneumoniae From Whole Genome Sequences 杂志：Frontiers in Microbiology 时间：06 February 2020 链接: https://doi.org/10.3389/fmicb.2020.00048 文章概述 抗生素耐药性(AMR)正在成为世界各国面临的一个巨大公共安全问题，识别对某些抗生素耐药或易感菌株的新方法对于对抗抗生素耐药病原体至关重要。由于基因组数据集和AST表型越来越多，基于基因型的机器学习方法作为一种诊断工具显示出了巨大的希望。 本文采用支持向量机（ Support Vector Machine，SVM）和集覆盖机（**Set Covering Machine，SCM）模型来学习和预测五种药物（四环素类、氨苄西林、磺胺恶唑、曲美沙星和恩诺沙星）的耐药性。SVM模型利用分离菌的基因组与参比基因之间共存的k-mers的数量来学习和预测细菌对特定抗生素的表型，而单片机模型则采用贪婪的方法构造布尔函数的联结或解联，找到最简洁的k-mers集，从而准确预测表型。对SVM和SCM模型的训练集进行五倍交叉验证，选择最佳的超参数值，以避免模型过度拟合。结果表明，无论哪种药物的耐药机制是获得性耐药还是染色体点突变，5种药物的SVM和SCM模型的训练准确率（平均交叉验证得分）和测试准确率均在90%以上。5种药物的表型与模型预测的相关性结果表明，SVM和SCM模型均能显著地将耐药分离菌从敏感分离菌中分离出来（P&lt;0.01），可作为抗生素耐药性监测和兽药临床诊断的潜在工具。 方法详解 数据来源： 从Bosse等人(2017)文章获得96株胸膜肺炎分离菌株的5种抗菌药物(四环素、氨苄西林、磺胺恶唑、甲氧苄氨嘧啶和恩罗沙星)的WGS序列和双耐药表型 Study: PRJEB2343 Reference: Whole genome sequencing for surveillance of antimicrobial resistance in Actinobacillus pleuropneumoniae. Front. Microbiol. 8:311. doi: 10.3389/fmicb.2017.00311 分析方法： WGS assemle: Velvet 1.2.08 AMR genes contig: 从ResFinder 数据库 matrix of the co-occurring k-mers：Ray Surveyor tool Reference-Based SVM Model：radial basis function kernel，Python sklearn 包实现分析 Reference-Free SCM Model：implemented by Kover, an open-source software implemented in the Python and C programming languages Model Selection and Performance Evaluation: five-fold cross-validation, 评价指标：sensitivity, specificity, accuracy, and precision]]></content>
       <tags>
-        <tag>AMR</tag>
-        <tag>machine learning</tag>
         <tag>文献摘要</tag>
+        <tag>machine learning</tag>
+        <tag>AMR</tag>
       </tags>
   </entry>
   <entry>
@@ -452,8 +464,8 @@
         <category>literature</category>
       </categories>
       <tags>
-        <tag>machine learning</tag>
         <tag>文献摘要</tag>
+        <tag>machine learning</tag>
       </tags>
   </entry>
   <entry>
@@ -470,8 +482,8 @@
     <url>%2F2020%2F05%2F04%2F48327.html</url>
     <content type="text"><![CDATA[卷积神经网络(CNN)简介卷积神经网络即Convolutional Neural Networks (CNN or COnvNet) 是一种自动化提取特征的深度学习模型。这是一种深度的前馈人工神经网络（ feed-forward artificial neural network），前馈神经网络也称作多层感知机（multi-layer perceptrons，MLPs）。 CNNs是受生物视觉皮层的启发。视觉皮层有一些小区域的细胞，它们对视野的特定区域很敏感。这个想法是由Hubel和Wiesel在1962年做的一个的实验扩展了这个想法。在这个实验中，研究人员表明，大脑中的一些个别神经元只有在出现垂直或水平边缘等特定方向的边缘时才会激活或发射。但是在2012年，Alex Krizhevsky利用卷积神经网络赢得了当年的ImageNet大赛，将分类误差从26%降到15%，之后CNNs再一次火爆。 CNNs如今在多个领域都展现出巨大的应用潜能。如： 图像识别，目标检测，分割，人脸识别 自动驾驶汽车等 卷积神经网络(CNN)的结构单元 输入层(input layer)卷积层（convolution layer) 权值共享。我们通过卷积核与输入进行卷积运算。通过下图可以理解如何进行卷积运算。卷积核从左到右对输入进行扫描，每次滑动1格（步长为1），下图为滑动一次后，卷积核每个元素和输入中绿色框相应位置的元素相乘后累加，得到输出中绿色框中的0。一般会使用多个卷积核对输入数据进行卷积，得到多个特征图 激活层 对卷积层的输出进行一个非线性映射，因为卷积计算是一种线性计算。常见的激活函数有relu、tanh、sigmoid等，一般使用relu。使用relu的原因是在反向传播计算梯度中，使用relu求导明显会比tanh和sigmoid简单，可以减少计算量 池化层(subsampling/pooling layer) 池化的目的就是减少特征图的维度，减少数据的运算量。池化层是在卷积层之后，对卷积的输出，进行池化运算。池化运算，一般有两种MaxPooling和MeanPooling。 全连接层(Fully connected layer) 主要是对特征进行重新的拟合，减少特征信息的丢失。通过卷积池化操作后得到的是多个特征矩阵，而全连接层的输入为向量，所以在进行全连接层之前，要将多个特征矩阵“压平”为一个向量。 输出层(output layer)卷积神经网络(CNN)代码示例这里介绍以Keras实现CNN的代码示例 数据集介绍Fashion-MNIST数据集是Zalando的文章图像数据集，包含来自10个类别的70000个时尚产品的28x28灰度图像，每个类别有7000个图像。训练集有60000张图片，测试集有10000张图片。 数据载入首先载入Keras模块，其是基于tensorflow框架的 12345# install tensorflowpip install tensorflowpip install kerasfrom keras.datasets import fashion_mnist(train_X,train_Y), (test_X,test_Y) = fashion_mnist.load_data() 调整像素和图像大小 12345678910111213import numpy as npfrom keras.utils import to_categoricalimport matplotlib.pyplot as pltprint(&apos;Training data shape : &apos;, train_X.shape, train_Y.shape)print(&apos;Testing data shape : &apos;, test_X.shape, test_Y.shape)# Find the unique numbers from the train labelsclasses = np.unique(train_Y)nClasses = len(classes)print(&apos;Total number of outputs : &apos;, nClasses)print(&apos;Output classes : &apos;, classes) 可以看出输出的类别共包括10（0-9）类 查看数据集中图像 1234567891011plt.figure(figsize=[5,5])# Display the first image in training dataplt.subplot(121)plt.imshow(train_X[0,:,:], cmap=&apos;gray&apos;)plt.title(&quot;Ground Truth : &#123;&#125;&quot;.format(train_Y[0]))# Display the first image in testing dataplt.subplot(122)plt.imshow(test_X[0,:,:], cmap=&apos;gray&apos;)plt.title(&quot;Ground Truth : &#123;&#125;&quot;.format(test_Y[0])) 上面两个图的输出看起来像一个短靴，这个类被分配了一个类标签9。同样的，其他的时尚产品会有不同的标签，但是相似的产品会有相同的标签。这意味着所有7000张短靴图片的类别标签都是9。 数据前处理上面的图像可以看出是灰度图像，像素值的范围再0-255,且图像的维度为28*28. Step1: 首先将训练数据和测试数据的2828图像转化为2828*1的矩阵 123train_X = train_X.reshape(-1, 28,28, 1)test_X = test_X.reshape(-1, 28,28, 1)train_X.shape, test_X.shape Step2: 现在的数据是int8格式的，因此在将其输入网络之前，需要将其类型转换为float32，还必须重新调整范围为0 - 1(包括1)的像素值。 1234train_X = train_X.astype(&apos;float32&apos;)test_X = test_X.astype(&apos;float32&apos;)train_X = train_X / 255.test_X = test_X / 255. Step3: 将类标签转换为一个热编码向量 机器学习算法不能直接处理分类数据, 故需将分类数据转换为数字向量 1234567# Change the labels from categorical to one-hot encodingtrain_Y_one_hot = to_categorical(train_Y)test_Y_one_hot = to_categorical(test_Y)# Display the change for category label using one-hot encodingprint(&apos;Original label:&apos;, train_Y[0])print(&apos;After conversion to one-hot:&apos;, train_Y_one_hot[0]) 拆分训练数据和测试数据集 1234from sklearn.model_selection import train_test_splittrain_X,valid_X,train_label,valid_label = train_test_split(train_X, train_Y_one_hot, test_size=0.2, random_state=13)# check the shape of training and validation settrain_X.shape,valid_X.shape,train_label.shape,valid_label.shape 网络图像的大小是28 x 28。前面将图像矩阵转换为数组，在0和1之间重新调整大小，重塑它的大小为28 x 28 x 28 x 1，然后将其作为网络的输入。 下面将使用三个卷积层。 第一层将有32-3×3个滤波器。 第二层将有64-3×3滤波器和 第三层将有128-3×3个滤镜。 此外，还有3个最大pooling层，每个层的大小为2×2。 创建模型123456import kerasfrom keras.models import Sequential,Input,Modelfrom keras.layers import Dense, Dropout, Flattenfrom keras.layers import Conv2D, MaxPooling2Dfrom keras.layers.normalization import BatchNormalizationfrom keras.layers.advanced_activations import LeakyReLU 这里使用64的批处理量，也可以使用128或256的批处理量，这一切都取决于内存。它对确定学习参数的贡献很大，并影响到预测的准确性。你将训练网络的20个时程 123batch_size = 64epochs = 20num_classes = 10 神经网络架构在Keras中，可以通过逐一添加所需的图层来堆叠图层。首先用Conv2D()添加第一个卷积层。注意，之所以使用这个函数，是因为在处理图像。 接下来，添加Leaky ReLU激活函数，它可以帮助网络学习非线性决策边界。因为这里的例子有十个不同的类，需要一个非线性决策边界，可以将这十个不能线性分离的类分开。 更具体地说，添加了Leaky ReLU，因为它们试图修复垂死的整流线性单元（ReLU）问题。ReLU 激活函数在神经网络架构中被大量使用，在卷积网络中，ReLU 激活函数被证明比广泛使用的对数 sigmoid 函数更有效。截止到2017年，这种激活函数是深度神经网络中最流行的一种激活函数。ReLU函数允许将激活函数的阈值设定为零。然而，在训练过程中，ReLU单元可能会 “死亡”。当一个大的梯度流过ReLU神经元时，就会发生这种情况：它可能会导致权重以这样的方式更新，以至于神经元再也不会在任何数据点上激活。如果这种情况发生，那么流经该单元的梯度将永远为零。泄漏的ReLU试图解决这个问题：函数不会为零，而是有一个小的负斜率。 接下来，用MaxPooling2D()等添加最大池化层。最后一层是Dense层，它有一个软MAX的激活函数，有10个单位，这对于这个多类分类问题是需要的。 1234567891011121314fashion_model = Sequential()fashion_model.add(Conv2D(32, kernel_size=(3, 3),activation=&apos;linear&apos;,input_shape=(28,28,1),padding=&apos;same&apos;))fashion_model.add(LeakyReLU(alpha=0.1))fashion_model.add(MaxPooling2D((2, 2),padding=&apos;same&apos;))fashion_model.add(Conv2D(64, (3, 3), activation=&apos;linear&apos;,padding=&apos;same&apos;))fashion_model.add(LeakyReLU(alpha=0.1))fashion_model.add(MaxPooling2D(pool_size=(2, 2),padding=&apos;same&apos;))fashion_model.add(Conv2D(128, (3, 3), activation=&apos;linear&apos;,padding=&apos;same&apos;))fashion_model.add(LeakyReLU(alpha=0.1)) fashion_model.add(MaxPooling2D(pool_size=(2, 2),padding=&apos;same&apos;))fashion_model.add(Flatten())fashion_model.add(Dense(128, activation=&apos;linear&apos;))fashion_model.add(LeakyReLU(alpha=0.1)) fashion_model.add(Dense(num_classes, activation=&apos;softmax&apos;)) 编译模型使用Adam optimizer 1fashion_model.compile(loss=keras.losses.categorical_crossentropy, optimizer=keras.optimizers.Adam(),metrics=[&apos;accuracy&apos;]) 使用summary函数来可视化在上述步骤中创建的层。这将显示每个层中的一些参数(权重和偏差)以及模型中的总参数。 1fashion_model.summary() 训练模型使用Keras的fit()函数训练模型，该模型训练了20个 epochs。fit()函数将返回一个历史对象；通过在fashion_train中讲述这个函数的结果，你可以在以后用它来绘制训练和验证之间的精度和损失函数图，这将帮助你直观地分析你的模型的性能。 1fashion_train = fashion_model.fit(train_X, train_label, batch_size=batch_size,epochs=epochs,verbose=1,validation_data=(valid_X, valid_label)) 模型评估123test_eval = fashion_model.evaluate(test_X, test_Y_one_hot, verbose=0)print(&apos;Test loss:&apos;, test_eval[0])print(&apos;Test accuracy:&apos;, test_eval[1]) 可视化123456789101112131415accuracy = fashion_train.history[&apos;acc&apos;]val_accuracy = fashion_train.history[&apos;val_acc&apos;]loss = fashion_train.history[&apos;loss&apos;]val_loss = fashion_train.history[&apos;val_loss&apos;]epochs = range(len(accuracy))plt.plot(epochs, accuracy, &apos;bo&apos;, label=&apos;Training accuracy&apos;)plt.plot(epochs, val_accuracy, &apos;b&apos;, label=&apos;Validation accuracy&apos;)plt.title(&apos;Training and validation accuracy&apos;)plt.legend()plt.figure()plt.plot(epochs, loss, &apos;bo&apos;, label=&apos;Training loss&apos;)plt.plot(epochs, val_loss, &apos;b&apos;, label=&apos;Validation loss&apos;)plt.title(&apos;Training and validation loss&apos;)plt.legend()plt.show() 参考资料 CNN讲解及实践 CNN（卷积神经网络） Convolutional Neural Networks in Python with Keras Convolutional Neural Networks for Beginners using Keras and TensorFlow 深度学习]]></content>
       <tags>
-        <tag>machine learning</tag>
         <tag>CNN</tag>
+        <tag>machine learning</tag>
         <tag>deep learning</tag>
       </tags>
   </entry>
@@ -526,8 +538,8 @@
     <url>%2F2020%2F04%2F18%2F43215.html</url>
     <content type="text"><![CDATA[文章信息 题目：How Machine Learning Will Transform Biomedicine 杂志：Cell 时间：April 2,2020 链接: https://doi.org/10.1016/j.cell.2020.03.022 概述机器学习在语音识别，自动化驾驶汽车，生物医学等领域展现了巨大的潜在应用。机器学习将如何影响生物医学？这篇综述从机器学习对临床诊断、精准治疗和健康监管3个方面进行讨论。介绍了机器学习在这3个领域成功应用的例子，以及面临的机遇和挑战。此外也对机器学习的基本概念有简单的概述。 机器学习中的基本概念 监督学习、非监督学习和半监督学习 监督学习在预测数据时是基于含有标签的过去数据；非监督学习是对没有标签数据进行分析学习，如聚类等；半监督学习首先执行无监督学习，然后从无监督学习中基于认为标记发现结构 分类和回归 都是监督学习的方法，分类是预测离散的类别，如正常与患病；而回归预测实际值的输出，如对治疗的反应 集成学习 集成方法建立了许多模型，并使用所有模型的平均值生成预测。常见的集成方法包括随机森林、梯度增强和叠加/元集成 深度学习 能够学习复杂非线性函数的多层人工神经网络。对于非结构化数据（如图像、语音或文本）非常有用，但通常不提供驱动函数的数据方面的细节 贝叶斯学习 结合先验知识和数据来执行机器学习的方法 降维 通过选择重要特征或组合特征来捕获数据集中的差异，减少数据集的属性或特征数。通常用于提高机器学习模型的性能和帮助可视化 联合学习 从分布在多个位置且不能组合成单个数据集的数据中增量学习的方法。当数据位于多个临床系统中或从敏感的个人数据中学习时，联合学习非常有用 机器学习在诊断和治疗中应用例子 The genomic and transcriptomic architecture of 2,000 breast tumours reveals novel subgroups https://www.nature.com/articles/nature10983 DeepCC: a novel deep learning-based framework for cancer molecular subtype classification https://www.nature.com/articles/s41389-019-0157-8 Predicting drug response of tumors from integrated genomic profiles by deep neural networks https://www.ncbi.nlm.nih.gov/pubmed/30704458 A community effort to assess and improve drug sensitivity prediction algorithms https://www.nature.com/articles/nbt.2877 A comparison of deep learning performance against health-care professionals in detecting diseases from medical imaging: a systematic review and meta-analysis https://www.thelancet.com/journals/landig/article/PIIS2589-7500(19)30123-2/fulltext Prediction of gestational diabetes based on nationwide electronic health records https://www.ncbi.nlm.nih.gov/pubmed/31932807 Privacy-Preserving Patient Similarity Learning in a Federated Environment: Development and Analysis https://www.ncbi.nlm.nih.gov/pubmed/29653917 Smartwatch Algorithm for Automated Detection of Atrial Fibrillation https://www.sciencedirect.com/science/article/pii/S0735109718334867?via%3Dihub Contactless cardiac arrest detection using smart devices https://www.nature.com/articles/s41746-019-0128-7 ###]]></content>
       <tags>
-        <tag>machine learning</tag>
         <tag>文献摘要</tag>
+        <tag>machine learning</tag>
       </tags>
   </entry>
   <entry>
@@ -615,8 +627,8 @@
     <url>%2F2019%2F12%2F29%2F55090.html</url>
     <content type="text"><![CDATA[文章介绍： 基于机器学习的方法——DislncRF，根据组织表达谱从全基因组范围预测疾病相关的lncRNA。DislncRF是基于随机森林模型训练已知的与疾病相关的蛋白编码基因（protein-coding genes ，PCGs），从而提取疾病与表达谱的一般模式，然后应用到lncRNA与疾病的关联中， 代码：https://github.com/xypan1232/DislncRF figure 文章信息 题目：Inferring disease-associated long non-coding RNAs using genome-wide tissue expression profiles 杂志：Bioinformatics 时间：2018 链接: doi.10.1093/bioinformatics/xxxxxx 碎碎念 利用蛋白编码基因与疾病的模式训练模型，然后预测lncRNA与疾病的关联，这样选训练集可靠吗？ 每日文献摘要：第28篇 2019年12月29日 周日]]></content>
       <tags>
-        <tag>machine learning</tag>
         <tag>文献摘要</tag>
+        <tag>machine learning</tag>
         <tag>lncRNA</tag>
       </tags>
   </entry>
@@ -652,8 +664,8 @@
     <content type="text"><![CDATA[文章介绍： Bioconductor是一个针对生物数据分析的以R语言开发的开源软件库，从2001年项目开始至今，提供了很多优秀的分析流程，如bulk-RNA-seq的分析流程，文档非常详细。如今出手整理了单细胞分析的流程，包括软件安装、数据导入、单细胞数据储存、格式转换为下游分析的数据、下游分析、可视化等，非常详细，另外他们提供了在线book：https://osca.bioconductor .，想上手学习单细胞分析的以本书作为一个入门是一个不错的选择。 figure 文章信息 题目：Orchestrating single-cell analysis with Bioconductor 杂志：Nature Methods 时间：02, December, 2019 链接: https://www.nature.com/articles/s41592-019-0654-x 每日文献摘要：第32篇 2019年12月29日 周日]]></content>
       <tags>
         <tag>software</tag>
-        <tag>single cell</tag>
         <tag>R</tag>
+        <tag>single cell</tag>
       </tags>
   </entry>
   <entry>
@@ -870,8 +882,8 @@
         <category>literature</category>
       </categories>
       <tags>
-        <tag>AMR</tag>
         <tag>文献摘要</tag>
+        <tag>AMR</tag>
       </tags>
   </entry>
   <entry>
@@ -882,8 +894,8 @@
         <category>literature</category>
       </categories>
       <tags>
-        <tag>AMR</tag>
         <tag>文献摘要</tag>
+        <tag>AMR</tag>
         <tag>deep learning</tag>
         <tag>metagenomics</tag>
       </tags>
