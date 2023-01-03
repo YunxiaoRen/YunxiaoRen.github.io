@@ -295,6 +295,205 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/05/30/5d573439.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="六六">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="生信拾光">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/05/30/5d573439.html" itemprop="url">多标签分类法</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-05-30T21:19:31+02:00">
+                2022-05-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Data-Sciences/" itemprop="url" rel="index">
+                    <span itemprop="name">Data Sciences</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2022/05/30/5d573439.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2022/05/30/5d573439.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  633
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  2
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="多标签分类-（Multi-label-Classification）"><a href="#多标签分类-（Multi-label-Classification）" class="headerlink" title="多标签分类 （Multi-label Classification）"></a>多标签分类 （Multi-label Classification）</h3><p>二分类问题是机器学习中最常遇到的问题，有时候我们也会遇到<strong>多标签分类（Multi-label Classification）</strong>的处理。首先什么是多标签分类，举个例子，比如一部电影的分类可以同时属于“动作类”，也可以是“喜剧类”，<strong>类别标签不是相互排斥的</strong>。另一种有时会和多标签分类混淆的分类问题——<strong>多类别分类（Multi-class Classification）</strong>，<strong>类别标签是相互排斥的</strong>，如水果的分类，水果的类别有葡萄，苹果,香蕉等，但一种水果不可能即是葡萄又是苹果。</p>
+<h3 id="多标签分类方法"><a href="#多标签分类方法" class="headerlink" title="多标签分类方法"></a>多标签分类方法</h3><p>多标签分类的处理方法常见的有以下几种：</p>
+<p><img src="/2022/05/30/5d573439/fig-methods.png" alt></p>
+<p>​                                                                                                                <a href="https://www.sciencedirect.com/science/article/pii/S2001037022000824" target="_blank" rel="noopener">Ref1</a></p>
+<p>首先我们构建一个多标签示例数据（Fig. A）, χi ∈ x 是一个训练实例，</p>
+<p><img src="/2022/05/30/5d573439/Snipaste_2022-05-30_22-42-16.png" alt></p>
+<p>这里 <strong><em>L</em></strong> 是一个类标签的有限集，m&gt;1。</p>
+<h4 id="1-Binary-relevance-BR"><a href="#1-Binary-relevance-BR" class="headerlink" title="1. Binary relevance (BR)"></a>1. Binary relevance (BR)</h4><p>第一种方法是Binary relevance (BR) （Fig. B），即将具有 L 个标签的数据集划分为 L 个二元分类问题。然后以二分类的方法处理。但是这种方法的一个不足是，没有考虑到多标签间的相关性。</p>
+<h4 id="2-Classifier-Chain-CC"><a href="#2-Classifier-Chain-CC" class="headerlink" title="2. Classifier Chain (CC)"></a>2. Classifier Chain (CC)</h4><p>第二种方法是Classifier Chain (CC) （Fig. C），即将L个二元分类器链接成一个“链”，使得一个分类器的输出预测作为所有后续分类器的附加输入，克服了不考虑标签之间依赖关系的缺点，并捕获了标签之间可能的依赖关系。</p>
+<h4 id="3-Ensemble-Classifier-Chains-ECC"><a href="#3-Ensemble-Classifier-Chains-ECC" class="headerlink" title="3. Ensemble Classifier Chains (ECC)"></a>3. Ensemble Classifier Chains (ECC)</h4><p>第三种方法Ensemble Classifier Chains (ECC)（Fig. D）是在CC基础上提出来的，考虑到了“链”的顺序，通过多数投票聚合了多个具有不同顺序的链，从而可以进一步提升分类器的性能。</p>
+<h4 id="4-Label-Powerset-LP"><a href="#4-Label-Powerset-LP" class="headerlink" title="4. Label Powerset (LP)"></a>4. Label Powerset (LP)</h4><p>第四种方法是Label Powerset (LP)（Fig. E），将多标签问题转换为单标签多类问题，即在训练数据中找到的所有唯一标签组合上进行训练。</p>
+<h4 id="5-Random-Label-Space-Partitioning-with-Label-Powerset（RD）"><a href="#5-Random-Label-Space-Partitioning-with-Label-Powerset（RD）" class="headerlink" title="5. Random Label Space Partitioning with Label Powerset（RD）"></a>5. Random Label Space Partitioning with Label Powerset（RD）</h4><p>第五种方法Random Label Space Partitioning with Label Powerset（RD）（Fig. F）是在LP基础上延伸得到的。其将标签空间划分为大小为 k 的分区，每个分区训练一个 LP 分类器，并通过聚合所有 LP 分类器的结果来预测数据。</p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul>
+<li><a href="https://www.sciencedirect.com/science/article/pii/S2001037022000824" target="_blank" rel="noopener">https://www.sciencedirect.com/science/article/pii/S2001037022000824</a></li>
+<li><a href="https://www.jair.org/index.php/jair/article/view/12376" target="_blank" rel="noopener">https://www.jair.org/index.php/jair/article/view/12376</a></li>
+<li><a href="https://link.springer.com/article/10.1007/s10994-011-5256-5" target="_blank" rel="noopener">https://link.springer.com/article/10.1007/s10994-011-5256-5</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/03/28/4248376.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1081,200 +1280,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/02/02/f09c6d87.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="六六">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="生信拾光">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/02/02/f09c6d87.html" itemprop="url">220202 | 文献摘要</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-02-02T07:37:41+01:00">
-                2022-02-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/literature/" itemprop="url" rel="index">
-                    <span itemprop="name">literature</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2022/02/02/f09c6d87.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2022/02/02/f09c6d87.html" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  840
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  3
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="Nat-M-L-通过学习随机掩码来解释生物序列的神经网络"><a href="#Nat-M-L-通过学习随机掩码来解释生物序列的神经网络" class="headerlink" title="Nat. M.L. | 通过学习随机掩码来解释生物序列的神经网络"></a>Nat. M.L. | 通过学习随机掩码来解释生物序列的神经网络</h2><p>题目：Interpreting neural networks for biological sequences by learning stochastic masks</p>
-<p>杂志：Nature Machine Intelligence</p>
-<p>IF: 15</p>
-<p>时间：25 January 2022</p>
-<p>链接：<a href="https://www.nature.com/articles/s42256-021-00428-6" target="_blank" rel="noopener">https://www.nature.com/articles/s42256-021-00428-6</a></p>
-<h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><p>基于序列的神经网络可以从大型生物数据集中学习从而做出准确的预测，但模型的解释仍然具有挑战性。许多现有的特征归属方法是针对连续的而不是离散的输入模式而优化的，并孤立地评估单个特征的重要性，使它们不适合解释分子序列中的非线性相互作用。在这里，在计算机视觉和自然语言处理的工作基础上，我们开发了一种基于<strong>深度学习-扰频器网络（Scrambler networks）</strong>的方法，其中最重要的序列位置是通过学习<strong>输入掩码(input masks)</strong>确定的。扰频器学习预测特定位置的评分矩阵，其中不重要的核苷酸或残基通过提高其熵值而被扰乱。我们应用加扰频器来解释遗传变异的影响，发现顺式调控元素之间的非线性相互作用，解释蛋白质-蛋白质相互作用的结合特异性，并确定从头设计的蛋白质的结构决定因素。我们表明，扰频器能够在大型数据集上进行有效的归因，并产生高质量的解释，往往优于最先进的方法。</p>
-<p><img src="/2022/02/02/f09c6d87/image-20220202083212293.png" alt="image-20220202083212293" style="zoom:50%;"></p>
-<p><em></em></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2022/02/02/f09c6d87.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1325,7 +1330,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">128</span>
+                  <span class="site-state-item-count">129</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1399,7 +1404,7 @@
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<div class="copyright">&copy; <span itemprop="copyrightYear">2022</span>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
@@ -1413,7 +1418,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">84.1k</span>
+    <span title="Site words total count">84.7k</span>
   
 </div>
 
@@ -1435,7 +1440,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共84.1k字</span>
+  <span class="post-count">博客全站共84.7k字</span>
 </div>
 
 
