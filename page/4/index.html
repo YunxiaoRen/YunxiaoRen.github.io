@@ -295,6 +295,203 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/10/11/754b48bf.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="六六">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="生信拾光">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/10/11/754b48bf.html" itemprop="url">211011-｜文献摘要</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-10-11T22:04:24+02:00">
+                2021-10-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/literature/" itemprop="url" rel="index">
+                    <span itemprop="name">literature</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2021/10/11/754b48bf.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2021/10/11/754b48bf.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  423
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Brief-Bioinformatics-DeepHost：用卷积神经网络进行噬菌体宿主预测"><a href="#Brief-Bioinformatics-DeepHost：用卷积神经网络进行噬菌体宿主预测" class="headerlink" title="Brief. Bioinformatics | DeepHost：用卷积神经网络进行噬菌体宿主预测"></a>Brief. Bioinformatics | DeepHost：用卷积神经网络进行噬菌体宿主预测</h2><p>题目：DeepHost: phage host prediction with convolutional neural network</p>
+<p>杂志：Briefings in Bioinformatics</p>
+<p>IF: 11.62</p>
+<p>时间：22 September 2021</p>
+<p>链接：<a href="https://doi.org/10.1093/bib/bbab385" target="_blank" rel="noopener">https://doi.org/10.1093/bib/bbab385</a></p>
+<h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><p>新一代测序技术迅速扩大了已知的噬菌体基因组。与基于培养的方法不同，从下一代测序数据中发现的噬菌体的宿主仍未被描述。噬菌体基因组的高度多样性使得宿主分配任务具有挑战性。为了解决这个问题，我们提出了一个噬菌体宿主预测工具-DeepHost。为了将噬菌体基因组编码成矩阵，我们设计了一种基因组编码方法，应用各种间隔的<strong>K-mer对</strong>来容忍序列变化，包括插入、删除和突变。DeepHost应用卷积神经网络来预测宿主分类法。DeepHost在属级（72个分类群）的预测准确率为96.05%，在种级（118个分类群）的预测准确率为90.78%，比现有的噬菌体宿主预测工具高出10.16-30.48%，取得了与BLAST相当的结果。对于在BLAST中没有命中的基因组，DeepHost在属级获得了38.00%的准确率，在种级获得了26.47%的准确率，使其适用于与现有数据集同源序列较少的基因组。DeepHost是alignment-free的，它比BLAST快，特别是对大的数据集。DeepHost可在<a href="https://github.com/deepomicslab/DeepHost。" target="_blank" rel="noopener">https://github.com/deepomicslab/DeepHost。</a></p>
+<p><strong>文章思路</strong></p>
+<p><img src="/2021/10/11/754b48bf/image-20211011221810475.png" alt="image-20211011221810475"></p>
+<p><strong>基因组序列编码方法：</strong></p>
+<p><img src="/2021/10/11/754b48bf/image-20211011221515028.png" alt="image-20211011221515028"></p>
+<blockquote>
+<p><em>Illustration of the matrix construction process. Given a DNA sequence, all possible 2-mer pairs are collected with spaced distance of 0 (upper) and 1 (lower). For each distance, we construct two matrices.</em></p>
+</blockquote>
+<p><strong>CNN 架构</strong></p>
+<p><img src="/2021/10/11/754b48bf/image-20211011221657856.png" alt="image-20211011221657856"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/09/30/45570cbd.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1052,198 +1249,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/04/03/f1069cae.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="六六">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="生信拾光">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2021/04/03/f1069cae.html" itemprop="url">在HIV-1耐药性预测中利用交叉耐药信息的多标签分类方法</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-04-03T10:17:58+02:00">
-                2021-04-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/literature/" itemprop="url" rel="index">
-                    <span itemprop="name">literature</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2021/04/03/f1069cae.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2021/04/03/f1069cae.html" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  272
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="文章信息"><a href="#文章信息" class="headerlink" title="文章信息"></a>文章信息</h2><p>题目：Multilabel classification for exploiting cross-resistance information in HIV-1 drug resistance prediction</p>
-<p>杂志：Bioinformatics (Sequence Analysis)</p>
-<p>IF: 5.610 (2019)</p>
-<p>时间：June 21, 2013</p>
-<p>链接：doi:10.1093/bioinformatics/btt331</p>
-<h2 id="一句话评价"><a href="#一句话评价" class="headerlink" title="一句话评价"></a>一句话评价</h2><p>多标签分类算法</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2021/04/03/f1069cae.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1294,7 +1299,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">129</span>
+                  <span class="site-state-item-count">130</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1382,7 +1387,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">84.7k</span>
+    <span title="Site words total count">87.3k</span>
   
 </div>
 
@@ -1404,7 +1409,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共84.7k字</span>
+  <span class="post-count">博客全站共87.3k字</span>
 </div>
 
 
